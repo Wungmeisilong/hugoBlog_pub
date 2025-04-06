@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenGL :: 标签 :: Maloudown</title>
+    <link>http://localhost:1313/tags/opengl/</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 01 Apr 2025 13:27:41 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/opengl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>15.计算机图形学OpenGL与C&#43;&#43;</title>
+      <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/</link>
+      <pubDate>Tue, 01 Apr 2025 13:27:41 +0800</pubDate>
+      <guid>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/</guid>
+      <description>理解GLFW和GLAD GLFW（） GLFW是一个开源的、跨平台的库，用于创建窗口、处理输入和渲染图形。它提供了一种简单的方式来与OpenGL进行交互，使得开发图形应用程序变得更加容易。</description>
+    </item>
+  </channel>
+</rss>

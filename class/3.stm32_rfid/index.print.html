@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="Lorem Ipsum.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="STM32_RFID :: Maloudown">
+    <meta name="twitter:description" content="Lorem Ipsum.">
+    <meta property="og:url" content="http://localhost:1313/class/3.stm32_rfid/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="STM32_RFID :: Maloudown">
+    <meta property="og:description" content="Lorem Ipsum.">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="STM32_RFID :: Maloudown">
+    <meta itemprop="description" content="Lorem Ipsum.">
+    <meta itemprop="datePublished" content="2022-11-01T00:00:00+08:00">
+    <meta itemprop="dateModified" content="2022-11-01T00:00:00+08:00">
+    <meta itemprop="wordCount" content="2">
+    <meta itemprop="keywords" content="STM32_RFID">
+    <title>STM32_RFID :: Maloudown</title>
+    <link href="http://localhost:1313/class/3.stm32_rfid/" rel="canonical" type="text/html" title="STM32_RFID :: Maloudown">
+    <link href="../../class/3.stm32_rfid/index.xml" rel="alternate" type="application/rss+xml" title="STM32_RFID :: Maloudown">
+    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/3.stm32_rfid\/';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../class/3.stm32_rfid/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">STM32_RFID</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/3.stm32_rfid/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/" title="物联网通信技术-小知识 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/" title="19.设计模式（C++） (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/stm32_rfid/">STM32_RFID</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="stm32_rfid">STM32_RFID</h1>
+
+<p>Lorem Ipsum.</p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2022年11月1日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/">核心课程</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

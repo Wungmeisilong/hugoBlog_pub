@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.代码编写规范 :: Maloudown</title>
+    <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/</link>
+    <description>如何写一个标准的.h文件 以下内容来自B站。&#xA;接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：&#xA;class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator += (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };&#xD;构造函数的特性 这一点需要关注下面的代码：</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

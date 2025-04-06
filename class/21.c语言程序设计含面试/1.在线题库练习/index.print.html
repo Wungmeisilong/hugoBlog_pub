@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="网站 “语言网【基础】” “大学慕课对应习题【算法基础】” “牛客竞赛【中等】” “LeetCode【较难】” 课程学习 “书籍” “大学慕课” Github项目 “C/C&#43;&#43;面试总结项目” “书籍：Github项目” “C/C&#43;&#43;面试总结” “系统设计” 题目笔记 1.cahr *s = &#34;AAAA&#34;指针接受一个字符串（右值），当想通过s[0] = ‘B’修改时是无法修改成功的，因为&#34;AAAA&#34;只能读，不能写。 2.一般函数内如果返回char s[] = {“abcd”};那么一般会报错，因为这是一个局部变量，但s[]修改为*s就不会有问题。因为 *s指向的地址是固定的。 3.在自动类型转换中：">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="1.在线题库练习 :: Maloudown">
+    <meta name="twitter:description" content="网站 “语言网【基础】” “大学慕课对应习题【算法基础】” “牛客竞赛【中等】” “LeetCode【较难】” 课程学习 “书籍” “大学慕课” Github项目 “C/C&#43;&#43;面试总结项目” “书籍：Github项目” “C/C&#43;&#43;面试总结” “系统设计” 题目笔记 1.cahr *s = &#34;AAAA&#34;指针接受一个字符串（右值），当想通过s[0] = ‘B’修改时是无法修改成功的，因为&#34;AAAA&#34;只能读，不能写。 2.一般函数内如果返回char s[] = {“abcd”};那么一般会报错，因为这是一个局部变量，但s[]修改为*s就不会有问题。因为 *s指向的地址是固定的。 3.在自动类型转换中：">
+    <meta property="og:url" content="http://localhost:1313/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="1.在线题库练习 :: Maloudown">
+    <meta property="og:description" content="网站 “语言网【基础】” “大学慕课对应习题【算法基础】” “牛客竞赛【中等】” “LeetCode【较难】” 课程学习 “书籍” “大学慕课” Github项目 “C/C&#43;&#43;面试总结项目” “书籍：Github项目” “C/C&#43;&#43;面试总结” “系统设计” 题目笔记 1.cahr *s = &#34;AAAA&#34;指针接受一个字符串（右值），当想通过s[0] = ‘B’修改时是无法修改成功的，因为&#34;AAAA&#34;只能读，不能写。 2.一般函数内如果返回char s[] = {“abcd”};那么一般会报错，因为这是一个局部变量，但s[]修改为*s就不会有问题。因为 *s指向的地址是固定的。 3.在自动类型转换中：">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="1.在线题库练习 :: Maloudown">
+    <meta itemprop="description" content="网站 “语言网【基础】” “大学慕课对应习题【算法基础】” “牛客竞赛【中等】” “LeetCode【较难】” 课程学习 “书籍” “大学慕课” Github项目 “C/C&#43;&#43;面试总结项目” “书籍：Github项目” “C/C&#43;&#43;面试总结” “系统设计” 题目笔记 1.cahr *s = &#34;AAAA&#34;指针接受一个字符串（右值），当想通过s[0] = ‘B’修改时是无法修改成功的，因为&#34;AAAA&#34;只能读，不能写。 2.一般函数内如果返回char s[] = {“abcd”};那么一般会报错，因为这是一个局部变量，但s[]修改为*s就不会有问题。因为 *s指向的地址是固定的。 3.在自动类型转换中：">
+    <meta itemprop="datePublished" content="2024-11-18T17:38:06+08:00">
+    <meta itemprop="dateModified" content="2024-11-18T17:38:06+08:00">
+    <meta itemprop="wordCount" content="4047">
+    <meta itemprop="keywords" content="C&#43;&#43;面试,C&#43;&#43;,面经">
+    <title>1.在线题库练习 :: Maloudown</title>
+    <link href="http://localhost:1313/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/" rel="canonical" type="text/html" title="1.在线题库练习 :: Maloudown">
+    <link href="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/index.xml" rel="alternate" type="application/rss+xml" title="1.在线题库练习 :: Maloudown">
+    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95\/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0\/';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#网站">网站</a></li>
+    <li><a href="#课程学习">课程学习</a></li>
+    <li><a href="#题目笔记">题目笔记</a>
+      <ul>
+        <li><a href="#strlen-函数">strlen() 函数</a></li>
+        <li><a href="#strcpy-函数">strcpy() 函数</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/"><span itemprop="name">21.C语言程序设计（含面试）</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">1.在线题库练习</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/" title="21.C语言程序设计（含面试） (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/" title="20.C++面试 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/c&amp;#43;&amp;#43;/">C&#43;&#43;</a></li>
+    <li><a class="term-link" href="../../../tags/c&amp;#43;&amp;#43;%E9%9D%A2%E8%AF%95/">C&#43;&#43;面试</a></li>
+    <li><a class="term-link" href="../../../tags/%E9%9D%A2%E7%BB%8F/">面经</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="1在线题库练习">1.在线题库练习</h1>
+
+<h2 id="网站">网站</h2>
+<ul>
+<li><a href="https://www.dotcpp.com/oj/ybt-cpp/?page=1" rel="external" target="_blank">&ldquo;语言网【基础】&rdquo;</a></li>
+<li><a href="http://cxsjsxmooc.openjudge.cn/2023t1spring/" rel="external" target="_blank">&ldquo;大学慕课对应习题【算法基础】&rdquo;</a></li>
+<li><a href="https://ac.nowcoder.com/acm/skill/detail/noip-tg/1582" rel="external" target="_blank">&ldquo;牛客竞赛【中等】&rdquo;</a></li>
+<li><a href="https://leetcode.cn/studyplan/top-100-liked/" rel="external" target="_blank">&ldquo;LeetCode【较难】&rdquo;</a></li>
+</ul>
+<h2 id="课程学习">课程学习</h2>
+<ul>
+<li><a href="https://sse.hit.edu.cn/book/" rel="external" target="_blank">&ldquo;书籍&rdquo;</a></li>
+<li><a href="https://www.icourse163.org/learn/PKU-1001553023?tid=1473340448#/learn/announce" rel="external" target="_blank">&ldquo;大学慕课&rdquo;</a>
+Github项目</li>
+<li><a href="https://github.com/huihut/interview?tab=readme-ov-file#cc-development-direction" rel="external" target="_blank">&ldquo;C/C++面试总结项目&rdquo;</a></li>
+<li><a href="https://github.com/ZhongYi-LinuxDriverDev/CS-EmbeddedLinux-Book?tab=readme-ov-file#c" rel="external" target="_blank">&ldquo;书籍：Github项目&rdquo;</a></li>
+<li><a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/%E5%89%91%E6%8C%87%20Offer%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md" rel="external" target="_blank">&ldquo;C/C++面试总结&rdquo;</a></li>
+<li><a href="https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md" rel="external" target="_blank">&ldquo;系统设计&rdquo;</a></li>
+</ul>
+<h2 id="题目笔记">题目笔记</h2>
+<p>1.<code>cahr *s = &quot;AAAA&quot;</code>指针接受一个字符串（右值），当想通过s[0] = &lsquo;B&rsquo;修改时是无法修改成功的，因为&quot;AAAA&quot;只能读，不能写。
+2.一般函数内如果返回char s[] = {&ldquo;abcd&rdquo;};那么一般会报错，因为这是一个局部变量，但s[]修改为*s就不会有问题。因为 *s指向的地址是固定的。
+3.在自动类型转换中：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    unsiged <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;%d&#34;</span>, b<span style="color:#f92672">+</span>a);</span></span></code></pre></div>
+<p>此处会触发隐式转换——int类型转为uniged int 类型。</p>
+<p>4.大端模式和小端模式的作用是什么，为什么会出现这两种模式？</p>
+<p>作用：
+**大端模式：**在这种模式下，数据的高字节（最重要的字节）保存在内存的低地址处，而数据的低字节（最不重要的字节）保存在内存的高地址处。这种方式类似于人类读写数值的习惯，即从高位到低位
+。
+**小端模式：**在这种模式下，数据的低字节保存在内存的低地址处，而数据的高字节保存在内存的高地址处。这种方式在进行数据类型转换时不需要调整字节内容，直接截取低字节即可</p>
+<p>测试代码：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> i;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">union</span> <span style="color:#a6e22e">test</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> n;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> arr[<span style="color:#ae81ff">4</span>];
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">union</span> <span style="color:#a6e22e">test</span> num;
+</span></span><span style="display:flex;"><span>        num.n <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x12345678</span>;<span style="color:#75715e">//注意:12所在位置是高位 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">4</span>; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            printf(<span style="color:#e6db74">&#34;&amp;arr[%d]  = %p, arr[%d] = %#x</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,i,<span style="color:#f92672">&amp;</span>num.arr[i],i,num.arr[i]);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    代码解释：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            代码中，%x表示输出16进制，x前加 # 标志表示，如果使用 %ox（八进制），
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            则输出的数前面会加上前缀 0；如果使用 %#x 或 %#X（十六进制），
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            则输出的数前面会加上前缀 0x 或 0X。这样做可以明确地表示数值的进制，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            便于阅读和理解。 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    结果：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &amp;arr[0]  = 000000000062FE10, arr[0] = 0x78
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &amp;arr[1]  = 000000000062FE11, arr[1] = 0x56
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &amp;arr[2]  = 000000000062FE12, arr[2] = 0x34
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &amp;arr[3]  = 000000000062FE13, arr[3] = 0x12 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    结论：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        高位存储在高地址，所以是小端模式。 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    */</span> 
+</span></span></code></pre></div>
+<p>5.printf的返回值类型是变量的字符个数。
+6.#和##运算符的使用</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define T(x) printf(&#34;&#34;#x&#34; square is the &#34;,(x)*(x))
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define TEST(n) X##n
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span>        T(<span style="color:#ae81ff">4</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> TEST(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> TEST(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d&#34;</span>,X1);
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<p>结果：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#ae81ff">4</span> square is the <span style="color:#ae81ff">16</span>
+</span></span><span style="display:flex;"><span>    X1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span></span></span></code></pre></div>
+<p>7.结构体中存储字符串时我们可以使用字符指针或者字符数组，但是一般推荐字符数组。选择字符数组还是字符指针取决于具体的应用场景和需求。如果字符串长度固定或较短，且对性能和内存连续性有要求，字符数组可能是更好的选择。如果需要灵活处理不同长度的字符串，或者字符串长度可能非常大，使用字符指针可能更合适，但需要更加小心地管理内存。</p>
+<p>8.strlen()和strcpy()</p>
+<p><code>strlen()</code> 和 <code>strcpy()</code> 是 C 语言标准库中的两个常用函数，它们用于处理字符串。下面分别解释它们的用途和使用时需要注意的事项。</p>
+<h3 id="strlen-函数">strlen() 函数</h3>
+<p><strong>用途</strong>：
+<code>strlen()</code> 函数用于计算一个以空字符（<code>'\0'</code>）结尾的字符串的长度。它返回字符串的长度，不包括最后的空字符。</p>
+<p><strong>函数原型</strong>：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">size_t</span> <span style="color:#a6e22e">strlen</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>str);</span></span></code></pre></div>
+<p><strong>使用注意事项</strong>：</p>
+<ol>
+<li><strong>参数必须是以空字符结尾的字符串</strong>：如果传入的参数不是以空字符结尾的字符串，<code>strlen()</code> 会一直读取内存直到遇到空字符，这可能导致程序读取到未分配的内存区域，造成越界错误。</li>
+<li><strong>返回值类型</strong>：<code>strlen()</code> 返回的是 <code>size_t</code> 类型，它是一个无符号整数类型，用于表示大小或长度。在比较时，需要注意不要与有符号整数类型进行比较，以避免潜在的负值问题。</li>
+<li><strong>效率问题</strong>：<code>strlen()</code> 需要遍历整个字符串直到找到空字符，因此对于非常长的字符串，可能会有一定的性能开销。</li>
+</ol>
+<h3 id="strcpy-函数">strcpy() 函数</h3>
+<p><strong>用途</strong>：
+<code>strcpy()</code> 函数用于将源字符串（包括空字符）复制到目标字符串中。它会覆盖目标字符串原有的内容。</p>
+<p><strong>函数原型</strong>：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">strcpy</span>(<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>dest, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>src);</span></span></code></pre></div>
+<p><strong>使用注意事项</strong>：</p>
+<ol>
+<li><strong>目标字符串必须足够大</strong>：在使用 <code>strcpy()</code> 之前，必须确保目标字符串 <code>dest</code> 有足够的空间来存储源字符串 <code>src</code> 的内容，包括最后的空字符。否则，可能会导致缓冲区溢出，这是常见的安全漏洞。</li>
+<li><strong>不检查目标字符串大小</strong>：<code>strcpy()</code> 不会自动检查目标字符串的大小，如果目标字符串空间不足，会发生溢出。</li>
+<li><strong>不进行类型检查</strong>：<code>strcpy()</code> 不会对传入的参数类型进行检查，因此传入的参数必须是字符数组或字符指针。</li>
+<li><strong>返回值</strong>：<code>strcpy()</code> 返回目标字符串的指针，通常用于链式操作，但需要注意不要因此覆盖了重要的指针值。</li>
+<li><strong>安全性问题</strong>：由于上述原因，<code>strcpy()</code> 在很多情况下被认为是不安全的。在实际编程中，推荐使用 <code>strncpy()</code> 或其他更安全的字符串复制函数，这些函数允许指定最大复制的字符数，从而避免溢出。</li>
+</ol>
+<p>9.修改字节对齐方式 ：<code>#pragma pack(n) //n表示字节对起数，如2，4，8，</code></p>
+<p>10.不同位数电脑的字节对齐方式</p>
+<p>解释代码含义：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#define offsetof(TYPE, MEMBER) ((size_t ) &amp;((TYPE *)0)-&gt;MEMBER)</span></span></span></code></pre></div>
+<ul>
+<li><code>(TYPE *)0</code>:将0强制转换为TYPE类型指针，p = (TYPE *)0;</li>
+<li><code>((TYPE *)0)-&gt; MEMNER</code>:通过指针访问MEMBER成员，</li>
+<li><code>&amp;((TYPE *)0)-&gt; MEMNER</code>：取得成员地址</li>
+<li><code>((size_t ) &amp;((TYPE *)0)-&gt;MEMBER)</code>：将成员地址转为size_t类型
+总结：该宏定义的作用是求出MEMBER成员变量在TYPE中的偏移量。</li>
+</ul>
+<p>示例：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">//#pragma pack(4) 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define offsetof(TYPE, MEMBER) ((size_t ) &amp;((TYPE *)0)-&gt;MEMBER)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">s</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/* data */</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">union</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> a;<span style="color:#75715e">//4字节
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">char</span> str[<span style="color:#ae81ff">10</span>];<span style="color:#75715e">//10字节
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        };
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">s</span><span style="color:#f92672">*</span> next;
+</span></span><span style="display:flex;"><span>    }S;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%ld&#34;</span>,offsetof(S, next));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;    
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<p>结果为16，因为电脑是64位的，所以以8字节对齐，联合体字节大小以最大的成员变量为准，故联合体的字节大小是10个字节</p>
+<p>12.返回二进制数中1的个数（经典题目）
+<a href="#R-image-5750a2301735841c365c058f12a5ef18" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5750a2301735841c365c058f12a5ef18"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image.png"></a></p>
+<p>13.求2的n次方
+<a href="#R-image-8ff844a76b7913dc65c2e4b972cb2f4d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ff844a76b7913dc65c2e4b972cb2f4d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-1.png"></a></p>
+<p>14.操作符[]的重载，代码实现读和写。
+<a href="#R-image-c794389f54b766a51fa6ffd3bf04c05d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c794389f54b766a51fa6ffd3bf04c05d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-2.png"></a></p>
+<p>15.与操作与位操作</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        a <span style="color:#f92672">|=</span> (<span style="color:#ae81ff">1</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#ae81ff">3</span>);<span style="color:#75715e">//将a的第3位设置为1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,a);
+</span></span><span style="display:flex;"><span>        a <span style="color:#f92672">&amp;=</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#ae81ff">3</span>);<span style="color:#75715e">//将a的第3位设置为0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,a);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<p>知识点：</p>
+<ul>
+<li>只要出现置1：或操作</li>
+<li>只要出现置0：与操作
+<a href="#R-image-62cbac77e2edf00037b294687458cce3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-62cbac77e2edf00037b294687458cce3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-3.png"></a></li>
+</ul>
+<p>16.sizeof的使用</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,a);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,<span style="color:#66d9ef">sizeof</span>(a<span style="color:#f92672">++</span>));
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,a);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>结果为：10,4,10,为什么最后不是11呢？
+<a href="#R-image-8ae42d2ab546dc2df2b27132dbe32376" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ae42d2ab546dc2df2b27132dbe32376"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-4.png"></a></p>
+<p>17.指向地址的指针加一个整数</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>p1 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>)<span style="color:#ae81ff">0x08000010</span>;<span style="color:#75715e">//指向地址的指针
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#f92672">*</span>p2 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#f92672">*</span>)<span style="color:#ae81ff">0x08000010</span>;<span style="color:#75715e">//指向地址的指针
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%#x</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,p1<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%#x</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,p2<span style="color:#f92672">+</span><span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>结果是0x08000015和0x08000024，</p>
+<ul>
+<li>对于前一个答案我们很清楚，因为一个unsigned char占一个字符，加5则是加5个字符；</li>
+<li>后一个答案则是加5个long，一个long占4个字符，所以加5个long就是加20个字符，那么应该是0x08000030才对，为什么是0x08000024呢？因为使用的是16进制计算，20的十六进制就是14，所以是0x08000024。</li>
+</ul>
+<p>18.volatile关键字</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">squere</span>(<span style="color:#66d9ef">volatile</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>pt){
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//正确写法如下：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//int a = *pt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//return a*a;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> (<span style="color:#f92672">*</span>pt)<span style="color:#f92672">*</span>(<span style="color:#f92672">*</span>pt);<span style="color:#75715e">//这样写可能会出错，因为编译器可能会优化代码，认为*pt的值没有改变，所以直接返回上一次的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,squere(<span style="color:#f92672">&amp;</span>a));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<p><a href="#R-image-d24dcbd171b80bca20e0a0cb65394e62" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d24dcbd171b80bca20e0a0cb65394e62"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-5.png"></a></p>
+<p>19.假设有两个变量a,b，不借助第三个变量交换两个变量的值。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    a<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;b<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>    a<span style="color:#f92672">=</span>a<span style="color:#f92672">^</span>b;<span style="color:#75715e">//0010^0011=0001
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    b<span style="color:#f92672">=</span>a<span style="color:#f92672">^</span>b;<span style="color:#75715e">//0001^0011=0010
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    a<span style="color:#f92672">=</span>a<span style="color:#f92672">^</span>b;<span style="color:#75715e">//0001^0010=0011
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d,%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,a,b);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>还可以使用减法的思想：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    a<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;b<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>    a<span style="color:#f92672">=</span>a<span style="color:#f92672">+</span>b;<span style="color:#75715e">//a=5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    b<span style="color:#f92672">=</span>a<span style="color:#f92672">-</span>b;<span style="color:#75715e">//b=2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    a<span style="color:#f92672">=</span>a<span style="color:#f92672">-</span>b;<span style="color:#75715e">//a=3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d,%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,a,b);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>20.左移右移运算符和条件运算符的优先级</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>using namespace std;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">99</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span>(a<span style="color:#f92672">&gt;</span>b)<span style="color:#f92672">?</span>a:b;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>结果输出为0，因为条件运算符的优先级低于左移运算符，所以先执行了左移运算符，结果为0。</p>
+<p>21.交换地址的高位和地位</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">convert</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> a;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;请输入一个整数：&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">scanf</span>(<span style="color:#e6db74">&#34;%x&#34;</span>,<span style="color:#f92672">&amp;</span>a);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">convert</span>(<span style="color:#f92672">&amp;</span>a);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;转换后的整数为：%x</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,a);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">convert</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> temp;
+</span></span><span style="display:flex;"><span>    temp <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>a <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x0f</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>a <span style="color:#f92672">&amp;=</span> <span style="color:#ae81ff">0xf0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>a <span style="color:#f92672">=</span> (<span style="color:#f92672">*</span>a <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">|</span> (temp <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">4</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">结果：</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>c
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">请输入一个整数：</span><span style="color:#ae81ff">0x3A</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">转换后的整数为：</span><span style="color:#ae81ff">0xa3</span></span></span></code></pre></div>
+<p>22.一级指针和二级指针
+<a href="#R-image-9eb1265efb768428951d18f350c8755d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9eb1265efb768428951d18f350c8755d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-6.png"></a></p>
+<p>23.如果从数组x复制50个字节到数组y,最简单的方法是什么？</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> x[<span style="color:#ae81ff">50</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> y[<span style="color:#ae81ff">50</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">memcpy</span>(y,x,<span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,y);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>memcpy 是一个用于在内存中复制数据的函数，定义在 C 标准库中的 &lt;string.h&gt; 头文件中。它的原型如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">memcpy</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>dest, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>src, <span style="color:#66d9ef">size_t</span> n);</span></span></code></pre></div>
+<p>参数说明</p>
+<ul>
+<li>dest：指向目标内存位置的指针，即数据将被复制到的位置。</li>
+<li>src：指向源内存位置的指针，即数据将从哪里复制。</li>
+<li>n：<strong>要复制的字节数。</strong></li>
+</ul>
+<p>返回值</p>
+<p>返回指向目标内存位置的指针 dest。</p>
+<p>用途</p>
+<p>memcpy 函数主要用于在内存中复制数据块，常用于以下场景：</p>
+<ul>
+<li>字符串复制：复制字符串内容。</li>
+<li>结构体复制：复制结构体数据。</li>
+<li>数组复制：复制数组元素。</li>
+</ul>
+<p>使用注意事项</p>
+<ul>
+<li>目标内存必须足够大：确保目标内存区域足够大，能够容纳从源内存复制过来的数据，否则会导致缓冲区溢出。</li>
+<li>源和目标内存不能重叠：如果源和目标内存区域有重叠，memcpy 的行为是未定义的。如果需要处理重叠的情况，可以使用 memmove 函数。</li>
+<li>类型安全：memcpy 是一个低级别的内存操作函数，不进行类型检查，因此在使用时需要确保数据类型的一致性。</li>
+<li>性能考虑：memcpy 通常比手动循环复制更高效，因为它利用了底层硬件的优化。</li>
+</ul>
+<p>24.将字符数字转为整形数字</p>
+<p>思路：使用指针取出字符串中的每个字符，然后减去字符'0&rsquo;的ASCII码值，即可得到对应的整形数字。
+编写一个函数来实现这个操作，函数原型如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">ascii_to_integer</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>str);</span></span></code></pre></div>
+<p>其中，str 是一个指向字符数字字符串的指针，函数返回对应的整形数字。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">ascii_to_integer</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>str){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> digit <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(<span style="color:#f92672">*</span>str <span style="color:#f92672">&gt;=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">*</span>str <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;9&#39;</span>){
+</span></span><span style="display:flex;"><span>        digit <span style="color:#f92672">=</span> digit <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> (<span style="color:#f92672">*</span>str <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;0&#39;</span>);
+</span></span><span style="display:flex;"><span>        str<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#f92672">*</span>str <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;\0&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> digit;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[]){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// int digit = ascii_to_integer(argv[1]);//在Linux中可以尝试这样写
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> str[<span style="color:#ae81ff">100</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;请输入一串数字字符：&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">scanf</span>(<span style="color:#e6db74">&#34;%s&#34;</span>,str);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;The digit is: %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">ascii_to_integer</span>(str));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>24.百钱买百鸡问题</p>
+<p>解题思路如下图：
+<a href="#R-image-6d04dac470c40cee095fc28f66143177" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6d04dac470c40cee095fc28f66143177"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-7.png"></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> x, y, z;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> t;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;t<span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">4</span>;t<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> t;
+</span></span><span style="display:flex;"><span>        y <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span> <span style="color:#f92672">*</span> t;
+</span></span><span style="display:flex;"><span>        z <span style="color:#f92672">=</span> <span style="color:#ae81ff">75</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> t;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;cock:%d,hen:%d,chicken:%d-----sum:%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,x,y,z,x<span style="color:#f92672">+</span>y<span style="color:#f92672">+</span>z);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">结果：</span>
+</span></span><span style="display:flex;"><span>cock:<span style="color:#ae81ff">0</span>,hen:<span style="color:#ae81ff">25</span>,chicken:<span style="color:#ae81ff">75</span><span style="color:#f92672">-----</span>sum:<span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>cock:<span style="color:#ae81ff">4</span>,hen:<span style="color:#ae81ff">18</span>,chicken:<span style="color:#ae81ff">78</span><span style="color:#f92672">-----</span>sum:<span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>cock:<span style="color:#ae81ff">8</span>,hen:<span style="color:#ae81ff">11</span>,chicken:<span style="color:#ae81ff">81</span><span style="color:#f92672">-----</span>sum:<span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>cock:<span style="color:#ae81ff">12</span>,hen:<span style="color:#ae81ff">4</span>,chicken:<span style="color:#ae81ff">84</span><span style="color:#f92672">-----</span>sum:<span style="color:#ae81ff">100</span></span></span></code></pre></div>
+<p>25.*和++运算符优先级
+二者的运算优先级是一样的。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> arr[<span style="color:#ae81ff">10</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>p <span style="color:#f92672">=</span> arr;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>,<span style="color:#f92672">*</span>p<span style="color:#f92672">++</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> arr;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">-------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>,<span style="color:#f92672">*++</span>p);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> arr;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">-------------------------------------------</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>,<span style="color:#f92672">++</span>(<span style="color:#f92672">*</span>p));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>26.函数指针类型
+<a href="#R-image-07a3de00c2c734a81a4f063377abb889" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-07a3de00c2c734a81a4f063377abb889"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-8.png"></a></p>
+<p>27.编写函数实现整数四舍五入
+思路：对于正数我们可以加0.5，然后取整；
+对于负数则减去0.5，然后取整。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">round</span>(<span style="color:#66d9ef">int</span> num){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(num <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> num <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.5</span>;
+</span></span><span style="display:flex;"><span>    }<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> num <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.6</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;round(%d) = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,num,<span style="color:#a6e22e">round</span>(num));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>28.下图代码运行结果
+<a href="#R-image-acbe7dce94edde89987f87f1cfc03f33" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-acbe7dce94edde89987f87f1cfc03f33"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-9.png"></a></p>
+<p>29.函数指针数组
+<a href="#R-image-b67afc800c03db95a26eab2ac5fa6bda" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b67afc800c03db95a26eab2ac5fa6bda"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-10.png"></a></p>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年11月18日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/m1-%E9%9D%A2%E8%AF%95/">M1-面试</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>9.STL库学习之迭代器与算法 :: Maloudown</title>
+    <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/</link>
+    <description>标准库常用算法 迭代器 迭代器-的分类 struct input_iterator_tag {}； struct output_iterator_tag {}; struct forward_iterator_tag:public input_iterator_tag{}; struct bidirectional_iterator_tag:public forward_iterator_tag{}; struct random_access_tag:public bidirectional_iterator_tag {};&#xD;以上5中迭代器的继承关系，如下图所示。 1.Input Iterator（输入迭代器）： 输入迭代器是最基本的迭代器类型，支持单向遍历，只能向前移动。</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

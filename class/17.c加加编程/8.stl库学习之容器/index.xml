@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>8.STL库学习之容器 :: Maloudown</title>
+    <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/</link>
+    <description>list vector deque deque的迭代器 deque实现中间插入值的做法：如果欲插入值在最前端（最尾端）调用push_front()（push_back()）,否则借助insert_aux()迭代器，实现如果欲插入位置靠近前端使用，就让前端的数据往前挪，否则往后挪。</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

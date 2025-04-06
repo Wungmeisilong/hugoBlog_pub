@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="贺青工程志愿活动软件设计与开发验收问题毕业设计电赛唛盟杯比赛详记">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="  项目 :: Maloudown">
+    <meta name="twitter:description" content="贺青工程志愿活动软件设计与开发验收问题毕业设计电赛唛盟杯比赛详记">
+    <meta property="og:url" content="http://localhost:1313/projects/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="  项目 :: Maloudown">
+    <meta property="og:description" content="贺青工程志愿活动软件设计与开发验收问题毕业设计电赛唛盟杯比赛详记">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="  项目 :: Maloudown">
+    <meta itemprop="description" content="贺青工程志愿活动软件设计与开发验收问题毕业设计电赛唛盟杯比赛详记">
+    <meta itemprop="datePublished" content="2024-07-07T18:10:42+08:00">
+    <meta itemprop="dateModified" content="2024-07-07T18:10:42+08:00">
+    <meta itemprop="wordCount" content="32">
+    <title>  项目 :: Maloudown</title>
+    <link href="http://localhost:1313/projects/" rel="canonical" type="text/html" title="  项目 :: Maloudown">
+    <link href="../projects/index.xml" rel="alternate" type="application/rss+xml" title="  项目 :: Maloudown">
+    <link href="../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/projects\/';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../projects/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">  项目</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../projects/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../class/7.%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/" title="物联网工程 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/" title="贺青工程 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable projects" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="项目">  项目</h1>
+
+<ul class="children children-li children-sort-">
+  <li class="children-title"><a href="../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/">贺青工程</a><ul>
+  <li class="children-title"><a href="../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/">志愿活动软件设计与开发</a><ul></ul></li>
+  <li class="children-title"><a href="../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/">验收问题</a><ul></ul></li></ul></li>
+  <li class="children-title"><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">毕业设计</a><ul></ul></li>
+  <li class="children-title"><a href="../projects/%E7%94%B5%E8%B5%9B/">电赛</a><ul></ul></li>
+  <li class="children-title"><a href="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/">唛盟杯比赛详记</a><ul></ul></li>
+</ul>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年7月7日
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">  项目 的子部分</h1>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="贺青工程">贺青工程</h1>
+
+<ul class="children children-li children-sort-">
+  <li class="children-title"><a href="../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/">志愿活动软件设计与开发</a><p><p>设计一款可以参加志愿活动的小程序，其制作流程大致如下：</p>
+<h2 id="需求分析与规划">需求分析与规划</h2>
+<p>确定目标用户群体及其需求：考虑志愿者、活动组织者和管理员等不同角色的功能需求。</p>
+<p><strong>志愿者：</strong></p>
+<ul>
+<li><strong>注册/登录</strong>：志愿者可以通过手机号、邮箱或第三方账号进行注册和登录。</li>
+<li><strong>个人中心</strong>：查看并编辑个人信息，包括姓名、联系方式、服务时长、参与过的活动记录等。</li>
+<li><strong>活动浏览</strong>：查看活动列表，搜索感兴趣的服务项目，支持按地区、时间、类型筛选。</li>
+<li><strong>活动报名</strong>：选择感兴趣的志愿活动进行报名，填写相关报名表单，并能收到报名成功或失败的反馈信息。</li>
+<li><strong>签到打卡</strong>：参加活动时通过GPS定位、二维码扫描等方式进行签到和签退，记录服务时长。</li>
+<li><strong>互动交流</strong>：可在活动详情页留言评论，与其他志愿者交流心得，也可以对已完成的活动进行评价。</li>
+<li><strong>积分系统</strong>：根据参与活动的情况获取积分，可用于兑换礼品或其他激励。</li>
+</ul>
+<p><strong>活动组织者：</strong></p></p></li>
+  <li class="children-title"><a href="../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/">验收问题</a><p><h2 id="页面美化验收">页面美化验收</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 1.登录页面</li>
+<li><input disabled="" type="checkbox"> 2.首页&mdash;将志愿活动和活动时长数据放到轮播图下面</li>
+<li><input disabled="" type="checkbox"> 3.我的页面优化了吗？</li>
+<li><input disabled="" type="checkbox"> 4.点击找回密码后，页面颜色不够美观，该页面应符合小程序主色调</li>
+<li><input disabled="" type="checkbox"> 5.首页&mdash;-为你推荐的志愿活动适当放大活动名称字体，调整活动名称下面的显示信息，请适当调整字体大小、行距、间距。</li>
+<li><input disabled="" type="checkbox"> 6.贺院学子一直在行动调整这个模块数字、志愿活动、志愿者等字段的字体大小，现在看起来感觉数字和文字很随意，请适当调整。</li>
+<li><input disabled="" type="checkbox"> 7.让“无权限”字段直接显示在页面上，字体背景设置为透明，而不是像现在这样看起来像一个按键。</li>
+<li><input disabled="" type="checkbox"> 8.我的组织页面中，显示的组织之间间距太近，请适当调整。</li>
+</ul>
+<h2 id="小程序功能验收">小程序功能验收</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 1.不同的登录方式有问题吗？</li>
+<li><input disabled="" type="checkbox"> 2.<strong>签到开始时间为活动开始前半小时</strong>，（现在是没到签到时间不可以签到，精确度很高）</li>
+<li><input disabled="" type="checkbox"> 3.活动结束后不能进行签退，但是活动发起者可以对其进行补签，补签时长可以自定，自定义时长不能超过该志愿者从开始签到至活动结束的时长。</li>
+<li><input disabled="" type="checkbox"> 4.服务时长为签到签退时间差吗？</li>
+<li><input disabled="" type="checkbox"> 5.签到签退需要在活动地点三公里以内才能进行。</li>
+<li><input disabled="" type="checkbox"> 6.活动发起者发布活动后或得四位数数字密码，该密码在志愿者点击签到或签退时弹出小弹窗，输入密码后实现签到签退。</li>
+<li><input disabled="" type="checkbox"> 7.当成员加入活动时，活动发起者能够一键通过成员的审核</li>
+<li><input disabled="" type="checkbox"> 8.发现页面上方，将日期和距离归纳在一个板块“排序”</li>
+<li><input disabled="" type="checkbox"> 9.当我登录后点击返回，返回到的页面是上一次的登录页面，需要一步一步返回，请设置为登陆成功后直接跳转到我的页面。</li>
+<li><input disabled="" type="checkbox"> 10.</li>
+<li><input disabled="" type="checkbox"> 11.</li>
+</ul>
+<p><strong>今晚检查有三，目前都没问题，如下</strong>：</p></p></li>
+</ul>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年1月17日
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">贺青工程 的子部分</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../tags/%E8%BD%AF%E4%BB%B6/">软件</a></li>
+    <li><a class="term-link" href="../tags/%E5%BE%AE%E4%BF%A1/">微信</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="志愿活动软件设计与开发">志愿活动软件设计与开发</h1>
+
+<p>设计一款可以参加志愿活动的小程序，其制作流程大致如下：</p>
+<h2 id="需求分析与规划">需求分析与规划</h2>
+<p>确定目标用户群体及其需求：考虑志愿者、活动组织者和管理员等不同角色的功能需求。</p>
+<p><strong>志愿者：</strong></p>
+<ul>
+<li><strong>注册/登录</strong>：志愿者可以通过手机号、邮箱或第三方账号进行注册和登录。</li>
+<li><strong>个人中心</strong>：查看并编辑个人信息，包括姓名、联系方式、服务时长、参与过的活动记录等。</li>
+<li><strong>活动浏览</strong>：查看活动列表，搜索感兴趣的服务项目，支持按地区、时间、类型筛选。</li>
+<li><strong>活动报名</strong>：选择感兴趣的志愿活动进行报名，填写相关报名表单，并能收到报名成功或失败的反馈信息。</li>
+<li><strong>签到打卡</strong>：参加活动时通过GPS定位、二维码扫描等方式进行签到和签退，记录服务时长。</li>
+<li><strong>互动交流</strong>：可在活动详情页留言评论，与其他志愿者交流心得，也可以对已完成的活动进行评价。</li>
+<li><strong>积分系统</strong>：根据参与活动的情况获取积分，可用于兑换礼品或其他激励。</li>
+</ul>
+<p><strong>活动组织者：</strong></p>
+<ul>
+<li><strong>活动发布</strong>：创建新的志愿活动，填写活动名称、地点、时间、内容描述、所需志愿者数量、技能要求等详细信息。</li>
+<li><strong>活动管理</strong>：查看已发布的活动状态，审核志愿者报名申请，确认志愿者名单，发送通知消息给志愿者。</li>
+<li><strong>数据统计</strong>：查看各项活动的报名人数、实际参与人数、总服务时长等统计数据。</li>
+<li><strong>评价反馈</strong>：查阅志愿者对活动的评价和建议，以便改进后续活动组织。</li>
+<li><strong>资源管理</strong>：上传活动相关的文档、图片等资源，管理活动物料。</li>
+</ul>
+<p><strong>管理员：</strong></p>
+<ul>
+<li><strong>用户管理</strong>：审核志愿者注册信息，处理用户投诉与咨询，维护用户账户安全。</li>
+<li><strong>权限管理</strong>：分配不同的角色权限，如设置哪些用户可以发布活动、审核报名等。</li>
+<li><strong>活动审批</strong>：对于某些大型或重要的活动，可能需要经过管理员审核后才能正式发布上线。</li>
+<li><strong>系统配置</strong>：设置全局参数，如积分规则、活动类别等基础数据的增删改查。</li>
+<li><strong>数据分析</strong>：获取平台整体运营数据，分析用户行为、活跃度以及志愿服务的整体状况，为决策提供依据。</li>
+</ul>
+<h3 id="功能列表梳理">功能列表梳理</h3>
+<h4 id="活动浏览报名参与签到打卡服务时长记录通知公告评价反馈积分兑换等功能模块">活动浏览、报名参与、签到打卡、服务时长记录、通知公告、评价反馈、积分兑换等功能模块。</h4>
+<ul>
+<li>数据结构设计：定义数据库表结构，包括但不限于用户信息、活动信息、报名记录等。</li>
+</ul>
+<h2 id="原型设计与uiux设计">原型设计与UI/UX设计</h2>
+<ul>
+<li>创建低保真或高保真原型，展示小程序的主要界面布局及交互流程。</li>
+<li>设计符合用户体验的UI界面，确保简洁易用且美观大方。</li>
+</ul>
+<h2 id="技术选型与开发环境搭建">技术选型与开发环境搭建</h2>
+<ul>
+<li>根据团队技术栈选择合适的开发平台，如微信小程序、支付宝小程序、百度小程序等。</li>
+<li>搭建开发环境，安装所需的IDE工具（如微信开发者工具）及相关依赖库。</li>
+</ul>
+<h2 id="后端服务器开发">后端服务器开发</h2>
+<ul>
+<li>设计并实现后端API接口，处理用户的注册登录、活动发布与管理、报名审核等操作。</li>
+<li>开发数据库系统，用于存储用户信息、活动数据等内容。</li>
+</ul>
+<h2 id="前端小程序开发">前端小程序开发</h2>
+<ul>
+<li>根据原型图编写前端页面代码，使用各小程序平台提供的组件和API进行功能开发。</li>
+<li>实现用户认证、活动详情展示、报名表单提交、状态更新等功能。</li>
+</ul>
+<h2 id="测试与优化">测试与优化</h2>
+<ul>
+<li>单元测试：对各个功能模块进行独立测试，确保逻辑正确无误。</li>
+<li>集成测试：模拟真实场景，测试整个应用的完整流程是否顺畅。</li>
+<li>性能测试：检查在大量并发请求下系统的响应速度和稳定性。</li>
+<li>用户体验测试：邀请部分目标用户试用，并根据反馈进行迭代优化。</li>
+</ul>
+<h2 id="上线部署与版本管理">上线部署与版本管理</h2>
+<ul>
+<li>将完成开发和测试的小程序上传至对应平台进行审核发布。</li>
+<li>制定版本更新策略，持续收集用户反馈，定期更新优化软件。</li>
+</ul>
+<h2 id="后期维护与运营">后期维护与运营</h2>
+<ul>
+<li>定期检查系统性能，及时修复已知问题和潜在隐患。</li>
+<li>对接新的需求，不断丰富和完善产品功能。</li>
+<li>进行数据分析，了解用户行为，以数据驱动产品迭代优化。</li>
+</ul>
+<p>这份文件是关于2024年全国大学生电子设计竞赛信息科技前沿专题赛（瑞萨杯）的通知。以下是比赛的主要信息和需要注意的事项：</p>
+<ol>
+<li>
+<p><strong>组织领导</strong>：</p>
+<ul>
+<li>竞赛由全国大学生电子设计竞赛组委会组织。</li>
+<li>分组委会负责实施、协调和宣传工作。</li>
+<li>瑞萨公司提供技术支持和赛前培训。</li>
+<li>采用“分区初选+全国决赛”的模式，分为东区、南区、西区和北区。</li>
+</ul>
+</li>
+<li>
+<p><strong>参赛学校与参赛队</strong>：</p>
+<ul>
+<li>报名采用“选拔+邀请”方式。</li>
+<li>自动获得全国决赛资格的学校需在规定时间内上报参赛名单。</li>
+<li>参赛学生必须是全日制在校本科生。</li>
+<li>每支参赛队由3名学生组成，可配备1名指导教师。</li>
+</ul>
+</li>
+<li>
+<p><strong>命题与竞赛形式</strong>：</p>
+<ul>
+<li>主题为“物联网+数字经济”，涉及非图形图像信息处理及测控技术。</li>
+<li>初选和决赛作品需基于指定的瑞萨公司硬件平台。</li>
+<li>竞赛采用开放式，不限定竞赛场地。</li>
+</ul>
+</li>
+<li>
+<p><strong>竞赛时间安排</strong>：</p>
+<ul>
+<li>竞赛时间为2024年2月26日至7月31日。</li>
+<li>报名截止日期为2024年3月15日。</li>
+<li>分区初选和全国决赛的具体时间安排详见文件。</li>
+</ul>
+</li>
+<li>
+<p><strong>竞赛报名</strong>：</p>
+<ul>
+<li>报名需提交学校竞赛负责人、参赛学生名单和指导教师信息。</li>
+<li>报名表需签字盖章后发送给各区联络员。</li>
+<li>不收取报名费。</li>
+</ul>
+</li>
+<li>
+<p><strong>竞赛培训</strong>：</p>
+<ul>
+<li>组委会将联合瑞萨公司开展线上培训。</li>
+<li>提供参赛学生在线交流论坛。</li>
+<li>瑞萨开发套件及相关软件将在指定时间发放。</li>
+</ul>
+</li>
+<li>
+<p><strong>中期检查</strong>：</p>
+<ul>
+<li>组委会将在2024年6月中上旬进行中期检查和巡视。</li>
+</ul>
+</li>
+<li>
+<p><strong>竞赛评审</strong>：</p>
+<ul>
+<li>分区初选和全国决赛的评审工作由专家组完成。</li>
+<li>评审要求包括作品简介、中英文设计报告和实物作品。</li>
+<li>评审时间安排和具体要求详见文件。</li>
+</ul>
+</li>
+<li>
+<p><strong>评奖与颁奖</strong>：</p>
+<ul>
+<li>各区评审组评选一、二、三等奖。</li>
+<li>全国评审专家组评选全国一、二、三等奖。</li>
+<li>颁奖大会在评审结束后举行。</li>
+</ul>
+</li>
+<li>
+<p><strong>联系方式</strong>：</p>
+<ul>
+<li>提供了竞赛组委会秘书处、专题赛报名联络员以及各区联络员的联系方式。</li>
+</ul>
+</li>
+</ol>
+<p><strong>注意事项</strong>：</p>
+<ul>
+<li>确保参赛学生符合资格，且在竞赛期间保持在校状态。</li>
+<li>按时完成报名和提交作品。</li>
+<li>遵循评审要求，包括作品的提交格式和内容。</li>
+<li>确保参赛作品的原创性，避免抄袭。</li>
+<li>关注官方通知，以获取最新的培训、评审和颁奖信息。</li>
+<li>妥善保管瑞萨开发套件，如有质量问题及时联系瑞萨公司更换。
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div></li>
+</ul>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年1月17日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../categories/x1-%E9%A1%B9%E7%9B%AE/">X1-项目</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../tags/%E8%BD%AF%E4%BB%B6/">软件</a></li>
+    <li><a class="term-link" href="../tags/%E5%BE%AE%E4%BF%A1/">微信</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="验收问题">验收问题</h1>
+
+<h2 id="页面美化验收">页面美化验收</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 1.登录页面</li>
+<li><input disabled="" type="checkbox"> 2.首页&mdash;将志愿活动和活动时长数据放到轮播图下面</li>
+<li><input disabled="" type="checkbox"> 3.我的页面优化了吗？</li>
+<li><input disabled="" type="checkbox"> 4.点击找回密码后，页面颜色不够美观，该页面应符合小程序主色调</li>
+<li><input disabled="" type="checkbox"> 5.首页&mdash;-为你推荐的志愿活动适当放大活动名称字体，调整活动名称下面的显示信息，请适当调整字体大小、行距、间距。</li>
+<li><input disabled="" type="checkbox"> 6.贺院学子一直在行动调整这个模块数字、志愿活动、志愿者等字段的字体大小，现在看起来感觉数字和文字很随意，请适当调整。</li>
+<li><input disabled="" type="checkbox"> 7.让“无权限”字段直接显示在页面上，字体背景设置为透明，而不是像现在这样看起来像一个按键。</li>
+<li><input disabled="" type="checkbox"> 8.我的组织页面中，显示的组织之间间距太近，请适当调整。</li>
+</ul>
+<h2 id="小程序功能验收">小程序功能验收</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 1.不同的登录方式有问题吗？</li>
+<li><input disabled="" type="checkbox"> 2.<strong>签到开始时间为活动开始前半小时</strong>，（现在是没到签到时间不可以签到，精确度很高）</li>
+<li><input disabled="" type="checkbox"> 3.活动结束后不能进行签退，但是活动发起者可以对其进行补签，补签时长可以自定，自定义时长不能超过该志愿者从开始签到至活动结束的时长。</li>
+<li><input disabled="" type="checkbox"> 4.服务时长为签到签退时间差吗？</li>
+<li><input disabled="" type="checkbox"> 5.签到签退需要在活动地点三公里以内才能进行。</li>
+<li><input disabled="" type="checkbox"> 6.活动发起者发布活动后或得四位数数字密码，该密码在志愿者点击签到或签退时弹出小弹窗，输入密码后实现签到签退。</li>
+<li><input disabled="" type="checkbox"> 7.当成员加入活动时，活动发起者能够一键通过成员的审核</li>
+<li><input disabled="" type="checkbox"> 8.发现页面上方，将日期和距离归纳在一个板块“排序”</li>
+<li><input disabled="" type="checkbox"> 9.当我登录后点击返回，返回到的页面是上一次的登录页面，需要一步一步返回，请设置为登陆成功后直接跳转到我的页面。</li>
+<li><input disabled="" type="checkbox"> 10.</li>
+<li><input disabled="" type="checkbox"> 11.</li>
+</ul>
+<p><strong>今晚检查有三，目前都没问题，如下</strong>：</p>
+<ul>
+<li>签到签退，</li>
+<li>上传、查看、删除pdf和图片，</li>
+<li>部分页面正常显示，</li>
+</ul>
+<p><strong>一些小问题</strong> ：</p>
+<ul>
+<li>
+<p>后台修改开始时间和截止时间后，虽然能正常显示，但修改后不起效果，假设报名时间为12：00，过了12点整后修改为13：00，那么活动还是无法参与。</p>
+</li>
+<li>
+<p>组织详情页不显示所写简介
+<a href="#R-image-ebea0db3186fe954b122b02ac54028f1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ebea0db3186fe954b122b02ac54028f1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/image.png"></a> <a href="#R-image-f82231553497f8dc4610501a304f4132" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f82231553497f8dc4610501a304f4132"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/image-1.png"></a></p>
+</li>
+<li>
+<p>参与人次之前说是等于组织活动参与人数之和，但是我这边看了好像与组织成员相等，并不是活动人数之和，而是总的组织成员人数，你们那边也看看吧。</p>
+</li>
+</ul>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年1月16日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../categories/x1-%E9%A1%B9%E7%9B%AE/">X1-项目</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+          </section>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../tags/onenet/">OneNet</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="毕业设计">毕业设计</h1>
+
+<p><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#联网模块">目录</a></p>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#运行环境">运行环境</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#esp32学习联网模块">【ESP32学习】联网模块</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#esp8266-01s上传数据到onenet">ESP8266-01S上传数据到OneNet</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#收藏的一些资料">收藏的一些资料</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#最终的操作结果">最终的操作结果</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#esp32esp8266-12e连接onenet参考资料">ESP32&amp;&amp;ESP8266-12E连接ONeNet参考资料</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#onenet云平台报错-protocolmqttoffline_time2024-07-15-160149977offline_reasoncloseduetoprotoerror怎么解决">ONeNet云平台报错： {&ldquo;protocol&rdquo;:&ldquo;MQTT&rdquo;,&ldquo;offline_time&rdquo;:&ldquo;2024-07-15 16:01:49.977&rdquo;,&ldquo;offline_reason&rdquo;:&ldquo;CloseDueToProtoError&rdquo;}怎么解决？</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#app连接onenet">APP连接ONeNet</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#json数据解析步骤">json数据解析步骤</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#stm32电脑模拟esp32esp8266通信">STM32+电脑(模拟ESP32)+ESP8266通信</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#设备热点配网技术wifimanager">设备热点配网技术——WIFIManager</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#报错error-wifi_country_t-does-not-name-a-type-const-wifi_country_t-wm_country_usus111wifi_country_policy_auto">报错：error: &lsquo;wifi_country_t&rsquo; does not name a type const wifi_country_t WM_COUNTRY_US{&ldquo;US&rdquo;,1,11,WIFI_COUNTRY_POLICY_AUTO};</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#通信过程中遇到的问题">通信过程中遇到的问题</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#这一部分所用到的资料下载地址">这一部分所用到的资料下载地址</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#实验spiffs文件系统的使用">【实验】SPIFFS文件系统的使用</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#实验tcpudp通信实验">【实验】TCP/UDP通信实验</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#stm32f4学习摄像头">【STM32F4学习】摄像头</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#参考资料">参考资料</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#stm32f4工程代码">STM32F4工程代码</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#服务器nginx">【服务器】NGINX</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#在linux中搭建nginx服务器">在Linux中搭建NGINX服务器</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#tcpip协议">TCP/IP协议</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#知识储备">[知识储备]</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#nginx架构">NGINX架构</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#nginx中master的工作原理">NGINX中master的工作原理</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#nginx处理http请求的过程">nginx处理HTTP请求的过程</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#安装nginx">安装NGINX</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#服务器tomcat">【服务器】Tomcat</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#服务器zlmedaikit流媒体服务器">【服务器】ZLMedaikit流媒体服务器</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#第三方库ffmpeg媒体流转码工具">【第三方库】FFmpeg媒体流转码工具</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#深度学习飞桨paddlepaddle实战">【深度学习】飞桨paddlepaddle实战</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#x-cudeai在线课程">X-CUDE—AI在线课程</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#相关论文参考">相关论文参考</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#机器学习hmm模型隐马尔科夫列">【机器学习】HMM模型（隐马尔科夫列）</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#相关论文参考-1">相关论文参考</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#导入库">导入库</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#音视频学习">【音视频学习】</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#h264编码">H.264编码</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#安卓音视频实战编程">安卓音视频实战编程</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#yuv">YUV</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#rtmp协议所在所在的网络层结构">RTMP协议所在所在的网络层结构</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#第三方库librtmp">【第三方库】LIBRTMP</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#工具类似安卓虚拟机total-control">【工具】类似安卓虚拟机：Total Control</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#采集音频数据工具">采集音频数据工具</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#视频采集工具---mediaprojection">视频采集工具&mdash;MediaProjection</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#安卓app制作">【安卓APP制作】</a>
+<ul>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#安卓的两种登录方式">安卓的两种登录方式</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#安卓中集成第三方库进行登录">安卓中集成第三方库进行登录</a></li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#安卓显示onenet提供的可视化链接">安卓显示ONENet提供的可视化链接</a></li>
+</ul>
+</li>
+<li><a href="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/#硬件系统">硬件系统</a></li>
+</ul>
+<h2 id="运行环境">运行环境</h2>
+<h2 id="esp32学习联网模块">【ESP32学习】联网模块</h2>
+<h3 id="esp8266-01s上传数据到onenet">ESP8266-01S上传数据到OneNet</h3>
+<p><a href="https://www.bilibili.com/video/BV1jS421A7Bk/?spm_id_from=333.337.search-card.all.click&vd_source=8b3841f9fc62479f11b65d83945326a7" rel="external" target="_blank">参考视频</a></p>
+<p>1.进入OneNet创建产品和设备（具体步骤待补充）</p>
+<p>2.复制产品和设备的详细信息（备份）</p>
+<p>目的是为了方便使用AT指令以及代码编写。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">设备名称</span>(clientlD) <span style="color:#f92672">:</span> test
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">产品</span>ID (username) <span style="color:#f92672">:</span> F1AVyfXw7l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>password: version<span style="color:#f92672">=</span><span style="color:#ae81ff">2018</span><span style="color:#f92672">-</span><span style="color:#ae81ff">10</span><span style="color:#f92672">-</span><span style="color:#ae81ff">31</span><span style="color:#f92672">&amp;</span>res<span style="color:#f92672">=</span>products<span style="color:#f92672">%</span><span style="color:#ae81ff">2FF</span><span style="color:#ae81ff">1</span>AVyfXw71<span style="color:#f92672">%</span><span style="color:#ae81ff">2F</span>devices<span style="color:#f92672">%</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2F</span>test<span style="color:#f92672">&amp;</span>et<span style="color:#f92672">=</span><span style="color:#ae81ff">2810313321</span><span style="color:#f92672">&amp;</span>method<span style="color:#f92672">=</span>md5<span style="color:#f92672">&amp;</span>sign<span style="color:#f92672">=</span>EfJtPPxHwMX6iWWf3YksbA<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>D<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>D.urI:mqtts.heclouds.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">端口号</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1883</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">订阅</span><span style="color:#f92672">:</span> <span style="color:#960050;background-color:#1e0010">$</span>sys<span style="color:#f92672">/</span>F1AVyfXw7I<span style="color:#f92672">/</span>test<span style="color:#f92672">/</span>thing<span style="color:#f92672">/</span>property<span style="color:#f92672">/</span>post<span style="color:#f92672">/</span>reply发布: <span style="color:#960050;background-color:#1e0010">$</span>sys<span style="color:#f92672">/</span>F1AVyfXw7l<span style="color:#f92672">/</span>test<span style="color:#f92672">/</span>thing<span style="color:#f92672">/</span>property<span style="color:#f92672">/</span>post
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">设备密钥</span><span style="color:#f92672">:</span> cjFZSWRwUGNrazdRR2d6eTJ4Tm9YNXN5bTNuMGpMTIE<span style="color:#f92672">=</span>access key: vclTl19loOn7mcfdtT39l1eRfVffM6FfH8U<span style="color:#f92672">/</span>U3HhUQc<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>res:products<span style="color:#f92672">/</span>F1AVyfXw7l<span style="color:#f92672">/</span>devices<span style="color:#f92672">/</span>test
+</span></span><span style="display:flex;"><span>et:<span style="color:#960050;background-color:#1e0010">时间戳</span></span></span></code></pre></div>
+<h4 id="收藏的一些资料">收藏的一些资料</h4>
+<p><a href="https://open.iot.10086.cn/console/product/own" rel="external" target="_blank">OneNet云平台</a>
+<a href="#R-image-ad209311506195e5980f196e547b2853" class="lightbox-link"><img alt="OneNet云平台" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ad209311506195e5980f196e547b2853"><img alt="OneNet云平台" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-2.png"></a></p>
+<p><a href="https://www.beijing-time.org/shijianchuo/" rel="external" target="_blank">2.时间戳</a>
+<a href="#R-image-5e92e992fe31bc428e727a4f15ba44db" class="lightbox-link"><img alt="时间戳" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5e92e992fe31bc428e727a4f15ba44db"><img alt="时间戳" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image.png"></a></p>
+<p><a href="https://open.iot.10086.cn/doc/v5/develop/detail/639" rel="external" target="_blank">OneNet文档中心</a>
+<a href="#R-image-7f38f5b0f7c12ce48324e8a4885dfe4d" class="lightbox-link"><img alt="OneNet文档中心" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7f38f5b0f7c12ce48324e8a4885dfe4d"><img alt="OneNet文档中心" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-1.png"></a></p>
+<h4 id="最终的操作结果">最终的操作结果</h4>
+<p><a href="#R-image-5f9103a820c8537e89765fb1228ba0cf" class="lightbox-link"><img alt="结果" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5f9103a820c8537e89765fb1228ba0cf"><img alt="结果" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-3.png"></a></p>
+<h3 id="esp32esp8266-12e连接onenet参考资料">ESP32&amp;&amp;ESP8266-12E连接ONeNet参考资料</h3>
+<ul>
+<li><a href="https://open.iot.10086.cn/doc/v5/fuse/detail/1007" rel="external" target="_blank">云平台调试错误码</a></li>
+<li><a href="https://open.iot.10086.cn/doc/v5/fuse/detail/922" rel="external" target="_blank">设备之间数据交换实战项目</a></li>
+<li><a href="https://github.com/arduino-libraries/WiFi" rel="external" target="_blank">wifi.h库</a></li>
+<li><a href="https://blog.csdn.net/qq_40700822/article/details/116640694" rel="external" target="_blank">SCND文章</a></li>
+</ul>
+<p>代码部分唯一不同的是引用的库函数不同，</p>
+<p>ESP8266使用的是</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266WiFi.h&gt;</span></span></span></code></pre></div>
+<p>ESP32使用的是</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFi.h&gt;</span></span></span></code></pre></div>
+<p>在使用时需要注意引用的库函数，如果库函数不匹配，可能会导致编译失败，这部分的代码以放在附件中。</p>
+<ul>
+<li><strong>ESP-12EConnectONenet</strong>是ESP8266-12E连接ONeNet的代码；</li>
+<li><strong>ESP32ConnectONenet</strong> 是ESP8266-12E连接ONeNet的代码。</li>
+</ul>
+<p>**注意：**我提供的代码是以onejson格式上传的，而不是数据流的格式。在云平台创建产品时需要注意这点，当然代码里博主写的就是以数据流格式上传，如果你用原来博主写的，那么创建产品时就选数据流。</p>
+<hr>
+<p>上面的代码只能实现数据上传，并不能实现命令控制，下面就介绍如何实现命令控制。
+主要修改的地方是callback函数，当拿到topic的时候要解析拿到一段ID，具体可以看<a href="https://open.iot.10086.cn/doc/v5/fuse/detail/922" rel="external" target="_blank">官方的资料</a>,里面有提到命令下发的操作。
+<a href="#R-image-299712f4484a333019d9e56b51775d24" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-299712f4484a333019d9e56b51775d24"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-4.png"></a></p>
+<h4 id="onenet云平台报错-protocolmqttoffline_time2024-07-15-160149977offline_reasoncloseduetoprotoerror怎么解决">ONeNet云平台报错： {&ldquo;protocol&rdquo;:&ldquo;MQTT&rdquo;,&ldquo;offline_time&rdquo;:&ldquo;2024-07-15 16:01:49.977&rdquo;,&ldquo;offline_reason&rdquo;:&ldquo;CloseDueToProtoError&rdquo;}怎么解决？</h4>
+<p>这个错误是协议格式不对，也就是用的topic不正确，通过下面的案例对这个作说明。</p>
+<p>当我们在云平台下发命令的时候，在<code>callback</code>函数里使用<code>Serial.println(topic);</code>会打印订阅的topic，格式为:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$</span>sys<span style="color:#f92672">/</span><span style="color:#ae81ff">584938</span><span style="color:#f92672">/</span>onenet_mqtt_dev1<span style="color:#f92672">/</span>cmd<span style="color:#f92672">/</span>request<span style="color:#f92672">/</span>c5a7e27e<span style="color:#f92672">-</span><span style="color:#ae81ff">05</span>bb<span style="color:#f92672">-</span><span style="color:#ae81ff">41</span>eb<span style="color:#f92672">-</span><span style="color:#ae81ff">972</span>b<span style="color:#f92672">-</span>abce424ade8e</span></span></code></pre></div>
+<p>callback函数如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">/********************************************************************************
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">函数：callback
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">功能：接收ONeNet传回的信息
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">返回值：无
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">参数：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    topic是消息的主题，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    payload是消息的有效载荷（数据部分），
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    length是payload的长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*********************************************************************************/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">callback</span>(<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>topic, byte <span style="color:#f92672">*</span>payload, <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> length)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;message rev:&#34;</span>);
+</span></span><span style="display:flex;"><span>  Serial.<span style="color:#a6e22e">println</span>(topic);                    <span style="color:#75715e">// 打印订阅的topic
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> lastSlash <span style="color:#f92672">=</span> <span style="color:#a6e22e">strrchr</span>(topic, <span style="color:#e6db74">&#39;/&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (lastSlash <span style="color:#f92672">!=</span> NULL) {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> cmdId <span style="color:#f92672">=</span> lastSlash <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;      <span style="color:#75715e">// 命令ID位于最后一个&#39;/&#39;之后
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    msgid <span style="color:#f92672">=</span> <span style="color:#a6e22e">String</span>(cmdId);                  <span style="color:#75715e">//将命令ID复制给msgid，msgid定义为全局变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>  Serial.<span style="color:#a6e22e">println</span>(msgid);                    <span style="color:#75715e">// 打印拿到的ID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">strstr</span>(topic, ONENET_GET_CAM_REQUEST)) <span style="color:#75715e">//ONENET_GET_CAM_REQUEST=&#34;$sys/{产品ID}/{设备名}/cmd/request/&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  {
+</span></span><span style="display:flex;"><span>    DynamicJsonDocument <span style="color:#a6e22e">doc</span>(<span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span>    DeserializationError error <span style="color:#f92672">=</span> <span style="color:#a6e22e">deserializeJson</span>(doc, payload);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (error)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;parse json failed&#34;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    JsonObject setAlinkMsgObj <span style="color:#f92672">=</span> doc.as<span style="color:#f92672">&lt;</span>JsonObject<span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">serializeJsonPretty</span>(setAlinkMsgObj, Serial);
+</span></span><span style="display:flex;"><span>    String cam <span style="color:#f92672">=</span> setAlinkMsgObj[<span style="color:#e6db74">&#34;cam&#34;</span>].as<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span>    Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;@&#34;</span><span style="color:#f92672">+</span>cam);                <span style="color:#75715e">//取出下发的命令并在前面加@
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> RESPONSE_TOPIC[<span style="color:#ae81ff">100</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sprintf</span>(RESPONSE_TOPIC, <span style="color:#e6db74">&#34;$sys/{产品ID}/{设备名}/cmd/response/%s&#34;</span>,msgid.<span style="color:#a6e22e">c_str</span>());
+</span></span><span style="display:flex;"><span>    client.<span style="color:#a6e22e">publish</span>(RESPONSE_TOPIC, <span style="color:#e6db74">&#34;OK&#34;</span>);   <span style="color:#75715e">// 向平台响应OK
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }<span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;GET_CAM faile!&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>这份代码是根据一位博主的代码改的（<a href="https://blog.csdn.net/qq_40700822/article/details/116640694" rel="external" target="_blank">博主文章链接</a>），取出后面的ID用如下代码即可</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> lastSlash <span style="color:#f92672">=</span> <span style="color:#a6e22e">strrchr</span>(topic, <span style="color:#e6db74">&#39;/&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (lastSlash <span style="color:#f92672">!=</span> NULL) {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> cmdId <span style="color:#f92672">=</span> lastSlash <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;      <span style="color:#75715e">// 命令ID位于最后一个&#39;/&#39;之后
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    msgid <span style="color:#f92672">=</span> <span style="color:#a6e22e">String</span>(cmdId);                  <span style="color:#75715e">//将命令ID复制给msgid，msgid定义为全局变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>  Serial.<span style="color:#a6e22e">println</span>(msgid);                    <span style="color:#75715e">// 打印拿到的ID
+</span></span></span></code></pre></div>
+<p>而这个时候我们需要响应这个命令用的是</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$</span>sys<span style="color:#f92672">/</span><span style="color:#ae81ff">584938</span><span style="color:#f92672">/</span>onenet_mqtt_dev1<span style="color:#f92672">/</span>cmd<span style="color:#f92672">/</span>response<span style="color:#f92672">/</span>c5a7e27e<span style="color:#f92672">-</span><span style="color:#ae81ff">05</span>bb<span style="color:#f92672">-</span><span style="color:#ae81ff">41</span>eb<span style="color:#f92672">-</span><span style="color:#ae81ff">972</span>b<span style="color:#f92672">-</span>abce424ade8e</span></span></code></pre></div>
+<p>一个是request，一个是response，所以在拿到下发命令的topic后要取出后面跟着的ID，然后再重新拼接在<code>$sys/584938/onenet_mqtt_dev1/cmd/response/</code>后面，然后用这个拼接的topic发送响应数据给云平台。</p>
+<p>这个时候就能在云平台那看到类似如下信息：</p>
+<p><a href="#R-image-2d23148c7485a743183002e510f7f105" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2d23148c7485a743183002e510f7f105"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-5.png"></a></p>
+<p>一般格式错误返回的错误码是15，原因就是格式有问题。使用如下的格式上传响应都可能有问题：</p>
+<p>1.$sys/584938/onenet_mqtt_dev1/cmd/response/</p>
+<p>2.$sys/584938/onenet_mqtt_dev1/cmd/response/+</p>
+<p>3.$sys/584938/onenet_mqtt_dev1/cmd/response/+/+</p>
+<p>以上内容仅供参考，如果你有更好的方法，请在评论区告诉我。</p>
+<h3 id="app连接onenet">APP连接ONeNet</h3>
+<ul>
+<li><a href="https://blog.csdn.net/m0_57523637/article/details/134110774" rel="external" target="_blank">1.内含demo</a></li>
+<li><a href="https://www.bilibili.com/video/BV1Sx42127ni/?spm_id_from=333.337.search-card.all.click&vd_source=5e8e4e9e284af3291f1a3addff3fc2c3" rel="external" target="_blank">2.新版视频地址</a></li>
+<li><a href="https://www.json.cn/json2java/" rel="external" target="_blank">3.json格式化网站</a></li>
+<li><a href="https://blog.csdn.net/NakajimaFN/article/details/109074166" rel="external" target="_blank">4.Android Okhttp3的使用（很全面，包含Post提交字符串、键值对、表单、上传文件、无参请求和Get有参无参请求，还有自动添加token）</a></li>
+<li><a href="https://blog.csdn.net/weixin_46323814/article/details/124662664" rel="external" target="_blank">从json中取出数据,结合第一点看</a></li>
+<li><a href="https://open.iot.10086.cn/doc/v5/fuse/detail/1007" rel="external" target="_blank">5.云平台调试错误码</a></li>
+</ul>
+<p>在B站上学习OKHTTP3，我把主要的核心代码放在附件里，分别是get和post的同步和异步请求，返回的结果和视频地址2里讲的一样。</p>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1Kr4y1b7Kw?p=2&vd_source=5e8e4e9e284af3291f1a3addff3fc2c3" rel="external" target="_blank">视频地址1</a>,</li>
+<li><a href="https://www.bilibili.com/video/BV1Z8411i7Yo/?p=70&spm_id_from=333.880.my_history.page.click&vd_source=5e8e4e9e284af3291f1a3addff3fc2c3" rel="external" target="_blank">视频地址2</a></li>
+</ul>
+<p>在编写HTTPS网络请求（post）时需要上传一些数据，这些数据有一定的上传格式，下面的网址汇总了上传格式content参数</p>
+<ul>
+<li><a href="https://www.runoob.com/http/http-content-type.html" rel="external" target="_blank">HTTP的content格式汇总网址</a></li>
+</ul>
+<hr>
+<p>2024.8.19</p>
+<h4 id="json数据解析步骤">json数据解析步骤</h4>
+<p>方法一：</p>
+<p><a href="#R-image-37225124a41b8e0898eb0348e50699e2" class="lightbox-link"><img alt="1" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-26.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-37225124a41b8e0898eb0348e50699e2"><img alt="1" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-26.png"></a>
+<a href="#R-image-ac8045df8deb5b0d77ff4c32ee8357e8" class="lightbox-link"><img alt="2" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-27.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ac8045df8deb5b0d77ff4c32ee8357e8"><img alt="2" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-27.png"></a></p>
+<p>方法二：</p>
+<p>使用第三方库Gson,在使用前需要创建一个Jsonbear，就是接收Jsons数据的格式。</p>
+<p>总结：</p>
+<p>在Android Studio中，如果你想要生成代码，例如getter和setter方法，可以使用快捷键Alt + Insert（Windows/Linux系统）或Command + N（Mac系统） 。这个快捷操作会引导你通过一个菜单来选择想要生成的代码类型，比如构造函数、toString方法、以及各种重写方法等。</p>
+<p>此外，如果你需要查看某个方法的参数信息，可以使用快捷键Ctrl + P（Windows/Linux系统）或Command + P（Mac系统），这将展示出当前方法的参数列表及其类型。</p>
+<h3 id="stm32电脑模拟esp32esp8266通信">STM32+电脑(模拟ESP32)+ESP8266通信</h3>
+<p>STM32————电脑：串口1（PA 9  PA10）,手机连接指定热点，连接成功后等待一段时间把摄像头的网址发给单片机，单片机通过串口2发给ESP8266.ESP8266再传到OneNet上。</p>
+<p><strong>注意</strong>：在用ESP8266最小系统通信的时，需要给板子单独供电，否则通信可能失败，原因我想可能是因为电压不够。</p>
+<h3 id="设备热点配网技术wifimanager">设备热点配网技术——WIFIManager</h3>
+<p>这个配网技术是让开发板设置热点，然后让手机连接，连接好后配置要让开发板连接的WIFI和密码，这个技术叫设备热点技术。相比于以往的一键配网技术，我个人觉得这个设备热点配网技术成功率要要一些。</p>
+<p>缺点是这个技术不能用AT指令来实现，所以目前AT指令在不配合其他设备的情况下，通常都使用一键配网技术。</p>
+<p><strong>ESP32和ESP8266使用设备热点配网技术的区别</strong></p>
+<ul>
+<li>区别一：使用的WiFi库不同，ESP32使用<code>WiFi.h</code>，而ESP8266使用<code>ESP8266WiFi.h</code></li>
+<li>区别二：使用的WiFiManager.h版本不同，ESP32使用<code>2.0.17</code>(目前这个版本是最新的)，而ESP8266使用<code>0.16或0.15</code>
+在使用ESP32时，请使用目前最新版的wifimanage库，而使用ESP8266的话请使用0.15或0.16版本的WIFIManager，如果ESP8266使用最新版的可能会报错。报什么错呢？</li>
+</ul>
+<h4 id="报错error-wifi_country_t-does-not-name-a-type-const-wifi_country_t-wm_country_usus111wifi_country_policy_auto">报错：error: &lsquo;wifi_country_t&rsquo; does not name a type const wifi_country_t WM_COUNTRY_US{&ldquo;US&rdquo;,1,11,WIFI_COUNTRY_POLICY_AUTO};</h4>
+<p>完整报错如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>d:<span style="color:#960050;background-color:#1e0010">\</span>Program <span style="color:#a6e22e">Files</span> (x86)<span style="color:#960050;background-color:#1e0010">\</span>arduino<span style="color:#960050;background-color:#1e0010">\</span>libraries<span style="color:#960050;background-color:#1e0010">\</span>WiFiManager<span style="color:#f92672">/</span>wm_consts_en.h:<span style="color:#ae81ff">162</span><span style="color:#f92672">:</span><span style="color:#ae81ff">7</span><span style="color:#f92672">:</span> error: <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#66d9ef">wifi_country_t</span><span style="color:#960050;background-color:#1e0010">&#39;</span> does not name a type
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">wifi_country_t</span> WM_COUNTRY_US{<span style="color:#e6db74">&#34;US&#34;</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">11</span>,WIFI_COUNTRY_POLICY_AUTO};
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">^</span>
+</span></span><span style="display:flex;"><span>d:<span style="color:#960050;background-color:#1e0010">\</span>Program <span style="color:#a6e22e">Files</span> (x86)<span style="color:#960050;background-color:#1e0010">\</span>arduino<span style="color:#960050;background-color:#1e0010">\</span>libraries<span style="color:#960050;background-color:#1e0010">\</span>WiFiManager<span style="color:#f92672">/</span>wm_consts_en.h:<span style="color:#ae81ff">163</span><span style="color:#f92672">:</span><span style="color:#ae81ff">7</span><span style="color:#f92672">:</span> error: <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#66d9ef">wifi_country_t</span><span style="color:#960050;background-color:#1e0010">&#39;</span> does not name a type
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">wifi_country_t</span> WM_COUNTRY_CN{<span style="color:#e6db74">&#34;CN&#34;</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">13</span>,WIFI_COUNTRY_POLICY_AUTO};
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">^</span>
+</span></span><span style="display:flex;"><span>d:<span style="color:#960050;background-color:#1e0010">\</span>Program <span style="color:#a6e22e">Files</span> (x86)<span style="color:#960050;background-color:#1e0010">\</span>arduino<span style="color:#960050;background-color:#1e0010">\</span>libraries<span style="color:#960050;background-color:#1e0010">\</span>WiFiManager<span style="color:#f92672">/</span>wm_consts_en.h:<span style="color:#ae81ff">164</span><span style="color:#f92672">:</span><span style="color:#ae81ff">7</span><span style="color:#f92672">:</span> error: <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#66d9ef">wifi_country_t</span><span style="color:#960050;background-color:#1e0010">&#39;</span> does not name a type
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">wifi_country_t</span> WM_COUNTRY_JP{<span style="color:#e6db74">&#34;JP&#34;</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">14</span>,WIFI_COUNTRY_POLICY_AUTO};
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">^</span></span></span></code></pre></div>
+<p>这个错误我目前没有解决，如果你解决了还请评论区或邮件（3256149770@qq.con）告诉我。</p>
+<h3 id="通信过程中遇到的问题">通信过程中遇到的问题</h3>
+<ul>
+<li>
+<p>keil5中一点击下载就闪退或点击debug中的setting就闪退。<a href="https://blog.csdn.net/wcanon/article/details/129645304" rel="external" target="_blank">参照文章</a></p>
+</li>
+<li>
+<p>Keil5编程之warning: #223-D: function “xxx“ declared implicitly.<a href="https://blog.csdn.net/weixin_45714385/article/details/114965914" rel="external" target="_blank">参考链接</a></p>
+</li>
+</ul>
+<h3 id="这一部分所用到的资料下载地址">这一部分所用到的资料下载地址</h3>
+<ul>
+<li><a href="http://www.openedv.com/docs/modules/iot/atk-esp.html" rel="external" target="_blank">正点原子AKT-ESP-Fwifi模块</a></li>
+</ul>
+<hr>
+<p><strong>2024.8.12(更新).</strong></p>
+<h3 id="实验spiffs文件系统的使用">【实验】SPIFFS文件系统的使用</h3>
+<p><a href="https://blog.csdn.net/Naisu_kun/article/details/90442925" rel="external" target="_blank">参考地址</a></p>
+<h3 id="实验tcpudp通信实验">【实验】TCP/UDP通信实验</h3>
+<p><a href="https://blog.csdn.net/sinat_25923849/article/details/123682679" rel="external" target="_blank">参考地址</a></p>
+<h2 id="stm32f4学习摄像头">【STM32F4学习】摄像头</h2>
+<h3 id="参考资料">参考资料</h3>
+<ul>
+<li><a href="https://blog.csdn.net/LiangWF22/article/details/113618532" rel="external" target="_blank">基于STM32F407的摄像头（不带FIFO的OV7670）图像采集及LCD显示实验-笔记整理</a></li>
+<li><a href="https://openatomworkshop.csdn.net/664701d5b12a9d168eb6e4d6.html?dp_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTY4MDg5NSwiZXhwIjoxNzIyMTgwMzc2LCJpYXQiOjE3MjE1NzU1NzYsInVzZXJuYW1lIjoicXFfNjU3OTU3ODUifQ.xZCSUMCprrwP5K6jTYw716zgdx461uUG6SQOkClUhhw" rel="external" target="_blank">STM32F4驱动OV7670总结</a></li>
+<li><a href="https://github.com/weizhangCJLU/stm32f407vgt6-ov7670-tft" rel="external" target="_blank">基于stm32f407vgt6驱动ov7670的TFT实时视频显示</a></li>
+</ul>
+<h2 id="stm32f4工程代码">STM32F4工程代码</h2>
+<p><strong>使用三个ADC通道要注意按顺序去初始化，否则可能会出现问题，运营我还不知道.</strong></p>
+<h2 id="服务器nginx">【服务器】NGINX</h2>
+<h3 id="在linux中搭建nginx服务器">在Linux中搭建NGINX服务器</h3>
+<h3 id="tcpip协议">TCP/IP协议</h3>
+<p><a href="#R-image-b20e849311e95c89ae365ce7c214cd8c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b20e849311e95c89ae365ce7c214cd8c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-6.png"></a>
+<a href="#R-image-f809e2d79b71f1dfc511b871b26a65e7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f809e2d79b71f1dfc511b871b26a65e7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-7.png"></a>
+<a href="#R-image-1d3354627b1a3b93fdc18b84b4e13abd" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d3354627b1a3b93fdc18b84b4e13abd"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-8.png"></a>
+<a href="#R-image-55290477b225dd99cd6d7ff53951e8ca" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-55290477b225dd99cd6d7ff53951e8ca"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-9.png"></a>
+<a href="#R-image-4606f815876859030f2bed50d8df3f7d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4606f815876859030f2bed50d8df3f7d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-10.png"></a>
+<a href="#R-image-db0c0533f24d1e3bff903397759b9457" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-db0c0533f24d1e3bff903397759b9457"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-11.png"></a></p>
+<hr>
+<h3 id="知识储备">[知识储备]</h3>
+<p><a href="https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN" rel="external" target="_blank">在线自动生成nginx配置文件的网站</a></p>
+<ul>
+<li>可以自由选择所需的应用，生成nginx配置作为参考。</li>
+<li>根据你的业务需求，自动生成复杂的nginx配置文件，提供你作为参考，非常好用</li>
+</ul>
+<h3 id="nginx架构">NGINX架构</h3>
+<h4 id="nginx中master的工作原理">NGINX中master的工作原理</h4>
+<p><a href="#R-image-621d22d7f6a025daa6eb200195b7d8be" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-621d22d7f6a025daa6eb200195b7d8be"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-12.png"></a></p>
+<h3 id="nginx处理http请求的过程">nginx处理HTTP请求的过程</h3>
+<p><a href="#R-image-b9f1785a9b108c3cb51516d66570f1f8" class="lightbox-link"><img alt="过程" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b9f1785a9b108c3cb51516d66570f1f8"><img alt="过程" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-13.png"></a></p>
+<h3 id="安装nginx">安装NGINX</h3>
+<p><a href="#R-image-ac1bb0f07fc7fd3b0c4cae1959583919" class="lightbox-link"><img alt="任务" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-15.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ac1bb0f07fc7fd3b0c4cae1959583919"><img alt="任务" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-15.png"></a></p>
+<p>安装路径：https://blog.csdn.net/u011715638/article/details/138670319</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>server {
+</span></span><span style="display:flex;"><span>    listen <span style="color:#ae81ff">80</span>;
+</span></span><span style="display:flex;"><span>    listen [<span style="color:#f92672">::</span>]<span style="color:#f92672">:</span><span style="color:#ae81ff">80</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    server_name example.com www.example.com;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    root <span style="color:#f92672">/</span>var<span style="color:#f92672">/</span>www<span style="color:#f92672">/</span>html;
+</span></span><span style="display:flex;"><span>    index index.html index.htm;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    location <span style="color:#f92672">/</span> {
+</span></span><span style="display:flex;"><span>        try_files <span style="color:#960050;background-color:#1e0010">$</span>uri <span style="color:#960050;background-color:#1e0010">$</span>uri<span style="color:#f92672">/</span> <span style="color:#f92672">=</span><span style="color:#ae81ff">404</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>上面是配置文件的内容，下面说明一下配置时的一些注意事项：</p>
+<ul>
+<li>把配置文件的<code>example.com www.example.com</code>换成172.0.0.1，这样方便在本地测试；</li>
+<li>在Ubuntu中可以下载ifconfig来查看Ubuntu的IP地址（ip addr也可以）</li>
+<li>每次修改配置文件记<code>sudo systemctl reload nginx</code></li>
+</ul>
+<h2 id="服务器tomcat">【服务器】Tomcat</h2>
+<p>1.安装Tomcat要使用哪个版本的java？</p>
+<p>使用jdk8或更高版本，详细参考<a href="https://tomcat.apache.org/tomcat-9.0-doc/setup.html" rel="external" target="_blank">官方文档</a></p>
+<p>2.如何在Ubuntu安装Tomcat？</p>
+<ul>
+<li>安装jdk8或更高版本</li>
+<li>安装</li>
+</ul>
+<h2 id="服务器zlmedaikit流媒体服务器">【服务器】ZLMedaikit流媒体服务器</h2>
+<p>需要掌握的知识点：
+<a href="#R-image-7eebfff59f760cd12df423ac4d0d1552" class="lightbox-link"><img alt="知识点" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-29.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7eebfff59f760cd12df423ac4d0d1552"><img alt="知识点" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-29.png"></a></p>
+<h2 id="第三方库ffmpeg媒体流转码工具">【第三方库】FFmpeg媒体流转码工具</h2>
+<ul>
+<li><a href="https://cn.linux-console.net/?p=16693" rel="external" target="_blank">Ubuntu上安装ffmpeg的方法</a></li>
+<li><a href="https://git.ffmpeg.org/ffmpeg.git" rel="external" target="_blank">下载ffmpeg源代码地址</a></li>
+</ul>
+<h2 id="深度学习飞桨paddlepaddle实战">【深度学习】飞桨paddlepaddle实战</h2>
+<hr>
+<p>2024.8.18</p>
+<p><strong>1.从入门到实际运用，请参考B站up主视频：</strong><a href="https://www.bilibili.com/video/BV1AM4y187yR/?spm_id_from=333.999.0.0" rel="external" target="_blank">点击链接</a></p>
+<p><strong>2.学完上面的视频后学习paddlepaddle的语音识别课程：</strong></p>
+<p><strong>3.接着参考STM32cudeXM.AI的相关知识，把模型转换成onnx格式然后在但【单片机上运行：</strong></p>
+<p><strong>3.1先用一个项目练练手：</strong><code>https://shequ.stmicroelectronics.cn/thread-632736-1-1.html</code></p>
+<ul>
+<li><a href="https://stm32ai.st.com/zh/stm32-cube-ai/" rel="external" target="_blank">官网</a></li>
+<li><a href="https://www.st.com/resource/zh/user_manual/dm00570145-getting-started-with-x-cube-ai-expansion-package-for-artificial-intelligence-ai-stmicroelectronics.pdf" rel="external" target="_blank">入门手册文档</a></li>
+<li><a href="https://shequ.stmicroelectronics.cn/forum.php?mod=forumdisplay&fid=1327&filter=dateline&orderby=dateline" rel="external" target="_blank">官网视频</a></li>
+<li><a href="https://www.bilibili.com/video/BV1ns4y1D7ea/?p=16" rel="external" target="_blank">B站视频</a></li>
+</ul>
+<p>意外收获，这是一个学习论坛：<code>https://www.waveshare.net/study/portal.php?mod=list&amp;catid=38</code></p>
+<hr>
+<p>2024.8.25</p>
+<p>参考文献：</p>
+<ul>
+<li>禹鑫鹏,贺庆,王世昕,.基于STM32CubeMX AI和NanoEdge AI的眼动信号分类效果对比研究【J】.传感器世界,2024,(04):6-10.</li>
+</ul>
+<hr>
+<p>2024.8.26</p>
+<h3 id="x-cudeai在线课程">X-CUDE—AI在线课程</h3>
+<p><a href="https://www.st.com.cn/content/st_com/zh/support/learning/stm32-education/stm32-moocs/Introduction_to_STM32CubeAI_MOOC.html" rel="external" target="_blank">参考地址</a></p>
+<p>当模型验证结束后，需要修改以下内容：
+<a href="#R-image-b1c954b3a4e2c7ee24e49cb956c13180" class="lightbox-link"><img alt="修改文件" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-28.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b1c954b3a4e2c7ee24e49cb956c13180"><img alt="修改文件" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-28.png"></a></p>
+<h3 id="相关论文参考">相关论文参考</h3>
+<ul>
+<li><a href="https://github.com/ldknight/Babysound-Sort-tensorflow/blob/main/README.md" rel="external" target="_blank">【github项目网址】婴儿哭声分类识别</a></li>
+</ul>
+<h2 id="机器学习hmm模型隐马尔科夫列">【机器学习】HMM模型（隐马尔科夫列）</h2>
+<p>隐马尔科夫列模型定义：
+<a href="#R-image-d0021e3e9fa4f9495b267f68775e61b4" class="lightbox-link"><img alt="定义" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-25.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d0021e3e9fa4f9495b267f68775e61b4"><img alt="定义" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-25.png"></a></p>
+<h3 id="相关论文参考-1">相关论文参考</h3>
+<p>-<a href="https://sprateam-ustc.github.io/Publications/shuxianwang-2022-ncmmsc.pdf" rel="external" target="_blank">【1.基于声学的婴儿哭声识别细分市场模型】(Baby Cry Recognition Based on Acoustic)</a>
+-<a href="https://asmp-eurasipjournals.springeropen.com/articles/10.1186/s13636-018-0124-x" rel="external" target="_blank">【2.使用隐马尔可夫模型自动分割婴儿哭闹信号】(Automatic segmentation of infant cry signals using hidden Markov models)</a></p>
+<h3 id="导入库">导入库</h3>
+<h2 id="音视频学习">【音视频学习】</h2>
+<h3 id="h264编码">H.264编码</h3>
+<p>所谓视频编码就是指通过特定的压缩技术，将某个视频格式文件转换成另一种视频格式文件的方式。</p>
+<p>视频流传输中最重要的编解码标准有国际电联(TU-T，国际电信联盟)的H.261、H.263、H.264等，运动静止图像专家组（由ISO国际标准化组织与IEC国际电子委员会于1988年联合成立)的MPEG系列标准MPEG1、MPEG2、MPEG4 AVC等。</p>
+<p>其中ITU-TH.264/MPEG-4 AVC是ITU-T与ISO/IEC连手合作制订的新标准。ITU-T方面称之为H.264。但ISOIEC的则将这个新标准归纳于MPEG系列,称为MPEG-4 AVC。</p>
+<p>而H.265则被视为是ITU-TH.264/MPEG-4AVC标准的继任者，又称为高效率视频编码(High Efficiency VideoCoding，简称HEVC)</p>
+<p><a href="#R-image-27a4ef934a674b92c5aa379d62bfeee3" class="lightbox-link"><img alt="h264" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-17.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-27a4ef934a674b92c5aa379d62bfeee3"><img alt="h264" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-17.png"></a></p>
+<p>格式：
+<a href="#R-image-7dbc02d8eea94f776f7fcea70a081403" class="lightbox-link"><img alt="h264" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-16.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7dbc02d8eea94f776f7fcea70a081403"><img alt="h264" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-16.png"></a></p>
+<h3 id="安卓音视频实战编程">安卓音视频实战编程</h3>
+<p>构建预览布局-使用SurfaceView或者TextureView</p>
+<p>打开相机- Camera.open</p>
+<p>设置参数- Camera.Parameters</p>
+<p>设置预览数据回调- PreviewCallback</p>
+<p>设置预览画布并启动- setPreviewTexture/startPreview</p>
+<p>释放相机- stopPreview/release</p>
+<h3 id="yuv">YUV</h3>
+<p>YUV主要应用于优化彩色视频信号的传输，与RGB相比，YUV只需要占用极少的频宽(RGB需要三个独立的视频信号同时传输)。YUV中Y代表明亮度，也称灰阶值;U与V表示的则是色度（色调和饱和度)也可以记作:YCbCr。如果只有Y数据,那么表示的图像就是黑白的。</p>
+<p>使用YUV的原因：</p>
+<p>使用YUV格式才能极大地去除冗余信息，人眼对亮点信息更敏感，对色度敏感度不高。也就是说,可以压缩UV数据,而人眼难以发现。所以压缩算法的第一步，往往先把RGB数据转换成YUV数据。对Y少压缩一点，对UV多压缩一点，以平衡图像效果和压缩率。这也是为什么编码选择使用YUV而不是RGB。</p>
+<p>推算公式：
+<a href="#R-image-70c2d48005a6dca6cd2e33034b734cfc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-18.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-70c2d48005a6dca6cd2e33034b734cfc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-18.png"></a></p>
+<p>YUV是一组数据的压缩格式，其下还有因为排列不同而衍生的不同格式名称</p>
+<p><a href="#R-image-b6ac382cd9a1009586d9443fd290c976" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-19.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b6ac382cd9a1009586d9443fd290c976"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-19.png"></a></p>
+<p>NV21转I420
+<a href="#R-image-8ab0d8934928768f0efc56bb9da6a909" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-20.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ab0d8934928768f0efc56bb9da6a909"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-20.png"></a></p>
+<p>MediaCode组件：
+<a href="#R-image-6aaffba6045e4bf31a95ef5d0691a455" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-21.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6aaffba6045e4bf31a95ef5d0691a455"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-21.png"></a></p>
+<h3 id="rtmp协议所在所在的网络层结构">RTMP协议所在所在的网络层结构</h3>
+<p><a href="#R-image-da00a4f5e1a26e1d0b7aec5f243b91e2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-22.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-da00a4f5e1a26e1d0b7aec5f243b91e2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-22.png"></a></p>
+<h3 id="第三方库librtmp">【第三方库】LIBRTMP</h3>
+<h3 id="工具类似安卓虚拟机total-control">【工具】类似安卓虚拟机：Total Control</h3>
+<h3 id="采集音频数据工具">采集音频数据工具</h3>
+<p><a href="#R-image-12d437b36a64ab12853bed42387c69ac" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-23.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-12d437b36a64ab12853bed42387c69ac"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-23.png"></a></p>
+<h3 id="视频采集工具mediaprojection">视频采集工具&mdash;MediaProjection</h3>
+<p><a href="#R-image-6030002848a4e65c0c6791d481bd0053" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-24.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6030002848a4e65c0c6791d481bd0053"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/image-24.png"></a></p>
+<hr>
+<p>安卓P18</p>
+<hr>
+<p>2024.8.27</p>
+<p>方法一：</p>
+<p><a href="https://blog.csdn.net/gs12software/article/details/130618598?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7Ebaidujs_baidulandingword%7ECtr-3-130618598-blog-114264625.235%5Ev43%5Epc_blog_bottom_relevance_base2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7Ebaidujs_baidulandingword%7ECtr-3-130618598-blog-114264625.235%5Ev43%5Epc_blog_bottom_relevance_base2&utm_relevant_index=6" rel="external" target="_blank">安卓使用VLC库实内网播放ESPCam摄像头数据</a></p>
+<p>方法二：</p>
+<p><a href="https://blog.csdn.net/u011418943/article/details/107561111" rel="external" target="_blank">Mediacode编解码</a></p>
+<h2 id="安卓app制作">【安卓APP制作】</h2>
+<p>1.安卓登录开发</p>
+<hr>
+<p>2024.8.21</p>
+<h3 id="安卓的两种登录方式">安卓的两种登录方式</h3>
+<p>登录可以进去就强登录，或进去后在某个页面触发登录。</p>
+<p>对于第一个只需要在第一个页面做登录处理即可，而第二种需要<code>Hook AMS + APT</code>框架实现，具体看这篇博文：<a href="https://blog.csdn.net/calm1516/article/details/114482477" rel="external" target="_blank">文章连接</a></p>
+<h3 id="安卓中集成第三方库进行登录">安卓中集成第三方库进行登录</h3>
+<p>可以使用目前比较流行的第三方库实现：</p>
+<p><code>JustAuth开源组件</code>：<strong>JustAuth</strong>是一个整合了国内外数十家知名平台的OAuth登录的开源组件，它提供了丰富的OAuth平台支持，自定义State、自定义OAuth、自定义Http接口和自定义Scope等功能，极大地简化了开发者在第三方登录功能上的工作量。</p>
+<hr>
+<p>2024.8.23</p>
+<p>2.数据显示</p>
+<h3 id="安卓显示onenet提供的可视化链接">安卓显示ONENet提供的可视化链接</h3>
+<p><a href="https://blog.csdn.net/qq_52608074/article/details/138144200" rel="external" target="_blank">参考链接</a></p>
+<hr>
+<p>2024.8.29</p>
+<h2 id="硬件系统">硬件系统</h2>
+<p>一、设备选型</p>
+<p>1.空气质量模块设备选型：</p>
+<p><a href="https://blog.csdn.net/qilin001cs/article/details/118771474" rel="external" target="_blank">（1）MQ135测量空气质量和氨气PPM的计算</a></p>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+      <li><a href="../Projects/%e6%af%95%e4%b8%9a%e8%ae%be%e8%ae%a1/index.files/ESP-12ConnectOnenet.c">ESP-12ConnectOnenet.c</a> (7 KB)</li>
+      <li><a href="../Projects/%e6%af%95%e4%b8%9a%e8%ae%be%e8%ae%a1/index.files/ESP32ConnectOnenet%20.c">ESP32ConnectOnenet .c</a> (7 KB)</li>
+      <li><a href="../Projects/%e6%af%95%e4%b8%9a%e8%ae%be%e8%ae%a1/index.files/https.java">https.java</a> (2 KB)</li>
+  </ul>
+</div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年7月7日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">B3-毕业设计</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../tags/stm32%E5%AD%A6%E4%B9%A0/">STM32学习</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="电赛">电赛</h1>
+
+<hr>
+<p><strong>以下笔记皆基于HAL库。</strong></p>
+<h2 id="新建stm32cubemx工程步骤">新建STM32CubeMX工程步骤</h2>
+<p><a href="#R-image-1a7fd5e6defd55d463697b360b644602" class="lightbox-link"><img alt="步骤" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1a7fd5e6defd55d463697b360b644602"><img alt="步骤" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image.png"></a></p>
+<p>创建工程中如果勾选MCO表示向外部输出时钟，
+<a href="#R-image-31f58453262cd5364870fe48e720561e" class="lightbox-link"><img alt="打钩" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-31f58453262cd5364870fe48e720561e"><img alt="打钩" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-1.png"></a>
+输出的是哪一个引脚可以查看，如下图。
+<a href="#R-image-ced9926ccfae707edcea1bbff10994f5" class="lightbox-link"><img alt="PA8" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ced9926ccfae707edcea1bbff10994f5"><img alt="PA8" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-2.png"></a></p>
+<p>外部时钟设置
+<a href="#R-image-cb095864690806bf525cb2dbc9d7f810" class="lightbox-link"><img alt="时钟" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb095864690806bf525cb2dbc9d7f810"><img alt="时钟" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-3.png"></a></p>
+<p>工程设置
+<a href="#R-image-3a44b5f783a8916e05826e7ce5f35e09" class="lightbox-link"><img alt="项目设置" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a44b5f783a8916e05826e7ce5f35e09"><img alt="项目设置" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-4.png"></a></p>
+<p>如果Application Structure设置为Basic，那么会把下面的两个文件分开放
+<a href="#R-image-70c49de1f764d73e2148ad6e57aea5f2" class="lightbox-link"><img alt="xx " class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-70c49de1f764d73e2148ad6e57aea5f2"><img alt="xx " class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-5.png"></a>
+否则项目会把两个文件放在一个文件夹里，如Core</p>
+<p>最后还需要设置Code Generator，如下：
+<a href="#R-image-6370a7d464dbdd5842be073cf3f72995" class="lightbox-link"><img alt="Code Generator" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6370a7d464dbdd5842be073cf3f72995"><img alt="Code Generator" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-6.png"></a></p>
+<h2 id="时钟">时钟</h2>
+<p>1.初识时钟周期</p>
+<p>2.时钟树
+<a href="#R-image-4f98746500adbaa49629ef70ad8e0518" class="lightbox-link"><img alt="时钟树" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4f98746500adbaa49629ef70ad8e0518"><img alt="时钟树" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-7.png"></a>
+<a href="#R-image-bca4970ba256a20fc0b575e5fb2daafd" class="lightbox-link"><img alt="时钟树1" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bca4970ba256a20fc0b575e5fb2daafd"><img alt="时钟树1" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-8.png"></a>
+<a href="#R-image-8b3047a51ed2ca54b5ba295c19acdf5f" class="lightbox-link"><img alt="时钟树2" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8b3047a51ed2ca54b5ba295c19acdf5f"><img alt="时钟树2" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-9.png"></a></p>
+<p>3.时钟配置步骤
+<a href="#R-image-e14520afe17f3f31771813244b1288ee" class="lightbox-link"><img alt="步骤" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e14520afe17f3f31771813244b1288ee"><img alt="步骤" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-10.png"></a></p>
+<p>4.外设时钟使能和失能</p>
+<p>5.sys_stm32_cloc_init()函数</p>
+<ul>
+<li>
+<p>HAL_RCC_OscConfig()</p>
+<ul>
+<li>HSE高速外设振荡器</li>
+<li>LSE</li>
+<li>RC振荡器，随着电压的变化而变化，所以需要一个检验值</li>
+<li>PLL锁相环</li>
+</ul>
+</li>
+<li>
+<p>HAL_RCC_ClockConfig()
+<a href="#R-image-52768883b15e20b54f3283720aedf1cb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-52768883b15e20b54f3283720aedf1cb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-12.png"></a>
+<a href="#R-image-59390de73401b024096314e5b14d9060" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-59390de73401b024096314e5b14d9060"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-11.png"></a></p>
+<ul>
+<li>第一个参数
+<ul>
+<li>结构体中的第一个参数里的HCLK是指AHB总线、PCLK1是指APB1总线、PCLK2是指APB2总线，这个配置表示要配那条总线的时钟。</li>
+</ul>
+</li>
+<li>第二个形参
+<a href="#R-image-029d92635db058b2ee4f4db48168e57d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-029d92635db058b2ee4f4db48168e57d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-14.png"></a>
+<ul>
+<li>F1系统时钟72MHz,如果使用72MHz访问闪存（Flash）那么是需要等待的，因为闪存的允许最大时钟频率是42MHz,所以需要等待，等待多少个周期需要下图
+<a href="#R-image-d415bec82af40b4f25b8aab97d27073a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d415bec82af40b4f25b8aab97d27073a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-13.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>6.SYSTEN文件夹</p>
+<ul>
+<li>sys文件夹
+<a href="#R-image-408a9c2b32d7eb1dd42a1145fb89e8e3" class="lightbox-link"><img alt="sys表" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-15.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-408a9c2b32d7eb1dd42a1145fb89e8e3"><img alt="sys表" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-15.png"></a></li>
+</ul>
+<h3 id="nvic介绍">NVIC介绍</h3>
+<h4 id="中断基本概念">中断基本概念</h4>
+<p><a href="#R-image-ce573db4a8b9acb184be07b2aa4b20da" class="lightbox-link"><img alt="概念" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-17.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ce573db4a8b9acb184be07b2aa4b20da"><img alt="概念" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-17.png"></a>
+<a href="#R-image-c6d5e5e9a37f69c1c3ddd96846cb2334" class="lightbox-link"><img alt="中断表" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-18.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c6d5e5e9a37f69c1c3ddd96846cb2334"><img alt="中断表" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-18.png"></a></p>
+<h4 id="中断向量表">中断向量表</h4>
+<p><a href="#R-image-fdfff23e496f32d9b36dd4185538dbeb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-16.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fdfff23e496f32d9b36dd4185538dbeb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-16.png"></a></p>
+<h4 id="文件里的中断在哪里呢">文件里的中断在哪里呢？</h4>
+<p>在文件<strong>startup_stm32f10x_hd.s</strong>中这里列出内部中断，外部中断就在内部中断之下，这里不再列出。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>__Vectors       DCD     __initial_sp               ; Top of Stack
+</span></span><span style="display:flex;"><span>                DCD     Reset_Handler              ; Reset Handler
+</span></span><span style="display:flex;"><span>                DCD     NMI_Handler                ; NMI Handler
+</span></span><span style="display:flex;"><span>                DCD     HardFault_Handler          ; Hard Fault Handler
+</span></span><span style="display:flex;"><span>                DCD     MemManage_Handler          ; MPU Fault Handler
+</span></span><span style="display:flex;"><span>                DCD     BusFault_Handler           ; Bus Fault Handler
+</span></span><span style="display:flex;"><span>                DCD     UsageFault_Handler         ; Usage Fault Handler
+</span></span><span style="display:flex;"><span>                DCD     <span style="color:#ae81ff">0</span>                          ; Reserved
+</span></span><span style="display:flex;"><span>                DCD     <span style="color:#ae81ff">0</span>                          ; Reserved
+</span></span><span style="display:flex;"><span>                DCD     <span style="color:#ae81ff">0</span>                          ; Reserved
+</span></span><span style="display:flex;"><span>                DCD     <span style="color:#ae81ff">0</span>                          ; Reserved
+</span></span><span style="display:flex;"><span>                DCD     SVC_Handler                ; SVCall Handler
+</span></span><span style="display:flex;"><span>                DCD     DebugMon_Handler           ; Debug Monitor Handler
+</span></span><span style="display:flex;"><span>                DCD     <span style="color:#ae81ff">0</span>                          ; Reserved
+</span></span><span style="display:flex;"><span>                DCD     PendSV_Handler             ; PendSV Handler
+</span></span><span style="display:flex;"><span>                DCD     SysTick_Handler            ; SysTick Handler</span></span></code></pre></div>
+<h4 id="中断寄存器">中断寄存器</h4>
+<p><a href="#R-image-63a4fa99709979c5286308e2c03831c1" class="lightbox-link"><img alt="中断寄存器" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-20.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-63a4fa99709979c5286308e2c03831c1"><img alt="中断寄存器" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-20.png"></a></p>
+<h4 id="中断原理">中断原理</h4>
+<p><a href="#R-image-a2b8043abe203c177922a1df624a93a1" class="lightbox-link"><img alt="原理" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-21.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a2b8043abe203c177922a1df624a93a1"><img alt="原理" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-21.png"></a></p>
+<h3 id="中断优先级">中断优先级</h3>
+<p><a href="#R-image-fb287619b76b02239ec6ff25458df876" class="lightbox-link"><img alt="优先级" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-22.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fb287619b76b02239ec6ff25458df876"><img alt="优先级" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-22.png"></a>
+<a href="#R-image-4898aa2266df8991b77c1b499c172ba1" class="lightbox-link"><img alt="优先级" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-23.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4898aa2266df8991b77c1b499c172ba1"><img alt="优先级" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-23.png"></a>
+响应优先级又叫子优先级</p>
+<p><strong>中断的抢占优先级由AICR寄存器的后三位控制，而响应优先级由IPRx寄存器的后四位控制</strong>，最终分配结果参考下面的表格
+<a href="#R-image-b836172f0e9176726ad49fe2a330b9bd" class="lightbox-link"><img alt="表" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-24.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b836172f0e9176726ad49fe2a330b9bd"><img alt="表" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-24.png"></a></p>
+<p>中断一般只设置一次，设置多次可能会导致中断紊乱，一般以最后一次的中断设置为准，详细说明参考手册4.4.5</p>
+<p>中断执行的顺序：抢占优先级（先执行数值小的）————响应优先级（先执行数值小的）————自然优先级（先执行数值大的）</p>
+<h3 id="nvic-的使用">NVIC 的使用</h3>
+<hr>
+<p><strong>以下笔记皆基于标准库。</strong></p>
+<h2 id="标准库中额中断">标准库中额中断</h2>
+<p><a href="#R-image-d467204414be605524bd309d49a11b33" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-25.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d467204414be605524bd309d49a11b33"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-25.png"></a></p>
+<h3 id="extiextern-interrupt外部中断">EXTI（Extern Interrupt）外部中断</h3>
+<p>EXTI可以监测指定GPIO口的电平信号，当其指定的GPIO口产生电平变化时，EXTI将立即向NVIC发出中断申请，经过NVIC裁决后即可中断CPU主程序，使CPU执行EXTI对应的中断程序</p>
+<p>简而言之，gpio电平发生变化时，申请外部中断。</p>
+<ul>
+<li><strong>支持的触发方式</strong>：上升沿/下降沿/双边沿/软件触发（<em>引脚没有发生变化，执行一段代码就申请中断</em>）</li>
+<li><strong>支持的GPIO口</strong>：所有GPIO口，但相同的Pin不能同时触发中断（<em>如PA1，PB1，PC1不能同时触发中断</em>）</li>
+<li><strong>通道数</strong>：16个GPIO_Pin，外加PVD输出、RTC闹钟、USB唤醒、以太网唤醒</li>
+<li><strong>触发响应方式</strong>：中断响应/事件响应（<em>事件响应不会触发中断。而是触发别的外设操作。属于外设之间的联合工作</em>）</li>
+</ul>
+<h3 id="afio复用io口">AFIO复用IO口</h3>
+<p>主要用于引脚复用功能的选择和重定义</p>
+<p>在STM32中，AFIO主要完成两个任务：</p>
+<ul>
+<li>复用功能引脚重映射</li>
+<li>中断引脚选择
+<a href="#R-image-1b65089b2612f17b34302b20cc369ad9" class="lightbox-link"><img alt="GPIO口中断申请图" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-26.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1b65089b2612f17b34302b20cc369ad9"><img alt="GPIO口中断申请图" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-26.png"></a></li>
+</ul>
+<h3 id="exti实现代码">EXTI实现代码</h3>
+<p>这段代码的中断端口是GPIOB_Pin14，所以需要将相关的传感器接到PB14这个端口</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CountSensor_Init</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//配置RCC
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RCC_APB2PeriphClockCmd</span>(RCC_APB2Periph_GPIOB,ENABLE);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//AFIO、
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RCC_APB2PeriphClockCmd</span>(RCC_APB2Periph_AFIO,ENABLE);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//EXTI、一直打开着不用配置打开时钟
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//NVIC  一直打开着不用配置打开时钟
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	GPIO_InitTypeDef GPIO_InitStructure;
+</span></span><span style="display:flex;"><span>	GPIO_InitStructure.GPIO_Mode<span style="color:#f92672">=</span>GPIO_Mode_IPU;
+</span></span><span style="display:flex;"><span>	GPIO_InitStructure.GPIO_Pin<span style="color:#f92672">=</span>GPIO_Pin_14;
+</span></span><span style="display:flex;"><span>	GPIO_InitStructure.GPIO_Speed<span style="color:#f92672">=</span>GPIO_Speed_50MHz;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">GPIO_Init</span>(GPIOB,<span style="color:#f92672">&amp;</span>GPIO_InitStructure);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">GPIO_EXTILineConfig</span>(GPIO_PortSourceGPIOB,GPIO_PinSource14);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//EXTI
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	EXTI_InitTypeDef EXTI_InitStructure;
+</span></span><span style="display:flex;"><span>	EXTI_InitStructure.EXTI_Line<span style="color:#f92672">=</span>EXTI_Line14;
+</span></span><span style="display:flex;"><span>	EXTI_InitStructure.EXTI_LineCmd<span style="color:#f92672">=</span>ENABLE;
+</span></span><span style="display:flex;"><span>	EXTI_InitStructure.EXTI_Mode<span style="color:#f92672">=</span>EXTI_Mode_Interrupt;
+</span></span><span style="display:flex;"><span>	EXTI_InitStructure.EXTI_Trigger<span style="color:#f92672">=</span>EXTI_Trigger_Falling;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">EXTI_Init</span>(<span style="color:#f92672">&amp;</span>EXTI_InitStructure);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//NVIC
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	NVIC_InitTypeDef NVIC_InitStructure;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannel<span style="color:#f92672">=</span>EXTI15_10_IRQn;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelCmd<span style="color:#f92672">=</span>ENABLE;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelSubPriority<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">NVIC_Init</span>(<span style="color:#f92672">&amp;</span>NVIC_InitStructure);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">EXTI15_10_IRQHandler</span>(<span style="color:#66d9ef">void</span>){<span style="color:#75715e">//中断函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">EXTI_GetITStatus</span>(EXTI_Line14)<span style="color:#f92672">==</span> SET){
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">EXTI_ClearITPendingBit</span>(EXTI_Line14);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h2 id="定时器">定时器</h2>
+<h3 id="timtimer定时器">TIM（Timer）定时器</h3>
+<p>定时器可以对输入的时钟进行计数，并在计数值达到设定值时触发中断</p>
+<p>16位计数器、预分频器、自动重装寄存器的时基单元，在72MHz计数时钟下可以实现最大59.65s的定时
+不仅具备基本的定时中断功能，而且还包含内外时钟源选择、输入捕获、输出比较、编码器接口、主从触发模式等多种功能
+根据复杂度和应用场景分为了高级定时器、通用定时器、基本定时器三种类型</p>
+<h3 id="使用内部时钟源实现中断标准库中">使用内部时钟源实现中断（标准库中）</h3>
+<p>在编写代码前先看看定时器的实现原理图</p>
+<ul>
+<li>基本定时器
+<a href="#R-image-208e7cb0459ca9c03c0e008300ab4f45" class="lightbox-link"><img alt="基本定时器" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-27.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-208e7cb0459ca9c03c0e008300ab4f45"><img alt="基本定时器" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-27.png"></a></li>
+<li>通用定时器
+<a href="#R-image-d42bf21de9f24d9eebf508b61aa224f5" class="lightbox-link"><img alt="通用定时器" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-28.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d42bf21de9f24d9eebf508b61aa224f5"><img alt="通用定时器" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-28.png"></a></li>
+<li>高级定时器（红色框出来的部分是高级定时器独有的）
+<a href="#R-image-8bee11bf4766dd4723784bb54d328950" class="lightbox-link"><img alt="高级定时器" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-29.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8bee11bf4766dd4723784bb54d328950"><img alt="高级定时器" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-29.png"></a></li>
+</ul>
+<p>此处主要参考通用计时器的结构图，下面是基于内部时钟RCC的定时器。</p>
+<p>在 <strong>stm32f103xxx_rcc.c</strong> 文件对 <strong>RCC_APB1PeriphClockCmd</strong> 这样的介绍：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  * @brief  Enables or disables the High Speed APB (APB2) peripheral clock.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  * @param  RCC_APB2Periph: specifies the APB2 peripheral to gates its clock.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  *   This parameter can be any combination of the following values:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  *     @arg RCC_APB2Periph_AFIO, RCC_APB2Periph_GPIOA, 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  ……
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  ……
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  ……+
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  */</span></span></span></code></pre></div>
+<p>specifies the APB2 peripheral to gates its clock.即：指定APB 2外围设备到其时钟门。而这里的时钟门代码里选择了TIM2。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">Timer_Init</span>(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//1.RCC 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RCC_APB1PeriphClockCmd</span>(RCC_APB1Periph_TIM2,ENABLE);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//2.选择时基单元时钟源，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">TIM_InternalClockConfig</span>(TIM2);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//3.时基单元
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;
+</span></span><span style="display:flex;"><span>	TIM_TimeBaseInitStructure.TIM_ClockDivision<span style="color:#f92672">=</span>TIM_CKD_DIV1;		<span style="color:#75715e">//时钟分频，这里是1分频
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TIM_TimeBaseInitStructure.TIM_CounterMode<span style="color:#f92672">=</span>TIM_CounterMode_Up;	<span style="color:#75715e">//计数方式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TIM_TimeBaseInitStructure.TIM_Period<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;					<span style="color:#75715e">//自动重装值，计数达到这个值后触发中断，然后重新开始计数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TIM_TimeBaseInitStructure.TIM_Prescaler<span style="color:#f92672">=</span><span style="color:#ae81ff">7200</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;				<span style="color:#75715e">//预分频，计数频率，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>																	<span style="color:#75715e">//假设计数为1s则自动重装值可设置为10000，预分频可设置为7200，公式为秒数=27MHz/PSC/ARR
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TIM_TimeBaseInitStructure.TIM_RepetitionCounter<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;				<span style="color:#75715e">//重复计数数器高级定时器才有，这里设置为0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">TIM_TimeBaseInit</span>(TIM2,<span style="color:#f92672">&amp;</span>TIM_TimeBaseInitStructure);				<span style="color:#75715e">//时基单元设置
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">TIM_ITConfig</span>(TIM2,TIM_IT_Update,ENABLE);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//4.中断输出控制 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">NVIC_PriorityGroupConfig</span>(NVIC_PriorityGroup_2);					<span style="color:#75715e">//抢占优先级,0-3， 响应优先级0-3，一个工程只设置一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//5.NVIC
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	NVIC_InitTypeDef  NVIC_InitStructure;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannel<span style="color:#f92672">=</span>TIM2_IRQn;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelCmd<span style="color:#f92672">=</span>ENABLE;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelSubPriority<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">NVIC_Init</span>(<span style="color:#f92672">&amp;</span>NVIC_InitStructure);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">TIM_Cmd</span>(TIM2,ENABLE);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">TIM2_IRQHandler</span>(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span>	 <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">TIM_GetITStatus</span>(TIM2,TIM_IT_Update) <span style="color:#f92672">==</span> SET){
+</span></span><span style="display:flex;"><span>		Num<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">TIM_ClearITPendingBit</span>(TIM2,TIM_IT_Update);
+</span></span><span style="display:flex;"><span>	 }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h2 id="实现输出比较">实现输出比较</h2>
+<h3 id="ocoutput-compare输出比较">OC（Output Compare）输出比较</h3>
+<ul>
+<li>
+<p>输出比较可以通过比较CNT与CCR寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的<strong>PWM波形</strong></p>
+</li>
+<li>
+<p>每个高级定时器和通用定时器都拥有4个输出比较通道</p>
+</li>
+<li>
+<p>高级定时器的前3个通道额外拥有死区生成和互补输出的功能</p>
+</li>
+<li>
+<p>OC：<strong>输出比较</strong></p>
+</li>
+<li>
+<p>IC：<strong>输入比较</strong></p>
+</li>
+<li>
+<p>CC：<strong>输入/输出比较</strong></p>
+</li>
+</ul>
+<h3 id="pwm波形">PWM波形</h3>
+<ul>
+<li>PWM（Pulse Width Modulation）脉冲宽度调制，广泛应用于各种电子和电气系统中，用于控制功率转换、电机速度、信号传输等</li>
+<li>在具有<a href="%E6%83%AF%E6%80%A7%E7%9A%84%E7%B3%BB%E7%BB%9F">^1</a>中，可以通过对一系列脉冲的宽度进行调制，来等效地获得所需要的模拟参量，常应用于电机控速等领域
+<a href="%E4%BE%8B%E5%A6%82%E7%94%B5%E6%9C%BA%E8%BD%AC%E5%8A%A8%E6%9A%82%E5%81%9C%E5%90%8E%E4%B8%8D%E4%BC%9A%E9%A9%AC%E4%B8%8A%E5%81%9C%E6%AD%A2%EF%BC%8C%E8%80%8C%E6%98%AF%E8%BF%87%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4%E6%89%8D%E4%BC%9A%E5%81%9C%E6%AD%A2%E3%80%82">^1</a></li>
+<li>PWM参数：
+<ul>
+<li>频率 = 1 / TS</li>
+<li>占空比 = TON / TS</li>
+<li>分辨率 = 占空比变化步距
+<a href="#R-image-4e76844f547e0cedb4fa07730be7e848" class="lightbox-link"><img alt="PWM" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-31.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e76844f547e0cedb4fa07730be7e848"><img alt="PWM" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-31.png"></a>
+一些电平变化图可以等效为图中的虚线。
+<a href="#R-image-d74bf7462222379b348445bd2bc02d5c" class="lightbox-link"><img alt="信息" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-30.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d74bf7462222379b348445bd2bc02d5c"><img alt="信息" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-30.png"></a></li>
+</ul>
+</li>
+</ul>
+<p><a href="#R-image-e177d6f972b4d2b79e602891fa50740b" class="lightbox-link"><img alt="通用定时器结构图" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-33.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e177d6f972b4d2b79e602891fa50740b"><img alt="通用定时器结构图" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-33.png"></a>
+上图框出来的部分具体如下图：
+<a href="#R-image-3f29f709bba9206138efd510bbf4b131" class="lightbox-link"><img alt="捕获/比较通道的输出部分" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-32.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f29f709bba9206138efd510bbf4b131"><img alt="捕获/比较通道的输出部分" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-32.png"></a></p>
+<p>在信号通过比较后输出到CC1P，然后再输出到输出使用电路，输出使用电路的OC1可以查看<strong>引脚定义表</strong></p>
+<p>在上图中需要注意的一些引文缩写：</p>
+<ul>
+<li><strong>REF</strong> 是reference的缩写。意思是 <strong>参考信号</strong></li>
+</ul>
+<h3 id="输出比较的设置">输出比较的设置</h3>
+<p>设置的函数为</p>
+<p><a href="#R-image-16daa9ed1337dda49cfdda2d8e6abc6c" class="lightbox-link"><img alt="模式" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-34.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-16daa9ed1337dda49cfdda2d8e6abc6c"><img alt="模式" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-34.png"></a></p>
+<h3 id="pwm基本结构">PWM基本结构</h3>
+<p>配置PWM的时候可以参考下面的图，
+<a href="#R-image-830dfff8f2d8638f3f88f18a1cd00d18" class="lightbox-link"><img alt="结构图" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-35.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-830dfff8f2d8638f3f88f18a1cd00d18"><img alt="结构图" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-35.png"></a>
+图中的参考坐标系图红色线表示CCR的值，蓝色线表示CNT的值，黄色线表示自动重装载值即ARR。
+了解了这点后我们再看看PWM的是如何计算的，如下公式</p>
+<p><strong>PWM频率：</strong>
+[ \text{Freq} = \frac{CKPSC}{(PSC + 1) \times (ARR + 1)} ]
+可以看出PWM的频率等于CNT的更新频率</p>
+<p><strong>PWM占空比：</strong>
+[ \text{Duty} = \frac{CCR}{(ARR + 1)} ]</p>
+<p><strong>PWM分辨率：</strong>
+[ \text{Reso} = \frac{1}{(ARR + 1)} ]</p>
+<h3 id="代码编写">代码编写</h3>
+<p><a href="#R-image-6c820915ccb2612f24951b860d02e0e9" class="lightbox-link"><img alt="高级定时器" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-36.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6c820915ccb2612f24951b860d02e0e9"><img alt="高级定时器" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E7%94%B5%E8%B5%9B/image-36.png"></a></p>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年5月14日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../categories/b5-%E6%AF%94%E8%B5%9B/">B5-比赛</a></li>
+    <li><a class="term-link" href="../categories/x1-%E9%A1%B9%E7%9B%AE/">X1-项目</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../tags/%E5%90%8E%E7%AB%AF/">后端</a></li>
+    <li><a class="term-link" href="../tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="唛盟杯比赛详记">唛盟杯比赛详记</h1>
+
+<h2 id="比赛说明">比赛说明</h2>
+<p>自己有幸参加这次唛盟杯的比赛，这次比赛流程如下：</p>
+<p>一、报名时2024年1月1到31日本来是12月份但延期了。</p>
+<p>二、培训时间，现在还不确定，不过也是可以肯定是年后的事了。</p>
+<p>三、项目制作时间3-5月，不知道后面会不会改。</p>
+<p>四、项目环境及操作流程</p>
+<p>（一）、开发工具</p>
+<p>1、要求使用唛盟低代码平台作为开发项目模板<a href="https://gitee.com/maimengcloud/mdp-lcode-ui-web" rel="external" target="_blank">唛盟低代码平台链接</a>；</p>
+<p>2、要求使用唛盟研发管理系统（唛盟xm）进行软件研发项目管理<a href="https://maimengcloud.com/xm/m1/#/login" rel="external" target="_blank">唛盟研发管理系统链接</a>;</p>
+<p>（二）、唛盟xm操作流程</p>
+<pre><code>1、先在唛盟xm中建立一个产品，产品名称为“知识产权流程管理系统”；
+2、细化产品需求；
+3、由产品派生一个项目，构建项目团队；
+4、由需求派生项目任务，并确定任务执行人、计划完成时间等；
+5、编制测试用例，建立测试计划，执行测试；
+6、出具项目报告，提交结项申请。
+</code></pre>
+<p>（三）、代码提交</p>
+<p>官方提供代码库链接，我们下载后，在该代码库基础上进行开发、提交代码。</p>
+<h2 id="比赛题目">比赛题目</h2>
+<h3 id="一项目主题">一、项目主题</h3>
+<p>知识产权流程管理系统</p>
+<p>二、项目描述</p>
+<p>该系统用于知识产权项目申报的全过程跟踪管理，其功能包括：</p>
+<ul>
+<li>客户下单、</li>
+<li>提交申请、</li>
+<li>申请反馈、</li>
+<li>订单查询、</li>
+<li>订单详情、</li>
+<li>文档查阅下载等六大部分。</li>
+</ul>
+<p>该系统分为客户端和管理端两个子系统。客户端对客户开放，主要功能包括：</p>
+<ul>
+<li>客户下单、</li>
+<li>付款、</li>
+<li>订单查询、</li>
+<li>订单进度消息推送（推送到公众号、网站内部消息）、</li>
+<li>文档查阅下载等。</li>
+</ul>
+<p>管理端对管理人员开放，不对客户开放，负责订单管理、文档上传（批量上传）等。</p>
+<h3 id="三项目需求">三、项目需求</h3>
+<p>（一）、用户端</p>
+<p>个人中心模块：</p>
+<p>1、订单查询</p>
+<p>分为我的订单（综合查询）及商标、专利、版权、科技项目四大子类查询，订单查询按全部业务下单时间顺列。</p>
+<p>订单查询功能大致效果图：
+<a href="#R-image-9515e71286742fc0122d2a8fd1af0f47" class="lightbox-link"><img alt="订单查询" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9515e71286742fc0122d2a8fd1af0f47"><img alt="订单查询" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image.png"></a></p>
+<p>2、订单详细</p>
+<p>可根据订单详情按钮跳转到对应的订单详情。
+<a href="#R-image-d4c6b29782f94cfb7270e04ba61dc91d" class="lightbox-link"><img alt="订单详细" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d4c6b29782f94cfb7270e04ba61dc91d"><img alt="订单详细" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-1.png"></a>
+订单详情页展示图：
+<a href="#R-image-78a5068ef45d29969f3706e1f4435846" class="lightbox-link"><img alt="订单详情页" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-78a5068ef45d29969f3706e1f4435846"><img alt="订单详情页" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-2.png"></a></p>
+<p>（二）、管理端</p>
+<p>订单管理模块：</p>
+<p><strong>1、订单查询</strong></p>
+<p>查询订单，展示列表。</p>
+<p><strong>2、订单详细</strong></p>
+<p>在订单列表中点击某个订单，进入订单详情。</p>
+<p><strong>3、文档上传</strong></p>
+<p>在订单详情页，点击文档上传，选中本地文件，上传本地文件到服务器，支持批量、单文件上传。</p>
+<h2 id="注册唛盟账号">注册唛盟账号</h2>
+<h3 id="队长和队员注册账号">队长和队员注册账号</h3>
+<p>一、扫描一级部门的二维码</p>
+<p>这一部分只建议参加了比赛的网友查看。本次是组队参加，一队3-5人，队长要在他们的官方网页端注册号团队（二级部门），方便后面的项目管理，然后再通过一级部门添加自己的团队，首先是扫描官方给的二维码，扫这个二维码后注册就会在一级部门下，这也是要注册在一级部门之下的办法，</p>
+<p>二、授权登录成功后，跳转到提示页面，点击“首页”</p>
+<p><a href="#R-image-ca8843ab97806f405d46aa7c04340a08" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ca8843ab97806f405d46aa7c04340a08"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-3.png"></a>
+<a href="#R-image-6b0fcf92e9dd9ca3a54f101358b055b4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6b0fcf92e9dd9ca3a54f101358b055b4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-4.png"></a></p>
+<p>三、进入低代码平台首页，按照提示，点击“账户明细”</p>
+<p>四、按照提示，输入姓名，并提交</p>
+<p>五、点击唛盟低代码平台官网，选择微信扫码登录</p>
+<p>唛盟低代码平台官网：https://maimengcloud.com/lcode/m1/#/login</p>
+<p>六、看到用户名称是自己的即报名成功</p>
+<h3 id="队长注册团队">队长注册团队</h3>
+<h4 id="1要求">1要求</h4>
+<pre><code>1.构建每个参赛团队的独立部门
+2.将参赛队员拉入部门
+3.给每个参赛队员设置好岗位
+</code></pre>
+<h4 id="2相关环境">2相关环境</h4>
+<p><a href="https://maimengcloud.com/lcode/m1/" rel="external" target="_blank">唛盟账户系统</a></p>
+<h4 id="3操作步骤">3操作步骤</h4>
+<p>3.1 在一级部门，即总部下建立子部门</p>
+<p>进入【部门管理】，点击【添加下级】</p>
+<p>3.2输入部门信息</p>
+<ul>
+<li>部门名称要求：以参赛团队名称作为部门名称</li>
+<li>上级领导选：一级部门</li>
+<li>部门负责人：选参赛团队组长</li>
+<li>部门性质：技术部门</li>
+<li>协作类型：内部组织</li>
+</ul>
+<p>其它字段不填</p>
+<p>（如果你不是第一届比赛的同学，那这个不需要关注，可能每年都不一样）</p>
+<p>3.3保存提交</p>
+<p>3.4把岗位挂接到部门上</p>
+<p>【部门管理】中找到刚才建立的部门，点击【岗位】按钮弹出以下岗位选择框：</p>
+<p>选择左边需要绑定的岗位，移动到右边，点击【提交】按钮即完成岗位绑定（如果没有显示岗位，多次刷新，或者退出重新登录，这个知识第一届遇到此问题解决的方案）</p>
+<p>3.5把用户拉入部门</p>
+<p>打开【用户管理】菜单，先把自己的搜索出来，如果不是通过一级部门的二维码注册的，会搜不到的哦。找到需要拉入的队友，点击【部门/岗位】</p>
+<p>弹出以下部门岗位选择界面：</p>
+<p>在弹出的界面中左边选中归属的部门，右边选中岗位，再【提交】即可</p>
+<p>这部分本来也不想记了，毕竟没什么用了，可能下一届又不一样了，但想想自己记一下当作回忆也可以。</p>
+<h2 id="安装git和nodejs">安装git和nodejs</h2>
+<p>在安装前我们通过这个链接<code>https://gitee.com/maimengcloud/mdp-lcode-ui-web</code>去看看这个项目的介绍，</p>
+<p><a href="#R-image-25f43fd074d03167934dbb5ff1bbe583" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-25f43fd074d03167934dbb5ff1bbe583"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-5.png"></a></p>
+<p>大概浏览一下，然后往下拉根据导航直接跳到 <strong>快速开始</strong></p>
+<p><a href="#R-image-8ac8fb9bbefa7b7290cb678cdf2cd5cc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ac8fb9bbefa7b7290cb678cdf2cd5cc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-7.png"></a></p>
+<p>这里并不是说其他的不重要，只是说对于一个项目而言如果不是涉及本地启动的话不必花费时间去纠结，等你能让项目在本地启动后再回来看看也不迟，当然这也有弊端，可能会错一些细节哈。</p>
+<p>在快速开始的地方提到：</p>
+<hr>
+<p>注意：该项目使用 <a href="mailto:element-ui@2.3.0" rel="external" target="_blank">element-ui@2.3.0</a>+ 版本，所以最低兼容 <a href="mailto:vue@2.5.0" rel="external" target="_blank">vue@2.5.0</a>+ nodejs版本v14.16.1</p>
+<hr>
+<p>所以我们安装的时候要注意版本的问题尽量不要选太高的，如果你已经安装了一部分或全部，而且版本很高或很低，这样也不必太担心（大不了删掉重新安装，哈哈），下面是我的一些经验，希望帮到你。</p>
+<h3 id="git的安装">git的安装</h3>
+<p>这部分没有太多可讲的，网上有很多的教程，讲的也很好，这里需要你记住的一条命令是：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-git" data-lang="git"> git clone &lt;远程仓库地址&gt;  &lt;本地存放目录&gt;</code></pre></div>
+<p>这里举个例子，就比如这次比赛用到的这个项目,我们建一个文件夹装要下载的项目，比如是mdp文件夹，然后右键，win11选显示更多，在弹出的选项选择： <strong>git bash here</strong></p>
+<p><a href="#R-image-8c1346bfb5459f80930fca5b855c8bcf" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8c1346bfb5459f80930fca5b855c8bcf"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-8.png"></a></p>
+<p>然后复制下面的内容回车就可以了。</p>
+<hr>
+<p>git clone <a href="https://gitee.com/maimengcloud/mdp-lcode-ui-web.git" rel="external" target="_blank">https://gitee.com/maimengcloud/mdp-lcode-ui-web.git</a>  mdp-lcode-ui-web/</p>
+<hr>
+<p>但是有的时候也会因为网速的问题，导致无法下载，比如回车后报错，如下:</p>
+<hr>
+<p><a href="#R-image-77580c6c1550a01a2ba49ac1b596b73e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-77580c6c1550a01a2ba49ac1b596b73e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-13.png"></a>
+Cloning into &lsquo;mdp-lcode-ui-web&rsquo;&hellip;
+fatal: unable to access &lsquo;<a href="https://gitee.com/maimengcloud/mdp-lcode-ui-web.git/'" rel="external" target="_blank">https://gitee.com/maimengcloud/mdp-lcode-ui-web.git/'</a>: Failed to connect to 127.0.0.1 port 26501 after 2017 ms: Couldn&rsquo;t connect to server</p>
+<hr>
+<p>简单翻译理解就是这个远程仓库无法访问，其实这也是使用让我比较烦恼的问题，这里的原因我可能没办法给你讲清楚（你有时间可以去琢磨哈），但有个软件可以分享给你，帮你解决这个问题，即 <strong>watt toolkit</strong> ,而且这个软件在微软软件商城就有。</p>
+<p><a href="#R-image-8ac8fd9afdbcc86e96a41db3dd4e6996" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ac8fd9afdbcc86e96a41db3dd4e6996"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-9.png"></a></p>
+<p>下载后选github，然后点击一键加速。</p>
+<p><a href="#R-image-8fa6ce731c8803fba47abae2b73c729c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8fa6ce731c8803fba47abae2b73c729c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-10.png"></a>
+<a href="#R-image-600675a597ba0ed0f0f22c8c01606b0d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-600675a597ba0ed0f0f22c8c01606b0d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-11.png"></a></p>
+<p>然我们再回到git base here，再次输入刚才的命令回车，</p>
+<p><a href="#R-image-2b995d874885590808b9f279b6dcbfd3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2b995d874885590808b9f279b6dcbfd3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-12.png"></a></p>
+<p>发现刚才的代码仓库已经下载到本地了。</p>
+<p><a href="#R-image-f94969fb84d90d3186260bc7a6b7ba75" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f94969fb84d90d3186260bc7a6b7ba75"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-14.png"></a></p>
+<p>如果你使用上面的软件还是无法下载远程的仓库，那你需要根据报错信息在网上查考相关的信息，这里提供上面报错的可能解决方案，只是针对上面的问题哦！<a href="https://cloud.tencent.com/developer/article/2108855" rel="external" target="_blank">参照文章</a></p>
+<h3 id="安装node">安装node</h3>
+<p>网上可能称为nodejs都是一个工具，这个工具的简介还请参照官方，这里我们有做过多的了解哦。在安装node之前我们要先安装nvm。这是一个管理node的工具，这里安装的主要目的是 <strong>升高或降低node版本</strong>，简单就是想安装哪个版本（已发布且可下载的版本）的可以用这个工具来实现。</p>
+<p>nvm是否要安装取决于你的情况，除了nvm，此次项目还需要安装工具node，vue，mvn。</p>
+<p>方案一：为防止版本过高过低影响运行，以后可能还需要，最好是下载nvm管理node，然后也要了解升级或降低vue版本的方法，最后下载mvn；</p>
+<p>方案二：自己不管安装还是没安装，直接安装node，vue，mvn，本次项目用到的node，vue，mvn都在package.json文件里定义写好了，运行后会根据里面去下载，似乎对项目没太大影响（因为我工具处于最高版本，或是相对低一点的版本，使用相同的命令，报错都是一个，基于这点你可以尝试。）</p>
+<h2 id="方案一">方案一</h2>
+<h3 id="安装nvm">安装nvm</h3>
+<p><a href="https://blog.csdn.net/HuangsTing/article/details/113857145" rel="external" target="_blank">参照文档</a> 关于文章的几点说明：</p>
+<ul>
+<li>登录github的时候记得开watt toolket;</li>
+<li>如果nvm下载不了要刷新或者退出重新进入，多试几次；</li>
+<li>基于本次的项目我们只看文章的一——四，五往后有时间就了解一下就好了；</li>
+</ul>
+<p>里面的 <strong>三、配置路径和下载源</strong>我们需要把淘宝镜像改为如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>    node_mirror: https://cdn.npmmirror.com/binaries/node/
+    npm_mirror: https://cdn.npmmirror.com/binaries/npm/</code></pre></div>
+<p>这是因为淘宝的镜像换了。</p>
+<p>接着<a href="https://blog.csdn.net/ZHANGYANG_1109/article/details/121229581" rel="external" target="_blank">参照文章</a>，目的是node还要做一些配置，主要node的环境变量设置，还有目录<code>node_cache</code>和目录<code>node_global</code>的一些设置。从文章的下图开始看，关于node的下载就不看了。
+<a href="#R-image-5a2c7e81273b3f7a914610e497dce4fd" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-15.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5a2c7e81273b3f7a914610e497dce4fd"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-15.png"></a></p>
+<p>注意在设置目录<code>node_cache</code>和目录<code>node_global</code>时，</p>
+<hr>
+<p>npm config set prefix &ldquo;&lt;自己的文件目录&gt;\node_global&rdquo;
+npm config set cache &ldquo;&lt;自己的文件目录&gt;\node_cache&rdquo;</p>
+<hr>
+<p>这两个路径时要记得把它改成自己安装的路径：</p>
+<h3 id="安装指定的vue版本">安装指定的vue版本</h3>
+<h4 id="情况一你没安装过vue">情况一：你没安装过vue</h4>
+<p>首先你要先安装好node，然后用node的npm工具安装vue。</p>
+<p>使用命令查看可安装版本：</p>
+<hr>
+<p>要查看的vue版本是1.x和2.x的</p>
+<hr>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span>    <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">view</span> <span style="color:#a6e22e">vue</span><span style="color:#f92672">-</span><span style="color:#a6e22e">cli</span> <span style="color:#a6e22e">versions</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">json</span></span></span></code></pre></div>
+<hr>
+<p>要查看的vue版本是3.x的</p>
+<hr>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span>    <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">view</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">vue</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span> <span style="color:#a6e22e">versions</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">json</span></span></span></code></pre></div>
+<p><strong>安装vue指定的版本</strong>：</p>
+<hr>
+<p>安装的vue版本是1.x和2.x的</p>
+<hr>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span>    <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">g</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">vue</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">版本号</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">yarn</span> <span style="color:#a6e22e">global</span> <span style="color:#a6e22e">add</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">vue</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">版本号</span></span></span></code></pre></div>
+<hr>
+<p>要查看的vue版本是3.x的</p>
+<hr>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span>    <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">g</span> <span style="color:#a6e22e">vue</span><span style="color:#f92672">-</span><span style="color:#a6e22e">cli</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">版本号</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">yarn</span> <span style="color:#a6e22e">global</span> <span style="color:#a6e22e">add</span> <span style="color:#a6e22e">vue</span><span style="color:#f92672">-</span><span style="color:#a6e22e">cli</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">版本号</span></span></span></code></pre></div>
+<p><strong>第一次安装要去配环境变量。</strong></p>
+<h4 id="情况二你安装过vue">情况二：你安装过vue</h4>
+<p>卸载已经安装的Vue Cli</p>
+<hr>
+<p>卸载 3.x 或 4.x 版本的Vue Cli</p>
+<hr>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">uninstall</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">g</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">vue</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">yarn</span> <span style="color:#a6e22e">global</span> <span style="color:#a6e22e">remove</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">vue</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span></span></span></code></pre></div>
+<hr>
+<p>卸载 1.x 或 2.x 版本的Vue Cli</p>
+<hr>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">uninstall</span> <span style="color:#a6e22e">vue</span><span style="color:#f92672">-</span><span style="color:#a6e22e">cli</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">g</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">yarn</span> <span style="color:#a6e22e">global</span> <span style="color:#a6e22e">remove</span> <span style="color:#a6e22e">vue</span><span style="color:#f92672">-</span><span style="color:#a6e22e">cli</span></span></span></code></pre></div>
+<p>重复情况一的步骤，然后打开cmd，输入：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>vue -V</span></span></code></pre></div>
+<p>显示安装的版本则说明安装完成。</p>
+<p><a href="https://blog.csdn.net/milijiangjun/article/details/108004669" rel="external" target="_blank">原文章链接</a></p>
+<h3 id="安装mvnmaven工具">安装mvn（Maven）工具</h3>
+<p>直接参照<a href="https://blog.csdn.net/u012660464/article/details/114113349" rel="external" target="_blank">这个文章</a>就好了。</p>
+<h2 id="方案二">方案二</h2>
+<h2 id="安装node和vue">安装node和vue</h2>
+<p><a href="https://blog.csdn.net/zhouyan8603/article/details/109039732" rel="external" target="_blank">参照文章</a>，同样的里面涉及到镜像文件的设置要注意换掉：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>    node_mirror: https://cdn.npmmirror.com/binaries/node/
+    npm_mirror: https://cdn.npmmirror.com/binaries/npm/</code></pre></div>
+<p>除此之外在设置目录<code>node_cache</code>和目录<code>node_global</code>这两个路径时要记得把它改成自己安装的路径：</p>
+<hr>
+<p>npm config set prefix &ldquo;&lt;自己的文件目录&gt;\node_global&rdquo;
+npm config set cache &ldquo;&lt;自己的文件目录&gt;\node_cache&rdquo;</p>
+<hr>
+<h2 id="安装mvn">安装mvn</h2>
+<p>直接参照<a href="https://blog.csdn.net/u012660464/article/details/114113349" rel="external" target="_blank">这个文章</a>就好了。</p>
+<p>至此工具就就安装完了，接着我们就要去启动项目了。</p>
+<h2 id="本地启动项目">本地启动项目</h2>
+<p>本次使用的系统是win11和code应用程序，如果你用的不是这个系统和应用程序情况可能不一样哈。</p>
+<h3 id="根据项目的简介开始运行项目">根据项目的简介开始运行项目</h3>
+<p>这里我使用的是code应用程序（你如果用的是别的应用程序另说咯），点击文件夹用code打开后，根据项目文档执行命令：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>    npm install</code></pre></div>
+<p>结果…………………………报错啦（我就知道没这么简单）！！！错误如下：</p>
+<p><a href="#R-image-0746ebfda7672683eca77a6fc8cd4929" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/d997475b8182542e064b2551579b0f2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0746ebfda7672683eca77a6fc8cd4929"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/d997475b8182542e064b2551579b0f2.png"></a></p>
+<p>上面的报错意思是：在尝试安装项目依赖时，npm遇到了依赖冲突问题。具体来说，babel-loader需要webpack的版本在2、3或4之间，但是你的项目中已经安装了webpack的5.90.1版本。这导致了peer依赖冲突，因为babel-loader期望的webpack版本与实际安装的版本不匹配，</p>
+<p><strong>解决办法如下：</strong></p>
+<p>1.查看自己的node版本；</p>
+<pre><code>```
+node -v
+```
+</code></pre>
+<p><a href="#R-image-18dd4a9b2dc166b93f5ae4e0aa3d9c17" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-16.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-18dd4a9b2dc166b93f5ae4e0aa3d9c17"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-16.png"></a></p>
+<p>2.修改&quot;package.json&quot;，在&quot;devDependencies&quot;中增加&quot;node&quot;: &ldquo;^21.6.1&quot;依赖；</p>
+<pre><code>```
+&quot;node&quot;:&quot;^21.6.1&quot;,
+```
+</code></pre>
+<p><a href="#R-image-a78bf3e89ba43a7f9b6b53d2e8b1b1db" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-17.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a78bf3e89ba43a7f9b6b53d2e8b1b1db"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-17.png"></a></p>
+<p>3.npm install -s <a href="mailto:node-sass@4.14.1" rel="external" target="_blank">node-sass@4.14.1</a>;</p>
+<p>4.npm install &ndash;save &ndash;legacy-peer-deps;</p>
+<pre><code>结果……………………报错啦！！！！！
+</code></pre>
+<p><a href="#R-image-72ce10375ce24b5657396154b083ddf2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-18.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-72ce10375ce24b5657396154b083ddf2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-18.png"></a></p>
+<pre><code>修改&quot;package.json&quot;，原来的改为&quot;node&quot;: &quot;^13.14.0&quot;依赖；
+
+再次运行结果没报错。
+</code></pre>
+<p>5.npm install &ndash;registry=https://cdn.npmmirror.com</p>
+<pre><code>接着我们运行如下代码 `npm install --registry=https://cdn.npmmirror.com`
+</code></pre>
+<p>6.npm run dev</p>
+<pre><code>运行npm run dev，结果还是报错了……
+</code></pre>
+<p><a href="#R-image-5c833e2a9419aef6a638276aa5ce6c50" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-19.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5c833e2a9419aef6a638276aa5ce6c50"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-19.png"></a></p>
+<pre><code>这里的错误说vue-template-compiler的版本为2.7.16，那我们就去&quot;package.json&quot;找到vue，
+
+原来的vue版本：
+</code></pre>
+<p><a href="#R-image-956d8033bcaf931f4f1f97fd42f0cff1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-20.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-956d8033bcaf931f4f1f97fd42f0cff1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-20.png"></a></p>
+<pre><code>把上面的修改为`&quot;vue&quot;:&quot;^2.7.16&quot;,`
+
+这时候要重新运行 `npm install --save --legacy-peer-deps`,然后再次运行 `npm run dev`;
+
+结果还是报错，如下：
+</code></pre>
+<p><a href="#R-image-63f498ac688d7155ef375b16e8fe5c4c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-21.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-63f498ac688d7155ef375b16e8fe5c4c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-21.png"></a></p>
+<pre><code>大概意思是没有找到ajv这个包，那么我们在&quot;package.json&quot;里的 **&quot;dependencies&quot;** 添加`&quot;ajv&quot;: &quot;^8.12.0&quot;,`
+然后重复`npm install --save --legacy-peer-deps`, `npm run dev`操作就可以了。
+
+显示如下：
+</code></pre>
+<p><a href="#R-image-c8382084b7d381a2fcd6f125561771f3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-22.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c8382084b7d381a2fcd6f125561771f3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-22.png"></a></p>
+<pre><code>我们再看看页面，页面如下：
+</code></pre>
+<p><a href="#R-image-435556e8b2011b690d25541db6d17a44" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-23.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-435556e8b2011b690d25541db6d17a44"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/image-23.png"></a></p>
+<pre><code>到这里说明没问题了。
+</code></pre>
+<p>从上面我们可以了解到一点，自己安装的版本似乎并不会影响项目的运行，所以选择方案二来进行安装似乎更简单，但从往长远的看方案一更更好，他可以随时换版本，更为方便。</p>
+<p><a href="https://www.cnblogs.com/happyfuns/p/16774117.html" rel="external" target="_blank">原文章链接</a></p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年2月5日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../categories/b5-%E6%AF%94%E8%B5%9B/">B5-比赛</a></li>
+    <li><a class="term-link" href="../categories/x1-%E9%A1%B9%E7%9B%AE/">X1-项目</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

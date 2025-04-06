@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="list vector deque deque的迭代器 deque实现中间插入值的做法：如果欲插入值在最前端（最尾端）调用push_front()（push_back()）,否则借助insert_aux()迭代器，实现如果欲插入位置靠近前端使用，就让前端的数据往前挪，否则往后挪。">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="8.STL库学习之容器 :: Maloudown">
+    <meta name="twitter:description" content="list vector deque deque的迭代器 deque实现中间插入值的做法：如果欲插入值在最前端（最尾端）调用push_front()（push_back()）,否则借助insert_aux()迭代器，实现如果欲插入位置靠近前端使用，就让前端的数据往前挪，否则往后挪。">
+    <meta property="og:url" content="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="8.STL库学习之容器 :: Maloudown">
+    <meta property="og:description" content="list vector deque deque的迭代器 deque实现中间插入值的做法：如果欲插入值在最前端（最尾端）调用push_front()（push_back()）,否则借助insert_aux()迭代器，实现如果欲插入位置靠近前端使用，就让前端的数据往前挪，否则往后挪。">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="8.STL库学习之容器 :: Maloudown">
+    <meta itemprop="description" content="list vector deque deque的迭代器 deque实现中间插入值的做法：如果欲插入值在最前端（最尾端）调用push_front()（push_back()）,否则借助insert_aux()迭代器，实现如果欲插入位置靠近前端使用，就让前端的数据往前挪，否则往后挪。">
+    <meta itemprop="datePublished" content="2024-10-26T00:29:01+08:00">
+    <meta itemprop="dateModified" content="2024-10-26T00:29:01+08:00">
+    <meta itemprop="wordCount" content="2304">
+    <title>8.STL库学习之容器 :: Maloudown</title>
+    <link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/" rel="canonical" type="text/html" title="8.STL库学习之容器 :: Maloudown">
+    <link href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/index.xml" rel="alternate" type="application/rss+xml" title="8.STL库学习之容器 :: Maloudown">
+    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B\/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8\/';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#list">list</a></li>
+    <li><a href="#vector">vector</a></li>
+    <li><a href="#deque">deque</a></li>
+    <li><a href="#stack和queue">stack和queue</a></li>
+    <li><a href="#rb-tree">Rb-tree</a></li>
+    <li><a href="#set和multiset">set和multiset</a></li>
+    <li><a href="#hashtable-哈希表">hashtable-哈希表</a>
+      <ul>
+        <li><a href="#数据存储的设计思想">数据存储的设计思想</a></li>
+        <li><a href="#具体实现过程">具体实现过程</a></li>
+        <li><a href="#实现代码">实现代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><span itemprop="name">17.C加加编程</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">8.STL库学习之容器</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/" title="9.STL库学习之迭代器与算法 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/7.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%88%86%E9%85%8D%E5%99%A8/" title="7.STL库学习之分配器 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="8stl库学习之容器">8.STL库学习之容器</h1>
+
+<h2 id="list">list</h2>
+<h2 id="vector">vector</h2>
+<h2 id="deque">deque</h2>
+<p><a href="#R-image-eaf258a9c7db426e1fd91fb50596455a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image.png?height=350px&width=600px" style=" height: 350px; width: 600px;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-eaf258a9c7db426e1fd91fb50596455a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image.png?height=350px&width=600px"></a></p>
+<p>deque的迭代器
+<a href="#R-image-7e77486aa26608fe815fdc27a22edf08" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-1.png?height=350px&width=600px" style=" height: 350px; width: 600px;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e77486aa26608fe815fdc27a22edf08"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-1.png?height=350px&width=600px"></a></p>
+<p>deque实现中间插入值的做法：如果欲插入值在最前端（最尾端）调用<code>push_front()</code>（<code>push_back()</code>）,否则借助<code>insert_aux()</code>迭代器，实现如果欲插入位置靠近前端使用，就让前端的数据往前挪，否则往后挪。</p>
+<p>deque中+=的实现：1.先计算+=后是否超过缓冲区，如果没有则直接+=，否则需要判断需要跨几个缓冲区，然后再去确定前进几个缓冲区。
+<a href="#R-image-fae209ae33f5e52a8870dbf47bdf3753" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-2.png?height=350px&width=600px" style=" height: 350px; width: 600px;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fae209ae33f5e52a8870dbf47bdf3753"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-2.png?height=350px&width=600px"></a></p>
+<p><strong>Vector的内存扩充：</strong></p>
+<p>std::vector 在需要更多空间时，通常会将容量增加到当前大小的两倍（这是最常见的增长策略，但不是唯一的，具体实现可能有所不同）。</p>
+<p>当发生扩充时，std::vector 会分配一个新的更大的内存块，然后将所有元素从旧内存块复制到新内存块，最后释放旧内存块。</p>
+<p><strong>Deque的内存扩充：</strong></p>
+<p>std::deque（双端队列）的内存管理机制与 std::vector 不同。std::deque 是一个使用多个固定大小的内存块来存储元素的容器，这些内存块被称为“chunks”或“maps”。</p>
+<p>当 std::deque 需要更多空间时，它可能会在已有的内存块之后添加新的内存块，或者在前面添加，这取决于哪个方向上的空间更紧张。
+std::deque 不会像 std::vector 那样将所有元素复制到一个新的连续内存块中，而是在多个内存块之间分配元素。</p>
+<h2 id="stack和queue">stack和queue</h2>
+<p>stack和queue默认使用deque的功能来分别实现先进后出和先进先出的功能，除此之外还可以使用list，stack还可以使用vector，但是deque就不能用vector，以我的理解，是因为vector不提供后端操作。</p>
+<h2 id="rb-tree">Rb-tree</h2>
+<p>在C++中，set和map的底层实现都是基于红黑树（RB-tree）。红黑树是一种自平衡的二叉搜索树，能够保证在最坏情况下，插入、删除和查找操作的时间复杂度均为O(log n)。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span>  <span style="color:#66d9ef">int</span> key,
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> value,
+</span></span><span style="display:flex;"><span>                identity<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>,
+</span></span><span style="display:flex;"><span>                less<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>,
+</span></span><span style="display:flex;"><span>                alloc
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">rb_tree</span>;</span></span></code></pre></div>
+<p><strong>set 和 map 的区别：</strong></p>
+<p>set：set中的元素是唯一的键值，即Key和Value是同一个。插入时使用insert_unique()方法，确保键值不重复。</p>
+<p>map：map中的元素是键值对（Key-Value），键值用于索引，值表示与索引相关联的数据。插入时使用insert_equal()方法，允许键值重复。</p>
+<p><strong>红黑树的结构：</strong></p>
+<p>红黑树的结构包括节点、根节点、最左节点和最右节点等。根节点通过header.parent保存，最左节点通过header.left保存，最右节点通过header.right保存。</p>
+<ul>
+<li>插入操作
+<ul>
+<li>set：插入操作调用insert_unique()，确保键值唯一。</li>
+<li>map：插入操作调用insert_equal()，允许键值重复。</li>
+</ul>
+</li>
+<li>迭代器
+<ul>
+<li>set：迭代器是RB-tree的const_iterator，不允许修改元素值。</li>
+<li>map：迭代器也是RB-tree的const_iterator，但允许修改元素的值（因为值部分不是键）。</li>
+</ul>
+</li>
+</ul>
+<h2 id="set和multiset">set和multiset</h2>
+<p>set与map的底层实现基本可以参考下面的源码图，</p>
+<p><a href="#R-image-0feef24a46fa0cff2ff068505796b397" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-3.png?height=350px&width=600px" style=" height: 350px; width: 600px;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0feef24a46fa0cff2ff068505796b397"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-3.png?height=350px&width=600px"></a></p>
+<p>需要说明的一点是，在不允许更改键值上，二者的设计还是有区别，主要体现在set使用const_iterator,这样迭代器指向的键值就无法更改，而map在设计上在传进来的Key设置为const，确保键值不会被更改。</p>
+<h2 id="hashtable-哈希表">hashtable-哈希表</h2>
+<p>在C++中，hash_set、hash_map、hash_multiset和hash_multimap等数据结构的底层实现确实采用了哈希表的思想。具体来说，这些数据结构的设计核心是通过哈希函数将键（key）映射到数组的索引位置，从而实现高效的插入、删除和查找操作。</p>
+<h3 id="数据存储的设计思想">数据存储的设计思想</h3>
+<p>每个键值通过一个哈希函数计算出一个哈希值。这个哈希值通常是一个整数，用于确定键值在数组中的存储位置。例如，对于一个整数键值12，哈希函数可能会直接返回12，这样12就会被存储在数组的第12个位置。</p>
+<p>哈希表的核心是一个数组（通常是一个vector），数组的每个元素（即每个位置）可以存储一个指针。这个指针指向一个单向链表的头节点。如果多个键值通过哈希函数计算出相同的哈希值，它们会被存储在同一个位置的链表中。参考下图：
+<a href="#R-image-a69405cd15b061d39ce3d370943bdc65" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-4.png?height=350px&width=600px" style=" height: 350px; width: 600px;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a69405cd15b061d39ce3d370943bdc65"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-4.png?height=350px&width=600px"></a>
+当多个键值映射到同一个哈希值时，这些键值会被存储在一个链表中。链表的每个节点包含一个键值和指向下一个节点的指针。这种设计允许在发生哈希冲突时，通过遍历链表来查找或插入特定的键值。
+<a href="#R-image-877f51e342f4ea9286a9501aa95e4161" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-5.png?height=350px&width=600px" style=" height: 350px; width: 600px;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-877f51e342f4ea9286a9501aa95e4161"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-5.png?height=350px&width=600px"></a>
+为了保持高效的性能，哈希表通常会有一个动态扩容机制。当哈希表中的元素数量超过一定阈值时，哈希表会自动重新分配更大的数组，并重新计算所有键值的哈希值，以减少链表的长度，从而提高查找效率。</p>
+<p>在实际应用中，哈希函数可能会导致不同的键值计算出相同的哈希值，这种现象称为哈希冲突。常见的解决策略包括链地址法（即使用链表存储冲突的元素）和开放地址法（即在数组中寻找下一个空闲位置）。</p>
+<h3 id="具体实现过程">具体实现过程</h3>
+<ul>
+<li>当插入一个新键值时，首先通过哈希函数计算出其哈希值，然后根据哈希值找到对应的数组位置。如果该位置已经有元素（即发生冲突），则将新元素插入到该位置的链表中。</li>
+<li>查找操作同样通过哈希函数计算出键值的哈希值，然后根据哈希值找到对应的数组位置。如果该位置有元素，则遍历链表，直到找到匹配的键值或链表结束。</li>
+<li>删除操作首先通过哈希函数计算出键值的哈希值，然后根据哈希值找到对应的数组位置。如果该位置有元素，则遍历链表，找到并删除匹配的键值。</li>
+</ul>
+<h3 id="实现代码">实现代码</h3>
+<p>hashtable类的实现提供了六个模板参数。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>  <span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">value</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">key</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">hashFcn</span>,<span style="color:#75715e">//计算编号
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">extractKey</span>,<span style="color:#75715e">//取出键值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EqualKey</span>,<span style="color:#75715e">//判断类型是否相等
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Alloc</span><span style="color:#f92672">=</span>alloc
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&gt;</span></span></span></code></pre></div>
+<p><a href="#R-image-9d3d7298caee260bc30462c76ee533a2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-6.png?height=300px&width=600px" style=" height: 300px; width: 600px;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9d3d7298caee260bc30462c76ee533a2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-6.png?height=300px&width=600px"></a></p>
+<p>如果要自己使用这个哈希表，需要写hashFcn()的重载，对齐进行偏特化等操作,如下图：
+<a href="#R-image-cca8c74da27ac530cf11ae1b99905661" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-7.png?height=300px&width=600px" style=" height: 300px; width: 600px;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cca8c74da27ac530cf11ae1b99905661"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-7.png?height=300px&width=600px"></a></p>
+<p>如果传入的是字符串，那么字符串的编号计算可以参考下图计算方法：
+<a href="#R-image-cbe1e70ca790559dc8dc50f4f6ff972a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-8.png?height=300px&width=600px" style=" height: 300px; width: 600px;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cbe1e70ca790559dc8dc50f4f6ff972a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/image-8.png?height=300px&width=600px"></a>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div></p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年10月26日
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

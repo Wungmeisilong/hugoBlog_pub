@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>  项目 :: Maloudown</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>贺青工程&#xD;志愿活动软件设计与开发&#xD;验收问题&#xD;毕业设计&#xD;电赛&#xD;唛盟杯比赛详记</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 07 Jul 2024 18:10:42 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>贺青工程</title>
+      <link>http://localhost:1313/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Wed, 17 Jan 2024 17:03:27 +0800</pubDate>
+      <guid>http://localhost:1313/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/</guid>
+      <description>志愿活动软件设计与开发设计一款可以参加志愿活动的小程序，其制作流程大致如下：&#xA;需求分析与规划 确定目标用户群体及其需求：考虑志愿者、活动组织者和管理员等不同角色的功能需求。&#xA;志愿者：&#xA;注册/登录：志愿者可以通过手机号、邮箱或第三方账号进行注册和登录。 个人中心：查看并编辑个人信息，包括姓名、联系方式、服务时长、参与过的活动记录等。 活动浏览：查看活动列表，搜索感兴趣的服务项目，支持按地区、时间、类型筛选。 活动报名：选择感兴趣的志愿活动进行报名，填写相关报名表单，并能收到报名成功或失败的反馈信息。 签到打卡：参加活动时通过GPS定位、二维码扫描等方式进行签到和签退，记录服务时长。 互动交流：可在活动详情页留言评论，与其他志愿者交流心得，也可以对已完成的活动进行评价。 积分系统：根据参与活动的情况获取积分，可用于兑换礼品或其他激励。 活动组织者：</description>
+    </item>
+    <item>
+      <title>毕业设计</title>
+      <link>http://localhost:1313/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Sun, 07 Jul 2024 18:10:42 +0800</pubDate>
+      <guid>http://localhost:1313/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</guid>
+      <description>目录&#xA;运行环境 【ESP32学习】联网模块 ESP8266-01S上传数据到OneNet 收藏的一些资料 最终的操作结果 ESP32&amp;&amp;ESP8266-12E连接ONeNet参考资料 ONeNet云平台报错： {“protocol”:“MQTT”,“offline_time”:“2024-07-15 16:01:49.977”,“offline_reason”:“CloseDueToProtoError”}怎么解决？ APP连接ONeNet json数据解析步骤 STM32+电脑(模拟ESP32)+ESP8266通信 设备热点配网技术——WIFIManager 报错：error: ‘wifi_country_t’ does not name a type const wifi_country_t WM_COUNTRY_US{“US”,1,11,WIFI_COUNTRY_POLICY_AUTO}; 通信过程中遇到的问题 这一部分所用到的资料下载地址 【实验】SPIFFS文件系统的使用 【实验】TCP/UDP通信实验 【STM32F4学习】摄像头 参考资料 STM32F4工程代码 【服务器】NGINX 在Linux中搭建NGINX服务器 TCP/IP协议 [知识储备] NGINX架构 NGINX中master的工作原理 nginx处理HTTP请求的过程 安装NGINX 【服务器】Tomcat 【服务器】ZLMedaikit流媒体服务器 【第三方库】FFmpeg媒体流转码工具 【深度学习】飞桨paddlepaddle实战 X-CUDE—AI在线课程 相关论文参考 【机器学习】HMM模型（隐马尔科夫列） 相关论文参考 导入库 【音视频学习】 H.264编码 安卓音视频实战编程 YUV RTMP协议所在所在的网络层结构 【第三方库】LIBRTMP 【工具】类似安卓虚拟机：Total Control 采集音频数据工具 视频采集工具—MediaProjection 【安卓APP制作】 安卓的两种登录方式 安卓中集成第三方库进行登录 安卓显示ONENet提供的可视化链接 硬件系统 运行环境 【ESP32学习】联网模块 ESP8266-01S上传数据到OneNet 参考视频</description>
+    </item>
+    <item>
+      <title>电赛</title>
+      <link>http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/</link>
+      <pubDate>Tue, 14 May 2024 22:22:09 +0800</pubDate>
+      <guid>http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/</guid>
+      <description>以下笔记皆基于HAL库。&#xA;新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。</description>
+    </item>
+    <item>
+      <title>唛盟杯比赛详记</title>
+      <link>http://localhost:1313/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 05 Feb 2024 10:44:08 +0800</pubDate>
+      <guid>http://localhost:1313/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/</guid>
+      <description>比赛说明 自己有幸参加这次唛盟杯的比赛，这次比赛流程如下：&#xA;一、报名时2024年1月1到31日本来是12月份但延期了。&#xA;二、培训时间，现在还不确定，不过也是可以肯定是年后的事了。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网络 :: 标签 :: Maloudown</title>
+    <link>http://localhost:1313/tags/%E7%BD%91%E7%BB%9C/</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 31 Jan 2024 03:13:33 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>8.如何用旧电脑搭建自己的服务器？</title>
+      <link>http://localhost:1313/log/8.%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Wed, 31 Jan 2024 03:13:33 +0800</pubDate>
+      <guid>http://localhost:1313/log/8.%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可以访问这个网站，这样一个功能。如果你也有这样的想法还请阅读下去，希望自己的经验对你有所帮助。</description>
+    </item>
+  </channel>
+</rss>

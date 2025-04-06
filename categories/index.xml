@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>类别 :: Maloudown</title>
+    <link>http://localhost:1313/categories/</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 06 Apr 2025 09:04:29 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>类别 :: 工具推荐</title>
+      <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</link>
+      <pubDate>Sun, 06 Apr 2025 09:04:29 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 踩坑日记</title>
+      <link>http://localhost:1313/categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/</link>
+      <pubDate>Sun, 06 Apr 2025 08:45:26 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 编程语言</title>
+      <link>http://localhost:1313/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Tue, 01 Apr 2025 13:27:41 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 自学编程语言</title>
+      <link>http://localhost:1313/categories/%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Tue, 01 Apr 2025 13:27:41 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: M1-面试</title>
+      <link>http://localhost:1313/categories/m1-%E9%9D%A2%E8%AF%95/</link>
+      <pubDate>Mon, 18 Nov 2024 17:38:06 +0800</pubDate>
+      <guid>http://localhost:1313/categories/m1-%E9%9D%A2%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 自学课程</title>
+      <link>http://localhost:1313/categories/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/</link>
+      <pubDate>Mon, 18 Nov 2024 17:38:06 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: R1-编程语言</title>
+      <link>http://localhost:1313/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Sun, 03 Nov 2024 09:12:17 +0800</pubDate>
+      <guid>http://localhost:1313/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: X1-小说</title>
+      <link>http://localhost:1313/categories/x1-%E5%B0%8F%E8%AF%B4/</link>
+      <pubDate>Sat, 28 Sep 2024 11:56:18 +0800</pubDate>
+      <guid>http://localhost:1313/categories/x1-%E5%B0%8F%E8%AF%B4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: B3-毕业设计</title>
+      <link>http://localhost:1313/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Sun, 07 Jul 2024 18:10:42 +0800</pubDate>
+      <guid>http://localhost:1313/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 课外拓展</title>
+      <link>http://localhost:1313/categories/%E8%AF%BE%E5%A4%96%E6%8B%93%E5%B1%95/</link>
+      <pubDate>Sat, 06 Jul 2024 14:37:51 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E8%AF%BE%E5%A4%96%E6%8B%93%E5%B1%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 理论扩展</title>
+      <link>http://localhost:1313/categories/%E7%90%86%E8%AE%BA%E6%89%A9%E5%B1%95/</link>
+      <pubDate>Wed, 29 May 2024 09:00:12 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E7%90%86%E8%AE%BA%E6%89%A9%E5%B1%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 核心课程</title>
+      <link>http://localhost:1313/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/</link>
+      <pubDate>Tue, 28 May 2024 08:54:27 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: B5-比赛</title>
+      <link>http://localhost:1313/categories/b5-%E6%AF%94%E8%B5%9B/</link>
+      <pubDate>Tue, 14 May 2024 22:22:09 +0800</pubDate>
+      <guid>http://localhost:1313/categories/b5-%E6%AF%94%E8%B5%9B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: X1-项目</title>
+      <link>http://localhost:1313/categories/x1-%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Tue, 14 May 2024 22:22:09 +0800</pubDate>
+      <guid>http://localhost:1313/categories/x1-%E9%A1%B9%E7%9B%AE/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 应用开发</title>
+      <link>http://localhost:1313/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Sat, 23 Mar 2024 15:46:15 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: J1-教师资格考试</title>
+      <link>http://localhost:1313/categories/j1-%E6%95%99%E5%B8%88%E8%B5%84%E6%A0%BC%E8%80%83%E8%AF%95/</link>
+      <pubDate>Tue, 05 Mar 2024 17:33:07 +0800</pubDate>
+      <guid>http://localhost:1313/categories/j1-%E6%95%99%E5%B8%88%E8%B5%84%E6%A0%BC%E8%80%83%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 教资</title>
+      <link>http://localhost:1313/categories/%E6%95%99%E8%B5%84/</link>
+      <pubDate>Tue, 05 Mar 2024 17:33:07 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E6%95%99%E8%B5%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: W1-博客文章</title>
+      <link>http://localhost:1313/categories/w1-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Sun, 03 Mar 2024 13:05:33 +0800</pubDate>
+      <guid>http://localhost:1313/categories/w1-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: Z1-哲学</title>
+      <link>http://localhost:1313/categories/z1-%E5%93%B2%E5%AD%A6/</link>
+      <pubDate>Sun, 03 Mar 2024 13:05:33 +0800</pubDate>
+      <guid>http://localhost:1313/categories/z1-%E5%93%B2%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: Y1-外语</title>
+      <link>http://localhost:1313/categories/y1-%E5%A4%96%E8%AF%AD/</link>
+      <pubDate>Wed, 28 Feb 2024 19:15:17 +0800</pubDate>
+      <guid>http://localhost:1313/categories/y1-%E5%A4%96%E8%AF%AD/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 外语类</title>
+      <link>http://localhost:1313/categories/%E5%A4%96%E8%AF%AD%E7%B1%BB/</link>
+      <pubDate>Wed, 28 Feb 2024 19:15:17 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E5%A4%96%E8%AF%AD%E7%B1%BB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: B1-拓展笔记</title>
+      <link>http://localhost:1313/categories/b1-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 18 Feb 2024 17:25:35 +0800</pubDate>
+      <guid>http://localhost:1313/categories/b1-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: Version</title>
+      <link>http://localhost:1313/categories/version/</link>
+      <pubDate>Wed, 07 Feb 2024 16:24:40 +0800</pubDate>
+      <guid>http://localhost:1313/categories/version/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: B4-拓展笔记</title>
+      <link>http://localhost:1313/categories/b4-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 07 Feb 2024 15:10:51 +0800</pubDate>
+      <guid>http://localhost:1313/categories/b4-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 技术分享</title>
+      <link>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Wed, 31 Jan 2024 03:13:33 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: F1-复习资料</title>
+      <link>http://localhost:1313/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/</link>
+      <pubDate>Sun, 14 Jan 2024 18:36:31 +0800</pubDate>
+      <guid>http://localhost:1313/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: Z-专业课</title>
+      <link>http://localhost:1313/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/</link>
+      <pubDate>Thu, 11 Jan 2024 20:17:38 +0800</pubDate>
+      <guid>http://localhost:1313/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: D1-51单片机</title>
+      <link>http://localhost:1313/categories/d1-51%E5%8D%95%E7%89%87%E6%9C%BA/</link>
+      <pubDate>Tue, 09 Jan 2024 15:04:24 +0800</pubDate>
+      <guid>http://localhost:1313/categories/d1-51%E5%8D%95%E7%89%87%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: B2-笔记</title>
+      <link>http://localhost:1313/categories/b2-%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 20 Dec 2023 17:59:23 +0800</pubDate>
+      <guid>http://localhost:1313/categories/b2-%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: 一体化开发</title>
+      <link>http://localhost:1313/categories/%E4%B8%80%E4%BD%93%E5%8C%96%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Mon, 11 Dec 2023 02:26:25 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E4%B8%80%E4%BD%93%E5%8C%96%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: C1-CC2530</title>
+      <link>http://localhost:1313/categories/c1-cc2530/</link>
+      <pubDate>Tue, 05 Dec 2023 00:04:15 +0800</pubDate>
+      <guid>http://localhost:1313/categories/c1-cc2530/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: D1-点灯实验</title>
+      <link>http://localhost:1313/categories/d1-%E7%82%B9%E7%81%AF%E5%AE%9E%E9%AA%8C/</link>
+      <pubDate>Tue, 05 Dec 2023 00:04:15 +0800</pubDate>
+      <guid>http://localhost:1313/categories/d1-%E7%82%B9%E7%81%AF%E5%AE%9E%E9%AA%8C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>类别 :: B3-课堂笔记</title>
+      <link>http://localhost:1313/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 29 Nov 2023 16:54:44 +0800</pubDate>
+      <guid>http://localhost:1313/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

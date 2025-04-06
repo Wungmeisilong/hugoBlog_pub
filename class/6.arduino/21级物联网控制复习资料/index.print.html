@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="物联网的特点 物联网是互联网的拓展和延伸，物联网设备通常为带传感器的电子硬件，并与网络相连接。 物联网的应用层是核心。 物联网的作用 全面感知：全面感知就是通过各种类型的传感器实时感知被测物理对象的状态。 可靠传递：可靠传递就是通过各种网络与互联网的融合，将物体的信息实时准确地传递出去。 智能计算：智能处理就是利用云计算、模糊识别等各种智能计算技术，对海量的数据和信息分析和处理，以实现对物体智能化控制。 物联网体系架构">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="物联网控制-小知识 :: Maloudown">
+    <meta name="twitter:description" content="物联网的特点 物联网是互联网的拓展和延伸，物联网设备通常为带传感器的电子硬件，并与网络相连接。 物联网的应用层是核心。 物联网的作用 全面感知：全面感知就是通过各种类型的传感器实时感知被测物理对象的状态。 可靠传递：可靠传递就是通过各种网络与互联网的融合，将物体的信息实时准确地传递出去。 智能计算：智能处理就是利用云计算、模糊识别等各种智能计算技术，对海量的数据和信息分析和处理，以实现对物体智能化控制。 物联网体系架构">
+    <meta property="og:url" content="http://localhost:1313/class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="物联网控制-小知识 :: Maloudown">
+    <meta property="og:description" content="物联网的特点 物联网是互联网的拓展和延伸，物联网设备通常为带传感器的电子硬件，并与网络相连接。 物联网的应用层是核心。 物联网的作用 全面感知：全面感知就是通过各种类型的传感器实时感知被测物理对象的状态。 可靠传递：可靠传递就是通过各种网络与互联网的融合，将物体的信息实时准确地传递出去。 智能计算：智能处理就是利用云计算、模糊识别等各种智能计算技术，对海量的数据和信息分析和处理，以实现对物体智能化控制。 物联网体系架构">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="物联网控制-小知识 :: Maloudown">
+    <meta itemprop="description" content="物联网的特点 物联网是互联网的拓展和延伸，物联网设备通常为带传感器的电子硬件，并与网络相连接。 物联网的应用层是核心。 物联网的作用 全面感知：全面感知就是通过各种类型的传感器实时感知被测物理对象的状态。 可靠传递：可靠传递就是通过各种网络与互联网的融合，将物体的信息实时准确地传递出去。 智能计算：智能处理就是利用云计算、模糊识别等各种智能计算技术，对海量的数据和信息分析和处理，以实现对物体智能化控制。 物联网体系架构">
+    <meta itemprop="datePublished" content="2024-01-09T16:52:04+08:00">
+    <meta itemprop="dateModified" content="2024-01-09T16:52:04+08:00">
+    <meta itemprop="wordCount" content="8155">
+    <meta itemprop="keywords" content="物联网工程">
+    <title>物联网控制-小知识 :: Maloudown</title>
+    <link href="http://localhost:1313/class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/" rel="canonical" type="text/html" title="物联网控制-小知识 :: Maloudown">
+    <link href="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/index.xml" rel="alternate" type="application/rss+xml" title="物联网控制-小知识 :: Maloudown">
+    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/6.arduino\/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99\/';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#物联网的特点">物联网的特点</a></li>
+    <li><a href="#物联网的作用">物联网的作用</a></li>
+    <li><a href="#物联网体系架构">物联网体系架构</a></li>
+    <li><a href="#物联网的三层结构">物联网的三层结构</a></li>
+    <li><a href="#开关量与传感器">开关量与传感器</a></li>
+    <li><a href="#传感器知识点">传感器知识点</a>
+      <ul>
+        <li><a href="#传感器的性能指标">传感器的性能指标：</a></li>
+        <li><a href="#传感器的组成与结构">传感器的组成与结构</a></li>
+        <li><a href="#传感器的静态特性">传感器的静态特性</a></li>
+        <li><a href="#常见的传感器">常见的传感器</a></li>
+      </ul>
+    </li>
+    <li><a href="#android-ide-介绍">Android IDE 介绍</a>
+      <ul>
+        <li><a href="#arduino程序的架构大体可分为3个部分">Arduino程序的架构大体可分为3个部分</a></li>
+        <li><a href="#arduino-ide编程并下载程序流程">Arduino IDE编程并下载程序流程</a></li>
+        <li><a href="#arduino开发中">Arduino开发中</a></li>
+      </ul>
+    </li>
+    <li><a href="#上课实验知识点">上课实验知识点</a>
+      <ul>
+        <li><a href="#温湿度传感器">温湿度传感器</a></li>
+        <li><a href="#单总线读写流程">单总线读写流程</a></li>
+      </ul>
+    </li>
+    <li><a href="#系统设计">系统设计</a>
+      <ul>
+        <li><a href="#物联网系统的开发流程">物联网系统的开发流程：</a></li>
+        <li><a href="#需求分析">需求分析</a></li>
+        <li><a href="#物联网详细设计">物联网详细设计</a></li>
+        <li><a href="#物联网设备选型的主要流程">物联网设备选型的主要流程：</a></li>
+        <li><a href="#物联网系统测试的主要流程">物联网系统测试的主要流程：</a></li>
+      </ul>
+    </li>
+    <li><a href="#串口通信">串口通信</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/6.arduino/"><span itemprop="name">Arduino</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">物联网控制-小知识</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/6.arduino/" title="Arduino (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/5.cc2530_zigbee/" title="CC2530_ZigBee (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/">物联网工程</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="物联网控制-小知识">物联网控制-小知识</h1>
+
+<h2 id="物联网的特点">物联网的特点</h2>
+<ol>
+<li>物联网是互联网的拓展和延伸，物联网设备通常为带传感器的电子硬件，并与网络相连接。</li>
+<li>物联网的应用层是核心。</li>
+</ol>
+<h2 id="物联网的作用">物联网的作用</h2>
+<ol>
+<li>全面感知：全面感知就是通过各种类型的传感器实时感知被测物理对象的状态。</li>
+<li>可靠传递：可靠传递就是通过各种网络与互联网的融合，将物体的信息实时准确地传递出去。</li>
+<li>智能计算：智能处理就是利用云计算、模糊识别等各种智能计算技术，对海量的数据和信息分析和处理，以实现对物体智能化控制。</li>
+</ol>
+<h2 id="物联网体系架构">物联网体系架构</h2>
+<p><a href="#R-image-e6dcc7ea2e99669fe866970a1c2de145" class="lightbox-link"><img alt="d" class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%871.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e6dcc7ea2e99669fe866970a1c2de145"><img alt="d" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%871.png"></a></p>
+<p>ISO七层参考模型
+以及每一层的功能。</p>
+<p>物理层：在物理媒体上传输原始的数据比特流。
+数据链路层：将数据分成一个个数据帧，以数据帧为单位传输。有应有答，遇错重发。
+网络层：将数据分成一定长度的分组，将分组穿过通信子网，从信源选择路径后传到信宿。
+传输层：提供不具体网络的高效、经济、透明的端到端数据传输服务。
+会话层：进程间的对话也称为会话，会话层管理不同主机上各进程间的对话。
+表示层： 为应用层进程提供格式化的表示和转换数据服务。
+应用层：提供应用程序访问OSI环境的手段。
+<a href="#R-image-adcbadba1f6a021534d904a1e294b98e" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8718.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-adcbadba1f6a021534d904a1e294b98e"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8718.png"></a></p>
+<h2 id="物联网的三层结构">物联网的三层结构</h2>
+<p><a href="#R-image-eae56ef1f8b05d615e0a2e7bc0b1fdc9" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8713.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-eae56ef1f8b05d615e0a2e7bc0b1fdc9"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8713.png"></a>
+“云”、“管”、“端”分别指：应用层、网络层、感知层。
+物联网服务器的主要功能接收数据、处理数据、保存数据。
+物联网硬件设备有感知和反馈的作用</p>
+<ol start="4">
+<li>可用于物联网短距离无线通信的技术主要有：</li>
+</ol>
+<ul>
+<li>Zigbee；</li>
+<li>RFID；</li>
+<li>NFC ;</li>
+<li>蓝牙。</li>
+</ul>
+<ol start="5">
+<li>物联网近距离通信技术有：</li>
+</ol>
+<ul>
+<li>蓝牙、</li>
+<li>RFID、</li>
+<li>ZigBee</li>
+</ul>
+<ol start="6">
+<li>
+<p>工业物联网设备的组网方式可分为RS-232；RS-485；USB。</p>
+<ol>
+<li><strong>RS-232</strong>：</li>
+</ol>
+<ul>
+<li>RS-232是一种早期广泛应用于串行通信的标准，提供点对点的数据传输，通常用于短距离通信（约15米以内）。</li>
+<li>信号电平范围较大（±15V左右），支持全双工通信，即数据可以在两个方向上同时传输。</li>
+<li>在工业环境中，RS-232常用于配置设备、调试或连接单个设备到计算机或其他控制器。</li>
+</ul>
+<ol start="2">
+<li><strong>RS-485</strong>：</li>
+</ol>
+<ul>
+<li>RS-485基于差分信号传输，允许更长的传输距离（可达几千米），并且具有更好的抗噪声和电磁干扰能力。</li>
+<li>它支持多点总线式网络架构，可以实现一个主设备与多个从设备之间的通信，因此特别适用于构建分布式控制系统或传感器网络。</li>
+<li>RS-485采用半双工通信模式，在同一时间只能进行发送或接收操作，但通过软件协议控制可以实现在同一总线上多个节点有序通信。</li>
+</ul>
+<ol start="3">
+<li><strong>USB（Universal Serial Bus）</strong>：</li>
+</ol>
+<ul>
+<li>USB是一种通用串行总线标准，它提供高速数据传输，并且能够为设备供电，使得它在现代工业自动化和物联网应用中越来越普遍。</li>
+<li>USB支持热插拔，使用方便，而且有多种速度版本（如USB 2.0, USB 3.0等），数据传输速率远高于RS-232和RS-485。</li>
+<li>在工业环境中，USB接口可能用于快速配置设备、固件升级或者连接各种智能设备，但它不适合长距离传输，一般局限于设备间较近距离的直接连接。</li>
+</ul>
+</li>
+<li>
+<p>物联网<strong>M2M通信</strong>指的是机器与机器通信</p>
+</li>
+<li>
+<p>蓝牙采用<strong>高速跳频(Frequency Hopping)<strong>和</strong>时分多址(Time Division Multiple Access，TDMA)<strong>等先进技术，支持</strong>点对点</strong>及<strong>点对多点通信</strong>。其传输频段为全球公共通用的2.4 GHz频段，能提供1 Mb/s的传输速率和10 m的传输距离，并采用<strong>时分双工传输</strong>方案实现全双工传输。</p>
+</li>
+<li>
+<p>Android客户端在物联网体系中属于应用程序层。</p>
+</li>
+<li>
+<p>人工智能属于物联网体系中的服务层。</p>
+</li>
+<li>
+<p><strong>NFC</strong> 是一种非接触式的识别技术。</p>
+</li>
+</ol>
+<h2 id="开关量与传感器">开关量与传感器</h2>
+<ol>
+<li>
+<p><strong>开关量与数字信号</strong>
+数字信号指的是0和1两种信号的变化。传感器可以只使用0和1来表示自己的状态变化，也就是“有信号”和“没信号”两种情况，类似我们生活中的开关装置。</p>
+</li>
+<li>
+<p><strong>模拟信号抗噪算法</strong></p>
+<p>2.1 <strong>算术平均算法</strong></p>
+<p><strong>方法</strong>: 采样N个数据后进行平均</p>
+<p><strong>优点</strong>: 算法简单、适合于一般带有不规则噪声的信号</p>
+<p><strong>缺点</strong>: 用来运算的数值会越来越多，相对反应会越慢，不适用于实时性的控制，另外占用内存也多</p>
+<p>2.2 <strong>移动平均算法</strong></p>
+<p><strong>方法</strong>: 先将每一个新数据加入队列中并删除最后一个，再进行平均</p>
+<p><strong>优点</strong>:算法简单、适用于有周期性干扰噪声的信号</p>
+<p><strong>缺点</strong>:对于突然出现的异常脉冲信号的抑制较差，采样的数量过大时同样占用内存。</p>
+</li>
+<li>
+<p>模数转换
+把传感器获取的测量值用连续的电子信号表示出来，就是模拟信号。想用PC处理模拟信号，就需要进行模拟/数字(A/D）转换，把模拟信号转换成离散值，即数字信号。A/D转换操作分成以下3个步骤。</p>
+</li>
+</ol>
+<ul>
+<li>采样(sampling) =&gt;用某个频率来区分模拟输入信号，获取值</li>
+<li>量化=&gt;把采样后的值近似表现为离散值</li>
+<li>编码(coding)=&gt;把量化后的数值编码成二进制代码。如下图</li>
+</ul>
+<p><a href="#R-image-912f0418884c43bf312cd12087bb2409" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-912f0418884c43bf312cd12087bb2409"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/12.png"></a></p>
+<h2 id="传感器知识点">传感器知识点</h2>
+<p>在物联网节点之间做通信的时候，通信频率越高，意味着传输距离越近。</p>
+<h3 id="传感器的性能指标">传感器的性能指标：</h3>
+<ol>
+<li>
+<p>传感器动态特性：指传感器在输入变化时，它的输出特性，常以迁跃响应和频率响应来表示。</p>
+</li>
+<li>
+<p>传感器的线性度：传感器的实际静态特性输出是条曲线而非直线。</p>
+</li>
+<li>
+<p>传感器的灵敏度：传感器在静态工作情况下，输出变量变化y对输入变化量x的比值。</p>
+</li>
+<li>
+<p>传感器的分辨率：指传感器能感受到的被测量的最小变化的能力，也就是说某一输入量缓慢变化，当输入未超过某一值时，输出不变，超过了就有变化，则可以说此时传感器能分辨出来，这就是传感器的分辨率。</p>
+</li>
+</ol>
+<h3 id="传感器的组成与结构">传感器的组成与结构</h3>
+<p>传感器一般由敏感元件、转换元件、基本转换电路组成。
+<a href="#R-image-d20b839ce0938428a29a78f378938958" class="lightbox-link"><img alt="d" class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%872.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d20b839ce0938428a29a78f378938958"><img alt="d" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%872.png"></a></p>
+<ul>
+<li>敏感元件：直接感受被测量，并且输出与被测量成一定关系的某一物理量的元件；</li>
+<li>转换元件：敏感元件的输出就是它的输入，把输入转换成电路参量；</li>
+<li>转换电路：将转换电路的输出转换成电量输出；</li>
+</ul>
+<h3 id="传感器的静态特性">传感器的静态特性</h3>
+<p>静态特性是指测试系统在静态信号下，输入与输出的关系；
+衡量测试装置静态特性的重要指标：</p>
+<ul>
+<li>线性度(Linearity)</li>
+<li>灵敏度(Sensitivity)</li>
+<li>迟  滞(Hysteresis)</li>
+<li>重复性(Repeatability)</li>
+</ul>
+<h3 id="常见的传感器">常见的传感器</h3>
+<h4 id="光电式传感器光敏电阻传感器">光电式传感器（光敏电阻传感器）</h4>
+<p>如果把光敏电阻连接到外电路中，在外电压的作用下，用光照射就能改变电路中电流的大小。
+如下图为工作原理图
+<a href="#R-image-36b1852690d2c79a684a84c0b040e7b4" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%873.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-36b1852690d2c79a684a84c0b040e7b4"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%873.png"></a></p>
+<h4 id="光敏电阻的重要参数与基本特性">光敏电阻的重要参数与基本特性</h4>
+<p><strong>暗电流、暗电阻与亮电流、亮电阻：</strong></p>
+<p>光敏电阻在未受到光照时的电阻和流过的电流分别称之为暗电阻和暗电流，有光照时则对应称之为亮电流、亮电阻；</p>
+<p><strong>光电流</strong>
+亮电流与暗电流的差值；</p>
+<h4 id="结露传感器">结露传感器</h4>
+<ol>
+<li>
+<p>理想的干燥空气：78%氮气+21%氧气+1%其他气体</p>
+</li>
+<li>
+<p>多尔顿分压定律：空气的压强P应该等于该混合物中各种气体分压之和,公示如下：
+<a href="#R-image-7c2e1ce129a50e4fc0972efcf6fcac07" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%874.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7c2e1ce129a50e4fc0972efcf6fcac07"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%874.png"></a></p>
+</li>
+<li>
+<p>什么是湿度？
+空气中所含的水蒸气的量</p>
+</li>
+<li>
+<p>湿度的表示方法：</p>
+</li>
+</ol>
+<ul>
+<li>绝对温度</li>
+<li>相对温度</li>
+<li>露点温度</li>
+</ul>
+<ol>
+<li><strong>露点温度</strong>(露点)：在一定的空气压力下，逐渐降低空气的温度，当空气中所含水蒸气达到饱和状态，而开始结露或结霜时的温度。</li>
+</ol>
+<h4 id="震动传感器">震动传感器：</h4>
+<p>震动三要素：振幅、频率、相位
+以简谐运动为例：
+x=A cos(wt+y)</p>
+<h4 id="红外对管红外传感器">红外对管（红外传感器）</h4>
+<p>红外对管中，黑色管子是红外发射传感器。</p>
+<h4 id="智慧大棚中的常用传感器">智慧大棚中的常用传感器：</h4>
+<p>（1）空气温湿度传感器
+（2）光照传感器
+（3）土壤湿度传感器
+（4）风速传感器
+（5）二氧化碳传感器
+<a href="#R-image-1e7b3cdc8c6d47d7a357200ee14fe22e" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8719.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1e7b3cdc8c6d47d7a357200ee14fe22e"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8719.png"></a></p>
+<p>数据分析的基础架构</p>
+<p>首先把数据分析的基础架构分为 4 项来看，这 4 项分别是采集、积累、加工、分析。
+<a href="#R-image-f4de568fd52c3977808cb8b9a3bf683c" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8720.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f4de568fd52c3977808cb8b9a3bf683c"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8720.png"></a>
+<a href="#R-image-d7bf13fd32f9bc948e779df132052698" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8721.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d7bf13fd32f9bc948e779df132052698"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8721.png"></a>
+<a href="#R-image-4aab229856e62048cfa805f101de405c" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8722.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4aab229856e62048cfa805f101de405c"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8722.png"></a></p>
+<ol>
+<li>高级分析的基础</li>
+</ol>
+<p>机器学习可以说是高级分析的典型代表。机器学习领域汇集了众多技术，这些技术用于让计算机基于大量数据来学习数据的倾向并作出某些判断。机器学习的算法可以根据输入的数据类型分为“监督学习”和“非监督学习”两种。</p>
+<p>监督学习和非监督学习</p>
+<ul>
+<li>监督学习：当用机器学习的算法让计算机学习数据倾向时，算法会根据用于学习的数据中是否含有“正确答案”的数据而有所不同。
+打个比方，假设现在要从传感器数据来判断分析设备的故障情况和建筑物的损坏情况等异常状况。如果采用监督学习的算法，就需要输入过去实际发生异常状况时的数据，即需要明确地输入“异常”的数据。说白了，算法要学习“正确答案”和“不正确答案”之间存在的差异。</li>
+<li>非监督学习：监督学习则处理的是未标记的数据集，即数据集中没有预先定义的输出变量或目标变量。
+非监督学习的目标在于发现数据内部的隐藏结构、模式、相似性或关联性，而不是预测特定的结果。非监督学习的主要主要任务有以下几种：
+<a href="#R-image-9aada4890f623581b4eb24eb90812b1e" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8723.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9aada4890f623581b4eb24eb90812b1e"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8723.png"></a></li>
+</ul>
+<h2 id="android-ide-介绍">Android IDE 介绍</h2>
+<hr>
+<ul>
+<li>
+<p>Android客户端在物联网体系中属于 <strong>应用程序层</strong> 。</p>
+</li>
+<li>
+<p>Arduino是2005年被设计开发出来的，开发平台的特点有：
+<strong>开放性、混合编程、容易拓展</strong>。</p>
+</li>
+<li>
+<p><strong>Arduino开发环境</strong>是免费和开源的，开发语言为C/C++混合编程。</p>
+</li>
+<li>
+<p>Arduino中下载程序到单片机需要先安装<strong>串口转USB的驱动程序。</strong></p>
+</li>
+</ul>
+<hr>
+<h3 id="arduino程序的架构大体可分为3个部分">Arduino程序的架构大体可分为3个部分</h3>
+<p>（1）声明变量及接口的名称。</p>
+<p>（2） <strong>setup</strong>()。
+在Arduino程序运行时首先要调用setup()函数，用于初始化变量、设置针脚的输出/输入类型、配置串口、引入类库文件等等。每次Arduino上电或重启后，setup()<strong>函数只运行一次。</strong></p>
+<p>（3） <strong>loop</strong>()。
+在setup()函数中初始化和定义变量，然后执行loop()函数。顾名思义，该函数在程序运行过程中不断地循环，根据反馈，相应地改变执行情况。通过该函数动态控制Arduino主控板。</p>
+<h3 id="arduino-ide编程并下载程序流程">Arduino IDE编程并下载程序流程</h3>
+<p>在Arduino IDE编程并下载程序到开发板的过程，实际上是编译器将程序翻译为
+机器语言（即二进制语言）的过程。计算机将二进制的指令传送到单片机程序闪存中，单片机识别指令后进行工作。下图是从编写好的程序到Arduno开发板运行程序的流程
+<a href="#R-image-750ad6d2a967caca19ee61219fb5f608" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8711.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-750ad6d2a967caca19ee61219fb5f608"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8711.png"></a></p>
+<h3 id="arduino开发中">Arduino开发中</h3>
+<hr>
+<ol>
+<li>数字管脚读取函数 <strong>digitalRead（）</strong> ；</li>
+<li>模拟管脚读取函数 <strong>analogRead（）</strong> ；</li>
+<li>串口调试函数为 <strong>Serial.println()</strong>，用于在串口打印内容</li>
+<li><strong>延时函数——Delay()</strong> 延时的基本单位为ms,Delay(200)为延时200ms</li>
+</ol>
+<hr>
+<p>Arduino UNO开发板提供6个模拟接口，模拟信号分辨率为10位（意味着ADC可以将输入的模拟电压分成2^10 = 1024个离散级别进行数字化），它能测到的最小电压为 <strong>5V/1024=0.0049V</strong> 。
+<a href="#R-image-815fa2540da434a9d07bbcf346e15b92" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8712.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-815fa2540da434a9d07bbcf346e15b92"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8712.png"></a></p>
+<h4 id="arduino的物理管脚有analogdigitalvccgndvinres等">Arduino的物理管脚有Analog、Digital、VCC、GND、VIN、RES等</h4>
+<ol>
+<li>
+<p><strong>Analog（模拟）管脚</strong>：</p>
+<ul>
+<li>Arduino Uno等开发板上有一组特定的引脚标记为A0、A1、A2&hellip;A5（或更多，取决于具体型号），它们是模拟输入引脚。</li>
+<li>这些引脚可以接收连续变化的电压值（通常在0到5V之间），并将其转换成数字值（0-1023，对应于ADC即模数转换器的分辨率是10位）。</li>
+<li>通过这些引脚，你可以读取来自传感器或其他模拟信号源的数据。</li>
+</ul>
+</li>
+<li>
+<p><strong>Digital（数字）管脚</strong>：</p>
+<ul>
+<li>数字管脚用于处理二进制信号，也就是高电平（通常对应5V或3.3V，取决于板子类型和所处的操作模式）和低电平（接地，即0V）。</li>
+<li>它们既可以作为输入端口检测外部设备的高低电平状态，也可以作为输出端口驱动LED、继电器或其他数字器件。</li>
+<li>部分数字管脚还支持PWM（脉宽调制）输出，这样就可以模拟出不同亮度级别的LED或者调整电机速度等。</li>
+</ul>
+</li>
+<li>
+<p><strong>VCC</strong>：</p>
+<ul>
+<li>VCC代表“电源正极”。</li>
+</ul>
+</li>
+<li>
+<p><strong>GND</strong>：</p>
+<ul>
+<li>GND代表“接地”。</li>
+</ul>
+</li>
+<li>
+<p><strong>VIN</strong>：</p>
+<ul>
+<li>VIN是外部电源输入端，允许用户接入高于5V的电源（比如9V或12V电池）。这个引脚的电压将被板载稳压器转换成稳定的5V供给VCC使用。当Arduino通过USB线供电时，VIN不是必需的，但如果需要更高功率或独立电源，则可以使用此引脚。</li>
+</ul>
+</li>
+<li>
+<p><strong>RES / RESET</strong>：</p>
+<ul>
+<li>RES或RESET是复位引脚，当此引脚被拉低（一般是短接到GND）时，Arduino板上的微控制器会执行复位操作，重启其程序执行从头开始。在一些情况下，可以通过外部电路控制复位信号来实现更高级的功能，例如硬复位或远程复位。</li>
+</ul>
+</li>
+</ol>
+<h4 id="soc系统芯片处理器的功能强于mcu处理器的功能">Soc（系统芯片）处理器的功能强于MCU处理器的功能</h4>
+<p>SOC（System-on-a-Chip）处理器相较于MCU（Microcontroller Unit）处理器功能更强大的原因主要体现在以下几个方面：</p>
+<ol>
+<li>
+<p><strong>集成度</strong>：</p>
+<ul>
+<li>SOC芯片高度集成了中央处理器（CPU）、图形处理器（GPU）、内存（RAM、ROM/Flash）、以及其他专用硬件加速器如DSP（数字信号处理器）、通信模块（如Wi-Fi、蓝牙、LTE等）、以及各种外设接口，形成一个一体化的复杂系统。而MCU虽然也在单一芯片上集成了CPU和一些内存资源及I/O接口，但集成度一般低于SOC。</li>
+</ul>
+</li>
+<li>
+<p><strong>性能与计算能力</strong>：</p>
+<ul>
+<li>SOC通常采用高性能的CPU内核架构，可以支持多核设计，运行速度更快，并且可能支持运行复杂的操作系统（如Linux、Android等），能够处理更多的并发任务和执行更为复杂的算法。</li>
+<li>MCU往往采用针对低功耗和实时控制优化的精简指令集CPU，更适合于简单、快速响应的任务。</li>
+</ul>
+</li>
+<li>
+<p><strong>存储容量和扩展性</strong>：</p>
+<ul>
+<li>SOC具有更大的内存空间，包括程序存储器和数据存储器，支持更大数据量的处理和存储需求，同时也可以通过外部总线连接更多存储设备。</li>
+<li>相比之下，MCU的内部存储器相对有限，虽然也能扩展外部存储，但在规模上通常不及SOC。</li>
+</ul>
+</li>
+<li>
+<p><strong>多媒体与通信能力</strong>：</p>
+<ul>
+<li>SOC普遍具备强大的多媒体处理能力，例如图像处理、音频编解码、视频编码等，还集成有高级网络和无线通信功能，以适应移动设备和物联网应用的需求。</li>
+<li>MCU在这些方面的集成程度和性能则较低，除非专门设计用于某些特定领域，否则它们通常不包含这些复杂的功能模块。</li>
+</ul>
+</li>
+<li>
+<p><strong>能耗与散热管理</strong>：</p>
+<ul>
+<li>虽然SOC功能强大，但也面临着更高的能耗和散热挑战。不过，现代的SOC设计采用了先进的电源管理和低功耗技术来平衡性能与能效之间的关系。</li>
+<li>MCU在设计之初就重点考虑了低功耗应用，适合电池供电或对能源敏感的应用场景。</li>
+</ul>
+</li>
+</ol>
+<h2 id="上课实验知识点">上课实验知识点</h2>
+<h3 id="温湿度传感器">温湿度传感器</h3>
+<p>温湿度传感器采用的是 <strong>单总线协议</strong> 。</p>
+<ol>
+<li>单总线传送数据定义以AM2302为例。</li>
+</ol>
+<p>SDA用于微处理器与AM2302之间的通讯和同步,采用单总线数据格式，一次传送40位数据，高位先出。</p>
+<p><a href="#R-image-ca8301db7e3a6719107682ce18157054" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%875.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ca8301db7e3a6719107682ce18157054"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%875.png"></a></p>
+<ol start="2">
+<li>通信格式</li>
+</ol>
+<p><a href="#R-image-dde6ee40860738760a61d37044e2f541" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%876.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dde6ee40860738760a61d37044e2f541"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%876.png"></a></p>
+<p>AM2302的湿度分辨率是16bit，高位在前。</p>
+<ol start="3">
+<li>主机和传感器之间可以通过如下几个步骤完成数据读取。</li>
+</ol>
+<p><strong>步骤一</strong>
+传感器上电后 ，测试环境温湿度数据，并记录数据，此后传感器自动转入<strong>休眠状态</strong>。</p>
+<p><strong>步骤二</strong>
+微处理器的I/O设置为输出，同时输出低电平，且低电平保持时间不能<strong>小于80ous</strong>，典型值是<strong>拉低1Ms</strong>，然后微处理器的I/O设置为输入状态，释放总线，由于上拉电阻，微处理器的I/O如AM2302的SDA数据线也随之变高，等主机释放总线后，AM2302发送响应信号，即输出80us的低电平作为应答信号，紧接着输出80us的高电平通知外设准备接收数据，信号传输如图7所示
+<a href="#R-image-f69953d6e9193c32076d4380029aee92" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%878.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f69953d6e9193c32076d4380029aee92"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%878.png"></a>
+<strong>步骤三</strong>
+AM2302发送完响应后，随后由数据总线SDA连续串行输出40位数据，微处理器根据l/o电平的变化接收40位数据。</p>
+<ul>
+<li>位数据“o”的格式为:50微秒的低电平加26-28微秒的高电平;</li>
+<li>位数据“1”的格式为: 50微秒的低电平加70微秒的高电平;</li>
+<li>位数据“o”、位数据“1”格式信号如图8所示。
+<a href="#R-image-597753c137eb5dd25e5c8cfccbffeb79" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%879.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-597753c137eb5dd25e5c8cfccbffeb79"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%879.png"></a></li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#75715e">// REQUEST SAMPLE（发送请求，此阶段为激活温湿度传感器）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pinMode</span>(DHT_PIN, OUTPUT);<span style="color:#75715e">//4号引脚设置输出模式，默认高电平输出
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">digitalWrite</span>(DHT_PIN, LOW);<span style="color:#75715e">//设置低电平输出，并延迟18ms
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">18</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">digitalWrite</span>(DHT_PIN, HIGH);<span style="color:#75715e">//设置高电平，并延迟40us
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">delayMicroseconds</span>(<span style="color:#ae81ff">40</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//第二阶段：通知开发板，自己准备发数据。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">pinMode</span>(DHT_PIN, INPUT);<span style="color:#75715e">//设置输入模式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ACKNOWLEDGE or TIMEOUT（确认或超时）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>;<span style="color:#75715e">//定义无符号整形
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">digitalRead</span>(DHT_PIN) <span style="color:#f92672">==</span> LOW)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (count<span style="color:#f92672">--</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> DHT_ERR_TIMEOUT;<span style="color:#75715e">//返回DHT_ERR_TIMEOUT = -1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    count <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">digitalRead</span>(DHT_PIN) <span style="color:#f92672">==</span> HIGH)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (count<span style="color:#f92672">--</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> DHT_ERR_TIMEOUT;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// READ OUTPUT - 40 BITS =&gt; 5 BYTES or TIMEOUT（读取输出- 40比特=&gt; 5字节或超时）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">40</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">digitalRead</span>(DHT_PIN) <span style="color:#f92672">==</span> LOW)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (count<span style="color:#f92672">--</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> DHT_ERR_TIMEOUT;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> t <span style="color:#f92672">=</span> <span style="color:#a6e22e">micros</span>();   <span style="color:#75715e">//函数返回Arduino板开始运行当前程序时的微秒（us）数。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">digitalRead</span>(DHT_PIN) <span style="color:#f92672">==</span> HIGH)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (count<span style="color:#f92672">--</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> DHT_ERR_TIMEOUT;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//  |=:按位或后赋值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> ((<span style="color:#a6e22e">micros</span>() <span style="color:#f92672">-</span> t) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">40</span>) bits[idx] <span style="color:#f92672">|=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> cnt);  
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//上次读取的时间到现在读取的时间差大于40，那么bits[idx]  
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//的1左移CNT位，假设传的第一个数据是1，即(micros() - t)&gt;40，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//那么把1左移cnt位后赋值给数组bits[]（刚开始的时候cnt=0,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//也就是1左移0位）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (cnt <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)   <span style="color:#75715e">// 高8位数据传完了没有呢？
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        {
+</span></span><span style="display:flex;"><span>        cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;    <span style="color:#75715e">// 传完了，那让cnt=7，即进行下一轮低八位的传输，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        idx<span style="color:#f92672">++</span>;      <span style="color:#75715e">// 数组加1，说明下一次存的数据放在了数组的下一位
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> cnt<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sum <span style="color:#f92672">=</span> bits[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span>bits[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>bits[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">+</span>bits[<span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(bits[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">!=</span> sum) <span style="color:#66d9ef">return</span> DHT_ERR_CHECK;  <span style="color:#75715e">//校验位
+</span></span></span></code></pre></div>
+<h3 id="单总线读写流程">单总线读写流程</h3>
+<ul>
+<li>初始化</li>
+<li>发命令</li>
+<li>读取湿度和温度
+流程图如下：</li>
+</ul>
+<p><a href="#R-image-1ced1490f2e97ba35c193e19c812593f" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8710.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1ced1490f2e97ba35c193e19c812593f"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8710.png"></a></p>
+<h2 id="系统设计">系统设计</h2>
+<h3 id="物联网系统的开发流程">物联网系统的开发流程：</h3>
+<p>（1）系统规划阶段
+（2）验证假设阶段
+（3）系统开发阶段
+（4）系统交付阶段
+（5）维护应用阶段</p>
+<p><a href="#R-image-3701b88637ade0f7ae49efc364c620aa" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8717.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3701b88637ade0f7ae49efc364c620aa"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8717.png"></a></p>
+<h3 id="需求分析">需求分析</h3>
+<p>首要步骤是获取用户需求。</p>
+<h3 id="物联网详细设计">物联网详细设计</h3>
+<p>有代码编写、流程图绘制、 软件测试等。</p>
+<h3 id="物联网设备选型的主要流程">物联网设备选型的主要流程：</h3>
+<pre><code>（1）处理器选型，选择合适的单片机或开发板。
+（2）传感器选型，选择合适的数字或模拟传感器。
+（3）中间件选型，选择合适的网络通信方式。
+</code></pre>
+<h3 id="物联网系统测试的主要流程">物联网系统测试的主要流程：</h3>
+<pre><code>（1）进行软件测试，分静态测试和动态测试。
+静态测试和动态测试是软件测试中的两种主要类型，它们在软件开发生命周期的不同阶段用来验证软件的质量和正确性。
+（2）进行硬件测试和网络测试。
+（3）进行系统集成测试。
+</code></pre>
+<p><strong>静态测试</strong>：
+静态测试是指不执行程序代码的情况下进行的测试活动。它主要用于检查软件的非执行属性，主要包括：</p>
+<ul>
+<li>
+<p><strong>文档审查</strong>：检查需求规格说明书、设计文档、用户手册等非代码类文档是否清晰、完整、一致以及符合标准。</p>
+</li>
+<li>
+<p><strong>代码审查</strong>（包括桌面检查、走查和正式审查）：通过人工或自动化工具对源代码进行逐行分析，查找可能存在的错误、缺陷、不符合编码规范的地方，以及潜在的设计问题和结构弱点。</p>
+</li>
+<li>
+<p><strong>静态分析</strong>：利用静态分析工具自动检测代码中的潜在错误，如未初始化的变量、死代码、数据流错误、复杂度过高函数等问题。</p>
+</li>
+</ul>
+<p>静态测试的目标在于发现并修复在软件开发早期就能确定的问题，以减少后期动态测试时发现严重错误的可能性。</p>
+<p><strong>动态测试</strong>：
+动态测试则是在实际运行软件的过程中进行的测试，重点在于检查程序的实际执行效果，主要包括：</p>
+<ul>
+<li>
+<p><strong>单元测试</strong>：针对单个模块或函数进行测试，确保其内部逻辑功能正常。</p>
+</li>
+<li>
+<p><strong>集成测试</strong>：将各个模块组合在一起测试，验证接口间的交互及整体功能。</p>
+</li>
+<li>
+<p><strong>系统测试</strong>：验证整个系统的功能、性能、安全性等方面是否满足预定要求。</p>
+</li>
+<li>
+<p><strong>验收测试</strong>（包括用户验收测试）：根据业务需求验证软件能否在真实环境中正确工作。</p>
+</li>
+<li>
+<p><strong>压力测试</strong>、<strong>负载测试</strong>和<strong>性能测试</strong>：检验软件在极限条件下的表现，例如处理大量并发请求的能力。</p>
+</li>
+</ul>
+<p>动态测试通常使用黑盒测试、白盒测试和灰盒测试策略来构造测试用例，并通过实际运行程序得到结果与预期结果对比，从而发现并报告错误。</p>
+<p>总之，静态测试关注的是不运行程序就可识别的问题，而动态测试则侧重于在实际运行条件下暴露软件行为中的缺陷。两者结合能够更全面地保证软件质量。</p>
+<p><strong>标准 , ASCI码使用7bit数据来表示所有的大写和小写字母、数字0到9、标点符号,以及在美式英语中使用的特殊控制字符。</strong></p>
+<h2 id="串口通信">串口通信</h2>
+<p><strong>标准 , ASCI码使用7bit数据来表示所有的大写和小写字母、数字0到9、标点符号,以及在美式英语中使用的特殊控制字符。</strong></p>
+<p>串行通信是指使用一条数据线,将数据一位一位地依次传输,每一位数据占据一个固定的时间长度</p>
+<p>在进行串口通信时,两个串口设备间需要**发送端(TX)<strong>与</strong>接收端(RX)**交叉相连,并共用电源地(GND)。</p>
+<ol>
+<li>
+<p><strong>串行通信的约定</strong>
+串行通信中的这种约定包含两个方面，</p>
+<ul>
+<li>一方面是通信的速率要保持一致，</li>
+<li>另一方面是字符的编码要一致。</li>
+</ul>
+</li>
+<li>
+<p><strong>波特率</strong>
+通信速率是指单位时间内传输的信息量,可用比特率和波特率来表示。
+<strong>比特率</strong> 是指每秒传输的二进制位数,用bps (bits)表示。
+<strong>波特率</strong> 是指每秒传输的符号数,若每个符号所含的信息量为1比特,则波特率等于比特率。</p>
+</li>
+<li>
+<p>串口工作原理</p>
+</li>
+</ol>
+<p>在Arduino与其它器件通讯的过程中,数据传输实际上都是以数字信号(即电平高低变化)的形式进行的,串口通信也是如此.当使用Serial.print()函数输出数据时,Arduino的发送端会输出一连串的数字信号,称这些数字信号为数据帧.
+例如,当时用Serial.print(&lsquo;A&rsquo;)语句发送数据时,实际发送的数据帧格式如下图所示:
+<a href="#R-image-626bf593b50d26e7141895516cd6921c" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8714.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-626bf593b50d26e7141895516cd6921c"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8714.png"></a>
+Serial.begin()是Arduino开发平台串口初始化函数。
+物联网设备跟云平台的通讯方法分为同步传输和异步传输</p>
+<p>以光照度传感器为例，讲解串口通信模式。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> sensorPin <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> ledPin <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> lineFound <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>Serial.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">115200</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pinMode</span>(sensorPin, INPUT);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pinMode</span>(ledPin, OUTPUT);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+</span></span><span style="display:flex;"><span>lineFound <span style="color:#f92672">=</span> <span style="color:#a6e22e">digitalRead</span>(sensorPin);     
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span>(lineFound <span style="color:#f92672">==</span> HIGH) {
+</span></span><span style="display:flex;"><span>Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;    &#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">digitalWrite</span>(ledPin, HIGH);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;    &#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">digitalWrite</span>(ledPin, LOW);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>流程如下：
+<a href="#R-image-a5d680480d53ab2ca21e28012dfe28f5" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8715.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a5d680480d53ab2ca21e28012dfe28f5"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8715.png"></a>
+串口例程：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> analogInPin <span style="color:#f92672">=</span> A0; 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span>  sensorValue <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+</span></span><span style="display:flex;"><span>     Serial.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">115200</span>,<span style="color:#ae81ff">8</span>N1);              
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+</span></span><span style="display:flex;"><span>     sensorValue <span style="color:#f92672">=</span> <span style="color:#a6e22e">analogRead</span>(analogInPin);     
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">250</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>（1）串口通信模式有：1）波特率为115200 （2）校验方式为无校验 (3)数据位为8位、停止位为1位
+（2）串口通信流程图
+<a href="#R-image-9daae02b17e4de060c3a994fb5dc0e51" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8716.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9daae02b17e4de060c3a994fb5dc0e51"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E5%9B%BE%E7%89%8716.png"></a></p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年1月9日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">F1-复习资料</a></li>
+    <li><a class="term-link" href="../../../categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/">Z-专业课</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

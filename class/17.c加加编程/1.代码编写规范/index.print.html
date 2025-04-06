@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="如何写一个标准的.h文件 以下内容来自B站。
+接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：
+class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator &#43;= (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };构造函数的特性 这一点需要关注下面的代码：">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="1.代码编写规范 :: Maloudown">
+    <meta name="twitter:description" content="如何写一个标准的.h文件 以下内容来自B站。
+接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：
+class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator &#43;= (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };构造函数的特性 这一点需要关注下面的代码：">
+    <meta property="og:url" content="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="1.代码编写规范 :: Maloudown">
+    <meta property="og:description" content="如何写一个标准的.h文件 以下内容来自B站。
+接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：
+class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator &#43;= (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };构造函数的特性 这一点需要关注下面的代码：">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="1.代码编写规范 :: Maloudown">
+    <meta itemprop="description" content="如何写一个标准的.h文件 以下内容来自B站。
+接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：
+class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator &#43;= (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };构造函数的特性 这一点需要关注下面的代码：">
+    <meta itemprop="datePublished" content="2024-10-15T19:54:02+08:00">
+    <meta itemprop="dateModified" content="2024-10-15T19:54:02+08:00">
+    <meta itemprop="wordCount" content="3242">
+    <meta itemprop="keywords" content="C&#43;&#43;">
+    <title>1.代码编写规范 :: Maloudown</title>
+    <link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/" rel="canonical" type="text/html" title="1.代码编写规范 :: Maloudown">
+    <link href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.xml" rel="alternate" type="application/rss+xml" title="1.代码编写规范 :: Maloudown">
+    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B\/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83\/';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#如何写一个标准的h文件">如何写一个标准的.h文件</a></li>
+    <li><a href="#构造函数的特性">构造函数的特性</a></li>
+    <li><a href="#关于const修饰符">关于const修饰符</a></li>
+    <li><a href="#函数传递和返回值的两种方式">函数传递和返回值的两种方式</a></li>
+    <li><a href="#操作符重载-1成员函数">操作符重载-1：成员函数</a></li>
+    <li><a href="#操作符重载-2非成员函数">操作符重载-2：非成员函数</a></li>
+    <li><a href="#小结">小结</a></li>
+    <li><a href="#接下来通过学习stringh库进一步了解指针的使用">接下来通过学习string.h库，进一步了解指针的使用</a></li>
+    <li><a href="#stack栈和heap堆">stack（栈）和heap（堆）</a>
+      <ul>
+        <li><a href="#stack-object-的生命周期">stack object 的生命周期</a></li>
+        <li><a href="#static-local-object-的生命周期">static local object 的生命周期</a></li>
+        <li><a href="#global-objects-生命周期">global objects 生命周期</a></li>
+        <li><a href="#调用new和delete的过程">调用new和delete的过程</a></li>
+      </ul>
+    </li>
+    <li><a href="#new和delete的补充">new和delete的补充</a>
+      <ul>
+        <li><a href="#重载newdelete">重载::new,::delete</a></li>
+        <li><a href="#类中重载的new和delete">类中重载的new和delete</a></li>
+        <li><a href="#类中重载的new和delete-1">类中重载的new[]和delete[]</a></li>
+      </ul>
+    </li>
+    <li><a href="#newdelete使用示例">new,delete使用示例</a>
+      <ul>
+        <li><a href="#为什么new操作会多出8个字节呢">为什么new[]操作会多出8个字节呢？</a></li>
+      </ul>
+    </li>
+    <li><a href="#对new的分配额外内存">对new的分配额外内存</a></li>
+    <li><a href="#小结-1">小结</a></li>
+    <li><a href="#补充内容static">补充内容static</a>
+      <ul>
+        <li><a href="#static在private中的使用例子">static在private中的使用例子</a></li>
+        <li><a href="#class-template">class template</a></li>
+        <li><a href="#function-template">function template</a></li>
+        <li><a href="#member-template-成员模板">member template 成员模板</a></li>
+        <li><a href="#namespace命令空间">namespace（命令空间）</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><span itemprop="name">17.C加加编程</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">1.代码编写规范</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/" title="2.组合与继承 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/" title="21.C语言程序设计（含面试） (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/c&amp;#43;&amp;#43;/">C&#43;&#43;</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="1代码编写规范">1.代码编写规范</h1>
+
+<h2 id="如何写一个标准的h文件">如何写一个标准的.h文件</h2>
+<p>以下内容来自<a href="https://www.bilibili.com/video/BV1ELHEewEms/?p=6&spm_id_from=pageDriver&vd_source=5e8e4e9e284af3291f1a3addff3fc2c3" rel="external" target="_blank">B站</a>。</p>
+<p>接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">complex</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* data */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> re,im;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">friend</span> complex<span style="color:#f92672">&amp;</span> __doapl (complex<span style="color:#f92672">*</span>,<span style="color:#66d9ef">const</span> complex<span style="color:#f92672">&amp;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    complex (<span style="color:#66d9ef">double</span> r,<span style="color:#66d9ef">double</span> i)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">:</span>re(r),im(i)                <span style="color:#75715e">//这是一个构造函数，这种写法意思是初始化变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {};
+</span></span><span style="display:flex;"><span>    complex<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">+=</span> (complex <span style="color:#66d9ef">operator</span><span style="color:#f92672">&amp;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">read</span> () <span style="color:#66d9ef">const</span> {<span style="color:#66d9ef">return</span> re;}  <span style="color:#75715e">//这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">imag</span> () <span style="color:#66d9ef">const</span> {<span style="color:#66d9ef">return</span> im;}
+</span></span><span style="display:flex;"><span>};</span></span></code></pre></div>
+<h2 id="构造函数的特性">构造函数的特性</h2>
+<p>这一点需要关注下面的代码：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>complex (<span style="color:#66d9ef">double</span> r,<span style="color:#66d9ef">double</span> i)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">:</span>re(r),im(i)                <span style="color:#75715e">//这是一个构造函数，这种写法意思是初始化变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {};</span></span></code></pre></div>
+<h2 id="关于const修饰符">关于const修饰符</h2>
+<p>如上面说到的，函数返回最好是加const，这样可以应付下面情况的发生。</p>
+<div class="tab-panel" data-tab-group="1a82bf0f6cc35ebd6b1ee5bdbaef5e41">
+  <div class="tab-nav">
+    <div class="tab-nav-title">const的使用</div>
+    <button
+      data-tab-item="加constfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;" tabindex="-1"
+      onclick="switchTab('1a82bf0f6cc35ebd6b1ee5bdbaef5e41','加constfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 加const</span>
+    </button>
+    <button
+      data-tab-item="不加constfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: red;"
+      onclick="switchTab('1a82bf0f6cc35ebd6b1ee5bdbaef5e41','不加constfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 不加const</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="加constfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">read</span> () <span style="color:#66d9ef">const</span> {<span style="color:#66d9ef">return</span> re;}  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">imag</span> () <span style="color:#66d9ef">const</span> {<span style="color:#66d9ef">return</span> im;}</span></span></code></pre></div>
+<p>此时做如下两种使用都是正确的</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    complex <span style="color:#a6e22e">com1</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span>com1.real()<span style="color:#f92672">&lt;&lt;</span>endl;</span></span></code></pre></div>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> complex <span style="color:#a6e22e">com1</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span>com1.real()<span style="color:#f92672">&lt;&lt;</span>endl;</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="不加constfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info" style="--VARIABLE-BOX-color: red;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">read</span> ()  {<span style="color:#66d9ef">return</span> re;}  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">imag</span> ()  {<span style="color:#66d9ef">return</span> im;}</span></span></code></pre></div>
+<p>此时做如下两种使用只有第一种可以被执行，第二种会报错。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    complex <span style="color:#a6e22e">com1</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span>com1.real()<span style="color:#f92672">&lt;&lt;</span>endl;</span></span></code></pre></div>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> complex <span style="color:#a6e22e">com1</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>    cout<span style="color:#f92672">&lt;&lt;</span>com1.real()<span style="color:#f92672">&lt;&lt;</span>endl;</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="函数传递和返回值的两种方式">函数传递和返回值的两种方式</h2>
+<p>pass by values:传值。在传输的事单字节或者字节数较少的情况下使用，比如传一个字符。</p>
+<p>pass by reference:传引用。在C++中引用的底层逻辑就是传指针，也就是类似穿了地址，也就是只传输4个字节，
+在这种情况下你可以使用const修饰符，迫使函数不能修改值，如果希望函数对值进行处理则可以不加</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">re</span>(<span style="color:#66d9ef">const</span> classname<span style="color:#f92672">&amp;</span> cl){};<span style="color:#75715e">//加了const
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">re</span>(classname cl){};<span style="color:#75715e">//没有加const
+</span></span></span></code></pre></div>
+<p>对于返回值，我们可以返回值，也可以返回引用，但什么情况下返回的是引用呢？</p>
+<p>在设计类中的函数时，可以先考虑返回类型适不适合<code>引用</code>,如果返回的是已经存在的地址，那么可以选择返回类型为引用，否则不使用。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">inline</span> complex<span style="color:#f92672">&amp;</span>
+</span></span><span style="display:flex;"><span>        __ap(complex <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span> ,<span style="color:#66d9ef">const</span> complex <span style="color:#f92672">&amp;</span> c){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>re <span style="color:#f92672">+=</span> c.re;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>im <span style="color:#f92672">+=</span> c.im;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">this</span>;
+</span></span><span style="display:flex;"><span>        }</span></span></code></pre></div>
+<p>向上面的函数就是使用了引用返回。</p>
+<h2 id="操作符重载-1成员函数">操作符重载-1：成员函数</h2>
+<p><a href="#R-image-11bdb9cef7cf1b7e24515362a2377ce7" class="lightbox-link"><img alt="操作符重载" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-11bdb9cef7cf1b7e24515362a2377ce7"><img alt="操作符重载" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image.png"></a></p>
+<h2 id="操作符重载-2非成员函数">操作符重载-2：非成员函数</h2>
+<p>假设现在要计算复数的加减，如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    complex <span style="color:#a6e22e">com1</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    complex <span style="color:#a6e22e">com2</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">9</span>);
+</span></span><span style="display:flex;"><span>    complex com3;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    com3 <span style="color:#f92672">=</span> com1 <span style="color:#f92672">+</span> com2;
+</span></span><span style="display:flex;"><span>    com3 <span style="color:#f92672">=</span> com1 <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    com3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">+</span> com2;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">……</span></span></span></code></pre></div>
+<p>对于这段代码在库文件中，要对加法做非成员函数重载，以应付 不同的情况。</p>
+<p>接下来在考虑一个问题，就是如果我们只是做<code>cout&lt;&lt;com1;</code>那么对于&laquo;函数返回值可以是void类,但是如果我们做的是<code>cout&lt;&lt;com1&lt;&lt;com2&lt;&lt;endl;</code>
+这样的操作返回类型为void类型，那么当运行<code>cout&lt;&lt;com1</code>后就无法运行<code>&lt;&lt;com2&lt;&lt;endl</code>的代码.</p>
+<p>很显然要让代码继续运行，我们还需要返回iostream类型，而且使用<code>return by reference</code>返回方法，也就是返回引用。如下图：
+<a href="#R-image-d0bdd0e7592113e643692de6b66d32a2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d0bdd0e7592113e643692de6b66d32a2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-1.png"></a></p>
+<h2 id="小结">小结</h2>
+<p>通过以上的简单讲解，我们可以总结一下，再写一个类的时候，我们需要注意以下几点：</p>
+<ul>
+<li>确定类的数据并写在private中;</li>
+<li>对于构造函数要善于使用初始化数据方法；</li>
+<li>对于函数要想一想，返回类型是否可以改变，要不要写const；</li>
+<li>对于函数类型和返回值，要传值还是传引用，要返回值还是返回引用。</li>
+</ul>
+<p>是否返回引用最最好的判断标准就是，值在经过函数运算后存储在函数外，或说是一个以存在的存储地址，否则不返回引用</p>
+<h2 id="接下来通过学习stringh库进一步了解指针的使用">接下来通过学习string.h库，进一步了解指针的使用</h2>
+<p>一般有指针的类需要写三个特殊函数拷贝构造、拷贝析构、拷贝赋值，</p>
+<p><a href="#R-image-927597643e3a35ecc4a27d8e8429791a" class="lightbox-link"><img alt="String" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-927597643e3a35ecc4a27d8e8429791a"><img alt="String" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-2.png"></a>
+<a href="#R-image-5dc2ef2616439dbec34e99c36c9f6287" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5dc2ef2616439dbec34e99c36c9f6287"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-3.png"></a>
+<a href="#R-image-c8a500a3207f5a3f9ba503efc98c3fce" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c8a500a3207f5a3f9ba503efc98c3fce"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-4.png"></a>
+<a href="#R-image-a3df7c966358f8b9644699fc09477230" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a3df7c966358f8b9644699fc09477230"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-5.png"></a></p>
+<p>有时候还需要用到new 和 delete。</p>
+<h2 id="stack栈和heap堆">stack（栈）和heap（堆）</h2>
+<p>如下代码：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">String</span>{<span style="color:#960050;background-color:#1e0010">……</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">……</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        String <span style="color:#a6e22e">str</span>(<span style="color:#e6db74">&#34;hello&#34;</span>);
+</span></span><span style="display:flex;"><span>        String str1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String();
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">……</span>
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<p>上面的{}内的代码就是存储在stack中，而经过new的变量存在heap中；</p>
+<h3 id="stack-object-的生命周期">stack object 的生命周期</h3>
+<p>在{}内的代码执行结束后，<strong>自动调用析构函数</strong>将变量清理掉，如下代码，</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">String</span>{<span style="color:#960050;background-color:#1e0010">……</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">……</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        String <span style="color:#a6e22e">str</span>(<span style="color:#e6db74">&#34;hello&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">……</span>
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<h3 id="static-local-object-的生命周期">static local object 的生命周期</h3>
+<p>添加关键字static的变量成为静态变量，在作用于如下面代码的{}结束后不会被析构函数清理掉，
+变量会存储直到程序结束。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">String</span>{<span style="color:#960050;background-color:#1e0010">……</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">……</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">str</span>(<span style="color:#e6db74">&#34;hello&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">……</span>
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<h3 id="global-objects-生命周期">global objects 生命周期</h3>
+<p>全局变量在程序接收后才会被清理掉。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">String</span>{<span style="color:#960050;background-color:#1e0010">……</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    String <span style="color:#a6e22e">str</span>(<span style="color:#e6db74">&#34;hello&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">……</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">……</span>
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<h3 id="调用new和delete的过程">调用new和delete的过程</h3>
+<p>在使用new的地方需要使用delete清理内存，防止内存泄露。</p>
+<p>调用new过程：</p>
+<p><a href="#R-image-a29f3c71485a9951246c8de973418018" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a29f3c71485a9951246c8de973418018"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-6.png"></a></p>
+<p>调用delete的过程：</p>
+<p><a href="#R-image-dd3dea099935d278bd79128f8a1a6999" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd3dea099935d278bd79128f8a1a6999"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-7.png"></a>
+<a href="#R-image-84303a64b55b5dcc4cfc6821180ef0e1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-84303a64b55b5dcc4cfc6821180ef0e1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-8.png"></a></p>
+<p>代码 分配内存大小左图是调试模式下的内存分配，右图是非调试模式下分配的内存</p>
+<p><a href="#R-image-314d7719fe13d4e1318509ce3aaa6ebc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-314d7719fe13d4e1318509ce3aaa6ebc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-9.png"></a></p>
+<p>new与delete的搭配，在删除数组时需要加上[]否则编译器不知道你要删的是数组：</p>
+<p><a href="#R-image-1e86a74094aba803d5607e1215a66dc0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1e86a74094aba803d5607e1215a66dc0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-10.png"></a></p>
+<h2 id="new和delete的补充">new和delete的补充</h2>
+<p>对new和delete的重载，用于设计内存管理，如内存池等操作。</p>
+<h3 id="重载newdelete">重载::new,::delete</h3>
+<p>重载的函数中，new操作会接收一个大小，该大小由编译器传入，而delete传入的是一个指针，如下图；
+<a href="#R-image-f99935a3c1c572f96435ebbaa5cdc258" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-16.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f99935a3c1c572f96435ebbaa5cdc258"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-16.png"></a></p>
+<p>如果不想使用类中的new和delete，可以在二者之前加上:,如::new,::delete，这样在调用函数时就不会调用类设计中的new和delete重载，而是全局的。</p>
+<h3 id="类中重载的new和delete">类中重载的new和delete</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">F</span>{
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> operate <span style="color:#66d9ef">new</span>(size_t);<span style="color:#75715e">//1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">void</span> operate <span style="color:#a6e22e">delete</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span>,size_t);<span style="color:#75715e">//2,size_t可不写
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    ...
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//代码段1的内部操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">try</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> mem <span style="color:#f92672">=</span> operate <span style="color:#66d9ef">new</span>(size_t);
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> <span style="color:#66d9ef">static_cast</span><span style="color:#f92672">&lt;</span>F<span style="color:#f92672">*&gt;</span>(mem);<span style="color:#75715e">//类型转换
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    p<span style="color:#f92672">-&gt;</span>F<span style="color:#f92672">::</span>F();<span style="color:#75715e">//构造函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//代码段2的内部操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>p<span style="color:#f92672">-&gt;~</span>F();
+</span></span><span style="display:flex;"><span>operate <span style="color:#a6e22e">delete</span>(p);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// main函数调用示例
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    F<span style="color:#f92672">*</span> p <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> F();
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">delete</span> p;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="类中重载的new和delete-1">类中重载的new[]和delete[]</h3>
+<p>代码整体流程与上一个情况类似，区别在于new[]是申请数组内存，在销毁的时候如果不使用delete[]释放内存，delete只会执行一次，导致内存没有完全释放，详细代码如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">F</span>{
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> operate <span style="color:#66d9ef">new</span>(size_t);<span style="color:#75715e">//1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">void</span> operate <span style="color:#a6e22e">delete</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span>,size_t);<span style="color:#75715e">//2,size_t可不写
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    ...
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//代码段1的内部操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">try</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> mem <span style="color:#f92672">=</span> operate <span style="color:#66d9ef">new</span>(size_t<span style="color:#f92672">*</span>N <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span>);<span style="color:#75715e">//指针占4个字节
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    p <span style="color:#f92672">=</span> <span style="color:#66d9ef">static_cast</span><span style="color:#f92672">&lt;</span>F<span style="color:#f92672">*&gt;</span>(mem);<span style="color:#75715e">//类型转换
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    p<span style="color:#f92672">-&gt;</span>F<span style="color:#f92672">::</span>F();<span style="color:#75715e">//构造函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//代码段2的内部操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>p<span style="color:#f92672">-&gt;~</span>F();<span style="color:#75715e">//析构函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>operate <span style="color:#a6e22e">delete</span>(p);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// main函数调用示例
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    F<span style="color:#f92672">*</span> p <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> F[N];
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">delete</span>[] p;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h2 id="newdelete使用示例">new,delete使用示例</h2>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Foo</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> _id;<span style="color:#75715e">//4个字节
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">long</span> _data;<span style="color:#75715e">//4个字节
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    string _str;<span style="color:#75715e">//40个字节
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    Foo() <span style="color:#f92672">:</span>_id(<span style="color:#ae81ff">0</span>)       { cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;default ctor.this = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#66d9ef">this</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;id: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> _id <span style="color:#f92672">&lt;&lt;</span> endl; };
+</span></span><span style="display:flex;"><span>    Foo(<span style="color:#66d9ef">int</span> i) <span style="color:#f92672">:</span>_id(i)  { cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;ctor.this = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#66d9ef">this</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;id: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> _id <span style="color:#f92672">&lt;&lt;</span> endl; };
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">~</span>Foo()              { cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;dtor.this = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#66d9ef">this</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;id: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> _id <span style="color:#f92672">&lt;&lt;</span> endl; };
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> <span style="color:#66d9ef">operator</span> <span style="color:#a6e22e">new</span>(size_t size);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#66d9ef">operator</span> <span style="color:#a6e22e">delete</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> p, size_t size);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> <span style="color:#66d9ef">operator</span> <span style="color:#66d9ef">new</span>[](size_t size);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#66d9ef">operator</span> <span style="color:#66d9ef">delete</span>[](<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> p, size_t size);
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> Foo<span style="color:#f92672">::</span><span style="color:#66d9ef">operator</span> <span style="color:#66d9ef">new</span>(size_t size)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Foo<span style="color:#f92672">*</span> p <span style="color:#f92672">=</span> (Foo<span style="color:#f92672">*</span>)malloc(size);
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;new size = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> size <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> p;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Foo<span style="color:#f92672">::</span><span style="color:#66d9ef">operator</span> <span style="color:#66d9ef">delete</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> p, size_t size)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;delete size = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> size <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>    free(p);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> Foo<span style="color:#f92672">::</span><span style="color:#66d9ef">operator</span> <span style="color:#66d9ef">new</span>[](size_t size)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Foo<span style="color:#f92672">*</span> p <span style="color:#f92672">=</span> (Foo<span style="color:#f92672">*</span>)malloc(size);
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;new[] size = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> size <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> p;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Foo<span style="color:#f92672">::</span><span style="color:#66d9ef">operator</span> <span style="color:#66d9ef">delete</span>[](<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> p, size_t size)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;delete[] size = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> size <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>    free(p);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>运行结果如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>new size <span style="color:#f92672">=</span> <span style="color:#ae81ff">48</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">default</span> ctor.this <span style="color:#f92672">=</span> <span style="color:#ae81ff">000001</span><span style="color:#ae81ff">91</span>EC67A460id: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>dtor.this <span style="color:#f92672">=</span> <span style="color:#ae81ff">000001</span><span style="color:#ae81ff">91</span>EC67A460id: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>delete size <span style="color:#f92672">=</span> <span style="color:#ae81ff">48</span>
+</span></span><span style="display:flex;"><span>_____________________________________________
+</span></span><span style="display:flex;"><span>new[] size <span style="color:#f92672">=</span> <span style="color:#ae81ff">104</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">default</span> ctor.this <span style="color:#f92672">=</span> <span style="color:#ae81ff">000001</span><span style="color:#ae81ff">91</span>EC673438id: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">default</span> ctor.this <span style="color:#f92672">=</span> <span style="color:#ae81ff">000001</span><span style="color:#ae81ff">91</span>EC673468id: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>dtor.this <span style="color:#f92672">=</span> <span style="color:#ae81ff">000001</span><span style="color:#ae81ff">91</span>EC673468id: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>dtor.this <span style="color:#f92672">=</span> <span style="color:#ae81ff">000001</span><span style="color:#ae81ff">91</span>EC673438id: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>delete[] size <span style="color:#f92672">=</span> <span style="color:#ae81ff">104</span></span></span></code></pre></div>
+<h3 id="为什么new操作会多出8个字节呢">为什么new[]操作会多出8个字节呢？</h3>
+<p>我看课程视频，老师说new[]分配的内存块会在最前面存储计数量，占用4个字节，表示数组大小，但是我在电脑上运行会多出8个字节，查阅资料可能与系统、对齐方式、编译器等有关。</p>
+<p><a href="#R-image-b1898a25e61d582bbbf2c6e11603c88c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-17.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b1898a25e61d582bbbf2c6e11603c88c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-17.png"></a></p>
+<h2 id="对new的分配额外内存">对new的分配额外内存</h2>
+<p>假设分配内存的同时需要额外分配一定的内存，可以参考下面的代码：
+<a href="#R-image-d04d67b5f5d3d88720ba51a1c31fd68d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-18.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d04d67b5f5d3d88720ba51a1c31fd68d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-18.png"></a></p>
+<h2 id="小结-1">小结</h2>
+<p>对于包含有指针的类，在必要时写上拷贝构造、拷贝赋值、析构函数，如下代码</p>
+<div class="tab-panel" data-tab-group="451ac6fc849bfb7a8de0a8d7c16d715a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="class-stringfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;" tabindex="-1"
+      onclick="switchTab('451ac6fc849bfb7a8de0a8d7c16d715a','class-stringfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> class String</span>
+    </button>
+    <button
+      data-tab-item="destructorfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue;"
+      onclick="switchTab('451ac6fc849bfb7a8de0a8d7c16d715a','destructorfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Destructor</span>
+    </button>
+    <button
+      data-tab-item="constructorfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: red;"
+      onclick="switchTab('451ac6fc849bfb7a8de0a8d7c16d715a','constructorfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Constructor</span>
+    </button>
+    <button
+      data-tab-item="copy-constructorfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: origin;"
+      onclick="switchTab('451ac6fc849bfb7a8de0a8d7c16d715a','copy-constructorfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Copy Constructor</span>
+    </button>
+    <button
+      data-tab-item="copy-assignment-operatorfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: green;"
+      onclick="switchTab('451ac6fc849bfb7a8de0a8d7c16d715a','copy-assignment-operatorfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Copy Assignment Operator</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="class-stringfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">String</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> m_data;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        String(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> cstr <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>);           <span style="color:#75715e">//构造函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String(<span style="color:#66d9ef">const</span> String<span style="color:#f92672">&amp;</span> str);              <span style="color:#75715e">//拷贝构造函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">=</span> (<span style="color:#66d9ef">const</span> String<span style="color:#f92672">&amp;</span> str);  <span style="color:#75715e">//拷贝赋值函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#f92672">~</span>String();                              <span style="color:#75715e">//析构函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">get_c_str</span>() <span style="color:#66d9ef">const</span> {<span style="color:#66d9ef">return</span> m_data;}
+</span></span><span style="display:flex;"><span>    };</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="destructorfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    String<span style="color:#f92672">::~</span>String()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">delete</span>[] m_data;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="constructorfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info" style="--VARIABLE-BOX-color: red;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">inline</span> 
+</span></span><span style="display:flex;"><span>    String<span style="color:#f92672">::</span>String(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> cstr <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (cstr)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            m_data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">char</span>[strlen(cstr)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>            strcpy(m_data, cstr);
+</span></span><span style="display:flex;"><span>        }<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>            m_data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">char</span>[<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>            strcpy(m_data,<span style="color:#e6db74">&#39;\0&#39;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="copy-constructorfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info" style="--VARIABLE-BOX-color: origin;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">inline</span>
+</span></span><span style="display:flex;"><span>    String<span style="color:#f92672">::</span>String(<span style="color:#66d9ef">const</span> String<span style="color:#f92672">&amp;</span> cstr){
+</span></span><span style="display:flex;"><span>        m_data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">char</span>[strlen(cstr.m_data) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>        strcpy(m_data, cstr);
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="copy-assignment-operatorfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info" style="--VARIABLE-BOX-color: green;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">inline</span> 
+</span></span><span style="display:flex;"><span>    String<span style="color:#f92672">&amp;</span> String<span style="color:#f92672">::</span><span style="color:#66d9ef">operator</span><span style="color:#f92672">=</span>(<span style="color:#66d9ef">const</span> String<span style="color:#f92672">&amp;</span> str)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span> <span style="color:#f92672">==</span> <span style="color:#f92672">&amp;</span>str)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">this</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">delete</span>[] m_data;
+</span></span><span style="display:flex;"><span>        m_data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">char</span>[strlen(str.m_data) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>        strcpy(m_data, str);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">this</span>;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="补充内容static">补充内容static</h2>
+<p><a href="#R-image-b7e9d515c72ad43e5eacdfcd12356498" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/053bb0f3f18235ed9a9ba76e717a1673.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b7e9d515c72ad43e5eacdfcd12356498"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/053bb0f3f18235ed9a9ba76e717a1673.png"></a></p>
+<h3 id="static在private中的使用例子">static在private中的使用例子</h3>
+<p><a href="#R-image-35209683f260ba248dd8ee9c9e2da5c9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-35209683f260ba248dd8ee9c9e2da5c9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-11.png"></a>
+<a href="#R-image-759c54d7508baea9bc985fc2a9d2ff77" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-759c54d7508baea9bc985fc2a9d2ff77"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-12.png"></a></p>
+<h3 id="class-template">class template</h3>
+<p><a href="#R-image-d27e506521de2644de62dc0e3cde2192" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d27e506521de2644de62dc0e3cde2192"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-13.png"></a></p>
+<h3 id="function-template">function template</h3>
+<h3 id="member-template-成员模板">member template 成员模板</h3>
+<p>类模板中，还有类模板，通常是对构造函数的操作，如下图：
+<a href="#R-image-8b48f197e27630cfd8c6e72e52f45c91" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8b48f197e27630cfd8c6e72e52f45c91"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-14.png"></a></p>
+<p>如下图代码
+<a href="#R-image-679e7d2f4d5221f9dfb7fb25d7c84d0e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-15.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-679e7d2f4d5221f9dfb7fb25d7c84d0e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-15.png"></a></p>
+<p>用意就是当一个指针指向父类时，初始化让他指向子类，那么此时需要实现上图类中的代码。</p>
+<h3 id="namespace命令空间">namespace（命令空间）</h3>
+<p>使用示例：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">……</span>
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<p>使用方法：</p>
+<div class="tab-panel" data-tab-group="d494c6b5d47bbed91887b2cd1d22849b">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="using-directionfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;" tabindex="-1"
+      onclick="switchTab('d494c6b5d47bbed91887b2cd1d22849b','using-directionfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> using direction</span>
+    </button>
+    <button
+      data-tab-item="using-declarationfa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue;"
+      onclick="switchTab('d494c6b5d47bbed91887b2cd1d22849b','using-declarationfa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> using declaration</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="using-directionfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#960050;background-color:#1e0010">……</span>;
+</span></span><span style="display:flex;"><span>        cin<span style="color:#f92672">&lt;&lt;</span><span style="color:#960050;background-color:#1e0010">……</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="using-declarationfa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">using</span> std<span style="color:#f92672">::</span>cout;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#960050;background-color:#1e0010">……</span>;
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cin<span style="color:#f92672">&lt;&lt;</span><span style="color:#960050;background-color:#1e0010">……</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<p>或者</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#960050;background-color:#1e0010">……</span>;
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cin<span style="color:#f92672">&lt;&lt;</span><span style="color:#960050;background-color:#1e0010">……</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+      <li><a href="../../../Class/17.C%e5%8a%a0%e5%8a%a0%e7%bc%96%e7%a8%8b/1.%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99%e8%a7%84%e8%8c%83/_index.files/complex.h">complex.h</a> (546 B)</li>
+      <li><a href="../../../Class/17.C%e5%8a%a0%e5%8a%a0%e7%bc%96%e7%a8%8b/1.%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99%e8%a7%84%e8%8c%83/_index.files/Foo.hpp">Foo.hpp</a> (1 KB)</li>
+      <li><a href="../../../Class/17.C%e5%8a%a0%e5%8a%a0%e7%bc%96%e7%a8%8b/1.%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99%e8%a7%84%e8%8c%83/_index.files/String.h">String.h</a> (1 KB)</li>
+  </ul>
+</div>
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年10月15日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">R1-编程语言</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

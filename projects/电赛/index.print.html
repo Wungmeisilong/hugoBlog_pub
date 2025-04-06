@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="以下笔记皆基于HAL库。
+新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="电赛 :: Maloudown">
+    <meta name="twitter:description" content="以下笔记皆基于HAL库。
+新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。">
+    <meta property="og:url" content="http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="电赛 :: Maloudown">
+    <meta property="og:description" content="以下笔记皆基于HAL库。
+新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="  项目">
+    <meta property="article:published_time" content="2024-05-14T22:22:09+08:00">
+    <meta property="article:modified_time" content="2024-05-14T22:22:09+08:00">
+    <meta property="article:tag" content="STM32学习">
+    <meta itemprop="name" content="电赛 :: Maloudown">
+    <meta itemprop="description" content="以下笔记皆基于HAL库。
+新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。">
+    <meta itemprop="datePublished" content="2024-05-14T22:22:09+08:00">
+    <meta itemprop="dateModified" content="2024-05-14T22:22:09+08:00">
+    <meta itemprop="wordCount" content="2645">
+    <meta itemprop="keywords" content="STM32学习">
+    <title>电赛 :: Maloudown</title>
+    <link href="http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/" rel="canonical" type="text/html" title="电赛 :: Maloudown">
+    <link href="../../projects/%E7%94%B5%E8%B5%9B/index.xml" rel="alternate" type="application/rss+xml" title="电赛 :: Maloudown">
+    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/projects\/%E7%94%B5%E8%B5%9B\/';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../projects/%E7%94%B5%E8%B5%9B/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#新建stm32cubemx工程步骤">新建STM32CubeMX工程步骤</a></li>
+    <li><a href="#时钟">时钟</a>
+      <ul>
+        <li><a href="#nvic介绍">NVIC介绍</a></li>
+        <li><a href="#中断优先级">中断优先级</a></li>
+        <li><a href="#nvic-的使用">NVIC 的使用</a></li>
+      </ul>
+    </li>
+    <li><a href="#标准库中额中断">标准库中额中断</a>
+      <ul>
+        <li><a href="#extiextern-interrupt外部中断">EXTI（Extern Interrupt）外部中断</a></li>
+        <li><a href="#afio复用io口">AFIO复用IO口</a></li>
+        <li><a href="#exti实现代码">EXTI实现代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#定时器">定时器</a>
+      <ul>
+        <li><a href="#timtimer定时器">TIM（Timer）定时器</a></li>
+        <li><a href="#使用内部时钟源实现中断标准库中">使用内部时钟源实现中断（标准库中）</a></li>
+      </ul>
+    </li>
+    <li><a href="#实现输出比较">实现输出比较</a>
+      <ul>
+        <li><a href="#ocoutput-compare输出比较">OC（Output Compare）输出比较</a></li>
+        <li><a href="#pwm波形">PWM波形</a></li>
+        <li><a href="#输出比较的设置">输出比较的设置</a></li>
+        <li><a href="#pwm基本结构">PWM基本结构</a></li>
+        <li><a href="#代码编写">代码编写</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../projects/"><span itemprop="name">  项目</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">电赛</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../projects/%E7%94%B5%E8%B5%9B/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" title="毕业设计 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/" title="唛盟杯比赛详记 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable projects" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/stm32%E5%AD%A6%E4%B9%A0/">STM32学习</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="电赛">电赛</h1>
+
+<hr>
+<p><strong>以下笔记皆基于HAL库。</strong></p>
+<h2 id="新建stm32cubemx工程步骤">新建STM32CubeMX工程步骤</h2>
+<p><a href="#R-image-1a7fd5e6defd55d463697b360b644602" class="lightbox-link"><img alt="步骤" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1a7fd5e6defd55d463697b360b644602"><img alt="步骤" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image.png"></a></p>
+<p>创建工程中如果勾选MCO表示向外部输出时钟，
+<a href="#R-image-31f58453262cd5364870fe48e720561e" class="lightbox-link"><img alt="打钩" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-31f58453262cd5364870fe48e720561e"><img alt="打钩" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-1.png"></a>
+输出的是哪一个引脚可以查看，如下图。
+<a href="#R-image-ced9926ccfae707edcea1bbff10994f5" class="lightbox-link"><img alt="PA8" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ced9926ccfae707edcea1bbff10994f5"><img alt="PA8" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-2.png"></a></p>
+<p>外部时钟设置
+<a href="#R-image-cb095864690806bf525cb2dbc9d7f810" class="lightbox-link"><img alt="时钟" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb095864690806bf525cb2dbc9d7f810"><img alt="时钟" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-3.png"></a></p>
+<p>工程设置
+<a href="#R-image-3a44b5f783a8916e05826e7ce5f35e09" class="lightbox-link"><img alt="项目设置" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a44b5f783a8916e05826e7ce5f35e09"><img alt="项目设置" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-4.png"></a></p>
+<p>如果Application Structure设置为Basic，那么会把下面的两个文件分开放
+<a href="#R-image-70c49de1f764d73e2148ad6e57aea5f2" class="lightbox-link"><img alt="xx " class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-70c49de1f764d73e2148ad6e57aea5f2"><img alt="xx " class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-5.png"></a>
+否则项目会把两个文件放在一个文件夹里，如Core</p>
+<p>最后还需要设置Code Generator，如下：
+<a href="#R-image-6370a7d464dbdd5842be073cf3f72995" class="lightbox-link"><img alt="Code Generator" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6370a7d464dbdd5842be073cf3f72995"><img alt="Code Generator" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-6.png"></a></p>
+<h2 id="时钟">时钟</h2>
+<p>1.初识时钟周期</p>
+<p>2.时钟树
+<a href="#R-image-4f98746500adbaa49629ef70ad8e0518" class="lightbox-link"><img alt="时钟树" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4f98746500adbaa49629ef70ad8e0518"><img alt="时钟树" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-7.png"></a>
+<a href="#R-image-bca4970ba256a20fc0b575e5fb2daafd" class="lightbox-link"><img alt="时钟树1" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bca4970ba256a20fc0b575e5fb2daafd"><img alt="时钟树1" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-8.png"></a>
+<a href="#R-image-8b3047a51ed2ca54b5ba295c19acdf5f" class="lightbox-link"><img alt="时钟树2" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8b3047a51ed2ca54b5ba295c19acdf5f"><img alt="时钟树2" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-9.png"></a></p>
+<p>3.时钟配置步骤
+<a href="#R-image-e14520afe17f3f31771813244b1288ee" class="lightbox-link"><img alt="步骤" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e14520afe17f3f31771813244b1288ee"><img alt="步骤" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-10.png"></a></p>
+<p>4.外设时钟使能和失能</p>
+<p>5.sys_stm32_cloc_init()函数</p>
+<ul>
+<li>
+<p>HAL_RCC_OscConfig()</p>
+<ul>
+<li>HSE高速外设振荡器</li>
+<li>LSE</li>
+<li>RC振荡器，随着电压的变化而变化，所以需要一个检验值</li>
+<li>PLL锁相环</li>
+</ul>
+</li>
+<li>
+<p>HAL_RCC_ClockConfig()
+<a href="#R-image-52768883b15e20b54f3283720aedf1cb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-52768883b15e20b54f3283720aedf1cb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-12.png"></a>
+<a href="#R-image-59390de73401b024096314e5b14d9060" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-59390de73401b024096314e5b14d9060"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-11.png"></a></p>
+<ul>
+<li>第一个参数
+<ul>
+<li>结构体中的第一个参数里的HCLK是指AHB总线、PCLK1是指APB1总线、PCLK2是指APB2总线，这个配置表示要配那条总线的时钟。</li>
+</ul>
+</li>
+<li>第二个形参
+<a href="#R-image-029d92635db058b2ee4f4db48168e57d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-029d92635db058b2ee4f4db48168e57d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-14.png"></a>
+<ul>
+<li>F1系统时钟72MHz,如果使用72MHz访问闪存（Flash）那么是需要等待的，因为闪存的允许最大时钟频率是42MHz,所以需要等待，等待多少个周期需要下图
+<a href="#R-image-d415bec82af40b4f25b8aab97d27073a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d415bec82af40b4f25b8aab97d27073a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-13.png"></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>6.SYSTEN文件夹</p>
+<ul>
+<li>sys文件夹
+<a href="#R-image-408a9c2b32d7eb1dd42a1145fb89e8e3" class="lightbox-link"><img alt="sys表" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-15.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-408a9c2b32d7eb1dd42a1145fb89e8e3"><img alt="sys表" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-15.png"></a></li>
+</ul>
+<h3 id="nvic介绍">NVIC介绍</h3>
+<h4 id="中断基本概念">中断基本概念</h4>
+<p><a href="#R-image-ce573db4a8b9acb184be07b2aa4b20da" class="lightbox-link"><img alt="概念" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-17.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ce573db4a8b9acb184be07b2aa4b20da"><img alt="概念" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-17.png"></a>
+<a href="#R-image-c6d5e5e9a37f69c1c3ddd96846cb2334" class="lightbox-link"><img alt="中断表" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-18.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c6d5e5e9a37f69c1c3ddd96846cb2334"><img alt="中断表" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-18.png"></a></p>
+<h4 id="中断向量表">中断向量表</h4>
+<p><a href="#R-image-fdfff23e496f32d9b36dd4185538dbeb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-16.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fdfff23e496f32d9b36dd4185538dbeb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-16.png"></a></p>
+<h4 id="文件里的中断在哪里呢">文件里的中断在哪里呢？</h4>
+<p>在文件<strong>startup_stm32f10x_hd.s</strong>中这里列出内部中断，外部中断就在内部中断之下，这里不再列出。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>__Vectors       DCD     __initial_sp               ; Top of Stack
+</span></span><span style="display:flex;"><span>                DCD     Reset_Handler              ; Reset Handler
+</span></span><span style="display:flex;"><span>                DCD     NMI_Handler                ; NMI Handler
+</span></span><span style="display:flex;"><span>                DCD     HardFault_Handler          ; Hard Fault Handler
+</span></span><span style="display:flex;"><span>                DCD     MemManage_Handler          ; MPU Fault Handler
+</span></span><span style="display:flex;"><span>                DCD     BusFault_Handler           ; Bus Fault Handler
+</span></span><span style="display:flex;"><span>                DCD     UsageFault_Handler         ; Usage Fault Handler
+</span></span><span style="display:flex;"><span>                DCD     <span style="color:#ae81ff">0</span>                          ; Reserved
+</span></span><span style="display:flex;"><span>                DCD     <span style="color:#ae81ff">0</span>                          ; Reserved
+</span></span><span style="display:flex;"><span>                DCD     <span style="color:#ae81ff">0</span>                          ; Reserved
+</span></span><span style="display:flex;"><span>                DCD     <span style="color:#ae81ff">0</span>                          ; Reserved
+</span></span><span style="display:flex;"><span>                DCD     SVC_Handler                ; SVCall Handler
+</span></span><span style="display:flex;"><span>                DCD     DebugMon_Handler           ; Debug Monitor Handler
+</span></span><span style="display:flex;"><span>                DCD     <span style="color:#ae81ff">0</span>                          ; Reserved
+</span></span><span style="display:flex;"><span>                DCD     PendSV_Handler             ; PendSV Handler
+</span></span><span style="display:flex;"><span>                DCD     SysTick_Handler            ; SysTick Handler</span></span></code></pre></div>
+<h4 id="中断寄存器">中断寄存器</h4>
+<p><a href="#R-image-63a4fa99709979c5286308e2c03831c1" class="lightbox-link"><img alt="中断寄存器" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-20.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-63a4fa99709979c5286308e2c03831c1"><img alt="中断寄存器" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-20.png"></a></p>
+<h4 id="中断原理">中断原理</h4>
+<p><a href="#R-image-a2b8043abe203c177922a1df624a93a1" class="lightbox-link"><img alt="原理" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-21.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a2b8043abe203c177922a1df624a93a1"><img alt="原理" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-21.png"></a></p>
+<h3 id="中断优先级">中断优先级</h3>
+<p><a href="#R-image-fb287619b76b02239ec6ff25458df876" class="lightbox-link"><img alt="优先级" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-22.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fb287619b76b02239ec6ff25458df876"><img alt="优先级" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-22.png"></a>
+<a href="#R-image-4898aa2266df8991b77c1b499c172ba1" class="lightbox-link"><img alt="优先级" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-23.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4898aa2266df8991b77c1b499c172ba1"><img alt="优先级" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-23.png"></a>
+响应优先级又叫子优先级</p>
+<p><strong>中断的抢占优先级由AICR寄存器的后三位控制，而响应优先级由IPRx寄存器的后四位控制</strong>，最终分配结果参考下面的表格
+<a href="#R-image-b836172f0e9176726ad49fe2a330b9bd" class="lightbox-link"><img alt="表" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-24.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b836172f0e9176726ad49fe2a330b9bd"><img alt="表" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-24.png"></a></p>
+<p>中断一般只设置一次，设置多次可能会导致中断紊乱，一般以最后一次的中断设置为准，详细说明参考手册4.4.5</p>
+<p>中断执行的顺序：抢占优先级（先执行数值小的）————响应优先级（先执行数值小的）————自然优先级（先执行数值大的）</p>
+<h3 id="nvic-的使用">NVIC 的使用</h3>
+<hr>
+<p><strong>以下笔记皆基于标准库。</strong></p>
+<h2 id="标准库中额中断">标准库中额中断</h2>
+<p><a href="#R-image-d467204414be605524bd309d49a11b33" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-25.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d467204414be605524bd309d49a11b33"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-25.png"></a></p>
+<h3 id="extiextern-interrupt外部中断">EXTI（Extern Interrupt）外部中断</h3>
+<p>EXTI可以监测指定GPIO口的电平信号，当其指定的GPIO口产生电平变化时，EXTI将立即向NVIC发出中断申请，经过NVIC裁决后即可中断CPU主程序，使CPU执行EXTI对应的中断程序</p>
+<p>简而言之，gpio电平发生变化时，申请外部中断。</p>
+<ul>
+<li><strong>支持的触发方式</strong>：上升沿/下降沿/双边沿/软件触发（<em>引脚没有发生变化，执行一段代码就申请中断</em>）</li>
+<li><strong>支持的GPIO口</strong>：所有GPIO口，但相同的Pin不能同时触发中断（<em>如PA1，PB1，PC1不能同时触发中断</em>）</li>
+<li><strong>通道数</strong>：16个GPIO_Pin，外加PVD输出、RTC闹钟、USB唤醒、以太网唤醒</li>
+<li><strong>触发响应方式</strong>：中断响应/事件响应（<em>事件响应不会触发中断。而是触发别的外设操作。属于外设之间的联合工作</em>）</li>
+</ul>
+<h3 id="afio复用io口">AFIO复用IO口</h3>
+<p>主要用于引脚复用功能的选择和重定义</p>
+<p>在STM32中，AFIO主要完成两个任务：</p>
+<ul>
+<li>复用功能引脚重映射</li>
+<li>中断引脚选择
+<a href="#R-image-1b65089b2612f17b34302b20cc369ad9" class="lightbox-link"><img alt="GPIO口中断申请图" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-26.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1b65089b2612f17b34302b20cc369ad9"><img alt="GPIO口中断申请图" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-26.png"></a></li>
+</ul>
+<h3 id="exti实现代码">EXTI实现代码</h3>
+<p>这段代码的中断端口是GPIOB_Pin14，所以需要将相关的传感器接到PB14这个端口</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">CountSensor_Init</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//配置RCC
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RCC_APB2PeriphClockCmd</span>(RCC_APB2Periph_GPIOB,ENABLE);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//AFIO、
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RCC_APB2PeriphClockCmd</span>(RCC_APB2Periph_AFIO,ENABLE);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//EXTI、一直打开着不用配置打开时钟
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//NVIC  一直打开着不用配置打开时钟
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	GPIO_InitTypeDef GPIO_InitStructure;
+</span></span><span style="display:flex;"><span>	GPIO_InitStructure.GPIO_Mode<span style="color:#f92672">=</span>GPIO_Mode_IPU;
+</span></span><span style="display:flex;"><span>	GPIO_InitStructure.GPIO_Pin<span style="color:#f92672">=</span>GPIO_Pin_14;
+</span></span><span style="display:flex;"><span>	GPIO_InitStructure.GPIO_Speed<span style="color:#f92672">=</span>GPIO_Speed_50MHz;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">GPIO_Init</span>(GPIOB,<span style="color:#f92672">&amp;</span>GPIO_InitStructure);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">GPIO_EXTILineConfig</span>(GPIO_PortSourceGPIOB,GPIO_PinSource14);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//EXTI
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	EXTI_InitTypeDef EXTI_InitStructure;
+</span></span><span style="display:flex;"><span>	EXTI_InitStructure.EXTI_Line<span style="color:#f92672">=</span>EXTI_Line14;
+</span></span><span style="display:flex;"><span>	EXTI_InitStructure.EXTI_LineCmd<span style="color:#f92672">=</span>ENABLE;
+</span></span><span style="display:flex;"><span>	EXTI_InitStructure.EXTI_Mode<span style="color:#f92672">=</span>EXTI_Mode_Interrupt;
+</span></span><span style="display:flex;"><span>	EXTI_InitStructure.EXTI_Trigger<span style="color:#f92672">=</span>EXTI_Trigger_Falling;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">EXTI_Init</span>(<span style="color:#f92672">&amp;</span>EXTI_InitStructure);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//NVIC
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	NVIC_InitTypeDef NVIC_InitStructure;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannel<span style="color:#f92672">=</span>EXTI15_10_IRQn;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelCmd<span style="color:#f92672">=</span>ENABLE;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelSubPriority<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">NVIC_Init</span>(<span style="color:#f92672">&amp;</span>NVIC_InitStructure);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">EXTI15_10_IRQHandler</span>(<span style="color:#66d9ef">void</span>){<span style="color:#75715e">//中断函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">EXTI_GetITStatus</span>(EXTI_Line14)<span style="color:#f92672">==</span> SET){
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">EXTI_ClearITPendingBit</span>(EXTI_Line14);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h2 id="定时器">定时器</h2>
+<h3 id="timtimer定时器">TIM（Timer）定时器</h3>
+<p>定时器可以对输入的时钟进行计数，并在计数值达到设定值时触发中断</p>
+<p>16位计数器、预分频器、自动重装寄存器的时基单元，在72MHz计数时钟下可以实现最大59.65s的定时
+不仅具备基本的定时中断功能，而且还包含内外时钟源选择、输入捕获、输出比较、编码器接口、主从触发模式等多种功能
+根据复杂度和应用场景分为了高级定时器、通用定时器、基本定时器三种类型</p>
+<h3 id="使用内部时钟源实现中断标准库中">使用内部时钟源实现中断（标准库中）</h3>
+<p>在编写代码前先看看定时器的实现原理图</p>
+<ul>
+<li>基本定时器
+<a href="#R-image-208e7cb0459ca9c03c0e008300ab4f45" class="lightbox-link"><img alt="基本定时器" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-27.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-208e7cb0459ca9c03c0e008300ab4f45"><img alt="基本定时器" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-27.png"></a></li>
+<li>通用定时器
+<a href="#R-image-d42bf21de9f24d9eebf508b61aa224f5" class="lightbox-link"><img alt="通用定时器" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-28.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d42bf21de9f24d9eebf508b61aa224f5"><img alt="通用定时器" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-28.png"></a></li>
+<li>高级定时器（红色框出来的部分是高级定时器独有的）
+<a href="#R-image-8bee11bf4766dd4723784bb54d328950" class="lightbox-link"><img alt="高级定时器" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-29.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8bee11bf4766dd4723784bb54d328950"><img alt="高级定时器" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-29.png"></a></li>
+</ul>
+<p>此处主要参考通用计时器的结构图，下面是基于内部时钟RCC的定时器。</p>
+<p>在 <strong>stm32f103xxx_rcc.c</strong> 文件对 <strong>RCC_APB1PeriphClockCmd</strong> 这样的介绍：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  * @brief  Enables or disables the High Speed APB (APB2) peripheral clock.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  * @param  RCC_APB2Periph: specifies the APB2 peripheral to gates its clock.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  *   This parameter can be any combination of the following values:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  *     @arg RCC_APB2Periph_AFIO, RCC_APB2Periph_GPIOA, 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  ……
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  ……
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  ……+
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  */</span></span></span></code></pre></div>
+<p>specifies the APB2 peripheral to gates its clock.即：指定APB 2外围设备到其时钟门。而这里的时钟门代码里选择了TIM2。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">Timer_Init</span>(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//1.RCC 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">RCC_APB1PeriphClockCmd</span>(RCC_APB1Periph_TIM2,ENABLE);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//2.选择时基单元时钟源，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">TIM_InternalClockConfig</span>(TIM2);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//3.时基单元
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;
+</span></span><span style="display:flex;"><span>	TIM_TimeBaseInitStructure.TIM_ClockDivision<span style="color:#f92672">=</span>TIM_CKD_DIV1;		<span style="color:#75715e">//时钟分频，这里是1分频
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TIM_TimeBaseInitStructure.TIM_CounterMode<span style="color:#f92672">=</span>TIM_CounterMode_Up;	<span style="color:#75715e">//计数方式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TIM_TimeBaseInitStructure.TIM_Period<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;					<span style="color:#75715e">//自动重装值，计数达到这个值后触发中断，然后重新开始计数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TIM_TimeBaseInitStructure.TIM_Prescaler<span style="color:#f92672">=</span><span style="color:#ae81ff">7200</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;				<span style="color:#75715e">//预分频，计数频率，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>																	<span style="color:#75715e">//假设计数为1s则自动重装值可设置为10000，预分频可设置为7200，公式为秒数=27MHz/PSC/ARR
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TIM_TimeBaseInitStructure.TIM_RepetitionCounter<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;				<span style="color:#75715e">//重复计数数器高级定时器才有，这里设置为0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">TIM_TimeBaseInit</span>(TIM2,<span style="color:#f92672">&amp;</span>TIM_TimeBaseInitStructure);				<span style="color:#75715e">//时基单元设置
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">TIM_ITConfig</span>(TIM2,TIM_IT_Update,ENABLE);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//4.中断输出控制 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">NVIC_PriorityGroupConfig</span>(NVIC_PriorityGroup_2);					<span style="color:#75715e">//抢占优先级,0-3， 响应优先级0-3，一个工程只设置一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//5.NVIC
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	NVIC_InitTypeDef  NVIC_InitStructure;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannel<span style="color:#f92672">=</span>TIM2_IRQn;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelCmd<span style="color:#f92672">=</span>ENABLE;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	NVIC_InitStructure.NVIC_IRQChannelSubPriority<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">NVIC_Init</span>(<span style="color:#f92672">&amp;</span>NVIC_InitStructure);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">TIM_Cmd</span>(TIM2,ENABLE);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">TIM2_IRQHandler</span>(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span>	 <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">TIM_GetITStatus</span>(TIM2,TIM_IT_Update) <span style="color:#f92672">==</span> SET){
+</span></span><span style="display:flex;"><span>		Num<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">TIM_ClearITPendingBit</span>(TIM2,TIM_IT_Update);
+</span></span><span style="display:flex;"><span>	 }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h2 id="实现输出比较">实现输出比较</h2>
+<h3 id="ocoutput-compare输出比较">OC（Output Compare）输出比较</h3>
+<ul>
+<li>
+<p>输出比较可以通过比较CNT与CCR寄存器值的关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的<strong>PWM波形</strong></p>
+</li>
+<li>
+<p>每个高级定时器和通用定时器都拥有4个输出比较通道</p>
+</li>
+<li>
+<p>高级定时器的前3个通道额外拥有死区生成和互补输出的功能</p>
+</li>
+<li>
+<p>OC：<strong>输出比较</strong></p>
+</li>
+<li>
+<p>IC：<strong>输入比较</strong></p>
+</li>
+<li>
+<p>CC：<strong>输入/输出比较</strong></p>
+</li>
+</ul>
+<h3 id="pwm波形">PWM波形</h3>
+<ul>
+<li>PWM（Pulse Width Modulation）脉冲宽度调制，广泛应用于各种电子和电气系统中，用于控制功率转换、电机速度、信号传输等</li>
+<li>在具有<a href="%E6%83%AF%E6%80%A7%E7%9A%84%E7%B3%BB%E7%BB%9F">^1</a>中，可以通过对一系列脉冲的宽度进行调制，来等效地获得所需要的模拟参量，常应用于电机控速等领域
+<a href="%E4%BE%8B%E5%A6%82%E7%94%B5%E6%9C%BA%E8%BD%AC%E5%8A%A8%E6%9A%82%E5%81%9C%E5%90%8E%E4%B8%8D%E4%BC%9A%E9%A9%AC%E4%B8%8A%E5%81%9C%E6%AD%A2%EF%BC%8C%E8%80%8C%E6%98%AF%E8%BF%87%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4%E6%89%8D%E4%BC%9A%E5%81%9C%E6%AD%A2%E3%80%82">^1</a></li>
+<li>PWM参数：
+<ul>
+<li>频率 = 1 / TS</li>
+<li>占空比 = TON / TS</li>
+<li>分辨率 = 占空比变化步距
+<a href="#R-image-4e76844f547e0cedb4fa07730be7e848" class="lightbox-link"><img alt="PWM" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-31.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e76844f547e0cedb4fa07730be7e848"><img alt="PWM" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-31.png"></a>
+一些电平变化图可以等效为图中的虚线。
+<a href="#R-image-d74bf7462222379b348445bd2bc02d5c" class="lightbox-link"><img alt="信息" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-30.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d74bf7462222379b348445bd2bc02d5c"><img alt="信息" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-30.png"></a></li>
+</ul>
+</li>
+</ul>
+<p><a href="#R-image-e177d6f972b4d2b79e602891fa50740b" class="lightbox-link"><img alt="通用定时器结构图" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-33.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e177d6f972b4d2b79e602891fa50740b"><img alt="通用定时器结构图" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-33.png"></a>
+上图框出来的部分具体如下图：
+<a href="#R-image-3f29f709bba9206138efd510bbf4b131" class="lightbox-link"><img alt="捕获/比较通道的输出部分" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-32.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f29f709bba9206138efd510bbf4b131"><img alt="捕获/比较通道的输出部分" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-32.png"></a></p>
+<p>在信号通过比较后输出到CC1P，然后再输出到输出使用电路，输出使用电路的OC1可以查看<strong>引脚定义表</strong></p>
+<p>在上图中需要注意的一些引文缩写：</p>
+<ul>
+<li><strong>REF</strong> 是reference的缩写。意思是 <strong>参考信号</strong></li>
+</ul>
+<h3 id="输出比较的设置">输出比较的设置</h3>
+<p>设置的函数为</p>
+<p><a href="#R-image-16daa9ed1337dda49cfdda2d8e6abc6c" class="lightbox-link"><img alt="模式" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-34.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-16daa9ed1337dda49cfdda2d8e6abc6c"><img alt="模式" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-34.png"></a></p>
+<h3 id="pwm基本结构">PWM基本结构</h3>
+<p>配置PWM的时候可以参考下面的图，
+<a href="#R-image-830dfff8f2d8638f3f88f18a1cd00d18" class="lightbox-link"><img alt="结构图" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-35.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-830dfff8f2d8638f3f88f18a1cd00d18"><img alt="结构图" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-35.png"></a>
+图中的参考坐标系图红色线表示CCR的值，蓝色线表示CNT的值，黄色线表示自动重装载值即ARR。
+了解了这点后我们再看看PWM的是如何计算的，如下公式</p>
+<p><strong>PWM频率：</strong>
+[ \text{Freq} = \frac{CKPSC}{(PSC + 1) \times (ARR + 1)} ]
+可以看出PWM的频率等于CNT的更新频率</p>
+<p><strong>PWM占空比：</strong>
+[ \text{Duty} = \frac{CCR}{(ARR + 1)} ]</p>
+<p><strong>PWM分辨率：</strong>
+[ \text{Reso} = \frac{1}{(ARR + 1)} ]</p>
+<h3 id="代码编写">代码编写</h3>
+<p><a href="#R-image-6c820915ccb2612f24951b860d02e0e9" class="lightbox-link"><img alt="高级定时器" class="lazy lightbox figure-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-36.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6c820915ccb2612f24951b860d02e0e9"><img alt="高级定时器" class="lazy lightbox lightbox-image" loading="lazy" src="../../projects/%E7%94%B5%E8%B5%9B/image-36.png"></a></p>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年5月14日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/b5-%E6%AF%94%E8%B5%9B/">B5-比赛</a></li>
+    <li><a class="term-link" href="../../categories/x1-%E9%A1%B9%E7%9B%AE/">X1-项目</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

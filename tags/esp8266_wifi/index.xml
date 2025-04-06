@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Esp8266_WiFi :: 标签 :: Maloudown</title>
+    <link>http://localhost:1313/tags/esp8266_wifi/</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/esp8266_wifi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Esp8266_WiFi</title>
+      <link>http://localhost:1313/class/4.esp8266_wifi/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/class/4.esp8266_wifi/</guid>
+      <description>物联网通信技术-小知识通信串口 参照上一节课&#xA;物联网是新一代信息技术领域的重要组成部分。其英文名称是“The Internet of things”，顾名思义，“物联网就是物物相连的互联网”。&#xA;这有两层意思：</description>
+    </item>
+  </channel>
+</rss>

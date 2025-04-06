@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重复的知识忘记，所以我希望做一个网站记录自己所学的知识，方便查找，但我没学JS，深入学又耗费时间，如果你也有我的一些情况，想自己创建一个网站“玩玩”，那么请看下去，希望自己的一些分享能对想短期内创建静态网站、且没学过网站设计的朋友有所帮助。">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="9.唛盟杯项目下载与启动 :: Maloudown">
+    <meta name="twitter:description" content="一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重复的知识忘记，所以我希望做一个网站记录自己所学的知识，方便查找，但我没学JS，深入学又耗费时间，如果你也有我的一些情况，想自己创建一个网站“玩玩”，那么请看下去，希望自己的一些分享能对想短期内创建静态网站、且没学过网站设计的朋友有所帮助。">
+    <meta property="og:url" content="http://localhost:1313/log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="9.唛盟杯项目下载与启动 :: Maloudown">
+    <meta property="og:description" content="一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重复的知识忘记，所以我希望做一个网站记录自己所学的知识，方便查找，但我没学JS，深入学又耗费时间，如果你也有我的一些情况，想自己创建一个网站“玩玩”，那么请看下去，希望自己的一些分享能对想短期内创建静态网站、且没学过网站设计的朋友有所帮助。">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="9.唛盟杯项目下载与启动 :: Maloudown">
+    <meta itemprop="description" content="一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重复的知识忘记，所以我希望做一个网站记录自己所学的知识，方便查找，但我没学JS，深入学又耗费时间，如果你也有我的一些情况，想自己创建一个网站“玩玩”，那么请看下去，希望自己的一些分享能对想短期内创建静态网站、且没学过网站设计的朋友有所帮助。">
+    <meta itemprop="datePublished" content="2023-12-11T02:26:25+08:00">
+    <meta itemprop="dateModified" content="2023-12-11T02:26:25+08:00">
+    <meta itemprop="wordCount" content="2302">
+    <meta itemprop="keywords" content="网站,前端">
+    <title>9.唛盟杯项目下载与启动 :: Maloudown</title>
+    <link href="http://localhost:1313/log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/" rel="canonical" type="text/html" title="9.唛盟杯项目下载与启动 :: Maloudown">
+    <link href="../../log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/index.xml" rel="alternate" type="application/rss+xml" title="9.唛盟杯项目下载与启动 :: Maloudown">
+    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/log\/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8\/';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#一为什么要创建属于自己博客网站">一、为什么要创建属于自己博客网站</a></li>
+    <li><a href="#二选择静态网站布局工具以及远程仓库">二、选择静态网站布局工具以及远程仓库</a>
+      <ul>
+        <li><a href="#1工具的选择">1、工具的选择</a></li>
+        <li><a href="#2远程仓库的选择">2、远程仓库的选择</a></li>
+      </ul>
+    </li>
+    <li><a href="#三仓库创建与静态网站布局">三、仓库创建与静态网站布局</a></li>
+    <li><a href="#四买一个域名">四、买一个域名</a></li>
+    <li><a href="#五网站的优化">五、网站的优化</a></li>
+    <li><a href="#补充">补充</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../log/"><span itemprop="name">  博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">9.唛盟杯项目下载与启动</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../log/8.%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="8.如何用旧电脑搭建自己的服务器？ (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/" title="课程 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable log" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
+    <li><a class="term-link" href="../../tags/%E7%BD%91%E7%AB%99/">网站</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="9唛盟杯项目下载与启动">9.唛盟杯项目下载与启动</h1>
+
+<h2 id="一为什么要创建属于自己博客网站">一、为什么要创建属于自己博客网站</h2>
+<p>自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重复的知识忘记，所以我希望做一个网站记录自己所学的知识，方便查找，但我没学<strong>JS</strong>，深入学又耗费时间，如果你也有我的一些情况，想自己创建一个网站“玩玩”，那么请看下去，希望自己的一些分享能对想短期内创建静态网站、且没学过网站设计的朋友有所帮助。</p>
+<h2 id="二选择静态网站布局工具以及远程仓库">二、选择静态网站布局工具以及远程仓库</h2>
+<h3 id="1工具的选择">1、工具的选择</h3>
+<p>在这里我就只推荐<strong>hugo</strong>，因为本人用的就是hugo，其他的并不是很了解（如果你有更好的方法还请通过留言告诉我，谢谢！），首先确定自己要装在哪个系统上，比如装在Windows、Linux或者Mac（苹果系统），确定好这个后你就去网上搜安装方法即可，一定要搜和自己电脑系统有关的安装方法，不然安装会走很多坑的。
+<strong>Windows</strong>系统。我建议使用choco工具在终端上安装，如果电脑没安装choco工具，还请自行安装。
+<strong>Linux</strong>系统。首先确定自己的Linux的发行版本，举个例子，像<strong>红帽公司</strong>的和ContentOS的，这两个发行版本使用的工具可能就不一样，像ContentOS使用的是工具Yum工具安装的，还请你在网上自行搜索。
+<strong>Mac</strong>系统。使用<strong>brew</strong>工具进行安装，不知道怎么用brew还请网上搜一下。
+下载好后使用如下命令检查是否安装成功。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>    <span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">verser</span></span></span></code></pre></div>
+<h3 id="2远程仓库的选择">2、远程仓库的选择</h3>
+<p>因为要把网站的相关信息放到网上，一遍搜索查找，我们需要一个远程的仓库来装这些数据，无疑github是比较好的选择，当然Gitee、gitLab这些应该也可以（本人没有过）。至于为什么选github我想你只要稍微了解一点IT这行的，多少都知道其原因，不知道也没关系，只要能存放我们的网站数据就行。
+首先你需要去注册一个github账号，并掌握在线创建、删除、导入和下载仓库，以及文件的上传、删除修改等操作，这些其实并不是很难，刚开始需要你换一点时间，详细请上网搜索。</p>
+<p>当我们hugo下载好和仓库创建等操作都学会后我们就可以开始操作了。</p>
+<h2 id="三仓库创建与静态网站布局">三、仓库创建与静态网站布局</h2>
+<p>仓库创建最好是和自己github的账户名字一样，且都是小写，然后后面跟着
+<strong>.github.io</strong>,例如：</p>
+<hr>
+<pre><code>wang32.github.io
+</code></pre>
+<p>这是比较稳妥的做法，如果你不想这么做还请自己花时间去琢磨别的方法。接着我么创建一个空项目，什么都不需要哦!</p>
+<p>下一步是静态网站的部署，首先你需要下载一个hugo的主题，也就是用别人的网页主题作为自己网站的基础，这样呢我们及时没学过JS也可以部署自己的网站。
+创建一个目录，比如<strong>myblog</strong>，接着用code打开这个目录，在code编译器中打开终端窗口监视器，在里面输入命令</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>   <span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">site</span></span></span></code></pre></div>
+<p>这个时候myblog目录下会生成一个<strong>theme</strong>的目录，用来放主题，把下载好的hugo主题放在该目录下，在使用如下命令：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>    <span style="color:#a6e22e">hugo</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">theme</span>=&lt;<span style="color:#a6e22e">主题名字</span>&gt;  <span style="color:#f92672">--</span><span style="color:#a6e22e">baseURL</span>=<span style="color:#e6db74">&#34;&lt;你github仓库的路径&gt;&#34;</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span></span></span></code></pre></div>
+<p>举个例子：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>   <span style="color:#a6e22e">hugo</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">theme</span>=<span style="color:#a6e22e">m10c</span>  <span style="color:#f92672">--</span><span style="color:#a6e22e">baseURL</span>=<span style="color:#e6db74">&#34;https://wung32.github.io/&#34;</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span></span></span></code></pre></div>
+<p>上面m10c是主题的名字，也就是你下载的hugo主题名字，而https://wung32.github.io/仓库路径。</p>
+<p>在这你需要注意：如果不是Windows系统这的<strong>baseURL</strong>可能写为<strong>baseUrl</strong>,要确定这件事就去看<strong>hugo.tolm</strong>文件，有的主题写为<strong>config.tolm</strong>,里面的第一二行就会提到baseURL，注意这里的要去主题目录里找。而不是在你创建的目录myblog下找。
+运行上面的代码没问题就会在你创建的myblog目录下产生一个<strong>public</strong>的目录，里面装的就是你的网页信息。</p>
+<p>接着使用git命令把这个文件推送到远程的仓库，一般的步骤如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-git" data-lang="git">    git init #初始化：本地建库（即文件夹）
+    git add  #添加到仓库：代码文件放入本地库，
+    git commit -m “注释内容” #提交时要给注释
+    git remote add origin https://github.com/xu-xiaoya/Elegent.git #远程仓库关联
+
+    git push (-u) origin master #本地仓库的代码推送到远程仓库Github上</code></pre></div>
+<p>如果报错：</p>
+<hr>
+<pre><code>error: RPC failed; HTTP 504 curl 18 HTTP/2 stream 7 was reset
+send-pack: unexpected disconnect while reading sideband packet
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
+</code></pre>
+<p>那么加一句：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-git" data-lang="git">    git config --global http.postBuffer 524288000</code></pre></div>
+<p>接着继续推送就是了。</p>
+<p>然后去自己的仓库，点击设置，找到Page选项，有个<strong>Custom domain</strong>，在那里写上你的网站名称。</p>
+<h2 id="四买一个域名">四、买一个域名</h2>
+<p>我在没买之前网页一直加载不出来，自己也不知道为什么（如果你知道不用买域名也可以实现网站部署还请告诉我，谢谢啦！）。所以我自己是买了一个六块钱的域名的，试用期一年；当你买一个域名后要记得去解析域名，然后把解析的域名写到上面说的<strong>Custom domain</strong>那个地方，比如你解析得到的域名是：myblog.wang32.com,那么你就写这个上去。</p>
+<p>如果不知道怎么买。怎么解析，那么——是的，一样上网查一下。</p>
+<h2 id="五网站的优化">五、网站的优化</h2>
+<p>这个我不建议你一个人慢慢磨，慢慢的去网上找方法，其实制作主题的作者已经把怎么基于他的主题做出自己的网站的方法了，所以你老老实实的跟着作者的文档走就是了，实在有些地方不懂的在查一查看。</p>
+<h2 id="补充">补充</h2>
+<h4 id="1为什么我插入的图片无法显示">1、为什么我插入的图片无法显示？</h4>
+<p>图片的显示：首先要看你的主题是基于什么语言写的，比如我的是markdown,对于这个语言只需要使用：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-hugo" data-lang="hugo">    ![nihao](../../../public/webfonts/fa-brands-400.svg)</code></pre></div>
+<p>上面的这个方法就可以让图片显示，但实际上不一定能可以，因为hugo有个目录创建规则——<strong>Page Bundles</strong>(连接：https://www.rectcircle.cn/series/hugo/content-management/page-bundles/)，如果不按照这个规则创建，那么你使用别人的主题，插入图片时可能无法显示。</p>
+<p>光是上面这点我就搞了一个星期，所以还是希望你好好看一下Page Bundles文档。</p>
+<p>今天先到这了……
+2023年12月11日</p>
+<hr>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2023年12月11日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/%E4%B8%80%E4%BD%93%E5%8C%96%E5%BC%80%E5%8F%91/">一体化开发</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

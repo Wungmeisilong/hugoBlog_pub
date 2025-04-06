@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>11.STL库学习之适配器 :: Maloudown</title>
+    <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/</link>
+    <description>整体框架的回顾 存在多种适配器-adapters 一个人理解，要将适配器理解透彻，我们需要先从别的组件入手，这里以vector容器为例，我们都知道该容器需要迭代器，也就是一些智能指针来确定容器的头尾，以及内容位置，目的是方便后续的算法的怎删改查等操作，假设算法现在要做拿到位置8的数据，那么vector的指针要怎么移动呢？已知指针移动上，vector是随机访问指针，也就是前后都可以跑，而这个操作实际上是迭代器的其中一个内容，而这一内容就需要一个适配器去做适配。</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

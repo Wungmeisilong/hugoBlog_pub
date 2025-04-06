@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="过年计算机组成原理-复习1 计算机系统概论 计算机的分类 计算机总体上分为：电子模拟计算机1和电子数字计算机。二者区别如下表
+比较内容 电子数字计算机 电子模拟计算机 数据表示方法 0或1 电压 计算方式 数字计算 电压组合和测量值 控制方式 程序控制 盘上连线 精度 高 低 数据存储量 大 小 逻辑计算能力 强 无 计算机的五代变化 第一代1946~1957年， 数据处理 得到应用； 第二代1958~1964年， 工业控制 开始得到应用； 第三代1965~1971年， 小型计算机开始出现； 第四代1972~1990年， 微型计算机 开始出现； 第五代1991年开始， 单片机 开始出现 计算机的性能指标 处理机字长 指处理机运算其中一次能工处理的二进制数运算的位数，例如32位，64位。 存储器带宽 单位时间内从存储器独处的二进制数信息量，一般用 字节数/秒表示。">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="计算机组成原理 :: Maloudown">
+    <meta name="twitter:description" content="过年计算机组成原理-复习1 计算机系统概论 计算机的分类 计算机总体上分为：电子模拟计算机1和电子数字计算机。二者区别如下表
+比较内容 电子数字计算机 电子模拟计算机 数据表示方法 0或1 电压 计算方式 数字计算 电压组合和测量值 控制方式 程序控制 盘上连线 精度 高 低 数据存储量 大 小 逻辑计算能力 强 无 计算机的五代变化 第一代1946~1957年， 数据处理 得到应用； 第二代1958~1964年， 工业控制 开始得到应用； 第三代1965~1971年， 小型计算机开始出现； 第四代1972~1990年， 微型计算机 开始出现； 第五代1991年开始， 单片机 开始出现 计算机的性能指标 处理机字长 指处理机运算其中一次能工处理的二进制数运算的位数，例如32位，64位。 存储器带宽 单位时间内从存储器独处的二进制数信息量，一般用 字节数/秒表示。">
+    <meta property="og:url" content="http://localhost:1313/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="计算机组成原理 :: Maloudown">
+    <meta property="og:description" content="过年计算机组成原理-复习1 计算机系统概论 计算机的分类 计算机总体上分为：电子模拟计算机1和电子数字计算机。二者区别如下表
+比较内容 电子数字计算机 电子模拟计算机 数据表示方法 0或1 电压 计算方式 数字计算 电压组合和测量值 控制方式 程序控制 盘上连线 精度 高 低 数据存储量 大 小 逻辑计算能力 强 无 计算机的五代变化 第一代1946~1957年， 数据处理 得到应用； 第二代1958~1964年， 工业控制 开始得到应用； 第三代1965~1971年， 小型计算机开始出现； 第四代1972~1990年， 微型计算机 开始出现； 第五代1991年开始， 单片机 开始出现 计算机的性能指标 处理机字长 指处理机运算其中一次能工处理的二进制数运算的位数，例如32位，64位。 存储器带宽 单位时间内从存储器独处的二进制数信息量，一般用 字节数/秒表示。">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="计算机组成原理 :: Maloudown">
+    <meta itemprop="description" content="过年计算机组成原理-复习1 计算机系统概论 计算机的分类 计算机总体上分为：电子模拟计算机1和电子数字计算机。二者区别如下表
+比较内容 电子数字计算机 电子模拟计算机 数据表示方法 0或1 电压 计算方式 数字计算 电压组合和测量值 控制方式 程序控制 盘上连线 精度 高 低 数据存储量 大 小 逻辑计算能力 强 无 计算机的五代变化 第一代1946~1957年， 数据处理 得到应用； 第二代1958~1964年， 工业控制 开始得到应用； 第三代1965~1971年， 小型计算机开始出现； 第四代1972~1990年， 微型计算机 开始出现； 第五代1991年开始， 单片机 开始出现 计算机的性能指标 处理机字长 指处理机运算其中一次能工处理的二进制数运算的位数，例如32位，64位。 存储器带宽 单位时间内从存储器独处的二进制数信息量，一般用 字节数/秒表示。">
+    <meta itemprop="datePublished" content="2024-01-10T10:45:58+08:00">
+    <meta itemprop="dateModified" content="2024-01-10T10:45:58+08:00">
+    <meta itemprop="wordCount" content="341">
+    <meta itemprop="keywords" content="嵌入式,计算机组成原理,Linux操作系统">
+    <title>计算机组成原理 :: Maloudown</title>
+    <link href="http://localhost:1313/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="canonical" type="text/html" title="计算机组成原理 :: Maloudown">
+    <link href="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/index.xml" rel="alternate" type="application/rss+xml" title="计算机组成原理 :: Maloudown">
+    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86\/';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">计算机组成原理</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/2.androidstudio/toolbar/" title="2-1.Toolbar工具栏 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BF%87%E5%B9%B4/" title="过年 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">Linux操作系统</a></li>
+    <li><a class="term-link" href="../../tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></li>
+    <li><a class="term-link" href="../../tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="计算机组成原理">计算机组成原理</h1>
+
+<ul class="children children-li children-sort-">
+  <li class="children-title"><a href="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BF%87%E5%B9%B4/">过年</a><p><ul class="children children-li children-sort-">
+</ul></p></li>
+  <li class="children-title"><a href="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/">计算机组成原理-复习</a><p><h2 id="1-计算机系统概论">1 计算机系统概论</h2>
+<h3 id="计算机的分类">计算机的分类</h3>
+<p>计算机总体上分为：电子模拟计算机<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>和电子数字计算机。二者区别如下表</p>
+<table>
+  <thead>
+      <tr>
+          <th>比较内容</th>
+          <th>电子数字计算机</th>
+          <th>电子模拟计算机</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>数据表示方法</td>
+          <td>0或1</td>
+          <td>电压</td>
+      </tr>
+      <tr>
+          <td>计算方式</td>
+          <td>数字计算</td>
+          <td>电压组合和测量值</td>
+      </tr>
+      <tr>
+          <td>控制方式</td>
+          <td>程序控制</td>
+          <td>盘上连线</td>
+      </tr>
+      <tr>
+          <td>精度</td>
+          <td>高</td>
+          <td>低</td>
+      </tr>
+      <tr>
+          <td>数据存储量</td>
+          <td>大</td>
+          <td>小</td>
+      </tr>
+      <tr>
+          <td>逻辑计算能力</td>
+          <td>强</td>
+          <td>无</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="计算机的五代变化">计算机的五代变化</h3>
+<ul>
+<li>第一代1946~1957年， <strong>数据处理</strong> 得到应用；</li>
+<li>第二代1958~1964年， <strong>工业控制</strong> 开始得到应用；</li>
+<li>第三代1965~1971年， <strong>小型计算机</strong>开始出现；</li>
+<li>第四代1972~1990年， <strong>微型计算机</strong> 开始出现；</li>
+<li>第五代1991年开始， <strong>单片机</strong> 开始出现</li>
+</ul>
+<h3 id="计算机的性能指标">计算机的性能指标</h3>
+<p><strong>处理机字长</strong> 指处理机运算其中一次能工处理的二进制数运算的位数，例如32位，64位。
+<strong>存储器带宽</strong> 单位时间内从存储器独处的二进制数信息量，一般用 <strong>字节数/秒</strong>表示。</p></p></li>
+</ul>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年1月10日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/">核心课程</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">计算机组成原理 的子部分</h1>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="过年">过年</h1>
+
+<ul class="children children-li children-sort-">
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/r-%E8%BD%AF%E7%A1%AC%E4%BB%B6/">R-软硬件</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="计算机组成原理-复习">计算机组成原理-复习</h1>
+
+<h2 id="1-计算机系统概论">1 计算机系统概论</h2>
+<h3 id="计算机的分类">计算机的分类</h3>
+<p>计算机总体上分为：电子模拟计算机<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>和电子数字计算机。二者区别如下表</p>
+<table>
+  <thead>
+      <tr>
+          <th>比较内容</th>
+          <th>电子数字计算机</th>
+          <th>电子模拟计算机</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>数据表示方法</td>
+          <td>0或1</td>
+          <td>电压</td>
+      </tr>
+      <tr>
+          <td>计算方式</td>
+          <td>数字计算</td>
+          <td>电压组合和测量值</td>
+      </tr>
+      <tr>
+          <td>控制方式</td>
+          <td>程序控制</td>
+          <td>盘上连线</td>
+      </tr>
+      <tr>
+          <td>精度</td>
+          <td>高</td>
+          <td>低</td>
+      </tr>
+      <tr>
+          <td>数据存储量</td>
+          <td>大</td>
+          <td>小</td>
+      </tr>
+      <tr>
+          <td>逻辑计算能力</td>
+          <td>强</td>
+          <td>无</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="计算机的五代变化">计算机的五代变化</h3>
+<ul>
+<li>第一代1946~1957年， <strong>数据处理</strong> 得到应用；</li>
+<li>第二代1958~1964年， <strong>工业控制</strong> 开始得到应用；</li>
+<li>第三代1965~1971年， <strong>小型计算机</strong>开始出现；</li>
+<li>第四代1972~1990年， <strong>微型计算机</strong> 开始出现；</li>
+<li>第五代1991年开始， <strong>单片机</strong> 开始出现</li>
+</ul>
+<h3 id="计算机的性能指标">计算机的性能指标</h3>
+<p><strong>处理机字长</strong> 指处理机运算其中一次能工处理的二进制数运算的位数，例如32位，64位。
+<strong>存储器带宽</strong> 单位时间内从存储器独处的二进制数信息量，一般用 <strong>字节数/秒</strong>表示。</p>
+<h2 id="2-运算方法和运算器">2 运算方法和运算器</h2>
+<p><strong>注：</strong></p>
+<ol>
+<li>掌握各进制之间的转换；</li>
+<li>掌握小数点之间的二进制与十进制之间的转换；</li>
+</ol>
+<h3 id="二进制纯小数或纯整数表示方法">二进制纯小数或纯整数表示方法</h3>
+<ul>
+<li>二进制纯小数： <strong>0.10101</strong> 或 <strong>1.10101</strong>，0或1表示正负号，在正负号后面，在实际中计算机并不存储小数点；</li>
+<li>二进制纯整数： <strong>10101.</strong>，同样纯整数也用0或1区分正负号。
+用Xn-1表示二进制数的个数，Xn表示符号位，如下：
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Xn</th>
+          <th style="text-align: center">Xn-1……X0</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">符号</td>
+          <td style="text-align: center">量值（尾数）</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+<p>纯小数表示范围： <strong><span class="math align-center">$0<=|x|<=1-2^{-n} $</span></strong>
+纯整数表示范围： <strong><span class="math align-center">$0<=|x|<=2^{-n} - 1$</span></strong></p>
+<h3 id="浮点数表示方法">浮点数表示方法</h3>
+<p>电子质量(克)： 9×10^28 = 0.9×10^27
+太阳质量(克)： 2×10^33 = 0.2×10^34</p>
+<p>任意十进制数 <strong>N</strong> 可以表示为：</p>
+<span class="math align-center">$$N=10^E \cdot M$$</span>
+<p>同样在二进制中也有这样类似的表达：</p>
+<span class="math align-center">$$  N=2^e \cdot M$$ </span>
+<p>在二进制浮点数表达中：</p>
+<ul>
+<li>尾数：M，是一个纯小数；</li>
+<li>比例因子：e，表示指数，常用整数表示，也称为 <strong>阶码</strong> ；</li>
+<li>基数：式子中的2</li>
+</ul>
+<p>二进制浮点数格式：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><span class="math align-center">$E_s$</span></th>
+          <th style="text-align: center"><span class="math align-center">$E_m-1…E_1 E_0$</span></th>
+          <th style="text-align: center"><span class="math align-center">$M_s$</span></th>
+          <th style="text-align: center"><span class="math align-center">$M_m-1…M_1 M_0$</span></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">阶符</td>
+          <td style="text-align: center">阶码</td>
+          <td style="text-align: center">数符</td>
+          <td style="text-align: center">尾数</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>IEEE754标准</strong>格式表示浮点数</p>
+<p><strong>知识储备：</strong> <span class="math align-center">$\frac{1}{2^0}=1$</span>,<span class="math align-center">$\frac{1}{2^1}=0.5$</span>,<span class="math align-center">$\frac{1}{2^2}=0.25$</span>,<span class="math align-center">$\frac{1}{2^3}=0.125$</span>,<span class="math align-center">$\frac{1}{2^4}=0.0625$</span>,<span class="math align-center">$\frac{1}{2^5}=0.03125$</span></p>
+<p>浮点数表示：</p>
+<span class="math align-center">$$  N=2^e \cdot M$$ </span>
+<p>浮点数所占位数：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><span class="math align-center">$S$</span></th>
+          <th style="text-align: center"><span class="math align-center">$E$</span></th>
+          <th style="text-align: center"><span class="math align-center">$M$</span></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$31$</span></td>
+          <td style="text-align: center"><span class="math align-center">$30 \gets 23$</span></td>
+          <td style="text-align: center"><span class="math align-center">$22 \gets 0$</span></td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>基数R=2，基数固定，采用隐含方式来表示它。</li>
+<li>32位的浮点数：
+<ul>
+<li>S数的符号位，1位，在最高位，“0”表示正数，“1”表示负
+数。</li>
+<li>M是尾数， 23位，在低位部分，采用纯小数表示,不对小数点进行存储；</li>
+<li>E是阶码，8位，也就是说阶码最大不超过255，但阶码采用移码表示<span class="math align-center">$E=2^{7}+e=127+e$</span>，原因是移码比较大小方便。</li>
+<li>规格化： 若不对浮点数的表示作出明确规定，同一个浮点数的表示就不是惟一的，所以一般都会规定这个浮点数的位数
+<ul>
+<li>尾数域最左位(最高有效位)总是1， 故这一位经常不予存储，而认为隐藏在小数点的左边。</li>
+<li>采用这种方式时，将浮点数的指数真值e变成阶码E时，应将指数e加上一个固定的偏移值127(01111111)，即E=e+127。如果是二进制转真值就E=e-127</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>下面举两个例子进行说明：</p>
+<p><strong>例1：二进制转十进制</strong>若浮点数x的754标准存储格式为(41360000)16，求其浮点数的十进制数值。</p>
+<p>解：将16进制数展开后，可得二制数格式为</p>
+<p>0 100 00010 011 0110 0000 0000 0000 0000</p>
+<p>符号S=0</p>
+<p>阶码E=100 00010</p>
+<p>尾数M=011 0110 0000 0000 0000 0000</p>
+<p>指数e=E-127=10000010-01111111=00000011=<span class="math align-center">$(3)_10$</span>，故有</p>
+<p>1.M=1.011 0110 0000 0000 0000 0000=1.011011</p>
+<p>于是有</p>
+<span class="math align-center">$x=(-1)S \times 1.M \times 2^e=+(1.011011)  \times 2^3=+1011.011=(11.375)_10$</span>
+<p><strong>问：</strong> 0.011怎么转成0.375？</p>
+<p>根据上面的知识储备有<span class="math align-center">$ \frac{1}{2^0}\times 0 + \frac{1}{2^1}\times 1 +\frac{1}{2^2}\times 1=0+0.25+0.125=0.375 $</span></p>
+<p><strong>例2：十进制转二进制</strong>若浮点数为<span class="math align-center">$(28.8125)_10$</span>，求其浮点数的IEEE754标准存储格式的二进制数值。</p>
+<p>解：<span class="math align-center">$(28.8125)_10$</span>=<span class="math align-center">$(11100.1101)_2$</span></p>
+<p>格式化表示为：<span class="math align-center">$(11100.1101)_2=1.11001101 \times 2^4$</span></p>
+<p>于是有</p>
+<p>e=4</p>
+<p>E=e+127=4+127=131=<span class="math align-center">$(1000 0011)_2$</span></p>
+<p>M=1100 1101 0000 0000 0000 000（去掉小数点和小数点前的1，而且有23位，不够补0）</p>
+<p>S=0</p>
+<p>IEEE754标准的32为存储数据位：0 1000 0011 1100 1101 0000 0000 0000 000</p>
+<h3 id="数的机器码表示">数的机器码表示</h3>
+<p>计算机进行运算时，会把符号位和数字一起编码表示为相应的数，这些数可以用不同的方法表示，例如：原码、补码、移码、反码；</p>
+<p>为了区别一般写的数（比如-12，+3等）和机器中的编码（比如 <em><strong>0</strong></em> 1100,<strong>1</strong> 0011），通常前者称之为 <strong>真值</strong>，后者称为 <strong>机器数</strong> 或 <strong>机器码</strong> 。</p>
+<p><span class="math align-center">$[x]_原$</span>表示机器数，x表示真值。</p>
+<p>例如：</p>
+<p><span class="math align-center">$x=+0011$</span>，<span class="math align-center">$[x]{_原}=\textbf{0}0011$</span></p>
+<p><span class="math align-center">$x=-0011$</span>，<span class="math align-center">$[x]{_原}=\textbf{1}0011$</span>，</p>
+<p>原码机器中有“+0”“-0”之分，固有两种形式：例如：<span class="math align-center">$[x]{_原}$</span>与<span class="math align-center">$\textbf{1}0011$</span>表达的意思一样。</p>
+<p>数学上把类似于<span class="math align-center">$-3=+9 (mod12)$</span>的式成为 <strong>同余式</strong>。</p>
+<h4 id="原码反码补码移码">原码、反码、补码、移码</h4>
+<p>对原码、反码、补码、移码的简单说明，已知计算机为4位，x=-3.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">例子</th>
+          <th style="text-align: center">表示方法</th>
+          <th style="text-align: center">二进制</th>
+          <th style="text-align: center">说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">-3</td>
+          <td style="text-align: center">原码</td>
+          <td style="text-align: center"><span class="math align-center">$[-3]{_原}$</span>=<strong>0</strong>0011</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">-3</td>
+          <td style="text-align: center">反码</td>
+          <td style="text-align: center"><span class="math align-center">$[-3]{_反}$</span>=<strong>0</strong>1100</td>
+          <td style="text-align: center">按位取反</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">-3</td>
+          <td style="text-align: center">补码</td>
+          <td style="text-align: center"><span class="math align-center">$[-3]{_补}$</span>=<strong>0</strong>1101</td>
+          <td style="text-align: center">反码最低位加1，注意这个时候符号还是1</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">-3</td>
+          <td style="text-align: center">移码</td>
+          <td style="text-align: center"><span class="math align-center">$[-3]{_移}$</span>=<strong>1</strong>,1101</td>
+          <td style="text-align: center"><span class="math align-center">$[e]{_移}=2^{k}+e=2^4-0011=0,1101$</span></td>
+      </tr>
+  </tbody>
+</table>
+<p>对于正数来说，前三个都一样，重点说明移码：</p>
+<p>定点整数定义 <span class="math align-center">$[e]{_移}=2^{k}+e,  2^k >e≥-2^k$</span></p>
+<p>上面的表达式中，<span class="math align-center">$[e]{_移}$</span>表示机器码，e为真值，<span class="math align-center">$2^k$</span>表示固定偏移常量。</p>
+<p>已知e=+0011,k=4，<span class="math align-center">$[e]{_移}=2^{k}+e=2^{4}+0011=1,0011$</span></p>
+<p>已知e=-0011,k=4，<span class="math align-center">$[e]{_移}=2^{k}+e=2^{4}-0011=0,1101$</span></p>
+<p>移码中的逗号不是小数点，而是表示左边一位是符号位，显然移码中符号位与前三者的表示相反（<strong>详见P21</strong>）。</p>
+<p>下面请看例题：</p>
+<p>已知计算机是8位的，请分别写出纯整数125，-110，纯小数+0.125，-0.375；二进制数x=11011,y=-01010的原码、反码、补码、移码。（注意格式，要对齐）</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">表示方法</th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center">表示方法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">+125=<strong>0</strong>0101 1111</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">-110=<strong>1</strong>0011 1011</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_原}$</span>=<strong>0</strong>0101 1111</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_原}$</span>=<strong>1</strong>0011 1011</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_反}$</span>=<strong>0</strong>0101 1111</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_反}$</span>=<strong>1</strong>1100 0100</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_补}$</span>=<strong>0</strong>0101 1111</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_补}$</span>=<strong>1</strong>1100 0101</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_移}$</span>=<strong>1</strong>,0101 1111</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_移}$</span>=<strong>0</strong>,1100 0100</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">+0.125=<strong>0</strong>.0010 0000</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">-0.357=<strong>1</strong>.0110 0000</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_原}$</span>=<strong>0</strong>.0010 0000</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_原}$</span>=<strong>1</strong>.0110 0000</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_反}$</span>=<strong>0</strong>.0010 0000</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_反}$</span>=<strong>1</strong>.1001 1111</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_补}$</span>=<strong>0</strong>.0010 0000</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_补}$</span>=<strong>1</strong>.1010 0000</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_移}$</span>=<strong>1</strong>,0010 0000</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_移}$</span>=<strong>0</strong>,1010 0000</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">x=11011</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">-110=-01010</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_原}$</span>=<strong>0</strong>0001 1011</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_原}$</span>=<strong>1</strong>0000 1010</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_反}$</span>=<strong>0</strong>0001 1011</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_反}$</span>=<strong>1</strong>1111 0101</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_补}$</span>=<strong>0</strong>0001 1011</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_补}$</span>=<strong>1</strong>1111 0111</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$[125]{_移}$</span>=<strong>1</strong>,0001 1011</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><span class="math align-center">$[-110]{_移}$</span>=<strong>0</strong>,1111 0111</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="定点加法减法运算">定点加法、减法运算</h3>
+<p><strong>公式</strong>
+补码加法：任意两数补码之和等于两数之和的补码，<span class="math align-center">$[x]{_补}+[y]{_补}=[x+y]{_补}$</span></p>
+<p>补码减法：<span class="math align-center">$[x-y]{_补}=[x]{_补}-[y]{_补}=[x]{_补}+[-y]{_补}$</span></p>
+<p>从<span class="math align-center">$[y]{_补}$</span>求<span class="math align-center">$[-y]{_补}$</span>的法则是对<span class="math align-center">$[y]{_补}$</span>包括符号位在内求反，最低位加1得到表达式为：</p>
+<span class="math align-center">$[-y]{_补}=\rightharpoondown [y]{_补}+2^{-n}$</span>
+<p>其中，符号<span class="math align-center">$\rightharpoondown$</span>表示对<span class="math align-center">$[y]{_补}$</span>作求反操作，包括正负号在内，<span class="math align-center">$2^{-n}$</span>表示末位（最低位）加1.</p>
+<p>下面举例加以理解运算过程：</p>
+<p>（ <strong>详见P29</strong> ）</p>
+<h3 id="溢出概念与检验方法">溢出概念与检验方法</h3>
+<p>在定点整数机器中，运算过程中出现大于字长绝对值的现象称为 <strong>溢出</strong>，溢出分正、负溢出两种，用两位符号位表示， <strong>00</strong>、<strong>11</strong>分别表示整数和负数，<strong>01</strong>表示正溢出，<strong>10</strong> 表示负溢出。</p>
+<p><strong>详细说明原理：</strong> 假设x表示二进制数，用<span class="math align-center">$2^{-n}<x<2^{+n}$</span>表示二进制数的范围，当n=4时，说明二进制最多4为，两个4位二进制运算结果如果为5位则说明溢出，要判断是什么溢出参照上面的方法。</p>
+<h3 id="定点乘法运算">定点乘法运算</h3>
+<p>乘法运算拆分来看主要有算术运算加法，逻辑运算异或，还有移位操作。</p>
+<p>四位二进制数x,y，两数进行乘法运算，符号位不参与数值位分开运算，一开始y的最低位与x的每一位进行异或并输出结果，下一次y的次高位与x的每一位进行异或运算，结果输出并左移次高位的位数，假设次高位是2，那么左移两位输出结果。</p>
+<p>举个例子，如下：</p>
+<p><a href="#R-image-882d19214b13a565b2acfbab84a06094" class="lightbox-link"><img alt="图1.png" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-882d19214b13a565b2acfbab84a06094"><img alt="图1.png" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE1.png"></a></p>
+<h3 id="定点数除法运算">定点数除法运算</h3>
+<p>定点数除法运算这里提供两种方法：</p>
+<ol>
+<li>恢复余数法</li>
+</ol>
+<p>这种方法是手工计算，而非机器计算，如下图：
+定点原码一位除法实现方案（手工）０．１００１０／０．１０１１
+<a href="#R-image-4d0f44ade77f132b700ee4a71cb53024" class="lightbox-link"><img alt="tu" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4d0f44ade77f132b700ee4a71cb53024"><img alt="tu" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE2.png"></a>
+2. 加减交替法（不恢复余数法）</p>
+<p>在这之前我们先简单了解并行除法器，如下图：</p>
+<p><a href="#R-image-202ac713a71fcc47219fa18e2ab52049" class="lightbox-link"><img alt="tu" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-202ac713a71fcc47219fa18e2ab52049"><img alt="tu" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE3.png"></a></p>
+<p>被除数 <span class="math align-center">$0.x{_6}x{_5}x{_4}x{_3}x{_2}x{_1}$</span></p>
+<p>(双倍长)</p>
+<p>除数 <span class="math align-center">$0.y{_3}y{_2}y{_1}$</span></p>
+<p>商数 <span class="math align-center">$0.q{_3}q{_2}q{_1}$</span></p>
+<p>余数 <span class="math align-center">$0.r{_6}r{_5}r{_4}r{_3}r{_2}r{_1}$</span></p>
+<p>除数右移</p>
+<p>例题：ｘ＝0.101001, ｙ＝0.111, 求<span class="math align-center">${x}\div{y}$</span></p>
+<p><a href="#R-image-b5e55f04ef576b17e27821b4e286bf7a" class="lightbox-link"><img alt="tu" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b5e55f04ef576b17e27821b4e286bf7a"><img alt="tu" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE4.png"></a></p>
+<h3 id="浮点运算方法浮点运算器">浮点运算方法，浮点运算器</h3>
+<p>再次我们在此复习浮点数的表示方法</p>
+<span class="math align-center">$$  N=2^e \cdot M$$ </span>
+<p>以及32位IEEE754标准格式</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><span class="math align-center">$S$</span></th>
+          <th style="text-align: center"><span class="math align-center">$E$</span></th>
+          <th style="text-align: center"><span class="math align-center">$M$</span></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><span class="math align-center">$31$</span></td>
+          <td style="text-align: center"><span class="math align-center">$30 \gets 23$</span></td>
+          <td style="text-align: center"><span class="math align-center">$22 \gets 0$</span></td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="浮点运算步骤">浮点运算步骤</h4>
+<ul>
+<li>0操作数检查。一般就是检查运算数是否为0，不卸载步骤中</li>
+<li>比较阶码（E）并完成对阶（小阶向大阶对齐）</li>
+<li>尾数（M）求和运算</li>
+<li>结果规格化，把运算结果写成1.M的格式</li>
+<li>检查上溢出或下溢出（-127&lt;=x&lt;=127,x在这个范围就表示没有溢出,如果溢出需要通过 <strong>变形补码</strong> 来判断是正溢出（01），还是负溢出（10））</li>
+<li>舍入处理。写出要求需要的有效位，并用十进制检验是否正确
+<a href="#R-image-9880555a247f6429925f6ff2f3ed19a2" class="lightbox-link"><img alt="tu" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9880555a247f6429925f6ff2f3ed19a2"><img alt="tu" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%9B%BE5.png"></a></li>
+</ul>
+<p>例题：设<span class="math align-center">$x=0.5{_10},y=0.4375{_10}$</span>,假设尾数有效位为4位，用二进制求<span class="math align-center">$(x+y){_浮}$</span></p>
+<p>把x和化为1.M的格式
+<span class="math align-center">$x=0.5{_10}=0.1{_2}=0.1{_2}\cdot 2^0=1.000{_2}\cdot 2^{-1}$</span>
+<span class="math align-center">$x=-0.4375{_10}=-0.0111{_2}=-0.0111{_2}\cdot 2^0=-1.000{_2}\cdot 2^{-2}$</span></p>
+<p>在这里需要对上面的转换进行说明，说明前我们先看<span class="math align-center">$0.2\cdot10^{0}$</span>,如果现在想写成2，那上面的式子该怎么改呢？</p>
+<p>修改如下：
+<span class="math align-center">$0.2\cdot10^{0}=2\cdot10^{-1}$</span></p>
+<p>也就是要让式子的左右相等，所以后面10的次方就不一样，理解了上面这个我们再来看<span class="math align-center">$-0.1{_2}\cdot 2^0=-1.000{_2}\cdot 2^{-1}$</span>就会更好理解。</p>
+<p>下面是具体的步骤：</p>
+<ol>
+<li>对阶，由上可知y的阶小，向x的看齐
+<span class="math align-center">$-1.000{_2}\cdot 2^2=-0.100{_2}\cdot 2^{-1}$</span></li>
+<li>尾数相加，
+<span class="math align-center">$1.000{_2}\cdot 2^{-1}+(-0.100{_2}\cdot 2^{-1})=0.001{_2}\cdot 2^{-1}$</span></li>
+<li>规格化：把结果把x和化为1.M的格式
+<span class="math align-center">$0.001{_2}\cdot 2^{-1}=1.0000{_2}\cdot 2^{-4}$</span></li>
+<li>检验上溢或下溢
+由于指数-4用移码表示，-127&lt;=-4&lt;=127,-4在这个范围即没有溢出</li>
+<li>舍入操作
+根据题目要求<span class="math align-center">$(x+y){_浮}=1.0000{_2}\cdot 2^{-4}=0.0625{_10}$</span>
+十进制检验结果x+y=0.5-0.4375=0.0625</li>
+</ol>
+<h3 id="浮点数乘除法运算">浮点数乘除法运算</h3>
+<p>乘除运算分为四步</p>
+<ul>
+<li>0操作数检查</li>
+<li>阶码加减操作</li>
+<li>尾数乘除操作</li>
+<li>结果规格化和舍入处理</li>
+</ul>
+<p>流程与浮点数乘除法类似，但也有不同的地方，下面以乘法运算为例子详细说明具体步骤：</p>
+<ol>
+<li>将两数的指数部分相加（前提是你要把两数规格化为1.M的形式）</li>
+<li>将被乘数和乘数的尾数相乘</li>
+<li>规格化于溢出检测</li>
+<li>舍入操作</li>
+<li>确定乘积的符号（同号为正，异号为负）</li>
+</ol>
+<h2 id="存储系统">存储系统</h2>
+<h3 id="存储系统的层次结构">存储系统的层次结构</h3>
+<p>目前存储器的特点是：</p>
+<p>• 速度快的存储器价格贵，容量小；
+• 价格低的存储器速度慢，容量大。</p>
+<ul>
+<li>高速缓冲存储器简称<strong>cache</strong>，它是计算机系统中的一个高速小容量半导体存储器。</li>
+<li>主存储器简称 <strong>主存</strong>，是计算机系统的主要存储器，用来存放计算机运行期间的 <strong>大量程序</strong> 和 <strong>数据</strong> 。</li>
+<li>外存储器简称 <strong>外存</strong>，它是大容量辅助存储器。
+<a href="#R-image-fea7669d22bce64aba9165be36c7f32d" class="lightbox-link"><img alt=" tu6" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fea7669d22bce64aba9165be36c7f32d"><img alt=" tu6" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu6.png"></a></li>
+</ul>
+<h3 id="存储系统分类">存储系统分类</h3>
+<ul>
+<li>按 <strong>存储介质</strong> 分类：磁表面/半导体存储器</li>
+<li>按 <strong>存取方式</strong> 分类：随机/顺序存取（磁带）</li>
+<li>按 <strong>读写功能</strong> 分类：ROM，RAM
+<ul>
+<li>RAM，<strong>随机存取存储器</strong> ：双极型/MOS</li>
+<li>ROM，<strong>只读存储器</strong> ：MROM/一次可编程只读存储器PROM/可擦除EPROM/电可擦除EEPROM</li>
+</ul>
+</li>
+<li>按信息的可保存性分类：永久性和非永久性的</li>
+<li>按存储器系统中的作用分类：主/辅/缓/控</li>
+</ul>
+<h3 id="存储器的编制和端模式">存储器的编制和端模式</h3>
+<ul>
+<li>字存储单元：存放一个机器字的存储单元，相应的单元地址叫字地址。</li>
+<li>字节存储单元：存放一个字节的单元，相应的地址称为字节地址。</li>
+<li>端模式：一个存储字内部的多字节排列方式。
+<ul>
+<li>大端 big-endian</li>
+<li>小端 little-endian</li>
+</ul>
+</li>
+</ul>
+<h3 id="存储器技术">存储器技术</h3>
+<ul>
+<li><strong>存储容量：</strong> 指一个存储器中可以容纳的存储单元总数。存储容量越大，能存储的信息就越多。</li>
+<li><strong>存取时间</strong> 又称存储器访问时间：指一次读操作命令发出到该操作完成，将数据读出到数据总线上所经历的时间。通常取写操作时间等于读操作时间，故称为存储器存取时间。</li>
+<li><strong>存储周期：</strong> 指连续启动两次读操作所需间隔的最小时间。通常，存储周期略大于存取时间，其时间单位为ns。</li>
+<li><strong>存储器带宽：</strong> 单位时间里存储器所存取的信息量，通常以位/秒或字节/秒做度量单位。
+记住：<span class="math align-center">$1KB=2^{10}B，1MB=2^{20}B，1GB=2^{30}B，1TB=2^{40}B$</span></li>
+</ul>
+<h3 id="sram存储器">SRAM存储器</h3>
+<ul>
+<li>主存（内部存储器）是半导体存储器。根据信息存储的机理不同可以分为两类：
+<ul>
+<li>静态读写存储器(SRAM)：存取速度快</li>
+<li>动态读写存储器(DRAM)：存储密度和容量比SRAM大。</li>
+</ul>
+</li>
+</ul>
+<p>三组信号线：
+ 地址线:n条地址线，确定存储单元（地址）的个数，或说有2^n个存储单元。
+ 数据线：决定字的长度（位数）。6条地址线，4条数据线，没那么有64*4个存储位元的总数。
+ 行线
+ 列线
+ 控制线：控制读/写，读写不会同时进行
+例如一台计算机数据线有4条，那么它就是4位的计算机。
+<a href="#R-image-07e50a0c8ed8a5bf6900d8d7d1110f07" class="lightbox-link"><img alt="tu7" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-07e50a0c8ed8a5bf6900d8d7d1110f07"><img alt="tu7" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu7.png"></a></p>
+<h4 id="存储容量的扩充">存储容量的扩充</h4>
+<p>1、字长位数扩展
+字节不变，即给的地址线不变，改变数据线让芯片容量符合设计要求。</p>
+<p>芯片个数d=设计要求的存储器容量/选择芯片存储器容量</p>
+<p>[例2] 利用1M×4位的SRAM芯片，设计一个存储容量
+为1M×8位的SRAM存储器。</p>
+<p>解：所需芯片数量=(1M×8)/(1M×4)=2片</p>
+<p>2、字存储容量扩展</p>
+<p>位不变，即数据线不变，通过增加芯片改变地址线使其符合设计要求。</p>
+<p>芯片个数d=设计要求的存储器容量/选择芯片存储器容量</p>
+<p>[例3]利用1M×8位的DRAM芯片设计2M×8位的DRAM存储
+器
+解：所需芯片数d=（2M×8）/（1M×8）=2(片)</p>
+<p>3、字节扩展</p>
+<p>先进行位扩展（数据线bite），字节扩展（字节扩展Byte）</p>
+<h3 id="动态随机存取存储器">动态随机存取存储器</h3>
+<h4 id="工作原理图">工作原理图</h4>
+<p><a href="#R-image-9f3004a72aa68dabd1b3a6ee62628911" class="lightbox-link"><img alt="tu8" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9f3004a72aa68dabd1b3a6ee62628911"><img alt="tu8" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu8.png"></a>
+原理图上的刷新本质上是给mos管充电。</p>
+<h4 id="动态随机存取存储器的刷新操作">动态随机存取存储器的刷新操作</h4>
+<p>刷新的目的是为了保存存储器的存储信息。
+注：读出1才会刷新，读出0不会刷新。
+当前主流的DRAM器件的刷新周期间隔时间为64秒</p>
+<ul>
+<li>集中式刷新。先工作最后在进行充电，假设DRAM有1024行，刷新周期为8ms（这里假设是8ms）</li>
+<li>分散式刷新。边工作边刷行，假设DRAM有1024行，由8ms（这里假设是8ms）除以1024=7.4us,所以刷新周期为7.4us</li>
+</ul>
+<h3 id="只读存储器">只读存储器</h3>
+<p>ROM叫做只读存储器。顾名思义，只读的意思是
+在它工作时只能读出，不能写入。然而其中存储的原
+始数据，必须在它工作以前写入。只读存储器由于工
+作可靠，保密性强，在计算机系统中得到广泛的应用。</p>
+<p>主要有两类：</p>
+<ul>
+<li>掩模ROM：掩模ROM实际上是一个存储内容固定的ROM，由生产厂家提供产品。</li>
+<li>可编程ROM：用户后写入内容，有些可以多次写入。
+<ul>
+<li>一次性编程的PROM</li>
+<li>多次编程的EPROM和E2PROM。</li>
+</ul>
+</li>
+</ul>
+<h4 id="掩模rom">掩模ROM</h4>
+<p>1、掩模ROM的阵列结构和存储元
+<a href="#R-image-cd5df72ed524d3d69683e4ec8ca8f23f" class="lightbox-link"><img alt="tu9" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cd5df72ed524d3d69683e4ec8ca8f23f"><img alt="tu9" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu9.png"></a></p>
+<p>2、可编程ROM</p>
+<p> EPROM叫做 <em><strong>光擦除可编程可读存储器</strong></em>。它的存储内容可以根据需要写入，当需要更新时将原存储内容抹去，再写入新的内容。
+ 现以浮栅雪崩注入型MOS管为存储元的EPROM为例进行说明，结构如下图所示。</p>
+<p>E2PROM存储元</p>
+<p>EEPROM，叫做电擦除可编程只读存储器。其存储元是一个具有两个栅极的NMOS管，如图(a)和(b)所示，G1是控制栅，它是一个浮栅，无引出线；G2是抹去栅，它有引出线。在G1栅和漏极D之间有一小面积的氧化层，其厚度极薄，可产生隧道效应。如图(c)所示，当G2栅加20V正脉冲P1时，通过隧道效应，电子由衬底注入到G1浮栅，相当于存储了1”。利用此方法可将存储器抹成全“1”状态。
+<a href="#R-image-5bc7cb454aa988f3baec6e221fbfdf33" class="lightbox-link"><img alt=" tu10" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5bc7cb454aa988f3baec6e221fbfdf33"><img alt=" tu10" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu10.png"></a></p>
+<h4 id="flash">FLASH</h4>
+<p>FLASH存储器也翻译成闪速存储器，它是高密度非失易失性的读/写存储器。高密度意味着它具有巨大比特数目的存储容量。非易失性意味着存放的数据在没有电源的情况下可以长期保存。总之，它既有RAM的优点，又有ROM的优点，称得上是存储技术划时代的进展。</p>
+<p><strong>FLASH存储器的基本操作</strong> 编程操作、读取操作、擦除操作。</p>
+<h3 id="并行存储器">并行存储器</h3>
+<p>并行存储器的作用：提高读写效率</p>
+<h4 id="双端口与存储器">双端口与存储器</h4>
+<p>1、双端口存储器的逻辑结构</p>
+<p>双端口存储器由同一个存储器具有两组 <strong>相互独立的读写控制电路</strong> 而得名。由于进行并行的独立操作，因而是一种高速工作的存储器，在科研和工程中非常有用。 举例说明，双端口存储器IDT7133的逻辑框图 。如下图：
+<a href="#R-image-04e1d8238f97cd43821337511db6de13" class="lightbox-link"><img alt="tu11" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-04e1d8238f97cd43821337511db6de13"><img alt="tu11" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu11.png"></a></p>
+<p>2、无冲突读写控制</p>
+<p>当两个端口的地址不相同时，在两个端口上进行读写操作，一定不会发生冲突。当任一端口被选中驱动时，就可对整个存储器进行存取，每一个端口都有自己的片选控制(CE)和输出驱动控制(OE)。读操作时，端口的OE(低电平有效)打开输出驱动器，由存储矩阵读出的数据就出现在I/O线上。</p>
+<p>3、有冲突读写控制</p>
+<p>当两个端口同时存取存储器同一存储单元时，便发生读写冲突。为解决此问题，特设置了BUSY标志。在这种情况下，片上的判断逻辑可以决定对哪个端口优先进行读写操作，而对另一个被延迟的端口置BUSY标志(BUSY变为低电平)，即暂时关闭此端口。</p>
+<h4 id="多模块交叉存储器">多模块交叉存储器</h4>
+<p>1、存储器的模块化组织
+一个由若干个模块组成的主存储器是线性编址的。这些地址在各模块中如何安排，有两种方式：</p>
+<ul>
+<li>一种是 <strong>顺序方式</strong> ，</li>
+<li>一种是 <strong>交叉方式</strong> 。
+<a href="#R-image-d71f375eb682fb8f8152205e126a614a" class="lightbox-link"><img alt="tu12" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d71f375eb682fb8f8152205e126a614a"><img alt="tu12" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu12.png"></a></li>
+</ul>
+<h5 id="顺序方式">顺序方式</h5>
+<p>[例]M0－M3共四个模块，则每个模块8个字</p>
+<p>顺序方式：</p>
+<p>M0：0—7
+M1：8－15
+M2：16－23
+M3：24－31</p>
+<ul>
+<li>5位地址组织如下： X X X X X</li>
+<li>高位选模块，低位选块内地址</li>
+<li>特点：某个模块进行存取时，其他模块不工作，优点是某一模块出现故障时，其他模块可以照常工作，通过增添模块来扩充存储器容量比较方便。缺点是各模块串行工作，存储器的带宽受到了限制。</li>
+</ul>
+<h5 id="交叉方式">交叉方式</h5>
+<ul>
+<li>
+<p>M0：0，4,&hellip;除以4余数为0</p>
+</li>
+<li>
+<p>M1：1，5,&hellip;除以4余数为1</p>
+</li>
+<li>
+<p>M2：2，6,&hellip;除以4余数为2</p>
+</li>
+<li>
+<p>M3：3，7,&hellip;除以4余数为3</p>
+</li>
+<li>
+<p>5位地址组织如下： X X X X X</p>
+</li>
+<li>
+<p>高位选块内地址，低位选模块</p>
+</li>
+<li>
+<p>特点：连续地址分布在相邻的不同模块内，同一个模块内的地址都是不连续的。优点是对连续字的成块传送可实现多模块流水式并行存取，大大提高存储器的带宽。使用场合为成批数据读取。</p>
+</li>
+</ul>
+<p><strong>多模块交叉存储器的基本结构</strong> 下图为四模块交叉存储器结构框图。主存被分成4个相互独立、容量相同的模块M0，M1，M2，M3，每个模块都有自己的读写控制电路、地址寄器和数据寄存器，各自以等同的方式与CPU传送信息。在理想情况下，如果程序段或数据块都是连续地在主存中存取，那么将大大提高主存的访问速度。
+!p<a href="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu13.png">tu13</a></p>
+<ul>
+<li>通常在一个存储器周期内，n个存储体必须分时启动，则各个存储体的启动间隔为<span class="math align-center">$t=\frac{T}{n}$</span>（n为交叉存取度）</li>
+<li>整个存储器的存取速度有望提高n倍
+<span class="math align-center">$t{_顺序}=xT$</span>
+<span class="math align-center">$t{_交叉}=T\frac{x+n-1}{n}$</span></li>
+</ul>
+<h3 id="cache-基本原理">cache 基本原理</h3>
+<p>为了解决CPU和主存之间速度不匹配而采取的一种重要技术。</p>
+<ul>
+<li>一般采用高速的SRAM构成。</li>
+<li>CPU和主存之间的速度差别很大采用两级或多级Cache系统</li>
+<li>早期的一级Cache在CPU内，二级在主板上</li>
+<li>现在的CPU内带L1 Cache和L2 Cache</li>
+<li>全由硬件调度，对用户透明
+<a href="#R-image-7c1f4e1ff032f4a7f021dfb6d1dc4170" class="lightbox-link"><img alt="tu14" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7c1f4e1ff032f4a7f021dfb6d1dc4170"><img alt="tu14" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu14.png"></a>
+cpu与缓存之间数据交换是以字节为单位，而缓存与主存之间的数据交换以块为单位，一个块有若干组成，是定长的。</li>
+</ul>
+<p>从CPU来看，增加一个cache的目的，就是在性能上使主存的平均读出时间尽可能接近cache的读出时间。为了达到这个目的，在所有的存储器访问中由cache满足CPU需要的部分应占很高的比例，即cache的命中率应接近于1。由于程序访问的局部性，实现这个目标是可能的。</p>
+<p>命中率：CPU访问cache且需要获取的文件在cache里，即为命中，公示如下：
+<span class="math align-center">$h=\frac{N{_c}}{N{_c}+N{_m}}$</span></p>
+<p><span class="math align-center">$N{_c}$</span>:cache完成存取的总次数（访问cache的总次数）；</p>
+<p><span class="math align-center">$N{_m}$</span>:主存完成存取的总次数。</p>
+<h3 id="主存与cache的地址映射">主存与cache的地址映射</h3>
+<p>无论选择那种映射方式，都要把主存和cache划分为同样大小的“块”。下面介绍三种一映射方式：</p>
+<p>1、全相联的映射方式（一对多，一是指缓存，多是指主存里的数据块）</p>
+<p>（1）将地址分为两部分（块号和字），在内存块写入Cache时，同时写入块号标记；
+（2）CPU给出访问地址后，也将地址分为两部分（块号和字），比较电路块号与Cache 表中的标记进行比较，相同表示命中，访问相应单元；如果没有命中访问内存，CPU 直接访问内存，并将被访问内存的相对应块写入Cache。
+<a href="#R-image-41755c4e693b1d02ac1c93a62d31b5d5" class="lightbox-link"><img alt=" tu15" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu16.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-41755c4e693b1d02ac1c93a62d31b5d5"><img alt=" tu15" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu16.png"></a></p>
+<p>1、全相联映射方式</p>
+<p>特点：</p>
+<ul>
+<li>优点：冲突概率小，Cache的利用高。</li>
+<li>缺点：比较器电路难实现，适用于小容量的Cache</li>
+</ul>
+<h3 id="直接映射方式">直接映射方式</h3>
+<p>2、直接映射方式（一对多）：</p>
+<ul>
+<li>i= j mod m</li>
+<li>m为cache中的总行数</li>
+<li>主存第j块内容拷贝到Cache的i行</li>
+<li>一般I和m都是2^N级
+<a href="#R-image-9a2fb5a170dbd3aef139ecef9ea51954" class="lightbox-link"><img alt="tu15" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu15.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9a2fb5a170dbd3aef139ecef9ea51954"><img alt="tu15" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu15.png"></a></li>
+</ul>
+<p>[例]cache容量16字，主存容量256字，则地址2，18，34…..242等都存放在cache的地址2内，如果第一次2在cache中，下次访问34内容，则不管cache其他位置的内容访问情况，都会引起2块内容的替换。</p>
+<p>特点</p>
+<ul>
+<li>优点：比较电路少m倍线路，所以硬件实现简单，Cache地址为主存地址的低几位，不需变换。</li>
+<li>缺点：冲突概率高（抖动）</li>
+<li>适合大容量Cache</li>
+</ul>
+<h3 id="组相联映射方式">组相联映射方式</h3>
+<p>前两者的组合</p>
+<ul>
+<li>Cache分组，组间采用直接映射方式，组内采用全相联的映射方式</li>
+<li>Cache分组U，组内容量V</li>
+<li>映射方法（一对多）
+<ul>
+<li>q= j mod u</li>
+<li>主存第j块内容拷贝到Cache的q组中的某行</li>
+</ul>
+</li>
+<li>地址变换
+<ul>
+<li>设主存地址x，看是不是在cache中，先y= x mod u，则在y组中一次查找</li>
+</ul>
+</li>
+</ul>
+<p>分析：比全相联容易实现，冲突低</p>
+<ul>
+<li>v=1，则为直接相联映射方式</li>
+<li>u=1，则为全相联映射方式</li>
+<li>v的取值一般比较小， 一般是2的幂，称之为v路组相联cache。
+<a href="#R-image-0115e2dcfe0b783f47a9edd3978ea07e" class="lightbox-link"><img alt="tu17" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu17.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0115e2dcfe0b783f47a9edd3978ea07e"><img alt="tu17" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu17.png"></a></li>
+</ul>
+<h3 id="cache替换策略">cache替换策略</h3>
+<ul>
+<li>LFU（最不经常使用 ）：每行有一个计数器，被访问的行计数器增加1，哪一行的值小，就换值小的行，不能反映近期cache的访问情况，</li>
+<li>LRU（近期最少使用） ：被访问的行计数器置0，其他的计数器增加1，哪一行的值大，换值大的行，符合cache的工作原理</li>
+<li>随机替换：随机替换策略实际上是不要什么算法，从特定的行位置中随机地选取一行换出即可。这种策略在硬件上容易实现，且速度也比前两种策略快。
+<ul>
+<li>缺点：随意换出的数据很可能马上又要使用，从而降低命中率和cache工作效率。</li>
+<li>优点：但这个不足随着cache容量增大而减小。随机替换策略的功效只是稍逊于前两种策略。</li>
+</ul>
+</li>
+</ul>
+<p>由于cache的内容只是主存部分内容的拷贝，它应当 <strong>与主存内容保持一致</strong>。而CPU对cache的写入更改了cache的内容。如何与主存内容保持一致，可选用如下三种写操作策略。</p>
+<ul>
+<li>写回法：换出时，对行的修改位进行判断，决定是写回还是舍掉。当主存数据传向缓存而缓存满的时候，缓存就要进行替换，只有这个时候才将数据写回主存。</li>
+<li>全写法：写命中时，Cache与内存一起写，也就是主存和缓存一起更改；</li>
+<li>写一次法：与写回法一致，第一次Cache命中时采用全写法，也就是这个时候要把数据写回主存，因为第一次命中的时候CPU会在总线上启动一个存储写周期，其他cache即可监听到该消息，选择复制或丢弃该数据，以便委会系统全部cache的一致性。</li>
+</ul>
+<h2 id="4-指令系统">4 指令系统</h2>
+<h3 id="指令系统基本概念">指令系统基本概念</h3>
+<p>指令：就是要计算机执行某种操作的命令。从计算机组成的层次结构来说，计算机的指令有微指令、机器指令和宏指令之分。</p>
+<span class="math align-center">$指令=\begin{cases}微指令\\机器指令\\宏指令\end{cases}$</span>
+<ul>
+<li><strong>微指令</strong> 是微程序级的命令，它属于硬件；</li>
+<li><strong>宏指令：</strong> 由若干条机器指令组成的软件指令，它属于软件；</li>
+<li><strong>机器指令：</strong> 介于微指令与宏指令之间，通常简称为指令，每一条指令可完成一个独立的算术运算或逻辑运算操作。</li>
+</ul>
+<p><strong>本小节介绍的就是机器指令。</strong></p>
+<h3 id="指令系统的性能要求">指令系统的性能要求</h3>
+<ul>
+<li>完备性</li>
+<li>规整性</li>
+<li>有效性</li>
+<li>兼容性</li>
+</ul>
+<p>低级语言与高级语言的关系
+<a href="#R-image-433b4dd23b60a850da14ba195083f01e" class="lightbox-link"><img alt="tu18" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu18.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-433b4dd23b60a850da14ba195083f01e"><img alt="tu18" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu18.png"></a></p>
+<p>机器程序员看到的计算机属性就是指令系统体系结构，简称 <strong>ISA</strong>。</p>
+<h3 id="指令格式">指令格式</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作字段OP</th>
+          <th>地址码字段A</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>表示进行什么性质的操作，如+、-等</td>
+          <td>存储操作数的地址</td>
+      </tr>
+  </tbody>
+</table>
+<p>不同的指令用操作码字段的不同编码来表示，每一种编码代表一种指令。</p>
+<p>根据一条指令中有几个操作数地址，可将该指令称为几操作数指令或几地址指令。</p>
+<ul>
+<li>三地址指令</li>
+<li>二地址指令</li>
+<li>单地址指令</li>
+<li>零地址指令
+<table>
+  <thead>
+      <tr>
+          <th>地址码名称</th>
+          <th>操作码</th>
+          <th>地址块1</th>
+          <th>地址块2</th>
+          <th>地址块3</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>三地址指令</td>
+          <td>OP码</td>
+          <td><span class="math align-center">$A_1$</span></td>
+          <td><span class="math align-center">$A_2$</span></td>
+          <td><span class="math align-center">$A_3$</span></td>
+      </tr>
+      <tr>
+          <td>二地址指令</td>
+          <td>OP码</td>
+          <td><span class="math align-center">$A_1$</span></td>
+          <td><span class="math align-center">$A_2$</span></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>一地址指令</td>
+          <td>OP码</td>
+          <td><span class="math align-center">$A$</span></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>零地址指令</td>
+          <td>OP码</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+<h4 id="三地址指令">三地址指令</h4>
+<table>
+  <thead>
+      <tr>
+          <th>三地址指令</th>
+          <th>OP码</th>
+          <th><span class="math align-center">$A_1$</span></th>
+          <th><span class="math align-center">$A_2$</span></th>
+          <th><span class="math align-center">$A_3$</span></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>操作码</td>
+          <td>被操作数或源操作数地址</td>
+          <td>操作数或终点操作数地址</td>
+          <td>存放结果操作数地址</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>功能描述：
+<ul>
+<li>(A1) op(A2)→A3（把A1A2的结果存放到A3中）</li>
+<li>(PC) +1→PC（PC加1）</li>
+</ul>
+</li>
+</ul>
+<p>这种格式虽然省去了一个地址，但指令长度仍比较长，所以只在字长较长的大、中型机中使用，而小型、微型机中很少使用。</p>
+<h4 id="二地址指令双操作数指令">二地址指令（双操作数指令）</h4>
+<table>
+  <thead>
+      <tr>
+          <th>二地址指令</th>
+          <th>OP码</th>
+          <th><span class="math align-center">$A_1$</span></th>
+          <th><span class="math align-center">$A_2$</span></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>操作码</td>
+          <td>第一操作数</td>
+          <td>第二操作数</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>功能描述：
+<ul>
+<li>(A1) op(A2)→A1</li>
+<li>(PC)+1→PC</li>
+</ul>
+</li>
+<li>二地址指令在计算机中得到了广泛的应用，但是在使用时有一点必须注意：指令执行之后，A1中原存的内容已经被新的运算结果替换了。</li>
+</ul>
+<p>二地址地址根据操作数的物理位置分为：</p>
+<ul>
+<li>SS 存储器-存储器类型</li>
+<li>RS 寄存器-存储器类型</li>
+<li>RR 寄存器-寄存器类型
+RR到RS再到SS，指令执行会越来越慢，也就是说指令执行从内存某个单元到内存的另一个单元比较慢。</li>
+</ul>
+<h4 id="一地址指令">一地址指令</h4>
+<table>
+  <thead>
+      <tr>
+          <th>一地址指令</th>
+          <th>OP码</th>
+          <th><span class="math align-center">$A$</span></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>操作码</td>
+          <td>操作数</td>
+      </tr>
+  </tbody>
+</table>
+<p>功能描述：</p>
+<ul>
+<li>(AC) op(A1) →A1</li>
+<li>(PC)+1→PC</li>
+<li>单操作数运算指令，如“+1”、“-1”、“求反”</li>
+<li>指令中给出一个源操作数的地址</li>
+</ul>
+<h4 id="零地址指令">零地址指令</h4>
+<table>
+  <thead>
+      <tr>
+          <th>零地址指令</th>
+          <th>OP码</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>操作码</td>
+      </tr>
+  </tbody>
+</table>
+<p>功能：“停机”、“空操作”、“清除”等控制类指令。</p>
+<h4 id="指令字长度">指令字长度</h4>
+<p>概念</p>
+<ul>
+<li>指令字长度（一个指令字包含二进制代码的位数）</li>
+<li>机器字长：计算机能直接处理的二进制数据的位数。</li>
+<li>单字长指令</li>
+<li>半字长指令</li>
+<li>双字长指令</li>
+</ul>
+<p>多字长指令的优缺点</p>
+<ul>
+<li>
+<p>优点提供足够的地址位来解决访问内存任何单元的寻址问题 ；</p>
+</li>
+<li>
+<p>缺点必须两次或多次访问内存以取出一整条指令，降低了CPU的运算速度，又占用了更多的存储空间。</p>
+</li>
+<li>
+<p>指令系统中指令采用 <strong>等长指令</strong> 的优点：各种指令字长度是相等的，指令字结构简单，且指令字长度是不变的 ；</p>
+</li>
+<li>
+<p>采用 <strong>非等长指令</strong> 的的优点：各种指令字长度随指令功能而异，结构灵活，能充分利用指令长度，但指令的控制较复杂 。</p>
+</li>
+</ul>
+<h4 id="指令助记符">指令助记符</h4>
+<table>
+  <thead>
+      <tr>
+          <th>零地址指令</th>
+          <th>OP码</th>
+          <th>OP码</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>加法</td>
+          <td>ADD</td>
+          <td>001</td>
+      </tr>
+      <tr>
+          <td>减法</td>
+          <td>SUB</td>
+          <td>010</td>
+      </tr>
+      <tr>
+          <td>传送</td>
+          <td>MOV</td>
+          <td>011</td>
+      </tr>
+      <tr>
+          <td>跳转</td>
+          <td>JMP</td>
+          <td>100</td>
+      </tr>
+      <tr>
+          <td>转子</td>
+          <td>JSR</td>
+          <td>101</td>
+      </tr>
+      <tr>
+          <td>存数</td>
+          <td>STO</td>
+          <td>110</td>
+      </tr>
+      <tr>
+          <td>取数</td>
+          <td>LAD</td>
+          <td>111</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="操作数类型">操作数类型</h3>
+<ul>
+<li>地址数据:地址实际上也是一种形式的数据。（ <strong>类似指针</strong> ）</li>
+<li>数值数据:计算机中普遍使用的三种类型的数值数据。</li>
+<li>字符数据:文本数据或字符串，目前广泛使用ASCII码。</li>
+<li>逻辑数据:一个单元中有几位二进制bit项组成，每个bit的值可以是1或0。当数据以这种方式看待时，称为逻辑性数据。（类似布尔型）</li>
+</ul>
+<h3 id="指令和数据的寻址方式">指令和数据的寻址方式</h3>
+<p><span class="math align-center">$指令寻址方式=\begin{cases}顺序寻址\\跳跃寻址\end{cases}$</span>
+此处的跳跃寻址包含了选择和循环。</p>
+<h3 id="操作数基本寻址方式">操作数基本寻址方式</h3>
+<p>1、隐含寻址</p>
+<p><a href="#R-image-25b30828c10e2cf0c9d49e0f1f8f9c49" class="lightbox-link"><img alt="tu20" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu20.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-25b30828c10e2cf0c9d49e0f1f8f9c49"><img alt="tu20" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu20.png"></a></p>
+<ul>
+<li>指令中隐含着操作数的地址，比如隐藏累加器的地址，当该指令被执行时会执行累加器，但累加器的地址是没有表现在该指令上的。</li>
+<li>如某些运算，隐含了累加器AC作为源和目的寄存器</li>
+<li>如8086汇编中的STC指令，设置标志寄存器的C为1</li>
+</ul>
+<p>2、立即寻址</p>
+<p><a href="#R-image-bd25c596acc455ab24721c4d4d0e25da" class="lightbox-link"><img alt="tu21" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu21.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bd25c596acc455ab24721c4d4d0e25da"><img alt="tu21" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu21.png"></a></p>
+<p>指令的地址指出的不是操作数地址，而是操作数本身。比如</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>,y<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> z<span style="color:#f92672">=</span>x<span style="color:#f92672">+</span>y;</span></span></code></pre></div>
+<p>在上面这个例子中，执行加法的时候x,y不是6和7的地址，而是6和7本身；</p>
+<p>3、直接寻址</p>
+<p><a href="#R-image-c9cabe6c5b21d34a4f688901f73534fb" class="lightbox-link"><img alt="tu22" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu22.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c9cabe6c5b21d34a4f688901f73534fb"><img alt="tu22" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu22.png"></a></p>
+<p>在指令格式中的地址上指出操作数在内存中的地址。其实这很像数组，例如</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1&#39;</span>;<span style="color:#75715e">//地址为5673
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> cha[]<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;x&#39;</span>};<span style="color:#75715e">//地址为2341
+</span></span></span></code></pre></div>
+<p>我们在使用cha[0]的时候,地址2341指向的就是1的地址5673，一个地址指向另一个地址。</p>
+<p>4、间接寻址</p>
+<p><a href="#R-image-a4c9895c139ece42e63d95dadc099a5c" class="lightbox-link"><img alt="tu23" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu23.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4c9895c139ece42e63d95dadc099a5c"><img alt="tu23" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu23.png"></a></p>
+<p>类似二维数组</p>
+<p>5、寄存器寻址</p>
+<p><a href="#R-image-a01304a8317966013bc4a961dd7452f3" class="lightbox-link"><img alt="tu24" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu24.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a01304a8317966013bc4a961dd7452f3"><img alt="tu24" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu24.png"></a></p>
+<p>当操作数不在内存而是在CPU的寄存器中时使用这个寻址方式</p>
+<p>6、寄存器简介寻址</p>
+<p><a href="#R-image-95d627c21e835fe1df43073d0fe1c553" class="lightbox-link"><img alt="tu25" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu25.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-95d627c21e835fe1df43073d0fe1c553"><img alt="tu25" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu25.png"></a></p>
+<p>操作数不在寄存器中，而是在寄存器地址所知的位置，比如内存（类似二维数组）</p>
+<p>7、偏移寻址</p>
+<p><a href="#R-image-59f45aa63072eaeaede41abfa0b34746" class="lightbox-link"><img alt="tu26" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu26.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-59f45aa63072eaeaede41abfa0b34746"><img alt="tu26" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu26.png"></a></p>
+<p>类似于数组中，数组下标的变化会对应不同的地址上的值，下标的变化可以理解为加了某一个偏移量而产生改变。</p>
+<p>下面介绍三种不同的偏移寻址，他们的不同我觉得就是使用的寄存器不一样，本质上都是地址加了偏移量后找到第二个地址，再通过第二个地址上的值进行操作。</p>
+<p>7.1 相对寻址</p>
+<p>使用的是程序计数器（CP），CP作为原始地址，EA=A+（CP）</p>
+<p>7.2 基址寻址</p>
+<p><a href="#R-image-efc82ee03c7727c6ae6124f2652898e5" class="lightbox-link"><img alt="tu27" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu28.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-efc82ee03c7727c6ae6124f2652898e5"><img alt="tu27" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu28.png"></a></p>
+<p>使用存储器地址，作为原始地址，</p>
+<p>7.3 变址寻址</p>
+<p><a href="#R-image-1e47475a8fe7d11e9d9c8d72e84b7e10" class="lightbox-link"><img alt="tu28" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu29.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1e47475a8fe7d11e9d9c8d72e84b7e10"><img alt="tu28" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu29.png"></a></p>
+<p>就是将指令的地址码部分给出的基准地址A与CPU内某特定的变址寄存器Rx中的内容相加，以形成操作数的有效地址。</p>
+<p>8、分寄存器堆栈、存储器堆栈以先进后出原理存储数据
+<a href="#R-image-b10163923e1ea2b8b59776cc0389403e" class="lightbox-link"><img alt="tu27" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu27.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b10163923e1ea2b8b59776cc0389403e"><img alt="tu27" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu27.png"></a></p>
+<p>9、段寻址方式</p>
+<p>存储空间划分为多段
+<a href="#R-image-a4f7e1d4708186c301ae9f349a7be3d2" class="lightbox-link"><img alt="tu30" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu30.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4f7e1d4708186c301ae9f349a7be3d2"><img alt="tu30" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu30.png"></a></p>
+<h3 id="典型的指令">典型的指令</h3>
+<ul>
+<li>数据处理</li>
+<li>数据存储</li>
+<li>数据传送</li>
+<li>程序控制</li>
+</ul>
+<ol>
+<li>数据传送指令</li>
+<li>算术运算指令</li>
+<li>逻辑运算指令</li>
+<li>程序控制指令</li>
+<li>输入输出指令</li>
+<li>字符串处理指令</li>
+<li>特权指令</li>
+</ol>
+<h2 id="中央处理器">中央处理器</h2>
+<p>冯诺一曼机的运算器与控制器是分开的，二现今这两个是设计在同一块芯片上，成为 <strong>CPU</strong> ，而单片机就是 <strong>CPU+存储器</strong>。</p>
+<h3 id="cpu的功能和组成">CPU的功能和组成</h3>
+<h4 id="cpu的功能">CPU的功能</h4>
+<p>取指令，执行指令</p>
+<ul>
+<li>指令控制。程序的<strong>顺序控制</strong> 。</li>
+<li>操作控制。控制指令的取出与执行。</li>
+<li>时间控制。对操作实施时间上的定时。</li>
+<li>数据加工。例如算数运算和逻辑运算</li>
+</ul>
+<h4 id="cpu的组成">CPU的组成</h4>
+<p><a href="#R-image-7b2292b3ad109c8a3521cda1fd926f01" class="lightbox-link"><img alt="tu31" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu31.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7b2292b3ad109c8a3521cda1fd926f01"><img alt="tu31" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu31.png"></a>
+中央处理器CPU = 运算器 + cache + 控制器</p>
+<h5 id="运算器">运算器</h5>
+<ul>
+<li>ALU：算术逻辑运算单元</li>
+<li>通用寄存器：R0～R3</li>
+<li>数据缓冲寄存器：DR</li>
+<li>程序状态字寄存器：PSWR</li>
+</ul>
+<h5 id="控制器">控制器</h5>
+<p>程序计数器、指令寄存器、时序发生器、操作控制寄存器；</p>
+<ul>
+<li>程序计数器PC(Programming Counter)
+<ul>
+<li>用来存放正在执行的指令的地址或接着将要执行的下一条指令的地址。</li>
+<li><strong>顺序执行</strong> 时，每执行一条指令，PC的值应 <strong>加1</strong></li>
+<li>要改变程序执行顺序的情况时，一般由转移类指令将转移目标地址送往PC ，可实现程序的转移。</li>
+</ul>
+</li>
+<li>指令寄存器IR(Instruction Register)
+<ul>
+<li>指令寄存器用来存放从存储器中 <strong>取出的待执行的指令</strong>。</li>
+<li>在执行该指令的过程中，指令寄存器的内容不允许发生变化，以保证实现指令的全部功能。</li>
+</ul>
+</li>
+</ul>
+<h3 id="重要的寄存器">重要的寄存器</h3>
+<ul>
+<li>数据缓冲寄存器（DP）：暂时存放ALU（算术逻辑运算单元）运算结果，或或有数据寄存器读出的数据字，或外部接口的数据字。
+<a href="#R-image-4514e553106df861c2b6844c4f711436" class="lightbox-link"><img alt="tu32" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu32.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4514e553106df861c2b6844c4f711436"><img alt="tu32" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu32.png"></a></li>
+<li>指令寄存器(IR)：用来保存当前正在执行的第一条指令</li>
+<li>程序计数器(PC)：总是保持将要执行的下一条指令，绝大多数是顺序程序，所以修改过程中通常是简单的PC加1.</li>
+<li>数据地址寄存器(AR)用来保存当前CPU所访问的数据存储单元的地址。</li>
+<li>通用寄存器(R0～R3)：存常用的指令，</li>
+<li>状态字寄存器(PSW)：保存有算术运算或逻辑运算或测试结果产生的更重条件代码，简而言之就是存储一些运算的结果，比如进位、溢出、零标志、负标志等</li>
+</ul>
+<h3 id="指令周期">指令周期</h3>
+<p><a href="#R-image-4aa631f90b7184afbce14dd0a1210ebe" class="lightbox-link"><img alt="tu23" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu33.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4aa631f90b7184afbce14dd0a1210ebe"><img alt="tu23" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/tu33.png"></a>
+指令周期由若干个CPU周期数表示，CPU周期又称为机器周期，在一些系统中称机器周期为时钟周期。</p>
+<p>指令周期又分为取指令周期与执行指令周期</p>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>也被称为电脑，或者电子计算机。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年1月10日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">F1-复习资料</a></li>
+    <li><a class="term-link" href="../../categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/">Z-专业课</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script>
+      window.MathJax = Object.assign( window.MathJax || {}, {
+        tex: {
+          inlineMath:  [['\\(', '\\)'], ['$',  '$']],  
+          displayMath: [['\\[', '\\]'], ['$$', '$$']], 
+        },
+        options: {
+          enableMenu: false 
+        }
+      }, JSON.parse("{}") );
+    </script>
+    <script id="MathJax-script" async src="../../js/mathjax/tex-mml-chtml.js?1743924698"></script>
+    <script src="../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

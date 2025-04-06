@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="物联网结构系统与传统网路系统的区别
+前者由三个部分构成
+信息物品 自主网络 智能应用 需求分析 基本概念 需求规格说明：开发、测试、质量保证、项目管理以及相关的项目功能等地方都有重要的作用">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="物联网应用系统设计 :: Maloudown">
+    <meta name="twitter:description" content="物联网结构系统与传统网路系统的区别
+前者由三个部分构成
+信息物品 自主网络 智能应用 需求分析 基本概念 需求规格说明：开发、测试、质量保证、项目管理以及相关的项目功能等地方都有重要的作用">
+    <meta property="og:url" content="http://localhost:1313/class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="物联网应用系统设计 :: Maloudown">
+    <meta property="og:description" content="物联网结构系统与传统网路系统的区别
+前者由三个部分构成
+信息物品 自主网络 智能应用 需求分析 基本概念 需求规格说明：开发、测试、质量保证、项目管理以及相关的项目功能等地方都有重要的作用">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="课程">
+    <meta property="article:published_time" content="2024-05-27T14:56:07+08:00">
+    <meta property="article:modified_time" content="2024-05-27T14:56:07+08:00">
+    <meta property="article:tag" content="物联网应用系统设计">
+    <meta property="article:tag" content="物联网">
+    <meta property="article:tag" content="STM32">
+    <meta property="article:tag" content="ESP8266">
+    <meta itemprop="name" content="物联网应用系统设计 :: Maloudown">
+    <meta itemprop="description" content="物联网结构系统与传统网路系统的区别
+前者由三个部分构成
+信息物品 自主网络 智能应用 需求分析 基本概念 需求规格说明：开发、测试、质量保证、项目管理以及相关的项目功能等地方都有重要的作用">
+    <meta itemprop="datePublished" content="2024-05-27T14:56:07+08:00">
+    <meta itemprop="dateModified" content="2024-05-27T14:56:07+08:00">
+    <meta itemprop="wordCount" content="5681">
+    <meta itemprop="keywords" content="物联网应用系统设计,物联网,STM32,ESP8266">
+    <title>物联网应用系统设计 :: Maloudown</title>
+    <link href="http://localhost:1313/class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" rel="canonical" type="text/html" title="物联网应用系统设计 :: Maloudown">
+    <link href="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/index.xml" rel="alternate" type="application/rss+xml" title="物联网应用系统设计 :: Maloudown">
+    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1\/';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#需求分析">需求分析</a>
+      <ul>
+        <li><a href="#基本概念">基本概念</a></li>
+        <li><a href="#需求分析过程">需求分析过程</a></li>
+        <li><a href="#需求管理">需求管理</a></li>
+      </ul>
+    </li>
+    <li><a href="#需求分析任务">需求分析任务</a></li>
+    <li><a href="#设计概要">设计概要</a>
+      <ul>
+        <li><a href="#任务">任务</a></li>
+        <li><a href="#概要设计原则">概要设计原则</a></li>
+      </ul>
+    </li>
+    <li><a href="#网络结构的基本拓扑结构">网络结构的基本拓扑结构</a>
+      <ul>
+        <li><a href="#拓扑结构的类型和使用选择">拓扑结构的类型和使用选择</a></li>
+      </ul>
+    </li>
+    <li><a href="#表示工具">表示工具</a>
+      <ul>
+        <li><a href="#流程图">流程图</a></li>
+        <li><a href="#问题分析图">问题分析图</a></li>
+        <li><a href="#合图">合图</a></li>
+        <li><a href="#层次图">层次图</a></li>
+      </ul>
+    </li>
+    <li><a href="#概要设计与详细设计的区别">概要设计与详细设计的区别</a></li>
+    <li><a href="#接口设计">接口设计</a></li>
+    <li><a href="#工厂方法模式">工厂方法模式</a></li>
+    <li><a href="#拓扑控制中考虑的设计目标和相关概念-覆盖">拓扑控制中考虑的设计目标和相关概念-覆盖</a></li>
+    <li><a href="#manet路由协议按需路由协议也是一种算法">MANET路由协议——按需路由协议（也是一种算法）</a></li>
+    <li><a href="#无线传感网络选择">无线传感网络选择</a></li>
+    <li><a href="#无线体域网">无线体域网</a>
+      <ul>
+        <li><a href="#wban采集人体生理信息的过程">WBAN采集人体生理信息的过程</a></li>
+      </ul>
+    </li>
+    <li><a href="#系统集成">系统集成</a></li>
+    <li><a href="#软件测试的方法">软件测试的方法</a></li>
+    <li><a href="#静态测试">静态测试</a></li>
+    <li><a href="#动态测试">动态测试</a></li>
+    <li><a href="#集成测试">集成测试</a></li>
+    <li><a href="#mqtt协议概述">MQTT协议概述</a></li>
+    <li><a href="#传输品质qos">传输品质QoS</a></li>
+    <li><a href="#mqttlens订阅以及发布消息">MQTTLens订阅以及发布消息</a></li>
+    <li><a href="#综合实验局域网内手机通信">综合实验——局域网内手机通信</a>
+      <ul>
+        <li><a href="#实现的功能">实现的功能</a></li>
+      </ul>
+    </li>
+    <li><a href="#实验三">实验三</a></li>
+    <li><a href="#实验十">实验十</a></li>
+    <li><a href="#关于stm32工程代码的几点说明">关于STM32工程代码的几点说明</a></li>
+    <li><a href="#温度读取流程">温度读取流程</a></li>
+    <li><a href="#在智慧大棚中采集温度值或者是光照值应该">在智慧大棚中采集温度值或者是光照值应该</a></li>
+    <li><a href="#根据土壤情况进行自动灌溉">根据土壤情况进行自动灌溉</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">物联网应用系统设计</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="嵌入式系统设计知识点 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/16.%E8%80%83%E8%AF%95%E7%B1%BB/" title="考试类 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/esp8266/">ESP8266</a></li>
+    <li><a class="term-link" href="../../tags/stm32/">STM32</a></li>
+    <li><a class="term-link" href="../../tags/%E7%89%A9%E8%81%94%E7%BD%91/">物联网</a></li>
+    <li><a class="term-link" href="../../tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/">物联网应用系统设计</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="物联网应用系统设计">物联网应用系统设计</h1>
+
+<p>物联网结构系统与传统网路系统的区别</p>
+<p><a href="#R-image-8fc24fd117c068192cd960031bbe920a" class="lightbox-link"><img alt="1716688211399" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/images/index/1716688211399.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8fc24fd117c068192cd960031bbe920a"><img alt="1716688211399" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/images/index/1716688211399.png"></a></p>
+<p>前者由三个部分构成</p>
+<ul>
+<li>信息物品</li>
+<li>自主网络</li>
+<li>智能应用</li>
+</ul>
+<h2 id="需求分析">需求分析</h2>
+<h3 id="基本概念">基本概念</h3>
+<p><a href="#R-image-8ba7c52a6c5c785ff9884a5cefe79d68" class="lightbox-link"><img alt="1716688246145" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/images/index/1716688246145.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ba7c52a6c5c785ff9884a5cefe79d68"><img alt="1716688246145" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/images/index/1716688246145.png"></a></p>
+<p>需求规格说明：开发、测试、质量保证、项目管理以及相关的项目功能等地方都有重要的作用</p>
+<p>需求：功能、性能 、行为、设计约束等方面的期望</p>
+<p>需求分析：对要解决的问题的详细分析说明，弄清问题的需求</p>
+<h3 id="需求分析过程">需求分析过程</h3>
+<p>获取用户需求——分析用户需求——编写需求文档——评审需求分析</p>
+<h3 id="需求管理">需求管理</h3>
+<p>一、需求管理开发与需求管理的界限</p>
+<p><a href="#R-image-81cdd47dfb9797f43f973139b327c5c9" class="lightbox-link"><img alt="1716688269268" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/images/index/1716688269268.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-81cdd47dfb9797f43f973139b327c5c9"><img alt="1716688269268" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/images/index/1716688269268.png"></a></p>
+<p>需求开发中编写的需求文档数据来自于市场、用户、管理，以基准需求说明为界限，需求管理从这个文档中获取开发信息，通过市场等变动修改这个文档。</p>
+<h2 id="需求分析任务">需求分析任务</h2>
+<p>1。确定系统运行环境</p>
+<p>硬件环境的要求：外存种类、数据的输入方式、数据通信接口；</p>
+<p>软件环境的需求：哪一种操作系统、数据库系统；</p>
+<p>2。系统性能需求</p>
+<p>数据输入系统后系统多久可以可以做出反应；</p>
+<p>3。系统功能</p>
+<p>确定目标系统的所有功能</p>
+<h2 id="设计概要">设计概要</h2>
+<h3 id="任务">任务</h3>
+<p>根据需求文档确定系统的整体结构，设计其中硬件结构、软件结构和数据结构</p>
+<ul>
+<li>硬件结构：确定系统功能对应的硬件环境，以及硬件之间的关系；</li>
+<li>软件结构：将一个复杂系统按照功能进行模块划分，建立模块的层次结构以及调用关系，确定模块之间的接口以及人机界面</li>
+<li>数据结构：数据特征描述、确定数据结构特点何人数据库的设计</li>
+</ul>
+<h3 id="概要设计原则">概要设计原则</h3>
+<p>抽象： <strong>抽象就是抽出事物的本质特征，而暂时不考虑细节。它允许我们定义一个操作的步骤，而不需要立即知道这些步骤是如何执行的。</strong></p>
+<p>抽样方法：</p>
+<ul>
+<li>（1）过程抽象</li>
+</ul>
+<p>过程抽象关注的是操作的序列，而不是具体实现的细节。它允许我们定义一个操作的步骤，而不需要立即知道这些步骤是如何执行的。</p>
+<p><strong>举例</strong>： 假设我们要设计一个软件来管理图书馆的借书和还书过程。过程抽象可能包括以下步骤：</p>
+<ul>
+<li>用户登录</li>
+<li>查询书籍</li>
+<li>借书</li>
+<li>还书</li>
+<li>用户登出</li>
+</ul>
+<p>在这个抽象级别，我们不需要知道用户如何登录（比如是通过用户名和密码，还是通过社交媒体账号），也不需要知道查询书籍的具体算法。我们只是定义了需要执行的操作序列。</p>
+<ul>
+<li>（2）数据抽象</li>
+</ul>
+<p>数据抽象关注的是数据的结构和行为，而不是数据的具体表示。它允许我们定义数据类型和操作，而隐藏了数据的内部细节。</p>
+<p><strong>举例</strong>： 考虑一个银行账户系统。数据抽象可能包括以下定义：</p>
+<ul>
+<li>账户类型（如储蓄账户、支票账户）</li>
+<li>账户操作（如存款、取款、转账）</li>
+<li>账户属性（如账户号码、账户余额、账户持有人）</li>
+</ul>
+<p>在这个抽象级别，我们定义了账户是什么以及可以对账户执行哪些操作，但我们不需要知道账户数据是如何存储的（比如是在数据库中，还是在内存中）。</p>
+<ul>
+<li>（3）控制抽象</li>
+</ul>
+<p>控制抽象关注的是程序的控制流，而不是具体的控制机制。它允许我们定义程序的执行路径，而不需要立即知道控制流的具体实现。</p>
+<p><strong>举例</strong>： 假设我们正在设计一个交通信号灯控制系统。控制抽象可能包括以下逻辑：</p>
+<ul>
+<li>红灯亮起</li>
+<li>等待一定时间</li>
+<li>黄灯闪烁</li>
+<li>绿灯亮起</li>
+<li>等待一定时间后返回到红灯</li>
+</ul>
+<p>在这个抽象级别，我们定义了信号灯变化的顺序，但我们不需要知道具体的计时机制或者信号灯是如何被激活的。控制抽象允许我们专注于信号灯变化的逻辑，而不是实现细节。</p>
+<h2 id="网络结构的基本拓扑结构">网络结构的基本拓扑结构</h2>
+<h3 id="拓扑结构的类型和使用选择">拓扑结构的类型和使用选择</h3>
+<p>按照组网方式和组网形态：</p>
+<ul>
+<li>集中式</li>
+<li>分布式</li>
+<li>混合式</li>
+<li>网状式</li>
+</ul>
+<p>按照节点和结构层次</p>
+<ul>
+<li>平面网络结构</li>
+<li>分级网络结构</li>
+<li>混合网络结构</li>
+<li>Mesh网络结构</li>
+</ul>
+<h2 id="表示工具">表示工具</h2>
+<h3 id="流程图">流程图</h3>
+<ol>
+<li>
+<p>基本成分</p>
+<ul>
+<li>处理；</li>
+<li>判断条件；</li>
+<li>控制流。</li>
+</ul>
+</li>
+<li>
+<p>基本的控制结构</p>
+<ul>
+<li>顺序型；</li>
+<li>选择型；</li>
+<li>先判断（While）型循环；</li>
+<li>后判断（Until）型循环；</li>
+<li>多情况（Case）选择型。</li>
+</ul>
+</li>
+<li>
+<p>优点
+对控制流程的描绘直观、清晰，易于学习掌握。</p>
+</li>
+<li>
+<p>缺点</p>
+<ul>
+<li>诱使程序员过早地考虑程序的控制流程，而不去考虑程序的全局结构；</li>
+<li>用箭头代表控制流，可以完全不顾结构程序设计的思想，随意转移控制；</li>
+<li>不易表示数据结构；</li>
+<li>修改麻烦。</li>
+</ul>
+</li>
+</ol>
+<h3 id="问题分析图">问题分析图</h3>
+<p><a href="#R-image-203350df3c1ed1708a97127ab0e9a21a" class="lightbox-link"><img alt="1716690626234" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/images/index/1716690626234.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-203350df3c1ed1708a97127ab0e9a21a"><img alt="1716690626234" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/images/index/1716690626234.png"></a></p>
+<h3 id="合图">合图</h3>
+<p><a href="#R-image-044abce187dd208a3f310e2abdf8e315" class="lightbox-link"><img alt="1716690895413" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/images/index/1716690895413.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-044abce187dd208a3f310e2abdf8e315"><img alt="1716690895413" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/images/index/1716690895413.png"></a></p>
+<p>优点</p>
+<ul>
+<li>功能明确，可以一眼看出来；</li>
+<li>没有箭头，无法随意转移控制；</li>
+<li>很容易确定局部和全局的作用域；</li>
+<li>很容易表示嵌套关系，也可以表示模块的参差结构</li>
+<li>强制让设计人员按照结程序设计描述方案；</li>
+<li>图形直观。容易理解设计意图</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>当分支嵌套较多时较麻烦，有时候在一页纸上很难画下来；</li>
+<li>画图麻烦修改麻烦</li>
+</ul>
+<h3 id="层次图">层次图</h3>
+<p><a href="#R-image-7cee380c06499a356d6a8317cf4021c2" class="lightbox-link"><img alt="666" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7cee380c06499a356d6a8317cf4021c2"><img alt="666" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image.png"></a></p>
+<h2 id="概要设计与详细设计的区别">概要设计与详细设计的区别</h2>
+<ul>
+<li>概要设计通常得到软件结构图</li>
+<li>详细设计常用的描述方式（常用的图）：
+<ul>
+<li><a href="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/#问题分析图">流程图</a>、</li>
+<li><a href="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/#合图">N-S图</a>、</li>
+<li><a href="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/#问题分析图">PAD图</a>、</li>
+<li>过程设计语言（PLD），又称伪代码。</li>
+</ul>
+</li>
+</ul>
+<p>注：伪代码——伪代码是一种非正式的、类似编程语言的描述方式，它用于描述算法的逻辑流程而不涉及具体的编程语言细节。伪代码使得设计者可以在不编写实际代码的情况下表达算法和程序结构。</p>
+<h2 id="接口设计">接口设计</h2>
+<p>外部接口：外部用户、软/硬环境与软件系统的接口；
+内部系统：已划分出的模块间接口。</p>
+<h2 id="工厂方法模式">工厂方法模式</h2>
+<p>为创建对象提供过度接口，以便将创建对象的具体过程屏蔽隔离起来，达到提高灵活性的目的</p>
+<p>工厂模式在《java与模式》中分为：</p>
+<ul>
+<li>简单工厂模式</li>
+<li>工厂方法模式</li>
+<li>抽象工厂模式</li>
+</ul>
+<h2 id="拓扑控制中考虑的设计目标和相关概念-覆盖">拓扑控制中考虑的设计目标和相关概念-覆盖</h2>
+<p>覆盖可以理解为对传感器网络质量的度量
+覆盖可以分为：</p>
+<ul>
+<li>区域覆盖：研究对目标区域的覆盖（监测）问题；</li>
+<li>点覆盖：研究离散的目标覆盖问题；</li>
+<li>栅栏覆盖：研究运动穿过网络部署区域被发现的概率问题。</li>
+</ul>
+<h2 id="manet路由协议按需路由协议也是一种算法">MANET路由协议——按需路由协议（也是一种算法）</h2>
+<p>TORA(temporally ordered routing alorithm)协议是临时按需路由协议，是一种有向环基础上提出的基于路由反转的自适应分布式路由算法。</p>
+<p>作为一个有源端发起的按需路由，它可以找到从源头到目的节点的多条路由，当网络拓扑发生改变时，控制消息在改变的拓扑结构范围内传播，节点只需要维护相邻节点的路由信息；</p>
+<p>协议由路由建立、路由维护、路由拆除三部分组成。</p>
+<h2 id="无线传感网络选择">无线传感网络选择</h2>
+<ul>
+<li>选择有线还是无线</li>
+<li>选择专利还是标准化无线方案</li>
+<li>无线标准
+<ul>
+<li>GPRS</li>
+<li>Wi-Fi</li>
+<li>蓝牙</li>
+<li>ZigBee</li>
+</ul>
+</li>
+<li>无线网络拓扑结构</li>
+</ul>
+<h2 id="无线体域网">无线体域网</h2>
+<p>WBAN由三部分组成：</p>
+<ul>
+<li>植入或佩戴于人体的<strong>网络神经</strong>，</li>
+<li>作为通信枢纽的<strong>汇聚节点</strong>，</li>
+<li>负责信息处理和控制整个网络的<strong>上位机监控系统</strong>。</li>
+</ul>
+<h3 id="wban采集人体生理信息的过程">WBAN采集人体生理信息的过程</h3>
+<ol>
+<li>某一种生理信号传感器和无线收发装置能够构成一个网络节点，各个节点分布式的分布在人体上，构成局域网。</li>
+<li>网络节点在上位机电脑和汇聚节点的指令下收集人体生理信息，将收集到的信息通过汇聚节点传输到上位机电脑。</li>
+</ol>
+<h2 id="系统集成">系统集成</h2>
+<ul>
+<li>
+<p>系统集成式指综合分布先系统和计算机网络技术，将各个分离的设备、功能和信息等集成到相互关联、统一和协调的系统之中，以达到资源充分共享，实现集中、高效、便利的管理。</p>
+</li>
+<li>
+<p>系统集成采用功能集成、网络集成、软件界面集成等多种集成技术；</p>
+</li>
+<li>
+<p>系统集成的关键在于解决系统之间互联和互操作性的问题，它是一个对厂商、多协议和面向各种应用的结构系统</p>
+</li>
+</ul>
+<p>简而言之，就是把分散的东西集成到一起，使得它们之间可以相互通信共享数据的一种技术。</p>
+<h2 id="软件测试的方法">软件测试的方法</h2>
+<ul>
+<li>黑盒测试，</li>
+<li>白盒测试</li>
+<li>灰盒测试。</li>
+</ul>
+<h2 id="静态测试">静态测试</h2>
+<p>不执行代码。主要对编程格式、结构等方面进行评估并发现存在的错误。</p>
+<p>优点：</p>
+<ul>
+<li>不必动态地运行代码，不必设计测试用例，不用判断测试结果；</li>
+<li><strong>可以由人工进行，充分发挥人的逻辑思维优势，检查出错误的水平很高</strong>；</li>
+<li>不需要特别条件，容易开展。</li>
+</ul>
+<p>具体步骤：</p>
+<ul>
+<li>代码审查</li>
+<li>代码走查</li>
+<li>桌面检查</li>
+</ul>
+<p>其他步骤（查看PPT）</p>
+<p><a href="#R-image-445cdc67526bc0042833462397c64d6a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-445cdc67526bc0042833462397c64d6a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-1.png"></a></p>
+<h2 id="动态测试">动态测试</h2>
+<p>通过运行软件来检查软件的动态行为和运行结果是否正确的方法。</p>
+<p>特点：</p>
+<ul>
+<li>运行被测程序，取得程序运行的真实情况和动态情况，在进行打分；</li>
+<li><strong>必须生成测试数据来运行程序，测试质量依赖于测试数据</strong>；</li>
+<li>生成测试数据、分析测试结果的工作量大，展开测试费时、费力；</li>
+<li><strong>动态测试中涉及多方面的工作，人员多、设备多、数据多、要求有较好的管理和工程规划</strong>；</li>
+</ul>
+<p>（1） 功能确认与接口测试
+（2） 覆盖率分析
+（3） 性能分析
+（4） 内存分析</p>
+<h2 id="集成测试">集成测试</h2>
+<p>集成测试也称为组装测试或综合测试，在单元测试的基础上，将模块按照设计要求组装成子系统或系统，进行集成测试。</p>
+<p>制定集成测试计划——设计集成测试——实施集成测试——评估集成模块</p>
+<p>集成测试完成标准：</p>
+<ul>
+<li>成功执行了测试计划中规定的所有集成测试；</li>
+<li><strong>修整了发现的错误；</strong></li>
+<li>测试结果通过了专门小组的评审。</li>
+</ul>
+<hr>
+<p><strong>MQTT和HTTP的底层都是TCP/IP，也就是物联网装置可以沿用既有的网路架构和设备，只是在网路上流通的「讯息格式」以及应用程式的处理机制不同.</strong></p>
+<hr>
+<h2 id="mqtt协议概述">MQTT协议概述</h2>
+<p><a href="#R-image-7739b419ef555c4a2caa20b311c8f80d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7739b419ef555c4a2caa20b311c8f80d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-2.png"></a>
+MQTT不同于HTTP标头采用文字描述，而是采用数字编码，整个长度只占2位元组，等同两个字元，后面跟着讯息的主题（topic）和内容（payload），格式如下：</p>
+<table>
+   <tr>
+        <td></td> 
+        <td></td> 
+        <td></td> 
+        <td></td>
+        <td></td> 
+        <td></td> 
+        <td></td> 
+        <td></td>
+   </tr>
+    <tr>
+        <td colspan="4">讯息类型</td> 
+        <td colspan="1">DUP(是否为副本)</td> 
+        <td colspan="2">QoP(传输品质)</td> 
+        <td colspan="1">R(是否保留)</td>
+   </tr>
+   <tr>
+        <td>0</td> 
+        <td>0</td> 
+        <td>1</td> 
+        <td>1</td>
+        <td>0</td> 
+        <td>0</td> 
+        <td>0</td> 
+        <td>0</td>
+   </tr>
+    <tr>
+      <td colspan="8">剩余资料长度</td>    
+    </tr>
+</table>
+<p><a href="#R-image-349e6106975b0e46aedfaf3ff7f94569" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-349e6106975b0e46aedfaf3ff7f94569"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-4.png"></a></p>
+<p><a href="#R-image-f087104776357089a76b8b7d85b6d21a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f087104776357089a76b8b7d85b6d21a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-5.png"></a></p>
+<h2 id="传输品质qos">传输品质QoS</h2>
+<p>传输品质QoS表示发布者与代理人（订阅者）之间数据传输的品质。</p>
+<table>
+  <thead>
+      <tr>
+          <th>传输品质 QoS</th>
+          <th>说明</th>
+          <th>阿里云IOT</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>QoS=0</td>
+          <td>最多传输一次，可能收不到</td>
+          <td>支持</td>
+      </tr>
+      <tr>
+          <td>QoS=1</td>
+          <td>最少传输一次可能会重传</td>
+          <td>支持</td>
+      </tr>
+      <tr>
+          <td>QoS=2</td>
+          <td>有且仅有一次传输</td>
+          <td>不支持</td>
+      </tr>
+  </tbody>
+</table>
+<p>注：<strong>MosQuito全都支持</strong></p>
+<h2 id="mqttlens订阅以及发布消息">MQTTLens订阅以及发布消息</h2>
+<p>订阅者可以透过下列三个叙述订阅多个主题：
+<a href="#R-image-d338d4b9365454e7a0737a6d0a20d80b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d338d4b9365454e7a0737a6d0a20d80b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-5.png"></a>
+结合上面这张图来理解</p>
+<p>1.假设订阅者要订阅温度，温度可以来自主题A（yard），主题B(soil)，主题C（Tool）。</p>
+<p>订阅某个属性的信息</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>   home<span style="color:#f92672">/+/</span>DHT11
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">+</span><span style="color:#960050;background-color:#1e0010">号内容可以是</span>yard<span style="color:#960050;background-color:#1e0010">，</span>soil可以写为
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>yard<span style="color:#f92672">/</span>DHT11
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>soil<span style="color:#f92672">/</span>DHT11
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#960050;background-color:#1e0010">但不可以写为：</span>
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>yard<span style="color:#f92672">/</span>pond<span style="color:#f92672">/</span>DHT11
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>soil<span style="color:#f92672">/</span>DHT11<span style="color:#f92672">/</span>Temp</span></span></code></pre></div>
+<p>订阅三个主题</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>   home<span style="color:#f92672">/+/+</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#960050;background-color:#1e0010">包含三个主题，具体如下</span>
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>yard<span style="color:#f92672">/</span>DHT11
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>soil<span style="color:#f92672">/</span>DHT11
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>Tool<span style="color:#f92672">/</span>RID</span></span></code></pre></div>
+<p>订阅某个主题的所有属性</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>yard<span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">#</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#960050;background-color:#1e0010">包含三个主题，具体如下</span>
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>yard<span style="color:#f92672">/</span>DHT11
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>yard<span style="color:#f92672">/</span>pond<span style="color:#f92672">/</span>DHT11
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>yard<span style="color:#f92672">/</span>DHT11<span style="color:#f92672">/</span>temp
+</span></span><span style="display:flex;"><span>   home<span style="color:#f92672">/</span>yard<span style="color:#f92672">/</span>DHT11<span style="color:#f92672">/</span>humi</span></span></code></pre></div>
+<p>在上面的代码中所写的#号表示订阅所有的主题，在使用时注意下面的写法是无效的：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>home<span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#f92672">/</span>DHT11 <span style="color:#75715e">//无效
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>home<span style="color:#f92672">/</span>yard<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#75715e">//无效
+</span></span></span></code></pre></div>
+<h2 id="综合实验局域网内手机通信">综合实验——局域网内手机通信</h2>
+<p>创建AP接入点、TCP服务器，通过手机连接ESP8266模块控制STM32开发板上的LED和蜂鸣器；</p>
+<h3 id="实现的功能">实现的功能</h3>
+<p>(1)STM32控制ESP8266模块创建AP接入点。</p>
+<p>(2)STM32控制ESP8266创建TCP服务器。</p>
+<p>(3)通过手机的软件连接ESP8266模块的TCP服务器。</p>
+<p>(4)手机上可以通过WIFI模块控制STM32开发板的LED1、LED2、LED3和蜂鸣器。</p>
+<p>(5)手机上可以看到STM32上传的温度和湿度。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">//ESP8266初始化
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//Esp8266Mode:WIFI模块的工作模式，STA和AP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//ssid:要生成或者接入的SSID名字，如果已经一键配网，要写NULL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//password:对应SSID的密码，如果已经一键配网，要写NULL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//ip:如果要设置静态IP，要写对应的IP，否则写NULL。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>u8 <span style="color:#a6e22e">ESP8266_init</span>(u8 Esp8266Mode, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>ssid,<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>password, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>ip)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    u8 i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">memset</span>(esp8266.sta_ip,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">memset</span>(esp8266.ap_ip,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(Esp8266Mode<span style="color:#f92672">==</span>ESP8266_MODE_STA)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        esp8266.mode<span style="color:#f92672">=</span>ESP8266_MODE_STA;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//STA模式有可能通过了一键配网模式得到了SSID和PSW
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(ssid<span style="color:#f92672">!=</span>NULL) <span style="color:#a6e22e">sprintf</span>(esp8266.sta_ssid, <span style="color:#e6db74">&#34;%s&#34;</span>, ssid);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(password<span style="color:#f92672">!=</span>NULL) <span style="color:#a6e22e">sprintf</span>(esp8266.sta_password, <span style="color:#e6db74">&#34;%s&#34;</span>, password);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(ip<span style="color:#f92672">!=</span>NULL) <span style="color:#a6e22e">sprintf</span>(esp8266.sta_ip, <span style="color:#e6db74">&#34;%s&#34;</span>, ip);<span style="color:#75715e">//设置STA模式静态IP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">ESP8266_Printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">STA ssid:%s, psw:%s</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>, esp8266.sta_ssid, esp8266.sta_password);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        esp8266.ap_chl<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>;<span style="color:#75715e">//通道号
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        esp8266.ap_ecn<span style="color:#f92672">=</span>ESP8266_ECN_WPA_PSK;<span style="color:#75715e">//加密方式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        esp8266.mode<span style="color:#f92672">=</span>ESP8266_MODE_AP;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">sprintf</span>(esp8266.ap_ssid, <span style="color:#e6db74">&#34;%s&#34;</span>, ssid);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">sprintf</span>(esp8266.ap_password, <span style="color:#e6db74">&#34;%s&#34;</span>, password);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(ip<span style="color:#f92672">!=</span>NULL) <span style="color:#a6e22e">sprintf</span>(esp8266.ap_ip, <span style="color:#e6db74">&#34;%s&#34;</span>, ip);<span style="color:#75715e">//设置AP模式静态IP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">ESP8266_Printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">AP ssid:%s, psw:%s</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>, esp8266.ap_ssid, esp8266.ap_password);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    esp8266.smartconfig<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ESP8266_reset</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ESP8266_SendAT</span>(<span style="color:#e6db74">&#34;ATE0</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>,<span style="color:#ae81ff">1</span>);<span style="color:#75715e">//关回显
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//AP模式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(esp8266.mode<span style="color:#f92672">==</span>ESP8266_MODE_AP<span style="color:#f92672">||</span>esp8266.mode<span style="color:#f92672">==</span>ESP8266_MODE_AP_STA)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">ESP8266_SetWiFiWorkMode</span>(esp8266.mode);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">ESP8266_SoftAp</span>(esp8266.ap_ssid, esp8266.ap_password, esp8266.ap_chl, esp8266.ap_ecn);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">ESP8266_SoftAp_staticIp</span>(esp8266.ap_ip);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//STA模式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(esp8266.mode<span style="color:#f92672">==</span>ESP8266_MODE_STA<span style="color:#f92672">||</span>esp8266.mode<span style="color:#f92672">==</span>ESP8266_MODE_AP_STA)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">ESP8266_SetWiFiWorkMode</span>(esp8266.mode);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">ESP8266_ConnectAp</span>(esp8266.sta_ssid, esp8266.sta_password, NULL);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">ESP8266_Station_staticIp</span>(esp8266.sta_ip);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//启动DHCP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ESP8266_SetDhcp</span>(esp8266.mode, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ESP8266_SendAT</span>(<span style="color:#e6db74">&#34;AT+CWLAPOPT=1,2047</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>,<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//设置WIFI工作的传输模式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//transportProtocol：UDP，TCPservice,tcp_client
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//localPort:本地端口号
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//remoteIp：远端的IP，如果是TCPservice模式，请写NULL或者&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//remotePort：远端端口号的PORT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>u8 <span style="color:#a6e22e">ESP8266_SetWorkMode</span>(u8 transportProtocol, u16 localPort, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>remoteIp, u16 remotePort)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    u8 i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    esp8266.localPort<span style="color:#f92672">=</span>localPort;
+</span></span><span style="display:flex;"><span>    esp8266.isConnect<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#75715e">//连接是否创建　　1：已经创建
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//ID为无效的ID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    esp8266.clientId[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    esp8266.clientId[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    esp8266.clientId[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    esp8266.clientId[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">memset</span>(esp8266.sta_mac,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">30</span>);
+</span></span><span style="display:flex;"><span>    esp8266.curLen<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    esp8266.data_len<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">memset</span>(esp8266.remoteIp,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(ESP8266_TCP_SERVICE<span style="color:#f92672">==</span>transportProtocol)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      esp8266.connectMode<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;<span style="color:#75715e">//1：TCP service  2:TCP client   3:UDP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span>(remoteIp<span style="color:#f92672">!=</span>NULL) <span style="color:#a6e22e">sprintf</span>(esp8266.remoteIp, <span style="color:#e6db74">&#34;%s&#34;</span>, remoteIp);
+</span></span><span style="display:flex;"><span>      esp8266.remotePort<span style="color:#f92672">=</span>remotePort;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(ESP8266_TCP_CLIENT<span style="color:#f92672">==</span>transportProtocol)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      esp8266.connectMode<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;<span style="color:#75715e">//1：TCP service  2:TCP client   3:UDP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span>(remoteIp<span style="color:#f92672">!=</span>NULL) <span style="color:#a6e22e">sprintf</span>(esp8266.remoteIp, <span style="color:#e6db74">&#34;%s&#34;</span>, remoteIp);
+</span></span><span style="display:flex;"><span>      esp8266.remotePort<span style="color:#f92672">=</span>remotePort;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(ESP8266_UDP<span style="color:#f92672">==</span>transportProtocol)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      esp8266.connectMode<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>;<span style="color:#75715e">//1：TCP service  2:TCP client   3:UDP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span>(remoteIp<span style="color:#f92672">!=</span>NULL) <span style="color:#a6e22e">sprintf</span>(esp8266.remoteIp, <span style="color:#e6db74">&#34;%s&#34;</span>, remoteIp);
+</span></span><span style="display:flex;"><span>      esp8266.remotePort<span style="color:#f92672">=</span>remotePort;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ESP8266_Printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">connectMode:%d, ip:%s, port:%d</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>, esp8266.connectMode, esp8266.remoteIp,esp8266.remotePort);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>  <span style="color:#75715e">//收到数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ptr <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>)<span style="color:#a6e22e">strstr</span>((<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>)cmd,(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>)<span style="color:#e6db74">&#34;+IPD,&#34;</span>); <span style="color:#75715e">//接收到+IPD开头，说明接收到数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span>(ptr<span style="color:#f92672">!=</span>NULL)
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    u8 id<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//+IPD,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    ptr<span style="color:#f92672">+=</span><span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(ptr<span style="color:#f92672">==</span>NULL) <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//如果是TCP服务器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//格式会多一个id
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(esp8266.connectMode<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>)<span style="color:#75715e">//如果是TCP服务器，找出&lt;link ID &gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">//TCP服务的处理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      id<span style="color:#f92672">=</span><span style="color:#a6e22e">atoi</span>(ptr);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">while</span>(ptr<span style="color:#f92672">!=</span>NULL <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">*</span>ptr<span style="color:#f92672">!=</span><span style="color:#e6db74">&#39;,&#39;</span>) ptr<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      ptr<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    esp8266.data_len<span style="color:#f92672">=</span><span style="color:#a6e22e">atoi</span>(ptr);<span style="color:#75715e">//读出接收到的数据长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span>(ptr<span style="color:#f92672">!=</span>NULL <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">*</span>ptr<span style="color:#f92672">!=</span><span style="color:#e6db74">&#39;:&#39;</span>) ptr<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    ptr<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">memset</span>(esp8266.data, <span style="color:#ae81ff">0</span>, MAX_WIFI_RX_LEN);
+</span></span><span style="display:flex;"><span>    esp8266.curLen<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//读出收到的数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span>(esp8266.curLen<span style="color:#f92672">&lt;</span>MAX_WIFI_RX_LEN <span style="color:#f92672">&amp;&amp;</span> esp8266.curLen<span style="color:#f92672">&lt;</span>esp8266.data_len <span style="color:#f92672">&amp;&amp;</span> ptr<span style="color:#f92672">!=</span>NULL <span style="color:#f92672">&amp;&amp;</span> ((ptr<span style="color:#f92672">-</span>cmd)<span style="color:#f92672">&lt;=</span>len))
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      esp8266.data[esp8266.curLen]<span style="color:#f92672">=*</span>ptr;<span style="color:#75715e">//数据存储
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      ptr<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      esp8266.curLen<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//一次性把数据接收全
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(esp8266.curLen<span style="color:#f92672">&gt;=</span>esp8266.data_len)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>	   <span style="color:#75715e">//对接收到的数据进行处理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">ESP8266_RxData</span>(esp8266.data, esp8266.curLen);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      esp8266.curLen<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>      esp8266.data_len<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    re<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  }</span></span></code></pre></div>
+<h2 id="实验三">实验三</h2>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#75715e">//以下是启动AP模式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ESP8266_init</span>(ESP8266_MODE_AP, WIFI_SSID, WIFI_PASSWORD, WIFI_IP);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//配置协议模式：TCP服务器、TCP客户端或者UDP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//配置要连接的IP和端口号
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//注意！！注意！！注意！！以下二个配置参数只能打开其中一个。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//配置TCP服务器参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//ESP8266_SetWorkMode(ESP8266_TCP_SERVICE, WIFI_PORT, NULL, 10000);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>     <span style="color:#75715e">//ESP8266_SetWorkMode(ESP8266_TCP_CLIENT, WIFI_PORT, ROMOTE_IP, ROMOTE_PORT);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//配置UDP的参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//这里的IP&#34;192.168.1.90&#34;为UDP服务器所在的电脑IP，根据实际情况修改
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ESP8266_SetWorkMode</span>(ESP8266_UDP, WIFI_PORT, <span style="color:#e6db74">&#34;192.168.1.2&#34;</span>, <span style="color:#ae81ff">10000</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>((count<span style="color:#f92672">%</span><span style="color:#ae81ff">20</span>)<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>  					<span style="color:#a6e22e">ESP8266_run</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//3秒采集温湿度一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>((count<span style="color:#f92672">%</span><span style="color:#ae81ff">300</span>)<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)<span style="color:#75715e">//300次累加
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">DHT11</span>(<span style="color:#f92672">&amp;</span>t, <span style="color:#f92672">&amp;</span>h);<span style="color:#75715e">//采集温湿度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">sprintf</span>(buff, <span style="color:#e6db74">&#34;温度:%02d,湿度:%02d.</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>, t,h);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Gui_DrawFont_GBK16_line</span>(HAL_LCD_LINE_8,RED,WHITE,buff);<span style="color:#75715e">//发送温度值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">ESP8266_SendData</span>(buff, <span style="color:#a6e22e">strlen</span>(buff));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">delay_ms</span>(<span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//闪灯表示程序活着
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>((count<span style="color:#f92672">%</span><span style="color:#ae81ff">20</span>)<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>) LED1<span style="color:#f92672">=!</span>LED1;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        count<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<h2 id="实验十">实验十</h2>
+<p><a href="#R-image-7e0768318333a567138d32796b7b7cbb" class="lightbox-link"><img alt="1" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e0768318333a567138d32796b7b7cbb"><img alt="1" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-6.png"></a>
+<a href="#R-image-9fdfa4125b7316f2ddbe0186c23f27ee" class="lightbox-link"><img alt="2" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9fdfa4125b7316f2ddbe0186c23f27ee"><img alt="2" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-7.png"></a>
+<a href="#R-image-fac2b4b3aff2acd36a241a7bb8fb8926" class="lightbox-link"><img alt="3" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fac2b4b3aff2acd36a241a7bb8fb8926"><img alt="3" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-8.png"></a>
+<a href="#R-image-5374e4e3e3ea1adb90ddf59f0cbd7d3b" class="lightbox-link"><img alt="4" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5374e4e3e3ea1adb90ddf59f0cbd7d3b"><img alt="4" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-9.png"></a>
+<a href="#R-image-73d916f115e876803faf99938e5927e1" class="lightbox-link"><img alt="5" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-73d916f115e876803faf99938e5927e1"><img alt="5" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-10.png"></a>
+<a href="#R-image-bd4f690ffe32511cbadc9e8c50c7ce95" class="lightbox-link"><img alt="6" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bd4f690ffe32511cbadc9e8c50c7ce95"><img alt="6" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-11.png"></a>
+<a href="#R-image-86d86692304f347dce24430f31853cd3" class="lightbox-link"><img alt="7" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-86d86692304f347dce24430f31853cd3"><img alt="7" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-12.png"></a>
+<a href="#R-image-9f79a7a84aa222acba53fdcc388112fa" class="lightbox-link"><img alt="8" class="lazy lightbox figure-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9f79a7a84aa222acba53fdcc388112fa"><img alt="8" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-13.png"></a></p>
+<h2 id="关于stm32工程代码的几点说明">关于STM32工程代码的几点说明</h2>
+<p>Define 是C语言中的宏定义，可以提高代码的可读性为编程提供方便。</p>
+<p>STM32开发板的下载方式是串口；</p>
+<p>函数定义的静态变量可以不赋初值，因为程序会分配存储空间；</p>
+<h2 id="温度读取流程">温度读取流程</h2>
+<ul>
+<li>判断传感器相应是否正确；</li>
+<li>安慰读取数值；</li>
+<li>判断检验和是否正确；</li>
+<li>提取温度值</li>
+</ul>
+<h2 id="在智慧大棚中采集温度值或者是光照值应该">在智慧大棚中采集温度值或者是光照值应该</h2>
+<ul>
+<li>在STM32开发板上搭建TCP服务器；</li>
+<li>在不同区域放置若干WiFi模块，采集DHT11温湿度传感器；</li>
+<li>WiFi模块和STM32模块连到同一个无线路由</li>
+<li>WIFI模块通过TCP协议将传感器温湿度值传到服务器</li>
+<li>传感器将接收到的数据存储在数据库中。</li>
+</ul>
+<h2 id="根据土壤情况进行自动灌溉">根据土壤情况进行自动灌溉</h2>
+<ul>
+<li>在STM32板子上搭建TCP服务器；</li>
+<li>在大棚的不同区域放置若干WIFI模块，采集土壤湿度信息；</li>
+<li>WiFi模块和STM32板子连接到同一个路由器；</li>
+<li>WiFi模块通过TCP通信协议将土壤湿度信息传到服务器；</li>
+<li>服务器更具当前的温湿度信息和阈值，启动和停止水泵。
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div></li>
+</ul>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年5月27日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/%E7%90%86%E8%AE%BA%E6%89%A9%E5%B1%95/">理论扩展</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

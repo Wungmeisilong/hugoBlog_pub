@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="代码分制表 以&lt; tabs title=&#34;file name&#34; &gt;，&lt; /tabs &gt;结尾； 然后里面写以% tab title=&#34;code name&#34; style=&#34;info&#34; color=&#34;blue &#34; %，% /tab %结尾 他们都需要用{{}}括起来 ​代码{{&lt; tabs title=&#34;hello.&#34; &gt;}} //代码块一 {{% tab title=&#34;py&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} //代码块二 {{% tab title=&#34;sh&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} {{&lt; /tabs &gt;}}">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="1.博客优化笔记 :: Maloudown">
+    <meta name="twitter:description" content="代码分制表 以&lt; tabs title=&#34;file name&#34; &gt;，&lt; /tabs &gt;结尾； 然后里面写以% tab title=&#34;code name&#34; style=&#34;info&#34; color=&#34;blue &#34; %，% /tab %结尾 他们都需要用{{}}括起来 ​代码{{&lt; tabs title=&#34;hello.&#34; &gt;}} //代码块一 {{% tab title=&#34;py&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} //代码块二 {{% tab title=&#34;sh&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} {{&lt; /tabs &gt;}}">
+    <meta property="og:url" content="http://localhost:1313/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="1.博客优化笔记 :: Maloudown">
+    <meta property="og:description" content="代码分制表 以&lt; tabs title=&#34;file name&#34; &gt;，&lt; /tabs &gt;结尾； 然后里面写以% tab title=&#34;code name&#34; style=&#34;info&#34; color=&#34;blue &#34; %，% /tab %结尾 他们都需要用{{}}括起来 ​代码{{&lt; tabs title=&#34;hello.&#34; &gt;}} //代码块一 {{% tab title=&#34;py&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} //代码块二 {{% tab title=&#34;sh&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} {{&lt; /tabs &gt;}}">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="1.博客优化笔记 :: Maloudown">
+    <meta itemprop="description" content="代码分制表 以&lt; tabs title=&#34;file name&#34; &gt;，&lt; /tabs &gt;结尾； 然后里面写以% tab title=&#34;code name&#34; style=&#34;info&#34; color=&#34;blue &#34; %，% /tab %结尾 他们都需要用{{}}括起来 ​代码{{&lt; tabs title=&#34;hello.&#34; &gt;}} //代码块一 {{% tab title=&#34;py&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} //代码块二 {{% tab title=&#34;sh&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} {{&lt; /tabs &gt;}}">
+    <meta itemprop="datePublished" content="2025-04-06T08:45:26+08:00">
+    <meta itemprop="dateModified" content="2025-04-06T08:45:26+08:00">
+    <meta itemprop="wordCount" content="814">
+    <meta itemprop="keywords" content="前端,Hugo主题博客">
+    <title>1.博客优化笔记 :: Maloudown</title>
+    <link href="http://localhost:1313/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/" rel="canonical" type="text/html" title="1.博客优化笔记 :: Maloudown">
+    <link href="../../log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/index.xml" rel="alternate" type="application/rss+xml" title="1.博客优化笔记 :: Maloudown">
+    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/log\/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0\/';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#代码分制表">代码分制表</a></li>
+    <li><a href="#显示附件文件">显示附件文件</a></li>
+    <li><a href="#首页的创建">首页的创建</a></li>
+    <li><a href="#创建章节的方法">创建章节的方法</a></li>
+    <li><a href="#在标题前面显示图标">在标题前面显示图标</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../log/"><span itemprop="name">  博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">1.博客优化笔记</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/" title="2.git与github的使用 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../log/7.%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85ad%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E8%AE%BE%E7%BD%AE/" title="7.初次安装AD需要做哪些设置？ (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable log" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/hugo%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/">Hugo主题博客</a></li>
+    <li><a class="term-link" href="../../tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="1博客优化笔记">1.博客优化笔记</h1>
+
+<h2 id="代码分制表">代码分制表</h2>
+<p>以<code>&lt; tabs title=&quot;file name&quot; &gt;，&lt; /tabs &gt;</code>结尾；
+然后里面写以<code>% tab title=&quot;code name&quot; style=&quot;info&quot; color=&quot;blue &quot;  %，% /tab %</code>结尾
+他们都需要用<code>{{}}</code>括起来
+<div class="tab-panel" data-tab-group="shortcode-parameter">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="代码"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('shortcode-parameter','代码')"
+    >
+      <span class="tab-nav-text">代码</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="代码"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{&lt; <span style="color:#a6e22e">tabs</span> <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">&#34;hello.&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//代码块一</span>
+</span></span><span style="display:flex;"><span>{{<span style="color:#f92672">%</span> <span style="color:#a6e22e">tab</span> <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">&#34;py&#34;</span> <span style="color:#f92672">%</span>}}
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">```markdown
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    **这里写代码**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ```</span>
+</span></span><span style="display:flex;"><span>{{<span style="color:#f92672">%</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">tab</span> <span style="color:#f92672">%</span>}}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//代码块二</span>
+</span></span><span style="display:flex;"><span>{{<span style="color:#f92672">%</span> <span style="color:#a6e22e">tab</span> <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">&#34;sh&#34;</span> <span style="color:#f92672">%</span>}}
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">```markdown
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    **这里写代码**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ```</span>
+</span></span><span style="display:flex;"><span>{{<span style="color:#f92672">%</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">tab</span> <span style="color:#f92672">%</span>}}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">/</span><span style="color:#a6e22e">tabs</span> &gt;}}</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h2 id="显示附件文件">显示附件文件</h2>
+<p>在双花括号里写：<code>attachments color=&quot;fuchsia&quot; icon=&quot;fab fa-hackerrank&quot;</code>，即可，</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>    {{<span style="color:#f92672">%</span> <span style="color:#a6e22e">attachments</span> <span style="color:#a6e22e">color</span>=<span style="color:#e6db74">&#34;fuchsia&#34;</span> <span style="color:#a6e22e">icon</span>=<span style="color:#e6db74">&#34;fab fa-hackerrank&#34;</span> <span style="color:#f92672">%</span>}}</span></span></code></pre></div>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;分割线</p>
+<p>不论是创建首页页面，还是左边框的选项，归根结底它们都是“目录”，从根上说，你需要创建一个目录然后在目录里面创建一个.md文件来装这个目录或说显示这个目录的内容。</p>
+<h2 id="首页的创建">首页的创建</h2>
+<p>创建首页使用了命令</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    hugo new <span style="color:#f92672">--</span>kind home _index.md</span></span></code></pre></div>
+<p>而后产生的页面，它自动生成头文件</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#f92672">+++</span>
+</span></span><span style="display:flex;"><span>    archetype <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;home&#34;</span>
+</span></span><span style="display:flex;"><span>    title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+++</span></span></span></code></pre></div>
+<p>值得注意的是，如果你用命令</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    hugo new site myblog</span></span></code></pre></div>
+<p>创建了一个myblog的目录，那么你在里面操作<strong>hugo new &ndash;kind home _index.md</strong>的时候,用于显示首页的文件**_index.md**会自动产生在content文件里。</p>
+<h2 id="创建章节的方法">创建章节的方法</h2>
+<p>使用命令：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    hugo new <span style="color:#f92672">&lt;</span>chapter<span style="color:#f92672">&gt;/&lt;</span>name<span style="color:#f92672">&gt;/</span>_index.md</span></span></code></pre></div>
+<p>或者：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    hugo new <span style="color:#f92672">&lt;</span>chapter<span style="color:#f92672">&gt;/&lt;</span>name<span style="color:#f92672">&gt;</span>.md</span></span></code></pre></div>
+<p>在创建章节的时候需要加上<code>alwaysopen = false</code>,如下面的例子：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>        <span style="color:#f92672">+++</span>
+</span></span><span style="display:flex;"><span>        alwaysopen <span style="color:#f92672">=</span> false
+</span></span><span style="display:flex;"><span>        archetype <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;chapter&#34;</span>
+</span></span><span style="display:flex;"><span>        title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2.AndroidStudio&#34;</span>
+</span></span><span style="display:flex;"><span>        weight <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">+++</span></span></span></code></pre></div>
+<h2 id="在标题前面显示图标">在标题前面显示图标</h2>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#f92672">+++</span>
+</span></span><span style="display:flex;"><span>    menuPre <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;i class=&#39;fab fa-github&#39;&gt;&lt;/i&gt; &#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+++</span></span></span></code></pre></div>
+<p>添加这个后的效果如下：</p>
+<p><a href="#R-image-503e3ce36d5e88e3c85282779b2480ff" class="lightbox-link"><img alt="效果图" class="lazy lightbox figure-image" loading="lazy" src="../../log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-503e3ce36d5e88e3c85282779b2480ff"><img alt="效果图" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/image.png"></a></p>
+<!-- 导航栏 -->
+<nav class="main-nav">
+  <div class="container">
+    <a href="../../" class="logo">TechMind</a>
+    <ul class="nav-links">
+      <li><a href="../../">首页</a></li>
+      <li><a href="../../tech">技术文章</a></li>
+      <li><a href="../../novel">小说</a></li>
+    </ul>
+    <div class="search-box">
+      <form action="../search.html" method="get">
+        <div class="searchform">
+          <label class="a11y-only" for="R-search-by-detail">Search</label>
+          <input data-search-input="" id="R-search-by-detail" class="search-by" name="search-by" type="search" placeholder="搜索..." _mstplaceholder="99723">
+          <span class="btn cstyle interactive secondary"><button onclick="" type="submit"><i class="fa-fw fas fa-search"></i> <span class="title">搜索</span></button></span>
+        </div>
+      </form> 
+    </div>
+  </div>
+</nav>
+<!-- 主体内容 -->
+<main class="container">
+  <!-- 技术文章区 -->
+  <section class="tech-articles">
+  <h2>最新技术文章</h2>
+  <article class="post-card">
+    {{ partial "post-card.html" (dict "path" "log/7.初次安装AD需要做哪些设置？.md") }}
+  </article>
+  <article class="post-card">
+    <div class="post-image">
+      <img src="https://picsum.photos/1200/800/?technology,server" alt="物联网安全架构">
+    </div>
+    <h3>#13 物联网网络安全论</h3>
+    <p>探讨边缘计算环境下的安全防护体系...</p>
+    <div class="meta">发布于 2024-03-12 | 分类：网络安全</div>
+  </article>
+</section>
+  <!-- 小说专区 -->
+  <aside class="novel-preview">
+    <h2>连载小说</h2>
+    <div class="chapter-preview">
+      <h3>#8 桑叶白鸟卷</h3>
+      <p>「殿下请看，这雕花窗棂的纹路暗合奇门遁甲之术...」</p>
+      <p class="excerpt">太傅李大人手持竹简，青石地板上的光影随着日晷缓缓移动...</p>
+      <a href="../../chapter/8" class="read-more">继续阅读 →</a>
+    </div>
+  </aside>
+</main>
+<!-- 底部 -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="#">关于我们</a> |
+      <a href="#">隐私政策</a> |
+      <a href="#">RSS订阅</a>
+    </div>
+    <p class="copyright">&copy; 2024 TechMind. 保留所有权利.</p>
+  </div>
+</footer>
+<style>
+  /* 基础样式 */
+  :root {
+    --primary-color: #2c3e50;
+    --light-bg: #f8f9fa;
+  }
+<p>body {
+font-family: &lsquo;Open Sans&rsquo;, sans-serif;
+line-height: 1.6;
+color: #34495e;
+margin: 0;
+}</p>
+<p>.main-nav {
+background: var(&ndash;primary-color);
+padding: 2rem 0;
+}</p>
+<p>.nav-links {
+display: flex;
+gap: 2rem;
+list-style: none;
+padding: 0;
+margin: 0;
+}</p>
+<p>.post-card {
+background: white;
+padding: 2rem;
+margin-bottom: 2rem;
+border-radius: 8px;
+box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}</p>
+<p>.novel-preview {
+background: var(&ndash;light-bg);
+padding: 2rem;
+border-radius: 8px;
+}</p>
+<p>.read-more {
+color: var(&ndash;primary-color);
+text-decoration: none;
+font-weight: 500;
+}</p>
+<p>@media (min-width: 768px) {
+.container {
+display: grid;
+grid-template-columns: 3fr 1fr;
+gap: 3rem;
+}
+}
+/* 新增图片样式 */
+.post-image {
+width: 100%;
+border-radius: 8px;
+overflow: hidden;
+margin-bottom: 1.5rem;
+}</p>
+<p>.post-image img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+transition: transform 0.3s ease;
+}</p>
+<p>.post-image:hover img {
+transform: scale(1.02);
+}</p>
+<p>/* 响应式调整 */
+@media (max-width: 768px) {
+.post-image img {
+height: 150px;
+}
+}
+</style></p>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2025年4月6日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/">踩坑日记</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

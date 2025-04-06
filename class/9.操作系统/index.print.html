@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="Linux期末复习认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般压缩解压文件： ​命令gzip [文件名]gunzip [解压文件名]例子：">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="操作系统 :: Maloudown">
+    <meta name="twitter:description" content="Linux期末复习认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般压缩解压文件： ​命令gzip [文件名]gunzip [解压文件名]例子：">
+    <meta property="og:url" content="http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="操作系统 :: Maloudown">
+    <meta property="og:description" content="Linux期末复习认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般压缩解压文件： ​命令gzip [文件名]gunzip [解压文件名]例子：">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="操作系统 :: Maloudown">
+    <meta itemprop="description" content="Linux期末复习认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般压缩解压文件： ​命令gzip [文件名]gunzip [解压文件名]例子：">
+    <meta itemprop="datePublished" content="2024-01-14T18:36:31+08:00">
+    <meta itemprop="dateModified" content="2024-01-14T18:36:31+08:00">
+    <meta itemprop="wordCount" content="106">
+    <meta itemprop="keywords" content="操作系统">
+    <title>操作系统 :: Maloudown</title>
+    <link href="http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="canonical" type="text/html" title="操作系统 :: Maloudown">
+    <link href="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="alternate" type="application/rss+xml" title="操作系统 :: Maloudown">
+    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F\/';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">操作系统</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/10.%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="基础知识 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="Linux期末复习 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="操作系统">操作系统</h1>
+
+<ul class="children children-li children-sort-">
+  <li class="children-title"><a href="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">Linux期末复习</a><p><h2 id="认识linux">认识Linux</h2>
+<h3 id="安装linux">安装Linux</h3>
+<h3 id="图形界面与命令行">图形界面与命令行</h3>
+<h2 id="文件管理与常用命令">文件管理与常用命令</h2>
+<h3 id="文件目录的打包和压缩">文件/目录的打包和压缩</h3>
+<h4 id="gzip压缩文件和gunzipzcat压缩文件命令">gzip压缩文件和gunzip、zcat压缩文件命令</h4>
+<p>一般压缩解压文件：
+<div class="tab-panel" data-tab-group="9b44e22575349c4e5525baee4ba33af9">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="命令fa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
+      onclick="switchTab('9b44e22575349c4e5525baee4ba33af9','命令fa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 命令</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="命令fa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux"> gzip [文件名]
+ gunzip [解压文件名]</code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+例子：</p></p></li>
+</ul>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年1月14日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/">核心课程</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">操作系统 的子部分</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/%E8%BD%AF%E7%A1%AC%E4%BB%B6/">软硬件</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="linux期末复习">Linux期末复习</h1>
+
+<h2 id="认识linux">认识Linux</h2>
+<h3 id="安装linux">安装Linux</h3>
+<h3 id="图形界面与命令行">图形界面与命令行</h3>
+<h2 id="文件管理与常用命令">文件管理与常用命令</h2>
+<h3 id="文件目录的打包和压缩">文件/目录的打包和压缩</h3>
+<h4 id="gzip压缩文件和gunzipzcat压缩文件命令">gzip压缩文件和gunzip、zcat压缩文件命令</h4>
+<p>一般压缩解压文件：
+<div class="tab-panel" data-tab-group="9b44e22575349c4e5525baee4ba33af9">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="命令fa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
+      onclick="switchTab('9b44e22575349c4e5525baee4ba33af9','命令fa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 命令</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="命令fa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux"> gzip [文件名]
+ gunzip [解压文件名]</code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+例子：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">    [root@localhost stdio]# ls
+    1.c  2.c  3.c  hello.txt
+    [root@localhost stdio]# gzip hello.txt
+    [root@localhost stdio]# ls
+    1.c  2.c  3.c  hello.txt.gz
+    [root@localhost stdio]# gunzip hello.txt.gz 
+    [root@localhost stdio]# ls
+    1.c  2.c  3.c  hello.txt
+    [root@localhost stdio]# </code></pre></div>
+<p>如果不想删除源文件要怎么做呢？使用如下命令：
+<div class="tab-panel" data-tab-group="5ba2d6dcc6be5ac83bdebecda08f9e46">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="命令fa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: red ;" tabindex="-1"
+      onclick="switchTab('5ba2d6dcc6be5ac83bdebecda08f9e46','命令fa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 命令</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="命令fa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: red ;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux"> gzip -c [文件名] &gt; [压缩文件名.gz]
+ zcat [解压文件名.gz] &gt;[压缩文件名.gz]</code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+例子：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">    [root@localhost stdio]# ls
+    1.c  2.c  3.c  hello.txt
+    [root@localhost stdio]# gzip -c hello.txt &gt;hello.txt.gz
+    [root@localhost stdio]# ls
+    1.c  2.c  3.c  hello.txt  hello.txt.gz
+    [root@localhost stdio]# zcat  hello.txt.gz &gt;he.txt
+    [root@localhost stdio]# ls
+    1.c  2.c  3.c  hello.txt  hello.txt.gz  he.txt
+[root@localhost stdio]# </code></pre></div>
+<p>在上面的命令中，<strong>zcat [解压文件名.gz] &gt;[压缩文件名.gz]</strong> 与 <strong>gunzip -c [解压文件名.gz] &gt;[压缩文件名.gz]</strong> 作用一样，另外，zcat [文件名]会将文件压缩信息输出在窗口上，即输出在 <strong>std</strong>。</p>
+<h4 id="bzip2压缩文件和bunzip2压缩文件命令">bzip2压缩文件和bunzip2压缩文件命令</h4>
+<p>一般压缩解压文件：
+<div class="tab-panel" data-tab-group="5fec0966eafbbc313a9835998e1a6624">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="命令fa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
+      onclick="switchTab('5fec0966eafbbc313a9835998e1a6624','命令fa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 命令</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="命令fa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">    bzip2 [文件名]
+    bunzip2 [解压文件名]
+    //压缩解压后不会删除原文件
+    bzip2 -k [文件名]
+    bunzip2 -k [解压文件名]</code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>例子：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">[root@localhost stdio]# ls
+1.c  2.c  3.c  hello.txt
+[root@localhost stdio]# bzip2 hello.txt 
+[root@localhost stdio]# ls
+1.c  2.c  3.c  hello.txt.bz2
+[root@localhost stdio]# bunzip2 hello.txt.bz2 
+[root@localhost stdio]# ls
+1.c  2.c  3.c  hello.txt
+
+[root@localhost stdio]# bzip2 -k  hello.txt 
+[root@localhost stdio]# ls
+1.c  2.c  3.c  hello.txt  hello.txt.bz2
+[root@localhost stdio]# rm hello.txt
+rm：是否删除普通文件 &#34;hello.txt&#34;？y
+[root@localhost stdio]# ls
+1.c  2.c  3.c  hello.txt.bz2
+[root@localhost stdio]# bunzip2 -k hello.txt.bz2
+[root@localhost stdio]# ls
+1.c  2.c  3.c  hello.txt  hello.txt.bz2
+[root@localhost stdio]# </code></pre></div>
+<h4 id="tar归档文件命令">tar归档文件命令</h4>
+<div class="tab-panel" data-tab-group="4c2004cbe5aa210dc0adc627b170eae2">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="命令fa-fw-fas-fa-info-circle"
+      class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
+      onclick="switchTab('4c2004cbe5aa210dc0adc627b170eae2','命令fa-fw-fas-fa-info-circle')"
+    >
+      <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 命令</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="命令fa-fw-fas-fa-info-circle"
+      class="tab-content tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;">
+      <div class="tab-content-text">
+<p>在Linux系统中，tar 是一个非常重要的归档工具，用于将一组文件和目录打包到一个单一的.tar文件中。它创建的这种归档文件并不进行压缩，仅仅是将多个文件集合在一起，并保持原始文件的权限、所有权和其他元数据信息。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">    tar -cvf [文件名]
+    tar -xvf [解压文件名]</code></pre></div>
+<p>然而，为了减少存储空间占用以及在网络上传输时加快速度，通常会结合使用 tar 和压缩工具（如gzip或bzip2）对归档文件进行压缩。这里 -z 或 -j 参数的作用就是启用压缩功能</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">    tar -czvf [文件名]
+    tar -xzvf [解压文件名]
+
+    tar -cjvf [文件名]
+    tar -xjvf [解压文件名]</code></pre></div>
+<p>如果要选择性的归档或压缩、解压某个文件或目录，那么需要加 <strong>w</strong>，如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-l" data-lang="l">    tar -cwzvf [文件名]
+    tar -xwzvf [解压文件名]
+
+    tar -cwjvf [文件名]
+    tar -xwjvf [解压文件名]</code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>在命令中;</p>
+<ul>
+<li>c（create）：表示创建新备份</li>
+<li>z（gzip或gunzip）:表示使用gzip指令处理文件</li>
+<li>v（verbose）：显示指令执行过程</li>
+<li>f（file）:指定备份文件</li>
+<li>w(interactive):对每一步都进行确认</li>
+<li>j:表示使用bzip2、bunzip2指令进行压缩解压</li>
+</ul>
+<p>如果加选项 <strong>-C</strong> （directory），则说明转到指定的目录，命令如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">    [root@localhost ~]# tar -cjvf stdio.tar stdio/
+    stdio/
+    stdio/1.c
+    [root@localhost ~]# tar -xjvf stdio.tar -C  st/
+    stdio/
+    stdio/1.c
+    [root@localhost ~]# cd st/
+    [root@localhost st]# ls
+    stdio
+    [root@localhost st]# ls stdio/
+    1.c
+    [root@localhost st]# </code></pre></div>
+<h2 id="用户与用户组管理">用户与用户组管理</h2>
+<h3 id="用户与组文件">用户与组文件</h3>
+<h4 id="用户文件-passwd">用户文件-passwd</h4>
+<p>存放用户登录用户信息的文件位置：/etc/passwd
+文件中域的的格式：</p>
+<hr>
+<p>username:passwd:uid:gid:userinfo:home:shell:</p>
+<hr>
+<p>例子：</p>
+<hr>
+<p>[root@localhost st]# tail -1 /etc/passwd
+daliu:x:1008:1006::/home/daliu:/bin/bash</p>
+<hr>
+<p><strong>/etc/passwdw</strong> 文件中域的含义</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">域</th>
+          <th style="text-align: center">含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">username</td>
+          <td style="text-align: center">用户名</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">password</td>
+          <td style="text-align: center">登录密码（一般显示的是密码转换后的乱码）</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">uid</td>
+          <td style="text-align: center">用户ID（0-99一般为系统保留）</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">gid</td>
+          <td style="text-align: center">用户组ID</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">userinfo</td>
+          <td style="text-align: center">用户信息</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">home</td>
+          <td style="text-align: center">分配该用户的主目录（但位置是人为决定的，自己可以修改）</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">shell</td>
+          <td style="text-align: center">登录后启动的shell</td>
+      </tr>
+  </tbody>
+</table>
+<p>一般root用户的UID为0，UID一般是唯一的为的是区分不同的用户，但UID为0的除外，UID为0则说明为超级用户；</p>
+<p>创建用户时，系统会分配一个主目录给用户一般在 <strong>home</strong> 目录下，例如用户user主目录为 <strong>/home/user</strong>。</p>
+<h4 id="用户文件-shadow">用户文件-shadow</h4>
+<p>Linux系统中的<code>/etc/shadow</code>文件是存放用户密码信息的重要安全文件，也称为“影子口令文件”。它的主要作用是存储用户的加密密码以及与密码相关的属性，以增强系统的安全性。</p>
+<p>在早期的Unix/Linux系统中，密码是以明文或简单加密的形式存储在<code>/etc/passwd</code>文件中。为了提高系统的安全性，从1970年代末期开始引入了影子口令的概念，将密码字段从<code>/etc/passwd</code>移出，并存放在只有超级用户（root）可以读取的<code>/etc/shadow</code>文件中，而原来的 <strong>/etc/passwd</strong> 中的密码字段显示 <strong>x</strong> ,这就是上面的例子中显示x的原因。</p>
+<p>通过这种方式，即使攻击者获取了<code>/etc/shadow</code>文件，由于密码已经被高度加密，直接破解难度大大增加，从而有效提高了系统的密码安全级别。同时，通过对密码策略的设定，还可以实现对用户密码复杂度和有效期的管理。</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">域</th>
+          <th style="text-align: center">含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">username</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">password</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">min</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">max</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">warm</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">inactive</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">expire</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">flag</td>
+          <td style="text-align: center"></td>
+      </tr>
+  </tbody>
+</table>
+<p>下面就举个例子：</p>
+<hr>
+<p>[root@localhost st]# tail -1 /etc/passwd
+daliu:x:1008:1006::/home/daliu:/bin/bash</p>
+<p>[root@localhost st]# tail -1 /etc/shadow
+daliu:$6$f703Izgm$gIA74I6Vyqdjstz3BazhvEUVWfSyelNuv7UKTUtB3cScauSctebqrBIr/KShHnBcWWQideao3aucMrXsO.I6Z/:19694:0:99999:7:::</p>
+<hr>
+<h4 id="用户组文件-group">用户组文件-group</h4>
+<p>用户组一方面是为了查找用户时更方便，比如查找user用户，你不需要去passwd文件一行一行的查找，你只需要去group文件找到对应的用户组即可。</p>
+<p>同样的，用户组也有类似passwd、shadow之和这样的文件，分别为group、gshadow.</p>
+<p><strong>/etc/group</strong> 文件中域的含义如下：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">域</th>
+          <th style="text-align: center">含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">group_name</td>
+          <td style="text-align: center">组用户名</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">group_password</td>
+          <td style="text-align: center">加密后的用户组口令</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">group_id</td>
+          <td style="text-align: center">用户组ID</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">group_members</td>
+          <td style="text-align: center">以逗号隔开的用户清单</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>/etc/gshadow</strong> 文件中域的含义如下：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">域</th>
+          <th style="text-align: center">含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">group_name</td>
+          <td style="text-align: center">组用户名</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">group_password</td>
+          <td style="text-align: center">加密后的用户组口令</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">group_members</td>
+          <td style="text-align: center">以逗号隔开的用户清单</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="检验用户与用户组文件之间是否正确">检验用户与用户组文件之间是否正确</h4>
+<ul>
+<li>检验 <strong>/etc/passwd</strong> 与 <strong>/etc/shadow</strong> 文件之间的正确性，使用命令 <strong>pwck</strong>,当发生错误，两个文件之间信息不对应时，系统会提示对相应项进行修改；</li>
+<li>检验 <strong>/etc/group</strong> 与 <strong>/etc/gshadow</strong> 文件之间的正确性，使用命令 <strong>grpck</strong>,当发生错误，两个文件之间信息不对应时，系统会提示对相应项进行修改。</li>
+</ul>
+<h3 id="相关的命令操作">相关的命令操作</h3>
+<p>1.添加用户与用户组———— <strong>useradd</strong> &amp; <strong>groupadd</strong></p>
+<p>用法：</p>
+<ul>
+<li>useradd [选项] 登录</li>
+<li>useradd -D</li>
+<li>useradd -D [选项]</li>
+</ul>
+<p>值得注意的是，对于选项的-d、-md，加了m表示在/home目录创建用户目录，如果不加，表示该目录已存在不需要再使用m,详细请结合下面的展开内容来开。
+
+<details class=" box cstyle notices transparent expand">
+  <summary class="box-label">
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> 
+    展开
+  </summary>
+  <div class="box-content">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">选项：
+  -b, --base-dir BASE_DIR	新账户的主目录的基目录
+  -c, --comment COMMENT         新账户的 GECOS 字段
+  -d, --home-dir HOME_DIR       新账户的主目录
+  -D, --defaults		显示或更改默认的 useradd 配置
+ -e, --expiredate EXPIRE_DATE  新账户的过期日期
+  -f, --inactive INACTIVE       新账户的密码不活动期
+  -g, --gid GROUP		新账户主组的名称或 ID
+  -G, --groups GROUPS	新账户的附加组列表
+  -h, --help                    显示此帮助信息并推出
+  -k, --skel SKEL_DIR	使用此目录作为骨架目录
+  -K, --key KEY=VALUE           不使用 /etc/login.defs 中的默认值
+  -l, --no-log-init	不要将此用户添加到最近登录和登录失败数据库
+  -m, --create-home	创建用户的主目录
+  -M, --no-create-home		不创建用户的主目录
+  -N, --no-user-group	不创建同名的组
+  -o, --non-unique		允许使用重复的 UID 创建用户
+  -p, --password PASSWORD		加密后的新账户密码
+  -r, --system                  创建一个系统账户
+  -R, --root CHROOT_DIR         chroot 到的目录
+  -s, --shell SHELL		新账户的登录 shell
+  -u, --uid UID			新账户的用户 ID
+  -U, --user-group		创建与用户同名的组
+  -Z, --selinux-user SEUSER		为 SELinux 用户映射使用指定 SEUSER
+  </code></pre></div>
+  </div>
+</details></p>
+<p>用法： <strong>groupadd [选项] [组名]</strong> ，一般会用到的选项有</p>
+<ul>
+<li>-g: 用户设置组ID；</li>
+<li>-o: 与-g配合使用，设置不唯一的组ID;</li>
+<li>-n: 修改组的名字，如：gpasswd -n [新组名] [旧组名]</li>
+</ul>
+<p>2.删除用户与用户组———— <strong>userdel</strong> &amp; <strong>groupdel</strong></p>
+<ul>
+<li>userdel:一般用法就是在后面加要删除的用户，如果加选项-r则会删除主目录文件；</li>
+<li>groupdel：在后面加要删除的用户组</li>
+</ul>
+<p>3.修改用户与用户组———— <strong>usermod</strong> 、<strong>passwd</strong> &amp; <strong>gpasswd</strong></p>
+<ul>
+<li>usermod： 一般就是对问文件中的域进行修改，会加加上选项-u、-g、-s等，最后还得指定用户，用法： <strong>usermod [选项] [用户名]</strong>。另外，<strong>-L（-U）</strong> 的作用是对用户的锁定（解锁）；</li>
+<li>passwd：一般就是用来修改用户的密码，在登录的是root用户情况下passwd是要指定修改密码的用户的，而如果登录的是用户本身，使用passwd时就不用指定在；</li>
+<li>gpasswd： 用法： <strong>gpasswd [选项] [组名]</strong> ，一般会用到的选项有
+<ul>
+<li>-a(添加组的用户)，</li>
+<li>-d(删除组里的用户)，gpasswd -d [用户名] [组名]</li>
+<li>-A(添加组的管理员).</li>
+<li>-g(修改组GID),例如：gpasswd -g [新ID] [组名]</li>
+</ul>
+</li>
+</ul>
+<p>对于usermod的进一步说明，除了上面提到的选项，还有如下选项：</p>
+
+<details class=" box cstyle notices transparent expand">
+  <summary class="box-label">
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> 
+    展开
+  </summary>
+  <div class="box-content">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">    选项：
+  -c, --comment 注释            GECOS 字段的新值
+  -d, --home HOME_DIR           用户的新主目录
+  -e, --expiredate EXPIRE_DATE  设定帐户过期的日期为 EXPIRE_DATE
+  -f, --inactive INACTIVE       过期 INACTIVE 天数后，设定密码为失效状态
+  -g, --gid GROUP               强制使用 GROUP 为新主组
+  -G, --groups GROUPS           新的附加组列表 GROUPS
+  -a, --append GROUP            将用户追加至上边 -G 中提到的附加组中，
+                                并不从其它组中删除此用户
+  -h, --help                    显示此帮助信息并推出
+  -l, --login LOGIN             新的登录名称
+  -L, --lock                    锁定用户帐号
+  -m, --move-home               将家目录内容移至新位置 (仅于 -d 一起使用)
+  -o, --non-unique              允许使用重复的(非唯一的) UID
+  -p, --password PASSWORD       将加密过的密码 (PASSWORD) 设为新密码
+  -R, --root CHROOT_DIR         chroot 到的目录
+  -s, --shell SHELL             该用户帐号的新登录 shell
+  -u, --uid UID                 用户帐号的新 UID
+  -U, --unlock                  解锁用户帐号
+  -Z, --selinux-user  SEUSER       用户账户的新 SELinux 用户映射</code></pre></div>
+  </div>
+</details>
+<p>3.登录用户与用户组———— <strong>su</strong> <strong>newgrp</strong></p>
+<p>root用户与普通用户之间的切换使用su,如果要切换根目录则需要在su 后加-，即： <strong>su - [用户]</strong>。</p>
+<p>在Linux中，组的登录使用 newgrp ，即 <strong>newgrp [组名]</strong>。</p>
+<p>下面通过一个例子加以理解：</p>
+<p>添加一个用户名为15user，且该用户在用户组15group中，设置用户组和用户密码为123，创建一个用户15user2让该用户为用户组管理员,修改user的UID为2024，最后删除所用所建信息。</p>
+
+<details class=" box cstyle notices transparent expand">
+  <summary class="box-label">
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> 
+    展开
+  </summary>
+  <div class="box-content">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">[root@localhost ~]# groupadd 15group
+[root@localhost ~]# useradd -g 15group 15user
+[root@localhost ~]# tail -1 /etc/passwd
+15user:x:1001:1007::/home/15user:/bin/bash
+[root@localhost ~]# tail -1 /etc/group
+15group:x:1007:
+
+[root@localhost ~]# gpasswd 15group
+正在修改 15group 组的密码
+新密码：
+请重新输入新密码：
+[root@localhost ~]# passwd 15user
+更改用户 15user 的密码 。
+新的 密码：
+无效的密码： 密码少于 8 个字符
+重新输入新的 密码：
+passwd：所有的身份验证令牌已经成功更新。
+[root@localhost ~]# useradd 15user2
+
+[root@localhost ~]# gpasswd -A 15user2 15group
+[root@localhost ~]# tail -2 /etc/group
+15group:x:1007:
+15user2:x:1002:
+[root@localhost ~]# tail -2 /etc/gshadow
+15group:$6$d4pzl/CPrp$3NYvX8gzE3DBm35BLqAE8aGzfUhrUZTSMGQfeRve2iUhrH1tZGR8I8t91gWzFD2GWFEDaaocO7XO85RjKDY.q1:15user2:
+15user2:!::
+
+[root@localhost ~]# usermod -u  2024 15user
+[root@localhost ~]# tail -2 /etc/passwd
+15user:x:2024:1007::/home/15user:/bin/bash
+15user2:x:1002:1002::/home/15user2:/bin/bash
+
+[root@localhost ~]# userdel 15user
+[root@localhost ~]# groupdel 15group
+[root@localhost ~]# userdel 15user2</code></pre></div>
+  </div>
+</details>
+<p>在上面的例子中，我们使用gpasswd -A来设置用户组管理员。</p>
+<h2 id="文件目录和目录权限管理">文件目录和目录权限管理</h2>
+<h3 id="文件访问权限与用户分类">文件访问权限与用户分类</h3>
+<h4 id="文件的访问权限">文件的访问权限</h4>
+<ul>
+<li>读(r)：允许读文件的内容</li>
+<li>写(w)：允许向文件中写入数据</li>
+<li>执行(x)：允许将文件作为程序执行</li>
+</ul>
+<h4 id="目录的访问权限">目录的访问权限</h4>
+<ul>
+<li>读(r)：允许查看目录中有哪些文件和目录；</li>
+<li>写(w)：允许该在目录下创建（或删除）文件、目录，修改文件名字或者目录名字</li>
+<li>执行(x)：允许访问目录(用 cd 命令进入该目录，并查看目录中可读文件的内容)</li>
+</ul>
+<h4 id="用户分类">用户分类</h4>
+<ul>
+<li>文件所有者（owner）：建立文件、目录的用户。</li>
+<li>同组用户(group)：属于同一组群的用户对属于该组群的文件有相同的访问权限。</li>
+<li>其他用户(other)：除了文件所有者、同组用户的其他用户。</li>
+</ul>
+<p>我们先用ls -l 查看文件的权限信息：</p>
+<p><a href="#R-image-b1f36c09ccadb907cf98ec81690dfbb7" class="lightbox-link"><img alt="tu2" class="lazy lightbox figure-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/tu2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b1f36c09ccadb907cf98ec81690dfbb7"><img alt="tu2" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/tu2.png"></a></p>
+<p>在上面的开头有三段他们分别表示为文件所有者、同组用户、其他用户：</p>
+<p><a href="#R-image-87a6273b6c4d8836698db617a525132d" class="lightbox-link"><img alt="tu1" class="lazy lightbox figure-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/tu1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-87a6273b6c4d8836698db617a525132d"><img alt="tu1" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/tu1.png"></a></p>
+<p>其中的d表示目录。</p>
+<h3 id="权限修改">权限修改</h3>
+<h4 id="访问权限的表示">访问权限的表示</h4>
+<ul>
+<li>（1）字母表示法（如：rwxr-xr-x）</li>
+<li>（2）数字表示法 （如：755）
+<a href="#R-image-447246970485f274ab27f3f4daf51d8b" class="lightbox-link"><img alt="tu3" class="lazy lightbox figure-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/tu3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-447246970485f274ab27f3f4daf51d8b"><img alt="tu3" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/tu3.png"></a></li>
+</ul>
+<p>使用数字进行文件权限的划分，其中r=4、w=2、x=1、-=0，这样rwx这组权限就是4+2+1=7，r-x这组权限就是5。</p>
+<h4 id="修改权限的命令chmod">修改权限的命令：chmod</h4>
+<ol>
+<li>命令格式1：
+chmod <span class="math align-center">$n{_1}n{_2}n{_3}$</span> &lt;文件|目录&gt;</li>
+</ol>
+<ul>
+<li>功能：为指定文件或目录修改给定的数值访问权限。</li>
+<li>选项：<span class="math align-center">$n{_1}n{_2}n{_3}$</span>三位数字表示的文件访问权限。</li>
+</ul>
+<ol>
+<li>命令格式2：
+chmod [用户标识] [设定方法] [权限字符] &lt;文件名或目录名〉</li>
+</ol>
+<ul>
+<li>功能：修改文件或目录的访问权限。</li>
+<li>选项：
+<ul>
+<li>（1）用户标识：所有者（u）、同组（g）、其他人（o）、所有的人员（a）</li>
+<li>（2）设定方法：+ 增加权限、- 删除权限、= 分配权限，同时删除旧的权限</li>
+<li>（3）权限字符：r（读）、w（写）、x（执行）、u（和所有者的权限相同）、g（和所同组用户的权限相同）、o（和其他用户的权限相同）</li>
+</ul>
+</li>
+</ul>
+<h4 id="修改文件所有者的命令chown">修改文件所有者的命令：chown</h4>
+<ul>
+<li>格式：chown [-R] &lt;用户[：组]&gt; &lt;文件或目录&gt;</li>
+<li>功能：更改属主和组。</li>
+<li>选项：
+-R：对目录及其子目录进行递归设置。</li>
+</ul>
+<p>例如：chown sjh：sjh result.txt</p>
+<h4 id="修改文件所属组群的命令chgrp">修改文件所属组群的命令：chgrp</h4>
+<p>格式：chgrp group file</p>
+<p>其中group：组名或组代号</p>
+<p>功能： 改变文件或目录组群</p>
+<p>例如：chgrp user result.txt</p>
+<p>关于chown与chgrp的命令的例子：</p>
+
+<details class=" box cstyle notices transparent expand">
+  <summary class="box-label">
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> 
+    展开
+  </summary>
+  <div class="box-content">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">    [root@localhost ~]# chown user2:user2 /tmp/test/user1_2.txt
+    [root@localhost ~]# ls -l /tmp/test/
+    总用量 0
+    -rw-rw-r--. 1 user2 user2 0 1月  15 19:40 user1_2.txt
+    [root@localhost ~]# chgrp root /tmp/test/user1_2.txt
+    [root@localhost ~]# ls -l /tmp/test/
+    总用量 0
+    -rw-rw-r--. 1 user2 root 0 1月  15 19:40 user1_2.txt
+    [root@localhost ~]# </code></pre></div>
+  </div>
+</details>
+<h4 id="修改默认权限的命令umask">修改默认权限的命令：umask</h4>
+<p>格式：umask [mask]</p>
+<p>功能：设置文件或目录的默认权限</p>
+<p>注意：系统默认屏蔽的权限为022（umask的默认值为0022），因此新
+创建的目录权限就为777-022=755，用字符表示就是rwxr-xr-x，新创
+建的普通文件权限为666-022=644，即rw&ndash;r&ndash;r&ndash;。</p>
+<h4 id="文件隐藏属性">文件隐藏属性</h4>
+<ul>
+<li>
+<p>1）查看文件隐藏属性：lsattr</p>
+</li>
+<li>
+<p>2）修改文件隐藏属性：chattr</p>
+</li>
+<li>
+<p>chattr [+-=] [ ai] 文件或目录名称</p>
+<ul>
+<li>a: 当设置a之后，这个文件将只能增加数据，而不能删除也不能修改数据，
+必须要为root才能设置这个属性。</li>
+<li>i：不能删除，不能修改，不能改名。必须要为root才能设置这个属性。</li>
+</ul>
+</li>
+</ul>
+<h3 id="文件特殊权限">文件特殊权限</h3>
+<p>文件特殊权限有以下三种：</p>
+<p>1）SUID：Set UID（只对二进制程序有效，对shell script无效）</p>
+<p>例如：ll /usr/bin/passwd</p>
+<p>注意：当用户执行passwd命令的时候，需要修改/etc/shadow文件，而该文件普通用户并没有任何权限。</p>
+<p>2）SGID：Set GID</p>
+<p>例如：ll /usr/bin/locate
+注意：当用户执行locate命令的时候，需要读取/var/lib/mlocate/mlocate.db文件。</p>
+<p>3）SBIT：Sticky Bit （只对目录有效）</p>
+<p>设置方法：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">    chmod -o+t [指定目录名]
+    或者
+    chmod 1777 [指定目录名]</code></pre></div>
+<p>对一个目录进行如上设置以后，假设有用户A和B，用户A在该目录下创建的文件只有他自己的root用户可以删，像B这样的其他用户删不了。</p>
+<p><a href="https://blog.csdn.net/weiling_shen/article/details/7577571" rel="external" target="_blank">特殊文件说明文章链接</a></p>
+<h2 id="软件包管理">软件包管理</h2>
+<p>接下里介绍两个软件安装的工具，分别是RPM：Red Hat Package Manager（Red Hat软件包管，以及YUM:Yellow dog Dpdater,Modified.</p>
+<p>RPM工具不需要网络，需要提前准备好安装包，但是他也有缺点安装的时候如果缺少依赖包你还需要再安装依赖包；</p>
+<p>而YUM工具需要再有网的状态下才可以下载，它免去了依赖包提醒，自动将依赖包下载好，较为方便，我跟推荐使用YUM。</p>
+<h3 id="rpm工具的使用">RPM工具的使用</h3>
+<p>1．安装软件包（install）</p>
+<p><strong>rpm -ivh rpm软件包全名</strong>：</p>
+<ul>
+<li>i：安装一个新的软件包</li>
+<li>v：显示详细信息</li>
+<li>h：显示安装进度条理工具</li>
+</ul>
+<p>2．查询已安装的软件包（query）</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">rpm –qa //查询出本机所有已经安装的软件
+rpm –q httpd //查询httpd软件包是否已经安装
+rpm -q【i l c d R】 vsftpd
+rpm -qf /etc/inittab
+查询未安装的软件包：
+rpm -qp 【i l c d R】 gconf-editor-2.28.0-3.el6.i686.rpm</code></pre></div>
+<p>3．升级与更新（upgrade/freshen）</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux">rpm -Uvh 软件包名称
+//原来没有安装过的，直接安装；如果已安装过，则更新至新版
+rpm -Fvh 软件包名称
+//原来没有安装过的，不安装；如果已安装过，则更新至新版</code></pre></div>
+<p>4．卸载RPM包（erase）</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code class="language-linux" data-lang="linux"> rpm -e vsftpd
+ 注意：卸载时只需要给出软件包名称vsftpd，而不需要给出软件包的全部名称信息vsftpd-2.2.2-6.el6.i686.rpm。</code></pre></div>
+<h3 id="yum工具的使用">YUM工具的使用</h3>
+<p><strong>yum在线升级机制：</strong></p>
+<ul>
+<li>安装软件 yum install gcc</li>
+<li>删除软件 yum remove gcc</li>
+<li>查询软件 yum search gcc</li>
+</ul>
+<p><strong>软件包管理：</strong></p>
+<ul>
+<li>举例一：搜寻与磁盘阵列(raid)相关的软件有哪些？
+[root@www ~]# yum search raid</li>
+<li>举例二：找出mdadm这个软件的功能为何？
+[root@www ~]# yum info mdadm</li>
+<li>举例三：列出yum 服务器上面提供的所有软件名称。
+[root@www ~]# yum list</li>
+<li>举例四：列出目前服务器上可供本机进行升级的软件有哪些？
+[root@www ~]# yum list updates</li>
+<li>举例五：列出提供passwd这个文件的软件有哪些？
+[root@www ~]# yum provides passwd</li>
+</ul>
+<p><strong>yum的软件组功能：</strong></p>
+<ul>
+<li>查询软件组：yum grouplist（查阅目前容器与本机上面的可用与安装过
+的软件群组有哪些？）</li>
+</ul>
+<p>yum groupinfo Eclipse（查询Eclipse软件组的相关信息）</p>
+<ul>
+<li>安装软件组： yum groupinstall Eclipse</li>
+<li>删除软件组： yum groupremove Eclipse</li>
+</ul>
+<h2 id="硬盘分区及格式化">硬盘分区及格式化</h2>
+<h3 id="硬盘分区介绍">硬盘分区介绍</h3>
+<ul>
+<li>硬盘的分区分为主磁盘分区和扩展磁盘分区。</li>
+<li>一个硬盘最多可以划分为 <strong>4</strong> 个主磁盘分区，这时不能再创建扩展分区。</li>
+<li>一个硬盘中最多只能创建 <strong>1个扩展分区</strong> ，扩展分区不能直接使用，必须在扩展分区中再划分出逻辑分区才可以使用。</li>
+<li>逻辑分区是从5开始的，每多1个分区，数字加1就可以。</li>
+</ul>
+<h4 id="硬盘标识">硬盘标识</h4>
+<p>（1）IDE硬盘：hd[a-d]*</p>
+<p>hd表示硬盘类型为IDE，中括号中的字母为a、b、c、d中的一个，a是基本盘，b是从盘，是辅助主盘，d是辅助从盘，*指分区，即主分区和扩展分区。</p>
+<p>例如：hda1代表第一块IDE硬盘上的第一个分区。hdb5代表第二块IDE硬盘的第一个逻辑分区。</p>
+<p>（2）SCSI/SATA硬盘：sd[a-p]*</p>
+<p>sd表示SCSI/SATA硬盘。SCSI/SATA的引导盘使用设备文件/dev/sda1、/dev/sda2、/dev/sda3、/dev/sda4作为主分区或者扩展分区，而以/dev/sda5，/dev/sda6等作为逻辑分区。</p>
+<h3 id="创建硬盘分区">创建硬盘分区</h3>
+<p>先使用ls -l /dev |grep &lsquo;sd&rsquo;查看文件里是否有可用的磁盘，如果没有需要创建一个磁盘，创建步骤：</p>
+<p>1．通过虚拟机设置增加一块SCSI硬盘，大小为5G，重启系统。
+
+<details class=" box cstyle notices transparent expand">
+  <summary class="box-label">
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> 
+    展开
+  </summary>
+  <div class="box-content">
+<p><a href="#R-image-268d5c85641ee1e1e5a1b12341c31ae6" class="lightbox-link"><img alt="tu4" class="lazy lightbox figure-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%874.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-268d5c85641ee1e1e5a1b12341c31ae6"><img alt="tu4" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%874.png"></a></p>
+<p>按照下图点击下一步</p>
+<p><a href="#R-image-53bb3750913a7b98eda668b7532eb1be" class="lightbox-link"><img alt="tu4" class="lazy lightbox figure-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%875.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-53bb3750913a7b98eda668b7532eb1be"><img alt="tu4" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%875.png"></a></p>
+<p><a href="#R-image-8ed5382ac254e5198da227e8884ff8fd" class="lightbox-link"><img alt="tu4" class="lazy lightbox figure-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%876.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ed5382ac254e5198da227e8884ff8fd"><img alt="tu4" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%876.png"></a></p>
+<p>根据实际情况输入所需硬盘大小，这里输入5GB</p>
+<p><a href="#R-image-e6700f2df0091f2e71bb5b859214b7f2" class="lightbox-link"><img alt="tu4" class="lazy lightbox figure-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%877.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e6700f2df0091f2e71bb5b859214b7f2"><img alt="tu4" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%877.png"></a></p>
+<p>然后点击完成</p>
+<p><a href="#R-image-709f18381b41e088fde92dcd4e0193a2" class="lightbox-link"><img alt="tu4" class="lazy lightbox figure-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%878.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-709f18381b41e088fde92dcd4e0193a2"><img alt="tu4" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%878.png"></a></p>
+<p>最后在命令窗口输入reboot重启。</p>
+  </div>
+</details></p>
+<p>2．将该硬盘分为2个主分区（每个主分区的大小为1G），1个扩展分区（大小为3G），将第2个主分区制作成swap分区。</p>
+<p>命令：
+
+<details class=" box cstyle notices transparent expand">
+  <summary class="box-label">
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> 
+    展开
+  </summary>
+  <div class="box-content">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>    <span style="color:#f92672">//</span>先用命令查看sd,sd表示SCSI<span style="color:#f92672">/</span>SATA硬盘<span style="color:#960050;background-color:#1e0010">，</span>
+</span></span><span style="display:flex;"><span>    ls <span style="color:#f92672">/</span>dev<span style="color:#f92672">/</span>sd <span style="color:#f92672">|</span>grep sd
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">//</span>硬盘分区
+</span></span><span style="display:flex;"><span>    fdisk  <span style="color:#f92672">/</span>dev<span style="color:#f92672">/</span>sdb
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">//</span>使用m查看帮助命令<span style="color:#960050;background-color:#1e0010">，</span>n为新建命令<span style="color:#960050;background-color:#1e0010">，</span>d为删除命令<span style="color:#960050;background-color:#1e0010">，</span>w为写入命令<span style="color:#960050;background-color:#1e0010">，</span>每次配完都要写入才有效<span style="color:#960050;background-color:#1e0010">。</span>
+</span></span><span style="display:flex;"><span>    n
+</span></span><span style="display:flex;"><span>    p  <span style="color:#f92672">//</span>这是新建主分区的意思
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">//</span>接着指定分区起始位置<span style="color:#960050;background-color:#1e0010">，</span>一般我们默认<span style="color:#960050;background-color:#1e0010">，</span>所以回车就可以
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">//</span>然后就是指定分区的大小<span style="color:#960050;background-color:#1e0010">，</span>这里我设置1G<span style="color:#960050;background-color:#1e0010">、</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>G
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">//</span>可以用p命令查看设置的情况
+</span></span><span style="display:flex;"><span>    P
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">//</span>按照上面的流程进行其他的设置<span style="color:#960050;background-color:#1e0010">，</span>一下给出步骤命令
+</span></span><span style="display:flex;"><span>    n
+</span></span><span style="display:flex;"><span>    p
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>G
+</span></span><span style="display:flex;"><span>    n
+</span></span><span style="display:flex;"><span>    e
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+</span><span style="color:#ae81ff">3</span>G</span></span></code></pre></div>
+  </div>
+</details>
+3．将扩展分区划出2个逻辑分区（大小分别为1G、2G）。</p>
+<p>命令：
+
+<details class=" box cstyle notices transparent expand">
+  <summary class="box-label">
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> 
+    展开
+  </summary>
+  <div class="box-content">
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">//</span>到这步后我们可以给扩展分区分配逻辑分区<span style="color:#960050;background-color:#1e0010">，</span>分配时逻辑分区用l命令<span style="color:#960050;background-color:#1e0010">。</span>
+</span></span><span style="display:flex;"><span>    n
+</span></span><span style="display:flex;"><span>    l
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>G
+</span></span><span style="display:flex;"><span>    n
+</span></span><span style="display:flex;"><span>    l
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>G</span></span></code></pre></div>
+  </div>
+</details></p>
+<h3 id="查看磁盘情况与磁盘格式化">查看磁盘情况与磁盘格式化</h3>
+<ul>
+<li>（1）查看系统中的新硬盘：<strong><code>ls /dev/sd*</code></strong></li>
+<li>（2）查看分区：<code>fdisk –l /dev/sda</code></li>
+<li>（3）创建主分区：<strong><code>fdisk /dev/sdc</code></strong></li>
+<li>（4）创建扩展分区：输入n,再输入e</li>
+<li>（5）创建逻辑分区: 输入n,再输入l</li>
+<li>（6）修改分区类型</li>
+<li>（7）格式化分区：
+<ul>
+<li><strong><code>mkfs –t ext4 /dev/sdc1</code></strong> 还可以写成**<code>mkfs.ext4 /dev/sdc1</code>**</li>
+<li>格式化交换分区略有不同，使用命令 <strong>mkswap</strong> ,例如： <code>mkswap dev/sdb2</code></li>
+</ul>
+</li>
+<li>（8）磁盘检查命令：<code>fsck –t ext4 /dev/sdc1</code>
+<ul>
+<li><code>badblocks /dev/sdb5</code></li>
+</ul>
+</li>
+<li>（9）查看磁盘使用情况 <code>df</code>,或使用<code>df -h</code>输出更易于查看。</li>
+</ul>
+<p>上面的-t意思是参数TYPE的意思，后面接ext4()、vfat(FAT32)、ntfs()等，</p>
+<h3 id="挂载文件系统mount">挂载文件系统：mount</h3>
+<ul>
+<li>1、 <strong>挂载硬盘分区：</strong>
+<ul>
+<li>步骤1：mkdir /usr/music</li>
+<li>步骤2：mount /dev/sdc5 /usr/music</li>
+</ul>
+</li>
+<li>2、 <strong>挂载光驱：</strong>
+<ul>
+<li>步骤1：mkdir /mnt/cdrom</li>
+<li>步骤2：mount /dev/cdrom /mnt/cdrom</li>
+</ul>
+</li>
+<li>3、 <strong>挂载U盘：</strong>
+<ul>
+<li>步骤1：mkdir /mnt/usb</li>
+<li>步骤2：mount /dev/sdd1 /mnt/usb</li>
+</ul>
+</li>
+<li>4、 <strong>挂载Windows下的C盘</strong> （FAT32格式）：
+<ul>
+<li>步骤1：mkdir /mnt/dosc</li>
+<li>步骤2：mount -t vfat /dev/sda1 /mnt/dos</li>
+</ul>
+</li>
+</ul>
+<p><strong>注意：</strong> C盘必须已经被格式化为FAT32格式。</p>
+<h3 id="显示系统内所有已经挂载的文件系统">显示系统内所有已经挂载的文件系统</h3>
+<p><strong>mount</strong>
+不带任何参数执行mount命令，则会显示当前系统中已经挂载的所有的文件系统列表。</p>
+<h3 id="卸载设备umount">卸载设备：umount</h3>
+<p>格式： umount &lt;设备名或挂载点&gt;</p>
+<p>说明：卸载指定的设备，既可以使用设备名也可以使用挂载点。</p>
+<p>举例： # umount /dev/cdrom</p>
+<h3 id="自动挂载文件系统etcfstab">自动挂载文件系统：/etc/fstab</h3>
+<p>每条记录由6个字段组成。</p>
+<p>1.设备名称
+2.设备挂载点
+3.文件系统类型
+4.挂载选项
+5.是否备份
+6.自检顺序</p>
+<p>如果想要系统自动挂载/dev/sdc5分区，可在<code>/etc/fstab</code>文件添加下面这行：</p>
+<p><code>/dev/sdc5 /usr/music ext4 defaults 0 0</code></p>
+<p><strong>注意</strong>:由于fstab文件非常重要，如果这个文件有错误，就可能会造成系统不能正常启动。因此向fstab文件中添加数据时应非常小心。修改完该文件后务必使用<code>mount -a</code>命令测试有没有错误。</p>
+<h3 id="磁盘配额">磁盘配额</h3>
+<p>以sdb1为例</p>
+<p>第一步：先配置sdb磁盘，然后挂载sdb1磁盘</p>
+<p>第二步：使用quotaon /sdb1/生成aquota.group和aquota.user文件</p>
+<p>第三步：对用户或用户组进行磁盘限制,例如：edquota -u user1，然后会进入一个文件，文件里的0表示禁用，在里面可以设置创建文件个数或文件大小的软限制、硬限制；</p>
+<p>第四步：我们登录user1，在/sdb/目录下创建文件，使用 <code>db if=/dev/zero of=/sdb1/test/ bs=1k count=10</code>这条命令进行测试，这是一个写文件大小的命令，这样可以快速测试文件大小的软限制和硬限制；</p>
+<p>第五步：子里面建文件，检验创建文件个数的软限制和硬限制；</p>
+<p>第六步: 可以使用repquota -u查看目录的情况；</p>
+<p>第七步：关闭磁盘匹配额，quotatoff /sdb1/</p>
+<h2 id="linux编程">Linux编程</h2>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年1月14日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">F1-复习资料</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script>
+      window.MathJax = Object.assign( window.MathJax || {}, {
+        tex: {
+          inlineMath:  [['\\(', '\\)'], ['$',  '$']],  
+          displayMath: [['\\[', '\\]'], ['$$', '$$']], 
+        },
+        options: {
+          enableMenu: false 
+        }
+      }, JSON.parse("{}") );
+    </script>
+    <script id="MathJax-script" async src="../../js/mathjax/tex-mml-chtml.js?1743924698"></script>
+    <script src="../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

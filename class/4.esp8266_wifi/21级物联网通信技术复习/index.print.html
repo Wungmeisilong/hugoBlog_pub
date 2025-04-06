@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="通信串口 参照上一节课
+物联网是新一代信息技术领域的重要组成部分。其英文名称是“The Internet of things”，顾名思义，“物联网就是物物相连的互联网”。
+这有两层意思：">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="物联网通信技术-小知识 :: Maloudown">
+    <meta name="twitter:description" content="通信串口 参照上一节课
+物联网是新一代信息技术领域的重要组成部分。其英文名称是“The Internet of things”，顾名思义，“物联网就是物物相连的互联网”。
+这有两层意思：">
+    <meta property="og:url" content="http://localhost:1313/class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="物联网通信技术-小知识 :: Maloudown">
+    <meta property="og:description" content="通信串口 参照上一节课
+物联网是新一代信息技术领域的重要组成部分。其英文名称是“The Internet of things”，顾名思义，“物联网就是物物相连的互联网”。
+这有两层意思：">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="物联网通信技术-小知识 :: Maloudown">
+    <meta itemprop="description" content="通信串口 参照上一节课
+物联网是新一代信息技术领域的重要组成部分。其英文名称是“The Internet of things”，顾名思义，“物联网就是物物相连的互联网”。
+这有两层意思：">
+    <meta itemprop="datePublished" content="2024-01-09T16:52:04+08:00">
+    <meta itemprop="dateModified" content="2024-01-09T16:52:04+08:00">
+    <meta itemprop="wordCount" content="9657">
+    <meta itemprop="keywords" content="物联网工程">
+    <title>物联网通信技术-小知识 :: Maloudown</title>
+    <link href="http://localhost:1313/class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/" rel="canonical" type="text/html" title="物联网通信技术-小知识 :: Maloudown">
+    <link href="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/index.xml" rel="alternate" type="application/rss+xml" title="物联网通信技术-小知识 :: Maloudown">
+    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/4.esp8266_wifi\/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0\/';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#通信串口">通信串口</a></li>
+    <li><a href="#通信">通信</a>
+      <ul>
+        <li><a href="#通信的目的">通信的目的</a></li>
+        <li><a href="#通信系统的一般模型">通信系统的一般模型</a></li>
+        <li><a href="#通信系统分类">通信系统分类</a></li>
+        <li><a href="#串行通信">串行通信</a></li>
+        <li><a href="#并行通信">并行通信</a></li>
+      </ul>
+    </li>
+    <li><a href="#zigbee与ieee802154">ZigBee与IEEE802.15.4</a>
+      <ul>
+        <li><a href="#星形拓扑">星形拓扑</a></li>
+        <li><a href="#树形网络">树形网络</a></li>
+        <li><a href="#网型网络mesh拓扑">网型网络（Mesh拓扑）</a></li>
+      </ul>
+    </li>
+    <li><a href="#rfid射频识别技术">RFID射频识别技术</a>
+      <ul>
+        <li><a href="#rfid系统的工作原理">RFID系统的工作原理</a></li>
+        <li><a href="#rfid工作过程">RFID工作过程</a></li>
+      </ul>
+    </li>
+    <li><a href="#蓝牙技术">蓝牙技术</a></li>
+    <li><a href="#wifi技术">WiFi技术</a>
+      <ul>
+        <li><a href="#无线局域网wireless-local-area-networkwlan">无线局域网（Wireless Local Area Network，WLAN）</a></li>
+      </ul>
+    </li>
+    <li><a href="#esp8266单片机">ESP8266单片机</a>
+      <ul>
+        <li><a href="#常用函数">常用函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#station模式">Station模式</a></li>
+    <li><a href="#tcpip协议">TCP/IP协议</a>
+      <ul>
+        <li><a href="#serverd的应用">Serverd的应用</a></li>
+        <li><a href="#tcpclient函数">TCPClient函数</a></li>
+        <li><a href="#http协议简介">HTTP协议简介</a></li>
+      </ul>
+    </li>
+    <li><a href="#udp协议">UDP协议</a></li>
+    <li><a href="#http与mqtt协议对比">HTTP与MQTT协议对比</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/4.esp8266_wifi/"><span itemprop="name">Esp8266_WiFi</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">物联网通信技术-小知识</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/4.esp8266_wifi/" title="Esp8266_WiFi (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/3.stm32_rfid/" title="STM32_RFID (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../../tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/">物联网工程</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="物联网通信技术-小知识">物联网通信技术-小知识</h1>
+
+<h2 id="通信串口">通信串口</h2>
+<p>参照上一节课</p>
+<p>物联网是新一代信息技术领域的重要组成部分。其英文名称是“The Internet of things”，顾名思义，“物联网就是物物相连的互联网”。</p>
+<p>这有两层意思：</p>
+<p>第一，物联网的核心和基础仍然是互联网，是在互联网基础上的延伸和扩展的网络；
+第二，其用户端延伸和扩展到了任何物品与物品之间，进行信息交换和通信。</p>
+<ol>
+<li>全面感知：全面感知就是通过各种类型的传感器实时感知被测物理对象的状态。</li>
+<li>可靠传递：可靠传递就是通过各种网络与互联网的融合，将物体的信息实时准确地传递出去。</li>
+<li>智能计算：智能处理就是利用云计算、模糊识别等各种智能计算技术，对海量的数据和信息分析和处理，以实现对物体智能化控制。</li>
+</ol>
+<h2 id="通信">通信</h2>
+<h3 id="通信的目的">通信的目的</h3>
+<p>传递消息中所包含的信息</p>
+<ol>
+<li>
+<p>消息
+是物质或精神状态的一种反映，例如语音、文字、音乐、数据、图片或活动图片等</p>
+</li>
+<li>
+<p>信息
+是消息的有效信息内容</p>
+</li>
+</ol>
+<h3 id="通信系统的一般模型">通信系统的一般模型</h3>
+<p>信息源、发送设备、信道、接收设备、受信者、噪声源。</p>
+<ul>
+<li>发送端：信息源、发送设备；</li>
+<li>接收端：接收设备、受信源；</li>
+</ul>
+<h3 id="通信系统分类">通信系统分类</h3>
+<p>根据按信道中传输的 <strong>信号分类</strong> ，通信系统分为 <strong>模拟通信系统</strong> 和 <strong>数字通信系统</strong> 。模拟通信系统传送的是模拟信号，这代表消息的信号参量取值是连续的。</p>
+<p>调制是指把信号转换成适合在信道中传输的形式的一种方产。广义调制分为 <strong>基带调制</strong> 和 <strong>频带（载波）调制</strong></p>
+<p>点对点之间的通信，按消息传送的方向，通信方式可分为 <strong>单工通信</strong> 、<strong>半双工通信及全双工通信</strong> 三种</p>
+<h3 id="串行通信">串行通信</h3>
+<p>将数字元码序列以串行方式一个元码接着一个元码的在一条信道上传输。</p>
+<p>优点：只需一条通信信道，节省线路铺设费用；
+缺点：速度慢，需要外加码组或字符同步措施。</p>
+<p><a href="#R-image-cb633b318d22703745ae8bc9db6fd6de" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%871.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb633b318d22703745ae8bc9db6fd6de"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%871.png"></a></p>
+<p>随着技术的发展，以USB为代表的串行传输速度已经超过并行传输。</p>
+<h3 id="并行通信">并行通信</h3>
+<p>将代表信息的数字信号元码序列以组的方式在两条或者两条以上在并行信道上同时传输。</p>
+<p><a href="#R-image-fbad3acb2683ddf261d17e6e6736cc85" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%872.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fbad3acb2683ddf261d17e6e6736cc85"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%872.png"></a></p>
+<p>优点：节省传输时间，速度快，不需要字符同步措施；
+缺点：需要n条数据线，成本高。</p>
+<p><strong>标准 , ASCI码使用7bit数据来表示所有的大写和小写字母、数字0到9、标点符号,以及在美式英语中使用的特殊控制字符。</strong></p>
+<p>串行通信是指使用一条数据线,将数据一位一位地依次传输,每一位数据占据一个固定的时间长度</p>
+<p>在进行串口通信时,两个串口设备间需要**发送端(TX)<strong>与</strong>接收端(RX)**交叉相连,并共用电源地(GND)。</p>
+<ol>
+<li>
+<p><strong>串行通信的约定</strong>
+串行通信中的这种约定包含两个方面，</p>
+<ul>
+<li>一方面是通信的速率要保持一致，</li>
+<li>另一方面是字符的编码要一致。</li>
+</ul>
+</li>
+<li>
+<p><strong>波特率</strong>
+通信速率是指单位时间内传输的信息量,可用比特率和波特率来表示。
+<strong>比特率</strong> 是指每秒传输的二进制位数,用bps (bits)表示。
+<strong>波特率</strong> 是指每秒传输的符号数,若每个符号所含的信息量为1比特,则波特率等于比特率。</p>
+</li>
+<li>
+<p>串口工作原理</p>
+</li>
+</ol>
+<p>在Arduino与其它器件通讯的过程中,数据传输实际上都是以数字信号(即电平高低变化)的形式进行的,串口通信也是如此.当使用Serial.print()函数输出数据时,Arduino的发送端会输出一连串的数字信号,称这些数字信号为数据帧.
+例如,当时用Serial.print(&lsquo;A&rsquo;)语句发送数据时,实际发送的数据帧格式如下图所示:
+<a href="#R-image-556a3e65986f29d608340189a3673acb" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8714.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-556a3e65986f29d608340189a3673acb"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8714.png"></a>
+Serial.begin()是Arduino开发平台串口初始化函数。
+物联网设备跟云平台的通讯方法分为同步传输和异步传输</p>
+<p>以光照度传感器为例，讲解串口通信模式。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> sensorPin <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> ledPin <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> lineFound <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>Serial.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">115200</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pinMode</span>(sensorPin, INPUT);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pinMode</span>(ledPin, OUTPUT);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+</span></span><span style="display:flex;"><span>lineFound <span style="color:#f92672">=</span> <span style="color:#a6e22e">digitalRead</span>(sensorPin);     
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span>(lineFound <span style="color:#f92672">==</span> HIGH) {
+</span></span><span style="display:flex;"><span>Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;    &#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">digitalWrite</span>(ledPin, HIGH);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;    &#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">digitalWrite</span>(ledPin, LOW);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>流程如下：
+<a href="#R-image-c1989852a1480f279a1caadae24bb367" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8715.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c1989852a1480f279a1caadae24bb367"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8715.png"></a>
+串口例程：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> analogInPin <span style="color:#f92672">=</span> A0; 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span>  sensorValue <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+</span></span><span style="display:flex;"><span>     Serial.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">115200</span>,<span style="color:#ae81ff">8</span>N1);              
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+</span></span><span style="display:flex;"><span>     sensorValue <span style="color:#f92672">=</span> <span style="color:#a6e22e">analogRead</span>(analogInPin);     
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">250</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>（1）串口通信模式有：1）波特率为115200 （2）校验方式为无校验 (3)数据位为8位、停止位为1位</p>
+<p>（2）串口通信流程图
+<a href="#R-image-5149f6245cdadf7604739b8e07db5f90" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8716.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5149f6245cdadf7604739b8e07db5f90"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8716.png"></a></p>
+<h2 id="zigbee与ieee802154">ZigBee与IEEE802.15.4</h2>
+<p>ZigBee网络中的每一个节点都有一个16bit网络地址和一个64bit IEEE扩展地址。</p>
+<p>IEEE802.15.4定义了2450MHz、868MHz、915MHz三个频段。对于不同的国家和地区，为其提供的工作频率范围是不同的，其中2450MHz （2.4GHz）频段是全球统一无需申请的的ISM频段，提供 <strong>250kbps</strong> 的通信速率，并提供16个信道;868MHz频段是欧洲的ISM频段，提供1个速率为20kbps的信道，915MH频段是美国的ISM频段，提供10个速率为40kbps的信道。</p>
+<p><a href="#R-image-444e97f2c5749f8f8fd0e2ba0db49ce8" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%873.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-444e97f2c5749f8f8fd0e2ba0db49ce8"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%873.png"></a></p>
+<p><a href="#R-image-3be273cfde02d7f951af6ad12afa6d14" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%874.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3be273cfde02d7f951af6ad12afa6d14"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%874.png"></a></p>
+<p>在ZigBee网络中存在三种节点类型：</p>
+<ul>
+<li>Coordinator(协调器)，</li>
+<li>Router(路由器)</li>
+<li>End-Device(终端设备)。</li>
+</ul>
+<p>ZigBee网络由一个Coordinator以及多个Router和多个End_Device组成。</p>
+<p>ZigBee可采用 <strong>星状</strong> 、<strong>片状</strong> 和 <strong>网状</strong> 网络结构，由一个主节点管理若干子节点，最多一个主节点可管理254个子节点;同时主节点还可由上一层网络节点管理，最多可组成<strong>65000</strong>个节点的大网。</p>
+<p>三种设备类型</p>
+<p>三种节点类型及其案例</p>
+<p>三种网络拓扑结构类型</p>
+<p><a href="#R-image-6817e781957c2e4930139eaafda271ff" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%875.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6817e781957c2e4930139eaafda271ff"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%875.png"></a></p>
+<h3 id="星形拓扑">星形拓扑</h3>
+<p>包含一个Co-ordinator（协调者） 节点和一系列的 End Device（终端）节点，每一个End Device 节点只能和 Co-ordinator 节点进行通讯。如果需要在两个 End Device 节点之间进行通讯必须通过Co-ordinator 节点进行信息的转发。</p>
+<p><a href="#R-image-9ef08818f137d5629126399af26e6fee" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%876.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9ef08818f137d5629126399af26e6fee"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%876.png"></a></p>
+<h3 id="树形网络">树形网络</h3>
+<p>树形拓扑包括一个Co-ordinator（协调者）以及一系列的 Router（路由器） 和 End Device（终端）节点。Co-ordinator 连接一系列的 Router 和 End Device， 他的子节点的 Router也可以连接一系列的 Router 和End Device. 这样可以重复多个层级。
+Co-ordinator 和 Router 节点可以包含自己的子节点。End Device 不能有自己的子节点。有同一个父节点的节点之间称为兄弟节点。</p>
+<p><a href="#R-image-17b0d3f49ff110e9769b1c21ced5a7bc" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%877.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-17b0d3f49ff110e9769b1c21ced5a7bc"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%877.png"></a></p>
+<h3 id="网型网络mesh拓扑">网型网络（Mesh拓扑）</h3>
+<p>网形网络（Mesh拓扑） 包含一个Co-ordinator和一系列的Router 和End Device。这种网络拓扑形式和树形拓扑相同；请参考上面所提到的树形网络拓扑。但是，网状网络拓扑具有<strong>更加灵活的信息路由规则</strong>，在可能的情况下，路由节点之间可以直接的通讯。这种路由机制使得信息的通讯变得更有效率，而且意味这一旦一个路由路径出现了问题，信息可以自动的沿着其他的路由路径进行传输。</p>
+<p><a href="#R-image-50bf7e7f847a60972bed2e09ad6cc508" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%878.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-50bf7e7f847a60972bed2e09ad6cc508"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%878.png"></a></p>
+<h2 id="rfid射频识别技术">RFID射频识别技术</h2>
+<p>RFID的定义：射频识别（Radio Frequency Identification，RFID）是一种 <strong>非接触式</strong> 的自动识别技术，它通过射频信号自动识别特定目标对象并读写相关数据，而无须识别系统与特定目标之间建立机械或光学接触。</p>
+<ol>
+<li>
+<p>RFID系统通常由 <strong>电子标签</strong> 、<strong>读写器</strong> 和 <strong>计算机网路</strong> 三部分组成。</p>
+</li>
+<li>
+<p>RFID系统中的读写器的 <strong>工作频率</strong> 决定了整个RFID系统的工作频率，功率大小决定了整个RFID系统的工作距离。</p>
+</li>
+<li>
+<p>在RFID系统中常用的频段有4种：低频LF(125kHz)、高频HF(13.56MHz)、超高频UHF(850～910MHz)及微波(2.45GHz)</p>
+</li>
+<li>
+<p>电子标签分为 <strong>无源标签(passive)</strong>、 <strong>半无源标签(semi-passive)</strong> 和 <strong>有源标签(active)三种类型</strong>。</p>
+</li>
+<li>
+<p>RFID最基本的硬件体系结构由RFID电子标签、RFID读写器和计算机。</p>
+</li>
+</ol>
+<p><a href="#R-image-39e9c1abd65b5f65053291ebac77a8a7" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%879.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-39e9c1abd65b5f65053291ebac77a8a7"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%879.png"></a></p>
+<h3 id="rfid系统的工作原理">RFID系统的工作原理</h3>
+<p>利用射频信号的空间耦合（电磁感应或电磁传播）传输特性，实现对静止的、移动的待识别物品的自动识别，如图所示：</p>
+<p><a href="#R-image-760fc151e4ad154c47b8c4a5b80e6ccd" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8710.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-760fc151e4ad154c47b8c4a5b80e6ccd"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8710.png"></a></p>
+<ol>
+<li>RFID网络框架结构</li>
+</ol>
+<ul>
+<li>通信串口组网、</li>
+<li>读写器与计算机直接连接、</li>
+<li>读写器通过中间件连入网络</li>
+</ul>
+<h3 id="rfid工作过程">RFID工作过程</h3>
+<p>读写器向M1卡发一组固定频率的电磁波，卡片内有一个LC串联谐振电路，其频率与读写器发射的频率相同，在电磁波的激励下，LC谐振电路产生共振，从而使电容内有了电荷，在这个电容的另一端，接有一个单向导通的电子泵，将电容内的电荷送到另一个电容内储存，当所积累的电荷达到2v时，此电容可做为电源为其它电路提供工作电压，将卡内数据发射出去或接取读写器的数据。</p>
+<p><a href="#R-image-48a57ba71f3458d1c37a32ce7dd4458e" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8711.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-48a57ba71f3458d1c37a32ce7dd4458e"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8711.png"></a></p>
+<h2 id="蓝牙技术">蓝牙技术</h2>
+<ol>
+<li>蓝牙技术工作在2.4GHz频段，2.4GHz的ISM波段是一种短距离无线传输技术，供开源使用。</li>
+</ol>
+<p><a href="#R-image-f0d1f600e3beaa3e7691c39fbefbcdbe" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8712.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f0d1f600e3beaa3e7691c39fbefbcdbe"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8712.png"></a>
+2. 蓝牙使用<strong>跳频技术</strong>，将传输的数据分割成数据包，通过79个指定的蓝牙频道分别传输数据包。每个频道的频宽为1MHz，蓝牙4.0使用2MHz间距，可容纳40个频道。
+3. 蓝牙采用<strong>高速跳频(Frequency Hopping)<strong>和</strong>时分多址(Time Division Multiple Access，TDMA)<strong>等先进技术，支持</strong>点对点</strong>及<strong>点对多点通信</strong>。其传输频段为全球公共通用的2.4 GHz频段，能提供1 Mb/s的传输速率和10 m的传输距离，并采用<strong>时分双工传输</strong>方案实现全双工传输。
+4. 在一个微微网中，所有设备的级别是相同的，具有相同的权限。主设备单元负责提供<strong>时钟同步信号</strong>和<strong>跳频序列</strong>，从设备单元一般是<strong>受控同步</strong>的设备单元。</p>
+<p>链路管理协议层利用状态机定义了设备的五中状态</p>
+<ul>
+<li>就绪</li>
+<li>扫描</li>
+<li>广播</li>
+<li>发起</li>
+<li>连接</li>
+</ul>
+<p><a href="#R-image-5975c6221f66837ec50b9adfdc6345a7" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8713.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5975c6221f66837ec50b9adfdc6345a7"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8713.png"></a></p>
+<h2 id="wifi技术">WiFi技术</h2>
+<ol>
+<li>WiFi技术的基本概念
+<strong>定义：</strong> 一种可以将个人计算机、手机设备等终端以无线方式互相连接的技术。</li>
+<li>WiFi（wireless Fidelity），在无线局域网领域称为“无线相容性认证”，是一种无线网络通信的品牌，有Wi-Fi联盟所持有，目的是为了改善基于IEEE802.11b标准的无线网络产品之间的互通性。</li>
+</ol>
+<p><a href="#R-image-2d559ef9ff9f332a2d6e757c191d18da" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8717.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2d559ef9ff9f332a2d6e757c191d18da"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8717.png"></a></p>
+<ul>
+<li>WiFi既是一种商业认证，也是一种无线联网技术；</li>
+<li>WiFi技术的优点：可移动、实现简单、可靠性强、环保指数高；</li>
+</ul>
+<h3 id="无线局域网wireless-local-area-networkwlan">无线局域网（Wireless Local Area Network，WLAN）</h3>
+<p><strong>无线局域网（WLAN）工作频段</strong></p>
+<ul>
+<li>按照国家的无线电管理部门规定，WLAN使用2.4GHz和5.8GHz两个频段。这两个频段属于特高频和微博范围，属于微波波段（波长小于一米）
+<a href="#R-image-e02c076fa18ae84e0af9229a8dd13f9a" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8718.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e02c076fa18ae84e0af9229a8dd13f9a"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8718.png"></a></li>
+<li><strong>2.4GHz频段信道划分：</strong> <p id="my-target">可用的宽带为83.5MHz，划分13个信道，每个信道宽为22MHz，信道之间有间隔，间隔5MHz。2.4GHz频段信道划分如下图所示：</p>
+<a href="#R-image-1caa9f6728cc9daeb2313bdcf889987d" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8719.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1caa9f6728cc9daeb2313bdcf889987d"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8719.png"></a></li>
+<li><strong>5.8GHz频段信道划分：</strong> 在中国大陆，IEEE802.11a使用的是5.98GHz频段，工作频率范围为5725-5875MHz。可用信道为5个，分别为149，153，,157，,161，165，每两个信道之间相差4，信道之间没有间隔。
+<a href="#R-image-e8de9927b9e7a0458756e497ec6a4d03" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8720.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e8de9927b9e7a0458756e497ec6a4d03"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8720.png"></a></li>
+</ul>
+<ol>
+<li>无线局域网（WLAN）的架构</li>
+</ol>
+<ul>
+<li>无线局域网参考模型与OSI七层参考模型如下图：</li>
+<li>IEEE802标准遵循ISO/OSI 参考模型的原来规则确定最低两层——物理层与数据链路层的功能，以及与网络层的接口服务、网络互联等有关的高层功能。</li>
+</ul>
+<p><a href="#R-image-064434183cf197b4bd6856dbeff3952f" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8721.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-064434183cf197b4bd6856dbeff3952f"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8721.png"></a>
+2. 无线局域网（WLAN）的重要协议</p>
+<ul>
+<li>IEEE最初制定的无线局域网标准主要用于解决 <strong>办公室局域网</strong> 和 <strong>校园网</strong> 中用户以及 <strong>终端的无线接入</strong> 问题，其业务主要限于数据存取，其速率最高只能达到2Mpbs。</li>
+<li>由于它在速率和传输距离上都不能满足人们的需要，IEEE小组又相继推出了802.11b、802.11a、802.11g、802.11n、802.11ac等一系列标准。
+<a href="#R-image-e0d3fe8ad96fac3d49d79059029c2aa6" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8722.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e0d3fe8ad96fac3d49d79059029c2aa6"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8722.png"></a></li>
+</ul>
+<p>(1) WLAN技术具有以下优势</p>
+<ul>
+<li>灵活性强，终端设备可以在WLAN网络的覆盖范围内任意放置和低速移动。</li>
+<li>部署成本较低，省去了终端设备综合布线的费用。</li>
+<li>扩展能力好，增加AP就可以增大容量和覆盖范围。</li>
+<li>技术成熟，在国外已经得到广泛的应用。</li>
+<li>采用了扩频技术和加密机制，具有较强的抗干扰性和网络保密性，安装简单。</li>
+</ul>
+<p>(2）帧的种类和用途如下:</p>
+<ul>
+<li>数据帧:用来传送数据，不含任何数据的空帧也属于数据帧。</li>
+<li>控制帧:控制媒体存储的各种帧。</li>
+<li>管理帧:与无线网络运作有关的帧，例如无线设备的连接，身份认证等等。</li>
+</ul>
+<h2 id="esp8266单片机">ESP8266单片机</h2>
+<ul>
+<li>ESP8266模块的开发语言C语言</li>
+<li>ESP8266模块有1个模拟输入管脚</li>
+</ul>
+<h3 id="常用函数">常用函数</h3>
+<ol>
+<li>WiFi.begin(ssid,pass)：
+<ul>
+<li>ssid: 热点的名字</li>
+<li>pass：热点的密码</li>
+</ul>
+</li>
+<li>WiFi.mode()：设定wifi的操作模式，其参数值为: WIFl_AP,WIFl_STA,WIFI_AP_STA或者WIFI_OFF
+<ul>
+<li>WIFI_OFF:关闭WiFi</li>
+<li>WIFI_STA:设置成Wi-Fi终端</li>
+<li>WIFI_AP:设置成Wi-Fi网络接入点(基站，热点)</li>
+<li>WIFI_AP_STA:-设置成Wi-Fi网络接入点以版终端</li>
+</ul>
+</li>
+<li>WIFI.getMode():返回当前的WIFI模式，上述四种模式中的一种。</li>
+<li>WIFI.softAP(ssid):创建一个无线局域网热点。这个热点允许其他设备（如手机、电脑等）通过Wi-Fi连接到ESP8266。参数 ssid 是要创建的Wi-Fi热点的名称，是一个字符串类型变量,最多31个字符。</li>
+<li>WiFi.softAP(ssid,password,channel,hidden,max_connetion)：设置受密码保护的网络或配置其他网络参数，此功能的第一个参数是必须的，其余四个是可选的；
+<ul>
+<li>
+<p><strong>password</strong> 带有密码的可选字符串。对于WPA2-PSK网络，其长度至少应为8个字符。如果未指定，则接入点将打开，任何人都可以连接（最多63个字符）</p>
+</li>
+<li>
+<p><strong>channel（可选参数）</strong> ：指定SoftAP要使用的Wi-Fi信道。不同的国家和地区有不同的可用信道范围，<a href="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/#my-target">我国的信道范围规定</a>,选择一个相对空闲的信道有助于提高无线通信质量。</p>
+</li>
+<li>
+<p><strong>hidden（可选参数）</strong> ：如果设为true，表示创建一个<strong>隐藏网络</strong>，即不广播其SSID，这样其他设备不能通过常规方式自动扫描到该热点。用户需要手动输入正确的SSID才能连接。</p>
+</li>
+<li>
+<p><strong>max_connection（可选参数）</strong> ：定义允许同时连接到SoftAP的<strong>最大客户端数量</strong>。超出这个数目的设备将无法再加入此Wi-Fi网络。</p>
+</li>
+</ul>
+</li>
+<li><strong>softAPgetStationNum</strong>()：获取连接的soft-AP接口的站点数WiFi.
+softAPdisconnect(wifioff)，功能会将当前配置的SSID和soft_AP的密码设置为空值，该参数wifioff是可选的，如果设置为true，将关闭soft-AP模式</li>
+<li><strong>WiFi.softAPIP()</strong>: 返回访问点的网络接口的IP地址，返回值是IPAddress类型。</li>
+<li><strong>WiFi.softAPmacAddress(mac):</strong> 函数接受一个参数mac，该参数是指向内存位置的指针（一个uint8_t大小为6个元素的数组），以保存mac地址。函数本身返回相同的指针值。</li>
+</ol>
+<h2 id="station模式">Station模式</h2>
+<ul>
+<li>首先<strong>AP</strong>发出信标(beacon)帧，意思就是我在这里，谁来连接我啊;</li>
+<li><strong>移动工作站</strong> 也会发出探(probe)帧，意思是有谁我可以连接啊。这个是工作站主动发出来的，每隔一定时间发出一次。</li>
+</ul>
+<p>所以，根据这点，可以产生很多有价值的应用。比如你的带WiFi功能的手机，即使不连接wifi的情况下，只要打开WiFi功能，就可以被路由器截获这帧信息，路由器收集之后，你的信息就会被一个审计的东西发到服务器上，你手机号xxx上线时间xxx下线时间xxx都浏览了那些网页，WiFi建立连接过程都一目了然，你的位置也全都暴露了，这就叫WiFi探针。</p>
+<p>具体流程如下所示:</p>
+<ol>
+<li>
+<p>探测请求过程：
+STA：设备 &mdash;&mdash;&mdash;&mdash;&gt;Probe Request(探测请求)&mdash;&gt; AP：热点</p>
+</li>
+<li>
+<p>返回应答帧：
+STA&lt;&mdash;&mdash;&mdash;&ndash; Probe Response &lt;&mdash;&mdash;&mdash;&ndash; AP，这个是由wifi（热点）返回的应答帧;</p>
+<p>接下来是身份验证过程，可以使用诸如 WEP、WEP2、WPA 等加密方式应用到认证请求上;</p>
+</li>
+<li>
+<p>身份验证过程：
+STA &mdash;&mdash;&mdash;&mdash;&gt; Authentication Request &mdash;&mdash;&ndash;&gt;AP
+认证请求中包含认证 Auth类型，Open System , Shared Key等信息，路由器返回认证结果;</p>
+</li>
+<li>
+<p>连接请求
+STA&lt;&mdash;&mdash;&mdash;&mdash; Authentication Response&lt;&mdash;&mdash;&mdash; AP连接请求;
+STA&mdash;&mdash;&mdash;&mdash;&gt; Association Request &mdash;&mdash;&mdash;&mdash;&gt;AP请求与AP建立关联，从而可以进行数据交互;认证过连接请求OK返回。</p>
+</li>
+<li>
+<p>数据传输
+STA&lt;&mdash;&mdash;&mdash;&mdash;- Association Response&lt;&mdash;&mdash;&mdash;&ndash; AP</p>
+</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266WiFi. h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define ssid&#34;ESP8266&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define pssd&#34;123456789”
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> stassid<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;doit&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> stapssd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;doit3305&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// put your setup eode here, to run once :
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    serial.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">115200</span>);<span style="color:#75715e">//波特率设置为115200
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    wiPi.<span style="color:#a6e22e">mode</span>(WIFI_AP_STA);<span style="color:#75715e">//设置WIFI操作模式为WIFI_AP_STA,即接入点以及终端
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    wiPi.<span style="color:#a6e22e">disconnect</span>();<span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    wiri.<span style="color:#a6e22e">begin</span>(stassid, stagssd);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(WiPi.<span style="color:#a6e22e">status</span>() <span style="color:#f92672">!=</span>L_COHIEECTED){
+</span></span><span style="display:flex;"><span>        delay<span style="color:#f92672">=</span>(<span style="color:#ae81ff">500</span>) ;
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;&#34;</span>.<span style="color:#e6db74">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    serial .<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;TIFI connect sucess&#34;</span>) ;
+</span></span><span style="display:flex;"><span>    serial. <span style="color:#a6e22e">println</span>(WiPi.<span style="color:#a6e22e">localIP</span>());
+</span></span><span style="display:flex;"><span>    WiPi.<span style="color:#a6e22e">softAP</span>(ssid,pssd);<span style="color:#75715e">//连接WIFI
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    IPAddress ip<span style="color:#f92672">=</span>wiPi.<span style="color:#a6e22e">softAPIP</span>();<span style="color:#75715e">//softAPIP()返回网络接口IP地址，返回值为IPAddress
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    serial . <span style="color:#a6e22e">println</span>(ip)<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    Serial . <span style="color:#a6e22e">println</span>(wiPi.<span style="color:#a6e22e">softAPmacAddress</span>().<span style="color:#a6e22e">c_str</span>());
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//put your main code here, to run repeatedly :
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Serial.<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Station conneted to soft-AP = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    ,WiPi.<span style="color:#a6e22e">softAPgetStationJlun</span>());<span style="color:#75715e">//softAPgetStationJlun获取soft-AP接口的站点数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    delay<span style="color:#f92672">=</span>(<span style="color:#ae81ff">5000</span>);
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<h2 id="tcpip协议">TCP/IP协议</h2>
+<p>TCP/IP不是指特定的某一个协议，而是一个协议族，包含众多的协议。</p>
+<p>互联网通信的本质是数字通信，任何数字通信都离不开通信协议的制定，通信设备只有按照约定的、统一的方式去封装和解析信息，才能实现通信。互联网通信所要遵守的众多协议，被统称为<strong>TCP/IP</strong> .</p>
+<h3 id="serverd的应用">Serverd的应用</h3>
+<p>与之相关的函数：</p>
+<ul>
+<li>Server ：服务器是所有基于WIFI Server的基类，</li>
+<li>Server()函数：创建一个服务器，以侦听指定端口上的连续；
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>  <span style="color:#a6e22e">Server</span>(port)
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">参数</span>port:<span style="color:#960050;background-color:#1e0010">侦听的端口（</span>int类型<span style="color:#960050;background-color:#1e0010">）；</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">返回值：无</span></span></span></code></pre></div>
+</li>
+</ul>
+<p>如下为一个Server应用的代码，代码实现了用开发板连接手机开的热点，然后在手机上输入串口监视器打印的IP，然后可以看见显示 &ldquo;analog input:2&rdquo; 的网页。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span><span style="color:#75715e">&lt;ESP8266WiFi.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    cconst <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> ssid <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LW&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> pssd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ping123456&#34;</span>;
+</span></span><span style="display:flex;"><span>    WiFiServer <span style="color:#a6e22e">server</span>(<span style="color:#ae81ff">80</span>);<span style="color:#75715e">//侦听端口，无返回值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// put your setup code here, to run once:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Serial.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">115200</span>);
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">println</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;connetctint tu %s&#34;</span>,ssid);
+</span></span><span style="display:flex;"><span>        WiFi.<span style="color:#a6e22e">begin</span>(ssid,pssd);  <span style="color:#75715e">//连接wifi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span>(WiFi.<span style="color:#a6e22e">status</span>()<span style="color:#f92672">!=</span>WL_CONNECTED)   <span style="color:#75715e">//等待连接wifi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">500</span>);
+</span></span><span style="display:flex;"><span>            Serial.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;.&#34;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;connected&#34;</span>);
+</span></span><span style="display:flex;"><span>        server.<span style="color:#a6e22e">begin</span>();      <span style="color:#75715e">//侦听服务器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Serial.<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;web server started,open %s in a web browser</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,WiFi.<span style="color:#a6e22e">localIP</span>().<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">c_str</span>());
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    String <span style="color:#a6e22e">prepareHtmlPage</span>()         <span style="color:#75715e">//返回网页浏览器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>        String htmlPage<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">String</span>(<span style="color:#e6db74">&#34;HTTP/1.1 200 OK</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Contect-Type:text/html</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Connerction:close</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">+</span>  <span style="color:#75715e">//连接关闭请求
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#e6db74">&#34;Refersh:5</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">+</span>      <span style="color:#75715e">//5秒刷新一次网页
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&lt;!DOCTYPE HTML&gt;&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&lt;html&gt;&#34;</span><span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;analog input:&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">String</span>(<span style="color:#a6e22e">analogRead</span>(A0))<span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&lt;/html&gt;&#34;</span><span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> htmlPage;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// put your main code here, to run repeatedly:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        WiFiClient client <span style="color:#f92672">=</span> server.<span style="color:#a6e22e">available</span>();     <span style="color:#75715e">//检测是否有客户端存在
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(client)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">[Client connected]&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span>(client.<span style="color:#a6e22e">connected</span>())       <span style="color:#75715e">//判断客户端是否连接成功
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                String line <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">readStringUntil</span>(<span style="color:#e6db74">&#39;\r&#39;</span>);    <span style="color:#75715e">//每行读取到r结束
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#75715e">//等待服务器的应答
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span>(line.<span style="color:#a6e22e">length</span>()<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span><span style="color:#f92672">&amp;&amp;</span>line[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#39;\n&#39;</span>)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    client.<span style="color:#a6e22e">println</span>(<span style="color:#a6e22e">prepareHtmlPage</span>());
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<h3 id="tcpclient函数">TCPClient函数</h3>
+<ol>
+<li>
+<p>相关函数介绍</p>
+<hr>
+<pre><code> connect()描述：
+ 连接到构造函数中指定的IP地址和端口。返回值指示成功或失败。使用域名( ex:google.com）时，connect()还支持DNS查找。
+ 句法:
+ - client.connect(ip,port)
+ - client.connect(URL,port)参数
+ ip: 客户端将连接的ip地址（4个字节的数组)
+ URL: 客户端将连接到的域名（字符串，例如: &quot;arduino.cc&quot;）
+ Port: 客户端将连接到的端口（ int）
+ 返回值：如果连接成功，则返回 true;
+                 否则，返回false
+</code></pre>
+<hr>
+<hr>
+<pre><code> print()描述：
+ 将数据打印到客户端连接到服务器。将数字打印为数字序列，每个数字为一个ASCI字符句法:
+ client.print(data)
+ client.print(data,BASE)参数
+ data:要打印的数据（char,byte,int,long或string）
+ BASE（可选）:打印数字的基数:DEC代表十进制（基数10），
+                             OCT代表八进制（基数8），
+                             HEX代表十六进制（基数16&gt;
+</code></pre>
+<hr>
+</li>
+<li>
+<p><strong>客户端访问服务器流程</strong></p>
+</li>
+</ol>
+<ul>
+<li>连接到Wi-Fi</li>
+<li>选择服务器</li>
+<li>实例化客户端WiFiClient client;</li>
+<li>把客户端连接到服务器</li>
+<li>请求数据</li>
+<li>读取来自服务器的回复
+实现代码如下：</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266WiFi.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> ssid <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LW&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> pssd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ping123456&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;www.baidu.com&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// put your setup code here, to run once:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Serial.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">115200</span>);
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">println</span>();
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;connecting to %s &#34;</span>,ssid);
+</span></span><span style="display:flex;"><span>        WiFi.<span style="color:#a6e22e">begin</span>(ssid,pssd);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(WiFi.<span style="color:#a6e22e">status</span>()<span style="color:#f92672">!=</span>WL_CONNECTED)       <span style="color:#75715e">//等待WIFI连接成功
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">500</span>);
+</span></span><span style="display:flex;"><span>            Serial.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;.&#34;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;connected&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// put your main code here, to run repeatedly:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">/*  String host=&#34;&#34;; 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        while(Serial.available()&gt;0)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            host += (char)Serial.read();
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            delay(2)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        */</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//char host[30];
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//     for(int i=0;i&lt;30;i++)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//     {  
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//          host[i]=&#39;\0&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//      }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//      while(Serial.available()&gt;0)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//    {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//        host += (char)Serial.read();
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//        delay(2)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//      }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//      
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        WiFiClient client;
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">[connecting to %s ...&#34;</span>,host);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(client.<span style="color:#a6e22e">connect</span>(host,<span style="color:#ae81ff">80</span>))      <span style="color:#75715e">//连接服务器成功
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        {
+</span></span><span style="display:flex;"><span>            Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;connected]&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//访问google.cn的报头，采用GET方式，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;[Sending a request]&#34;</span>);
+</span></span><span style="display:flex;"><span>            client.<span style="color:#a6e22e">println</span>(<span style="color:#a6e22e">String</span>(<span style="color:#e6db74">&#34;GET/&#34;</span>)<span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;HTTP/1.1</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;Host:&#34;</span><span style="color:#f92672">+</span>host<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;Connection: close</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>                            );
+</span></span><span style="display:flex;"><span>                            
+</span></span><span style="display:flex;"><span>            Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;[Response:]&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span>(client.<span style="color:#a6e22e">connected</span>()<span style="color:#f92672">||</span>client.<span style="color:#a6e22e">available</span>())       <span style="color:#75715e">//等待如果客户端已经连接，并且有数据到来
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span>(client.<span style="color:#a6e22e">available</span>())
+</span></span><span style="display:flex;"><span>                    {
+</span></span><span style="display:flex;"><span>                        String line <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">readStringUntil</span>(<span style="color:#e6db74">&#39;\n&#39;</span>);    <span style="color:#75715e">//从缓存区读取服务器的数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                        Serial.<span style="color:#a6e22e">println</span>(line);
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                client.<span style="color:#a6e22e">stop</span>();              <span style="color:#75715e">//停止客户端
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">[Disconnected]&#34;</span>);       
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;connection failed !&#34;</span>);
+</span></span><span style="display:flex;"><span>            client.<span style="color:#a6e22e">stop</span>();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">5000</span>);
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<h3 id="http协议简介">HTTP协议简介</h3>
+<p>当使用浏览器(客户端)访问一个网页时,大致经过了以下三步:</p>
+<ul>
+<li>用户输入网址后,浏览器(客户端)会向服务器 <strong>发出HTTP请求</strong> ;</li>
+<li>服务器收到请求后会返回HTML形式的文本以响应请求;</li>
+<li>浏览器收到服务器返回的HTML文本后,将文本转换为网页显示出来。</li>
+</ul>
+<ol>
+<li>
+<p>HTTP请求
+当客户端访问网页时,会先发起HTTP请求。HTTP请求由三部分组成,分别是 <strong>请求行</strong>、<strong>请求报头</strong> 和 <strong>请求正文</strong>。</p>
+</li>
+<li>
+<p>HTTP响应
+服务器在接收到HTTP请求消息后,会返回一个响应消息。HTTP响应也是由三个部分组成,分别是状态行、响应报头和响应正文。</p>
+</li>
+</ol>
+<h2 id="udp协议">UDP协议</h2>
+<p>用户数据报UDP有两个字段:数据字段和首部字段。首部字段很简单，只有8个字节(图5-5)，由四个字段组成，每个字段的长度都是两个字节。各字段意义如下:</p>
+<p>(1)源端口
+源端口号。在需要对方回信时选用。不需要时可用全0。
+(2)目的端口
+目的端口号。这在终点交付报文时必须使用。
+(3）长度
+UDP用户数据报的长度，其最小值是8（仅有首部)。
+(4)检验和
+检测UDP用户数据报在传输中是否有错。有错就丢弃。</p>
+<p>程序流程：</p>
+<ul>
+<li>设置ESP8266工作在station模式（ WiFi.mode(WIFI_STA)) ;②将ESP8266接入到wIFI网络中WiFi.begin(SSID,PSSD);</li>
+<li>实例化WiFiUDP对象指定端口，建立UDP连接，连接后自动开始侦听传入的数据包。
+WiFiUDP Udp; Udp.begin(localUdpPort);</li>
+<li>等待输入的UDP包处理收到的数据并回复。
+<ul>
+<li>Udp.parsePacket ( ) ;</li>
+<li>Udp.read(incomingPacket,255);</li>
+<li>Udp.beginPacket(Udp.remotelP(), Udp.remotePort());</li>
+<li>Udp.write(replyPacket);</li>
+<li>Udp.endPacket();</li>
+</ul>
+</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    1、设置ESP8266工作在station模式（WiFi.mode(WIFI_STA)）;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    2、将ESP8266接入到WIFI网络中WiFi.begin(SSID,PSSD);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    3、实例化WiFiUDP对象指定端口，建立UDP连接，连接后自动开始侦听传入的数据包。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    WiFiUDP Udp; Udp.begin(localUdpPort);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    4、等待输入的UDP包处理收到的数据并回复。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Udp.parsePacket（）;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Udp.read(incomingPacket, 255);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Udp.write(replyPacket);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Udp.endPacket(); 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266WiFi.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFiUdp.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> ssid <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;iPhone&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;peng2020&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    WiFiUDP Udp;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> localUdpPort <span style="color:#f92672">=</span> <span style="color:#ae81ff">4210</span>;  <span style="color:#75715e">// local port to listen on
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> incomingPacket[<span style="color:#ae81ff">255</span>];  <span style="color:#75715e">// buffer for incoming packets
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span>  replyPacket[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hi there! Got the message :-)&#34;</span>;  <span style="color:#75715e">// a reply string to send back
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// put your setup code here, to run once:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Serial.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">115200</span>);
+</span></span><span style="display:flex;"><span>    Serial.<span style="color:#a6e22e">println</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Serial.<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Connecting to %s &#34;</span>, ssid);
+</span></span><span style="display:flex;"><span>    WiFi.<span style="color:#a6e22e">mode</span>(WIFI_STA);
+</span></span><span style="display:flex;"><span>    WiFi.<span style="color:#a6e22e">begin</span>(ssid, password);            <span style="color:#75715e">//开始连接WIFI
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (WiFi.<span style="color:#a6e22e">status</span>() <span style="color:#f92672">!=</span> WL_CONNECTED)    <span style="color:#75715e">//等待连接
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">500</span>);
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34; connected&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Udp.<span style="color:#a6e22e">begin</span>(localUdpPort);      <span style="color:#75715e">//指定本地连接端口号
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Serial.<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Now listening at IP %s, UDP port %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, WiFi.<span style="color:#a6e22e">localIP</span>().<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">c_str</span>(), localUdpPort);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// put your main code here, to run repeatedly:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> packetSize <span style="color:#f92672">=</span> Udp.<span style="color:#a6e22e">parsePacket</span>(); <span style="color:#75715e">//调用函数解析数据包
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (packetSize)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// receive incoming UDP packets
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Serial.<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Received %d bytes from %s, port %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, packetSize, Udp.<span style="color:#a6e22e">remoteIP</span>().<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">c_str</span>(), Udp.<span style="color:#a6e22e">remotePort</span>());
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> Udp.<span style="color:#a6e22e">read</span>(incomingPacket, <span style="color:#ae81ff">255</span>);     <span style="color:#75715e">//从缓存区读取数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (len <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>        incomingPacket[len] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;    <span style="color:#75715e">//给缓存区加结束符
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;UDP packet contents: %s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, incomingPacket);   
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// send back a reply, to the IP address and port we got the packet from
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Udp.<span style="color:#a6e22e">beginPacket</span>(Udp.<span style="color:#a6e22e">remoteIP</span>(), Udp.<span style="color:#a6e22e">remotePort</span>());     <span style="color:#75715e">//指定远程连接地址和端口号
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Udp.<span style="color:#a6e22e">write</span>(replyPacket);
+</span></span><span style="display:flex;"><span>        Udp.<span style="color:#a6e22e">endPacket</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<h2 id="http与mqtt协议对比">HTTP与MQTT协议对比</h2>
+<p><a href="#R-image-65eeb6f104a0120fcf1582afc6aefdc6" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8723.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-65eeb6f104a0120fcf1582afc6aefdc6"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8723.png"></a>
+<a href="#R-image-39c36a65b359500fc539002653198c2e" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8724.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-39c36a65b359500fc539002653198c2e"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8724.png"></a>
+不同于HTTP的标头采用文字描述，MQTT的标头探用数字编码，整个长度只占2位元组，等同两个字元，后面跟著讯息的主题(topic)和内容(payload)，实际格式如下:</p>
+<p><a href="#R-image-b2570d1464c80f0bee442273b290f9f3" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8725.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b2570d1464c80f0bee442273b290f9f3"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8725.png"></a>
+<a href="#R-image-f2225b57d0ce0af8ea23437216c9cfae" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="%E5%9B%BE%E7%89%8726.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f2225b57d0ce0af8ea23437216c9cfae"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="%E5%9B%BE%E7%89%8726.png"></a>
+<a href="#R-image-a4c3bf800c4b4bdb2fdd1e0e38c2dd25" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8727.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4c3bf800c4b4bdb2fdd1e0e38c2dd25"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8727.png"></a>
+<a href="#R-image-b00f24e898533c82f9bfd662f4b8f478" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8728.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b00f24e898533c82f9bfd662f4b8f478"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8728.png"></a></p>
+<p>QoS(品质)设定
+QoS代表发布者与代理人，或者代理人与订阅者之间的传输品质。MQTT定义了0,1和2三个层级的品质设定（实际支援情况依伺服器软体而定，Mosquitto伺服器全都支援)∶0:最多传送一次(at most once)
+1:至少传送一次(at least once)2:确实传送一次(exactly once)
+用寄信来比喻，QoS0就像寄平信，不保证讯息会送达。</p>
+<p>阿里云平台
+物联网云平台：接收设备上报的数据、向设备下发数据、对数据进行转发/分析/计算/显示、管理设备&hellip;
+<a href="#R-image-186768c632d861546b21202f13540a40" class="lightbox-link"><img alt=" " class="lazy lightbox figure-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8729.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-186768c632d861546b21202f13540a40"><img alt=" " class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/%E5%9B%BE%E7%89%8729.png"></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266WiFi.h&gt;//安装esp8266arduino开发环境</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> WiFiClient espClient;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;AliyunIoTSDK.h&gt;//引入阿里云 IoT SDK</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//需要安装crypto库、PubSubClient库
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//设置产品和设备的信息，从阿里云设备信息里查看
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define PRODUCT_KEY     &#34;k0mzriwvgtZ&#34;</span><span style="color:#75715e">//替换自己的PRODUCT_KEY
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define DEVICE_NAME     &#34;LED2&#34;</span><span style="color:#75715e">//替换自己的DEVICE_NAME
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define DEVICE_SECRET   &#34;674c24074d05a31a672094c0d23dc07c&#34;</span><span style="color:#75715e">//替换自己的DEVICE_SECRET
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define REGION_ID       &#34;cn-shanghai&#34;</span><span style="color:#75715e">//默认cn-shanghai
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#define WIFI_SSID       &#34;LW&#34;</span><span style="color:#75715e">//替换自己的WIFI
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#define WIFI_PASSWD     &#34;ping123456&#34;</span><span style="color:#75715e">//替换自己的WIFI
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#define PIN_LED   2      </span><span style="color:#75715e">//LED
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> lastMsMain <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    Serial.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">115200</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//pinMode(LED_BUILTIN, OUTPUT);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// digitalWrite(LED_BUILTIN, HIGH);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">pinMode</span>(PIN_LED, OUTPUT);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">digitalWrite</span>(PIN_LED, HIGH);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//连接到wifi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">wifiInit</span>(WIFI_SSID, WIFI_PASSWD);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//初始化 iot，需传入 wifi 的 client，和设备产品信息
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    AliyunIoTSDK<span style="color:#f92672">::</span><span style="color:#a6e22e">begin</span>(espClient, PRODUCT_KEY, DEVICE_NAME, DEVICE_SECRET, REGION_ID);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//绑定一个设备属性回调，当远程修改此属性，会触发LED函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    AliyunIoTSDK<span style="color:#f92672">::</span><span style="color:#a6e22e">bindData</span>(<span style="color:#e6db74">&#34;LED2&#34;</span>, LED);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    AliyunIoTSDK<span style="color:#f92672">::</span><span style="color:#a6e22e">loop</span>();<span style="color:#75715e">//必要函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">millis</span>() <span style="color:#f92672">-</span> lastMsMain <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2000</span>)<span style="color:#75715e">//每2秒发送一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>        lastMsMain <span style="color:#f92672">=</span> <span style="color:#a6e22e">millis</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//发送LED状态到云平台（高电平：1；低电平：0）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        AliyunIoTSDK<span style="color:#f92672">::</span><span style="color:#a6e22e">send</span>(<span style="color:#e6db74">&#34;LED2PIN&#34;</span>, <span style="color:#a6e22e">digitalRead</span>(PIN_LED));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//wifi 连接
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">wifiInit</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>ssid, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>passphrase)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    WiFi.<span style="color:#a6e22e">mode</span>(WIFI_STA);
+</span></span><span style="display:flex;"><span>    WiFi.<span style="color:#a6e22e">begin</span>(ssid, passphrase);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (WiFi.<span style="color:#a6e22e">status</span>() <span style="color:#f92672">!=</span> WL_CONNECTED)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>        Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;WiFi not Connect&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    Serial.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Connected to AP&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//灯的属性修改的回调函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">LED</span>(JsonVariant L)<span style="color:#75715e">//固定格式，修改参数l
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> LED <span style="color:#f92672">=</span> L[<span style="color:#e6db74">&#34;LED2&#34;</span>];<span style="color:#75715e">//参数l，与标识符一致
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (LED <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">digitalWrite</span>(PIN_LED, HIGH);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">digitalWrite</span>(PIN_LED, LOW);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    Serial.<span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;收到的LED是：&#34;</span>); Serial.<span style="color:#a6e22e">println</span>(LED);
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年1月9日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../../categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">F1-复习资料</a></li>
+    <li><a class="term-link" href="../../../categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/">Z-专业课</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

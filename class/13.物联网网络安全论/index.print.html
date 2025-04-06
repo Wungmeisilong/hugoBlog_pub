@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="物联网主要解决什么问题?- 主要解决物品到物品（T2T）、人到物品（H2T）、人到人（H2H）之间的互联，核心共性技术、网络与信息安全技术、以及关键技术是物联网当前主要的研究方向">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="物联网网络安全论 :: Maloudown">
+    <meta name="twitter:description" content="物联网主要解决什么问题?- 主要解决物品到物品（T2T）、人到物品（H2T）、人到人（H2H）之间的互联，核心共性技术、网络与信息安全技术、以及关键技术是物联网当前主要的研究方向">
+    <meta property="og:url" content="http://localhost:1313/class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="物联网网络安全论 :: Maloudown">
+    <meta property="og:description" content="物联网主要解决什么问题?- 主要解决物品到物品（T2T）、人到物品（H2T）、人到人（H2H）之间的互联，核心共性技术、网络与信息安全技术、以及关键技术是物联网当前主要的研究方向">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="课程">
+    <meta property="article:published_time" content="2024-05-29T09:00:12+08:00">
+    <meta property="article:modified_time" content="2024-05-29T09:00:12+08:00">
+    <meta property="article:tag" content="物联网">
+    <meta itemprop="name" content="物联网网络安全论 :: Maloudown">
+    <meta itemprop="description" content="物联网主要解决什么问题?- 主要解决物品到物品（T2T）、人到物品（H2T）、人到人（H2H）之间的互联，核心共性技术、网络与信息安全技术、以及关键技术是物联网当前主要的研究方向">
+    <meta itemprop="datePublished" content="2024-05-29T09:00:12+08:00">
+    <meta itemprop="dateModified" content="2024-05-29T09:00:12+08:00">
+    <meta itemprop="wordCount" content="4702">
+    <meta itemprop="keywords" content="物联网">
+    <title>物联网网络安全论 :: Maloudown</title>
+    <link href="http://localhost:1313/class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/" rel="canonical" type="text/html" title="物联网网络安全论 :: Maloudown">
+    <link href="../../class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/index.xml" rel="alternate" type="application/rss+xml" title="物联网网络安全论 :: Maloudown">
+    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA\/';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#物联网主要解决什么问题-">物联网主要解决什么问题?-</a></li>
+    <li><a href="#物联网的安全特性">物联网的安全特性</a></li>
+    <li><a href="#物联网的功能特点">物联网的功能特点</a></li>
+    <li><a href="#数据加密中出现的攻击旁路系统是什么">数据加密中出现的攻击——旁路系统是什么</a></li>
+    <li><a href="#数字签名的使用">数字签名的使用</a></li>
+    <li><a href="#节点认证机制中的pki是什么">节点认证机制中的PKI是什么？</a></li>
+    <li><a href="#路由协议的安全威胁">路由协议的安全威胁</a></li>
+    <li><a href="#撒凯加密">撒凯加密</a></li>
+    <li><a href="#加密技术分类">加密技术分类</a></li>
+    <li><a href="#对称加密算法">对称加密算法</a></li>
+    <li><a href="#单向扩散列函数">单向扩散列函数</a></li>
+    <li><a href="#零知识证明的基本协议">零知识证明的基本协议</a></li>
+    <li><a href="#标签和读写器的通信模式">标签和读写器的通信模式</a></li>
+    <li><a href="#rfid病毒">RFID病毒</a></li>
+    <li><a href="#rfid系统通信模型">RFID系统通信模型</a></li>
+    <li><a href="#rfid技术中epc系统的安全问题">RFID技术中EPC系统的安全问题</a></li>
+    <li><a href="#采用密码机制解决rfid安全问题">采用密码机制解决RFID安全问题</a></li>
+    <li><a href="#传感器网络组网技术面临的安全问题">传感器网络组网技术面临的安全问题</a></li>
+    <li><a href="#传感器网络中的攻击和防疫手段">传感器网络中的攻击和防疫手段</a></li>
+    <li><a href="#入侵检测技术">入侵检测技术</a></li>
+    <li><a href="#zigbee网络结构">ZigBee网络结构</a></li>
+    <li><a href="#数据链路层安全">数据链路层安全</a></li>
+    <li><a href="#zigbee中确保安全的方法">ZigBee中确保安全的方法</a></li>
+    <li><a href="#无线通信网络安全中安全连接的三要素">无线通信网络安全中安全连接的三要素</a></li>
+    <li><a href="#无线网络安全所面临的威胁地址欺骗和会话拦截">无线网络安全所面临的威胁——地址欺骗和会话拦截</a></li>
+    <li><a href="#无线局域网安全技术之wep">无线局域网安全技术之WEP</a></li>
+    <li><a href="#无线网络主流技术安全解决方案wpa">无线网络主流技术安全解决方案——WPA</a></li>
+    <li><a href="#互联网网络安全防火墙的作用">互联网网络安全——防火墙的作用</a></li>
+    <li><a href="#防火墙的结构屏蔽子网模式">防火墙的结构——屏蔽子网模式</a></li>
+    <li><a href="#vpn在中国使用要解决哪些问题">VPN在中国使用要解决哪些问题？</a></li>
+    <li><a href="#中间件的体系结构和核心模块">中间件的体系结构和核心模块</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">物联网网络安全论</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2%E7%9A%84%E4%B8%BB%E8%A6%81%E5%90%AB%E4%B9%89/" title="如何理解费尔巴哈提纲的主要含义？ (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="嵌入式系统设计知识点 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/%E7%89%A9%E8%81%94%E7%BD%91/">物联网</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="物联网网络安全论">物联网网络安全论</h1>
+
+<h2 id="物联网主要解决什么问题-">物联网主要解决什么问题?-</h2>
+<p>主要解决物品到物品（T2T）、人到物品（H2T）、人到人（H2H）之间的互联，核心共性技术、网络与信息安全技术、以及关键技术是物联网当前主要的研究方向</p>
+<h2 id="物联网的安全特性">物联网的安全特性</h2>
+<p>从物联网的信息处理来看，数据信息要经过采集、汇聚、融合、传输、决策与控制等过程</p>
+<h2 id="物联网的功能特点">物联网的功能特点</h2>
+<ul>
+<li>全面感知能力</li>
+<li>数据信息的可靠传输</li>
+<li>智能化处理</li>
+<li>可以根据各个行业、各种业务的具体特点形成各个不同的应用或系统的应用解决方案</li>
+</ul>
+<h2 id="数据加密中出现的攻击旁路系统是什么">数据加密中出现的攻击——旁路系统是什么</h2>
+<p>攻击者可能试图通过旁路系统，如物理地取走数据库，在通信线路上窃听，面对这样的威胁最有效的方式是对数据进行加密，以加密的格式存储和传输数据。</p>
+<h2 id="数字签名的使用">数字签名的使用</h2>
+<ul>
+<li>鉴权：非对称秘钥加密系统允许每一位发送数据的用户使用公钥进行数据加密，数字签名能够让信息接受者确认信息发送者的身份</li>
+<li>验证完整性：数据传输的双方都希望数据在传输的过程没有被修改</li>
+<li>保证不可抵赖性： 在密文的背景下，抵赖这个词指的是不承认与消息有关的举动（即声称消息来自第三方）。消息接受方可以通过数字签名的方式来抵制后续的抵赖，因为接收方可以出示数字签名证明数据的来源。</li>
+</ul>
+<h2 id="节点认证机制中的pki是什么">节点认证机制中的PKI是什么？</h2>
+<p>KPI是遵循既定标准的秘钥管理平台，它能够为所有的网络应用提供加密和数字签名等密码服务，以及必要的秘钥和证书管理体系。
+简单来说KPI是利用公钥的理论和技术建立的提供安全服务的基础设施。</p>
+<h2 id="路由协议的安全威胁">路由协议的安全威胁</h2>
+<table>
+  <thead>
+      <tr>
+          <th>路由协议</th>
+          <th>安全威胁</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>TyniOS信标</td>
+          <td>虚假路由攻击、选择性转发攻击、污水池攻击、女巫攻击、虫洞攻击、Hello泛红攻击</td>
+      </tr>
+      <tr>
+          <td>定向扩散</td>
+          <td>虚假路由攻击、选择性转发攻击、污水池攻击、女巫攻击、虫洞攻击、Hello泛红攻击</td>
+      </tr>
+      <tr>
+          <td>地理位置路由</td>
+          <td>虚假路由攻击、选择性转发攻击、污水池攻击、女巫攻击</td>
+      </tr>
+      <tr>
+          <td>最低成本转发</td>
+          <td>虚假路由攻击、选择性转发攻击、污水池攻击、女巫攻击、虫洞攻击、Hello泛红攻击</td>
+      </tr>
+      <tr>
+          <td>谣传路由</td>
+          <td>虚假路由攻击、选择性转发攻击、污水池攻击、女巫攻击、虫洞攻击</td>
+      </tr>
+      <tr>
+          <td><strong>能量节约的拓扑维护</strong>（SPAN、GAF、CEC、AFECA）</td>
+          <td>虚假路由攻击、女巫攻击、Hello泛红攻击</td>
+      </tr>
+      <tr>
+          <td>聚簇路由协议（LEACH、TEEN）</td>
+          <td>选择性转发攻击、Hello泛红攻击</td>
+      </tr>
+  </tbody>
+</table>
+<p>SPAN、GAF、CEC、AFECA 是网络拓扑维护中用于节约能量的几种不同策略或算法的缩写。它们主要用于无线传感器网络（WSN）或其他类型的网络中，以优化网络结构，减少冗余，延长网络寿命，从而节约能量消耗。下面是每个缩写的具体含义：</p>
+<p>SPAN (Sparse Topology Control):</p>
+<p>稀疏拓扑控制。SPAN 是一种拓扑控制算法，旨在通过创建一个稀疏的网络拓扑来减少节点间的消息传递，从而降低能量消耗。这种方法通过选择性地关闭一些节点或链接来减少网络的密集度，但同时保持网络的连通性。</p>
+<p>GAF (Geographic Adaptive Fidelity):</p>
+<p>地理自适应保真度。GAF 是一种基于地理位置信息的拓扑控制机制，它根据节点的地理位置和重要性来调整通信频率和范围。在 GAF 中，节点根据其地理位置和网络需求动态调整它们的通信行为，以减少不必要的通信和监听，从而节省能量。</p>
+<p>CEC (Critical Energy Consumption):</p>
+<p>关键能量消耗。CEC 可能指的是一种考虑网络中关键节点或链接的能量消耗的策略。这种策略旨在识别和优化那些对网络性能和稳定性至关重要的节点或链接的能量使用，以确保网络的关键部分能够在能量受限的情况下继续运作。</p>
+<p>AFECA (Adaptive Fault-tolerant Energy-efficient Clustering Algorithm):</p>
+<p>自适应容错节能聚类算法。AFECA 是一种聚类算法，它结合了容错机制和能量效率，以适应网络条件的变化。通过自适应地调整聚类结构和领导者选举，AFECA 旨在在保持网络稳定性的同时减少能量消耗，并提高网络的容错能力。</p>
+<h2 id="撒凯加密">撒凯加密</h2>
+<p>撒凯加密法的分明文和密文，密文计算公式如下：</p>
+<p><strong>公式：F(a)=(a+K)mod26。</strong></p>
+<h2 id="加密技术分类">加密技术分类</h2>
+<p>对称加密技术：是一种传统的加密体制，也称为私钥密码体制。在这一体制中加密和解密使用相同的秘钥。</p>
+<p><strong>对于N个用户网络，需要n(n-1)/2个秘钥。</strong></p>
+<h2 id="对称加密算法">对称加密算法</h2>
+<p>DES（Data Encryption Standard，数据加密标准）该算法速度快，适用于加密大量数据。</p>
+<p>3DES：是DES的变体，对同一块数据使用3个不同的秘钥进行3次加密，强度增强。</p>
+<p>AES（Advenced Encryption Standard，高级加密标准）：该算法基于排序和置换算法。它也是一种迭代的、对称加密分组的密码，它可以用128、192和256位秘钥，用128位的分组加密和解密。</p>
+<h2 id="单向扩散列函数">单向扩散列函数</h2>
+<p>在实际生活中，采用公钥对长文件进行加密耗时，为节省时间数字签名协议经常和单向扩散列函数一起使用。
+Alice并不对整个文件进行签名，而是只对三设置签名。签名过程参照书籍61页</p>
+<h2 id="零知识证明的基本协议">零知识证明的基本协议</h2>
+<p>这里做一个比喻，假设P知道开一扇门的密码，现在想向验证者V证明自己知道这扇门的密码，但具体密码是多少不让V知道，那么验证方法就是去开这扇门，只要P开了门就可以证明P知道门的密码。</p>
+<p>下面是书本的证明步骤：
+<a href="#R-image-f65e8d52eb6fbca21fc314fd35f24d9f" class="lightbox-link"><img alt="1" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f65e8d52eb6fbca21fc314fd35f24d9f"><img alt="1" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/image.png"></a></p>
+<ul>
+<li>V站在A点。</li>
+<li>P进入洞中，到达C点或D点</li>
+<li>P点进入洞中之后，V走到B点；</li>
+<li>V叫P信左边或右边出来</li>
+<li>P按照V的要求从左边或有边出来；</li>
+<li>P和V重复执行上面的步骤N次</li>
+</ul>
+<p>如果每次P走的都正确，则认为P知道咒语。</p>
+<h2 id="标签和读写器的通信模式">标签和读写器的通信模式</h2>
+<p>标签分类及其特点</p>
+<table>
+   <tr>
+        <td>分类</td> 
+        <td>能量来源</td> 
+        <td>发送器类型</td> 
+        <td>最大距离/cm</td>
+   </tr>
+   <tr>
+        <td>被动式标签</td>
+        <td>被动式</td>
+        <td>被动</td>
+        <td>10</td>  
+   </tr>
+   <tr>
+        <td>主动式标签</td>
+        <td>内部电池</td>
+        <td>主动</td>
+        <td>1000</td>  
+   </tr>
+   <tr>
+        <td>半主动式标签</td>
+        <td>内部电池</td>
+        <td>被动</td>
+        <td>100</td>  
+   </tr>  
+</table>
+<p>标签分类及其功能</p>
+<table>
+   <tr>
+        <td>分类</td> 
+        <td>能量来源</td> 
+        <td>别名</td> 
+        <td>存储</td>
+        <td>特点</td>
+   </tr>
+   <tr>
+        <td>class0</td>
+        <td>被动式</td>
+        <td>防盗窃标签</td>
+        <td>无</td>  
+        <td>EAS功能</td>
+   </tr>
+   <tr>
+        <td>class1</td>
+        <td>任意</td>
+        <td>EPC（电子产品标签）</td>
+        <td>只读</td> 
+        <td>仅用于识别</td>  
+   </tr>
+   <tr>
+        <td>class2</td>
+        <td>任意</td>
+        <td>EPC（电子产品标签）</td>
+        <td>读写</td> 
+        <td>数据日志记录</td>  
+   </tr>
+   <tr>
+        <td>class3</td>
+        <td>内部电池</td>
+        <td>传感器标签</td>
+        <td>读写</td> 
+        <td>环境传感器</td>  
+   </tr>
+   <tr>
+        <td>class4</td>
+        <td>内部电池</td>
+        <td>智能颗粒</td>
+        <td>读写</td> 
+        <td>自动组网</td>  
+   </tr>
+</table>
+<h2 id="rfid病毒">RFID病毒</h2>
+<p>2006年3月荷兰Vrije大学一组计算机研究员宣布，发现包括EPC标签在内的RFID标签可以携带病毒，并能攻击计算机。他们认为，可读写的电子标签存在着安全隐患。</p>
+<h2 id="rfid系统通信模型">RFID系统通信模型</h2>
+<p>这一个模型的物理层主要关心的问题是什么？</p>
+<ul>
+<li>物理模型主要关心电气信号的问题，例如频道分配、物理载波等，其中最重要的问题是载波切割问题。</li>
+</ul>
+<p>其他层关注的问题：</p>
+<ul>
+<li>
+<p>通信层主要解决多个标签的访问问题。</p>
+</li>
+<li>
+<p>应用层主要解决与最上层应用直接相关的内容，包括认证、识别、以及应用层数据表示。</p>
+</li>
+</ul>
+<h2 id="rfid技术中epc系统的安全问题">RFID技术中EPC系统的安全问题</h2>
+<p>EPC（电子产品标签）</p>
+<ul>
+<li>标签本身的缺陷
+<ul>
+<li>用户都可以利用合法的读写器或自购的读写器对电子标签进行读写或修改里面的存储信息。</li>
+<li>支持EPC global标准的无源标签大多数只允许写入一次，但是支持其他标准（ISO标准）的RFID标签可以写入多次；</li>
+<li>电子标签可以写入多次带来便利的同时，也带来了很多安全隐患。</li>
+</ul>
+</li>
+<li>通信链路上的安全问题
+<ul>
+<li>黑客非法截取通信</li>
+<li>拒绝服务器攻击（Dos）</li>
+<li>利用假冒标签向读写器发送数据</li>
+<li>RFID读写器与后台系统之间的通信信息安全</li>
+</ul>
+</li>
+</ul>
+<h2 id="采用密码机制解决rfid安全问题">采用密码机制解决RFID安全问题</h2>
+<p>几种常用的密码机制协议：</p>
+<ul>
+<li>Hash-Lock协议</li>
+<li>随机化Hash-Lock协议</li>
+<li>Hash链协议</li>
+<li>基于散列的ID变化协议</li>
+<li>数字图书馆RFID协议</li>
+<li>分布式RFID询问-应答协议</li>
+<li>LCAP协议：也是一种询问-应答协议，只是每次执行之后都要刷新ID</li>
+<li>再次加密机制</li>
+</ul>
+<h2 id="传感器网络组网技术面临的安全问题">传感器网络组网技术面临的安全问题</h2>
+<table>
+  <thead>
+      <tr>
+          <th>网络层次</th>
+          <th>受到的攻击</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>物理层</td>
+          <td>物理破坏、信道阻塞</td>
+      </tr>
+      <tr>
+          <td>链路层</td>
+          <td>制造冲突攻击、反馈伪造攻击、链路阻塞耗尽攻击</td>
+      </tr>
+      <tr>
+          <td>网络层</td>
+          <td>路由攻击、虫洞攻击、女巫攻击、HELLO泛红攻击</td>
+      </tr>
+      <tr>
+          <td>应用层</td>
+          <td>去同步攻击、拒绝服务攻击</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="传感器网络中的攻击和防疫手段">传感器网络中的攻击和防疫手段</h2>
+<table>
+   <tr>
+        <td>网络层次</td> 
+        <td>攻击手段</td> 
+        <td>防御手段</td>
+   </tr>
+   <tr>
+        <td>物理层</td> 
+        <td>阻塞攻击</td> 
+        <td>调频、消息优先级、低占空比、区域映射、模式转换</td>
+   </tr>
+   <tr>
+        <td rowspan="4"><b>链路层</b></td> 
+        <td>物理破坏</td> 
+        <td>伪装和隐藏</td>
+   </tr>
+   <tr>
+        <td>冲突攻击</td> 
+        <td>纠错码</td> 
+   </tr>
+   <tr>
+        <td>耗尽攻击</td> 
+        <td>设计竞争门限</td> 
+   </tr>
+   <tr>
+       <td>非公平竞争</td> 
+        <td>短帧和非优先级策略</td> 
+   </tr>
+   <tr>
+        <td rowspan="4">网络层</td> 
+        <td>丢弃和贪婪破坏</td> 
+        <td>冗余路径探测机制</td> 
+   </tr>
+    <tr>
+        <td>汇聚节点攻击</td> 
+        <td>加密和逐条认证机制</td> 
+   </tr>
+   <tr>
+        <td>方向误导攻击</td> 
+        <td>出口过滤、认证监视机制</td> 
+   </tr>
+   <tr>
+        <td>黑洞攻击</td> 
+        <td>认证、监视、冗余机制</td> 
+   </tr>
+   <tr>
+        <td rowspan="2">应用层</td> 
+        <td>泛红攻击</td> 
+        <td>客户端谜题</td> 
+   </tr>
+   <tr>
+        <td>去同步攻击</td> 
+        <td>认证</td> 
+   </tr>
+</table>
+<h2 id="入侵检测技术">入侵检测技术</h2>
+<p>由于在物联网中依靠密码机制不能完全抵御所有攻击，所以采用入侵检测技术作为信息安全的第二道防线。</p>
+<p>入侵检测技术是一种网络安全手段，旨在通过监控网络和系统的活动来发现违反安全策略的行为。这项技术能够识别未授权访问、攻击行为以及其他潜在的安全威胁。</p>
+<p>按照检测节点是否主动发送消息，可将入侵检测分为主动检测和被动检测。</p>
+<p>主动检测主要有四种：</p>
+<ul>
+<li>路径诊断的方法：源节点向故障路径上的检测节点发送消息，收到消息的检测消息要回复消息，如果某一路径上的检测节点没有回复，说明这一路径上出现故障，需要在这一路经上插入新的节点，重新检测；</li>
+<li>邻居检测的方法：</li>
+<li>通过向多个路径发送ping包的方式发现路径上的关键节点，从而部署攻击检测算法；</li>
+<li>基于主动信息提供的检测。网络中部分节点定期广播邻居节点信息，其他节点通过分析累计一定时间后的信息发现重复节点。</li>
+</ul>
+<h2 id="zigbee网络结构">ZigBee网络结构</h2>
+<ul>
+<li>星状结构</li>
+<li>网状结构</li>
+<li>簇状结构</li>
+</ul>
+<h2 id="数据链路层安全">数据链路层安全</h2>
+<p><strong>注意：</strong> 这里指的是ZigBee中的数据链路。</p>
+<p><strong>IEEE802.15.4</strong> 标准MAC子层使用的是CCM模式，CCM是一种通用的认证和加密模式，被定义使用在类似AES的128位数据块上，它由CTR模式和CBC-MAC模式组成。</p>
+<h2 id="zigbee中确保安全的方法">ZigBee中确保安全的方法</h2>
+<ul>
+<li>加密技术:使用AES-128加密算法</li>
+<li>鉴权技术：保证信息的原始性，使得信息不被第三方攻击；</li>
+<li>完整性保护：对信息的完整性保护有四种选择，分别是0、32、64和128位，默认采用64位；</li>
+</ul>
+<h2 id="无线通信网络安全中安全连接的三要素">无线通信网络安全中安全连接的三要素</h2>
+<ul>
+<li>鉴权：在信息被允许传输前，无线网络节点必须被识别，而且必须提交能够被认为有效的信任书；</li>
+<li>加密：在发送无线网络的数据包之前，无线网络节点必须对数据进行加密以确保数据的机密性；</li>
+<li>数据的完整性：在发送数据包之前，无线网络节点必须确保数据包中包含有关的数据完整性的信息，这样接收者才能确认数据在传输的过程中没有被动过。</li>
+</ul>
+<h2 id="无线网络安全所面临的威胁地址欺骗和会话拦截">无线网络安全所面临的威胁——地址欺骗和会话拦截</h2>
+<p>由于IEEE802.11无线局网不对数据帧进行认证，</p>
+<ul>
+<li>攻击者可以通过欺骗帧重定向数据流；</li>
+<li>攻击者可以使ARP（地址解析协议）表变得混乱；</li>
+<li>攻击者可以通过简单的方法获取节点的MAC地址，恶意攻击时会使用到这些MAC地址。</li>
+</ul>
+<h2 id="无线局域网安全技术之wep">无线局域网安全技术之WEP</h2>
+<p>IEEE802.11.b标准规定了一种 <strong>有线等效加密</strong> （WEP）的可选加密方案，目的是为WLAN提供与有线网络相同级别的安全保护。
+WEP在数据传输上起到一定安全性和保密性作用，可以组织无线用户无意地查看AT和STA传输的信息。
+这个方案也有其缺点，这里只说明其中一个</p>
+<ul>
+<li>ICV算法不适合。ICV是一种基于RCR-32的用于检测传输噪音和普通错误的算法。CRC-32是信息的线性函数，意味着攻击者可以篡改加密信息，并很容易修改IVC，使信息表面上看起来可信。</li>
+</ul>
+<h2 id="无线网络主流技术安全解决方案wpa">无线网络主流技术安全解决方案——WPA</h2>
+<p>主流解决方案有很多，这里只介绍WPA。</p>
+<p>WPA是下一代无线局域网标准IEEE802.11i之前的过渡方案，WPA也是IEEE802.11i的一部分。WPA率先使用IEEE802.11i中的加密技术——TKIP，这项技术可以大幅度解决IEEE802.11i使用WEP时隐藏的安全问题。</p>
+<h2 id="互联网网络安全防火墙的作用">互联网网络安全——防火墙的作用</h2>
+<ul>
+<li>阻止：阻止某种类型的通信量通过防火墙；</li>
+<li>允许：允许与阻止相反。</li>
+</ul>
+<h2 id="防火墙的结构屏蔽子网模式">防火墙的结构——屏蔽子网模式</h2>
+<p>简单而言就是在外网与内网之间建一个子网屏蔽网络，及时这个子网被攻陷，外网还是要经过内网路由。</p>
+<p><a href="#R-image-5b5636f55f4393b73deda99368a284ac" class="lightbox-link"><img alt="屏蔽子网模式" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE1.jpg" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5b5636f55f4393b73deda99368a284ac"><img alt="屏蔽子网模式" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE1.jpg"></a></p>
+<h2 id="vpn在中国使用要解决哪些问题">VPN在中国使用要解决哪些问题？</h2>
+<ul>
+<li>IPSec通过包封装的方法</li>
+<li>建立隧道</li>
+<li>IPSec VPN的类型</li>
+<li>怎样找到VPN节点类型</li>
+<li>如何建立隧道
+<ul>
+<li>UDP和TCP都可以穿过防火墙，即可以使用这两协议封装信息建立隧道，但是TCP有握手挥手过程，这一过程会占用时间，选择UDP更为合适。</li>
+<li>选择好封装协议后，为避免两个节点VPN可能在防火墙之后的情形，需要通过第三方建立隧道传输信息，即两个设备都可以与第三个设备进行通信。</li>
+</ul>
+</li>
+<li>如何找到与本VPN相关的节点</li>
+</ul>
+<h2 id="中间件的体系结构和核心模块">中间件的体系结构和核心模块</h2>
+<p><a href="#R-image-d3841c2ff45d6f53b159b6f923b67007" class="lightbox-link"><img alt="屏蔽子网模式" class="lazy lightbox figure-image" loading="lazy" src="../../class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE2.jpg" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d3841c2ff45d6f53b159b6f923b67007"><img alt="屏蔽子网模式" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/%E7%BB%98%E5%9B%BE2.jpg"></a></p>
+<p><div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div>#</p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年5月29日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/%E7%90%86%E8%AE%BA%E6%89%A9%E5%B1%95/">理论扩展</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>

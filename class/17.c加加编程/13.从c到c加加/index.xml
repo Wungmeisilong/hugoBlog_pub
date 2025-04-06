@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>13.从C到C&#43;&#43; :: Maloudown</title>
+    <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/</link>
+    <description>指针 指针的声明： 数组 数组的范围必须是常量表达式，同时如果需要变化的范围可以做如下定义： 2.字符串文字量&#xA;指的是用 ““括起来的字符串。</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

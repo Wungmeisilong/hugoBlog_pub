@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AndroidStudio :: Maloudown</title>
+    <link>http://localhost:1313/class/2.androidstudio/androidstudio%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/</link>
+    <description>接下来将将介绍AndroidStudio的复习资料，包括AndroidStudio简介、AndroidStudio中 Make Project 、Clean Project 、Rebuild Project 的作用、Run窗口、manifests文件夹（清单文件夹）、java文件夹、res文件夹、Android系统体系结构四层等。</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/class/2.androidstudio/androidstudio%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

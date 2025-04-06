@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>校园 :: 标签 :: Maloudown</title>
+    <link>http://localhost:1313/tags/%E6%A0%A1%E5%9B%AD/</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 02 Jan 2024 00:25:42 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%A0%A1%E5%9B%AD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>君绘语</title>
+      <link>http://localhost:1313/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/</link>
+      <pubDate>Tue, 02 Jan 2024 00:25:42 +0800</pubDate>
+      <guid>http://localhost:1313/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/</guid>
+      <description>第一章 与君初相识 高中那会儿我老失眠，原因一言难尽。&#xA;记得有一次我去吃饭，遇到张君，我们聊闲聊中，谈到了我失眠的事，张君听了说，他们有个朋友以睡觉为己任的人。我不信，哪有这种人？</description>
+    </item>
+  </channel>
+</rss>

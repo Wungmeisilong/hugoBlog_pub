@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5.云端一体化如何查看云函数日志？ :: Maloudown</title>
+    <link>http://localhost:1313/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/</link>
+    <description>调用云函数的时候我们总有输入输出结果不符合自己预期的时候，这个时候查看日志很重要！！在云端一体化开发过程中，我们可以通过下面的方式解决这一问题：</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

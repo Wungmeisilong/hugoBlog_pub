@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>STM32学习 :: 标签 :: Maloudown</title>
+    <link>http://localhost:1313/tags/stm32%E5%AD%A6%E4%B9%A0/</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 14 May 2024 22:22:09 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/stm32%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>电赛</title>
+      <link>http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/</link>
+      <pubDate>Tue, 14 May 2024 22:22:09 +0800</pubDate>
+      <guid>http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/</guid>
+      <description>以下笔记皆基于HAL库。&#xA;新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。</description>
+    </item>
+  </channel>
+</rss>

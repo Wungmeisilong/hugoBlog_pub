@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可以访问这个网站，这样一个功能。如果你也有这样的想法还请阅读下去，希望自己的经验对你有所帮助。">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="如何用旧电脑搭建自己的服务器？ :: Maloudown">
+    <meta name="twitter:description" content="拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可以访问这个网站，这样一个功能。如果你也有这样的想法还请阅读下去，希望自己的经验对你有所帮助。">
+    <meta property="og:url" content="http://localhost:1313/log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="如何用旧电脑搭建自己的服务器？ :: Maloudown">
+    <meta property="og:description" content="拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可以访问这个网站，这样一个功能。如果你也有这样的想法还请阅读下去，希望自己的经验对你有所帮助。">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="如何用旧电脑搭建自己的服务器？ :: Maloudown">
+    <meta itemprop="description" content="拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可以访问这个网站，这样一个功能。如果你也有这样的想法还请阅读下去，希望自己的经验对你有所帮助。">
+    <meta itemprop="datePublished" content="2024-01-31T03:13:33+08:00">
+    <meta itemprop="dateModified" content="2024-01-31T03:13:33+08:00">
+    <meta itemprop="wordCount" content="1321">
+    <meta itemprop="keywords" content="前端,网络,网站">
+    <title>如何用旧电脑搭建自己的服务器？ :: Maloudown</title>
+    <link href="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/index.xml" rel="alternate" type="application/rss+xml" title="如何用旧电脑搭建自己的服务器？ :: Maloudown">
+    <link href="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/index.print.html" rel="alternate" type="text/html" title="如何用旧电脑搭建自己的服务器？ :: Maloudown">
+    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743899205" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743899205" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743899205" rel="stylesheet">
+    <link href="../../css/theme.css?1743899205" rel="stylesheet">
+    <link href="../../css/format-html.css?1743899205" rel="stylesheet" id="R-format-style">
+    <link href="../../css/auto-complete/auto-complete.min.css?1743899205" rel="stylesheet">
+    <script src="../../js/auto-complete/auto-complete.min.js?1743899205" defer></script>
+    <script src="../../js/lunr/lunr.min.js?1743899205" defer></script>
+    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743899205" defer></script>
+    <script src="../../js/lunr/lunr.multi.min.js?1743899205" defer></script>
+    <script src="../../js/lunr/lunr.zh.min.js?1743899205" defer></script>
+    <script src="../../js/search.js?1743899205" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/log\/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8\/';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../searchindex.zh.js?1743899205";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 10.375rem;
+      --MENU-WIDTH-M: 10.375rem;
+      --MENU-WIDTH-L: 15.75rem;
+  }
+  </style>
+  </head>
+  <body class="mobile-support html" data-url="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#所需设备">所需设备</a></li>
+    <li><a href="#在旧电脑上安装natapp程序">在旧电脑上安装natapp程序</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../log/"><span itemprop="name">  博客文章</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">如何用旧电脑搭建自己的服务器？</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../log/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/" title="常与问题总结 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../log/experimence/" title="创建hugo静态网站的经历 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable log" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
+    <li><a class="term-link" href="../../tags/%E7%BD%91%E7%BB%9C/">网络</a></li>
+    <li><a class="term-link" href="../../tags/%E7%BD%91%E7%AB%99/">网站</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="如何用旧电脑搭建自己的服务器">如何用旧电脑搭建自己的服务器？</h1>
+
+<p>拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可以访问这个网站，这样一个功能。如果你也有这样的想法还请阅读下去，希望自己的经验对你有所帮助。</p>
+<h2 id="所需设备">所需设备</h2>
+<p>一台旧电脑，一台目前在使用的电脑。</p>
+<h2 id="在旧电脑上安装natapp程序">在旧电脑上安装natapp程序</h2>
+<p>在百度上搜索NATAPP，或点击这个链接:<a href="https://natapp.cn/" rel="external" target="_blank">NATAPP</a>,</p>
+<p><a href="#R-image-e0ecf4792ac7fe57ea9ebc1ca4daf430" class="lightbox-link"><img alt="网站首页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-02%20113627.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e0ecf4792ac7fe57ea9ebc1ca4daf430"><img alt="网站首页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-02%20113627.png"></a></p>
+<p>进入网站后先简单注册一下用户,顺便实名认证一下，因为买隧道会提示需要实名，接着点击首页下载自己的电脑系统对应版本，我的是Windows（下面的测试也是基于Windows）</p>
+<p><a href="#R-image-b2ebce8f48d29e787f56b3e00a16302c" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b2ebce8f48d29e787f56b3e00a16302c"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE1.png"></a></p>
+<p>下载好后解压文件，得到如下图程序：</p>
+<p><a href="#R-image-c4e92c9eb3c572fcea18dd8c8ca5def2" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c4e92c9eb3c572fcea18dd8c8ca5def2"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE2.png"></a></p>
+<p>在解压文件下新建一个文件： <code>config.ini</code>,做好这一步后我们去购买免费的隧道，如下图：</p>
+<p><a href="#R-image-27b6aa6366422e45ebc45bfc04e4d0be" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-27b6aa6366422e45ebc45bfc04e4d0be"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE3.png"></a></p>
+<p>点击网站的文档，然后点击教程/文档里的 <strong>使用本地配置文件config.ini</strong> 文章，</p>
+<p><a href="#R-image-861baf7dfd4e4e97b26e31d8b005bd86" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-861baf7dfd4e4e97b26e31d8b005bd86"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE6.png"></a></p>
+<p>然后复制里面的配置信息：</p>
+<p><a href="#R-image-d645d85a7ebd378ed80868609c31e275" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d645d85a7ebd378ed80868609c31e275"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE7.png"></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-config.ini" data-lang="config.ini"><span style="display:flex;"><span><span style="color:#75715e">#将本文件放置于natapp同级目录 程序将读取 [default] 段</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#在命令行参数模式如 natapp -authtoken=xxx 等相同参数将会覆盖掉此配置</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#命令行参数 -config= 可以指定任意config.ini文件</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[default]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">authtoken</span><span style="color:#f92672">=</span>                      <span style="color:#e6db74">#对应一条隧道的authtoken</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">clienttoken</span><span style="color:#f92672">=</span>                    <span style="color:#e6db74">#对应客户端的clienttoken,将会忽略authtoken,若无请留空,</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">log</span><span style="color:#f92672">=</span><span style="color:#e6db74">none                        #log 日志文件,可指定本地文件, none=不做记录,stdout=直接屏幕输出 ,默认为none</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">loglevel</span><span style="color:#f92672">=</span><span style="color:#e6db74">ERROR                  #日志等级 DEBUG, INFO, WARNING, ERROR 默认为 DEBUG</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">http_proxy</span><span style="color:#f92672">=</span>                     <span style="color:#e6db74">#代理设置 如 http://10.123.10.10:3128 非代理上网用户请务必留空</span></span></span></code></pre></div>
+<p>在字段<code>authtoken</code>后面值在我的隧道配置里可以找到，如下：</p>
+<p><a href="#R-image-cf832cf3cf4f1c68754b0eff7410cc00" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cf832cf3cf4f1c68754b0eff7410cc00"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE4.png"></a></p>
+<p>复制下图<code>authtoken</code>的值填到config.ini文件里</p>
+<p><a href="#R-image-cf75e64713662adb86b5ffd1e27bfa69" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cf75e64713662adb86b5ffd1e27bfa69"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE5.png"></a></p>
+<p>我这边演示的效果如下：</p>
+<p><a href="#R-image-00376fb33884e8050b19c0d07af9fa40" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-00376fb33884e8050b19c0d07af9fa40"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE8.png"></a>
+<a href="#R-image-6441b4344e496ab8f715138f140f5d83" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6441b4344e496ab8f715138f140f5d83"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE9.png"></a></p>
+<p>完成上面的操作后，我们运行NATAPP程序，结果如下：</p>
+<p><a href="#R-image-697652ebef099685a5076ea1beea9dc9" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-697652ebef099685a5076ea1beea9dc9"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE10.png"></a></p>
+<p>你会得到一个随机的网址，这个网址指向你的本地端口，当你有网站挂载到本地端口时，你就可以通过网址访问到你的本地端口网址，内网外网都可以，但是这个网址每一次运行都会不一样，这点需要注意，然后就是端口的设置，看下图：</p>
+<p><a href="#R-image-495bb8af93b0dbccfd5c55fdc60426e0" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-495bb8af93b0dbccfd5c55fdc60426e0"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE5.png"></a></p>
+<p>我这里写的的端口是1313，如果你网站运行后不在1313，例如你运行网站后，本地的网站启动端口是8080.那你就把这个地方的1313改为8080就可以了。</p>
+<p>下面我们举个例子看看，假设我现在我需要外网的网友访问我挂在在自己电脑本地的网站，那们在做好上面的操作后我先去启动自己的网站，这里使用hugo的网站模版，用code程序打开网站模版，然后调出终端，在终端输入命令 <code>hugo server</code> ,表示启动网站，如下图：</p>
+<p><a href="#R-image-56fe9cddf3dd94fa71bfb7eea414a7ba" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-56fe9cddf3dd94fa71bfb7eea414a7ba"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE11.png"></a></p>
+<p>然后去复制刚才运行NATAPP程序后的网站，在浏览器中打开，我们先试一下局域网能不能访问，结果如下：</p>
+<p><a href="#R-image-3d0e630177be195e6f4f4329f0805ae3" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3d0e630177be195e6f4f4329f0805ae3"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE12.png"></a></p>
+<p>将网站发给自己的朋友，测试外网是否可以访问，</p>
+<p><a href="#R-image-2d5f192fb8d5d3254e7c8b4254a2869a" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2d5f192fb8d5d3254e7c8b4254a2869a"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE13.png"></a></p>
+<p>结果是外网可以正常可以访问。</p>
+<p><a href="#R-image-261e7e209d6009533b0b64e9f99b1534" class="lightbox-link"><img alt="下载页面" class="lazy lightbox figure-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-261e7e209d6009533b0b64e9f99b1534"><img alt="下载页面" class="lazy lightbox lightbox-image" loading="lazy" src="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9B%BE14.png"></a></p>
+<p>那么到这里你的电脑其实就充当了一台服务器，将网站放到了你电脑上，只要你的电脑保持开机状态那么别人就可以一直访问你的网站，或许NATAPP网站还有别的有趣功能，所以你不妨去摸索摸索，所不定可以找到多次启动NATAPP指向你本地的网址不变，你也就不用每次启动后都要发新的网址给对方了。</p>
+<p>那么其实到这里就差不多了，但是我们还需要用一台电脑控制另一台电脑，简而言之就是电脑的远程登录，其实电脑远程登录有许多的方法，这里我需要借助一个来实现内网穿透，其实上面的旧电脑变服务器也是使用了内网穿透，
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+  </ul>
+</div></p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年1月31日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/w1-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">W1-博客文章</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<style>
+  #R-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;  
+  }
+
+  #R-logo svg {
+    width: 60px;  
+    height: 60px;
+    margin: 0;  
+  }
+
+  #R-logo svg * {
+    fill: var(--MENU-SECTIONS-BG-color) !important;
+  }
+
+  .logo-text {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+   
+  @media (max-width: 768px) {
+    #R-logo {
+      flex-direction: column-reverse;  
+    }
+    
+    #R-logo svg {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .logo-text {
+      font-size: 1.25rem;
+    }
+  }
+
+   
+  @media all and (-ms-high-contrast:none) {
+    #R-logo {
+      margin-top: -1.5rem;
+    }
+    
+    #R-logo svg {
+      margin-left: -1rem;
+    }
+  }
+</style>          
+          <a id="R-logo" class="R-default" href="../../">
+            <svg id ="R-logo svg" version="1.0" xmlns="http://www.w3.org/2000/svg"
+              width="82.000000pt" height="94.000000pt" viewBox="0 0 164.000000 188.000000"
+              preserveAspectRatio="xMidYMid meet">
+
+              <g transform="translate(0.000000,188.000000) scale(0.100000,-0.100000)"
+              fill="#000000" stroke="none">
+              <path d="M580 1851 c0 -6 9 -15 20 -21 13 -7 20 -21 20 -40 0 -43 -36 -40 -83
+5 -40 39 -67 48 -43 14 19 -27 7 -61 -37 -106 -30 -32 -22 -45 13 -23 42 26
+52 -50 20 -152 -23 -74 -26 -104 -6 -68 31 54 45 86 51 118 4 17 9 32 12 32
+16 0 71 -42 81 -62 25 -50 42 -102 42 -127 l0 -26 -198 -3 c-272 -5 -362 -20
+-331 -58 8 -9 34 -14 80 -14 39 0 69 -4 69 -10 0 -5 9 -10 19 -10 22 0 36 -29
+21 -44 -5 -5 -10 -16 -10 -24 0 -7 -6 -19 -13 -25 -31 -31 -106 -85 -140 -102
+-21 -11 -48 -31 -60 -44 l-22 -24 68 6 c47 4 81 14 115 34 26 15 49 30 52 33
+3 3 24 15 47 28 53 28 112 29 141 2 12 -11 23 -20 26 -20 10 0 56 -48 56 -58
+0 -5 7 -12 15 -16 8 -3 15 -15 15 -26 0 -11 4 -20 8 -20 27 0 48 -249 22 -265
+-6 -3 -10 -15 -10 -26 0 -10 -4 -27 -9 -37 -5 -9 -21 -46 -37 -82 -16 -36 -32
+-67 -36 -70 -12 -9 -68 -124 -68 -140 0 -9 -4 -20 -8 -25 -4 -6 -14 -27 -21
+-49 -11 -31 -11 -43 0 -62 20 -39 44 -27 68 36 23 57 93 200 105 213 10 11 77
+144 112 222 7 17 18 64 24 105 14 102 -4 191 -51 252 -19 24 -38 49 -44 56
+-18 23 -61 62 -70 62 -13 0 -76 71 -70 80 3 6 17 10 31 10 13 0 24 5 24 10 0
+6 18 10 40 10 22 0 40 5 40 10 0 6 18 10 40 10 50 0 63 22 30 50 -13 11 -29
+20 -36 20 -7 0 -15 22 -19 60 -4 36 -14 68 -26 81 -10 12 -19 28 -19 36 0 7
+-4 13 -10 13 -13 0 -13 25 -1 48 5 9 12 25 15 35 7 22 24 13 36 -19 5 -13 14
+-24 20 -24 19 0 10 47 -15 84 -14 20 -25 40 -25 44 0 35 -24 80 -50 95 -16 10
+-30 14 -30 8z m18 -121 c20 0 22 -5 22 -49 0 -28 -3 -52 -8 -54 -36 -23 -112
+              56 -91 95 8 14 17 18 32 14 12 -3 32 -6 45 -6z" />
+              <path d="M1144 1513 c-10 -50 -28 -87 -54 -117 -42 -48 -74 -76 -88 -76 -7 0
+              -42 -29 -76 -65 -34 -36 -68 -65 -74 -65 -7 0 -12 -7 -12 -15 0 -19 57 -20 85
+              -2 11 7 39 19 63 27 23 7 42 17 42 22 0 4 6 8 14 8 8 0 16 5 18 12 6 16 160
+              17 166 0 2 -6 15 -12 28 -12 13 0 24 -4 24 -9 0 -5 15 -14 33 -21 17 -7 41
+              -16 52 -20 105 -45 135 -54 174 -54 44 -1 46 0 49 30 3 28 -1 32 -37 44 -23 7
+              -41 17 -41 22 0 4 -9 8 -20 8 -11 0 -20 5 -20 10 0 6 -6 10 -14 10 -23 0 -76
+              34 -82 53 -3 9 -13 17 -23 17 -10 0 -33 18 -52 41 -19 23 -42 51 -52 62 -10
+              11 -20 31 -23 44 -4 13 -10 23 -15 23 -5 0 -9 5 -9 11 0 13 -25 39 -39 39 -6
+              0 -13 -12 -17 -27z"/>
+              <path d="M1052 1148 c-7 -7 -12 -18 -12 -26 0 -13 83 -96 158 -157 46 -38 72
+              -94 72 -155 0 -47 -2 -50 -25 -50 -28 0 -88 35 -134 77 -69 65 -117 93 -158
+              93 -108 0 -89 -81 40 -167 20 -14 37 -29 37 -32 0 -4 14 -15 30 -24 30 -18 41
+              -47 17 -47 -7 0 -50 5 -96 10 -53 7 -87 8 -94 1 -12 -12 53 -100 76 -101 9 0
+              17 -4 17 -10 0 -5 22 -10 49 -10 109 0 194 -60 207 -146 3 -27 13 -61 20 -76
+              8 -15 14 -39 14 -54 0 -17 13 -40 39 -66 35 -35 42 -38 62 -28 20 11 21 17 15
+              91 -4 43 -11 90 -16 105 -6 14 -10 72 -10 128 0 89 3 105 19 120 11 10 29 43
+              42 74 12 31 26 61 31 67 17 19 8 96 -17 145 -28 54 -93 125 -140 152 -31 18
+              -43 26 -112 71 -45 29 -109 37 -131 15z m143 -51 c130 -81 235 -203 235 -272
+              0 -44 -32 -127 -68 -179 -43 -61 -44 -92 -12 -294 13 -78 20 -145 16 -149 -28
+              -28 -88 91 -108 212 -8 50 -16 66 -46 94 -41 38 -89 61 -129 61 -45 0 -143 42
+              -143 62 0 15 10 16 89 11 l88 -6 7 28 c9 34 -26 74 -92 106 -24 12 -46 28 -49
+              35 -3 8 -11 14 -17 14 -13 0 -56 53 -56 69 0 15 37 23 69 16 16 -3 39 -18 52
+              -32 13 -14 57 -52 98 -84 88 -70 126 -77 160 -30 34 47 28 99 -19 167 -21 33
+              -53 70 -71 84 -17 14 -52 41 -77 60 -52 40 -61 56 -35 63 27 7 53 -2 108 -36z"/>
+              <path d="M505 966 c-27 -51 -69 -66 -178 -66 -51 1 -112 6 -137 11 -25 6 -64
+              13 -87 16 l-43 5 0 -50 c0 -28 4 -54 10 -57 5 -3 17 -23 25 -43 9 -20 23 -48
+              31 -62 33 -58 75 -153 81 -183 8 -40 79 -163 105 -181 10 -8 27 -12 37 -9 20
+              5 27 18 60 113 44 126 58 161 70 173 6 6 11 24 11 40 0 30 62 171 80 182 17
+              10 40 75 40 111 0 33 -1 34 -43 34 -40 0 -46 -3 -62 -34z m75 -4 c0 -4 -13
+              -28 -29 -53 -46 -74 -91 -175 -91 -207 0 -16 -7 -35 -15 -42 -8 -7 -15 -17
+              -15 -24 0 -6 -15 -51 -34 -101 -19 -49 -37 -102 -41 -117 -3 -16 -10 -28 -15
+              -28 -16 0 -57 74 -96 172 -43 108 -119 265 -142 291 -25 28 -4 39 57 27 30 -5
+              108 -10 175 -10 135 0 168 11 202 69 17 28 44 42 44 23z"/>
+              <path d="M220 841 c-12 -23 -14 -121 -2 -121 5 0 14 -18 21 -40 15 -49 66
+              -102 95 -98 32 5 95 130 96 190 0 66 -31 88 -129 88 -59 0 -72 -3 -81 -19z
+              m163 -15 c19 -15 24 -90 7 -101 -5 -3 -10 -18 -10 -32 0 -25 -35 -93 -48 -93
+              -25 2 -82 78 -82 109 0 11 -4 23 -10 26 -18 11 -12 83 8 94 25 15 114 13 135
+              -3z"/>
+              <path d="M198 156 c-68 -15 -91 -31 -82 -60 11 -38 33 -46 126 -46 52 0 88 -4
+              88 -10 0 -5 9 -10 20 -10 11 0 20 4 20 8 0 5 151 12 336 15 327 7 514 21 514
+              38 0 5 21 9 46 9 38 0 44 2 35 14 -12 14 -28 17 -211 41 -146 19 -804 20 -892
+              1z" />
+              </g>
+              </svg>
+            <div class="logo-title">Maloudown</div>
+          </a>
+        </div>
+        <search><form action="../../search/" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="搜索 (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">搜索</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="搜索...">
+            <button class="search-clear" type="button" data-search-clear="" title="清除搜索"><i class="fas fa-times" title="清除搜索"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/"><a class="padding" href="../../"><i class='fas fa-home'></i> 首页</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/log/"><a class="padding" href="../../log/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="20" width="20"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M192 32c0 17.7 14.3 32 32 32c123.7 0 224 100.3 224 224c0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32c70.7 0 128 57.3 128 128c0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192c-17.7 0-32 14.3-32 32zM96 144c0-26.5-21.5-48-48-48S0 117.5 0 144L0 368c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144l-16 0 0 96 16 0c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48l0-224z"/></svg>  博客文章</a><ul id="R-subsections-23c22f75c84b98545748a65894702014" class="collapsible-menu">
+            <li class="" data-nav-id="/log/%E7%BD%91%E9%A1%B5%E4%BC%98%E5%8C%96-%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF/"><a class="padding" href="../../log/%E7%BD%91%E9%A1%B5%E4%BC%98%E5%8C%96-%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF/">网页优化 常用模板</a></li>
+            <li class="" data-nav-id="/log/14.%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85ad%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E8%AE%BE%E7%BD%AE/"><a class="padding" href="../../log/14.%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85ad%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E8%AE%BE%E7%BD%AE/">14.初次安装AD需要做哪些设置？</a></li>
+            <li class="" data-nav-id="/log/10.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/"><a class="padding" href="../../log/10.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/">10.云端一体化的环境变量问题</a></li>
+            <li class="" data-nav-id="/log/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/"><a class="padding" href="../../log/9.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/">9.云端一体化如何查看云函数日志？</a></li>
+            <li class="" data-nav-id="/log/8.%E9%80%9F%E9%80%9Aarkts%E8%AF%AD%E8%A8%80/"><a class="padding" href="../../log/8.%E9%80%9F%E9%80%9Aarkts%E8%AF%AD%E8%A8%80/">8.速通ArkTS语言</a></li>
+            <li class="" data-nav-id="/log/6.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E9%82%A3%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/"><a class="padding" href="../../log/6.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E9%82%A3%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/">6.github和atomgit的混合使用，哪些是值得注意的？</a></li>
+            <li class="" data-nav-id="/log/4.%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%90%9C%E5%87%BA%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E9%A1%B9%E7%9B%AE/"><a class="padding" href="../../log/4.%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%90%9C%E5%87%BA%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E9%A1%B9%E7%9B%AE/">4.如何在github上使用高级搜索搜出自己想要的项目？</a></li>
+            <li class="" data-nav-id="/log/3.%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98%E7%9A%84%E5%A4%9A%E6%A0%B7%E8%AE%BE%E8%AE%A1/"><a class="padding" href="../../log/3.%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98%E7%9A%84%E5%A4%9A%E6%A0%B7%E8%AE%BE%E8%AE%A1/">文章标题的多样设计</a></li>
+            <li class="" data-nav-id="/log/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/"><a class="padding" href="../../log/github%E5%B8%B8%E9%81%87%E9%97%AE%E9%A2%98/">常与问题总结</a></li>
+            <li class="active " data-nav-id="/log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/"><a class="padding" href="../../log/%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/">如何用旧电脑搭建自己的服务器？</a></li>
+            <li class="" data-nav-id="/log/experimence/"><a class="padding" href="../../log/experimence/">创建hugo静态网站的经历</a></li>
+            <li class="" data-nav-id="/log/1.%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/"><a class="padding" href="../../log/1.%E5%B8%B8%E7%94%A8%E6%A8%A1%E7%89%88/">网站内常用到的模版</a></li>
+            <li class="" data-nav-id="/log/2.%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA/"><a class="padding" href="../../log/2.%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA/">网站的目录与子目录创建</a></li></ul></li>
+            <li class="" data-nav-id="/class/"><a class="padding" href="../../class/">课程</a></li>
+            <li class="" data-nav-id="/projects/"><input type="checkbox" id="R-section-70e1733efe56e20a6edcb96632119b4b" aria-controls="R-subsections-70e1733efe56e20a6edcb96632119b4b"><label for="R-section-70e1733efe56e20a6edcb96632119b4b"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">子菜单  项目</span></label><a class="padding" href="../../projects/">  项目</a><ul id="R-subsections-70e1733efe56e20a6edcb96632119b4b" class="collapsible-menu">
+            <li class="" data-nav-id="/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/"><input type="checkbox" id="R-section-d2ec05151a34d62cc338a0bcdcbe3c3e" aria-controls="R-subsections-d2ec05151a34d62cc338a0bcdcbe3c3e"><label for="R-section-d2ec05151a34d62cc338a0bcdcbe3c3e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">子菜单贺青工程</span></label><a class="padding" href="../../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/">贺青工程</a><ul id="R-subsections-d2ec05151a34d62cc338a0bcdcbe3c3e" class="collapsible-menu">
+            <li class="" data-nav-id="/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/"><a class="padding" href="../../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/">志愿活动软件设计与开发</a></li>
+            <li class="" data-nav-id="/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/"><a class="padding" href="../../projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/">验收问题</a></li></ul></li>
+            <li class="" data-nav-id="/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"><a class="padding" href="../../projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">毕业设计</a></li>
+            <li class="" data-nav-id="/projects/%E7%94%B5%E8%B5%9B/"><a class="padding" href="../../projects/%E7%94%B5%E8%B5%9B/">电赛</a></li>
+            <li class="" data-nav-id="/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/"><a class="padding" href="../../projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/">唛盟杯比赛详记</a></li></ul></li>
+            <li class="" data-nav-id="/story/"><a class="padding" href="../../story/">小说</a></li>
+            <li class="" data-nav-id="/about/"><a class="padding" href="../../about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="20" width="20"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>  关于</a><ul id="R-subsections-77102f70526b1c2db0eced54632dc618" class="collapsible-menu">
+            <li class="" data-nav-id="/about/%E7%89%88%E6%9C%AC/"><a class="padding" href="../../about/%E7%89%88%E6%9C%AC/">版本</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <div class="nav-title padding">更多</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/McShelby/hugo-theme-relearn"><a class="padding" href="https://github.com/McShelby/hugo-theme-relearn" rel="external" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub 仓库</a></li>
+            <li class="" data-nav-id="/"><a class="padding" href="../../"><i class='fas fa-tv' ></i> Bilibili</a></li>
+            <li class="" data-nav-id="https://gohugo.io/"><a class="padding" href="https://gohugo.io/" rel="external" target="_blank"><i class='fas fa-fw fa-bookmark'></i> Hugo 官网</a></li>
+            <li class="" data-nav-id="more/credits/"><a class="padding" href="more/credits/"><i class='fas fa-fw fa-bullhorn'></i> 访客</a></li>
+            <li class="" data-nav-id="/tags/"><a class="padding" href="../../tags/"><i class='fas fa-fw fa-tags'></i> 标签</a></li>
+            <li class="" data-nav-id="/categories/"><a class="padding" href="../../categories/"><i class='fas fa-code-branch'/></i> 分组</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">主题</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-auto" value="auto" selected>黑白混搭</option>
+                    <option id="R-select-variant-zen-light" value="zen-light">白光色</option>
+                    <option id="R-select-variant-zen-dark" value="zen-dark">暗黑色</option>
+                    <option id="R-select-variant-neon" value="neon">霓虹</option>
+                    <option id="R-select-variant-red" value="red">红色</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="../../js/clipboard/clipboard.min.js?1743899205" defer></script>
+    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743899205" defer></script>
+    <script src="../../js/theme.js?1743899205" defer></script>
+  </body>
+</html>

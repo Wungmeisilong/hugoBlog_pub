@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Relearn 7.6.1">
+    <meta name="description" content="基于Cortex-A9微处理器的硬件平台 RISC和CISC RISC是精简指令集计算机，CISC是复杂指令集计算机
+RISC（精简指令集计算机，Reduced Instruction Set Computer）和CISC（复杂指令集计算机，Complex Instruction Set Computer）是两种不同的计算机架构设计理念，它们在指令集的复杂性、指令执行方式、硬件实现等方面有所区别。以下是RISC和CISC的主要特点及其区别：">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="嵌入式系统设计知识点 :: Maloudown">
+    <meta name="twitter:description" content="基于Cortex-A9微处理器的硬件平台 RISC和CISC RISC是精简指令集计算机，CISC是复杂指令集计算机
+RISC（精简指令集计算机，Reduced Instruction Set Computer）和CISC（复杂指令集计算机，Complex Instruction Set Computer）是两种不同的计算机架构设计理念，它们在指令集的复杂性、指令执行方式、硬件实现等方面有所区别。以下是RISC和CISC的主要特点及其区别：">
+    <meta property="og:url" content="http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/">
+    <meta property="og:site_name" content="Maloudown">
+    <meta property="og:title" content="嵌入式系统设计知识点 :: Maloudown">
+    <meta property="og:description" content="基于Cortex-A9微处理器的硬件平台 RISC和CISC RISC是精简指令集计算机，CISC是复杂指令集计算机
+RISC（精简指令集计算机，Reduced Instruction Set Computer）和CISC（复杂指令集计算机，Complex Instruction Set Computer）是两种不同的计算机架构设计理念，它们在指令集的复杂性、指令执行方式、硬件实现等方面有所区别。以下是RISC和CISC的主要特点及其区别：">
+    <meta property="og:locale" content="zh">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="课程">
+    <meta property="article:published_time" content="2024-05-28T08:54:27+08:00">
+    <meta property="article:modified_time" content="2024-05-28T08:54:27+08:00">
+    <meta property="article:tag" content="嵌入式">
+    <meta property="article:tag" content="Cortex-A9微处理器">
+    <meta property="article:tag" content="Linux操作系统">
+    <meta itemprop="name" content="嵌入式系统设计知识点 :: Maloudown">
+    <meta itemprop="description" content="基于Cortex-A9微处理器的硬件平台 RISC和CISC RISC是精简指令集计算机，CISC是复杂指令集计算机
+RISC（精简指令集计算机，Reduced Instruction Set Computer）和CISC（复杂指令集计算机，Complex Instruction Set Computer）是两种不同的计算机架构设计理念，它们在指令集的复杂性、指令执行方式、硬件实现等方面有所区别。以下是RISC和CISC的主要特点及其区别：">
+    <meta itemprop="datePublished" content="2024-05-28T08:54:27+08:00">
+    <meta itemprop="dateModified" content="2024-05-28T08:54:27+08:00">
+    <meta itemprop="wordCount" content="6639">
+    <meta itemprop="keywords" content="嵌入式,Cortex-A9微处理器,Linux操作系统">
+    <title>嵌入式系统设计知识点 :: Maloudown</title>
+    <link href="http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" rel="canonical" type="text/html" title="嵌入式系统设计知识点 :: Maloudown">
+    <link href="../../class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/index.xml" rel="alternate" type="application/rss+xml" title="嵌入式系统设计知识点 :: Maloudown">
+    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743924698" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743924698" rel="stylesheet">
+    <link href="../../css/theme.css?1743924698" rel="stylesheet">
+    <link href="../../css/format-print.css?1743924698" rel="stylesheet" id="R-format-style">
+    <link href="../../css/auto-complete/auto-complete.min.css?1743924698" rel="stylesheet">
+    <script src="../../js/auto-complete/auto-complete.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.multi.min.js?1743924698" defer></script>
+    <script src="../../js/lunr/lunr.zh.min.js?1743924698" defer></script>
+    <script src="../../js/search.js?1743924698" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/class\/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1\/';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.contentLangs=['zh'];
+      window.relearn.index_js_url="../../searchindex.zh.js?1743924698";
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `复制到剪贴板`;
+      window.T_Copied_to_clipboard = `复制到剪贴板！`;
+      window.T_Copy_link_to_clipboard = `将链接复制到剪贴板`;
+      window.T_Link_copied_to_clipboard = `链接复制到剪贴板！`;
+      window.T_Reset_view = `重置视图`;
+      window.T_View_reset = `查看重置！`;
+      window.T_No_results_found = `找不到"{0}"的结果`;
+      window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
+    </script>
+
+<style>
+  :root {
+      --MENU-WIDTH-S: 9.375rem;
+      --MENU-WIDTH-M: 9.375rem;
+      --MENU-WIDTH-L: 12.75rem;
+      --color-primary: #2c3e50;           
+  --color-background-light: #f8f9fa;  
+  }
+ 
+.app-container {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  margin: 0;
+}
+
+ 
+.primary-navigation {                 
+  background: var(--color-primary);
+  padding: 2rem 0;
+}
+
+.navigation-menu {                    
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.content-card {                       
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+ 
+.preview-section {                    
+  background: var(--color-background-light);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+ 
+.action-link {                        
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ 
+.media-container {                    
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.media-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-container:hover img {
+  transform: scale(1.02);
+}
+
+ 
+@media (min-width: 768px) {
+  .grid-layout {                      
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-container img {
+    height: 150px;
+  }
+}
+  </style>
+  
+
+  
+  </head>
+  <body class="mobile-support print" data-url="../../class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="导航 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="目录 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#基于cortex-a9微处理器的硬件平台">基于Cortex-A9微处理器的硬件平台</a>
+      <ul>
+        <li><a href="#risc和cisc">RISC和CISC</a></li>
+        <li><a href="#arm处理器支持的基本数据类型">ARM处理器支持的基本数据类型</a></li>
+        <li><a href="#arm处理器的工作状态">ARM处理器的工作状态</a></li>
+        <li><a href="#arm存储格式">ARM存储格式</a></li>
+        <li><a href="#arm处理器寄存器">ARM处理器寄存器</a></li>
+        <li><a href="#中断">中断</a></li>
+        <li><a href="#arm工作模式">ARM工作模式</a></li>
+        <li><a href="#3级5级流水线">3级、5级流水线</a></li>
+        <li><a href="#程序状态寄存器">程序状态寄存器</a></li>
+        <li><a href="#arm指令集条件域">ARM指令集条件域</a></li>
+        <li><a href="#寻址指令">寻址指令</a></li>
+        <li><a href="#数据处理指令">数据处理指令</a></li>
+        <li><a href="#跳转指令">跳转指令</a></li>
+        <li><a href="#案例1">案例1</a></li>
+        <li><a href="#案例2">案例2</a></li>
+      </ul>
+    </li>
+    <li><a href="#linux编程基础">LInux编程基础</a>
+      <ul>
+        <li><a href="#gcc编译的4个过程的主要功能">GCC编译的4个过程的主要功能</a></li>
+        <li><a href="#简述make工具和makefile的基本结构">简述Make工具和Makefile的基本结构</a></li>
+        <li><a href="#makefile变量">Makefile变量</a></li>
+        <li><a href="#预定义变量">预定义变量</a></li>
+        <li><a href="#自动变量又叫系统变量">自动变量（又叫系统变量）</a></li>
+        <li><a href="#文件操作编程">文件操作编程</a></li>
+        <li><a href="#时间编程">时间编程</a></li>
+        <li><a href="#综合案例">综合案例</a></li>
+        <li><a href="#多线程编程">多线程编程</a></li>
+        <li><a href="#互斥锁线程">互斥锁线程</a></li>
+      </ul>
+    </li>
+    <li><a href="#嵌入式开发交叉编译与系统移植">嵌入式开发交叉编译与系统移植</a>
+      <ul>
+        <li><a href="#嵌入式软件调试方法">嵌入式软件调试方法</a></li>
+        <li><a href="#引导程序移植">引导程序移植</a></li>
+        <li><a href="#linux内核简介">linux内核简介</a></li>
+        <li><a href="#linux内核移植">Linux内核移植</a></li>
+      </ul>
+    </li>
+    <li><a href="#驱动程序">驱动程序</a>
+      <ul>
+        <li><a href="#驱动程序的功能">驱动程序的功能</a></li>
+        <li><a href="#驱动程序的主要组成部分">驱动程序的主要组成部分</a></li>
+        <li><a href="#linux设备分类-用c表示设备">Linux设备分类 （用C表示设备）</a></li>
+        <li><a href="#简述驱动程序和应用程序的区别">简述驱动程序和应用程序的区别</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">嵌入式系统设计知识点</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/" title="物联网网络安全论 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="物联网应用系统设计 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable class" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="../../tags/cortex-a9%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/">Cortex-A9微处理器</a></li>
+    <li><a class="term-link" href="../../tags/linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">Linux操作系统</a></li>
+    <li><a class="term-link" href="../../tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="嵌入式系统设计知识点">嵌入式系统设计知识点</h1>
+
+<h2 id="基于cortex-a9微处理器的硬件平台">基于Cortex-A9微处理器的硬件平台</h2>
+<h3 id="risc和cisc">RISC和CISC</h3>
+<p>RISC是精简指令集计算机，CISC是复杂指令集计算机</p>
+<p>RISC（精简指令集计算机，Reduced Instruction Set Computer）和CISC（复杂指令集计算机，Complex Instruction Set Computer）是两种不同的计算机架构设计理念，它们在指令集的复杂性、指令执行方式、硬件实现等方面有所区别。以下是RISC和CISC的主要特点及其区别：</p>
+<ul>
+<li>RISC（精简指令集计算机）
+<ul>
+<li>指令集简单：RISC架构拥有较少的指令，通常每个指令执行一个简单的操作。</li>
+<li>指令执行快速：由于指令简单，大多数RISC指令可以在单个时钟周期内完成。</li>
+<li>寄存器丰富：RISC架构通常具有更多的寄存器，以减少对内存的访问次数。</li>
+<li>流水线执行：RISC处理器设计易于实现流水线技术，提高指令吞吐率。</li>
+<li>编译器优化：RISC架构依赖编译器将复杂操作转换为一系列简单的指令。</li>
+</ul>
+</li>
+<li>CISC（复杂指令集计算机）
+<ul>
+<li>指令集复杂：CISC架构拥有大量的指令，包括一些执行复杂操作的指令。</li>
+<li>指令执行较慢：CISC指令可能需要多个时钟周期来完成。</li>
+<li>寄存器较少：CISC架构通常具有较少的寄存器，更多依赖内存访问。</li>
+<li>微指令执行：CISC处理器可能使用微指令（microcode）来实现复杂指令。</li>
+<li>硬件复杂性：CISC处理器的硬件设计相对复杂，以支持广泛的指令集。</li>
+</ul>
+</li>
+</ul>
+<p>区别</p>
+<ul>
+<li>指令集大小：RISC的指令集较小，CISC的指令集较大。</li>
+<li>指令复杂性：RISC指令简单，CISC指令复杂。</li>
+<li>执行速度：RISC指令通常执行更快，CISC指令执行可能较慢。</li>
+<li>硬件设计：RISC处理器设计相对简单，CISC处理器设计复杂。</li>
+<li>内存访问：RISC架构倾向于减少内存访问，CISC架构可能更频繁地访问内存。</li>
+<li>依赖编译器：RISC架构更依赖编译器优化，CISC架构则在硬件层面提供复杂操作。</li>
+</ul>
+<h3 id="arm处理器支持的基本数据类型">ARM处理器支持的基本数据类型</h3>
+<p>数据类型：字、半字、字节。</p>
+<p>说明：</p>
+<ul>
+<li>一个字节占8位，半个字节占16位，一个字占32位；</li>
+<li>在存储数据时，字要按照4个字节来存储，所以每一次存时地址都加4，地址末位是00，例如0x13FFFFF8,0x13FFFFFC，</li>
+<li>在存储数据时，半字要按照2个字节来存，所以每一次存时地址都加2，地址末位是0，例如0x13FFFFF4,0x13FFFFF6，；</li>
+</ul>
+<h3 id="arm处理器的工作状态">ARM处理器的工作状态</h3>
+<p>主要有两种状态，主要区别就是执行的指令集位数不同；</p>
+<ul>
+<li>Thumb状态，微处理器执行16位的半字对齐的Thumb指令集，Thumb指令集是从ARM微处理的第四个版本开始增加（v4T）；</li>
+<li>ARM状态，微处理器执行32位的字对齐的ARM指令集。</li>
+</ul>
+<h3 id="arm存储格式">ARM存储格式</h3>
+<ul>
+<li>
+<p>大端格式：高字节存储在低地址，低字节存储在低地址；</p>
+</li>
+<li>
+<p>小端格式:高字节存在高地址，低字节存储在低地址；
+说明：</p>
+</li>
+<li>
+<p>对高字节和低字节可以这样理解，假设有一个32位的地址为0x13FFFFF1，它的高字节是31，也可以理解成最高那一位的下标，31这一位存了0，低字节是0存了1。把这个理解带入上面的大端格式，小端格式。</p>
+</li>
+</ul>
+<h3 id="arm处理器寄存器">ARM处理器寄存器</h3>
+<ul>
+<li>共有40个32位的寄存器，其中33个通用寄存器，7个状态寄存器；</li>
+<li>通用寄存器
+<ul>
+<li>未分组寄存器（R0-R7）；</li>
+<li>分组寄存器（R8-R14）；</li>
+</ul>
+</li>
+<li>ARM处理器的程序状态寄存器包括：CPSR（当前程序状态寄存器）和SPSR（程序状态备份寄存器）</li>
+</ul>
+<h3 id="中断">中断</h3>
+<h3 id="arm工作模式">ARM工作模式</h3>
+<ul>
+<li>
+<p>用户模式（usr）:应用程序执行状态。</p>
+</li>
+<li>
+<p>快速中断模式（fiq）：用于高速数据传输或通道处理。</p>
+</li>
+<li>
+<p>外部中断模式（irq）：用于通用的外部中断。</p>
+</li>
+<li>
+<p>特权模式（svc）：操作系统使用的保护模式。</p>
+</li>
+<li>
+<p>数据访问中止模式（abt）：当数据或指令预取终止时进入该模式，可以用于虚拟存储及存储保护。</p>
+</li>
+<li>
+<p>未定义指令中止模式（und）：当未定义的指令执行时进入该模式，可用于支持硬件协处理器的软件仿真。</p>
+</li>
+<li>
+<p>系统模式（sys）：运行具有特权的操作系统任务。</p>
+</li>
+<li>
+<p>监控模式（mon）：可在安全模式与非安全模式之间转换。</p>
+</li>
+<li>
+<p>执行程序什么模式？</p>
+</li>
+<li>
+<p>读指令并执行，读取未定义指令什么模式？</p>
+</li>
+<li>
+<p>遇到特权任务什么模式？</p>
+</li>
+<li>
+<p>遇到中断什么模式?</p>
+</li>
+<li>
+<p>指令执行结束什么模式？</p>
+</li>
+</ul>
+<h3 id="3级5级流水线">3级、5级流水线</h3>
+<ul>
+<li>3级流水线指令可以分解成取指令、编译、执行；</li>
+<li>5级流水线指令可以分解成取指令、编译、执行、缓冲、写回。</li>
+</ul>
+<h3 id="程序状态寄存器">程序状态寄存器</h3>
+<ul>
+<li>
+<p>CPSR中的[31:27]为条件标志位，具体含义如下：</p>
+<ul>
+<li>N：符号标志位。当用两个补码表示的带符号数进行运算时，N=1表示运算的结果为负数；N=0表示运算的结果为正数或零。</li>
+<li>Z：结果是否为0的标志。Z=1，表示运算结果为0；Z=0，表示运算结果为非0。</li>
+<li>C：进位或借位标志位。加法运算结果产生了借位时C=1，减法运算产生了借位时C=1，否则为0；包含移位操作的非加/减运算指令，C为移出值的最后一位；其他运算指令，C的值通常不变。</li>
+<li>V：溢出标志位。对于加减法运算指令，V=1表示符号位溢出，其它指令的影响V位。</li>
+</ul>
+</li>
+<li>
+<p>CPSR中的[7:0]为控制位，具体含义如下：</p>
+<ul>
+<li>I：IRQ中断使能位；</li>
+<li>F：FIQ中断使能位；</li>
+<li>T：处理器运行状态控制位；</li>
+<li>M[4:0]：运行模式位。</li>
+</ul>
+</li>
+<li>
+<p>其它标志位。</p>
+</li>
+</ul>
+<h3 id="arm指令集条件域">ARM指令集条件域</h3>
+<ul>
+<li>EQ：相等，（CPSR）Z=1；</li>
+<li>GT：大于，Z=0&amp;&amp;N=Z;</li>
+<li>TF：小于等于，Z=1||N=Z；</li>
+</ul>
+<h3 id="寻址指令">寻址指令</h3>
+<h3 id="数据处理指令">数据处理指令</h3>
+<ul>
+<li>RSB 逆向减法，例如：</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>  RSB Rd Rn op2 ;op2<span style="color:#f92672">-</span>Rn赋值给Rd</span></span></code></pre></div>
+<ul>
+<li>
+<p>MUL 32位乘法，</p>
+</li>
+<li>
+<p>CMP 比较，例如</p>
+</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>  CMP Rn op2 ;Rn<span style="color:#f92672">-</span>op2</span></span></code></pre></div>
+<ul>
+<li>
+<p>MOV指令:它的传送指令只能是把一个寄存器的值(要能用立即数表示)赋给另一个寄存器，或者将一个常量赋给寄存器，将后边的量赋给前边的量</p>
+</li>
+<li>
+<p>ADD指令:ADD指令用于把两个操作数相加，并将结果存放到目的寄存器中。</p>
+</li>
+<li>
+<p>SUB指令:SUB指令用于把操作数1减去操作数2，并将结果存放到目的寄存器中</p>
+</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>SUB  r0, r1, r2 ; r0 <span style="color:#f92672">=</span> r1 <span style="color:#f92672">-</span> r2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SUB  r0, r1, <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">256</span>                
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SUB  r0, r2, r3, LSL<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">1</span>  ; r0 <span style="color:#f92672">=</span> r2 <span style="color:#f92672">-</span> (r3 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span>)</span></span></code></pre></div>
+<ul>
+<li>LDR指令:LDR指令用于从存储器中将一个32位的字数据传送到目的寄存器中.</li>
+</ul>
+<p>用法1：
+LDR r0, =0x20000000
+用法2：
+LDR r0, =0x30000000</p>
+<ul>
+<li>STR指令:STR指令用于从源寄存器中将一个32位的字数据传送到存储器中。即：将前边的量赋值给后边的量。</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>STR r0<span style="color:#960050;background-color:#1e0010">，</span>[r1]  ; <span style="color:#960050;background-color:#1e0010">将</span>r0中的字数据写入以r1为地址的存储器中
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>STR r0<span style="color:#960050;background-color:#1e0010">，</span>[r1], <span style="color:#960050;background-color:#1e0010">＃</span><span style="color:#ae81ff">8</span> ; <span style="color:#960050;background-color:#1e0010">将</span>r0中的字数据写入以r1为地址的存储器中<span style="color:#960050;background-color:#1e0010">，并将新地址</span>r1<span style="color:#960050;background-color:#1e0010">＋</span><span style="color:#ae81ff">8</span><span style="color:#960050;background-color:#1e0010">写入</span>r1<span style="color:#960050;background-color:#1e0010">。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>STR r0<span style="color:#960050;background-color:#1e0010">，</span>[r1, <span style="color:#960050;background-color:#1e0010">＃</span><span style="color:#ae81ff">8</span>] ; <span style="color:#960050;background-color:#1e0010">将</span>r0中的字数据写入以r1<span style="color:#960050;background-color:#1e0010">＋</span><span style="color:#ae81ff">8</span><span style="color:#960050;background-color:#1e0010">为地址的存储器中。</span></span></span></code></pre></div>
+<h3 id="跳转指令">跳转指令</h3>
+<h3 id="案例1">案例1</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>     CMP  R0<span style="color:#960050;background-color:#1e0010">，</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">0</span>                            
+</span></span><span style="display:flex;"><span>     MOVEQ  R1<span style="color:#960050;background-color:#1e0010">，</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">0</span>    
+</span></span><span style="display:flex;"><span>     MOVGT  R1<span style="color:#960050;background-color:#1e0010">，</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">1</span>  
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">解：</span>CMP  R0<span style="color:#960050;background-color:#1e0010">，</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">0</span>     ; <span style="color:#960050;background-color:#1e0010">将</span>R0的值减去0<span style="color:#960050;background-color:#1e0010">，并根据结果设置</span>CPSR的标志位                           
+</span></span><span style="display:flex;"><span>        MOVEQ  R1<span style="color:#960050;background-color:#1e0010">，</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">0</span>   ; <span style="color:#960050;background-color:#1e0010">若</span>R0等于0<span style="color:#960050;background-color:#1e0010">，</span>Z<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">，则将立即数</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">装入到</span>R1
+</span></span><span style="display:flex;"><span>        MOVGT  R1<span style="color:#960050;background-color:#1e0010">，</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">1</span>   ; <span style="color:#960050;background-color:#1e0010">若</span>R0大于0<span style="color:#960050;background-color:#1e0010">，</span>Z<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">，</span>N<span style="color:#f92672">=</span>V<span style="color:#960050;background-color:#1e0010">，则将立即数</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">装入到</span>R1</span></span></code></pre></div>
+<p>程序实现的功能是判断R0的值与0的关系，将结果装入R1，若R0=0则R1=0，若R0&gt;0则R1=1.用C语言描述如下。
+设R0对应变量a，R1对应变量b，</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span>(a<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>                 b<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">else</span>  <span style="color:#a6e22e">if</span>(a<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>                 b<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>; 
+</span></span></code></pre></div>
+<h3 id="案例2">案例2</h3>
+<p>对程序各条指令进行注释，最后分析整个程序的功能。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>	 AREA	Example1,CODE,READONLY	  ; <span style="color:#960050;background-color:#1e0010">声明代码段</span>Example1  
+</span></span><span style="display:flex;"><span>	 ENTRY				     ; <span style="color:#960050;background-color:#1e0010">标识程序入口</span>
+</span></span><span style="display:flex;"><span>	 CODE32				  ; <span style="color:#960050;background-color:#1e0010">声明</span><span style="color:#ae81ff">32</span><span style="color:#960050;background-color:#1e0010">位</span>ARM指令
+</span></span><span style="display:flex;"><span>START 	                   ; <span style="color:#960050;background-color:#1e0010">标号</span><span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">标签</span>
+</span></span><span style="display:flex;"><span>MOV  R0, <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">0</span>			  ; <span style="color:#960050;background-color:#1e0010">设置参数，</span>R0<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>	MOV  R1, <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#ae81ff">10</span>           ; <span style="color:#960050;background-color:#1e0010">设置参数，</span>R1<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>LOOP                       ; <span style="color:#960050;background-color:#1e0010">标号</span><span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">标签</span>
+</span></span><span style="display:flex;"><span>BL  ADD_SUB	         ; <span style="color:#960050;background-color:#1e0010">调用子程序</span>ADD_SUB
+</span></span><span style="display:flex;"><span>	B	LOOP			     ; <span style="color:#960050;background-color:#1e0010">跳转到</span>LOOP
+</span></span><span style="display:flex;"><span>ADD_SUB	                ; <span style="color:#960050;background-color:#1e0010">标号</span><span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">标签</span>
+</span></span><span style="display:flex;"><span>	ADDS  R0, R0, R1		  ; R0 <span style="color:#f92672">=</span> R0 <span style="color:#f92672">+</span> R1<span style="color:#960050;background-color:#1e0010">，并根据结果设置</span>CPSR的标志位
+</span></span><span style="display:flex;"><span>	MOV	  PC, LR	     	  ; <span style="color:#960050;background-color:#1e0010">子程序返回，</span>PC<span style="color:#f92672">=</span>LR
+</span></span><span style="display:flex;"><span>	END				         ; <span style="color:#960050;background-color:#1e0010">声明文件结束</span></span></span></code></pre></div>
+<p><strong>整个程序的功能</strong>：程序实现了一个死循环，每次循环R0都增加10。</p>
+<h2 id="linux编程基础">LInux编程基础</h2>
+<h3 id="gcc编译的4个过程的主要功能">GCC编译的4个过程的主要功能</h3>
+<ul>
+<li>预编译：主要功能是读取源文件，并对头文件预编译语句和一些特殊符号进行分析和处理；</li>
+<li>编译：主要包括检查代码语法和将预编译后的文件转换成汇编语言；</li>
+<li>汇编：主要的功能是将汇编语言的代码编程目标文件；（机器代码，0和1）</li>
+<li>连接：主要功能是连接代码，生成可执行文件。</li>
+</ul>
+<h3 id="简述make工具和makefile的基本结构">简述Make工具和Makefile的基本结构</h3>
+<p>Make又叫工程管理工具，即管理较多的工程文件。</p>
+<p>主要的功能:</p>
+<ul>
+<li>通过Makefile文件来描述源程序之间相互依赖的关系，并自动完成维护编译工作；</li>
+<li>能够根据文件的时间戳发现更新的文件，可以减少编译工作；</li>
+</ul>
+<p>基本结构：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>target <span style="color:#960050;background-color:#1e0010">：</span> dependency
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>tab <span style="color:#960050;background-color:#1e0010">键</span><span style="color:#f92672">&gt;</span> command</span></span></code></pre></div>
+<p>target:目标；
+dependency：依赖关系
+command：命令</p>
+<h3 id="makefile变量">Makefile变量</h3>
+<ul>
+<li>用户自定义变量</li>
+<li>预定义变量</li>
+<li>自动变量</li>
+</ul>
+<p>后两个是系统的变量，是Makefile文件常用的变量，其中有部分变量用户可以修改。</p>
+<h3 id="预定义变量">预定义变量</h3>
+<p>需要记住两个比较重要且常用的预定义变量，即</p>
+<ul>
+<li>CC：C编译器名称，默认cc</li>
+<li>CFLAGS：C编译器的选项，无默认值</li>
+</ul>
+<h3 id="自动变量又叫系统变量">自动变量（又叫系统变量）</h3>
+<ul>
+<li>$@ :规则的目标所对应的文件；</li>
+<li>$&lt;：规则中的第一个依赖文件；</li>
+<li>$^:规则中所有依赖的列表，以空格为间隔符。</li>
+</ul>
+<h3 id="文件操作编程">文件操作编程</h3>
+<p>C语言库中的fopen、fclose、fwrite、fread等函数。</p>
+<p>其实是由操作系统的API函数封装而来，如</p>
+<ul>
+<li>fopen内部其实调用的是open函数，</li>
+<li>fwrite内部调用的是write函数。</li>
+</ul>
+<p>用户也可以直接利用Linux系统的API函数来完成文件操作编程</p>
+<h4 id="在linux操作系统下用c语言实现文件操作可以采用哪两种方法">在Linux操作系统下，用C语言实现文件操作可以采用哪两种方法？</h4>
+<p>在LInux操作系统中，实现文件操作有两种方法，第一种是调用C语言标准库，第二种是通过Linux系统调用实现。前者独立于操作系统，在任何操作系统下使用C语言标准库函数操作文件，而后者以来于操作系统。</p>
+<h3 id="时间编程">时间编程</h3>
+<ul>
+<li>time函数</li>
+</ul>
+<p>返回1970.1.1 0时到现在所经历的时间，操作失败返回((time_t)-1)</p>
+<ul>
+<li>gmtime函数
+将日历转化为格林威治标准时间，结果存在结构体tm中。</li>
+</ul>
+<p>在课堂上老师叫我们使用的并非上面这个函数，而是用localtime(const time_t *timep)这个函数,这个函数可以将日历转为本地时间，具体用法请看<a href="../../class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/#综合案例">综合案例</a></p>
+<ul>
+<li>gettimeofday函数</li>
+</ul>
+<p>获取从今日凌晨到现在的时差并存储在tv中，tz存放当地时区差；</p>
+<h3 id="综合案例">综合案例</h3>
+<p>（4）编写一个程序，将系统时间以“year-month-day hour:minute:second”格式保存在time.txt文件中。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;fcntl.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;time.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define MAX 40
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> fd,n,ret;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">char</span> writebuf[MAX];
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">struct</span> tm <span style="color:#f92672">*</span>t;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">time_t</span> lt;
+</span></span><span style="display:flex;"><span>        lt<span style="color:#f92672">=</span><span style="color:#a6e22e">time</span>(NULL);
+</span></span><span style="display:flex;"><span>        t<span style="color:#f92672">=</span><span style="color:#a6e22e">localtime</span>(<span style="color:#f92672">&amp;</span>lt);  <span style="color:#75715e">//将日历时间转化为本地时间
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">sprintf</span>(writebuf,<span style="color:#e6db74">&#34;%d-%d-%d %d:%d:%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,t<span style="color:#f92672">-&gt;</span>tm_year<span style="color:#f92672">+</span><span style="color:#ae81ff">1900</span>,t<span style="color:#f92672">-&gt;</span>tm_mon<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,t<span style="color:#f92672">-&gt;</span>tm_mday,t<span style="color:#f92672">-&gt;</span>tm_hour,t<span style="color:#f92672">-&gt;</span>tm_min,t<span style="color:#f92672">-&gt;</span>tm_sec);   <span style="color:#75715e">//按指定格式保存时间        
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">/*打开文件，如果文件不存在，则会创建文件*/</span>
+</span></span><span style="display:flex;"><span>        fd <span style="color:#f92672">=</span> <span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;time.txt&#34;</span>, O_RDWR <span style="color:#f92672">|</span> O_CREAT);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/*向文件写入字符串*/</span> 
+</span></span><span style="display:flex;"><span>        ret <span style="color:#f92672">=</span> <span style="color:#a6e22e">write</span>(fd, writebuf, <span style="color:#a6e22e">strlen</span>(writebuf));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (ret <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">perror</span>(<span style="color:#e6db74">&#34;Write Error!&#34;</span>); <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;write %d characters!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ret);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/*关闭时，会自动保存文件*/</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">close</span>(fd);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="多线程编程">多线程编程</h3>
+<h4 id="基本用法">基本用法</h4>
+<p>使用到pthread_createh头文件，以及libpthread.so和libpthread.a库文件；</p>
+<ul>
+<li>pthread_create函数：创建线程</li>
+<li>pthread_exit函数：退出线程</li>
+<li>pthread_join函数：阻塞线程</li>
+</ul>
+<h3 id="互斥锁线程">互斥锁线程</h3>
+<p>解决多个线程在一起执行的时候共享数据、资源的问题。在POSIX中有两种线程同步机制，分别为互斥锁和信号量</p>
+<ul>
+<li>pthread_mutex_init:初始化互斥锁</li>
+<li>pthread_mutex_lock：互斥锁上锁</li>
+<li>pthread_mutex_unlock：互斥锁释放</li>
+</ul>
+<h2 id="嵌入式开发交叉编译与系统移植">嵌入式开发交叉编译与系统移植</h2>
+<h3 id="嵌入式软件调试方法">嵌入式软件调试方法</h3>
+<ul>
+<li>实时在线仿真</li>
+<li>模拟调试</li>
+<li>软件调试</li>
+<li>片上调试</li>
+</ul>
+<h3 id="引导程序移植">引导程序移植</h3>
+<p>操作系统运行前的一个程序，也就是启动程序。</p>
+<ul>
+<li>BoolLoader工作模式
+<ul>
+<li>启动加载模式</li>
+<li>下载模式</li>
+</ul>
+</li>
+<li>BoolLoader启动过程
+<ul>
+<li>第一阶段
+<ul>
+<li>主要依赖CPU的体系结构硬件初始化的代码，通常使用汇编语言编写。</li>
+<li>这个阶段的功能主要有：
+<ul>
+<li>基本硬件设备初始化；</li>
+<li>为第二阶段准备ARM空间；</li>
+<li>复制BootLoader的第二阶段代码到RAM；</li>
+<li>设置栈堆；</li>
+<li>跳转到第二阶段的入口点；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>第二阶段
+<ul>
+<li>通常使用C语言完成，以便实现更复杂的功能，使程序具有更好的可读性和可移植性。</li>
+<li>这一阶段的主要任务是：
+<ul>
+<li>初始化这一阶段要使用的硬件设备;</li>
+<li>检测系统内存映射；</li>
+<li>将内核文件和根目录系统映像文件从Flash读到RAM；</li>
+<li>为内核设置启动参数，</li>
+<li>调用内核。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>常用的启动文件有很多，这里介绍Uboot。</p>
+<p>Uboot是一个开源项目，最早是由德国登克斯（DENX）小组的开发，然后发布在网上，许多对这款软件感兴趣的开发人员共同来维护。</p>
+<h4 id="bootloader的核心任务是什么">BootLoader的核心任务是什么？</h4>
+<p>启动内核，向内核提供启动参数，完成系统软件的部署功能。</p>
+<h4 id="系统加电后执行的第一段代码是什么">系统加电后执行的第一段代码是什么？</h4>
+<p>BootLoader(引导程序)是系统上电后运行的第一段代码。</p>
+<h4 id="u-boot命令和环境变量">U-Boot命令和环境变量</h4>
+<p>U-Boot通常支持几十个常用命令，通过这些命令，可以对目标机进行调试，也可以引导Linux内核，还可以擦写Flash完成系统部署等功能。</p>
+<ul>
+<li>常用命令：
+print: 通常用于打印信息或变量的值到控制台或终端。</li>
+</ul>
+<p>setenv: 设置环境变量。环境变量是在操作系统中存储的配置信息，可以影响程序的行为。</p>
+<p>saveenv: 保存环境变量。这个命令通常用于将当前的环境变量设置保存到非易失性存储器，以便在系统重启后保持这些设置。</p>
+<p>ping: 网络诊断工具，用于测试主机之间的网络连接是否可达。</p>
+<p>tftp: Trivial File Transfer Protocol（简单文件传输协议）的缩写，用于在设备之间传输文件。</p>
+<p>boot: 启动系统或加载执行程序。</p>
+<ul>
+<li>组合命令
+<ul>
+<li>movi read:用来读取iNand到DDR上</li>
+<li>movi write:用来将DDR写到到iNand上</li>
+</ul>
+</li>
+</ul>
+<p><strong>注释</strong>：</p>
+<ul>
+<li>非易失性存储器 iNand</li>
+<li>动态数据随机存取存储器 DDR</li>
+</ul>
+<h3 id="linux内核简介">linux内核简介</h3>
+<p>Linux内核主要功能有：</p>
+<ul>
+<li>进程管理</li>
+<li>内存管理</li>
+<li>文件管理</li>
+<li>设备管理</li>
+<li>网络管理</li>
+</ul>
+<p>Linux内核源代码非常庞大，它使用目录树结构，内核源码的顶层有许多子目录,分别组织存放各种内核子系统或者文件,如下表：
+<a href="#R-image-e3a78f9d26384d722e4dc13f550ca2db" class="lightbox-link"><img alt="1" class="lazy lightbox figure-image" loading="lazy" src="../../class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e3a78f9d26384d722e4dc13f550ca2db"><img alt="1" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image.png"></a></p>
+<h3 id="linux内核移植">Linux内核移植</h3>
+<p>Linux内核支持多种处理器，如果目标机使用的是ARM处理器核，使用的交叉编译工具链是arm-linux-，内核移植时要指定处理器的类型以及使用的交叉编译工具链，简述具体操作方法。</p>
+<p>具体操作如下。
+打开内核顶层目录下的Makefile文件，在文件中找到如下内容。
+ARCH？=$(SUBARCH)
+CROSS_COMPILE?=$(CONFIG_CROSS_COMPILE:“%”=%)
+将找到的以上代码修改为如下内容。
+ARCH？=arm
+CROSS_COMPILE?=arm-none-linux-gnueabi-
+其中，ARCH是CPU架构变量；CROSS_COMPILE是交叉编译工具链变量。修改完成后，保存文件退出。</p>
+<h2 id="驱动程序">驱动程序</h2>
+<h3 id="驱动程序的功能">驱动程序的功能</h3>
+<ul>
+<li>对设备初始化和释放</li>
+<li>数据传输:把数据从内核传送到硬件和从硬件读取数据,读取应用程序传送给设备文件的数据和回送应用程序请求的数据.</li>
+<li>检测和处理设备出现的错误</li>
+</ul>
+<h4 id="open入口点">Open入口点</h4>
+<p>对象：字符设备文件；
+特点：字符设备文件都需要经过open入口点调用
+open子程序功能：为I/O口作必要的准备工作
+同一时刻只能有一个程序访问此设备（即设备是独占的）,则 open子程序必须设置一些标志以表示设备处于忙碌状态。open子程序的调用格式如下。
+int open(char  * filename,int acess)</p>
+<h4 id="第一个功能中">第一个功能中</h4>
+<p>打开设备是由调用定义在incliude/linux/fs.h中的file_operations结构体中的 open()函数完成的。open()函数主要完成的主要工作：</p>
+<p>1.若是首次打开，先初始化
+2.增加设备的使用计数
+3.检测设备是否异常，及时发现设备相关错误
+4.读取设备次设备号。</p>
+<h3 id="驱动程序的主要组成部分">驱动程序的主要组成部分</h3>
+<ul>
+<li>自动配置和初始化子程序：检测驱动的硬件设备是否正常，能否正常工作</li>
+<li>服务子程序和中断服务程序:这两者分别是驱动程序的上下两部分。
+<ul>
+<li>驱动上部分，即设备服务子程序，它是系统调用的结果，并且伴随着用户态向核心态的演变，在此过程中还可以调用与进程运行环境有关的函数，比如 sleep()函数。</li>
+<li>驱动程序的下半部分，即中断服务子程序</li>
+</ul>
+</li>
+</ul>
+<h3 id="linux设备分类-用c表示设备">Linux设备分类 （用C表示设备）</h3>
+<ul>
+<li>字符设备</li>
+<li>块设备</li>
+<li>网络设备</li>
+</ul>
+<p>应用程序操作设备框图
+<a href="#R-image-057802c221d08b5020202c7ffd52d930" class="lightbox-link"><img alt="2" class="lazy lightbox figure-image" loading="lazy" src="../../class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-057802c221d08b5020202c7ffd52d930"><img alt="2" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/image-1.png"></a></p>
+<h3 id="简述驱动程序和应用程序的区别">简述驱动程序和应用程序的区别</h3>
+<p>第一，应用程序一般有一个main函数，并从头到尾执行一个任务；驱动程序没有main函数，它在加载时，通过调用module_init宏，完成驱动设备的初始化和注册工作之后便停止工作，并等待被应用程序调用。</p>
+<p>第二，应用程序可以和GLIBC库连接，因此可以包含标准的头文件；驱动程序不能使用标准的C库，因此不能调用所有的C库函数，比如输出函数不能使用printf，只能用内核的printk，包含的头文件只能是内核的头文件，比如Linux/module.h。</p>
+<p>第三，驱动程序运行在内核空间（又称内核态）比应用程序执行的优先级要高很多。应用程序则运行在最低级别的用户空间（又称用户态），在这一级别禁止对硬件的直接访问和对内存的未授权访问。</p>
+<p>应用程序一般有一个main函数,并从头到尾执行一个任务；
+应用程序可以和 GLIBC 库连接,因此可以包含标准的头文件；
+驱动程序运行在内核空间(又称内核态),比应用程序执行的优先级要高很多。</p>
+<div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
+  <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
+  <ul class="box-content attachments-files">
+      <li><a href="../../Class/12.%e5%b5%8c%e5%85%a5%e5%bc%8f%e7%b3%bb%e7%bb%9f%e8%ae%be%e8%ae%a1/index.files/%e5%b5%8c%e5%85%a5%e5%bc%8f%e5%a4%8d%e4%b9%a0PPT.pptx">嵌入式复习PPT.pptx</a> (659 KB)</li>
+      <li><a href="../../Class/12.%e5%b5%8c%e5%85%a5%e5%bc%8f%e7%b3%bb%e7%bb%9f%e8%ae%be%e8%ae%a1/index.files/%e5%b5%8c%e5%85%a5%e5%bc%8f%e4%bd%9c%e4%b8%9a.docx">嵌入式作业.docx</a> (52 KB)</li>
+  </ul>
+</div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 2024年5月28日
+<div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="../../categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/">核心课程</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="../../js/clipboard/clipboard.min.js?1743924698" defer></script>
+    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743924698" defer></script>
+    <script src="../../js/theme.js?1743924698" defer></script>
+  </body>
+</html>
