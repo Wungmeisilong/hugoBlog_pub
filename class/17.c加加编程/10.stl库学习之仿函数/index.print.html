@@ -23,18 +23,20 @@
     <meta itemprop="wordCount" content="1574">
     <title>10.STL库学习之仿函数 :: Maloudown</title>
     <link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/" rel="canonical" type="text/html" title="10.STL库学习之仿函数 :: Maloudown">
-    <link href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/index.xml" rel="alternate" type="application/rss+xml" title="10.STL库学习之仿函数 :: Maloudown">
-    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743999169" rel="stylesheet">
-    <link href="../../../css/theme.css?1743999169" rel="stylesheet">
-    <link href="../../../css/format-print.css?1743999169" rel="stylesheet" id="R-format-style">
-    <link href="../../../css/auto-complete/auto-complete.min.css?1743999169" rel="stylesheet">
-    <script src="../../../js/auto-complete/auto-complete.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.multi.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.zh.min.js?1743999169" defer></script>
-    <script src="../../../js/search.js?1743999169" defer></script>
+    <link href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/index.xml" rel="alternate" type="application/rss+xml" title="10.STL库学习之仿函数 :: Maloudown">
+    <link href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/index.md" rel="alternate" type="text/markdown" title="10.STL库学习之仿函数 :: Maloudown">
+    <link href="/images/favicon.svg?1744055979" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744055979" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744055979" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1744055979" rel="stylesheet">
+    <link href="/css/theme.css?1744055979" rel="stylesheet">
+    <link href="/css/format-print.css?1744055979" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1744055979" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1744055979" defer></script>
+    <script src="/js/search.js?1744055979" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +46,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="../../../searchindex.zh.js?1743999169";
+      window.relearn.index_js_url="/searchindex.zh.js?1744055979";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -54,7 +56,7 @@
       window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
       window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
       // variant stuff
-      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.themevariants = [ 'auto', 'relearn-light', 'red' ];
       window.relearn.customvariantname = "my-custom-variant";
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
@@ -90,99 +92,61 @@
       window.T_No_results_found = `找不到"{0}"的结果`;
       window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
     </script>
-
 <style>
   :root {
-      --MENU-WIDTH-S: 9.375rem;
-      --MENU-WIDTH-M: 9.375rem;
-      --MENU-WIDTH-L: 12.75rem;
-      --color-primary: #2c3e50;           
-  --color-background-light: #f8f9fa;  
+    --MENU-WIDTH-S: 14.375rem;
+    --MENU-WIDTH-M: 14.375rem;
+    --MENU-WIDTH-L: 18.75rem;
+    --color-primary: #2c3e50;           
+    --color-background-light: #f8f9fa;  
   }
- 
-.app-container {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: #34495e;
-  margin: 0;
-}
-
- 
-.primary-navigation {                 
-  background: var(--color-primary);
-  padding: 2rem 0;
-}
-
-.navigation-menu {                    
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
- 
-.content-card {                       
-  background: white;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-}
-
- 
-.preview-section {                    
-  background: var(--color-background-light);
-  padding: 2rem;
-  border-radius: 8px;
-}
-
- 
-.action-link {                        
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
-}
-
- 
-.media-container {                    
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-
-.media-container img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.media-container:hover img {
-  transform: scale(1.02);
-}
-
- 
-@media (min-width: 768px) {
-  .grid-layout {                      
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 3rem;
+   
+  .cornell-notes {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
   }
-}
 
-@media (max-width: 768px) {
-  .media-container img {
-    height: 150px;
+  .cues {
+    background-image: url('/images/cornell-img/icon2.svg');
+    border-right: 1px solid #080808;
+    flex: 1;
+    padding-right: 20px;
   }
-}
+
+  .notes {
+    background-image: url('/images/cornell-img/icon1.svg');
+    border-left: 1px solid #080808;
+    flex: 2;
+    padding-left: 20px;
+  }
+
+  .summary {
+    width: 100%;
+    clear: both;
+    padding-top: 20px;
+    background-image: url('/images/cornell-img/iconmonstr-menu-lined.svg');
+    margin-top: 20px;
+  }
+
+   
+  .svg-container {
+    width: 100%; 
+    height: 40px;  
+    margin-bottom: 1rem;
+  }
+  
+   
+  .svg-container svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;  
+  }
   </style>
-  
 
-  
   </head>
-  <body class="mobile-support print" data-url="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/">
+  <body class="mobile-support print" data-url="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -211,17 +175,19 @@
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><span itemprop="name">17.C加加编程</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><span itemprop="name">17.C加加编程</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">10.STL库学习之仿函数</span><meta itemprop="position" content="4"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            <div class="topbar-button topbar-button-markdown" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/index.md" title="显示 Markdown"><i class="fa-fw fab fa-markdown"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/" title="11.STL库学习之适配器 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/" title="9.STL库学习之迭代器与算法 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/" title="11.STL库学习之适配器 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/" title="9.STL库学习之迭代器与算法 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -299,8 +265,8 @@
 <p>在这个例子中，<code>Max</code> 是一个仿函数，它重载了 <code>operator()</code> 来比较两个整数并返回最大值。然后，我们可以像调用函数一样调用 <code>max_functor</code> 对象。</p>
 <h2 id="仿函数内部一般设计什么">仿函数内部一般设计什么？</h2>
 <p>仿函数一般重载operate()后，会在内部设计运算操作，如算数、逻辑、相对关系等运算。如下图所示。
-<a href="#R-image-8d9aabdb0e54c0d35defc8c79ff18ab3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8d9aabdb0e54c0d35defc8c79ff18ab3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image.png"></a>
+<a href="#R-image-24454405fbdad473842758d2d28e70af" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-24454405fbdad473842758d2d28e70af"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image.png"></a>
 从上面一张图也可以发现，plus,minus,logical_and,equal_to,less类都集成了binary_function，该类的作用是什么呢？</p>
 <p><code>std::binary_function</code> 的主要作用是：</p>
 <ol>
@@ -335,11 +301,11 @@
 <p>函数对象如 <code>std::plus</code>, <code>std::minus</code>, <code>std::logical_and</code>, <code>std::equal_to</code>, <code>std::less</code> 等都继承自 <code>std::binary_function</code>。这意味着这些函数对象都定义了 <code>first_argument_type</code>, <code>second_argument_type</code>, 和 <code>result_type</code> 这三个类型别名，它们分别表示函数对象接受的第一个参数类型、第二个参数类型和返回值类型。</p>
 <p>关于 <code>std::binary_function</code>的具体细节在适配器一节会重点讲到。</p>
 <p>下图是是否继承binary_function的一些示例，如果不继承会怎么样呢？以我个人的理解，继承会让仿函数的扩展性更高，它将来可以扩展出更好的功能。如下图所示。
-<a href="#R-image-fdd135ba41e1930ac35010dcf7a03e24" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fdd135ba41e1930ac35010dcf7a03e24"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-1.png"></a></p>
+<a href="#R-image-5c50423708e19adccd088ff7baa18320" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5c50423708e19adccd088ff7baa18320"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-1.png"></a></p>
 <p>除了上面讲到的binary_function还有unary_function，该类是针对单个变量的操作，比如取反，加加。如下图：
-<a href="#R-image-d951461dbc3dd173e49076f6dfee17fe" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d951461dbc3dd173e49076f6dfee17fe"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-2.png"></a></p>
+<a href="#R-image-653f6f6b87853858bfd36a5e8a20d7ab" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-653f6f6b87853858bfd36a5e8a20d7ab"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-2.png"></a></p>
 <p>关于binary_function的细节此处先不介绍，下一节将着重说明。</p>
 <p>对于仿函数，鲜明的特点就是对operate()做了重载，这样的类创建出来的对象叫仿函数对象，具有函数的行为。如果要对重载做更多操作需要结合一些仿函数适配器，比如相面讲到的binary_function和unary_funtion。</p>
 <div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
@@ -355,8 +321,8 @@
         </div>
       </main>
     </div>
-    <script src="../../../js/clipboard/clipboard.min.js?1743999169" defer></script>
-    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743999169" defer></script>
-    <script src="../../../js/theme.js?1743999169" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1744055979" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1744055979" defer></script>
+    <script src="/js/theme.js?1744055979" defer></script>
   </body>
 </html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客搭建 :: 类别 :: Maloudown</title>
+    <link>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <atom:link href="http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>10.如何自定义hugo主题页面输出格式？</title>
+      <link>http://localhost:1313/log/10.%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89hugo%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/log/10.%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89hugo%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F/</guid>
+      <description>有时候需要自定义或在别人的基础上修改页面输出格式，有时候我们缺少的是一种思路，本篇文章就是提供一个清晰的思路，让你可以快速编写出自己的页面。</description>
+    </item>
+  </channel>
+</rss>

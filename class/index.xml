@@ -3,7 +3,7 @@
   <channel>
     <title>课程 :: Maloudown</title>
     <link>http://localhost:1313/class/</link>
-    <description>17.C加加编程&#xD;15.计算机图形学OpenGL与C++&#xD;14.新标准C加加程序设计&#xD;13.从C到C++&#xD;12.其他库的介绍&#xD;11.STL库学习之适配器&#xD;10.STL库学习之仿函数&#xD;9.STL库学习之迭代器与算法&#xD;8.STL库学习之容器&#xD;7.STL库学习之分配器&#xD;6.STL库学习之筑基概要&#xD;5.STL库之观其大略&#xD;4.C++2.0特性的使用&#xD;3.导读&#xD;2.组合与继承&#xD;1.代码编写规范&#xD;21.C语言程序设计（含面试）&#xD;1.在线题库练习&#xD;20.C++面试&#xD;1.网络编程&#xD;1.代码编写规范&#xD;哲学&#xD;心经&#xD;思想的边界&#xD;庄子之道&#xD;费尔巴哈提纲&#xD;如何理解费尔巴哈提纲的主要含义？&#xD;物联网网络安全论&#xD;嵌入式系统设计知识点&#xD;物联网应用系统设计&#xD;考试类&#xD;教资 小学&#xD;外语类&#xD;英语&#xD;ArkTS&#xD;电子电路&#xD;模拟电子技术基础笔记&#xD;微信小程序&#xD;基础知识&#xD;操作系统&#xD;Linux期末复习&#xD;AndroidStudio&#xD;AndroidStudio&#xD;AndroidStudio笔记&#xD;2-1.Toolbar工具栏&#xD;计算机组成原理&#xD;过年&#xD;计算机组成原理-复习&#xD;51单片机&#xD;pretues+kiel5仿真软件配合使用时需要注意的地方&#xD;Arduino&#xD;物联网控制-小知识&#xD;CC2530_ZigBee&#xD;实验2 IO端口输出实验&#xD;Esp8266_WiFi&#xD;物联网通信技术-小知识&#xD;STM32_RFID&#xD;19.test&#xD;19.设计模式（C++）&#xD;物联网工程</description>
+    <description>17.C加加编程&#xD;15.计算机图形学OpenGL与C++&#xD;14.新标准C加加程序设计&#xD;13.从C到C++&#xD;12.其他库的介绍&#xD;11.STL库学习之适配器&#xD;10.STL库学习之仿函数&#xD;9.STL库学习之迭代器与算法&#xD;8.STL库学习之容器&#xD;7.STL库学习之分配器&#xD;6.STL库学习之筑基概要&#xD;5.STL库之观其大略&#xD;4.C++2.0特性的使用&#xD;3.导读&#xD;2.组合与继承&#xD;1.代码编写规范&#xD;21.C语言程序设计（含面试）&#xD;1.在线题库练习&#xD;20.C++面试&#xD;1.网络编程&#xD;1.代码编写规范&#xD;嵌入式系统设计知识点&#xD;ArkTS&#xD;电子电路&#xD;模拟电子技术基础笔记&#xD;操作系统&#xD;Linux期末复习&#xD;AndroidStudio&#xD;AndroidStudio&#xD;AndroidStudio笔记&#xD;2-1.Toolbar工具栏&#xD;计算机组成原理&#xD;过年&#xD;计算机组成原理-复习&#xD;51单片机&#xD;pretues+kiel5仿真软件配合使用时需要注意的地方&#xD;19.设计模式（C++）</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 01 Apr 2025 13:27:41 +0800</lastBuildDate>
@@ -37,46 +37,11 @@
       <description>如何写一个标准的.h文件 以下内容来自B站。&#xA;接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：&#xA;class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator += (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };&#xD;构造函数的特性 这一点需要关注下面的代码：</description>
     </item>
     <item>
-      <title>哲学</title>
-      <link>http://localhost:1313/class/11.%E5%93%B2%E5%AD%A6/</link>
-      <pubDate>Sat, 06 Jul 2024 14:37:51 +0800</pubDate>
-      <guid>http://localhost:1313/class/11.%E5%93%B2%E5%AD%A6/</guid>
-      <description>心经波若波多密的意思 波若：彼岸 波多：抵达（渡）&#xA;意思是抵达彼岸&#xA;波若波多密的方法 布施 财布施：用钱去帮助亲人或他人 法布施：如教师的职业，教授别人知识 无畏布施：例如医生的职业。救死扶伤；还有士兵。 持戒 律仪戒： 摄善法戒：行善戒。用权利与义务可以更好理解这个意思，权利告诉我们不可以做什么，做了就是侵犯别人的权利，义务就是告诉我们我们必须做什么。但也不要把这个意思理解死。 饶益有情戒：发现别人需要帮助并在自己力所能及的范围内去帮助别人。多方式帮助人或动物。 安忍 耐怨害忍：受到别人的伤害，诋毁等时要能忍。（这也是一种修行）需要辩证看待这件事 安受苦忍：人生是痛苦的，要能忍耐（又是一种修行） 谛察法忍：精研佛法 精进 勇猛精进，在佛学的修持上不畏惧、不退让、持之以恒</description>
-    </item>
-    <item>
-      <title>物联网网络安全论</title>
-      <link>http://localhost:1313/class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/</link>
-      <pubDate>Wed, 29 May 2024 09:00:12 +0800</pubDate>
-      <guid>http://localhost:1313/class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/</guid>
-      <description>物联网主要解决什么问题?- 主要解决物品到物品（T2T）、人到物品（H2T）、人到人（H2H）之间的互联，核心共性技术、网络与信息安全技术、以及关键技术是物联网当前主要的研究方向</description>
-    </item>
-    <item>
       <title>嵌入式系统设计知识点</title>
       <link>http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Tue, 28 May 2024 08:54:27 +0800</pubDate>
       <guid>http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
       <description>基于Cortex-A9微处理器的硬件平台 RISC和CISC RISC是精简指令集计算机，CISC是复杂指令集计算机&#xA;RISC（精简指令集计算机，Reduced Instruction Set Computer）和CISC（复杂指令集计算机，Complex Instruction Set Computer）是两种不同的计算机架构设计理念，它们在指令集的复杂性、指令执行方式、硬件实现等方面有所区别。以下是RISC和CISC的主要特点及其区别：</description>
-    </item>
-    <item>
-      <title>物联网应用系统设计</title>
-      <link>http://localhost:1313/class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
-      <pubDate>Mon, 27 May 2024 14:56:07 +0800</pubDate>
-      <guid>http://localhost:1313/class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
-      <description>物联网结构系统与传统网路系统的区别&#xA;前者由三个部分构成&#xA;信息物品 自主网络 智能应用 需求分析 基本概念 需求规格说明：开发、测试、质量保证、项目管理以及相关的项目功能等地方都有重要的作用</description>
-    </item>
-    <item>
-      <title>考试类</title>
-      <link>http://localhost:1313/class/16.%E8%80%83%E8%AF%95%E7%B1%BB/</link>
-      <pubDate>Tue, 05 Mar 2024 17:33:07 +0800</pubDate>
-      <guid>http://localhost:1313/class/16.%E8%80%83%E8%AF%95%E7%B1%BB/</guid>
-      <description>教资 小学科目一：&#xA;教育观与职业道德&#xA;教育与社会的发展 点击查看流程图&#xA;考题 简述教育对生产力的关系（制约作用）？&#xA;教育与人的发展 点击查看流程图&#xA;教育制度 理解记住教育制度的概念，尤其是狭义教育制度； 理解并记住建立学制的依据 理解教育制度的发展 理解我国教育制度的沿革 理解并记住现代教育的改革和发展 理解并记住义务教育的特性 教育制度概念 1.教育制度的概念</description>
-    </item>
-    <item>
-      <title>外语类</title>
-      <link>http://localhost:1313/class/15.%E5%A4%96%E8%AF%AD%E7%B1%BB/</link>
-      <pubDate>Wed, 28 Feb 2024 19:15:17 +0800</pubDate>
-      <guid>http://localhost:1313/class/15.%E5%A4%96%E8%AF%AD%E7%B1%BB/</guid>
-      <description>英语听力相关 ：&#xA;Cues 这里是关键词和提示。 Notes 有声书。&#xA;视频学习： ted， comedy，stand up. 1.看原文； 2.看中英； 3.看原文； 4.记笔记； 5.关闭字母。&#xA;podcast：</description>
     </item>
     <item>
       <title>ArkTS</title>
@@ -91,13 +56,6 @@
       <pubDate>Sun, 18 Feb 2024 17:25:35 +0800</pubDate>
       <guid>http://localhost:1313/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</guid>
       <description>模拟电子技术知识。 模拟电子技术基础笔记常用半导体器件 本征半导体 半导体：介于导体与绝缘体之间的&#xA;本征半导体： 载流子 3.1 本征激发 3.2 自由电子，带负电 3.3 空穴，带正电 自由电子和空穴都能到点。 3.4 复合：与本真激发相反的过程</description>
-    </item>
-    <item>
-      <title>微信小程序</title>
-      <link>http://localhost:1313/class/10.%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
-      <pubDate>Wed, 07 Feb 2024 15:10:51 +0800</pubDate>
-      <guid>http://localhost:1313/class/10.%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
-      <description>基础知识&#xD;附件</description>
     </item>
     <item>
       <title>操作系统</title>
@@ -128,53 +86,11 @@
       <description>pretues+kiel5仿真软件配合使用时需要注意的地方不知道keil5从哪个版本开始就不支持了晶振的设置操作，我在网上搜也得到不同的答案，所以从哪个版本开始限制这就不提了， 好在这样的改变并不会形象我们使用keil5。最近在刚进阶学习stm32，用到了pretues_8.11 仿真软 件和keil5代码编辑器，自己把心中所得分享一下。</description>
     </item>
     <item>
-      <title>Arduino</title>
-      <link>http://localhost:1313/class/6.arduino/</link>
-      <pubDate>Tue, 01 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/class/6.arduino/</guid>
-      <description>物联网控制-小知识物联网的特点 物联网是互联网的拓展和延伸，物联网设备通常为带传感器的电子硬件，并与网络相连接。 物联网的应用层是核心。 物联网的作用 全面感知：全面感知就是通过各种类型的传感器实时感知被测物理对象的状态。 可靠传递：可靠传递就是通过各种网络与互联网的融合，将物体的信息实时准确地传递出去。 智能计算：智能处理就是利用云计算、模糊识别等各种智能计算技术，对海量的数据和信息分析和处理，以实现对物体智能化控制。 物联网体系架构</description>
-    </item>
-    <item>
-      <title>CC2530_ZigBee</title>
-      <link>http://localhost:1313/class/5.cc2530_zigbee/</link>
-      <pubDate>Tue, 01 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/class/5.cc2530_zigbee/</guid>
-      <description>实验2 IO端口输出实验实验2 IO端口输出实验 1、实验要求： 利用实验箱的基础板，实现八盏灯的点亮，下面是八盏灯的位置图： 在实际中我们可能没有实验箱，往往需要自己做一个八盏灯的板子，这个时候了解本次实验挤出实验板的八盏灯连接原理是很重要的，了解原理后你就可以自己做出自己的LED板子，并用cc2530控制它。</description>
-    </item>
-    <item>
-      <title>Esp8266_WiFi</title>
-      <link>http://localhost:1313/class/4.esp8266_wifi/</link>
-      <pubDate>Tue, 01 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/class/4.esp8266_wifi/</guid>
-      <description>物联网通信技术-小知识通信串口 参照上一节课&#xA;物联网是新一代信息技术领域的重要组成部分。其英文名称是“The Internet of things”，顾名思义，“物联网就是物物相连的互联网”。&#xA;这有两层意思：</description>
-    </item>
-    <item>
-      <title>STM32_RFID</title>
-      <link>http://localhost:1313/class/3.stm32_rfid/</link>
-      <pubDate>Tue, 01 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/class/3.stm32_rfid/</guid>
-      <description>Lorem Ipsum.</description>
-    </item>
-    <item>
-      <title>19.test</title>
-      <link>http://localhost:1313/class/19.test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/class/19.test/</guid>
-      <description>test code，test Code</description>
-    </item>
-    <item>
       <title>19.设计模式（C&#43;&#43;）</title>
       <link>http://localhost:1313/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</guid>
       <description>组件协作 模板方法-template method 在C语言代码编写中主函数调用常调用库函数，进行功能实现。那么现在面向对象编程中，可以选择在库中调用未来写在主函数中的函数，这个设计方式就叫template method（个人的理解，不是定义）。举个例子，假设有一个lib.h的库，里面写了画圆的步骤，主体框架已经在rung()中写好，但是还有一个函数没用写，该函数是用来指定圆的半径等参数的，这个函数用virtual修饰，在未来主函数中可以继承该类并重写这个函数，最后在调用lib.h库里的run()即可。</description>
-    </item>
-    <item>
-      <title>物联网工程</title>
-      <link>http://localhost:1313/class/7.%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/class/7.%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

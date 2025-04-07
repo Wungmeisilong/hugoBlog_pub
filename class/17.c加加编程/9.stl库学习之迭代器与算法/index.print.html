@@ -23,18 +23,20 @@
     <meta itemprop="wordCount" content="2532">
     <title>9.STL库学习之迭代器与算法 :: Maloudown</title>
     <link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="canonical" type="text/html" title="9.STL库学习之迭代器与算法 :: Maloudown">
-    <link href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/index.xml" rel="alternate" type="application/rss+xml" title="9.STL库学习之迭代器与算法 :: Maloudown">
-    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743999169" rel="stylesheet">
-    <link href="../../../css/theme.css?1743999169" rel="stylesheet">
-    <link href="../../../css/format-print.css?1743999169" rel="stylesheet" id="R-format-style">
-    <link href="../../../css/auto-complete/auto-complete.min.css?1743999169" rel="stylesheet">
-    <script src="../../../js/auto-complete/auto-complete.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.multi.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.zh.min.js?1743999169" defer></script>
-    <script src="../../../js/search.js?1743999169" defer></script>
+    <link href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/index.xml" rel="alternate" type="application/rss+xml" title="9.STL库学习之迭代器与算法 :: Maloudown">
+    <link href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/index.md" rel="alternate" type="text/markdown" title="9.STL库学习之迭代器与算法 :: Maloudown">
+    <link href="/images/favicon.svg?1744055979" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744055979" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744055979" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1744055979" rel="stylesheet">
+    <link href="/css/theme.css?1744055979" rel="stylesheet">
+    <link href="/css/format-print.css?1744055979" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1744055979" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1744055979" defer></script>
+    <script src="/js/search.js?1744055979" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +46,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="../../../searchindex.zh.js?1743999169";
+      window.relearn.index_js_url="/searchindex.zh.js?1744055979";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -54,7 +56,7 @@
       window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
       window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
       // variant stuff
-      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.themevariants = [ 'auto', 'relearn-light', 'red' ];
       window.relearn.customvariantname = "my-custom-variant";
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
@@ -90,99 +92,61 @@
       window.T_No_results_found = `找不到"{0}"的结果`;
       window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
     </script>
-
 <style>
   :root {
-      --MENU-WIDTH-S: 9.375rem;
-      --MENU-WIDTH-M: 9.375rem;
-      --MENU-WIDTH-L: 12.75rem;
-      --color-primary: #2c3e50;           
-  --color-background-light: #f8f9fa;  
+    --MENU-WIDTH-S: 14.375rem;
+    --MENU-WIDTH-M: 14.375rem;
+    --MENU-WIDTH-L: 18.75rem;
+    --color-primary: #2c3e50;           
+    --color-background-light: #f8f9fa;  
   }
- 
-.app-container {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: #34495e;
-  margin: 0;
-}
-
- 
-.primary-navigation {                 
-  background: var(--color-primary);
-  padding: 2rem 0;
-}
-
-.navigation-menu {                    
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
- 
-.content-card {                       
-  background: white;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-}
-
- 
-.preview-section {                    
-  background: var(--color-background-light);
-  padding: 2rem;
-  border-radius: 8px;
-}
-
- 
-.action-link {                        
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
-}
-
- 
-.media-container {                    
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-
-.media-container img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.media-container:hover img {
-  transform: scale(1.02);
-}
-
- 
-@media (min-width: 768px) {
-  .grid-layout {                      
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 3rem;
+   
+  .cornell-notes {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
   }
-}
 
-@media (max-width: 768px) {
-  .media-container img {
-    height: 150px;
+  .cues {
+    background-image: url('/images/cornell-img/icon2.svg');
+    border-right: 1px solid #080808;
+    flex: 1;
+    padding-right: 20px;
   }
-}
+
+  .notes {
+    background-image: url('/images/cornell-img/icon1.svg');
+    border-left: 1px solid #080808;
+    flex: 2;
+    padding-left: 20px;
+  }
+
+  .summary {
+    width: 100%;
+    clear: both;
+    padding-top: 20px;
+    background-image: url('/images/cornell-img/iconmonstr-menu-lined.svg');
+    margin-top: 20px;
+  }
+
+   
+  .svg-container {
+    width: 100%; 
+    height: 40px;  
+    margin-bottom: 1rem;
+  }
+  
+   
+  .svg-container svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;  
+  }
   </style>
-  
 
-  
   </head>
-  <body class="mobile-support print" data-url="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/">
+  <body class="mobile-support print" data-url="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -233,17 +197,19 @@
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><span itemprop="name">17.C加加编程</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><span itemprop="name">17.C加加编程</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">9.STL库学习之迭代器与算法</span><meta itemprop="position" content="4"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            <div class="topbar-button topbar-button-markdown" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/index.md" title="显示 Markdown"><i class="fa-fw fab fa-markdown"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/" title="10.STL库学习之仿函数 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/" title="8.STL库学习之容器 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/" title="10.STL库学习之仿函数 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/" title="8.STL库学习之容器 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -266,8 +232,8 @@
 <h1 id="9stl库学习之迭代器与算法">9.STL库学习之迭代器与算法</h1>
 
 <h2 id="标准库常用算法">标准库常用算法</h2>
-<p><a href="#R-image-e501895554da4fbb0810b54228db47ef" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e501895554da4fbb0810b54228db47ef"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image.png"></a></p>
+<p><a href="#R-image-92ce43f5c2c36867fe3776d84116a888" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-92ce43f5c2c36867fe3776d84116a888"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image.png"></a></p>
 <h2 id="迭代器">迭代器</h2>
 <h3 id="迭代器-的分类">迭代器-的分类</h3>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">input_iterator_tag</span> {}<span style="color:#960050;background-color:#1e0010">；</span>
@@ -276,8 +242,8 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">bidirectional_iterator_tag</span><span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> forward_iterator_tag{};
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">random_access_tag</span><span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> bidirectional_iterator_tag {};</span></span></code></pre></div>
 <p>以上5中迭代器的继承关系，如下图所示。
-<a href="#R-image-16369f0102f14731029f6f28ecddde83" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-16369f0102f14731029f6f28ecddde83"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-1.png"></a></p>
+<a href="#R-image-624a6dbe2a03ac2edc874d454db3212f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-624a6dbe2a03ac2edc874d454db3212f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-1.png"></a></p>
 <p>1.Input Iterator（输入迭代器）：
 输入迭代器是最基本的迭代器类型，支持单向遍历，只能向前移动。</p>
 <p>用法示例：</p>
@@ -372,26 +338,26 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">typename</span> iterator_traits<span style="color:#f92672">&lt;</span>InputIterator<span style="color:#f92672">&gt;::</span>itrerator_category category;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">__distance</span>(first,last, category);</span></span></code></pre></div>
 <p><code>typedef typename iterator_traits&lt;InputIterator&gt;::itrerator_category category;</code>这一句会判断迭代器的类型，进而执行加操作或一步一步加操作。详细如下图所示。
-<a href="#R-image-e0a993e35fd86789a85ed3f7afbc0635" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e0a993e35fd86789a85ed3f7afbc0635"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-2.png"></a></p>
+<a href="#R-image-b6f2922ae6bb303da22b996d6efcd915" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b6f2922ae6bb303da22b996d6efcd915"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-2.png"></a></p>
 <h3 id="例子2-copy">例子2-copy</h3>
 <p>copy的动作也不仅仅是对迭代器类型的判断，还做了许多特化、偏特化。如下图所示。
-<a href="#R-image-19180a92b35da8e3e0f20a6a0cdbb032" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-19180a92b35da8e3e0f20a6a0cdbb032"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-3.png"></a></p>
+<a href="#R-image-559c43fdb68804f46aa340164a610535" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-559c43fdb68804f46aa340164a610535"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-3.png"></a></p>
 <h3 id="例子3-destroy">例子3-destroy</h3>
-<p><a href="#R-image-ddbd9219ea4a963150e1cb90f0ca4c38" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-4.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ddbd9219ea4a963150e1cb90f0ca4c38"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-4.png"></a></p>
+<p><a href="#R-image-2503198024239a37deb592f93e0a0d51" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2503198024239a37deb592f93e0a0d51"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-4.png"></a></p>
 <h3 id="例子4-__unique_copy">例子4-__unique_copy</h3>
-<p><a href="#R-image-819ac0a7711bcc64fff4e78e5d273e04" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-5.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-819ac0a7711bcc64fff4e78e5d273e04"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-5.png"></a></p>
+<p><a href="#R-image-c1e8bf60bbbf99295f096a4b9401de75" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c1e8bf60bbbf99295f096a4b9401de75"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-5.png"></a></p>
 <h2 id="对传入的迭代器类型的暗示">对传入的迭代器类型的暗示</h2>
 <p>在调用一些需要传入迭代器的函数时，从函数的形参名可以判断传入的迭代器类型，如InputIterator，由于forward_iterator_tag、bidirection_iterator_tag、random_asccess_iterator_tag与input_iterator的继承关系可知，前三者都可以传入，以此类推如果形参是forward_iterator_tag那么除了其本身，bidirection_iterator_tag、random_asccess_iterator_tag也可传入。</p>
-<p><a href="#R-image-8fe3b07121ee29a7e27797b85aacae69" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-6.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8fe3b07121ee29a7e27797b85aacae69"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-6.png"></a></p>
+<p><a href="#R-image-bd69ef009ed795f92023ebca3920be2b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bd69ef009ed795f92023ebca3920be2b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-6.png"></a></p>
 <h2 id="算法源码剖析">算法源码剖析</h2>
 <h3 id="accumulate-累计">accumulate-累计</h3>
-<p><a href="#R-image-157381c3c9ee36e80e3ba21c6085ffd4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-7.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-157381c3c9ee36e80e3ba21c6085ffd4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-7.png"></a></p>
+<p><a href="#R-image-b700482faa61cb5e819003b0933ea9b5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b700482faa61cb5e819003b0933ea9b5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-7.png"></a></p>
 <p>测试用例：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;functional&gt;</span><span style="color:#75715e">//std::minus
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;numeric&gt;</span><span style="color:#75715e">//std::accumulate
@@ -411,8 +377,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }</span></span></code></pre></div>
 <h3 id="for_each">for_each</h3>
 <p>拿到每一个元素时都对该元素执行某一操作。
-<a href="#R-image-8609852bd40b2b3aa5cdb91f990bb752" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-8.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8609852bd40b2b3aa5cdb91f990bb752"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-8.png"></a></p>
+<a href="#R-image-4222ceca186a4d3adc8a3dc69c4401cb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4222ceca186a4d3adc8a3dc69c4401cb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-8.png"></a></p>
 <p>测试用例：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#66d9ef">namespace</span> test_for_each
 </span></span><span style="display:flex;"><span>    {
@@ -432,8 +398,8 @@
 </span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
 <h3 id="replacereplace_ifrreplace_copy">replace,replace_if,rreplace_copy</h3>
 <p>replace用于将新值替换为旧值，例如将数组中所有的8替换为9.详细源码如下图所示。
-<a href="#R-image-1d7bad632f504e389940ddb48e32be83" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-9.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d7bad632f504e389940ddb48e32be83"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-9.png"></a></p>
+<a href="#R-image-b5220e78a17832e5235e063a2d02161b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b5220e78a17832e5235e063a2d02161b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-9.png"></a></p>
 <p><code>replace</code>、<code>replace_if</code> 和 <code>replace_copy</code> 是 C++ 标准库中的算法，它们用于在容器或数组中替换元素。这些函数属于 <code>&lt;algorithm&gt;</code> 头文件。下面是每个函数的详细介绍和作用：</p>
 <h3 id="1-replace">1. <code>replace</code></h3>
 <p><code>replace</code> 函数用于将容器中所有满足特定条件的元素替换为另一个值。这个函数直接在原容器上操作，不创建新的容器。</p>
@@ -482,20 +448,20 @@
 </span></span></span></code></pre></div>
 <h3 id="countcount_if">count，count_if</h3>
 <p>源代码如下：
-<a href="#R-image-d5e3ae06442d5d48572c02028393641c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-10.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d5e3ae06442d5d48572c02028393641c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-10.png"></a></p>
+<a href="#R-image-c8e35f5f8891fc469cde2cda2b432d0d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c8e35f5f8891fc469cde2cda2b432d0d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-10.png"></a></p>
 <p>小结：
-<a href="#R-image-68a0524796158fd7081b4960a0d6d96a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-11.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-68a0524796158fd7081b4960a0d6d96a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-11.png"></a></p>
+<a href="#R-image-c5b0981d9ec74946e60a9fd40ab490a6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c5b0981d9ec74946e60a9fd40ab490a6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-11.png"></a></p>
 <h3 id="findfind_if">find，find_if</h3>
-<p><a href="#R-image-efd3dbfe5392310f50a790c6ed62e82e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-12.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-efd3dbfe5392310f50a790c6ed62e82e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-12.png"></a></p>
+<p><a href="#R-image-124725281117793470d0a58e989c258d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-124725281117793470d0a58e989c258d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-12.png"></a></p>
 <h3 id="sort">sort</h3>
-<p><a href="#R-image-3dbd705e8271ea54337f46f05d8ca9b4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-13.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3dbd705e8271ea54337f46f05d8ca9b4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-13.png"></a></p>
+<p><a href="#R-image-30b5e98c3dd6f7be1ce25ceb44bb137b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-30b5e98c3dd6f7be1ce25ceb44bb137b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-13.png"></a></p>
 <h3 id="binary_search">binary_search</h3>
-<p><a href="#R-image-975ebf7cc9057f4d12221acde89794e0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-14.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-975ebf7cc9057f4d12221acde89794e0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-14.png"></a></p>
+<p><a href="#R-image-ac009f375f42aa473b3b84bfc74ffd1b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ac009f375f42aa473b3b84bfc74ffd1b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/image-14.png"></a></p>
 <p><strong>算法原理：</strong></p>
 <p>二分查找的基本思想是将一个有序序列分为两半，通过比较中间元素和目标值来缩小搜索范围。如果中间元素正好是目标值，则查找成功；如果目标值小于中间元素，则在序列的左半部分继续查找；如果目标值大于中间元素，则在右半部分继续查找。这个过程不断重复，直到找到目标值或搜索范围为空。</p>
 <p><strong>函数原型：</strong></p>
@@ -551,8 +517,8 @@
         </div>
       </main>
     </div>
-    <script src="../../../js/clipboard/clipboard.min.js?1743999169" defer></script>
-    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743999169" defer></script>
-    <script src="../../../js/theme.js?1743999169" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1744055979" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1744055979" defer></script>
+    <script src="/js/theme.js?1744055979" defer></script>
   </body>
 </html>

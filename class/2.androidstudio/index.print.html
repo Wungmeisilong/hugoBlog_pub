@@ -20,22 +20,24 @@
     <meta itemprop="description" content="AndroidStudio接下来将将介绍AndroidStudio的复习资料，包括AndroidStudio简介、AndroidStudio中 Make Project 、Clean Project 、Rebuild Project 的作用、Run窗口、manifests文件夹（清单文件夹）、java文件夹、res文件夹、Android系统体系结构四层等。">
     <meta itemprop="datePublished" content="2024-01-11T20:17:38+08:00">
     <meta itemprop="dateModified" content="2024-01-11T20:17:38+08:00">
-    <meta itemprop="wordCount" content="342">
+    <meta itemprop="wordCount" content="306">
     <meta itemprop="keywords" content="AndroidStudio">
     <title>AndroidStudio :: Maloudown</title>
     <link href="http://localhost:1313/class/2.androidstudio/" rel="canonical" type="text/html" title="AndroidStudio :: Maloudown">
-    <link href="../../class/2.androidstudio/index.xml" rel="alternate" type="application/rss+xml" title="AndroidStudio :: Maloudown">
-    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743999169" rel="stylesheet">
-    <link href="../../css/theme.css?1743999169" rel="stylesheet">
-    <link href="../../css/format-print.css?1743999169" rel="stylesheet" id="R-format-style">
-    <link href="../../css/auto-complete/auto-complete.min.css?1743999169" rel="stylesheet">
-    <script src="../../js/auto-complete/auto-complete.min.js?1743999169" defer></script>
-    <script src="../../js/lunr/lunr.min.js?1743999169" defer></script>
-    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743999169" defer></script>
-    <script src="../../js/lunr/lunr.multi.min.js?1743999169" defer></script>
-    <script src="../../js/lunr/lunr.zh.min.js?1743999169" defer></script>
-    <script src="../../js/search.js?1743999169" defer></script>
+    <link href="/class/2.androidstudio/index.xml" rel="alternate" type="application/rss+xml" title="AndroidStudio :: Maloudown">
+    <link href="/class/2.androidstudio/index.md" rel="alternate" type="text/markdown" title="AndroidStudio :: Maloudown">
+    <link href="/images/favicon.svg?1744055979" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744055979" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744055979" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1744055979" rel="stylesheet">
+    <link href="/css/theme.css?1744055979" rel="stylesheet">
+    <link href="/css/format-print.css?1744055979" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1744055979" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1744055979" defer></script>
+    <script src="/js/search.js?1744055979" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,7 +47,7 @@
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="../../searchindex.zh.js?1743999169";
+      window.relearn.index_js_url="/searchindex.zh.js?1744055979";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -55,7 +57,7 @@
       window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
       window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
       // variant stuff
-      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.themevariants = [ 'auto', 'relearn-light', 'red' ];
       window.relearn.customvariantname = "my-custom-variant";
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
@@ -91,99 +93,61 @@
       window.T_No_results_found = `找不到"{0}"的结果`;
       window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
     </script>
-
 <style>
   :root {
-      --MENU-WIDTH-S: 9.375rem;
-      --MENU-WIDTH-M: 9.375rem;
-      --MENU-WIDTH-L: 12.75rem;
-      --color-primary: #2c3e50;           
-  --color-background-light: #f8f9fa;  
+    --MENU-WIDTH-S: 14.375rem;
+    --MENU-WIDTH-M: 14.375rem;
+    --MENU-WIDTH-L: 18.75rem;
+    --color-primary: #2c3e50;           
+    --color-background-light: #f8f9fa;  
   }
- 
-.app-container {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: #34495e;
-  margin: 0;
-}
-
- 
-.primary-navigation {                 
-  background: var(--color-primary);
-  padding: 2rem 0;
-}
-
-.navigation-menu {                    
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
- 
-.content-card {                       
-  background: white;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-}
-
- 
-.preview-section {                    
-  background: var(--color-background-light);
-  padding: 2rem;
-  border-radius: 8px;
-}
-
- 
-.action-link {                        
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
-}
-
- 
-.media-container {                    
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-
-.media-container img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.media-container:hover img {
-  transform: scale(1.02);
-}
-
- 
-@media (min-width: 768px) {
-  .grid-layout {                      
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 3rem;
+   
+  .cornell-notes {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
   }
-}
 
-@media (max-width: 768px) {
-  .media-container img {
-    height: 150px;
+  .cues {
+    background-image: url('/images/cornell-img/icon2.svg');
+    border-right: 1px solid #080808;
+    flex: 1;
+    padding-right: 20px;
   }
-}
+
+  .notes {
+    background-image: url('/images/cornell-img/icon1.svg');
+    border-left: 1px solid #080808;
+    flex: 2;
+    padding-left: 20px;
+  }
+
+  .summary {
+    width: 100%;
+    clear: both;
+    padding-top: 20px;
+    background-image: url('/images/cornell-img/iconmonstr-menu-lined.svg');
+    margin-top: 20px;
+  }
+
+   
+  .svg-container {
+    width: 100%; 
+    height: 40px;  
+    margin-bottom: 1rem;
+  }
+  
+   
+  .svg-container svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;  
+  }
   </style>
-  
 
-  
   </head>
-  <body class="mobile-support print" data-url="../../class/2.androidstudio/">
+  <body class="mobile-support print" data-url="/class/2.androidstudio/">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -200,16 +164,18 @@
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">AndroidStudio</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/2.androidstudio/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            <div class="topbar-button topbar-button-markdown" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/2.androidstudio/index.md" title="显示 Markdown"><i class="fa-fw fab fa-markdown"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="Linux期末复习 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/2.androidstudio/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/2.androidstudio/androidstudio%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/" title="AndroidStudio (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="Linux期末复习 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/2.androidstudio/androidstudio%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/" title="AndroidStudio (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -229,7 +195,7 @@
   <header class="headline">
 <div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
-    <li><a class="term-link" href="../../tags/androidstudio/">AndroidStudio</a></li>
+    <li><a class="term-link" href="/tags/androidstudio/">AndroidStudio</a></li>
   </ul>
 </div>
   </header>
@@ -237,9 +203,9 @@
 <h1 id="androidstudio">AndroidStudio</h1>
 
 <div class="children children-h2 children-sort-">
-  <h2 class="children-title" id="androidstudio"><a href="../../class/2.androidstudio/androidstudio%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">AndroidStudio</a></h2><p><p>接下来将将介绍AndroidStudio的复习资料，包括AndroidStudio简介、AndroidStudio中 <strong>Make Project</strong> 、<strong>Clean Project</strong> 、<strong>Rebuild Project</strong> 的作用、Run窗口、manifests文件夹（清单文件夹）、java文件夹、res文件夹、Android系统体系结构四层等。</p></p>
-  <h2 class="children-title" id="androidstudio笔记"><a href="../../class/2.androidstudio/%E7%AC%94%E8%AE%B0/">AndroidStudio笔记</a></h2><p><p>这篇文章主要介绍AndroidStudio的使用，以及一些Android开发的基础知识。以及一些开发中遇到的问题和解决方法，除此之外，还会介绍一些开发中常用的工具和技巧。</p></p>
-  <h2 class="children-title" id="2-1toolbar工具栏"><a href="../../class/2.androidstudio/toolbar/">2-1.Toolbar工具栏</a></h2><p><p>本篇文章主要介绍<strong>Toolbar</strong>工具栏的使用，以及<strong>menu</strong>文件的使用。以及<strong>Toolbar</strong>工具栏的简单布局。除此之外，还会介绍<strong>Toolbar</strong>工具栏的简单使用。</p></p>
+  <h2 class="children-title" id="androidstudio"><a href="/class/2.androidstudio/androidstudio%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">AndroidStudio</a></h2><p><p>接下来将将介绍AndroidStudio的复习资料，包括AndroidStudio简介、AndroidStudio中 <strong>Make Project</strong> 、<strong>Clean Project</strong> 、<strong>Rebuild Project</strong> 的作用、Run窗口、manifests文件夹（清单文件夹）、java文件夹、res文件夹、Android系统体系结构四层等。</p></p>
+  <h2 class="children-title" id="androidstudio笔记"><a href="/class/2.androidstudio/%E7%AC%94%E8%AE%B0/">AndroidStudio笔记</a></h2><p><p>这篇文章主要介绍AndroidStudio的使用，以及一些Android开发的基础知识。以及一些开发中遇到的问题和解决方法，除此之外，还会介绍一些开发中常用的工具和技巧。</p></p>
+  <h2 class="children-title" id="2-1toolbar工具栏"><a href="/class/2.androidstudio/toolbar/">2-1.Toolbar工具栏</a></h2><p>本篇文章主要介绍**Toolbar**工具栏的使用，以及**menu**文件的使用</p>
 </div>
 
   <footer class="footline">
@@ -247,7 +213,7 @@
 <div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
-    <li><a class="term-link" href="../../categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/">核心课程</a></li>
+    <li><a class="term-link" href="/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/">核心课程</a></li>
   </ul>
 </div>
   </footer>
@@ -258,7 +224,7 @@
   <header class="headline">
 <div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
-    <li><a class="term-link" href="../../tags/%E5%AE%89%E5%8D%93/">安卓</a></li>
+    <li><a class="term-link" href="/tags/%E5%AE%89%E5%8D%93/">安卓</a></li>
   </ul>
 </div>
   </header>
@@ -694,8 +660,8 @@ Websetting常用方法：</p>
 <div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
-    <li><a class="term-link" href="../../categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">F1-复习资料</a></li>
-    <li><a class="term-link" href="../../categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/">Z-专业课</a></li>
+    <li><a class="term-link" href="/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">F1-复习资料</a></li>
+    <li><a class="term-link" href="/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/">Z-专业课</a></li>
   </ul>
 </div>
   </footer>
@@ -704,7 +670,7 @@ Websetting常用方法：</p>
   <header class="headline">
 <div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
-    <li><a class="term-link" href="../../tags/%E5%AE%89%E5%8D%93/">安卓</a></li>
+    <li><a class="term-link" href="/tags/%E5%AE%89%E5%8D%93/">安卓</a></li>
   </ul>
 </div>
   </header>
@@ -769,13 +735,13 @@ values目录：颜色、数组、字符串、样式</p>
 </span></span><span style="display:flex;"><span>    net::ERR_CLEARTEXT_NOT_PERMITTED</span></span></code></pre></div>
 <p>解决的办法：
 请在<strong>AndroidManifest.xml</strong>文件下添加代码：
-<div class="tab-panel" data-tab-group="58745db3d6ae4e121fceed047b3d486f">
+<div class="tab-panel" data-tab-group="2b5b7911aaa7fce67744f06faa3641c1">
   <div class="tab-nav">
     <div class="tab-nav-title">.xml文件</div>
     <button
       data-tab-item="添加代码fa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
-      onclick="switchTab('58745db3d6ae4e121fceed047b3d486f','添加代码fa-fw-fas-fa-info-circle')"
+      onclick="switchTab('2b5b7911aaa7fce67744f06faa3641c1','添加代码fa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 添加代码</span>
     </button>
@@ -793,13 +759,13 @@ values目录：颜色、数组、字符串、样式</p>
   </div>
 </div></p>
 <p>如果添加上面的还不可以，请在<strong>manifest</strong>中添加如下代码：</p>
-<div class="tab-panel" data-tab-group="f8436f12acd791c0cd21c56945093a5c">
+<div class="tab-panel" data-tab-group="41fab19a3109d162bd023d5ae283c6db">
   <div class="tab-nav">
     <div class="tab-nav-title">.xml文件</div>
     <button
       data-tab-item="添加代码fa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
-      onclick="switchTab('f8436f12acd791c0cd21c56945093a5c','添加代码fa-fw-fas-fa-info-circle')"
+      onclick="switchTab('41fab19a3109d162bd023d5ae283c6db','添加代码fa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 添加代码</span>
     </button>
@@ -834,8 +800,8 @@ values目录：颜色、数组、字符串、样式</p>
 <div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
-    <li><a class="term-link" href="../../categories/b2-%E7%AC%94%E8%AE%B0/">B2-笔记</a></li>
-    <li><a class="term-link" href="../../categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/">Z-专业课</a></li>
+    <li><a class="term-link" href="/categories/b2-%E7%AC%94%E8%AE%B0/">B2-笔记</a></li>
+    <li><a class="term-link" href="/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/">Z-专业课</a></li>
   </ul>
 </div>
   </footer>
@@ -844,32 +810,31 @@ values目录：颜色、数组、字符串、样式</p>
   <header class="headline">
 <div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
-    <li><a class="term-link" href="../../tags/ui%E8%AE%BE%E8%AE%A1/">UI设计</a></li>
-    <li><a class="term-link" href="../../tags/%E5%AE%89%E5%8D%93/">安卓</a></li>
+    <li><a class="term-link" href="/tags/ui%E8%AE%BE%E8%AE%A1/">UI设计</a></li>
+    <li><a class="term-link" href="/tags/%E5%AE%89%E5%8D%93/">安卓</a></li>
   </ul>
 </div>
   </header>
 
 <h1 id="2-1toolbar工具栏">2-1.Toolbar工具栏</h1>
 
-<p>本篇文章主要介绍<strong>Toolbar</strong>工具栏的使用，以及<strong>menu</strong>文件的使用。以及<strong>Toolbar</strong>工具栏的简单布局。除此之外，还会介绍<strong>Toolbar</strong>工具栏的简单使用。</p>
 <h2 id="menu文件的创建">menu文件的创建</h2>
 <p>在创建<strong>menu</strong>这个目录前，请看查看<strong>res/<strong>目录下是否包含该目录，如果没有则创建。
 接着在该目录下创建</strong>xml</strong>文件，此处文件名为<strong>content_menu</strong>。在该<strong>content_menu</strong>使用<code>&lt;item</code>,如下为部分代码：
-<div class="tab-panel" data-tab-group="07bb30c24a9e24b48c86db2fd15a2a08">
+<div class="tab-panel" data-tab-group="975b1bc17726b24bed11496d50e1af74">
   <div class="tab-nav">
     <div class="tab-nav-title">.xml文件</div>
     <button
       data-tab-item="简码fa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
-      onclick="switchTab('07bb30c24a9e24b48c86db2fd15a2a08','简码fa-fw-fas-fa-info-circle')"
+      onclick="switchTab('975b1bc17726b24bed11496d50e1af74','简码fa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 简码</span>
     </button>
     <button
       data-tab-item="全码"
       class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;"
-      onclick="switchTab('07bb30c24a9e24b48c86db2fd15a2a08','全码')"
+      onclick="switchTab('975b1bc17726b24bed11496d50e1af74','全码')"
     >
       <span class="tab-nav-text">全码</span>
     </button>
@@ -925,26 +890,26 @@ values目录：颜色、数组、字符串、样式</p>
     结果
   </summary>
   <div class="box-content">
-<p><a href="#R-image-85626b82cf9067d249a2beec0f8991bd" class="lightbox-link"><img alt="8899" class="border lazy lightbox shadow figure-image" loading="lazy" src="../../class/2.androidstudio/toolbar/img1_item.jpg?classes=shadow,border&height=250px&width=15vw" style=" height: 250px; width: 15vw;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-85626b82cf9067d249a2beec0f8991bd"><img alt="8899" class="border lazy lightbox shadow lightbox-image" loading="lazy" src="../../class/2.androidstudio/toolbar/img1_item.jpg?classes=shadow,border&height=250px&width=15vw"></a></p>
+<p><a href="#R-image-aa1cc6417250676df17bc203bb914280" class="lightbox-link"><img alt="8899" class="border lazy lightbox shadow figure-image" loading="lazy" src="/class/2.androidstudio/toolbar/img1_item.jpg?classes=shadow,border&height=250px&width=15vw" style=" height: 250px; width: 15vw;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-aa1cc6417250676df17bc203bb914280"><img alt="8899" class="border lazy lightbox shadow lightbox-image" loading="lazy" src="/class/2.androidstudio/toolbar/img1_item.jpg?classes=shadow,border&height=250px&width=15vw"></a></p>
   </div>
 </details></p>
 <h2 id="创建布局页面">创建布局页面</h2>
 <p>详细代码如下：
-<div class="tab-panel" data-tab-group="9cdeaf21bf4aa0dec67949046c5133d0">
+<div class="tab-panel" data-tab-group="e9f04d64cccad6371c3a15855ac11fa9">
   <div class="tab-nav">
     <div class="tab-nav-title">.xml文件</div>
     <button
       data-tab-item="简码fa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
-      onclick="switchTab('9cdeaf21bf4aa0dec67949046c5133d0','简码fa-fw-fas-fa-info-circle')"
+      onclick="switchTab('e9f04d64cccad6371c3a15855ac11fa9','简码fa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 简码</span>
     </button>
     <button
       data-tab-item="全码"
       class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;"
-      onclick="switchTab('9cdeaf21bf4aa0dec67949046c5133d0','全码')"
+      onclick="switchTab('e9f04d64cccad6371c3a15855ac11fa9','全码')"
     >
       <span class="tab-nav-text">全码</span>
     </button>
@@ -1000,34 +965,34 @@ values目录：颜色、数组、字符串、样式</p>
 <li>接着使用方法<code>setSupportActionBar</code>;</li>
 <li>在onCreate外重写<code>onCreateOptionsMenu</code>和<code>onOptionsItemSelected</code>方法。</li>
 </ol>
-<div class="tab-panel" data-tab-group="186ac7946351993ceb2749126e1af963">
+<div class="tab-panel" data-tab-group="a6a528627fb7e7600e4cd089eb3ac421">
   <div class="tab-nav">
     <div class="tab-nav-title">.java文件</div>
     <button
       data-tab-item="oncreatefa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
-      onclick="switchTab('186ac7946351993ceb2749126e1af963','oncreatefa-fw-fas-fa-info-circle')"
+      onclick="switchTab('a6a528627fb7e7600e4cd089eb3ac421','oncreatefa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> onCreate</span>
     </button>
     <button
       data-tab-item="oncreateoptionsmenufa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;"
-      onclick="switchTab('186ac7946351993ceb2749126e1af963','oncreateoptionsmenufa-fw-fas-fa-info-circle')"
+      onclick="switchTab('a6a528627fb7e7600e4cd089eb3ac421','oncreateoptionsmenufa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> onCreateOptionsMenu</span>
     </button>
     <button
       data-tab-item="onoptionsitemselectedfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;"
-      onclick="switchTab('186ac7946351993ceb2749126e1af963','onoptionsitemselectedfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('a6a528627fb7e7600e4cd089eb3ac421','onoptionsitemselectedfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> onOptionsItemSelected</span>
     </button>
     <button
       data-tab-item="全码"
       class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;"
-      onclick="switchTab('186ac7946351993ceb2749126e1af963','全码')"
+      onclick="switchTab('a6a528627fb7e7600e4cd089eb3ac421','全码')"
     >
       <span class="tab-nav-text">全码</span>
     </button>
@@ -1136,8 +1101,8 @@ values目录：颜色、数组、字符串、样式</p>
     结果
   </summary>
   <div class="box-content">
-<p><a href="#R-image-5fe9810d533ffa2d46aae739609e9204" class="lightbox-link"><img alt="8899" class="border lazy lightbox shadow figure-image" loading="lazy" src="../../class/2.androidstudio/toolbar/abc.jpg?classes=shadow,border&height=250px&width=15vw" style=" height: 250px; width: 15vw;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5fe9810d533ffa2d46aae739609e9204"><img alt="8899" class="border lazy lightbox shadow lightbox-image" loading="lazy" src="../../class/2.androidstudio/toolbar/abc.jpg?classes=shadow,border&height=250px&width=15vw"></a></p>
+<p><a href="#R-image-ae80b7d0cdeba5c2cdb1eb66837ecb07" class="lightbox-link"><img alt="8899" class="border lazy lightbox shadow figure-image" loading="lazy" src="/class/2.androidstudio/toolbar/abc.jpg?classes=shadow,border&height=250px&width=15vw" style=" height: 250px; width: 15vw;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ae80b7d0cdeba5c2cdb1eb66837ecb07"><img alt="8899" class="border lazy lightbox shadow lightbox-image" loading="lazy" src="/class/2.androidstudio/toolbar/abc.jpg?classes=shadow,border&height=250px&width=15vw"></a></p>
   </div>
 </details>
 
@@ -1161,12 +1126,13 @@ values目录：颜色、数组、字符串、样式</p>
 </div>
 
   <footer class="footline">
+              <i class='fa-fw fas fa-user'></i> <a href="mailto:1642424079@example.com">Maloudown</a>
               <i class='fa-fw fas fa-calendar'></i> 2023年11月29日
 <div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
-    <li><a class="term-link" href="../../categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">B3-课堂笔记</a></li>
-    <li><a class="term-link" href="../../categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/">Z-专业课</a></li>
+    <li><a class="term-link" href="/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">B3-课堂笔记</a></li>
+    <li><a class="term-link" href="/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/">Z-专业课</a></li>
   </ul>
 </div>
   </footer>
@@ -1175,8 +1141,8 @@ values目录：颜色、数组、字符串、样式</p>
         </div>
       </main>
     </div>
-    <script src="../../js/clipboard/clipboard.min.js?1743999169" defer></script>
-    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743999169" defer></script>
-    <script src="../../js/theme.js?1743999169" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1744055979" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1744055979" defer></script>
+    <script src="/js/theme.js?1744055979" defer></script>
   </body>
 </html>

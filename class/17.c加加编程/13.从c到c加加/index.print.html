@@ -28,18 +28,20 @@
     <meta itemprop="keywords" content="C&#43;&#43;,C,基础知识,基本概念">
     <title>13.从C到C&#43;&#43; :: Maloudown</title>
     <link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/" rel="canonical" type="text/html" title="13.从C到C++ :: Maloudown">
-    <link href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/index.xml" rel="alternate" type="application/rss+xml" title="13.从C到C++ :: Maloudown">
-    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743999169" rel="stylesheet">
-    <link href="../../../css/theme.css?1743999169" rel="stylesheet">
-    <link href="../../../css/format-print.css?1743999169" rel="stylesheet" id="R-format-style">
-    <link href="../../../css/auto-complete/auto-complete.min.css?1743999169" rel="stylesheet">
-    <script src="../../../js/auto-complete/auto-complete.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.multi.min.js?1743999169" defer></script>
-    <script src="../../../js/lunr/lunr.zh.min.js?1743999169" defer></script>
-    <script src="../../../js/search.js?1743999169" defer></script>
+    <link href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/index.xml" rel="alternate" type="application/rss+xml" title="13.从C到C++ :: Maloudown">
+    <link href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/index.md" rel="alternate" type="text/markdown" title="13.从C到C++ :: Maloudown">
+    <link href="/images/favicon.svg?1744055979" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744055979" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744055979" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1744055979" rel="stylesheet">
+    <link href="/css/theme.css?1744055979" rel="stylesheet">
+    <link href="/css/format-print.css?1744055979" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1744055979" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1744055979" defer></script>
+    <script src="/js/search.js?1744055979" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -49,7 +51,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="../../../searchindex.zh.js?1743999169";
+      window.relearn.index_js_url="/searchindex.zh.js?1744055979";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -59,7 +61,7 @@
       window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
       window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
       // variant stuff
-      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.themevariants = [ 'auto', 'relearn-light', 'red' ];
       window.relearn.customvariantname = "my-custom-variant";
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
@@ -95,99 +97,61 @@
       window.T_No_results_found = `找不到"{0}"的结果`;
       window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
     </script>
-
 <style>
   :root {
-      --MENU-WIDTH-S: 9.375rem;
-      --MENU-WIDTH-M: 9.375rem;
-      --MENU-WIDTH-L: 12.75rem;
-      --color-primary: #2c3e50;           
-  --color-background-light: #f8f9fa;  
+    --MENU-WIDTH-S: 14.375rem;
+    --MENU-WIDTH-M: 14.375rem;
+    --MENU-WIDTH-L: 18.75rem;
+    --color-primary: #2c3e50;           
+    --color-background-light: #f8f9fa;  
   }
- 
-.app-container {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: #34495e;
-  margin: 0;
-}
-
- 
-.primary-navigation {                 
-  background: var(--color-primary);
-  padding: 2rem 0;
-}
-
-.navigation-menu {                    
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
- 
-.content-card {                       
-  background: white;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-}
-
- 
-.preview-section {                    
-  background: var(--color-background-light);
-  padding: 2rem;
-  border-radius: 8px;
-}
-
- 
-.action-link {                        
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
-}
-
- 
-.media-container {                    
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-
-.media-container img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.media-container:hover img {
-  transform: scale(1.02);
-}
-
- 
-@media (min-width: 768px) {
-  .grid-layout {                      
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 3rem;
+   
+  .cornell-notes {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
   }
-}
 
-@media (max-width: 768px) {
-  .media-container img {
-    height: 150px;
+  .cues {
+    background-image: url('/images/cornell-img/icon2.svg');
+    border-right: 1px solid #080808;
+    flex: 1;
+    padding-right: 20px;
   }
-}
+
+  .notes {
+    background-image: url('/images/cornell-img/icon1.svg');
+    border-left: 1px solid #080808;
+    flex: 2;
+    padding-left: 20px;
+  }
+
+  .summary {
+    width: 100%;
+    clear: both;
+    padding-top: 20px;
+    background-image: url('/images/cornell-img/iconmonstr-menu-lined.svg');
+    margin-top: 20px;
+  }
+
+   
+  .svg-container {
+    width: 100%; 
+    height: 40px;  
+    margin-bottom: 1rem;
+  }
+  
+   
+  .svg-container svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;  
+  }
   </style>
-  
 
-  
   </head>
-  <body class="mobile-support print" data-url="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/">
+  <body class="mobile-support print" data-url="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -211,17 +175,19 @@
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><span itemprop="name">17.C加加编程</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><span itemprop="name">17.C加加编程</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">13.从C到C&#43;&#43;</span><meta itemprop="position" content="4"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            <div class="topbar-button topbar-button-markdown" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/index.md" title="显示 Markdown"><i class="fa-fw fab fa-markdown"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" title="14.新标准C加加程序设计 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/" title="12.其他库的介绍 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" title="14.新标准C加加程序设计 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/" title="12.其他库的介绍 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -241,10 +207,10 @@
   <header class="headline">
 <div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
-    <li><a class="term-link" href="../../../tags/c/">C</a></li>
-    <li><a class="term-link" href="../../../tags/c&amp;#43;&amp;#43;/">C&#43;&#43;</a></li>
-    <li><a class="term-link" href="../../../tags/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">基本概念</a></li>
-    <li><a class="term-link" href="../../../tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">基础知识</a></li>
+    <li><a class="term-link" href="/tags/c/">C</a></li>
+    <li><a class="term-link" href="/tags/c&amp;#43;&amp;#43;/">C&#43;&#43;</a></li>
+    <li><a class="term-link" href="/tags/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">基本概念</a></li>
+    <li><a class="term-link" href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">基础知识</a></li>
   </ul>
 </div>
   </header>
@@ -253,24 +219,24 @@
 
 <h2 id="指针">指针</h2>
 <p>指针的声明：
-<a href="#R-image-cbdd38ac47ccb17cd7d42605d0d637ed" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cbdd38ac47ccb17cd7d42605d0d637ed"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image.png"></a></p>
+<a href="#R-image-60c42241e001bb704285134c64e4afda" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-60c42241e001bb704285134c64e4afda"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image.png"></a></p>
 <h2 id="数组">数组</h2>
 <p>数组的范围必须是常量表达式，同时如果需要变化的范围可以做如下定义：
-<a href="#R-image-81f3e4ada293756705318cd20cf813f5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-81f3e4ada293756705318cd20cf813f5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-1.png"></a></p>
+<a href="#R-image-66a057dd8c33e3d8adc620c76424c009" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-66a057dd8c33e3d8adc620c76424c009"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-1.png"></a></p>
 <p>2.字符串文字量</p>
 <p>指的是用 &ldquo;&ldquo;括起来的字符串。</p>
 <ul>
 <li>长字符串编写：
-<a href="#R-image-4d48610fef514a53bd3a8756ca8d6edb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4d48610fef514a53bd3a8756ca8d6edb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-2.png"></a></li>
+<a href="#R-image-7712317348246236d5d2e0869f6e54fc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7712317348246236d5d2e0869f6e54fc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-2.png"></a></li>
 <li>带有L的字符是宽字符，如L&quot;sddsf&rdquo;，类型是const wchar_t.</li>
 </ul>
 <p>3.指向数组的指针</p>
 <p>4.常量
-<a href="#R-image-add5286002e15d21857d5dd902611bfc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-add5286002e15d21857d5dd902611bfc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-3.png"></a></p>
+<a href="#R-image-411b67b889d514a46fb54519fbfac431" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-411b67b889d514a46fb54519fbfac431"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-3.png"></a></p>
 <p>5.指针和常量</p>
 <p>使用一个指针时涉及到两个对象:该指针本身和被它所指的对象。将一个指针的声明用cons“预先固定”将使那个对象而不是使这个指针成为常量。要将指针本身而不是被指对象声明为常量，我们必须使用声明运算符*const，而不能只用简单的const。</p>
 <p>定义常量指针的声明运算符是<em>const。并没有cons** 声明符，所以出现在</em>之前的conr是作为基础类型的一部分。例如</p>
@@ -289,8 +255,8 @@
 </span></span><span style="display:flex;"><span>    rr<span style="color:#f92672">++</span>;<span style="color:#75715e">//实际上是ii++,rr不能像指针一样操作。
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>pp <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>ii;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-<p><a href="#R-image-eef9a49f9b43c36f3e66273405b8cd4e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-4.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-eef9a49f9b43c36f3e66273405b8cd4e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-4.png"></a></p>
+<p><a href="#R-image-914dd4bc60c2c0826f5ed0a764ddb78c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-914dd4bc60c2c0826f5ed0a764ddb78c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/image-4.png"></a></p>
 <div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
   <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
   <ul class="box-content attachments-files">
@@ -302,7 +268,7 @@
 <div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
-    <li><a class="term-link" href="../../../categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">R1-编程语言</a></li>
+    <li><a class="term-link" href="/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">R1-编程语言</a></li>
   </ul>
 </div>
   </footer>
@@ -310,8 +276,8 @@
         </div>
       </main>
     </div>
-    <script src="../../../js/clipboard/clipboard.min.js?1743999169" defer></script>
-    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743999169" defer></script>
-    <script src="../../../js/theme.js?1743999169" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1744055979" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1744055979" defer></script>
+    <script src="/js/theme.js?1744055979" defer></script>
   </body>
 </html>

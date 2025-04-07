@@ -24,18 +24,20 @@
     <meta itemprop="keywords" content="C语言程序">
     <title>21.C语言程序设计（含面试） :: Maloudown</title>
     <link href="http://localhost:1313/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/" rel="canonical" type="text/html" title="21.C语言程序设计（含面试） :: Maloudown">
-    <link href="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/index.xml" rel="alternate" type="application/rss+xml" title="21.C语言程序设计（含面试） :: Maloudown">
-    <link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743999169" rel="stylesheet">
-    <link href="../../css/theme.css?1743999169" rel="stylesheet">
-    <link href="../../css/format-print.css?1743999169" rel="stylesheet" id="R-format-style">
-    <link href="../../css/auto-complete/auto-complete.min.css?1743999169" rel="stylesheet">
-    <script src="../../js/auto-complete/auto-complete.min.js?1743999169" defer></script>
-    <script src="../../js/lunr/lunr.min.js?1743999169" defer></script>
-    <script src="../../js/lunr/lunr.stemmer.support.min.js?1743999169" defer></script>
-    <script src="../../js/lunr/lunr.multi.min.js?1743999169" defer></script>
-    <script src="../../js/lunr/lunr.zh.min.js?1743999169" defer></script>
-    <script src="../../js/search.js?1743999169" defer></script>
+    <link href="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/index.xml" rel="alternate" type="application/rss+xml" title="21.C语言程序设计（含面试） :: Maloudown">
+    <link href="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/index.md" rel="alternate" type="text/markdown" title="21.C语言程序设计（含面试） :: Maloudown">
+    <link href="/images/favicon.svg?1744055979" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744055979" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744055979" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1744055979" rel="stylesheet">
+    <link href="/css/theme.css?1744055979" rel="stylesheet">
+    <link href="/css/format-print.css?1744055979" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1744055979" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1744055979" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1744055979" defer></script>
+    <script src="/js/search.js?1744055979" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,7 +47,7 @@
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="../../searchindex.zh.js?1743999169";
+      window.relearn.index_js_url="/searchindex.zh.js?1744055979";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -55,7 +57,7 @@
       window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
       window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
       // variant stuff
-      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'neon', 'red' ];
+      window.relearn.themevariants = [ 'auto', 'relearn-light', 'red' ];
       window.relearn.customvariantname = "my-custom-variant";
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
@@ -91,99 +93,61 @@
       window.T_No_results_found = `找不到"{0}"的结果`;
       window.T_N_results_found = `为"{0}"找到 {1} 个结果`;
     </script>
-
 <style>
   :root {
-      --MENU-WIDTH-S: 9.375rem;
-      --MENU-WIDTH-M: 9.375rem;
-      --MENU-WIDTH-L: 12.75rem;
-      --color-primary: #2c3e50;           
-  --color-background-light: #f8f9fa;  
+    --MENU-WIDTH-S: 14.375rem;
+    --MENU-WIDTH-M: 14.375rem;
+    --MENU-WIDTH-L: 18.75rem;
+    --color-primary: #2c3e50;           
+    --color-background-light: #f8f9fa;  
   }
- 
-.app-container {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: #34495e;
-  margin: 0;
-}
-
- 
-.primary-navigation {                 
-  background: var(--color-primary);
-  padding: 2rem 0;
-}
-
-.navigation-menu {                    
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
- 
-.content-card {                       
-  background: white;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-}
-
- 
-.preview-section {                    
-  background: var(--color-background-light);
-  padding: 2rem;
-  border-radius: 8px;
-}
-
- 
-.action-link {                        
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
-}
-
- 
-.media-container {                    
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-
-.media-container img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.media-container:hover img {
-  transform: scale(1.02);
-}
-
- 
-@media (min-width: 768px) {
-  .grid-layout {                      
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 3rem;
+   
+  .cornell-notes {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
   }
-}
 
-@media (max-width: 768px) {
-  .media-container img {
-    height: 150px;
+  .cues {
+    background-image: url('/images/cornell-img/icon2.svg');
+    border-right: 1px solid #080808;
+    flex: 1;
+    padding-right: 20px;
   }
-}
+
+  .notes {
+    background-image: url('/images/cornell-img/icon1.svg');
+    border-left: 1px solid #080808;
+    flex: 2;
+    padding-left: 20px;
+  }
+
+  .summary {
+    width: 100%;
+    clear: both;
+    padding-top: 20px;
+    background-image: url('/images/cornell-img/iconmonstr-menu-lined.svg');
+    margin-top: 20px;
+  }
+
+   
+  .svg-container {
+    width: 100%; 
+    height: 40px;  
+    margin-bottom: 1rem;
+  }
+  
+   
+  .svg-container svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;  
+  }
   </style>
-  
 
-  
   </head>
-  <body class="mobile-support print" data-url="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/">
+  <body class="mobile-support print" data-url="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -200,16 +164,18 @@
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">21.C语言程序设计（含面试）</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            <div class="topbar-button topbar-button-markdown" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/index.md" title="显示 Markdown"><i class="fa-fw fab fa-markdown"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/" title="1.代码编写规范 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/" title="1.在线题库练习 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/" title="1.代码编写规范 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/" title="1.在线题库练习 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -229,7 +195,7 @@
   <header class="headline">
 <div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
-    <li><a class="term-link" href="../../tags/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F/">C语言程序</a></li>
+    <li><a class="term-link" href="/tags/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F/">C语言程序</a></li>
   </ul>
 </div>
   </header>
@@ -237,7 +203,7 @@
 <h1 id="21c语言程序设计含面试">21.C语言程序设计（含面试）</h1>
 
 <ul class="children children-li children-sort-">
-  <li class="children-title"><a href="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/">1.在线题库练习</a><p><h2 id="网站">网站</h2>
+  <li class="children-title"><a href="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/">1.在线题库练习</a><p><h2 id="网站">网站</h2>
 <ul>
 <li><a href="https://www.dotcpp.com/oj/ybt-cpp/?page=1" rel="external" target="_blank">&ldquo;语言网【基础】&rdquo;</a></li>
 <li><a href="http://cxsjsxmooc.openjudge.cn/2023t1spring/" rel="external" target="_blank">&ldquo;大学慕课对应习题【算法基础】&rdquo;</a></li>
@@ -265,7 +231,7 @@ Github项目</li>
 <div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
-    <li><a class="term-link" href="../../categories/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/">自学课程</a></li>
+    <li><a class="term-link" href="/categories/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/">自学课程</a></li>
   </ul>
 </div>
   </footer>
@@ -276,9 +242,9 @@ Github项目</li>
   <header class="headline">
 <div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
-    <li><a class="term-link" href="../../tags/c&amp;#43;&amp;#43;/">C&#43;&#43;</a></li>
-    <li><a class="term-link" href="../../tags/c&amp;#43;&amp;#43;%E9%9D%A2%E8%AF%95/">C&#43;&#43;面试</a></li>
-    <li><a class="term-link" href="../../tags/%E9%9D%A2%E7%BB%8F/">面经</a></li>
+    <li><a class="term-link" href="/tags/c&amp;#43;&amp;#43;/">C&#43;&#43;</a></li>
+    <li><a class="term-link" href="/tags/c&amp;#43;&amp;#43;%E9%9D%A2%E8%AF%95/">C&#43;&#43;面试</a></li>
+    <li><a class="term-link" href="/tags/%E9%9D%A2%E7%BB%8F/">面经</a></li>
   </ul>
 </div>
   </header>
@@ -419,14 +385,14 @@ Github项目</li>
 </span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
 <p>结果为16，因为电脑是64位的，所以以8字节对齐，联合体字节大小以最大的成员变量为准，故联合体的字节大小是10个字节</p>
 <p>12.返回二进制数中1的个数（经典题目）
-<a href="#R-image-6a18b49074fd7f69dd2205e297bb0f5e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6a18b49074fd7f69dd2205e297bb0f5e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image.png"></a></p>
+<a href="#R-image-ce8d450f89adb73c9a131b33b0add161" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ce8d450f89adb73c9a131b33b0add161"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image.png"></a></p>
 <p>13.求2的n次方
-<a href="#R-image-999d83ab022bb06f8f8273400babead6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-999d83ab022bb06f8f8273400babead6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-1.png"></a></p>
+<a href="#R-image-1a0706e62fb02900d32aceb4bcdbc6b4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1a0706e62fb02900d32aceb4bcdbc6b4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-1.png"></a></p>
 <p>14.操作符[]的重载，代码实现读和写。
-<a href="#R-image-1bbaf51bb10891d18badb2928fa75d97" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1bbaf51bb10891d18badb2928fa75d97"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-2.png"></a></p>
+<a href="#R-image-da0934fc8196c6b103c532356058621a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-da0934fc8196c6b103c532356058621a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-2.png"></a></p>
 <p>15.与操作与位操作</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
@@ -441,8 +407,8 @@ Github项目</li>
 <ul>
 <li>只要出现置1：或操作</li>
 <li>只要出现置0：与操作
-<a href="#R-image-5cdfe3d6c24a9c3b771ad30246501b33" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5cdfe3d6c24a9c3b771ad30246501b33"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-3.png"></a></li>
+<a href="#R-image-0970e8b433e7676ab687d6fab6288ac3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0970e8b433e7676ab687d6fab6288ac3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-3.png"></a></li>
 </ul>
 <p>16.sizeof的使用</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
@@ -454,8 +420,8 @@ Github项目</li>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>结果为：10,4,10,为什么最后不是11呢？
-<a href="#R-image-904737b600594de3e3750daa196892cc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-4.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-904737b600594de3e3750daa196892cc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-4.png"></a></p>
+<a href="#R-image-17db8f6439eb29fbe8cbe99f59086941" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-17db8f6439eb29fbe8cbe99f59086941"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-4.png"></a></p>
 <p>17.指向地址的指针加一个整数</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
@@ -483,8 +449,8 @@ Github项目</li>
 </span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,squere(<span style="color:#f92672">&amp;</span>a));
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
-<p><a href="#R-image-5290f9e9d5e099d6b6fa9564d46a22e0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-5.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5290f9e9d5e099d6b6fa9564d46a22e0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-5.png"></a></p>
+<p><a href="#R-image-80f585973897868eab1846df38b26e00" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-80f585973897868eab1846df38b26e00"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-5.png"></a></p>
 <p>19.假设有两个变量a,b，不借助第三个变量交换两个变量的值。</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
@@ -537,8 +503,8 @@ Github项目</li>
 </span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">请输入一个整数：</span><span style="color:#ae81ff">0x3A</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">转换后的整数为：</span><span style="color:#ae81ff">0xa3</span></span></span></code></pre></div>
 <p>22.一级指针和二级指针
-<a href="#R-image-af594b66cfce24c7137609cc9a6c80f8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-6.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-af594b66cfce24c7137609cc9a6c80f8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-6.png"></a></p>
+<a href="#R-image-f6b90bae2a7ee902ab3bfff6d60f33d4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f6b90bae2a7ee902ab3bfff6d60f33d4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-6.png"></a></p>
 <p>23.如果从数组x复制50个字节到数组y,最简单的方法是什么？</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
@@ -598,8 +564,8 @@ Github项目</li>
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>24.百钱买百鸡问题</p>
 <p>解题思路如下图：
-<a href="#R-image-029069d11936570807e242f4d2b4388a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-7.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-029069d11936570807e242f4d2b4388a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-7.png"></a></p>
+<a href="#R-image-aa6a4457b2438cb8f7891dcceddd6c05" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-aa6a4457b2438cb8f7891dcceddd6c05"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-7.png"></a></p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> x, y, z;
@@ -639,8 +605,8 @@ Github项目</li>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>26.函数指针类型
-<a href="#R-image-146e2ab0e90489fe4f191f743c990c80" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-8.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-146e2ab0e90489fe4f191f743c990c80"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-8.png"></a></p>
+<a href="#R-image-960cfbb38bc7815adb9b2a0abff7edf4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-960cfbb38bc7815adb9b2a0abff7edf4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-8.png"></a></p>
 <p>27.编写函数实现整数四舍五入
 思路：对于正数我们可以加0.5，然后取整；
 对于负数则减去0.5，然后取整。</p>
@@ -658,11 +624,11 @@ Github项目</li>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>28.下图代码运行结果
-<a href="#R-image-b3be8bcaef8968e1ef9dd4cfb04c3ad9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-9.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b3be8bcaef8968e1ef9dd4cfb04c3ad9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-9.png"></a></p>
+<a href="#R-image-c14b53c25e7c46ef542a175330a488ea" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c14b53c25e7c46ef542a175330a488ea"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-9.png"></a></p>
 <p>29.函数指针数组
-<a href="#R-image-2a57609f39aea151111c126264352acd" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-10.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2a57609f39aea151111c126264352acd"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-10.png"></a></p>
+<a href="#R-image-3b4fc5938cc2b4895f79fa4119541c6d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3b4fc5938cc2b4895f79fa4119541c6d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/image-10.png"></a></p>
 <div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
   <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
   <ul class="box-content attachments-files">
@@ -674,7 +640,7 @@ Github项目</li>
 <div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
-    <li><a class="term-link" href="../../categories/m1-%E9%9D%A2%E8%AF%95/">M1-面试</a></li>
+    <li><a class="term-link" href="/categories/m1-%E9%9D%A2%E8%AF%95/">M1-面试</a></li>
   </ul>
 </div>
   </footer>
@@ -683,8 +649,8 @@ Github项目</li>
         </div>
       </main>
     </div>
-    <script src="../../js/clipboard/clipboard.min.js?1743999169" defer></script>
-    <script src="../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743999169" defer></script>
-    <script src="../../js/theme.js?1743999169" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1744055979" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1744055979" defer></script>
+    <script src="/js/theme.js?1744055979" defer></script>
   </body>
 </html>

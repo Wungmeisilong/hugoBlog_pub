@@ -50,33 +50,5 @@
       <guid>http://localhost:1313/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/</guid>
       <description>pretues+kiel5仿真软件配合使用时需要注意的地方不知道keil5从哪个版本开始就不支持了晶振的设置操作，我在网上搜也得到不同的答案，所以从哪个版本开始限制这就不提了， 好在这样的改变并不会形象我们使用keil5。最近在刚进阶学习stm32，用到了pretues_8.11 仿真软 件和keil5代码编辑器，自己把心中所得分享一下。</description>
     </item>
-    <item>
-      <title>Arduino</title>
-      <link>http://localhost:1313/class/6.arduino/</link>
-      <pubDate>Tue, 01 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/class/6.arduino/</guid>
-      <description>物联网控制-小知识物联网的特点 物联网是互联网的拓展和延伸，物联网设备通常为带传感器的电子硬件，并与网络相连接。 物联网的应用层是核心。 物联网的作用 全面感知：全面感知就是通过各种类型的传感器实时感知被测物理对象的状态。 可靠传递：可靠传递就是通过各种网络与互联网的融合，将物体的信息实时准确地传递出去。 智能计算：智能处理就是利用云计算、模糊识别等各种智能计算技术，对海量的数据和信息分析和处理，以实现对物体智能化控制。 物联网体系架构</description>
-    </item>
-    <item>
-      <title>CC2530_ZigBee</title>
-      <link>http://localhost:1313/class/5.cc2530_zigbee/</link>
-      <pubDate>Tue, 01 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/class/5.cc2530_zigbee/</guid>
-      <description>实验2 IO端口输出实验实验2 IO端口输出实验 1、实验要求： 利用实验箱的基础板，实现八盏灯的点亮，下面是八盏灯的位置图： 在实际中我们可能没有实验箱，往往需要自己做一个八盏灯的板子，这个时候了解本次实验挤出实验板的八盏灯连接原理是很重要的，了解原理后你就可以自己做出自己的LED板子，并用cc2530控制它。</description>
-    </item>
-    <item>
-      <title>Esp8266_WiFi</title>
-      <link>http://localhost:1313/class/4.esp8266_wifi/</link>
-      <pubDate>Tue, 01 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/class/4.esp8266_wifi/</guid>
-      <description>物联网通信技术-小知识通信串口 参照上一节课&#xA;物联网是新一代信息技术领域的重要组成部分。其英文名称是“The Internet of things”，顾名思义，“物联网就是物物相连的互联网”。&#xA;这有两层意思：</description>
-    </item>
-    <item>
-      <title>STM32_RFID</title>
-      <link>http://localhost:1313/class/3.stm32_rfid/</link>
-      <pubDate>Tue, 01 Nov 2022 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/class/3.stm32_rfid/</guid>
-      <description>Lorem Ipsum.</description>
-    </item>
   </channel>
 </rss>

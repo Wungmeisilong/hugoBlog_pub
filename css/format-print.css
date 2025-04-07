@@ -31,7 +31,7 @@
 
   --MENU-HOME-LINK-color: rgba(64, 64, 64, 1); /* home button color if configured */
   --MENU-HOME-LINK-HOVER-color: rgba(0, 0, 0, 1); /* hovered home button color if configured */
-
+  --MENU-HEADER-BG-color:rgba(125, 201, 3, 1);
   --MENU-SECTIONS-BG-color: rgba(40, 40, 40, 1); /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
   --MENU-SECTIONS-ACTIVE-BG-color: rgba(0, 0, 0, 0.166); /* background color of the active menu section */
   --MENU-SECTIONS-LINK-color: rgba(186, 186, 186, 1); /* link color of menu topics */
