@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ESP8266 :: 标签 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/esp8266/</link>
+    <link>http://localhost:1313/tags/esp8266/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Mon, 27 May 2024 14:56:07 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/esp8266/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/esp8266/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>物联网应用系统设计</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
+      <link>http://localhost:1313/class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Mon, 27 May 2024 14:56:07 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>http://localhost:1313/class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
       <description>物联网结构系统与传统网路系统的区别&#xA;前者由三个部分构成&#xA;信息物品 自主网络 智能应用 需求分析 基本概念 需求规格说明：开发、测试、质量保证、项目管理以及相关的项目功能等地方都有重要的作用</description>
     </item>
   </channel>

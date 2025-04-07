@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux期末复习 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
+    <link>http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
     <description>认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般压缩解压文件： ​&#xD;命令&#xD;gzip [文件名]&#xD;gunzip [解压文件名]&#xD;例子：</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

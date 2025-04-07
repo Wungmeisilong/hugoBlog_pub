@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>计算机组成原理-复习 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/</link>
+    <link>http://localhost:1313/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/</link>
     <description>1 计算机系统概论 计算机的分类 计算机总体上分为：电子模拟计算机1和电子数字计算机。二者区别如下表&#xA;比较内容 电子数字计算机 电子模拟计算机 数据表示方法 0或1 电压 计算方式 数字计算 电压组合和测量值 控制方式 程序控制 盘上连线 精度 高 低 数据存储量 大 小 逻辑计算能力 强 无 计算机的五代变化 第一代1946~1957年， 数据处理 得到应用； 第二代1958~1964年， 工业控制 开始得到应用； 第三代1965~1971年， 小型计算机开始出现； 第四代1972~1990年， 微型计算机 开始出现； 第五代1991年开始， 单片机 开始出现 计算机的性能指标 处理机字长 指处理机运算其中一次能工处理的二进制数运算的位数，例如32位，64位。 存储器带宽 单位时间内从存储器独处的二进制数信息量，一般用 字节数/秒表示。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>20.C&#43;&#43;面试 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/</link>
+    <link>http://localhost:1313/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/</link>
     <description>1.网络编程网络编程 网络原理 数据库 C++基础 1.左值引用和右值引用&#xA;数据湖结构与算法 附件</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 01 Nov 2024 08:16:41 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1.网络编程</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/1.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</link>
+      <link>http://localhost:1313/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/1.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Fri, 01 Nov 2024 08:16:41 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/1.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</guid>
+      <guid>http://localhost:1313/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/1.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</guid>
       <description>网络编程 网络原理 数据库 C++基础 1.左值引用和右值引用&#xA;数据湖结构与算法 附件</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>代码烧录 :: 标签 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/</link>
+    <link>http://localhost:1313/tags/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 09 Jan 2024 15:04:24 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>pretues&#43;kiel5仿真软件配合使用时需要注意的地方</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/</link>
+      <link>http://localhost:1313/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/</link>
       <pubDate>Tue, 09 Jan 2024 15:04:24 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/</guid>
+      <guid>http://localhost:1313/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/</guid>
       <description>不知道keil5从哪个版本开始就不支持了晶振的设置操作，我在网上搜也得到不同的答案，所以从哪个版本开始限制这就不提了， 好在这样的改变并不会形象我们使用keil5。最近在刚进阶学习stm32，用到了pretues_8.11 仿真软 件和keil5代码编辑器，自己把心中所得分享一下。</description>
     </item>
   </channel>

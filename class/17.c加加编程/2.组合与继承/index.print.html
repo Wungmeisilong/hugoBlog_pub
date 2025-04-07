@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
-  <head><script src="/Wungmeisilong/hugoBlog_pub.git/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Wungmeisilong/hugoBlog_pub.git/livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
@@ -10,7 +10,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="2.组合与继承 :: Maloudown">
     <meta name="twitter:description" content="类与类的三种关系 Composition-复合 以我个人的理解，复合就是一个类中包含有另外一个类，使用到另一个类的内容。复合的类他们的构造和析构函数运行次序是，构造函数有内到外依次运行，析构函数则相反。可以使用下图表示这种关系">
-    <meta property="og:url" content="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/">
+    <meta property="og:url" content="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/">
     <meta property="og:site_name" content="Maloudown">
     <meta property="og:title" content="2.组合与继承 :: Maloudown">
     <meta property="og:description" content="类与类的三种关系 Composition-复合 以我个人的理解，复合就是一个类中包含有另外一个类，使用到另一个类的内容。复合的类他们的构造和析构函数运行次序是，构造函数有内到外依次运行，析构函数则相反。可以使用下图表示这种关系">
@@ -23,29 +23,29 @@
     <meta itemprop="wordCount" content="617">
     <meta itemprop="keywords" content="C&#43;&#43;">
     <title>2.组合与继承 :: Maloudown</title>
-    <link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/" rel="canonical" type="text/html" title="2.组合与继承 :: Maloudown">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/index.xml" rel="alternate" type="application/rss+xml" title="2.组合与继承 :: Maloudown">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743998626" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743998626" rel="stylesheet"></noscript>
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/perfect-scrollbar/perfect-scrollbar.min.css?1743998626" rel="stylesheet">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/theme.css?1743998626" rel="stylesheet">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/format-print.css?1743998626" rel="stylesheet" id="R-format-style">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/auto-complete/auto-complete.min.css?1743998626" rel="stylesheet">
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/auto-complete/auto-complete.min.js?1743998626" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.min.js?1743998626" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.stemmer.support.min.js?1743998626" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.multi.min.js?1743998626" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.zh.min.js?1743998626" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/search.js?1743998626" defer></script>
+    <link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/" rel="canonical" type="text/html" title="2.组合与继承 :: Maloudown">
+    <link href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/index.xml" rel="alternate" type="application/rss+xml" title="2.组合与继承 :: Maloudown">
+    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1743999169" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1743999169" rel="stylesheet">
+    <link href="../../../css/theme.css?1743999169" rel="stylesheet">
+    <link href="../../../css/format-print.css?1743999169" rel="stylesheet" id="R-format-style">
+    <link href="../../../css/auto-complete/auto-complete.min.css?1743999169" rel="stylesheet">
+    <script src="../../../js/auto-complete/auto-complete.min.js?1743999169" defer></script>
+    <script src="../../../js/lunr/lunr.min.js?1743999169" defer></script>
+    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1743999169" defer></script>
+    <script src="../../../js/lunr/lunr.multi.min.js?1743999169" defer></script>
+    <script src="../../../js/lunr/lunr.zh.min.js?1743999169" defer></script>
+    <script src="../../../js/search.js?1743999169" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = ``;
       window.relearn.path='\/class\/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B\/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF\/';
       window.relearn.relBasePath='..\/..\/..';
-      window.relearn.relBaseUri='..\/..\/..\/..\/..';
-      window.relearn.absBaseUri='http:\/\/localhost:1313\/Wungmeisilong\/hugoBlog_pub.git';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="../../../Wungmeisilong/hugoBlog_pub.git/searchindex.zh.js?1743998626";
+      window.relearn.index_js_url="../../../searchindex.zh.js?1743999169";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -183,7 +183,7 @@
 
   
   </head>
-  <body class="mobile-support print" data-url="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/">
+  <body class="mobile-support print" data-url="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -212,17 +212,17 @@
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../Wungmeisilong/hugoBlog_pub.git/"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../Wungmeisilong/hugoBlog_pub.git/class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><span itemprop="name">17.C加加编程</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><span itemprop="name">17.C加加编程</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">2.组合与继承</span><meta itemprop="position" content="4"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/" title="3.导读 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/" title="3.导读 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/" title="1.代码编写规范 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/" title="1.代码编写规范 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -242,7 +242,7 @@
   <header class="headline">
 <div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
-    <li><a class="term-link" href="../../../Wungmeisilong/hugoBlog_pub.git/tags/c&amp;#43;&amp;#43;/">C&#43;&#43;</a></li>
+    <li><a class="term-link" href="../../../tags/c&amp;#43;&amp;#43;/">C&#43;&#43;</a></li>
   </ul>
 </div>
   </header>
@@ -252,19 +252,19 @@
 <h2 id="类与类的三种关系">类与类的三种关系</h2>
 <h3 id="composition-复合">Composition-复合</h3>
 <p>以我个人的理解，复合就是一个类中包含有另外一个类，使用到另一个类的内容。复合的类他们的构造和析构函数运行次序是，构造函数有内到外依次运行，析构函数则相反。可以使用下图表示这种关系</p>
-<p><a href="#R-image-1048e9f92ba253615d05c1a6d2c5b99d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1048e9f92ba253615d05c1a6d2c5b99d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png"></a></p>
+<p><a href="#R-image-ba9259d9ef71ad1f284ad54b4379cbcf" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ba9259d9ef71ad1f284ad54b4379cbcf"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image.png"></a></p>
 <h3 id="delegation-委托">delegation-委托</h3>
 <p>当一个类欲用一个指针指向另一个类，以达到想使用时就指向这个类的这种关系就叫delegation，假设我要实现一个计算，此时指针指向这个函数，让函数去做这个计算。这有些类似于复合，但是这里重点在于指针的使用。在写一些功能的时候也建议使用这种关系的特性，因为这样就将两者隔开，起到一定的保护作用。参考下图：
-<a href="#R-image-c1abe0f42b67cef9f07d1cbc16a6ecf9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c1abe0f42b67cef9f07d1cbc16a6ecf9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png"></a></p>
+<a href="#R-image-71c10847dcc0f9b60e3f198b8d9ff6c1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-71c10847dcc0f9b60e3f198b8d9ff6c1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-1.png"></a></p>
 <h3 id="inheritance-继承">Inheritance-继承</h3>
 <p>在C++有三种继承方式，其中public是常用的一种，继承表示从一个类中集成某些属性成为 <strong>另外一种</strong> 类。</p>
-<p><a href="#R-image-c31227d922155335316c507869cf1b5f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c31227d922155335316c507869cf1b5f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png"></a></p>
+<p><a href="#R-image-deb7981d52a6521601f04eb0bca16fc0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-deb7981d52a6521601f04eb0bca16fc0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-2.png"></a></p>
 <p>Inheritance关系的两个类它们的构造函数与析构函数执行次序与之前描述复合时一样。如下图是这种关系的表示方法：
-<a href="#R-image-6f8e2e7503e836adbd6358f5caa5619d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6f8e2e7503e836adbd6358f5caa5619d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png"></a></p>
+<a href="#R-image-ed1c862fcd737c192f08cf164ff09b10" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ed1c862fcd737c192f08cf164ff09b10"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/image-3.png"></a></p>
 <ul>
 <li>构造函数（constructor）：由内到外，代码表示为<code>SunFunction::SunFunction(…):base(){…};</code></li>
 <li>析构函数（destructor）：由外到内，代码表示为<code>SunFunction::SunFunction(…){……~base();};</code></li>
@@ -283,7 +283,7 @@
 <div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
-    <li><a class="term-link" href="../../../Wungmeisilong/hugoBlog_pub.git/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">R1-编程语言</a></li>
+    <li><a class="term-link" href="../../../categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">R1-编程语言</a></li>
   </ul>
 </div>
   </footer>
@@ -291,8 +291,8 @@
         </div>
       </main>
     </div>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/clipboard/clipboard.min.js?1743998626" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/perfect-scrollbar/perfect-scrollbar.min.js?1743998626" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/theme.js?1743998626" defer></script>
+    <script src="../../../js/clipboard/clipboard.min.js?1743999169" defer></script>
+    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1743999169" defer></script>
+    <script src="../../../js/theme.js?1743999169" defer></script>
   </body>
 </html>

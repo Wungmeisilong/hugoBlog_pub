@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>爱情 :: 标签 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E7%88%B1%E6%83%85/</link>
+    <link>http://localhost:1313/tags/%E7%88%B1%E6%83%85/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 02 Jan 2024 00:25:42 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E7%88%B1%E6%83%85/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E7%88%B1%E6%83%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>君绘语</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/</link>
+      <link>http://localhost:1313/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/</link>
       <pubDate>Tue, 02 Jan 2024 00:25:42 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/</guid>
+      <guid>http://localhost:1313/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/</guid>
       <description>第一章 与君初相识 高中那会儿我老失眠，原因一言难尽。&#xA;记得有一次我去吃饭，遇到张君，我们聊闲聊中，谈到了我失眠的事，张君听了说，他们有个朋友以睡觉为己任的人。我不信，哪有这种人？</description>
     </item>
     <item>
       <title>阿牛和阿花的爱情故事</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/1.%E9%98%BF%E7%89%9B%E9%98%BF%E8%8A%B1/</link>
+      <link>http://localhost:1313/story/1.%E9%98%BF%E7%89%9B%E9%98%BF%E8%8A%B1/</link>
       <pubDate>Thu, 21 Dec 2023 00:40:45 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/1.%E9%98%BF%E7%89%9B%E9%98%BF%E8%8A%B1/</guid>
+      <guid>http://localhost:1313/story/1.%E9%98%BF%E7%89%9B%E9%98%BF%E8%8A%B1/</guid>
       <description>牛村与花村仅隔一片红树林，深秋里，满山的红叶铺天盖地，牛村的村尾是个好地方，常聚着城里来的人，就是离阿牛家远了些。&#xA;“嘿！ 阿牛。你要老婆不……不，只要你开……开……金口……”阿牛理着枯萎的草，寻声一看，是那跑腿的阿光，阿光无力地扶着杆，面红耳赤。</description>
     </item>
   </channel>

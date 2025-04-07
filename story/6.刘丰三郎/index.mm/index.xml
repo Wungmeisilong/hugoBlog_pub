@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>刘丰三郎 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/6.%E5%88%98%E4%B8%B0%E4%B8%89%E9%83%8E/index.mm/</link>
+    <link>http://localhost:1313/story/6.%E5%88%98%E4%B8%B0%E4%B8%89%E9%83%8E/index.mm/</link>
     <description>高考在即，在收到学校放假的通知后，我于第二日乘班车回了家。&#xD;在隔壁县读书的我，每次回家都要乘上4-5小时的班车，回家的路上能见到一片又一片的砂糖橘，我的家乡被誉为“沙滩橘之乡”，最近几年村里也开始陆陆续续的种起砂糖橘。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/6.%E5%88%98%E4%B8%B0%E4%B8%89%E9%83%8E/index.mm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/story/6.%E5%88%98%E4%B8%B0%E4%B8%89%E9%83%8E/index.mm/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

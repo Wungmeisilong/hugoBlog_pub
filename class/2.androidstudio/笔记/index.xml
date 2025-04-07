@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AndroidStudio笔记 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/%E7%AC%94%E8%AE%B0/</link>
+    <link>http://localhost:1313/class/2.androidstudio/%E7%AC%94%E8%AE%B0/</link>
     <description>这篇文章主要介绍AndroidStudio的使用，以及一些Android开发的基础知识。以及一些开发中遇到的问题和解决方法，除此之外，还会介绍一些开发中常用的工具和技巧。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/class/2.androidstudio/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

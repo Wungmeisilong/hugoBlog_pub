@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>恐怖 :: 标签 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E6%81%90%E6%80%96/</link>
+    <link>http://localhost:1313/tags/%E6%81%90%E6%80%96/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 10 Feb 2024 16:31:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E6%81%90%E6%80%96/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E6%81%90%E6%80%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>草屋夫妇</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/5.%E7%99%BD%E9%AA%A8%E5%A4%AB%E5%A6%87/</link>
+      <link>http://localhost:1313/story/5.%E7%99%BD%E9%AA%A8%E5%A4%AB%E5%A6%87/</link>
       <pubDate>Sat, 10 Feb 2024 16:31:27 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/5.%E7%99%BD%E9%AA%A8%E5%A4%AB%E5%A6%87/</guid>
+      <guid>http://localhost:1313/story/5.%E7%99%BD%E9%AA%A8%E5%A4%AB%E5%A6%87/</guid>
       <description>第一章 胡冲村被一条蜿蜒曲折的河流环抱着，河水悠悠向东流去，在不远处与几条支流汇聚，形成了一个被称为三岔口的地方。从三岔口向西，沿着泥泞的小路走几十分钟，便能抵达胡冲村。村口有一片灰白色的石斜坡，宛如一块巨大的布匹覆盖在山的一侧，自山顶直泻而下。在这片斜坡上，延伸出一条条绳索，紧紧地将斜坡与江河相连。江河的另一端也有同样的绳索，当这些绳索被拉起时，一张绿色的渔网便会浮出水面，将鱼儿团团围住。</description>
     </item>
   </channel>

@@ -5,7 +5,7 @@ var relearn_searchindex = [
     "description": "menuPre = ‘’ 4.自定义页面以康奈尔笔记格式输出\r3.github和atomgit的混合使用，哪些是值得注意的？\r2.git与github的使用\r1.博客优化笔记\r7.初次安装AD需要做哪些设置？\r6.云端一体化的环境变量问题\r5.云端一体化如何查看云函数日志？\r8.如何用旧电脑搭建自己的服务器？\r9.唛盟杯项目下载与启动",
     "tags": [],
     "title": "  博客文章",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/log/"
+    "uri": "/log/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r项目",
@@ -13,7 +13,7 @@ var relearn_searchindex = [
     "description": "志愿活动软件设计与开发设计一款可以参加志愿活动的小程序，其制作流程大致如下：\n需求分析与规划 确定目标用户群体及其需求：考虑志愿者、活动组织者和管理员等不同角色的功能需求。\n志愿者：\n注册/登录：志愿者可以通过手机号、邮箱或第三方账号进行注册和登录。 个人中心：查看并编辑个人信息，包括姓名、联系方式、服务时长、参与过的活动记录等。 活动浏览：查看活动列表，搜索感兴趣的服务项目，支持按地区、时间、类型筛选。 活动报名：选择感兴趣的志愿活动进行报名，填写相关报名表单，并能收到报名成功或失败的反馈信息。 签到打卡：参加活动时通过GPS定位、二维码扫描等方式进行签到和签退，记录服务时长。 互动交流：可在活动详情页留言评论，与其他志愿者交流心得，也可以对已完成的活动进行评价。 积分系统：根据参与活动的情况获取积分，可用于兑换礼品或其他激励。 活动组织者：",
     "tags": [],
     "title": "贺青工程",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/"
+    "uri": "/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r计算机组成原理",
@@ -21,7 +21,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "过年",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BF%87%E5%B9%B4/"
+    "uri": "/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BF%87%E5%B9%B4/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代",
@@ -29,7 +29,7 @@ var relearn_searchindex = [
     "description": "17.C加加编程\r15.计算机图形学OpenGL与C++\r14.新标准C加加程序设计\r13.从C到C++\r12.其他库的介绍\r11.STL库学习之适配器\r10.STL库学习之仿函数\r9.STL库学习之迭代器与算法\r8.STL库学习之容器\r7.STL库学习之分配器\r6.STL库学习之筑基概要\r5.STL库之观其大略\r4.C++2.0特性的使用\r3.导读\r2.组合与继承\r1.代码编写规范\r21.C语言程序设计（含面试）\r1.在线题库练习\r20.C++面试\r1.网络编程\r1.代码编写规范\r哲学\r心经\r思想的边界\r庄子之道\r费尔巴哈提纲\r如何理解费尔巴哈提纲的主要含义？\r物联网网络安全论\r嵌入式系统设计知识点\r物联网应用系统设计\r考试类\r教资 小学\r外语类\r英语\rArkTS\r电子电路\r模拟电子技术基础笔记\r微信小程序\r基础知识\r操作系统\rLinux期末复习\rAndroidStudio\rAndroidStudio\rAndroidStudio笔记\r2-1.Toolbar工具栏\r计算机组成原理\r过年\r计算机组成原理-复习\r51单片机\rpretues+kiel5仿真软件配合使用时需要注意的地方\rArduino\r物联网控制-小知识\rCC2530_ZigBee\r实验2 IO端口输出实验\rEsp8266_WiFi\r物联网通信技术-小知识\rSTM32_RFID\r19.test\r19.设计模式（C++）\r物联网工程",
     "tags": [],
     "title": "课程",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/"
+    "uri": "/class/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代",
@@ -37,7 +37,7 @@ var relearn_searchindex = [
     "description": "贺青工程\r志愿活动软件设计与开发\r验收问题\r毕业设计\r电赛\r唛盟杯比赛详记",
     "tags": [],
     "title": "  项目",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/projects/"
+    "uri": "/projects/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代",
@@ -45,7 +45,7 @@ var relearn_searchindex = [
     "description": "menuPre = ‘’ 9.黑神话悟空之黄风岭序章：灵蕴纪元",
     "tags": [],
     "title": "小说",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/"
+    "uri": "/story/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代",
@@ -53,7 +53,7 @@ var relearn_searchindex = [
     "description": "menuPre =’'",
     "tags": [],
     "title": "  关于",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/about/"
+    "uri": "/about/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
@@ -61,7 +61,7 @@ var relearn_searchindex = [
     "description": "Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。\nNotes 创建css文件 康奈尔笔记的布局，其中左侧是 “Cues”，右侧是 “Notes”，底部是 “Summary”，您可以使用 Flexbox 的 row 和 column 布局来实现。这里是一个 CSS 示例，它将创建一个两列的布局，左侧为 “Cues”，右侧为 “Notes”，然后在这两列下方是 “Summary”。",
     "tags": [],
     "title": "4.自定义页面以康奈尔笔记格式输出",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/"
+    "uri": "/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/"
   },
   {
     "breadcrumb": "",
@@ -69,7 +69,7 @@ var relearn_searchindex = [
     "description": "\u003c!DOCTYPE html\u003e MaLouDown 首页 技术文章 小说 最新技术文章 初次安装AD需要做哪些设置？ 从域控部署到组策略配置的完整指南...",
     "tags": [],
     "title": "技术博客 | 智能物联时代",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/"
+    "uri": "/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
@@ -81,7 +81,7 @@ var relearn_searchindex = [
       "Atomgit"
     ],
     "title": "3.github和atomgit的混合使用，哪些是值得注意的？",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/log/3.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E5%93%AA%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/"
+    "uri": "/log/3.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E5%93%AA%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -89,7 +89,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: Atomgit",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/atomgit/"
+    "uri": "/tags/atomgit/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代",
@@ -97,7 +97,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/"
+    "uri": "/categories/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -105,7 +105,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: Gihub",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/gihub/"
+    "uri": "/tags/gihub/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代",
@@ -113,7 +113,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/"
+    "uri": "/tags/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -121,7 +121,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 工具",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%B7%A5%E5%85%B7/"
+    "uri": "/tags/%E5%B7%A5%E5%85%B7/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -129,7 +129,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 工具推荐",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"
+    "uri": "/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
@@ -140,7 +140,7 @@ var relearn_searchindex = [
       "Github"
     ],
     "title": "2.git与github的使用",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/"
+    "uri": "/log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -148,7 +148,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: Github",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/github/"
+    "uri": "/tags/github/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
@@ -159,7 +159,7 @@ var relearn_searchindex = [
       "Hugo主题博客"
     ],
     "title": "1.博客优化笔记",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/"
+    "uri": "/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -167,7 +167,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: Hugo主题博客",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/hugo%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/"
+    "uri": "/tags/hugo%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -175,7 +175,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 踩坑日记",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/"
+    "uri": "/categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -183,7 +183,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 前端",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%89%8D%E7%AB%AF/"
+    "uri": "/tags/%E5%89%8D%E7%AB%AF/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -195,7 +195,7 @@ var relearn_searchindex = [
       "OpenGL"
     ],
     "title": "15.计算机图形学OpenGL与C++",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -205,7 +205,7 @@ var relearn_searchindex = [
       "C++"
     ],
     "title": "17.C加加编程",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -213,7 +213,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: C++",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/c\u0026#43;\u0026#43;/"
+    "uri": "/tags/c\u0026#43;\u0026#43;/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -221,7 +221,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: OpenGL",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/opengl/"
+    "uri": "/tags/opengl/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -229,7 +229,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 编程语言",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
+    "uri": "/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -237,7 +237,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 计算机图形学",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"
+    "uri": "/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -245,7 +245,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 自学编程语言",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
+    "uri": "/categories/%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -253,7 +253,7 @@ var relearn_searchindex = [
     "description": "序章：灵蕴纪元\n天地混沌初开，盘古巨斧挥动，劈开鸿蒙，清者上浮为天，浊者下沉为地，乾坤始定。女娲以泥土仿生灵模样，捏塑出万物之灵，灵蕴由此诞生，在三界间流淌，似无形的丝线，将世间万物紧密相连。",
     "tags": [],
     "title": "9.黑神话悟空之黄风岭",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/9.%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA%E4%B9%8B%E9%BB%84%E9%A3%8E%E5%B2%AD/"
+    "uri": "/story/9.%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA%E4%B9%8B%E9%BB%84%E9%A3%8E%E5%B2%AD/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r21.C语言程序设计（含面试）",
@@ -265,7 +265,7 @@ var relearn_searchindex = [
       "面经"
     ],
     "title": "1.在线题库练习",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/"
+    "uri": "/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/1.%E5%9C%A8%E7%BA%BF%E9%A2%98%E5%BA%93%E7%BB%83%E4%B9%A0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -275,7 +275,7 @@ var relearn_searchindex = [
       "C语言程序"
     ],
     "title": "21.C语言程序设计（含面试）",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/"
+    "uri": "/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -283,7 +283,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: C++面试",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/c\u0026#43;\u0026#43;%E9%9D%A2%E8%AF%95/"
+    "uri": "/tags/c\u0026#43;\u0026#43;%E9%9D%A2%E8%AF%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -291,7 +291,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: C语言程序",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F/"
+    "uri": "/tags/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -299,7 +299,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: M1-面试",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/m1-%E9%9D%A2%E8%AF%95/"
+    "uri": "/categories/m1-%E9%9D%A2%E8%AF%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -307,7 +307,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 面经",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E9%9D%A2%E7%BB%8F/"
+    "uri": "/tags/%E9%9D%A2%E7%BB%8F/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -315,7 +315,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 自学课程",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/"
+    "uri": "/categories/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -328,7 +328,7 @@ var relearn_searchindex = [
       "基本概念"
     ],
     "title": "14.新标准C加加程序设计",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -336,7 +336,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: C",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/c/"
+    "uri": "/tags/c/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -344,7 +344,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: R1-编程语言",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
+    "uri": "/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -352,7 +352,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 基本概念",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"
+    "uri": "/tags/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -360,7 +360,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 基础知识",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
+    "uri": "/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r20.C++面试",
@@ -372,7 +372,7 @@ var relearn_searchindex = [
       "面经"
     ],
     "title": "1.网络编程",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/1.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"
+    "uri": "/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/1.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -382,7 +382,7 @@ var relearn_searchindex = [
       "C++面试"
     ],
     "title": "20.C++面试",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/"
+    "uri": "/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -395,7 +395,7 @@ var relearn_searchindex = [
       "基本概念"
     ],
     "title": "13.从C到C++",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -403,7 +403,7 @@ var relearn_searchindex = [
     "description": "为什么需要哈希函数？ 哈希函数在计算机科学中扮演着重要的角色，其主要作用包括：\n数据检索：哈希函数可以将键（key）映射到哈希表中的一个位置，从而快速检索数据。这是哈希表（如 C++ 中的 std::unordered_map 和 std::unordered_set）的基础。",
     "tags": [],
     "title": "12.其他库的介绍",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -411,7 +411,7 @@ var relearn_searchindex = [
     "description": "整体框架的回顾 存在多种适配器-adapters 一个人理解，要将适配器理解透彻，我们需要先从别的组件入手，这里以vector容器为例，我们都知道该容器需要迭代器，也就是一些智能指针来确定容器的头尾，以及内容位置，目的是方便后续的算法的怎删改查等操作，假设算法现在要做拿到位置8的数据，那么vector的指针要怎么移动呢？已知指针移动上，vector是随机访问指针，也就是前后都可以跑，而这个操作实际上是迭代器的其中一个内容，而这一内容就需要一个适配器去做适配。",
     "tags": [],
     "title": "11.STL库学习之适配器",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -419,7 +419,7 @@ var relearn_searchindex = [
     "description": "仿函数的个人理解 仿函数是行为类似函数的一个类，比较明显的特征是仿函数重载了operate()，比如你写了一个struct，并在里面重载了operate()，当调用这个类的()时就会返回响应的数据。",
     "tags": [],
     "title": "10.STL库学习之仿函数",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -427,7 +427,7 @@ var relearn_searchindex = [
     "description": "标准库常用算法 迭代器 迭代器-的分类 struct input_iterator_tag {}； struct output_iterator_tag {}; struct forward_iterator_tag:public input_iterator_tag{}; struct bidirectional_iterator_tag:public forward_iterator_tag{}; struct random_access_tag:public bidirectional_iterator_tag {};\r以上5中迭代器的继承关系，如下图所示。 1.Input Iterator（输入迭代器）： 输入迭代器是最基本的迭代器类型，支持单向遍历，只能向前移动。",
     "tags": [],
     "title": "9.STL库学习之迭代器与算法",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -435,7 +435,7 @@ var relearn_searchindex = [
     "description": "list vector deque deque的迭代器 deque实现中间插入值的做法：如果欲插入值在最前端（最尾端）调用push_front()（push_back()）,否则借助insert_aux()迭代器，实现如果欲插入位置靠近前端使用，就让前端的数据往前挪，否则往后挪。",
     "tags": [],
     "title": "8.STL库学习之容器",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -445,7 +445,7 @@ var relearn_searchindex = [
       "C++"
     ],
     "title": "7.STL库学习之分配器",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/7.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%88%86%E9%85%8D%E5%99%A8/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/7.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%88%86%E9%85%8D%E5%99%A8/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -455,7 +455,7 @@ var relearn_searchindex = [
       "C++"
     ],
     "title": "6.STL库学习之筑基概要",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -466,7 +466,7 @@ var relearn_searchindex = [
       "STL库"
     ],
     "title": "5.STL库之观其大略",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -474,7 +474,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: STL库",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/stl%E5%BA%93/"
+    "uri": "/tags/stl%E5%BA%93/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -482,7 +482,7 @@ var relearn_searchindex = [
     "description": "在宋朝末年的一个春日午后，阳光透过雕花窗棂，洒在了御书房的青石地板上。太傅李大人正站在书架旁，耐心地教导着最受宠爱的柒公主学习《论语》。公主虽然天资聪颖，但今日却显得心不在焉，她的目光不时飘向窗外的花园，那里的蝴蝶正在花间翩翩起舞。\r太傅李大人轻声咳嗽，试图引起公主的注意，但柒公主却只是懒洋洋地翻了一页书，完全没有将心思放在学习上。李大人心中微微叹息，他知道这位公主自小受到皇上的宠爱，性格难免有些任性。他决定采取一些措施，于是他从桌上拿起了一根精致的戒尺。",
     "tags": [],
     "title": "8.桑叶白鸟卷",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/8.%E6%A1%91%E5%8F%B6%E7%99%BD%E9%B8%9F%E5%8D%B7/"
+    "uri": "/story/8.%E6%A1%91%E5%8F%B6%E7%99%BD%E9%B8%9F%E5%8D%B7/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -492,7 +492,7 @@ var relearn_searchindex = [
       "C++"
     ],
     "title": "4.C++2.0特性的使用",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -502,7 +502,7 @@ var relearn_searchindex = [
       "C++"
     ],
     "title": "3.导读",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -512,7 +512,7 @@ var relearn_searchindex = [
       "C++"
     ],
     "title": "2.组合与继承",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -522,7 +522,7 @@ var relearn_searchindex = [
       "C++"
     ],
     "title": "1.代码编写规范",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/"
+    "uri": "/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r17.C加加编程",
@@ -532,7 +532,7 @@ var relearn_searchindex = [
       "C++"
     ],
     "title": "1.代码编写规范",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/"
+    "uri": "/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -540,7 +540,7 @@ var relearn_searchindex = [
     "description": "在昏暗的办公室里，落长轻轻地推开门，他的脚步轻盈得几乎不发出任何声响。他的目光在办公室内扫视了一圈，最终落在了我身上。我依然坐在电脑前，手指在键盘上飞快地舞动，PPT的页面在屏幕上不断翻动。\r落长走到我的桌边，他的身影在电脑屏幕的反光中显得有些扭曲。他轻咳了一声，打破了办公室的宁静。",
     "tags": [],
     "title": "职场短篇",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/%E8%81%8C%E5%9C%BA%E7%9F%AD%E7%AF%87/"
+    "uri": "/story/%E8%81%8C%E5%9C%BA%E7%9F%AD%E7%AF%87/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -548,7 +548,7 @@ var relearn_searchindex = [
     "description": "序章 在这个看似平凡的现代世界中，时间的秘密潜藏于暗处，由几个古老家族和秘密组织共同守护。几世纪以来，他们不断研究揭示时间的奥秘，但也深知滥用这种力量将导致无法挽回的后果。在表面平静的生活背后，却隐藏着无数阴谋与斗争。",
     "tags": [],
     "title": "白唐时间录",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/%E7%99%BD%E5%94%90%E6%97%B6%E9%97%B4%E5%BD%95/"
+    "uri": "/story/%E7%99%BD%E5%94%90%E6%97%B6%E9%97%B4%E5%BD%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -558,7 +558,7 @@ var relearn_searchindex = [
       "书信"
     ],
     "title": "7.致自福的一封信",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/7.%E8%87%B4%E8%87%AA%E7%A6%8F%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1/"
+    "uri": "/story/7.%E8%87%B4%E8%87%AA%E7%A6%8F%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -566,7 +566,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: X1-小说",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/x1-%E5%B0%8F%E8%AF%B4/"
+    "uri": "/categories/x1-%E5%B0%8F%E8%AF%B4/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -574,7 +574,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 书信",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E4%B9%A6%E4%BF%A1/"
+    "uri": "/tags/%E4%B9%A6%E4%BF%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -582,7 +582,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: B3-毕业设计",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"
+    "uri": "/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -590,7 +590,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: OneNet",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/onenet/"
+    "uri": "/tags/onenet/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r项目",
@@ -600,7 +600,7 @@ var relearn_searchindex = [
       "OneNet"
     ],
     "title": "毕业设计",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"
+    "uri": "/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -608,7 +608,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 课外拓展",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E8%AF%BE%E5%A4%96%E6%8B%93%E5%B1%95/"
+    "uri": "/categories/%E8%AF%BE%E5%A4%96%E6%8B%93%E5%B1%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r哲学",
@@ -616,7 +616,7 @@ var relearn_searchindex = [
     "description": "波若波多密的意思 波若：彼岸 波多：抵达（渡）\n意思是抵达彼岸\n波若波多密的方法 布施 财布施：用钱去帮助亲人或他人 法布施：如教师的职业，教授别人知识 无畏布施：例如医生的职业。救死扶伤；还有士兵。 持戒 律仪戒： 摄善法戒：行善戒。用权利与义务可以更好理解这个意思，权利告诉我们不可以做什么，做了就是侵犯别人的权利，义务就是告诉我们我们必须做什么。但也不要把这个意思理解死。 饶益有情戒：发现别人需要帮助并在自己力所能及的范围内去帮助别人。多方式帮助人或动物。 安忍 耐怨害忍：受到别人的伤害，诋毁等时要能忍。（这也是一种修行）需要辩证看待这件事 安受苦忍：人生是痛苦的，要能忍耐（又是一种修行） 谛察法忍：精研佛法 精进 勇猛精进，在佛学的修持上不畏惧、不退让、持之以恒",
     "tags": [],
     "title": "心经",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E5%BF%83%E7%BB%8F/"
+    "uri": "/class/11.%E5%93%B2%E5%AD%A6/%E5%BF%83%E7%BB%8F/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -626,7 +626,7 @@ var relearn_searchindex = [
       "哲学"
     ],
     "title": "哲学",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/"
+    "uri": "/class/11.%E5%93%B2%E5%AD%A6/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -634,7 +634,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 哲学",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%93%B2%E5%AD%A6/"
+    "uri": "/tags/%E5%93%B2%E5%AD%A6/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
@@ -644,7 +644,7 @@ var relearn_searchindex = [
       "AD设置"
     ],
     "title": "7.初次安装AD需要做哪些设置？",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/log/7.%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85ad%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E8%AE%BE%E7%BD%AE/"
+    "uri": "/log/7.%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85ad%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E8%AE%BE%E7%BD%AE/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -652,7 +652,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: AD设置",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/ad%E8%AE%BE%E7%BD%AE/"
+    "uri": "/tags/ad%E8%AE%BE%E7%BD%AE/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -662,7 +662,7 @@ var relearn_searchindex = [
       "农村"
     ],
     "title": "刘丰三郎",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/6.%E5%88%98%E4%B8%B0%E4%B8%89%E9%83%8E/index.mm/"
+    "uri": "/story/6.%E5%88%98%E4%B8%B0%E4%B8%89%E9%83%8E/index.mm/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -670,7 +670,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 农村",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%86%9C%E6%9D%91/"
+    "uri": "/tags/%E5%86%9C%E6%9D%91/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -678,7 +678,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 理论扩展",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E7%90%86%E8%AE%BA%E6%89%A9%E5%B1%95/"
+    "uri": "/categories/%E7%90%86%E8%AE%BA%E6%89%A9%E5%B1%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -686,7 +686,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 物联网",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E7%89%A9%E8%81%94%E7%BD%91/"
+    "uri": "/tags/%E7%89%A9%E8%81%94%E7%BD%91/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -696,7 +696,7 @@ var relearn_searchindex = [
       "物联网"
     ],
     "title": "物联网网络安全论",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/"
+    "uri": "/class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -704,7 +704,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: Cortex-A9微处理器",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/cortex-a9%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/"
+    "uri": "/tags/cortex-a9%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -712,7 +712,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: Linux操作系统",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"
+    "uri": "/tags/linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -720,7 +720,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 核心课程",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/"
+    "uri": "/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -728,7 +728,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 嵌入式",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"
+    "uri": "/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -740,7 +740,7 @@ var relearn_searchindex = [
       "Linux操作系统"
     ],
     "title": "嵌入式系统设计知识点",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"
+    "uri": "/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -748,7 +748,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: ESP8266",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/esp8266/"
+    "uri": "/tags/esp8266/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -756,7 +756,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: STM32",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/stm32/"
+    "uri": "/tags/stm32/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -769,7 +769,7 @@ var relearn_searchindex = [
       "ESP8266"
     ],
     "title": "物联网应用系统设计",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"
+    "uri": "/class/11.%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -777,7 +777,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 物联网应用系统设计",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"
+    "uri": "/tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -785,7 +785,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: B5-比赛",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/b5-%E6%AF%94%E8%B5%9B/"
+    "uri": "/categories/b5-%E6%AF%94%E8%B5%9B/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -793,7 +793,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: STM32学习",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/stm32%E5%AD%A6%E4%B9%A0/"
+    "uri": "/tags/stm32%E5%AD%A6%E4%B9%A0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -801,7 +801,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: X1-项目",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/x1-%E9%A1%B9%E7%9B%AE/"
+    "uri": "/categories/x1-%E9%A1%B9%E7%9B%AE/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r项目",
@@ -811,7 +811,7 @@ var relearn_searchindex = [
       "STM32学习"
     ],
     "title": "电赛",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/projects/%E7%94%B5%E8%B5%9B/"
+    "uri": "/projects/%E7%94%B5%E8%B5%9B/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
@@ -824,7 +824,7 @@ var relearn_searchindex = [
       "云端一体化"
     ],
     "title": "6.云端一体化的环境变量问题",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/"
+    "uri": "/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -832,7 +832,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: ArkTS",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/arkts/"
+    "uri": "/tags/arkts/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -840,7 +840,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: HarmonyOS",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/harmonyos/"
+    "uri": "/tags/harmonyos/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -848,7 +848,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: OpenHarmony",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/openharmony/"
+    "uri": "/tags/openharmony/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -856,7 +856,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 应用开发",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"
+    "uri": "/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -864,7 +864,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 云端一体化",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96/"
+    "uri": "/tags/%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
@@ -877,7 +877,7 @@ var relearn_searchindex = [
       "云端一体化"
     ],
     "title": "5.云端一体化如何查看云函数日志？",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/"
+    "uri": "/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -885,7 +885,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: J1-教师资格考试",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/j1-%E6%95%99%E5%B8%88%E8%B5%84%E6%A0%BC%E8%80%83%E8%AF%95/"
+    "uri": "/categories/j1-%E6%95%99%E5%B8%88%E8%B5%84%E6%A0%BC%E8%80%83%E8%AF%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -893,7 +893,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 教资",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E6%95%99%E8%B5%84/"
+    "uri": "/categories/%E6%95%99%E8%B5%84/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -901,7 +901,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 教资",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E6%95%99%E8%B5%84/"
+    "uri": "/tags/%E6%95%99%E8%B5%84/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r考试类",
@@ -911,7 +911,7 @@ var relearn_searchindex = [
       "教资"
     ],
     "title": "教资 小学",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/16.%E8%80%83%E8%AF%95%E7%B1%BB/%E6%95%99%E8%B5%84-%E5%B0%8F%E5%AD%A6/"
+    "uri": "/class/16.%E8%80%83%E8%AF%95%E7%B1%BB/%E6%95%99%E8%B5%84-%E5%B0%8F%E5%AD%A6/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -919,7 +919,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 考试",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%80%83%E8%AF%95/"
+    "uri": "/tags/%E8%80%83%E8%AF%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -929,7 +929,7 @@ var relearn_searchindex = [
       "考试"
     ],
     "title": "考试类",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/16.%E8%80%83%E8%AF%95%E7%B1%BB/"
+    "uri": "/class/16.%E8%80%83%E8%AF%95%E7%B1%BB/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -937,7 +937,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: W1-博客文章",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/w1-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"
+    "uri": "/categories/w1-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -945,7 +945,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: Z1-哲学",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/z1-%E5%93%B2%E5%AD%A6/"
+    "uri": "/categories/z1-%E5%93%B2%E5%AD%A6/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -953,7 +953,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 脑洞",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%84%91%E6%B4%9E/"
+    "uri": "/tags/%E8%84%91%E6%B4%9E/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r哲学",
@@ -963,7 +963,7 @@ var relearn_searchindex = [
       "脑洞"
     ],
     "title": "思想的边界",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%AF%AD%E8%A8%80%E6%98%AF%E6%B2%A1%E6%9C%89%E8%BE%B9%E7%95%8C%E7%9A%84/"
+    "uri": "/class/11.%E5%93%B2%E5%AD%A6/%E8%AF%AD%E8%A8%80%E6%98%AF%E6%B2%A1%E6%9C%89%E8%BE%B9%E7%95%8C%E7%9A%84/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -971,7 +971,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 费尔巴哈提纲",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/"
+    "uri": "/tags/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r哲学 \u003e \r费尔巴哈提纲",
@@ -981,7 +981,7 @@ var relearn_searchindex = [
       "费尔巴哈提纲"
     ],
     "title": "如何理解费尔巴哈提纲的主要含义？",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2%E7%9A%84%E4%B8%BB%E8%A6%81%E5%90%AB%E4%B9%89/"
+    "uri": "/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2%E7%9A%84%E4%B8%BB%E8%A6%81%E5%90%AB%E4%B9%89/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -989,7 +989,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: Y1-外语",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/y1-%E5%A4%96%E8%AF%AD/"
+    "uri": "/categories/y1-%E5%A4%96%E8%AF%AD/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -997,7 +997,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 外语",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%A4%96%E8%AF%AD/"
+    "uri": "/tags/%E5%A4%96%E8%AF%AD/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1005,7 +1005,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 外语类",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E5%A4%96%E8%AF%AD%E7%B1%BB/"
+    "uri": "/categories/%E5%A4%96%E8%AF%AD%E7%B1%BB/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1015,7 +1015,7 @@ var relearn_searchindex = [
       "外语"
     ],
     "title": "外语类",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/15.%E5%A4%96%E8%AF%AD%E7%B1%BB/"
+    "uri": "/class/15.%E5%A4%96%E8%AF%AD%E7%B1%BB/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r外语类",
@@ -1026,7 +1026,7 @@ var relearn_searchindex = [
       "英语"
     ],
     "title": "英语",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/15.%E5%A4%96%E8%AF%AD%E7%B1%BB/%E8%8B%B1%E8%AF%AD/"
+    "uri": "/class/15.%E5%A4%96%E8%AF%AD%E7%B1%BB/%E8%8B%B1%E8%AF%AD/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1034,7 +1034,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 英语",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%8B%B1%E8%AF%AD/"
+    "uri": "/tags/%E8%8B%B1%E8%AF%AD/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1042,7 +1042,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 英语词汇",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/"
+    "uri": "/tags/%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1054,7 +1054,7 @@ var relearn_searchindex = [
       "HarmonyOS"
     ],
     "title": "ArkTS",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/1.arkts/"
+    "uri": "/class/1.arkts/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1062,7 +1062,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: ArkTS语言",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/arkts%E8%AF%AD%E8%A8%80/"
+    "uri": "/tags/arkts%E8%AF%AD%E8%A8%80/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1070,7 +1070,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: B1-拓展笔记",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/b1-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/"
+    "uri": "/categories/b1-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1080,7 +1080,7 @@ var relearn_searchindex = [
       "电子电路"
     ],
     "title": "电子电路",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/"
+    "uri": "/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1088,7 +1088,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 电子电路",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/"
+    "uri": "/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1096,7 +1096,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 模电",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E6%A8%A1%E7%94%B5/"
+    "uri": "/tags/%E6%A8%A1%E7%94%B5/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r电子电路",
@@ -1106,7 +1106,7 @@ var relearn_searchindex = [
       "模电"
     ],
     "title": "模拟电子技术基础笔记",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/"
+    "uri": "/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -1116,7 +1116,7 @@ var relearn_searchindex = [
       "恐怖"
     ],
     "title": "草屋夫妇",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/5.%E7%99%BD%E9%AA%A8%E5%A4%AB%E5%A6%87/"
+    "uri": "/story/5.%E7%99%BD%E9%AA%A8%E5%A4%AB%E5%A6%87/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1124,7 +1124,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 恐怖",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E6%81%90%E6%80%96/"
+    "uri": "/tags/%E6%81%90%E6%80%96/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1132,7 +1132,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: Version",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/version/"
+    "uri": "/categories/version/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r关于",
@@ -1143,7 +1143,7 @@ var relearn_searchindex = [
       "网站优化"
     ],
     "title": "版本",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/about/%E7%89%88%E6%9C%AC/"
+    "uri": "/about/%E7%89%88%E6%9C%AC/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1151,7 +1151,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 网站版本",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E7%BD%91%E7%AB%99%E7%89%88%E6%9C%AC/"
+    "uri": "/tags/%E7%BD%91%E7%AB%99%E7%89%88%E6%9C%AC/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1159,7 +1159,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 网站优化",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96/"
+    "uri": "/tags/%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1167,7 +1167,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: B4-拓展笔记",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/b4-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/"
+    "uri": "/categories/b4-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r微信小程序",
@@ -1177,7 +1177,7 @@ var relearn_searchindex = [
       "微信"
     ],
     "title": "基础知识",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/10.%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
+    "uri": "/class/10.%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1185,7 +1185,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 微信",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%BE%AE%E4%BF%A1/"
+    "uri": "/tags/%E5%BE%AE%E4%BF%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1195,7 +1195,7 @@ var relearn_searchindex = [
       "微信小程序"
     ],
     "title": "微信小程序",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/10.%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"
+    "uri": "/class/10.%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1203,7 +1203,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 微信小程序",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"
+    "uri": "/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1211,7 +1211,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 后端",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%90%8E%E7%AB%AF/"
+    "uri": "/tags/%E5%90%8E%E7%AB%AF/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r项目",
@@ -1222,7 +1222,7 @@ var relearn_searchindex = [
       "后端"
     ],
     "title": "唛盟杯比赛详记",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/"
+    "uri": "/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
@@ -1234,7 +1234,7 @@ var relearn_searchindex = [
       "网站"
     ],
     "title": "8.如何用旧电脑搭建自己的服务器？",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/log/8.%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+    "uri": "/log/8.%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1242,7 +1242,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 技术分享",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"
+    "uri": "/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1250,7 +1250,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 网络",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E7%BD%91%E7%BB%9C/"
+    "uri": "/tags/%E7%BD%91%E7%BB%9C/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1258,7 +1258,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 网站",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E7%BD%91%E7%AB%99/"
+    "uri": "/tags/%E7%BD%91%E7%AB%99/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1266,7 +1266,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 庄子",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%BA%84%E5%AD%90/"
+    "uri": "/tags/%E5%BA%84%E5%AD%90/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r哲学",
@@ -1277,7 +1277,7 @@ var relearn_searchindex = [
       "哲学"
     ],
     "title": "庄子之道",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E5%BA%84%E5%AD%90%E4%B9%8B%E9%81%93/"
+    "uri": "/class/11.%E5%93%B2%E5%AD%A6/%E5%BA%84%E5%AD%90%E4%B9%8B%E9%81%93/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1285,7 +1285,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 费尔巴哈",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88/"
+    "uri": "/tags/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r哲学",
@@ -1297,7 +1297,7 @@ var relearn_searchindex = [
       "马克思主义哲学"
     ],
     "title": "费尔巴哈提纲",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/"
+    "uri": "/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1305,7 +1305,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 马克思主义哲学",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%93%B2%E5%AD%A6/"
+    "uri": "/tags/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%93%B2%E5%AD%A6/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1313,7 +1313,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 软件",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%BD%AF%E4%BB%B6/"
+    "uri": "/tags/%E8%BD%AF%E4%BB%B6/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r项目 \u003e \r贺青工程",
@@ -1324,7 +1324,7 @@ var relearn_searchindex = [
       "微信"
     ],
     "title": "志愿活动软件设计与开发",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/"
+    "uri": "/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r项目 \u003e \r贺青工程",
@@ -1335,7 +1335,7 @@ var relearn_searchindex = [
       "微信"
     ],
     "title": "验收问题",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/"
+    "uri": "/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E9%AA%8C%E6%94%B6%E6%96%B9%E6%A1%88/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1343,7 +1343,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: F1-复习资料",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/"
+    "uri": "/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r操作系统",
@@ -1353,7 +1353,7 @@ var relearn_searchindex = [
       "软硬件"
     ],
     "title": "Linux期末复习",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"
+    "uri": "/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1363,7 +1363,7 @@ var relearn_searchindex = [
       "操作系统"
     ],
     "title": "操作系统",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"
+    "uri": "/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1371,7 +1371,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 操作系统",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"
+    "uri": "/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1379,7 +1379,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 软硬件",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%BD%AF%E7%A1%AC%E4%BB%B6/"
+    "uri": "/tags/%E8%BD%AF%E7%A1%AC%E4%BB%B6/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1389,7 +1389,7 @@ var relearn_searchindex = [
       "AndroidStudio"
     ],
     "title": "AndroidStudio",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/"
+    "uri": "/class/2.androidstudio/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \rAndroidStudio",
@@ -1399,7 +1399,7 @@ var relearn_searchindex = [
       "安卓"
     ],
     "title": "AndroidStudio",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/androidstudio%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/"
+    "uri": "/class/2.androidstudio/androidstudio%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1407,7 +1407,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: AndroidStudio",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/androidstudio/"
+    "uri": "/tags/androidstudio/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1415,7 +1415,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: Z-专业课",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/"
+    "uri": "/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1423,7 +1423,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 安卓",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%AE%89%E5%8D%93/"
+    "uri": "/tags/%E5%AE%89%E5%8D%93/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1431,7 +1431,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: R-软硬件",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/r-%E8%BD%AF%E7%A1%AC%E4%BB%B6/"
+    "uri": "/tags/r-%E8%BD%AF%E7%A1%AC%E4%BB%B6/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1443,7 +1443,7 @@ var relearn_searchindex = [
       "Linux操作系统"
     ],
     "title": "计算机组成原理",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"
+    "uri": "/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1451,7 +1451,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 计算机组成原理",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"
+    "uri": "/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r计算机组成原理",
@@ -1461,7 +1461,7 @@ var relearn_searchindex = [
       "R-软硬件"
     ],
     "title": "计算机组成原理-复习",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/"
+    "uri": "/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%B0%8F%E7%9F%A5%E8%AF%86/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1469,7 +1469,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 物联网工程",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/"
+    "uri": "/tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \rArduino",
@@ -1479,7 +1479,7 @@ var relearn_searchindex = [
       "物联网工程"
     ],
     "title": "物联网控制-小知识",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/"
+    "uri": "/class/6.arduino/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \rEsp8266_WiFi",
@@ -1489,7 +1489,7 @@ var relearn_searchindex = [
       "物联网工程"
     ],
     "title": "物联网通信技术-小知识",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/"
+    "uri": "/class/4.esp8266_wifi/21%E7%BA%A7%E7%89%A9%E8%81%94%E7%BD%91%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%A4%8D%E4%B9%A0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1499,7 +1499,7 @@ var relearn_searchindex = [
       "单片机"
     ],
     "title": "51单片机",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/"
+    "uri": "/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1507,7 +1507,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: D1-51单片机",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/d1-51%E5%8D%95%E7%89%87%E6%9C%BA/"
+    "uri": "/categories/d1-51%E5%8D%95%E7%89%87%E6%9C%BA/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \r51单片机",
@@ -1518,7 +1518,7 @@ var relearn_searchindex = [
       "报错与解决"
     ],
     "title": "pretues+kiel5仿真软件配合使用时需要注意的地方",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/"
+    "uri": "/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1526,7 +1526,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 报错与解决",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E6%8A%A5%E9%94%99%E4%B8%8E%E8%A7%A3%E5%86%B3/"
+    "uri": "/tags/%E6%8A%A5%E9%94%99%E4%B8%8E%E8%A7%A3%E5%86%B3/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1534,7 +1534,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 代码烧录",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/"
+    "uri": "/tags/%E4%BB%A3%E7%A0%81%E7%83%A7%E5%BD%95/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1542,7 +1542,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 单片机",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"
+    "uri": "/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1550,7 +1550,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 爱情",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E7%88%B1%E6%83%85/"
+    "uri": "/tags/%E7%88%B1%E6%83%85/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -1561,7 +1561,7 @@ var relearn_searchindex = [
       "爱情"
     ],
     "title": "君绘语",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/"
+    "uri": "/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1569,7 +1569,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 校园",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E6%A0%A1%E5%9B%AD/"
+    "uri": "/tags/%E6%A0%A1%E5%9B%AD/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -1579,7 +1579,7 @@ var relearn_searchindex = [
       "悬疑"
     ],
     "title": "白唐战绛",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/2.%E7%99%BD%E5%94%90%E6%88%98%E7%BB%9B/"
+    "uri": "/story/2.%E7%99%BD%E5%94%90%E6%88%98%E7%BB%9B/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1587,7 +1587,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 悬疑",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E6%82%AC%E7%96%91/"
+    "uri": "/tags/%E6%82%AC%E7%96%91/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -1598,7 +1598,7 @@ var relearn_searchindex = [
       "民风"
     ],
     "title": "阿牛和阿花的爱情故事",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/1.%E9%98%BF%E7%89%9B%E9%98%BF%E8%8A%B1/"
+    "uri": "/story/1.%E9%98%BF%E7%89%9B%E9%98%BF%E8%8A%B1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1606,7 +1606,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 民风",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E6%B0%91%E9%A3%8E/"
+    "uri": "/tags/%E6%B0%91%E9%A3%8E/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r小说",
@@ -1616,7 +1616,7 @@ var relearn_searchindex = [
       "时空旅行"
     ],
     "title": "时空国度-木尸王朝",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/story/3.%E6%AE%8B%E6%9C%A8%E5%90%BC/"
+    "uri": "/story/3.%E6%AE%8B%E6%9C%A8%E5%90%BC/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1624,7 +1624,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 时空旅行",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E6%97%B6%E7%A9%BA%E6%97%85%E8%A1%8C/"
+    "uri": "/tags/%E6%97%B6%E7%A9%BA%E6%97%85%E8%A1%8C/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \rAndroidStudio",
@@ -1634,7 +1634,7 @@ var relearn_searchindex = [
       "安卓"
     ],
     "title": "AndroidStudio笔记",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/%E7%AC%94%E8%AE%B0/"
+    "uri": "/class/2.androidstudio/%E7%AC%94%E8%AE%B0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1642,7 +1642,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: B2-笔记",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/b2-%E7%AC%94%E8%AE%B0/"
+    "uri": "/categories/b2-%E7%AC%94%E8%AE%B0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
@@ -1653,7 +1653,7 @@ var relearn_searchindex = [
       "前端"
     ],
     "title": "9.唛盟杯项目下载与启动",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/"
+    "uri": "/log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1661,7 +1661,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: 一体化开发",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/%E4%B8%80%E4%BD%93%E5%8C%96%E5%BC%80%E5%8F%91/"
+    "uri": "/categories/%E4%B8%80%E4%BD%93%E5%8C%96%E5%BC%80%E5%8F%91/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1669,7 +1669,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: C1-CC2530",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/c1-cc2530/"
+    "uri": "/categories/c1-cc2530/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1677,7 +1677,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: D1-点灯实验",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/d1-%E7%82%B9%E7%81%AF%E5%AE%9E%E9%AA%8C/"
+    "uri": "/categories/d1-%E7%82%B9%E7%81%AF%E5%AE%9E%E9%AA%8C/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \rCC2530_ZigBee",
@@ -1687,7 +1687,7 @@ var relearn_searchindex = [
       "硬件"
     ],
     "title": "实验2 IO端口输出实验",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/"
+    "uri": "/class/5.cc2530_zigbee/experiment2/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1695,7 +1695,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 硬件",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E7%A1%AC%E4%BB%B6/"
+    "uri": "/tags/%E7%A1%AC%E4%BB%B6/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程 \u003e \rAndroidStudio",
@@ -1706,7 +1706,7 @@ var relearn_searchindex = [
       "UI设计"
     ],
     "title": "2-1.Toolbar工具栏",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/toolbar/"
+    "uri": "/class/2.androidstudio/toolbar/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r类别",
@@ -1714,7 +1714,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "类别 :: B3-课堂笔记",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"
+    "uri": "/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1722,7 +1722,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: UI设计",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/ui%E8%AE%BE%E8%AE%A1/"
+    "uri": "/tags/ui%E8%AE%BE%E8%AE%A1/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1732,7 +1732,7 @@ var relearn_searchindex = [
       "Arduino开发"
     ],
     "title": "Arduino",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/6.arduino/"
+    "uri": "/class/6.arduino/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1740,7 +1740,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: Arduino开发",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/arduino%E5%BC%80%E5%8F%91/"
+    "uri": "/tags/arduino%E5%BC%80%E5%8F%91/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1750,7 +1750,7 @@ var relearn_searchindex = [
       "STM32_RFID"
     ],
     "title": "CC2530_ZigBee",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/"
+    "uri": "/class/5.cc2530_zigbee/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1760,7 +1760,7 @@ var relearn_searchindex = [
       "Esp8266_WiFi"
     ],
     "title": "Esp8266_WiFi",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/4.esp8266_wifi/"
+    "uri": "/class/4.esp8266_wifi/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1768,7 +1768,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: Esp8266_WiFi",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/esp8266_wifi/"
+    "uri": "/tags/esp8266_wifi/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1778,7 +1778,7 @@ var relearn_searchindex = [
       "STM32_RFID"
     ],
     "title": "STM32_RFID",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/3.stm32_rfid/"
+    "uri": "/class/3.stm32_rfid/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1786,7 +1786,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: STM32_RFID",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/stm32_rfid/"
+    "uri": "/tags/stm32_rfid/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1794,7 +1794,7 @@ var relearn_searchindex = [
     "description": "test code，test Code",
     "tags": [],
     "title": "19.test",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/19.test/"
+    "uri": "/class/19.test/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1804,7 +1804,7 @@ var relearn_searchindex = [
       "设计模式（C++）"
     ],
     "title": "19.设计模式（C++）",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/"
+    "uri": "/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
@@ -1812,7 +1812,7 @@ var relearn_searchindex = [
     "description": "",
     "tags": [],
     "title": "标签 :: 设计模式（C++）",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc\u0026#43;\u0026#43;/"
+    "uri": "/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc\u0026#43;\u0026#43;/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1822,6 +1822,6 @@ var relearn_searchindex = [
       "物联网工程"
     ],
     "title": "物联网工程",
-    "uri": "/Wungmeisilong/hugoBlog_pub.git/class/7.%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/"
+    "uri": "/class/7.%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B/"
   }
 ]

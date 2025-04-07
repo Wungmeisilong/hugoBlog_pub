@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>3.导读 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/</link>
+    <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/</link>
     <description>书籍推荐 《C++ Premier》 《C++ Programming Language》 《Effective Modern C++》 《Efficient C++》 《The C++ standard library》 《STL C++》 《STL源码剖析》 《算法+数据结构=程序》 “网站CPLusPlus” “网站CppReference” “网站gcc.gnu” 学习路线</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
