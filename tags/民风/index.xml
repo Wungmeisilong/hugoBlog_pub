@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>民风 :: 标签 :: Maloudown</title>
-    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/tags/%E6%B0%91%E9%A3%8E/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E6%B0%91%E9%A3%8E/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 21 Dec 2023 00:40:45 +0800</lastBuildDate>
-    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/tags/%E6%B0%91%E9%A3%8E/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E6%B0%91%E9%A3%8E/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>阿牛和阿花的爱情故事</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/story/1.%E9%98%BF%E7%89%9B%E9%98%BF%E8%8A%B1/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/1.%E9%98%BF%E7%89%9B%E9%98%BF%E8%8A%B1/</link>
       <pubDate>Thu, 21 Dec 2023 00:40:45 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/story/1.%E9%98%BF%E7%89%9B%E9%98%BF%E8%8A%B1/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/1.%E9%98%BF%E7%89%9B%E9%98%BF%E8%8A%B1/</guid>
       <description>牛村与花村仅隔一片红树林，深秋里，满山的红叶铺天盖地，牛村的村尾是个好地方，常聚着城里来的人，就是离阿牛家远了些。&#xA;“嘿！ 阿牛。你要老婆不……不，只要你开……开……金口……”阿牛理着枯萎的草，寻声一看，是那跑腿的阿光，阿光无力地扶着杆，面红耳赤。</description>
     </item>
   </channel>

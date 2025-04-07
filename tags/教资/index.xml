@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>教资 :: 标签 :: Maloudown</title>
-    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/tags/%E6%95%99%E8%B5%84/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E6%95%99%E8%B5%84/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 05 Mar 2024 17:33:07 +0800</lastBuildDate>
-    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/tags/%E6%95%99%E8%B5%84/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E6%95%99%E8%B5%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>教资 小学</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/16.%E8%80%83%E8%AF%95%E7%B1%BB/%E6%95%99%E8%B5%84-%E5%B0%8F%E5%AD%A6/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/16.%E8%80%83%E8%AF%95%E7%B1%BB/%E6%95%99%E8%B5%84-%E5%B0%8F%E5%AD%A6/</link>
       <pubDate>Tue, 05 Mar 2024 17:33:07 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/16.%E8%80%83%E8%AF%95%E7%B1%BB/%E6%95%99%E8%B5%84-%E5%B0%8F%E5%AD%A6/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/16.%E8%80%83%E8%AF%95%E7%B1%BB/%E6%95%99%E8%B5%84-%E5%B0%8F%E5%AD%A6/</guid>
       <description>科目一：&#xA;教育观与职业道德&#xA;教育与社会的发展 点击查看流程图&#xA;考题 简述教育对生产力的关系（制约作用）？&#xA;教育与人的发展 点击查看流程图&#xA;教育制度 理解记住教育制度的概念，尤其是狭义教育制度； 理解并记住建立学制的依据 理解教育制度的发展 理解我国教育制度的沿革 理解并记住现代教育的改革和发展 理解并记住义务教育的特性 教育制度概念 1.教育制度的概念</description>
     </item>
   </channel>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
-  <head>
+  <head><script src="/Wungmeisilong/hugoBlog_pub.git/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Wungmeisilong/hugoBlog_pub.git/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
@@ -10,7 +10,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="实验2 IO端口输出实验 :: Maloudown">
     <meta name="twitter:description" content="实验2 IO端口输出实验 1、实验要求： 利用实验箱的基础板，实现八盏灯的点亮，下面是八盏灯的位置图： 在实际中我们可能没有实验箱，往往需要自己做一个八盏灯的板子，这个时候了解本次实验挤出实验板的八盏灯连接原理是很重要的，了解原理后你就可以自己做出自己的LED板子，并用cc2530控制它。">
-    <meta property="og:url" content="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/">
+    <meta property="og:url" content="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/">
     <meta property="og:site_name" content="Maloudown">
     <meta property="og:title" content="实验2 IO端口输出实验 :: Maloudown">
     <meta property="og:description" content="实验2 IO端口输出实验 1、实验要求： 利用实验箱的基础板，实现八盏灯的点亮，下面是八盏灯的位置图： 在实际中我们可能没有实验箱，往往需要自己做一个八盏灯的板子，这个时候了解本次实验挤出实验板的八盏灯连接原理是很重要的，了解原理后你就可以自己做出自己的LED板子，并用cc2530控制它。">
@@ -23,29 +23,29 @@
     <meta itemprop="wordCount" content="1227">
     <meta itemprop="keywords" content="硬件">
     <title>实验2 IO端口输出实验 :: Maloudown</title>
-    <link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/" rel="canonical" type="text/html" title="实验2 IO端口输出实验 :: Maloudown">
+    <link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/" rel="canonical" type="text/html" title="实验2 IO端口输出实验 :: Maloudown">
     <link href="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/index.xml" rel="alternate" type="application/rss+xml" title="实验2 IO端口输出实验 :: Maloudown">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743933522" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743933522" rel="stylesheet"></noscript>
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/perfect-scrollbar/perfect-scrollbar.min.css?1743933522" rel="stylesheet">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/theme.min.css?1743933522" rel="stylesheet">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/format-print.min.css?1743933522" rel="stylesheet" id="R-format-style">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/auto-complete/auto-complete.min.css?1743933522" rel="stylesheet">
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/auto-complete/auto-complete.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.stemmer.support.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.multi.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.zh.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/search.min.js?1743933522" defer></script>
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743998626" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743998626" rel="stylesheet"></noscript>
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/perfect-scrollbar/perfect-scrollbar.min.css?1743998626" rel="stylesheet">
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/theme.css?1743998626" rel="stylesheet">
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/format-print.css?1743998626" rel="stylesheet" id="R-format-style">
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/auto-complete/auto-complete.min.css?1743998626" rel="stylesheet">
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/auto-complete/auto-complete.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.stemmer.support.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.multi.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.zh.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/search.js?1743998626" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = `.min`;
+      window.relearn.min = ``;
       window.relearn.path='\/class\/5.cc2530_zigbee\/experiment2\/';
       window.relearn.relBasePath='..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..\/..\/..';
-      window.relearn.absBaseUri='https:\/\/github.com\/Wungmeisilong\/hugoBlog_pub.git';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/Wungmeisilong\/hugoBlog_pub.git';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="../../../Wungmeisilong/hugoBlog_pub.git/searchindex.zh.js?1743933522";
+      window.relearn.index_js_url="../../../Wungmeisilong/hugoBlog_pub.git/searchindex.zh.js?1743998626";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -249,58 +249,58 @@
 <h3 id="实验2-io端口输出实验">实验2 IO端口输出实验</h3>
 <p><strong>1、实验要求：</strong>
 利用实验箱的基础板，实现八盏灯的点亮，下面是八盏灯的位置图：
-<a href="#R-image-6825daa36d5edc8b3b9b7893884c013f" class="lightbox-link"><img alt="八盏灯" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E5%9F%BA%E7%A1%80%E6%9D%BF.JPG" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6825daa36d5edc8b3b9b7893884c013f"><img alt="八盏灯" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E5%9F%BA%E7%A1%80%E6%9D%BF.JPG"></a>
+<a href="#R-image-e56a3cc9ac6c8aae0e5b7dd686cbcfa2" class="lightbox-link"><img alt="八盏灯" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E5%9F%BA%E7%A1%80%E6%9D%BF.JPG" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e56a3cc9ac6c8aae0e5b7dd686cbcfa2"><img alt="八盏灯" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E5%9F%BA%E7%A1%80%E6%9D%BF.JPG"></a>
 在实际中我们可能没有实验箱，往往需要自己做一个八盏灯的板子，这个时候了解本次实验挤出实验板的八盏灯连接原理是很重要的，了解原理后你就可以自己做出自己的LED板子，并用<strong>cc2530</strong>控制它。</p>
 <p><strong>2、LED灯驱动芯片</strong>
 由于CC2530 单片机端口驱动能力有限，所以我们可以用<strong>ULN2003</strong>芯片做驱动，但使用uln2003需要使用到八个端口，为了不浪费端口，我们可以使用<strong>74HC595</strong>，该芯片只需要用到三个端口就可以控制八盏灯的亮灭，下面提供两块芯片的原理图：
-<a href="#R-image-e25e4473ceb655484a72cc733b7cc3ba" class="lightbox-link"><img alt="原理图" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E5%8E%9F%E7%90%86%E5%9B%BE.JPG" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e25e4473ceb655484a72cc733b7cc3ba"><img alt="原理图" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E5%8E%9F%E7%90%86%E5%9B%BE.JPG"></a>
+<a href="#R-image-75f97e884053d8babb8cdb4d63f4c378" class="lightbox-link"><img alt="原理图" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E5%8E%9F%E7%90%86%E5%9B%BE.JPG" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-75f97e884053d8babb8cdb4d63f4c378"><img alt="原理图" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E5%8E%9F%E7%90%86%E5%9B%BE.JPG"></a>
 如果你想用<strong>ULN2003</strong>还请查看相关手册，此处对<strong>74HC595</strong>进行详细说明。
 74HC595 是 8 位输出锁存移位寄存器，数据输入由三个引脚组合控制，分别是数据输入引脚 SER、数据输入控制引脚 SRCK 和数据输出锁存引脚 RCK
 SER 引脚上的数据在 SRCK 引脚的上升沿信号保存到 QA 引脚，同时 QA 位上的数据移位到 QB位，QB 位的数据移位到 QC 位……，依次类推，所有数据向后串行移动一位，QH 位的数据被送到QH’位。所有位的数据在 RCK 引脚的上升沿信号被所存到输出端。
-<a href="#R-image-4949eabe78cce41a9422fb21d5c56eac" class="lightbox-link"><img alt="74HC595" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/74hc595.jpg" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4949eabe78cce41a9422fb21d5c56eac"><img alt="74HC595" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/74hc595.jpg"></a>
+<a href="#R-image-a0f2b786ee60747ff95f744e48d69bc1" class="lightbox-link"><img alt="74HC595" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/74hc595.jpg" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a0f2b786ee60747ff95f744e48d69bc1"><img alt="74HC595" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/74hc595.jpg"></a>
 一下是我的个人理解：
 这里我们用输入数据<strong>1001 0101</strong>，使第1、3、5、8盏灯亮（假设高电平有效）为例解释说明，首先，实际上数据输入74HC595是串行输入，所以可以数据输入时是在打开SER端口后，按照从高位到低位依次输入数据<strong>1001 0101</strong>，如上图的下面所示；接着打开SRCK，先把最高位1输入数据寄存器低位b0，接着输入次高位的0,通过0把1挤到b1，以此类推；接着再打开RCK显示灯的亮灭。</p>
 <p><strong>3、IO端口输出控制</strong>
 要使用CC2530的IO端口，我们需要对<strong>PxDIR</strong>、<strong>PxSEL</strong>、<strong>Px</strong>进行设置，PxDIR用来控制端口的输入输出模式，<strong>1</strong>表示<strong>输出模式</strong>，SEL为<strong>0</strong>时，表示<strong>通用IO端口</strong>，详细参照下表：
-<a href="#R-image-ec5edc41dea7facb1a450e101e747643" class="lightbox-link"><img alt="IO" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/IO%E8%A1%A8.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ec5edc41dea7facb1a450e101e747643"><img alt="IO" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/IO%E8%A1%A8.png"></a>
+<a href="#R-image-d95ca4a029c499cc2cf041594eadb238" class="lightbox-link"><img alt="IO" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/IO%E8%A1%A8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d95ca4a029c499cc2cf041594eadb238"><img alt="IO" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/IO%E8%A1%A8.png"></a>
 而这里的x可以取0、1、2，其实就是端口P0、P1、P2的意思,在端口下设8个端口0<del>7，例如P0_1,但是端口2只有0</del>4可用;</p>
 <p>下面是一个详细的例子：
 当I/OP1_0~P1_7 各I/O端口输出高低电平时，设置方法如表 1.2所示：
-<a href="#R-image-8cec82443e81aec7b4813a491d4fc2ad" class="lightbox-link"><img alt="例子" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E4%BE%8B%E5%AD%90.jpg" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8cec82443e81aec7b4813a491d4fc2ad"><img alt="例子" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E4%BE%8B%E5%AD%90.jpg"></a></p>
+<a href="#R-image-b32abb8b2197cb236607c2423ed9f5ca" class="lightbox-link"><img alt="例子" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E4%BE%8B%E5%AD%90.jpg" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b32abb8b2197cb236607c2423ed9f5ca"><img alt="例子" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/%E4%BE%8B%E5%AD%90.jpg"></a></p>
 <p>了解以上知识后我们就可以写工程代码了。</p>
-<p><div class="tab-panel" data-tab-group="02930d0e5dd60d80300b3f83eb6c2ec1">
+<p><div class="tab-panel" data-tab-group="e440a05f096976bc238707a0eb635643">
   <div class="tab-nav">
     <div class="tab-nav-title">.xml文件</div>
     <button
       data-tab-item="printfledhfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: blue ;" tabindex="-1"
-      onclick="switchTab('02930d0e5dd60d80300b3f83eb6c2ec1','printfledhfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('e440a05f096976bc238707a0eb635643','printfledhfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> PrintfLED.h</span>
     </button>
     <button
       data-tab-item="delayehfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;"
-      onclick="switchTab('02930d0e5dd60d80300b3f83eb6c2ec1','delayehfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('e440a05f096976bc238707a0eb635643','delayehfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Delaye.h</span>
     </button>
     <button
       data-tab-item="initialhfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue ;"
-      onclick="switchTab('02930d0e5dd60d80300b3f83eb6c2ec1','initialhfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('e440a05f096976bc238707a0eb635643','initialhfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Initial.h</span>
     </button>
     <button
       data-tab-item="全码"
       class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: green ;"
-      onclick="switchTab('02930d0e5dd60d80300b3f83eb6c2ec1','全码')"
+      onclick="switchTab('e440a05f096976bc238707a0eb635643','全码')"
     >
       <span class="tab-nav-text">全码</span>
     </button>
@@ -436,8 +436,8 @@ SER 引脚上的数据在 SRCK 引脚的上升沿信号保存到 QA 引脚，同
         </div>
       </main>
     </div>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/clipboard/clipboard.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/perfect-scrollbar/perfect-scrollbar.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/theme.min.js?1743933522" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/clipboard/clipboard.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/perfect-scrollbar/perfect-scrollbar.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/theme.js?1743998626" defer></script>
   </body>
 </html>

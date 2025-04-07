@@ -2,115 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>17.C加加编程 :: Maloudown</title>
-    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/</link>
     <description>15.计算机图形学OpenGL与C++理解GLFW和GLAD GLFW（） GLFW是一个开源的、跨平台的库，用于创建窗口、处理输入和渲染图形。它提供了一种简单的方式来与OpenGL进行交互，使得开发图形应用程序变得更加容易。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 01 Apr 2025 13:27:41 +0800</lastBuildDate>
-    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>15.计算机图形学OpenGL与C&#43;&#43;</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/</link>
       <pubDate>Tue, 01 Apr 2025 13:27:41 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/</guid>
       <description>理解GLFW和GLAD GLFW（） GLFW是一个开源的、跨平台的库，用于创建窗口、处理输入和渲染图形。它提供了一种简单的方式来与OpenGL进行交互，使得开发图形应用程序变得更加容易。</description>
     </item>
     <item>
       <title>14.新标准C加加程序设计</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Sun, 03 Nov 2024 09:12:17 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</guid>
       <description>内存分区模型 内存代码区的意义：程序代码放在不同的区域，有程序自动管理的代码，也有程序员管理的代码，灵活管理；&#xA;一、程序执行前&#xA;1.代码区 存放二进制指令，就是代码，特点：</description>
     </item>
     <item>
       <title>13.从C到C&#43;&#43;</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/</link>
       <pubDate>Thu, 31 Oct 2024 10:41:29 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/13.%E4%BB%8Ec%E5%88%B0c%E5%8A%A0%E5%8A%A0/</guid>
       <description>指针 指针的声明： 数组 数组的范围必须是常量表达式，同时如果需要变化的范围可以做如下定义： 2.字符串文字量&#xA;指的是用 ““括起来的字符串。</description>
     </item>
     <item>
       <title>12.其他库的介绍</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/</link>
       <pubDate>Tue, 29 Oct 2024 20:29:47 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/</guid>
       <description>为什么需要哈希函数？ 哈希函数在计算机科学中扮演着重要的角色，其主要作用包括：&#xA;数据检索：哈希函数可以将键（key）映射到哈希表中的一个位置，从而快速检索数据。这是哈希表（如 C++ 中的 std::unordered_map 和 std::unordered_set）的基础。</description>
     </item>
     <item>
       <title>11.STL库学习之适配器</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/</link>
       <pubDate>Tue, 29 Oct 2024 12:23:37 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/11.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8/</guid>
       <description>整体框架的回顾 存在多种适配器-adapters 一个人理解，要将适配器理解透彻，我们需要先从别的组件入手，这里以vector容器为例，我们都知道该容器需要迭代器，也就是一些智能指针来确定容器的头尾，以及内容位置，目的是方便后续的算法的怎删改查等操作，假设算法现在要做拿到位置8的数据，那么vector的指针要怎么移动呢？已知指针移动上，vector是随机访问指针，也就是前后都可以跑，而这个操作实际上是迭代器的其中一个内容，而这一内容就需要一个适配器去做适配。</description>
     </item>
     <item>
       <title>10.STL库学习之仿函数</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/</link>
       <pubDate>Tue, 29 Oct 2024 10:49:31 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/</guid>
       <description>仿函数的个人理解 仿函数是行为类似函数的一个类，比较明显的特征是仿函数重载了operate()，比如你写了一个struct，并在里面重载了operate()，当调用这个类的()时就会返回响应的数据。</description>
     </item>
     <item>
       <title>9.STL库学习之迭代器与算法</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/</link>
       <pubDate>Sat, 26 Oct 2024 00:29:39 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/9.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95/</guid>
       <description>标准库常用算法 迭代器 迭代器-的分类 struct input_iterator_tag {}； struct output_iterator_tag {}; struct forward_iterator_tag:public input_iterator_tag{}; struct bidirectional_iterator_tag:public forward_iterator_tag{}; struct random_access_tag:public bidirectional_iterator_tag {};&#xD;以上5中迭代器的继承关系，如下图所示。 1.Input Iterator（输入迭代器）： 输入迭代器是最基本的迭代器类型，支持单向遍历，只能向前移动。</description>
     </item>
     <item>
       <title>8.STL库学习之容器</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/</link>
       <pubDate>Sat, 26 Oct 2024 00:29:01 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/8.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%B9%E5%99%A8/</guid>
       <description>list vector deque deque的迭代器 deque实现中间插入值的做法：如果欲插入值在最前端（最尾端）调用push_front()（push_back()）,否则借助insert_aux()迭代器，实现如果欲插入位置靠近前端使用，就让前端的数据往前挪，否则往后挪。</description>
     </item>
     <item>
       <title>7.STL库学习之分配器</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/7.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%88%86%E9%85%8D%E5%99%A8/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/7.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%88%86%E9%85%8D%E5%99%A8/</link>
       <pubDate>Wed, 23 Oct 2024 11:48:43 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/7.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%88%86%E9%85%8D%E5%99%A8/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/7.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%88%86%E9%85%8D%E5%99%A8/</guid>
       <description>分配器源代码位置：xmemory.h 除了array和vector外，其他容器的适配器必须是一个类， 附件</description>
     </item>
     <item>
       <title>6.STL库学习之筑基概要</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/</link>
       <pubDate>Wed, 23 Oct 2024 11:04:53 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/</guid>
       <description>STL程序源代码位置 了解自身编译器STL程序源代码位置。&#xA;OOP 与 GP 面向对象编程（OOP）：&#xA;面向对象编程是一种编程范式，它将数据和处理这些数据的方法封装在对象中。这种方法强调了数据和函数的捆绑，使得代码更加模块化，易于理解和维护。对象可以包含属性（数据）和方法（函数），它们一起工作来模拟现实世界的行为。</description>
     </item>
     <item>
       <title>5.STL库之观其大略</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 21 Oct 2024 12:11:35 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>一下主要讲STL组件的测试用例，特别是容器的测试 学习资料 CPLusPlus.com CppReference.com gcc.gnu.org 《STL源码剖析》 STL六大组件 容器-Containers，申请内存用于存储数据 分配器-Allocators，配合容器分配内存 算法- Algorithms，处理某一数据的最优办法 迭代器- Iterators，指针的泛型，本质与指针类似 适配器- Adapters， 仿函数-Functors，类似函数。 六者的关系</description>
     </item>
     <item>
       <title>4.C&#43;&#43;2.0特性的使用</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Thu, 17 Oct 2024 13:47:59 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/4.%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%802.0%E7%89%B9%E6%80%A7%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>VS 2022的设置 首先你可以先用下面的代码测试使用可以执行：&#xA;#include &lt;iostream&gt; void printTypes() { } template &lt;typename T, typename... U&gt; void printTypes(const T&amp; t, const U&amp;... u) { std::cout &lt;&lt; t &lt;&lt; std::endl; printTypes(u...); } int main() { printTypes(&#39;a&#39;, 1.5, &#39;b&#39;); }&#xD;如果报错了，如typename…未定义，那么请你按照如下步骤操作，</description>
     </item>
     <item>
       <title>3.导读</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/</link>
       <pubDate>Wed, 16 Oct 2024 17:47:34 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/3.%E5%AF%BC%E8%AF%BB/</guid>
       <description>书籍推荐 《C++ Premier》 《C++ Programming Language》 《Effective Modern C++》 《Efficient C++》 《The C++ standard library》 《STL C++》 《STL源码剖析》 《算法+数据结构=程序》 “网站CPLusPlus” “网站CppReference” “网站gcc.gnu” 学习路线</description>
     </item>
     <item>
       <title>2.组合与继承</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/</link>
       <pubDate>Wed, 16 Oct 2024 13:43:29 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/2.%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/</guid>
       <description>类与类的三种关系 Composition-复合 以我个人的理解，复合就是一个类中包含有另外一个类，使用到另一个类的内容。复合的类他们的构造和析构函数运行次序是，构造函数有内到外依次运行，析构函数则相反。可以使用下图表示这种关系</description>
     </item>
     <item>
       <title>1.代码编写规范</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/</link>
       <pubDate>Tue, 15 Oct 2024 19:54:02 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/</guid>
       <description>如何写一个标准的.h文件 以下内容来自B站。&#xA;接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：&#xA;class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator += (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };&#xD;构造函数的特性 这一点需要关注下面的代码：</description>
     </item>
   </channel>

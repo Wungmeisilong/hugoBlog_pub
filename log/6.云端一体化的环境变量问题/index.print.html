@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
-  <head>
+  <head><script src="/Wungmeisilong/hugoBlog_pub.git/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Wungmeisilong/hugoBlog_pub.git/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
@@ -12,7 +12,7 @@
     <meta name="twitter:title" content="6.云端一体化的环境变量问题 :: Maloudown">
     <meta name="twitter:description" content="参数context 与环境变量有关，不管是系统还是用户自定义的都用这个来获取，获取方式：context.env
 先部署云函数到远端，然后在去远端添加环境变量，然后在本地运行虚拟机查看。 负载均衡的四种方式">
-    <meta property="og:url" content="https://github.com/Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/">
+    <meta property="og:url" content="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/">
     <meta property="og:site_name" content="Maloudown">
     <meta property="og:title" content="6.云端一体化的环境变量问题 :: Maloudown">
     <meta property="og:description" content="参数context 与环境变量有关，不管是系统还是用户自定义的都用这个来获取，获取方式：context.env
@@ -27,29 +27,29 @@
     <meta itemprop="wordCount" content="238">
     <meta itemprop="keywords" content="ArkTS,OpenHarmony,HarmonyOS,云端一体化">
     <title>6.云端一体化的环境变量问题 :: Maloudown</title>
-    <link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/" rel="canonical" type="text/html" title="6.云端一体化的环境变量问题 :: Maloudown">
+    <link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/" rel="canonical" type="text/html" title="6.云端一体化的环境变量问题 :: Maloudown">
     <link href="../../Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/index.xml" rel="alternate" type="application/rss+xml" title="6.云端一体化的环境变量问题 :: Maloudown">
-    <link href="../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743933522" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743933522" rel="stylesheet"></noscript>
-    <link href="../../Wungmeisilong/hugoBlog_pub.git/css/perfect-scrollbar/perfect-scrollbar.min.css?1743933522" rel="stylesheet">
-    <link href="../../Wungmeisilong/hugoBlog_pub.git/css/theme.min.css?1743933522" rel="stylesheet">
-    <link href="../../Wungmeisilong/hugoBlog_pub.git/css/format-print.min.css?1743933522" rel="stylesheet" id="R-format-style">
-    <link href="../../Wungmeisilong/hugoBlog_pub.git/css/auto-complete/auto-complete.min.css?1743933522" rel="stylesheet">
-    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/auto-complete/auto-complete.min.js?1743933522" defer></script>
-    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.min.js?1743933522" defer></script>
-    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.stemmer.support.min.js?1743933522" defer></script>
-    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.multi.min.js?1743933522" defer></script>
-    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.zh.min.js?1743933522" defer></script>
-    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/search.min.js?1743933522" defer></script>
+    <link href="../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743998626" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743998626" rel="stylesheet"></noscript>
+    <link href="../../Wungmeisilong/hugoBlog_pub.git/css/perfect-scrollbar/perfect-scrollbar.min.css?1743998626" rel="stylesheet">
+    <link href="../../Wungmeisilong/hugoBlog_pub.git/css/theme.css?1743998626" rel="stylesheet">
+    <link href="../../Wungmeisilong/hugoBlog_pub.git/css/format-print.css?1743998626" rel="stylesheet" id="R-format-style">
+    <link href="../../Wungmeisilong/hugoBlog_pub.git/css/auto-complete/auto-complete.min.css?1743998626" rel="stylesheet">
+    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/auto-complete/auto-complete.min.js?1743998626" defer></script>
+    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.min.js?1743998626" defer></script>
+    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.stemmer.support.min.js?1743998626" defer></script>
+    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.multi.min.js?1743998626" defer></script>
+    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.zh.min.js?1743998626" defer></script>
+    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/search.js?1743998626" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = `.min`;
+      window.relearn.min = ``;
       window.relearn.path='\/log\/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98\/';
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..\/..\/..';
-      window.relearn.absBaseUri='https:\/\/github.com\/Wungmeisilong\/hugoBlog_pub.git';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/Wungmeisilong\/hugoBlog_pub.git';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="../../Wungmeisilong/hugoBlog_pub.git/searchindex.zh.js?1743933522";
+      window.relearn.index_js_url="../../Wungmeisilong/hugoBlog_pub.git/searchindex.zh.js?1743998626";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -262,8 +262,8 @@
 </ul>
 <p>熔断</p>
 <p>设置一定的条件，满足条件后会执行熔断。熔断后云函数不在提供服务。</p>
-<p><a href="#R-image-43d3c26ebbb766416e2683756fad9937" class="lightbox-link"><img alt="e" class="lazy lightbox figure-image" loading="lazy" src="../../Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/log.JPG" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-43d3c26ebbb766416e2683756fad9937"><img alt="e" class="lazy lightbox lightbox-image" loading="lazy" src="../../Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/log.JPG"></a></p>
+<p><a href="#R-image-23f2e6d7c094b3a5a63972139e26340b" class="lightbox-link"><img alt="e" class="lazy lightbox figure-image" loading="lazy" src="../../Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/log.JPG" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-23f2e6d7c094b3a5a63972139e26340b"><img alt="e" class="lazy lightbox lightbox-image" loading="lazy" src="../../Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/log.JPG"></a></p>
 <div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
   <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
   <ul class="box-content attachments-files">
@@ -283,8 +283,8 @@
         </div>
       </main>
     </div>
-    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/clipboard/clipboard.min.js?1743933522" defer></script>
-    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/perfect-scrollbar/perfect-scrollbar.min.js?1743933522" defer></script>
-    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/theme.min.js?1743933522" defer></script>
+    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/clipboard/clipboard.min.js?1743998626" defer></script>
+    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/perfect-scrollbar/perfect-scrollbar.min.js?1743998626" defer></script>
+    <script src="../../Wungmeisilong/hugoBlog_pub.git/js/theme.js?1743998626" defer></script>
   </body>
 </html>

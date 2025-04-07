@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github :: 标签 :: Maloudown</title>
-    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/tags/github/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/github/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 06 Apr 2025 09:01:29 +0800</lastBuildDate>
-    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2.git与github的使用</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Sun, 06 Apr 2025 09:01:29 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>网页链接 原文章链接&#xA;1、使用git commi -m “……“时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了这个错误，在网上查了解决办法，有的说创建新的分支可以解决，但我的不行。</description>
     </item>
   </channel>

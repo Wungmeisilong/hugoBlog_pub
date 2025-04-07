@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Z1-哲学 :: 类别 :: Maloudown</title>
-    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/categories/z1-%E5%93%B2%E5%AD%A6/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/z1-%E5%93%B2%E5%AD%A6/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 03 Mar 2024 13:05:33 +0800</lastBuildDate>
-    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/categories/z1-%E5%93%B2%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/z1-%E5%93%B2%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>思想的边界</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%AF%AD%E8%A8%80%E6%98%AF%E6%B2%A1%E6%9C%89%E8%BE%B9%E7%95%8C%E7%9A%84/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%AF%AD%E8%A8%80%E6%98%AF%E6%B2%A1%E6%9C%89%E8%BE%B9%E7%95%8C%E7%9A%84/</link>
       <pubDate>Sun, 03 Mar 2024 13:05:33 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%AF%AD%E8%A8%80%E6%98%AF%E6%B2%A1%E6%9C%89%E8%BE%B9%E7%95%8C%E7%9A%84/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%AF%AD%E8%A8%80%E6%98%AF%E6%B2%A1%E6%9C%89%E8%BE%B9%E7%95%8C%E7%9A%84/</guid>
       <description>序言 我前几天看见篇文章说现在的一些科学是建立几句假设之上的，这几句假设就像悬空寺下的几个柱子，撑起了几百年的悬空寺，甚至在以后更长的时间里起立不到。这是让我比较惊讶的地方。科学是需要建立在假设之上并被证实的学科，一说到科学我们能想到严谨，严密等等，但在哲学上我认为不需要向科学那样的严谨，哲学对于我这样水平的人而言是天马行空的乐园，在一开始我觉得讲出来的东西是给人理解的，那么你讲的首先就要符合常识，违背基本常识的东西很难让人有兴趣或去理解，但假设往往不被我们常识说束缚，正是假设不被常识所束缚，它有了更多的可能，所以我在建立自己的“悬空寺”的时候，也需要这种不被束缚的假设，为此我会尽量讲人话，其实我也没有不讲人话的能力。</description>
     </item>
     <item>
       <title>如何理解费尔巴哈提纲的主要含义？</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2%E7%9A%84%E4%B8%BB%E8%A6%81%E5%90%AB%E4%B9%89/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2%E7%9A%84%E4%B8%BB%E8%A6%81%E5%90%AB%E4%B9%89/</link>
       <pubDate>Sun, 03 Mar 2024 12:54:20 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2%E7%9A%84%E4%B8%BB%E8%A6%81%E5%90%AB%E4%B9%89/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2%E7%9A%84%E4%B8%BB%E8%A6%81%E5%90%AB%E4%B9%89/</guid>
       <description>费尔巴哈的唯物主义： 费尔巴哈试图将宗教世界归结于其世俗基础，但他没有意识到世俗基础本身也存在问题。他试图通过直观的感性来理解世界，但没有将人的感性活动理解为实践的活动。费尔巴哈的唯物主义停留在了对感性客体的直观理解上，没有深入到人的实践活动和社会关系中去。</description>
     </item>
     <item>
       <title>庄子之道</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E5%BA%84%E5%AD%90%E4%B9%8B%E9%81%93/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E5%BA%84%E5%AD%90%E4%B9%8B%E9%81%93/</link>
       <pubDate>Mon, 22 Jan 2024 13:31:59 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E5%BA%84%E5%AD%90%E4%B9%8B%E9%81%93/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E5%BA%84%E5%AD%90%E4%B9%8B%E9%81%93/</guid>
       <description>今天通过王德峰老师的视频课来进一步的了解《庄子》的哲学之道，推荐看曹楚基注释的《庄子》。&#xA;行无为而知避害，避害就是避开人为，像自然灾害不在道家讨论的范围内。避害的方法有两个:</description>
     </item>
     <item>
       <title>费尔巴哈提纲</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/</link>
       <pubDate>Mon, 22 Jan 2024 11:52:35 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/11.%E5%93%B2%E5%AD%A6/%E8%B4%B9%E5%B0%94%E5%B7%B4%E5%93%88%E6%8F%90%E7%BA%B2/</guid>
       <description>一&#xA;从前的一切唯物主义（包括费尔巴哈的唯物主义）的主要缺点是：对对象、现实、感性，只是从客体的或者直观的形式去理解，而不是把它们当作感性的人的活动，当作实践去理解，不是从主体方面去理解。因此，和唯物主义相反，能动的方面却被唯心主义抽象地发展了，当然，唯心主义是不知道现实的、感性的活动本身的。费尔巴哈想要研究跟思想客体确实不同的感性客体：但是他没有把人的活动本身理解为对象性的［gegenständliche］活动。因此，他在《基督教的本质》中仅仅把理论的活动看作是真正人的活动，而对于实践则只是从它的卑污的犹太人的表现形式去理解和确定。因此，他不了解“革命的”、“实践批判的”活动的意义。</description>
     </item>
   </channel>

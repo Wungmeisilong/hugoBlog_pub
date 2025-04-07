@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
-  <head>
+  <head><script src="/Wungmeisilong/hugoBlog_pub.git/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Wungmeisilong/hugoBlog_pub.git/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
@@ -10,7 +10,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="10.STL库学习之仿函数 :: Maloudown">
     <meta name="twitter:description" content="仿函数的个人理解 仿函数是行为类似函数的一个类，比较明显的特征是仿函数重载了operate()，比如你写了一个struct，并在里面重载了operate()，当调用这个类的()时就会返回响应的数据。">
-    <meta property="og:url" content="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/">
+    <meta property="og:url" content="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/">
     <meta property="og:site_name" content="Maloudown">
     <meta property="og:title" content="10.STL库学习之仿函数 :: Maloudown">
     <meta property="og:description" content="仿函数的个人理解 仿函数是行为类似函数的一个类，比较明显的特征是仿函数重载了operate()，比如你写了一个struct，并在里面重载了operate()，当调用这个类的()时就会返回响应的数据。">
@@ -22,29 +22,29 @@
     <meta itemprop="dateModified" content="2024-10-29T10:49:31+08:00">
     <meta itemprop="wordCount" content="1574">
     <title>10.STL库学习之仿函数 :: Maloudown</title>
-    <link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/" rel="canonical" type="text/html" title="10.STL库学习之仿函数 :: Maloudown">
+    <link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/" rel="canonical" type="text/html" title="10.STL库学习之仿函数 :: Maloudown">
     <link href="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/index.xml" rel="alternate" type="application/rss+xml" title="10.STL库学习之仿函数 :: Maloudown">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743933522" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743933522" rel="stylesheet"></noscript>
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/perfect-scrollbar/perfect-scrollbar.min.css?1743933522" rel="stylesheet">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/theme.min.css?1743933522" rel="stylesheet">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/format-print.min.css?1743933522" rel="stylesheet" id="R-format-style">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/auto-complete/auto-complete.min.css?1743933522" rel="stylesheet">
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/auto-complete/auto-complete.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.stemmer.support.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.multi.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.zh.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/search.min.js?1743933522" defer></script>
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743998626" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743998626" rel="stylesheet"></noscript>
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/perfect-scrollbar/perfect-scrollbar.min.css?1743998626" rel="stylesheet">
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/theme.css?1743998626" rel="stylesheet">
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/format-print.css?1743998626" rel="stylesheet" id="R-format-style">
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/auto-complete/auto-complete.min.css?1743998626" rel="stylesheet">
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/auto-complete/auto-complete.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.stemmer.support.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.multi.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.zh.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/search.js?1743998626" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = `.min`;
+      window.relearn.min = ``;
       window.relearn.path='\/class\/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B\/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0\/';
       window.relearn.relBasePath='..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..\/..\/..';
-      window.relearn.absBaseUri='https:\/\/github.com\/Wungmeisilong\/hugoBlog_pub.git';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/Wungmeisilong\/hugoBlog_pub.git';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="../../../Wungmeisilong/hugoBlog_pub.git/searchindex.zh.js?1743933522";
+      window.relearn.index_js_url="../../../Wungmeisilong/hugoBlog_pub.git/searchindex.zh.js?1743998626";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -299,8 +299,8 @@
 <p>在这个例子中，<code>Max</code> 是一个仿函数，它重载了 <code>operator()</code> 来比较两个整数并返回最大值。然后，我们可以像调用函数一样调用 <code>max_functor</code> 对象。</p>
 <h2 id="仿函数内部一般设计什么">仿函数内部一般设计什么？</h2>
 <p>仿函数一般重载operate()后，会在内部设计运算操作，如算数、逻辑、相对关系等运算。如下图所示。
-<a href="#R-image-5237103e9f46aa19e923f8f1c97b2ce8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5237103e9f46aa19e923f8f1c97b2ce8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image.png"></a>
+<a href="#R-image-46bd76cbd82847b04176acb1ef8bfb22" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-46bd76cbd82847b04176acb1ef8bfb22"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image.png"></a>
 从上面一张图也可以发现，plus,minus,logical_and,equal_to,less类都集成了binary_function，该类的作用是什么呢？</p>
 <p><code>std::binary_function</code> 的主要作用是：</p>
 <ol>
@@ -335,11 +335,11 @@
 <p>函数对象如 <code>std::plus</code>, <code>std::minus</code>, <code>std::logical_and</code>, <code>std::equal_to</code>, <code>std::less</code> 等都继承自 <code>std::binary_function</code>。这意味着这些函数对象都定义了 <code>first_argument_type</code>, <code>second_argument_type</code>, 和 <code>result_type</code> 这三个类型别名，它们分别表示函数对象接受的第一个参数类型、第二个参数类型和返回值类型。</p>
 <p>关于 <code>std::binary_function</code>的具体细节在适配器一节会重点讲到。</p>
 <p>下图是是否继承binary_function的一些示例，如果不继承会怎么样呢？以我个人的理解，继承会让仿函数的扩展性更高，它将来可以扩展出更好的功能。如下图所示。
-<a href="#R-image-9485162eb917381f12a9747939f13c16" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9485162eb917381f12a9747939f13c16"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-1.png"></a></p>
+<a href="#R-image-63e89c13b8ceaa2c7fe044cdf02133ae" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-63e89c13b8ceaa2c7fe044cdf02133ae"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-1.png"></a></p>
 <p>除了上面讲到的binary_function还有unary_function，该类是针对单个变量的操作，比如取反，加加。如下图：
-<a href="#R-image-f5b2a1fbabd8b5fecefed6d473df8c12" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f5b2a1fbabd8b5fecefed6d473df8c12"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-2.png"></a></p>
+<a href="#R-image-29ac2a7c41f582ac74b9d7569cf27a18" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-29ac2a7c41f582ac74b9d7569cf27a18"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/image-2.png"></a></p>
 <p>关于binary_function的细节此处先不介绍，下一节将着重说明。</p>
 <p>对于仿函数，鲜明的特点就是对operate()做了重载，这样的类创建出来的对象叫仿函数对象，具有函数的行为。如果要对重载做更多操作需要结合一些仿函数适配器，比如相面讲到的binary_function和unary_funtion。</p>
 <div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
@@ -355,8 +355,8 @@
         </div>
       </main>
     </div>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/clipboard/clipboard.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/perfect-scrollbar/perfect-scrollbar.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/theme.min.js?1743933522" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/clipboard/clipboard.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/perfect-scrollbar/perfect-scrollbar.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/theme.js?1743998626" defer></script>
   </body>
 </html>

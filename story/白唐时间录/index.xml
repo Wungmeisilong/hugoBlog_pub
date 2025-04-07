@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>白唐时间录 :: Maloudown</title>
-    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/story/%E7%99%BD%E5%94%90%E6%97%B6%E9%97%B4%E5%BD%95/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/%E7%99%BD%E5%94%90%E6%97%B6%E9%97%B4%E5%BD%95/</link>
     <description>序章 在这个看似平凡的现代世界中，时间的秘密潜藏于暗处，由几个古老家族和秘密组织共同守护。几世纪以来，他们不断研究揭示时间的奥秘，但也深知滥用这种力量将导致无法挽回的后果。在表面平静的生活背后，却隐藏着无数阴谋与斗争。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/story/%E7%99%BD%E5%94%90%E6%97%B6%E9%97%B4%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/%E7%99%BD%E5%94%90%E6%97%B6%E9%97%B4%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
-  <head>
+  <head><script src="/Wungmeisilong/hugoBlog_pub.git/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Wungmeisilong/hugoBlog_pub.git/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
@@ -10,7 +10,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="5.STL库之观其大略 :: Maloudown">
     <meta name="twitter:description" content="一下主要讲STL组件的测试用例，特别是容器的测试 学习资料 CPLusPlus.com CppReference.com gcc.gnu.org 《STL源码剖析》 STL六大组件 容器-Containers，申请内存用于存储数据 分配器-Allocators，配合容器分配内存 算法- Algorithms，处理某一数据的最优办法 迭代器- Iterators，指针的泛型，本质与指针类似 适配器- Adapters， 仿函数-Functors，类似函数。 六者的关系">
-    <meta property="og:url" content="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <meta property="og:url" content="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
     <meta property="og:site_name" content="Maloudown">
     <meta property="og:title" content="5.STL库之观其大略 :: Maloudown">
     <meta property="og:description" content="一下主要讲STL组件的测试用例，特别是容器的测试 学习资料 CPLusPlus.com CppReference.com gcc.gnu.org 《STL源码剖析》 STL六大组件 容器-Containers，申请内存用于存储数据 分配器-Allocators，配合容器分配内存 算法- Algorithms，处理某一数据的最优办法 迭代器- Iterators，指针的泛型，本质与指针类似 适配器- Adapters， 仿函数-Functors，类似函数。 六者的关系">
@@ -23,29 +23,29 @@
     <meta itemprop="wordCount" content="10079">
     <meta itemprop="keywords" content="C&#43;&#43;,STL库">
     <title>5.STL库之观其大略 :: Maloudown</title>
-    <link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="canonical" type="text/html" title="5.STL库之观其大略 :: Maloudown">
+    <link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="canonical" type="text/html" title="5.STL库之观其大略 :: Maloudown">
     <link href="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="alternate" type="application/rss+xml" title="5.STL库之观其大略 :: Maloudown">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743933522" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743933522" rel="stylesheet"></noscript>
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/perfect-scrollbar/perfect-scrollbar.min.css?1743933522" rel="stylesheet">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/theme.min.css?1743933522" rel="stylesheet">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/format-print.min.css?1743933522" rel="stylesheet" id="R-format-style">
-    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/auto-complete/auto-complete.min.css?1743933522" rel="stylesheet">
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/auto-complete/auto-complete.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.stemmer.support.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.multi.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.zh.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/search.min.js?1743933522" defer></script>
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743998626" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1743998626" rel="stylesheet"></noscript>
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/perfect-scrollbar/perfect-scrollbar.min.css?1743998626" rel="stylesheet">
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/theme.css?1743998626" rel="stylesheet">
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/format-print.css?1743998626" rel="stylesheet" id="R-format-style">
+    <link href="../../../Wungmeisilong/hugoBlog_pub.git/css/auto-complete/auto-complete.min.css?1743998626" rel="stylesheet">
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/auto-complete/auto-complete.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.stemmer.support.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.multi.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.zh.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/search.js?1743998626" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = `.min`;
+      window.relearn.min = ``;
       window.relearn.path='\/class\/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B\/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/';
       window.relearn.relBasePath='..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..\/..\/..';
-      window.relearn.absBaseUri='https:\/\/github.com\/Wungmeisilong\/hugoBlog_pub.git';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/Wungmeisilong\/hugoBlog_pub.git';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="../../../Wungmeisilong/hugoBlog_pub.git/searchindex.zh.js?1743933522";
+      window.relearn.index_js_url="../../../Wungmeisilong/hugoBlog_pub.git/searchindex.zh.js?1743998626";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -285,38 +285,38 @@
 <li>仿函数-Functors，类似函数。</li>
 </ul>
 <p>六者的关系</p>
-<p><a href="#R-image-df2b42b937280cc440693bd37b7c62c8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-df2b42b937280cc440693bd37b7c62c8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png"></a></p>
+<p><a href="#R-image-52aa4763c67c54984f205c65e779dad0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-52aa4763c67c54984f205c65e779dad0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png"></a></p>
 <h2 id="begin和end">begin()和end()</h2>
 <p>以迭代器为例，begin()指向迭代器的首地址，而end()指向迭代器尾地址的下一位，可以用前闭后开区间来表示，即**[ )**</p>
 <h2 id="容器的分类">容器的分类</h2>
-<p><a href="#R-image-e12be86ce719d9ed24ca8c3c9640c6c9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e12be86ce719d9ed24ca8c3c9640c6c9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-1.png"></a>
-<a href="#R-image-f96ec686645c58563467f2f9c8582d4f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f96ec686645c58563467f2f9c8582d4f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-2.png"></a></p>
+<p><a href="#R-image-a58ab33a4a2c0bb2109653a793e60a9a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a58ab33a4a2c0bb2109653a793e60a9a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-1.png"></a>
+<a href="#R-image-60464ef86a84da25c2e479b143f07019" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-60464ef86a84da25c2e479b143f07019"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-2.png"></a></p>
 <h2 id="数组容器的使用">数组容器的使用</h2>
 <h3 id="array-的使用">array 的使用</h3>
-<div class="tab-panel" data-tab-group="aa2432ea92d5b81dc406f71e139d9d11">
+<div class="tab-panel" data-tab-group="c71837013aa5c3beb40d0914a4d83caa">
   <div class="tab-nav">
     <div class="tab-nav-title">示例1</div>
     <button
       data-tab-item="h文件"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('aa2432ea92d5b81dc406f71e139d9d11','h文件')"
+      onclick="switchTab('c71837013aa5c3beb40d0914a4d83caa','h文件')"
     >
       <span class="tab-nav-text">.h文件</span>
     </button>
     <button
       data-tab-item="testcode"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('aa2432ea92d5b81dc406f71e139d9d11','testcode')"
+      onclick="switchTab('c71837013aa5c3beb40d0914a4d83caa','testcode')"
     >
       <span class="tab-nav-text">testCode</span>
     </button>
     <button
       data-tab-item="结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('aa2432ea92d5b81dc406f71e139d9d11','结果')"
+      onclick="switchTab('c71837013aa5c3beb40d0914a4d83caa','结果')"
     >
       <span class="tab-nav-text">结果</span>
     </button>
@@ -425,8 +425,8 @@
       data-tab-item="结果"
       class="tab-content tab-panel-style cstyle initial">
       <div class="tab-content-text">
-<p><a href="#R-image-8da79abbe904035baa6975676b799795" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8da79abbe904035baa6975676b799795"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-3.png"></a></p>
+<p><a href="#R-image-9cd7876c53d8ce8e85f1d3573fd9f60c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9cd7876c53d8ce8e85f1d3573fd9f60c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-3.png"></a></p>
       </div>
     </div>
   </div>
@@ -434,20 +434,20 @@
 <h3 id="vector-的使用">vector 的使用</h3>
 <p>vector是一种向后自动以2次方增加的内存的容器，一般使用push_back向后添加数据；</p>
 <p>vector也有一定的缺点，假设我只需要5个内存空间，但是vector分配的是8个，剩下的3个后面如果不使用就会浪费。</p>
-<div class="tab-panel" data-tab-group="993ffe8623a5c8f7c85fb1e2ada0e321">
+<div class="tab-panel" data-tab-group="7626457dfc91c9f180d0eecd3048150e">
   <div class="tab-nav">
     <div class="tab-nav-title">示例2</div>
     <button
       data-tab-item="代码"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('993ffe8623a5c8f7c85fb1e2ada0e321','代码')"
+      onclick="switchTab('7626457dfc91c9f180d0eecd3048150e','代码')"
     >
       <span class="tab-nav-text">代码</span>
     </button>
     <button
       data-tab-item="结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('993ffe8623a5c8f7c85fb1e2ada0e321','结果')"
+      onclick="switchTab('7626457dfc91c9f180d0eecd3048150e','结果')"
     >
       <span class="tab-nav-text">结果</span>
     </button>
@@ -526,8 +526,8 @@
       data-tab-item="结果"
       class="tab-content tab-panel-style cstyle initial">
       <div class="tab-content-text">
-<p><a href="#R-image-5210954055ed5f6ec1528ebc936323ed" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-4.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5210954055ed5f6ec1528ebc936323ed"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-4.png"></a></p>
+<p><a href="#R-image-7543cd12ca7c81b281ce68e909a4bf7f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7543cd12ca7c81b281ce68e909a4bf7f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-4.png"></a></p>
       </div>
     </div>
   </div>
@@ -555,20 +555,20 @@
 <li>没有跳跃访问：与数组或 std::vector 不同，std::list 没有提供直接跳到任意位置的能力。在数组中，你可以通过简单的指针算术来访问任意位置的元素，而在 std::list 中，你必须遍历链表。</li>
 </ul>
 <p><strong>测试代码：</strong></p>
-<div class="tab-panel" data-tab-group="490cd1a6864e242d683c56ffe3e16102">
+<div class="tab-panel" data-tab-group="fd786e22efd6e968ad79df9f956f3535">
   <div class="tab-nav">
     <div class="tab-nav-title">示例3</div>
     <button
       data-tab-item="代码"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('490cd1a6864e242d683c56ffe3e16102','代码')"
+      onclick="switchTab('fd786e22efd6e968ad79df9f956f3535','代码')"
     >
       <span class="tab-nav-text">代码</span>
     </button>
     <button
       data-tab-item="结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('490cd1a6864e242d683c56ffe3e16102','结果')"
+      onclick="switchTab('fd786e22efd6e968ad79df9f956f3535','结果')"
     >
       <span class="tab-nav-text">结果</span>
     </button>
@@ -674,20 +674,20 @@ std::list 的优点在于它的灵活性和高效的插入/删除操作，这些
 <li>单向遍历：如果你的应用只需要从链表的前端开始遍历元素，那么 std::forward_list 可以提供良好的性能。</li>
 </ul>
 <p><strong>测试代码</strong></p>
-<div class="tab-panel" data-tab-group="c4b6d6c711fe14df0cfdb1d68fbc8636">
+<div class="tab-panel" data-tab-group="621412bce6d7862f4aadabcb77ef376c">
   <div class="tab-nav">
     <div class="tab-nav-title">示例3</div>
     <button
       data-tab-item="代码"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('c4b6d6c711fe14df0cfdb1d68fbc8636','代码')"
+      onclick="switchTab('621412bce6d7862f4aadabcb77ef376c','代码')"
     >
       <span class="tab-nav-text">代码</span>
     </button>
     <button
       data-tab-item="结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('c4b6d6c711fe14df0cfdb1d68fbc8636','结果')"
+      onclick="switchTab('621412bce6d7862f4aadabcb77ef376c','结果')"
     >
       <span class="tab-nav-text">结果</span>
     </button>
@@ -777,20 +777,20 @@ std::forward_list 专为高效的前端插入和删除操作设计，std::forwar
 <h3 id="链表容器-slist">链表容器-slist</h3>
 <p>slist容器与forward_list容器一样，只是slis容器存在于ext\slist头文件中。</p>
 <p><strong>测试代码：</strong></p>
-<div class="tab-panel" data-tab-group="d699ed41c83a71bbd3379c1115be7905">
+<div class="tab-panel" data-tab-group="f275417fb1282569afcb3234ffea1f92">
   <div class="tab-nav">
     <div class="tab-nav-title">示例3</div>
     <button
       data-tab-item="代码"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('d699ed41c83a71bbd3379c1115be7905','代码')"
+      onclick="switchTab('f275417fb1282569afcb3234ffea1f92','代码')"
     >
       <span class="tab-nav-text">代码</span>
     </button>
     <button
       data-tab-item="结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('d699ed41c83a71bbd3379c1115be7905','结果')"
+      onclick="switchTab('f275417fb1282569afcb3234ffea1f92','结果')"
     >
       <span class="tab-nav-text">结果</span>
     </button>
@@ -873,8 +873,8 @@ std::forward_list 专为高效的前端插入和删除操作设计，std::forwar
   </div>
 </div>
 <h2 id="双向容器-deque">双向容器-deque</h2>
-<p><a href="#R-image-875c3a54301a690395117a411d042f89" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-5.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-875c3a54301a690395117a411d042f89"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-5.png"></a></p>
+<p><a href="#R-image-0c85bafce493c02c4ceaabb790b34ddb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0c85bafce493c02c4ceaabb790b34ddb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-5.png"></a></p>
 <p>std::deque（双端队列）是一种容器，它允许在序列的前端和后端快速插入和删除元素。尽管从概念图上看，
 std::deque 似乎是一个连续的存储空间，但实际上它并不是连续的。std::deque 的实现通常是由一个或多个固定大小的连续内存块
 （通常称为“节点”或“块”）组成的，这些块通过指针连接在一起。</p>
@@ -889,20 +889,20 @@ std::deque 似乎是一个连续的存储空间，但实际上它并不是连续
 <p>总的来说，std::deque 是一个灵活且高效的容器，适用于需要在序列的两端进行频繁插入和删除操作的场景。它的设计既考虑了性能，
 也考虑了内存使用效率。</p>
 <p><strong>测试代码：</strong></p>
-<div class="tab-panel" data-tab-group="faf7c1fedef977986bdfbfdffd8266af">
+<div class="tab-panel" data-tab-group="338f5ede1e54850ed2ff437a5234655d">
   <div class="tab-nav">
     <div class="tab-nav-title">示例3</div>
     <button
       data-tab-item="代码"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('faf7c1fedef977986bdfbfdffd8266af','代码')"
+      onclick="switchTab('338f5ede1e54850ed2ff437a5234655d','代码')"
     >
       <span class="tab-nav-text">代码</span>
     </button>
     <button
       data-tab-item="结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('faf7c1fedef977986bdfbfdffd8266af','结果')"
+      onclick="switchTab('338f5ede1e54850ed2ff437a5234655d','结果')"
     >
       <span class="tab-nav-text">结果</span>
     </button>
@@ -1023,27 +1023,27 @@ std::deque 似乎是一个连续的存储空间，但实际上它并不是连续
 <li>使用场景：如果你需要一个简单的后进先出或先进先出的数据结构，std::stack 或 std::queue 可能更适合。如果你需要一个能够在两端快速操作且支持随机访问的容器，std::deque 是更好的选择。</li>
 </ul>
 <p><strong>测试代码：</strong></p>
-<div class="tab-panel" data-tab-group="4f93b978c3ad89fb9bc8673493aa7883">
+<div class="tab-panel" data-tab-group="84c9d5301c2facb6dc7441bc709671e3">
   <div class="tab-nav">
     <div class="tab-nav-title">示例4</div>
     <button
       data-tab-item="stack代码"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('4f93b978c3ad89fb9bc8673493aa7883','stack代码')"
+      onclick="switchTab('84c9d5301c2facb6dc7441bc709671e3','stack代码')"
     >
       <span class="tab-nav-text">stack代码</span>
     </button>
     <button
       data-tab-item="queue代码"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('4f93b978c3ad89fb9bc8673493aa7883','queue代码')"
+      onclick="switchTab('84c9d5301c2facb6dc7441bc709671e3','queue代码')"
     >
       <span class="tab-nav-text">queue代码</span>
     </button>
     <button
       data-tab-item="结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('4f93b978c3ad89fb9bc8673493aa7883','结果')"
+      onclick="switchTab('84c9d5301c2facb6dc7441bc709671e3','结果')"
     >
       <span class="tab-nav-text">结果</span>
     </button>
@@ -1155,27 +1155,27 @@ std::deque 似乎是一个连续的存储空间，但实际上它并不是连续
 <h2 id="红黑树-multiset容器">红黑树-multiset容器</h2>
 <p>multiset容器结构类似二叉树，准确说是红黑树，这种结构的的查找会快很多，但是插入则会耗费一定时间，这些时间都花费在了排序上。</p>
 <p><strong>测试代码：</strong></p>
-<div class="tab-panel" data-tab-group="4f4aa782e32407b030380d66118bd43c">
+<div class="tab-panel" data-tab-group="597c83dde8d95657a1746dd1de68f096">
   <div class="tab-nav">
     <div class="tab-nav-title">示例8</div>
     <button
       data-tab-item="multiset代码"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('4f4aa782e32407b030380d66118bd43c','multiset代码')"
+      onclick="switchTab('597c83dde8d95657a1746dd1de68f096','multiset代码')"
     >
       <span class="tab-nav-text">multiset代码</span>
     </button>
     <button
       data-tab-item="multimap代码"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('4f4aa782e32407b030380d66118bd43c','multimap代码')"
+      onclick="switchTab('597c83dde8d95657a1746dd1de68f096','multimap代码')"
     >
       <span class="tab-nav-text">multimap代码</span>
     </button>
     <button
       data-tab-item="结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('4f4aa782e32407b030380d66118bd43c','结果')"
+      onclick="switchTab('597c83dde8d95657a1746dd1de68f096','结果')"
     >
       <span class="tab-nav-text">结果</span>
     </button>
@@ -1333,8 +1333,8 @@ std::deque 似乎是一个连续的存储空间，但实际上它并不是连续
 负载因子影响哈希表的性能。较高的负载因子可能导致更多的哈希冲突，从而增加链表的长度，降低性能。
 当负载因子超过一个预设的最大值时，哈希表可能会进行重新哈希（rehashing），即增加桶的数量并重新分配所有元素到新的桶中。</p>
 <p><strong>概念图说明：</strong></p>
-<p><a href="#R-image-ae7011db4acf1e45c963cfec8b096ea6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-6.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ae7011db4acf1e45c963cfec8b096ea6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-6.png"></a></p>
+<p><a href="#R-image-69ad1730fb80744154428af96f7e67b1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-69ad1730fb80744154428af96f7e67b1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-6.png"></a></p>
 <ul>
 <li>桶：哈希表被分为多个桶，每个桶可以存储一个链表的头部指针。</li>
 <li>指针：在 std::unordered_map 中，每个指针指向一个链表节点，该节点包含一个键值对。在 std::unordered_set 中，每个指针直接指向存储的元素。</li>
@@ -1345,34 +1345,34 @@ std::deque 似乎是一个连续的存储空间，但实际上它并不是连续
 动态调整：这种动态调整机制使得 std::unordered_map 和 std::unordered_set 能够根据元素数量的变化自动调整大小，以保持操作的性能。
 通过这种结构，std::unordered_map 和 std::unordered_set 能够在大多数情况下提供快速的访问和修改操作，但需要注意，极端情况下（如所有元素哈希到同一个桶中）性能可能会退化到 O(n)。</p>
 <p><strong>测试代码：</strong></p>
-<div class="tab-panel" data-tab-group="5f505c1205ea137adcc89c2351daffeb">
+<div class="tab-panel" data-tab-group="e3a0364d563ef401702b3983df7a130f">
   <div class="tab-nav">
     <div class="tab-nav-title">示例9</div>
     <button
       data-tab-item="unordere_multiset代码"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('5f505c1205ea137adcc89c2351daffeb','unordere_multiset代码')"
+      onclick="switchTab('e3a0364d563ef401702b3983df7a130f','unordere_multiset代码')"
     >
       <span class="tab-nav-text">unordere_multiset代码</span>
     </button>
     <button
       data-tab-item="unordere_multiset结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('5f505c1205ea137adcc89c2351daffeb','unordere_multiset结果')"
+      onclick="switchTab('e3a0364d563ef401702b3983df7a130f','unordere_multiset结果')"
     >
       <span class="tab-nav-text">unordere_multiset结果</span>
     </button>
     <button
       data-tab-item="unordere_multimap代码"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('5f505c1205ea137adcc89c2351daffeb','unordere_multimap代码')"
+      onclick="switchTab('e3a0364d563ef401702b3983df7a130f','unordere_multimap代码')"
     >
       <span class="tab-nav-text">unordere_multimap代码</span>
     </button>
     <button
       data-tab-item="unordere_multimap结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('5f505c1205ea137adcc89c2351daffeb','unordere_multimap结果')"
+      onclick="switchTab('e3a0364d563ef401702b3983df7a130f','unordere_multimap结果')"
     >
       <span class="tab-nav-text">unordere_multimap结果</span>
     </button>
@@ -1545,27 +1545,27 @@ std::deque 似乎是一个连续的存储空间，但实际上它并不是连续
 </div>
 <h2 id="set和map容器">set和map容器</h2>
 <p>测试代码：</p>
-<div class="tab-panel" data-tab-group="5d19b3b2d5d26454dd71a63f1c017541">
+<div class="tab-panel" data-tab-group="c1ef3579ba0238a639967079f3d36274">
   <div class="tab-nav">
     <div class="tab-nav-title">示例10</div>
     <button
       data-tab-item="set"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('5d19b3b2d5d26454dd71a63f1c017541','set')"
+      onclick="switchTab('c1ef3579ba0238a639967079f3d36274','set')"
     >
       <span class="tab-nav-text">set</span>
     </button>
     <button
       data-tab-item="map"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('5d19b3b2d5d26454dd71a63f1c017541','map')"
+      onclick="switchTab('c1ef3579ba0238a639967079f3d36274','map')"
     >
       <span class="tab-nav-text">map</span>
     </button>
     <button
       data-tab-item="结果"
       class="tab-nav-button tab-panel-style cstyle initial"
-      onclick="switchTab('5d19b3b2d5d26454dd71a63f1c017541','结果')"
+      onclick="switchTab('c1ef3579ba0238a639967079f3d36274','结果')"
     >
       <span class="tab-nav-text">结果</span>
     </button>
@@ -1696,8 +1696,8 @@ std::deque 似乎是一个连续的存储空间，但实际上它并不是连续
   </div>
 </div>
 <h2 id="分配器测试程序">分配器测试程序</h2>
-<p><a href="#R-image-a4ba3701217a9bd1d224a4e1eb3f92a1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4ba3701217a9bd1d224a4e1eb3f92a1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png"></a></p>
+<p><a href="#R-image-b9be72bef25740f723862bb7e15cb9ec" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b9be72bef25740f723862bb7e15cb9ec"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="../../../Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/5.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image.png"></a></p>
 <div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
   <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
   <ul class="box-content attachments-files">
@@ -1717,8 +1717,8 @@ std::deque 似乎是一个连续的存储空间，但实际上它并不是连续
         </div>
       </main>
     </div>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/clipboard/clipboard.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/perfect-scrollbar/perfect-scrollbar.min.js?1743933522" defer></script>
-    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/theme.min.js?1743933522" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/clipboard/clipboard.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/perfect-scrollbar/perfect-scrollbar.min.js?1743998626" defer></script>
+    <script src="../../../Wungmeisilong/hugoBlog_pub.git/js/theme.js?1743998626" defer></script>
   </body>
 </html>

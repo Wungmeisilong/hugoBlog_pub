@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>B5-比赛 :: 类别 :: Maloudown</title>
-    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/categories/b5-%E6%AF%94%E8%B5%9B/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b5-%E6%AF%94%E8%B5%9B/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 14 May 2024 22:22:09 +0800</lastBuildDate>
-    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/categories/b5-%E6%AF%94%E8%B5%9B/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b5-%E6%AF%94%E8%B5%9B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>电赛</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/projects/%E7%94%B5%E8%B5%9B/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/projects/%E7%94%B5%E8%B5%9B/</link>
       <pubDate>Tue, 14 May 2024 22:22:09 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/projects/%E7%94%B5%E8%B5%9B/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/projects/%E7%94%B5%E8%B5%9B/</guid>
       <description>以下笔记皆基于HAL库。&#xA;新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。</description>
     </item>
     <item>
       <title>唛盟杯比赛详记</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Mon, 05 Feb 2024 10:44:08 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/</guid>
       <description>比赛说明 自己有幸参加这次唛盟杯的比赛，这次比赛流程如下：&#xA;一、报名时2024年1月1到31日本来是12月份但延期了。&#xA;二、培训时间，现在还不确定，不过也是可以肯定是年后的事了。</description>
     </item>
   </channel>

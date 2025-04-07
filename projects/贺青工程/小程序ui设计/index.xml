@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>志愿活动软件设计与开发 :: Maloudown</title>
-    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/</link>
     <description>设计一款可以参加志愿活动的小程序，其制作流程大致如下：&#xA;需求分析与规划 确定目标用户群体及其需求：考虑志愿者、活动组织者和管理员等不同角色的功能需求。&#xA;志愿者：&#xA;注册/登录：志愿者可以通过手机号、邮箱或第三方账号进行注册和登录。 个人中心：查看并编辑个人信息，包括姓名、联系方式、服务时长、参与过的活动记录等。 活动浏览：查看活动列表，搜索感兴趣的服务项目，支持按地区、时间、类型筛选。 活动报名：选择感兴趣的志愿活动进行报名，填写相关报名表单，并能收到报名成功或失败的反馈信息。 签到打卡：参加活动时通过GPS定位、二维码扫描等方式进行签到和签退，记录服务时长。 互动交流：可在活动详情页留言评论，与其他志愿者交流心得，也可以对已完成的活动进行评价。 积分系统：根据参与活动的情况获取积分，可用于兑换礼品或其他激励。 活动组织者：</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/projects/%E8%B4%BA%E9%9D%92%E5%B7%A5%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8Fui%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

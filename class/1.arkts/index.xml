@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ArkTS :: Maloudown</title>
-    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/1.arkts/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/1.arkts/</link>
     <description>数据类型 练习网址：&#xA;条件语句 拓展：for in与for of的使用&#xA;for in ：遍历得到数组的角标， for of ：直接得到元素。 函数 使用function关键字声明函数，</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/1.arkts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/1.arkts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

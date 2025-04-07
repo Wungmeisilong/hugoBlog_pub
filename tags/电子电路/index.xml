@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>电子电路 :: 标签 :: Maloudown</title>
-    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 18 Feb 2024 17:25:35 +0800</lastBuildDate>
-    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>电子电路</title>
-      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</link>
       <pubDate>Sun, 18 Feb 2024 17:25:35 +0800</pubDate>
-      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</guid>
       <description>模拟电子技术知识。 模拟电子技术基础笔记常用半导体器件 本征半导体 半导体：介于导体与绝缘体之间的&#xA;本征半导体： 载流子 3.1 本征激发 3.2 自由电子，带负电 3.3 空穴，带正电 自由电子和空穴都能到点。 3.4 复合：与本真激发相反的过程</description>
     </item>
   </channel>
