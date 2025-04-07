@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>10.STL库学习之仿函数 :: Maloudown</title>
-    <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/</link>
+    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/</link>
     <description>仿函数的个人理解 仿函数是行为类似函数的一个类，比较明显的特征是仿函数重载了operate()，比如你写了一个struct，并在里面重载了operate()，当调用这个类的()时就会返回响应的数据。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/10.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BB%BF%E5%87%BD%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

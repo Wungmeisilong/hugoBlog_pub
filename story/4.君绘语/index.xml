@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>君绘语 :: Maloudown</title>
-    <link>http://localhost:1313/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/</link>
+    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/</link>
     <description>第一章 与君初相识 高中那会儿我老失眠，原因一言难尽。&#xA;记得有一次我去吃饭，遇到张君，我们聊闲聊中，谈到了我失眠的事，张君听了说，他们有个朋友以睡觉为己任的人。我不信，哪有这种人？</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/story/4.%E5%90%9B%E7%BB%98%E8%AF%AD/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>B3-毕业设计 :: 类别 :: Maloudown</title>
-    <link>http://localhost:1313/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
+    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 07 Jul 2024 18:10:42 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>毕业设计</title>
-      <link>http://localhost:1313/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
+      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Sun, 07 Jul 2024 18:10:42 +0800</pubDate>
-      <guid>http://localhost:1313/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</guid>
       <description>目录&#xA;运行环境 【ESP32学习】联网模块 ESP8266-01S上传数据到OneNet 收藏的一些资料 最终的操作结果 ESP32&amp;&amp;ESP8266-12E连接ONeNet参考资料 ONeNet云平台报错： {“protocol”:“MQTT”,“offline_time”:“2024-07-15 16:01:49.977”,“offline_reason”:“CloseDueToProtoError”}怎么解决？ APP连接ONeNet json数据解析步骤 STM32+电脑(模拟ESP32)+ESP8266通信 设备热点配网技术——WIFIManager 报错：error: ‘wifi_country_t’ does not name a type const wifi_country_t WM_COUNTRY_US{“US”,1,11,WIFI_COUNTRY_POLICY_AUTO}; 通信过程中遇到的问题 这一部分所用到的资料下载地址 【实验】SPIFFS文件系统的使用 【实验】TCP/UDP通信实验 【STM32F4学习】摄像头 参考资料 STM32F4工程代码 【服务器】NGINX 在Linux中搭建NGINX服务器 TCP/IP协议 [知识储备] NGINX架构 NGINX中master的工作原理 nginx处理HTTP请求的过程 安装NGINX 【服务器】Tomcat 【服务器】ZLMedaikit流媒体服务器 【第三方库】FFmpeg媒体流转码工具 【深度学习】飞桨paddlepaddle实战 X-CUDE—AI在线课程 相关论文参考 【机器学习】HMM模型（隐马尔科夫列） 相关论文参考 导入库 【音视频学习】 H.264编码 安卓音视频实战编程 YUV RTMP协议所在所在的网络层结构 【第三方库】LIBRTMP 【工具】类似安卓虚拟机：Total Control 采集音频数据工具 视频采集工具—MediaProjection 【安卓APP制作】 安卓的两种登录方式 安卓中集成第三方库进行登录 安卓显示ONENet提供的可视化链接 硬件系统 运行环境 【ESP32学习】联网模块 ESP8266-01S上传数据到OneNet 参考视频</description>
     </item>
   </channel>

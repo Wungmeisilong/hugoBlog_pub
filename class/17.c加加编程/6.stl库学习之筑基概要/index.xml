@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>6.STL库学习之筑基概要 :: Maloudown</title>
-    <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/</link>
+    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/</link>
     <description>STL程序源代码位置 了解自身编译器STL程序源代码位置。&#xA;OOP 与 GP 面向对象编程（OOP）：&#xA;面向对象编程是一种编程范式，它将数据和处理这些数据的方法封装在对象中。这种方法强调了数据和函数的捆绑，使得代码更加模块化，易于理解和维护。对象可以包含属性（数据）和方法（函数），它们一起工作来模拟现实世界的行为。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/6.stl%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%AD%91%E5%9F%BA%E6%A6%82%E8%A6%81/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

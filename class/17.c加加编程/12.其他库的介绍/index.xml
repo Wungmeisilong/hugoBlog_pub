@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>12.其他库的介绍 :: Maloudown</title>
-    <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/</link>
+    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/</link>
     <description>为什么需要哈希函数？ 哈希函数在计算机科学中扮演着重要的角色，其主要作用包括：&#xA;数据检索：哈希函数可以将键（key）映射到哈希表中的一个位置，从而快速检索数据。这是哈希表（如 C++ 中的 std::unordered_map 和 std::unordered_set）的基础。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/12.%E5%85%B6%E4%BB%96%E5%BA%93%E7%9A%84%E4%BB%8B%E7%BB%8D/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

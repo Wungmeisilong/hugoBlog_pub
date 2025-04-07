@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cortex-A9微处理器 :: 标签 :: Maloudown</title>
-    <link>http://localhost:1313/tags/cortex-a9%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/</link>
+    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/tags/cortex-a9%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 28 May 2024 08:54:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/cortex-a9%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/tags/cortex-a9%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>嵌入式系统设计知识点</title>
-      <link>http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
+      <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Tue, 28 May 2024 08:54:27 +0800</pubDate>
-      <guid>http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
       <description>基于Cortex-A9微处理器的硬件平台 RISC和CISC RISC是精简指令集计算机，CISC是复杂指令集计算机&#xA;RISC（精简指令集计算机，Reduced Instruction Set Computer）和CISC（复杂指令集计算机，Complex Instruction Set Computer）是两种不同的计算机架构设计理念，它们在指令集的复杂性、指令执行方式、硬件实现等方面有所区别。以下是RISC和CISC的主要特点及其区别：</description>
     </item>
   </channel>

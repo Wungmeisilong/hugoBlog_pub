@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>物联网网络安全论 :: Maloudown</title>
-    <link>http://localhost:1313/class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/</link>
+    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/</link>
     <description>物联网主要解决什么问题?- 主要解决物品到物品（T2T）、人到物品（H2T）、人到人（H2H）之间的互联，核心共性技术、网络与信息安全技术、以及关键技术是物联网当前主要的研究方向</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/13.%E7%89%A9%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

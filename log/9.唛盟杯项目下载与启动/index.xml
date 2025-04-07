@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>9.唛盟杯项目下载与启动 :: Maloudown</title>
-    <link>http://localhost:1313/log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/</link>
+    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/</link>
     <description>一、为什么要创建属于自己博客网站 自从进入大三的学习，自己接触了许多开发板、以及七七八八的软件，个人记忆力又不咋地，平时很容易把重要或者重复的知识忘记，所以我希望做一个网站记录自己所学的知识，方便查找，但我没学JS，深入学又耗费时间，如果你也有我的一些情况，想自己创建一个网站“玩玩”，那么请看下去，希望自己的一些分享能对想短期内创建静态网站、且没学过网站设计的朋友有所帮助。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/log/9.%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%90%AF%E5%8A%A8/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

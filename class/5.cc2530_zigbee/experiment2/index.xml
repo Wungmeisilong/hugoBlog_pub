@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>实验2 IO端口输出实验 :: Maloudown</title>
-    <link>http://localhost:1313/class/5.cc2530_zigbee/experiment2/</link>
+    <link>https://github.com/Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/</link>
     <description>实验2 IO端口输出实验 1、实验要求： 利用实验箱的基础板，实现八盏灯的点亮，下面是八盏灯的位置图： 在实际中我们可能没有实验箱，往往需要自己做一个八盏灯的板子，这个时候了解本次实验挤出实验板的八盏灯连接原理是很重要的，了解原理后你就可以自己做出自己的LED板子，并用cc2530控制它。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/class/5.cc2530_zigbee/experiment2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://github.com/Wungmeisilong/hugoBlog_pub.git/class/5.cc2530_zigbee/experiment2/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
