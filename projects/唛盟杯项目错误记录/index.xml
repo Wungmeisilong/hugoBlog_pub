@@ -3,7 +3,7 @@
   <channel>
     <title>唛盟杯比赛详记 :: Maloudown</title>
     <link>http://localhost:1313/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/</link>
-    <description>比赛说明 自己有幸参加这次唛盟杯的比赛，这次比赛流程如下：&#xA;一、报名时2024年1月1到31日本来是12月份但延期了。&#xA;二、培训时间，现在还不确定，不过也是可以肯定是年后的事了。</description>
+    <description>比赛题目 一、项目主题 知识产权流程管理系统&#xA;二、项目描述&#xA;该系统用于知识产权项目申报的全过程跟踪管理，其功能包括：&#xA;客户下单、 提交申请、 申请反馈、 订单查询、 订单详情、 文档查阅下载等六大部分。 该系统分为客户端和管理端两个子系统。客户端对客户开放，主要功能包括：</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>

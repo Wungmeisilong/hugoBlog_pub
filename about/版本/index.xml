@@ -3,7 +3,7 @@
   <channel>
     <title>版本 :: Maloudown</title>
     <link>http://localhost:1313/about/%E7%89%88%E6%9C%AC/</link>
-    <description>附件</description>
+    <description>2024-04-07 V0.1.0 修改content目录结构 删除多余，以及未完成的文章 自定义首页页面输出 更新小说内容</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>

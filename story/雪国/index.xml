@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>雪国 :: Maloudown</title>
+    <link>http://localhost:1313/story/%E9%9B%AA%E5%9B%BD/</link>
+    <description>《雪国》似乎是瑞典艺术院铨选我诺贝尔文学奖的一条线索。《雪国》已译成十个国家和文字出版。我的作品最为百方人所知的，莫过于这部《雪国》了。就是在日本国内，它和《伊豆的舞女》一起，成为我拥有最多读者的作品。这样一部《雪国》行将被介绍到邻邦中国，使人感到高兴。</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <atom:link href="http://localhost:1313/story/%E9%9B%AA%E5%9B%BD/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

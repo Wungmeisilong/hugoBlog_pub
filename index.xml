@@ -6,14 +6,14 @@
     <description>This is a new releasenote.</description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 08 Apr 2025 00:46:39 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 Apr 2025 09:06:05 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>  博客文章</title>
       <link>http://localhost:1313/log/</link>
-      <pubDate>Tue, 08 Apr 2025 00:46:39 +0800</pubDate>
+      <pubDate>Sun, 06 Apr 2025 09:06:05 +0800</pubDate>
       <guid>http://localhost:1313/log/</guid>
-      <description>menuPre = ‘’ Cornell Notes Test&#xD;4.自定义页面以康奈尔笔记格式输出&#xD;3.github和atomgit的混合使用，哪些是值得注意的？&#xD;2.git与github的使用&#xD;1.博客优化笔记&#xD;7.初次安装AD需要做哪些设置？&#xD;6.云端一体化的环境变量问题&#xD;5.云端一体化如何查看云函数日志？&#xD;8.如何用旧电脑搭建自己的服务器？&#xD;10.如何自定义hugo主题页面输出格式？</description>
+      <description>4.自定义页面以康奈尔笔记格式输出&#xD;3.github和atomgit的混合使用，哪些是值得注意的？&#xD;2.git与github的使用&#xD;1.博客优化笔记&#xD;7.初次安装AD需要做哪些设置？&#xD;6.云端一体化的环境变量问题&#xD;5.云端一体化如何查看云函数日志？&#xD;8.如何用旧电脑搭建自己的服务器？&#xD;10.如何自定义hugo主题页面输出格式？&#xD;常用的数学表达&#xA;常用箭头&#xA;常用函数图像公式</description>
     </item>
     <item>
       <title>课程</title>
@@ -34,14 +34,14 @@
       <link>http://localhost:1313/story/</link>
       <pubDate>Tue, 04 Feb 2025 15:59:22 +0800</pubDate>
       <guid>http://localhost:1313/story/</guid>
-      <description>menuPre = ‘’ 9.黑神话悟空之黄风岭序章：灵蕴纪元</description>
+      <description>黑神话悟空之黄沙迷障这是一个关于黑神话悟空之黄风岭的故事，天命人是如何进入黄风岭，在这路上又会发生什么，真如游戏所展示的一样吗？实则不然。&#xA;桑叶白鸟卷&#xD;在宋朝末年的一个春日午后，阳光透过雕花窗棂，洒在了御书房的青石地板上。太傅李大人正站在书架旁，耐心地教导着最受宠爱的柒公主学习《论语》。公主虽然天资聪颖，但今日却显得心不在焉，她的目光不时飘向窗外的花园，那里的蝴蝶正在花间翩翩起舞。&#xD;太傅李大人轻声咳嗽，试图引起公主的注意，但柒公主却只是懒洋洋地翻了一页书，完全没有将心思放在学习上。李大人心中微微叹息，他知道这位公主自小受到皇上的宠爱，性格难免有些任性。他决定采取一些措施，于是他从桌上拿起了一根精致的戒尺。</description>
     </item>
     <item>
       <title>  关于</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Wed, 07 Feb 2024 16:24:40 +0800</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>menuPre =’&#39;</description>
+      <description></description>
     </item>
   </channel>
 </rss>

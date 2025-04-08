@@ -1,10 +1,10 @@
 # 10.如何自定义hugo主题页面输出格式？
 
-声明：需要注意文章只提供思路，当处理一些复杂问题时可能需要更改思路，甚至需要修改主题源码，所以请根据自身情况选择是否阅读本篇文章。
+**声明：**需要注意文章只提供思路，当处理一些复杂问题时可能需要变换思路，所以请根据自身情况选择是否阅读本篇文章。
 
-因本人没学过go语言，所以大部分代码都交由AI编写，那么此时就需要明确需求并多次与AI沟通修改，得到符合需求的代码。
+因本人没学过go语言，所以大部分代码都交由AI编写，不排除代码可能存在隐患。
 
-接下来我以自己使用的hugo-theme-relearn主题为例，讲解如何自定义页面输出格式。（[hugo-theme-relearn主题](https://github.com/daojundang/hugo-theme-relearn)）
+接下来我以自己使用的hugo-theme-relearn主题为例，讲解如何自定义康奈尔笔记页面输出格式。（[hugo-theme-relearn主题](https://github.com/daojundang/hugo-theme-relearn)）
 
 ## 工程目录结构
 
@@ -33,15 +33,45 @@ your-blog/
 
 ## 功能实现全流程
 
-我想输出一个左侧写标签，右侧写内容，最底下显示写总结的“康奈尔笔记”页面，使用命令创建.md文档后，使用如下格式编写内容：
+### 具体需求
 
-![alt text](image-4.png)
+我想输出一个左侧写标签，右侧写内容，最底下显示写总结的“康奈尔笔记”页面，使用命令：
 
-当识别到cues时，将内容显示在标签一侧，依次类推。
+```bash
+hugo new --kind cornell-notes learning/algorithm/_index.md
+```
 
-### 一、样式定义
+创建.md文档后，md文件自动展示为如下格式：
 
-创建 `layouts/partials/custom-header.html`：
+```markdown
+  +++
+  title = "{{ replace .Name "-" " " | title }}"
+  type = "cornell-notes"
+  date = {{ .Date }}
+  draft = true
+  +++
+
+  {{%/* cues */%}}
+  写标签区域
+
+  {{%/* /cues */%}}
+
+  {{%/* notes */%}}
+  写内容区域
+  {{%/* /notes */%}}
+
+  {{%/* summary */%}}
+  总结区域
+  {{%/* /summary */%}}
+```
+
+当识别到短代码`{{%/* cues */%}}`时，将`{{%/* cues */%}}  {{%/* /cues */%}}`中的内容显示在标签一侧，剩下的依次类推。
+
+### 样式定义
+
+**注意：假设自己的主题目录为your-blog,那么接下来的文件创建都该目录下，[可参考目录结构](#工程目录结构)。**
+
+创建 `layouts/partials/custom-header.html`（**遇到没有的目录或文件请自行创建，下同，所以不再提示！！**）
 
 ```html
 <style>
@@ -98,34 +128,32 @@ your-blog/
 </style>
 ```
 
-### 二、短代码开发
+### 短代码开发
 
-​​左侧标签区​​ (`layouts/shortcodes/cues.html`)
+​1.​左侧标签区​​ (`layouts/shortcodes/cues.html`):
 
-```html
-{{ $scratch := .Page.Scratch }}
+```hugo
+{{ $scratch := .Page.Scratch >}}
 {{ $scratch.Set "cuesContent" ( .Inner | markdownify ) }}
+```
 
-​```
+2.右侧内容区：(`layouts/shortcodes/notes.html`):
 
-​右侧内容区​​ ( `layouts/shortcodes/notes.html` )
-
-```html
+```hugo
 {{ $scratch := .Page.Scratch }}
 {{ $scratch.Set "notesContent" ( .Inner | markdownify ) }}
+```
 
-​```
+3.底部总结区：(`layouts/shortcodes/summary.html`)：
 
-​底部总结区​​ (`layouts/shortcodes/summary.html`)
-
-```html
+```hugo
 {{ $scratch := .Page.Scratch }}
 {{ $scratch.Set "summaryContent" ( .Inner | markdownify ) }}
 ```
 
-### 三、内容输出逻辑
+### 页面样式
 
-创建 `layouts/partials/cornell-notes.html`：
+创建页面样式 `layouts/partials/cornell-notes.html`：
 
 ```html
 <div class="cornell-content">
@@ -167,33 +195,99 @@ your-blog/
 </div>
 ```
 
-### 四、页面模板配置
+### 页面内容输出逻辑
 
 创建 `layouts/cornell-notes/views/article.html`：
 
 ```html
-<article class="cornell-notes-article">
-  <header class="article-header">
-    {{ partial "content-header.html" . }}
+<article class="cornell-notes">
+  {{ partial "cornell-notes.html" . }}
+</article>
+```
+
+此处就是系统将自动调用了我们之前写的`layouts/partials/cornell-notes.html`文件，将内容输出到这个容器中。
+
+**实际效果如下**：
+![alt text](image-6.png)
+
+为了丰富页面你可以设置标题、页脚等显示样式，这些你使用的主题一般会提供，如我这里的：
+
+```html
+<article class="cornell-notes">
+  <header class="headline">
+    {{partial "content-header.html" .}}
   </header>
-  
-  {{ partial "heading-pre.html" . }}
-  {{ partial "heading.html" . }}
-  {{ partial "heading-post.html" . }}
+  {{partial "heading-pre.html" .}}{{partial "heading.html" .}}{{partial "heading-post.html" .}}
+  {{partial "cornell-notes.html" .}}
 
-  <section class="cornell-main">
-    {{ partial "cornell-notes.html" . }}
-  </section>
-
-  <footer class="article-footer">
-    {{ partial "content-footer.html" . }}
+  <footer class="footline">
+    {{partial "content-footer.html" .}}
   </footer>
 </article>
 ```
 
-### 五、原型模板创建
+代码说明如下（**都是基于我使用的主题，可不看**）：
 
-新建 `archetypes/cornell-notes.md`：
+1.从上而下，`article`容器的class值为`cornell-notes`，这个值在`layouts/partials/custom-header.html`中，这是之前编写页面布局时写的，此处调用该cornell-notes样式：
+
+```html
+<article class="cornell-notes">
+```
+
+![alt text](image-2.png)
+
+2.编写内容顶栏代码，如果项目未提供就自己创建一个，同样放地，放在`layouts/partials/custom-header.html`中，因此次使用主题自带故不再创建。当然，你也可以选择不写。
+
+```html
+<header class="headline">
+    {{partial "content-header.html" .}}
+  </header>
+```
+
+对于标题设置：
+
+```html
+{{partial "heading-pre.html" .}}{{partial "heading.html" .}}{{partial "heading-post.html" .}}
+```
+
+页脚设置：
+
+```html
+<footer class="footline">
+    {{partial "content-footer.html" .}}
+  </footer>
+```
+
+**依实际需求而定，可写可不写**。
+
+3.总而言之，如果你只是输出之前需求的页面，那么可以只写这句代码：
+
+```html
+<article class="cornell-notes">
+  {{ partial "cornell-notes.html" . }}//就加了这句
+</article>
+```
+
+`{{ partial "cornell-notes.html" . }}`这里就是去调用我们之前写的`layouts/partials/cornell-notes.html`文件，将内容输出到这个容器中。还记得吗?这个文件是我们写完短代码后写的文件，目的是将内容按照要求输出。
+
+## 原型模板创建
+
+我们在创建页面时，如果使用命令：
+```bash
+hugo new --kind cornell-notes log/cornell-notes/_index.md
+```
+
+这个命令会自动创建一个`archetypes/cornell-notes.md`模型的文件，实现这一操作你需要先创建`layouts/cornell-notes/views/article.html`，这一操作在上面已经完成，接下来只需要创建`archetypes/cornell-notes.md`文件即可。值得注意的是无论是命令、还是layouts、archetypes文件下，都提到了**cornell-notes**这个名字，所以创建时留意名字**需要相同**。
+
+这里小结这一思路：
+
+- 在`layouts/[fileName]/views/article.html`中编写页面输出逻辑。
+- 在`layouts/[fileName].md`中编写文件模版
+- 使用命令`hugo new --kind [fileName] [path]`生成模版文件
+
+接下来是详细操作：
+
+1.创建`archetypes/cornell-notes.md`文件：
 
 ```markdown
   +++
@@ -203,68 +297,59 @@ your-blog/
   draft = true
   +++
 
-  {{% cues %}}
-  <!-- 左侧标签内容 -->
-  - [核心概念]
-  - [关键问题]
-  - [记忆要点]
-  {{% /cues %}}
+  {{%/* cues */%}}
+  写标签区域
 
-  {{% notes %}}
-  <!-- 右侧笔记内容 -->
-  ## 学习记录
-  1. 核心知识点说明
-  2. 重点公式推导
-  3. 案例实践分析
-  {{% /notes %}}
+  {{%/* /cues */%}}
 
-  {{% summary %}}
-  <!-- 总结提炼 -->
-  ✨ 核心收获：
-  1. 关键知识点总结
-  2. 实践应用方向
-  {{% /summary %}}
+  {{%/* notes */%}}
+  写内容区域
+  {{%/* /notes */%}}
+
+  {{%/* summary */%}}
+  总结区域
+  {{%/* /summary */%}}
 ```
 
-## 使用方式
+2.使用方式
 
-​​创建新笔记​​：
+​​生成模版文件​​：
 
 ```bash
 hugo new --kind cornell-notes learning/algorithm/_index.md
 ```
 
-​​内容编辑示例​​：
+实际效果图：
+
+![alt text](image-5.png)
+
+需要注意的是写模版文件的时候是依据你个人需求而定的，例如创建`layouts/[fileName]/views/article.html`这样的文件，在有些主题可能是`layouts/partials/[fileName]/article.html`，又如，此处md文件头部模版为：
 
 ```markdown
-  {{% cues %}}
-  - [递归算法]
-  - [动态规划]
-  - [复杂度分析]
-  {{% /cues %}}
-
-  {{% notes %}}
-  ## 递归算法精要
-  1. 递归三要素：
-    - 基线条件
-    - 递归关系
-    - 参数收敛
-
-  2. 经典案例：
-    ```python
-    def factorial(n):
-        if n == 0:
-            return 1
-        return n * factorial(n-1)
-    ```
-  {{% /notes %}}
-
-  {{% summary %}}
-  ✨ 学习总结：
-
-  掌握递归算法的实现要点
-  理解递归与迭代的转换关系
-  能够分析递归调用栈的空间复杂度
-  {{% /summary %}}
-
++++
+  title = "{{ replace .Name "-" " " | title }}"
+  type = "cornell-notes"
+  date = {{ .Date }}
+  +++
 ```
+
+而有些则是以：
+
+```markdown
+  ---
+    title = "{{ replace .Name "-" " " | title }}"
+    archetype = "cornell-notes"
+    date = {{ .Date }}
+  ---
+```
+
+旨在告诉你编写形式各不相同，所以清楚这一思路即可。**要避免这些坑请结合主题的说明文档帮助查看**。
+
+## 总结
+
+最后的最后做个总结，要想自定义hugo主题页面输出格式，你可以按照如下步骤展开：
+
+- 确定需求，不会写代码让AI完成。
+- 如果有需要请编写段代码。
+- 编写输出逻辑，如果不会还请求助社区、AI等。
+- 编写页面模板，参照以上思路，同时参考自己hugo主题的文档说明

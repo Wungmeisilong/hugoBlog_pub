@@ -1,4 +1,4 @@
-# 8.桑叶白鸟卷
+# 桑叶白鸟卷
 
 <link rel="stylesheet" href="/css/novel.css">
 <div class = "content">

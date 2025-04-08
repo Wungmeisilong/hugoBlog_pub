@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>小说 :: 类别 :: Maloudown</title>
+    <link>http://localhost:1313/categories/%E5%B0%8F%E8%AF%B4/</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <atom:link href="http://localhost:1313/categories/%E5%B0%8F%E8%AF%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>半钟礼物</title>
+      <link>http://localhost:1313/story/%E5%8D%8A%E9%92%9F%E7%A4%BC%E7%89%A9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/story/%E5%8D%8A%E9%92%9F%E7%A4%BC%E7%89%A9/</guid>
+      <description>这是一个发生在寒冬夜晚的青春校园故事。西蚌县高中生仲晨星在生日当晚，意外收到同班同学璐玲送来的特殊礼物——奶茶店相遇、密码礼盒与暗藏玄机的2.9元红包，揭开了两人长达两年的微妙情谊。当贫困搬迁户出身的璐玲在冷风中送来手工纸鹤礼盒，用九键输入法暗藏姓名密码时，这场充满少年心事的生日惊喜，却在误会与时光中尘封。直到多年后晨星偶然破解数字密码，才真正接收到那个雪夜未曾领会的少女心意</description>
+    </item>
+  </channel>
+</rss>

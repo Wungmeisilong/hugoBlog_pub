@@ -3,18 +3,11 @@
   <channel>
     <title>  博客文章 :: Maloudown</title>
     <link>http://localhost:1313/log/</link>
-    <description>menuPre = ‘’ Cornell Notes Test&#xD;4.自定义页面以康奈尔笔记格式输出&#xD;3.github和atomgit的混合使用，哪些是值得注意的？&#xD;2.git与github的使用&#xD;1.博客优化笔记&#xD;7.初次安装AD需要做哪些设置？&#xD;6.云端一体化的环境变量问题&#xD;5.云端一体化如何查看云函数日志？&#xD;8.如何用旧电脑搭建自己的服务器？&#xD;10.如何自定义hugo主题页面输出格式？</description>
+    <description>4.自定义页面以康奈尔笔记格式输出&#xD;3.github和atomgit的混合使用，哪些是值得注意的？&#xD;2.git与github的使用&#xD;1.博客优化笔记&#xD;7.初次安装AD需要做哪些设置？&#xD;6.云端一体化的环境变量问题&#xD;5.云端一体化如何查看云函数日志？&#xD;8.如何用旧电脑搭建自己的服务器？&#xD;10.如何自定义hugo主题页面输出格式？&#xD;常用的数学表达&#xA;常用箭头&#xA;常用函数图像公式</description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 08 Apr 2025 00:46:39 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 Apr 2025 09:06:05 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/log/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Cornell Notes Test</title>
-      <link>http://localhost:1313/log/cornell-notes-test/</link>
-      <pubDate>Tue, 08 Apr 2025 00:46:39 +0800</pubDate>
-      <guid>http://localhost:1313/log/cornell-notes-test/</guid>
-      <description></description>
-    </item>
     <item>
       <title>4.自定义页面以康奈尔笔记格式输出</title>
       <link>http://localhost:1313/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/</link>
