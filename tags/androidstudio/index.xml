@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AndroidStudio :: 标签 :: Maloudown</title>
-    <link>http://localhost:1313/tags/androidstudio/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/androidstudio/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 11 Jan 2024 20:17:38 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/androidstudio/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/androidstudio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AndroidStudio</title>
-      <link>http://localhost:1313/class/2.androidstudio/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/</link>
       <pubDate>Thu, 11 Jan 2024 20:17:38 +0800</pubDate>
-      <guid>http://localhost:1313/class/2.androidstudio/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/</guid>
       <description>AndroidStudio接下来将将介绍AndroidStudio的复习资料，包括AndroidStudio简介、AndroidStudio中 Make Project 、Clean Project 、Rebuild Project 的作用、Run窗口、manifests文件夹（清单文件夹）、java文件夹、res文件夹、Android系统体系结构四层等。</description>
     </item>
   </channel>

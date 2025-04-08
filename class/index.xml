@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>课程 :: Maloudown</title>
-    <link>http://localhost:1313/class/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/</link>
     <description>17.C加加编程&#xD;15.计算机图形学OpenGL与C++&#xD;14.新标准C加加程序设计&#xD;13.从C到C++&#xD;12.其他库的介绍&#xD;11.STL库学习之适配器&#xD;10.STL库学习之仿函数&#xD;9.STL库学习之迭代器与算法&#xD;8.STL库学习之容器&#xD;7.STL库学习之分配器&#xD;6.STL库学习之筑基概要&#xD;5.STL库之观其大略&#xD;4.C++2.0特性的使用&#xD;3.导读&#xD;2.组合与继承&#xD;1.代码编写规范&#xD;21.C语言程序设计（含面试）&#xD;1.在线题库练习&#xD;20.C++面试&#xD;1.网络编程&#xD;1.代码编写规范&#xD;嵌入式系统设计知识点&#xD;ArkTS&#xD;电子电路&#xD;模拟电子技术基础笔记&#xD;操作系统&#xD;Linux期末复习&#xD;AndroidStudio&#xD;AndroidStudio&#xD;AndroidStudio笔记&#xD;2-1.Toolbar工具栏&#xD;计算机组成原理&#xD;过年&#xD;计算机组成原理-复习&#xD;51单片机&#xD;pretues+kiel5仿真软件配合使用时需要注意的地方&#xD;19.设计模式（C++）</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 01 Apr 2025 13:27:41 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/class/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>17.C加加编程</title>
-      <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Tue, 01 Apr 2025 13:27:41 +0800</pubDate>
-      <guid>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/</guid>
       <description>15.计算机图形学OpenGL与C++理解GLFW和GLAD GLFW（） GLFW是一个开源的、跨平台的库，用于创建窗口、处理输入和渲染图形。它提供了一种简单的方式来与OpenGL进行交互，使得开发图形应用程序变得更加容易。</description>
     </item>
     <item>
       <title>21.C语言程序设计（含面试）</title>
-      <link>http://localhost:1313/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/</link>
       <pubDate>Mon, 18 Nov 2024 17:38:06 +0800</pubDate>
-      <guid>http://localhost:1313/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/21.c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%90%AB%E9%9D%A2%E8%AF%95/</guid>
       <description>1.在线题库练习网站 “语言网【基础】” “大学慕课对应习题【算法基础】” “牛客竞赛【中等】” “LeetCode【较难】” 课程学习 “书籍” “大学慕课” Github项目 “C/C++面试总结项目” “书籍：Github项目” “C/C++面试总结” “系统设计” 题目笔记 1.cahr *s = &#34;AAAA&#34;指针接受一个字符串（右值），当想通过s[0] = ‘B’修改时是无法修改成功的，因为&#34;AAAA&#34;只能读，不能写。 2.一般函数内如果返回char s[] = {“abcd”};那么一般会报错，因为这是一个局部变量，但s[]修改为*s就不会有问题。因为 *s指向的地址是固定的。 3.在自动类型转换中：</description>
     </item>
     <item>
       <title>20.C&#43;&#43;面试</title>
-      <link>http://localhost:1313/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/</link>
       <pubDate>Fri, 01 Nov 2024 08:16:41 +0800</pubDate>
-      <guid>http://localhost:1313/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/</guid>
       <description>1.网络编程网络编程 网络原理 数据库 C++基础 1.左值引用和右值引用&#xA;数据湖结构与算法 附件</description>
     </item>
     <item>
       <title>1.代码编写规范</title>
-      <link>http://localhost:1313/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/</link>
       <pubDate>Tue, 15 Oct 2024 19:54:02 +0800</pubDate>
-      <guid>http://localhost:1313/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/</guid>
       <description>如何写一个标准的.h文件 以下内容来自B站。&#xA;接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：&#xA;class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator += (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };&#xD;构造函数的特性 这一点需要关注下面的代码：</description>
     </item>
     <item>
       <title>嵌入式系统设计知识点</title>
-      <link>http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Tue, 28 May 2024 08:54:27 +0800</pubDate>
-      <guid>http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
       <description>基于Cortex-A9微处理器的硬件平台 RISC和CISC RISC是精简指令集计算机，CISC是复杂指令集计算机&#xA;RISC（精简指令集计算机，Reduced Instruction Set Computer）和CISC（复杂指令集计算机，Complex Instruction Set Computer）是两种不同的计算机架构设计理念，它们在指令集的复杂性、指令执行方式、硬件实现等方面有所区别。以下是RISC和CISC的主要特点及其区别：</description>
     </item>
     <item>
       <title>ArkTS</title>
-      <link>http://localhost:1313/class/1.arkts/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/1.arkts/</link>
       <pubDate>Fri, 23 Feb 2024 00:49:51 +0800</pubDate>
-      <guid>http://localhost:1313/class/1.arkts/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/1.arkts/</guid>
       <description>数据类型 练习网址：&#xA;条件语句 拓展：for in与for of的使用&#xA;for in ：遍历得到数组的角标， for of ：直接得到元素。 函数 使用function关键字声明函数，</description>
     </item>
     <item>
       <title>电子电路</title>
-      <link>http://localhost:1313/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</link>
       <pubDate>Sun, 18 Feb 2024 17:25:35 +0800</pubDate>
-      <guid>http://localhost:1313/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</guid>
       <description>模拟电子技术知识。 模拟电子技术基础笔记常用半导体器件 本征半导体 半导体：介于导体与绝缘体之间的&#xA;本征半导体： 载流子 3.1 本征激发 3.2 自由电子，带负电 3.3 空穴，带正电 自由电子和空穴都能到点。 3.4 复合：与本真激发相反的过程</description>
     </item>
     <item>
       <title>操作系统</title>
-      <link>http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Sun, 14 Jan 2024 18:36:31 +0800</pubDate>
-      <guid>http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
       <description>Linux期末复习认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般压缩解压文件： ​&#xD;命令&#xD;gzip [文件名]&#xD;gunzip [解压文件名]&#xD;例子：</description>
     </item>
     <item>
       <title>AndroidStudio</title>
-      <link>http://localhost:1313/class/2.androidstudio/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/</link>
       <pubDate>Thu, 11 Jan 2024 20:17:38 +0800</pubDate>
-      <guid>http://localhost:1313/class/2.androidstudio/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/</guid>
       <description>AndroidStudio接下来将将介绍AndroidStudio的复习资料，包括AndroidStudio简介、AndroidStudio中 Make Project 、Clean Project 、Rebuild Project 的作用、Run窗口、manifests文件夹（清单文件夹）、java文件夹、res文件夹、Android系统体系结构四层等。</description>
     </item>
     <item>
       <title>计算机组成原理</title>
-      <link>http://localhost:1313/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
       <pubDate>Wed, 10 Jan 2024 10:45:58 +0800</pubDate>
-      <guid>http://localhost:1313/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
       <description>过年&#xD;计算机组成原理-复习1 计算机系统概论 计算机的分类 计算机总体上分为：电子模拟计算机1和电子数字计算机。二者区别如下表&#xA;比较内容 电子数字计算机 电子模拟计算机 数据表示方法 0或1 电压 计算方式 数字计算 电压组合和测量值 控制方式 程序控制 盘上连线 精度 高 低 数据存储量 大 小 逻辑计算能力 强 无 计算机的五代变化 第一代1946~1957年， 数据处理 得到应用； 第二代1958~1964年， 工业控制 开始得到应用； 第三代1965~1971年， 小型计算机开始出现； 第四代1972~1990年， 微型计算机 开始出现； 第五代1991年开始， 单片机 开始出现 计算机的性能指标 处理机字长 指处理机运算其中一次能工处理的二进制数运算的位数，例如32位，64位。 存储器带宽 单位时间内从存储器独处的二进制数信息量，一般用 字节数/秒表示。</description>
     </item>
     <item>
       <title>51单片机</title>
-      <link>http://localhost:1313/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/</link>
       <pubDate>Tue, 09 Jan 2024 15:04:24 +0800</pubDate>
-      <guid>http://localhost:1313/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/</guid>
       <description>pretues+kiel5仿真软件配合使用时需要注意的地方不知道keil5从哪个版本开始就不支持了晶振的设置操作，我在网上搜也得到不同的答案，所以从哪个版本开始限制这就不提了， 好在这样的改变并不会形象我们使用keil5。最近在刚进阶学习stm32，用到了pretues_8.11 仿真软 件和keil5代码编辑器，自己把心中所得分享一下。</description>
     </item>
     <item>
       <title>19.设计模式（C&#43;&#43;）</title>
-      <link>http://localhost:1313/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</guid>
       <description>组件协作 模板方法-template method 在C语言代码编写中主函数调用常调用库函数，进行功能实现。那么现在面向对象编程中，可以选择在库中调用未来写在主函数中的函数，这个设计方式就叫template method（个人的理解，不是定义）。举个例子，假设有一个lib.h的库，里面写了画圆的步骤，主体框架已经在rung()中写好，但是还有一个函数没用写，该函数是用来指定圆的半径等参数的，这个函数用virtual修饰，在未来主函数中可以继承该类并重写这个函数，最后在调用lib.h库里的run()即可。</description>
     </item>
   </channel>

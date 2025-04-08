@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>4.自定义页面以康奈尔笔记格式输出 :: Maloudown</title>
-    <link>http://localhost:1313/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/</link>
     <description>Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。&#xA;Notes 创建css文件 康奈尔笔记的布局，其中左侧是 “Cues”，右侧是 “Notes”，底部是 “Summary”，您可以使用 Flexbox 的 row 和 column 布局来实现。这里是一个 CSS 示例，它将创建一个两列的布局，左侧为 “Cues”，右侧为 “Notes”，然后在这两列下方是 “Summary”。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,171 +2,171 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>类别 :: Maloudown</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 08 Apr 2025 00:46:39 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>类别 :: 字母&#43;数字-分组名</title>
-      <link>http://localhost:1313/categories/%E5%AD%97%E6%AF%8D&#43;%E6%95%B0%E5%AD%97-%E5%88%86%E7%BB%84%E5%90%8D/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%AD%97%E6%AF%8D&#43;%E6%95%B0%E5%AD%97-%E5%88%86%E7%BB%84%E5%90%8D/</link>
       <pubDate>Tue, 08 Apr 2025 00:46:39 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E5%AD%97%E6%AF%8D&#43;%E6%95%B0%E5%AD%97-%E5%88%86%E7%BB%84%E5%90%8D/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%AD%97%E6%AF%8D&#43;%E6%95%B0%E5%AD%97-%E5%88%86%E7%BB%84%E5%90%8D/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: 工具推荐</title>
-      <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</link>
       <pubDate>Sun, 06 Apr 2025 09:04:29 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: 踩坑日记</title>
-      <link>http://localhost:1313/categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/</link>
       <pubDate>Sun, 06 Apr 2025 08:45:26 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: 编程语言</title>
-      <link>http://localhost:1313/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
       <pubDate>Tue, 01 Apr 2025 13:27:41 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: 自学编程语言</title>
-      <link>http://localhost:1313/categories/%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
       <pubDate>Tue, 01 Apr 2025 13:27:41 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E8%87%AA%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: M1-面试</title>
-      <link>http://localhost:1313/categories/m1-%E9%9D%A2%E8%AF%95/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/m1-%E9%9D%A2%E8%AF%95/</link>
       <pubDate>Mon, 18 Nov 2024 17:38:06 +0800</pubDate>
-      <guid>http://localhost:1313/categories/m1-%E9%9D%A2%E8%AF%95/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/m1-%E9%9D%A2%E8%AF%95/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: 自学课程</title>
-      <link>http://localhost:1313/categories/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/</link>
       <pubDate>Mon, 18 Nov 2024 17:38:06 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: R1-编程语言</title>
-      <link>http://localhost:1313/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
       <pubDate>Sun, 03 Nov 2024 09:12:17 +0800</pubDate>
-      <guid>http://localhost:1313/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: B3-毕业设计</title>
-      <link>http://localhost:1313/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Sun, 07 Jul 2024 18:10:42 +0800</pubDate>
-      <guid>http://localhost:1313/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b3-%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: 核心课程</title>
-      <link>http://localhost:1313/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/</link>
       <pubDate>Tue, 28 May 2024 08:54:27 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: B5-比赛</title>
-      <link>http://localhost:1313/categories/b5-%E6%AF%94%E8%B5%9B/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b5-%E6%AF%94%E8%B5%9B/</link>
       <pubDate>Tue, 14 May 2024 22:22:09 +0800</pubDate>
-      <guid>http://localhost:1313/categories/b5-%E6%AF%94%E8%B5%9B/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b5-%E6%AF%94%E8%B5%9B/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: X1-项目</title>
-      <link>http://localhost:1313/categories/x1-%E9%A1%B9%E7%9B%AE/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/x1-%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Tue, 14 May 2024 22:22:09 +0800</pubDate>
-      <guid>http://localhost:1313/categories/x1-%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/x1-%E9%A1%B9%E7%9B%AE/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: 应用开发</title>
-      <link>http://localhost:1313/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
       <pubDate>Sat, 23 Mar 2024 15:46:15 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: B1-拓展笔记</title>
-      <link>http://localhost:1313/categories/b1-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b1-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sun, 18 Feb 2024 17:25:35 +0800</pubDate>
-      <guid>http://localhost:1313/categories/b1-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b1-%E6%8B%93%E5%B1%95%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: Version</title>
-      <link>http://localhost:1313/categories/version/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/version/</link>
       <pubDate>Wed, 07 Feb 2024 16:24:40 +0800</pubDate>
-      <guid>http://localhost:1313/categories/version/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/version/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: 技术分享</title>
-      <link>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</link>
       <pubDate>Wed, 31 Jan 2024 03:13:33 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: F1-复习资料</title>
-      <link>http://localhost:1313/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/</link>
       <pubDate>Sun, 14 Jan 2024 18:36:31 +0800</pubDate>
-      <guid>http://localhost:1313/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/f1-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: Z-专业课</title>
-      <link>http://localhost:1313/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/</link>
       <pubDate>Thu, 11 Jan 2024 20:17:38 +0800</pubDate>
-      <guid>http://localhost:1313/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/z-%E4%B8%93%E4%B8%9A%E8%AF%BE/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: D1-51单片机</title>
-      <link>http://localhost:1313/categories/d1-51%E5%8D%95%E7%89%87%E6%9C%BA/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/d1-51%E5%8D%95%E7%89%87%E6%9C%BA/</link>
       <pubDate>Tue, 09 Jan 2024 15:04:24 +0800</pubDate>
-      <guid>http://localhost:1313/categories/d1-51%E5%8D%95%E7%89%87%E6%9C%BA/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/d1-51%E5%8D%95%E7%89%87%E6%9C%BA/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: X1-小说</title>
-      <link>http://localhost:1313/categories/x1-%E5%B0%8F%E8%AF%B4/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/x1-%E5%B0%8F%E8%AF%B4/</link>
       <pubDate>Tue, 02 Jan 2024 00:25:42 +0800</pubDate>
-      <guid>http://localhost:1313/categories/x1-%E5%B0%8F%E8%AF%B4/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/x1-%E5%B0%8F%E8%AF%B4/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: B2-笔记</title>
-      <link>http://localhost:1313/categories/b2-%E7%AC%94%E8%AE%B0/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b2-%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 20 Dec 2023 17:59:23 +0800</pubDate>
-      <guid>http://localhost:1313/categories/b2-%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b2-%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: B3-课堂笔记</title>
-      <link>http://localhost:1313/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 29 Nov 2023 16:54:44 +0800</pubDate>
-      <guid>http://localhost:1313/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/b3-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>类别 :: 博客搭建</title>
-      <link>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
       <description></description>
     </item>
   </channel>

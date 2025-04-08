@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>9.黑神话悟空之黄风岭 :: Maloudown</title>
-    <link>http://localhost:1313/story/9.%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA%E4%B9%8B%E9%BB%84%E9%A3%8E%E5%B2%AD/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/9.%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA%E4%B9%8B%E9%BB%84%E9%A3%8E%E5%B2%AD/</link>
     <description>序章：灵蕴纪元&#xA;天地混沌初开，盘古巨斧挥动，劈开鸿蒙，清者上浮为天，浊者下沉为地，乾坤始定。女娲以泥土仿生灵模样，捏塑出万物之灵，灵蕴由此诞生，在三界间流淌，似无形的丝线，将世间万物紧密相连。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/story/9.%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA%E4%B9%8B%E9%BB%84%E9%A3%8E%E5%B2%AD/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/story/9.%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA%E4%B9%8B%E9%BB%84%E9%A3%8E%E5%B2%AD/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

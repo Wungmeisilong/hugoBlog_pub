@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>模拟电子技术基础笔记 :: Maloudown</title>
-    <link>http://localhost:1313/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
     <description>常用半导体器件 本征半导体 半导体：介于导体与绝缘体之间的&#xA;本征半导体： 载流子 3.1 本征激发 3.2 自由电子，带负电 3.3 空穴，带正电 自由电子和空穴都能到点。 3.4 复合：与本真激发相反的过程</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

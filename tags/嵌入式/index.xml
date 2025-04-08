@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>嵌入式 :: 标签 :: Maloudown</title>
-    <link>http://localhost:1313/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 28 May 2024 08:54:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>嵌入式系统设计知识点</title>
-      <link>http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Tue, 28 May 2024 08:54:27 +0800</pubDate>
-      <guid>http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
       <description>基于Cortex-A9微处理器的硬件平台 RISC和CISC RISC是精简指令集计算机，CISC是复杂指令集计算机&#xA;RISC（精简指令集计算机，Reduced Instruction Set Computer）和CISC（复杂指令集计算机，Complex Instruction Set Computer）是两种不同的计算机架构设计理念，它们在指令集的复杂性、指令执行方式、硬件实现等方面有所区别。以下是RISC和CISC的主要特点及其区别：</description>
     </item>
     <item>
       <title>计算机组成原理</title>
-      <link>http://localhost:1313/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
       <pubDate>Wed, 10 Jan 2024 10:45:58 +0800</pubDate>
-      <guid>http://localhost:1313/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
       <description>过年&#xD;计算机组成原理-复习1 计算机系统概论 计算机的分类 计算机总体上分为：电子模拟计算机1和电子数字计算机。二者区别如下表&#xA;比较内容 电子数字计算机 电子模拟计算机 数据表示方法 0或1 电压 计算方式 数字计算 电压组合和测量值 控制方式 程序控制 盘上连线 精度 高 低 数据存储量 大 小 逻辑计算能力 强 无 计算机的五代变化 第一代1946~1957年， 数据处理 得到应用； 第二代1958~1964年， 工业控制 开始得到应用； 第三代1965~1971年， 小型计算机开始出现； 第四代1972~1990年， 微型计算机 开始出现； 第五代1991年开始， 单片机 开始出现 计算机的性能指标 处理机字长 指处理机运算其中一次能工处理的二进制数运算的位数，例如32位，64位。 存储器带宽 单位时间内从存储器独处的二进制数信息量，一般用 字节数/秒表示。</description>
     </item>
   </channel>

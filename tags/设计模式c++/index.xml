@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>设计模式（C&#43;&#43;） :: 标签 :: Maloudown</title>
-    <link>http://localhost:1313/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc&#43;&#43;/</link>
+    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc&#43;&#43;/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <atom:link href="http://localhost:1313/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc&#43;&#43;/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc&#43;&#43;/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>19.设计模式（C&#43;&#43;）</title>
-      <link>http://localhost:1313/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</link>
+      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</guid>
+      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</guid>
       <description>组件协作 模板方法-template method 在C语言代码编写中主函数调用常调用库函数，进行功能实现。那么现在面向对象编程中，可以选择在库中调用未来写在主函数中的函数，这个设计方式就叫template method（个人的理解，不是定义）。举个例子，假设有一个lib.h的库，里面写了画圆的步骤，主体框架已经在rung()中写好，但是还有一个函数没用写，该函数是用来指定圆的半径等参数的，这个函数用virtual修饰，在未来主函数中可以继承该类并重写这个函数，最后在调用lib.h库里的run()即可。</description>
     </item>
   </channel>
