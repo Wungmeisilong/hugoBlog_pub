@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>电赛 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/projects/%E7%94%B5%E8%B5%9B/</link>
+    <link>http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/</link>
     <description>以下笔记皆基于HAL库。&#xA;新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/projects/%E7%94%B5%E8%B5%9B/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

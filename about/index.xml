@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>  关于 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/about/</link>
+    <link>http://localhost:1313/about/</link>
     <description>menuPre =’&#39;</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 07 Feb 2024 16:24:40 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>版本</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/about/%E7%89%88%E6%9C%AC/</link>
+      <link>http://localhost:1313/about/%E7%89%88%E6%9C%AC/</link>
       <pubDate>Wed, 07 Feb 2024 16:24:40 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/about/%E7%89%88%E6%9C%AC/</guid>
+      <guid>http://localhost:1313/about/%E7%89%88%E6%9C%AC/</guid>
       <description>附件</description>
     </item>
   </channel>

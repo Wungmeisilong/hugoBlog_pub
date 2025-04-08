@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>  博客文章 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/</link>
+    <link>http://localhost:1313/log/</link>
     <description>menuPre = ‘’ Cornell Notes Test&#xD;4.自定义页面以康奈尔笔记格式输出&#xD;3.github和atomgit的混合使用，哪些是值得注意的？&#xD;2.git与github的使用&#xD;1.博客优化笔记&#xD;7.初次安装AD需要做哪些设置？&#xD;6.云端一体化的环境变量问题&#xD;5.云端一体化如何查看云函数日志？&#xD;8.如何用旧电脑搭建自己的服务器？&#xD;10.如何自定义hugo主题页面输出格式？</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 08 Apr 2025 00:46:39 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/log/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cornell Notes Test</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/cornell-notes-test/</link>
+      <link>http://localhost:1313/log/cornell-notes-test/</link>
       <pubDate>Tue, 08 Apr 2025 00:46:39 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/cornell-notes-test/</guid>
+      <guid>http://localhost:1313/log/cornell-notes-test/</guid>
       <description></description>
     </item>
     <item>
       <title>4.自定义页面以康奈尔笔记格式输出</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/</link>
+      <link>http://localhost:1313/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/</link>
       <pubDate>Sun, 06 Apr 2025 09:06:05 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/</guid>
+      <guid>http://localhost:1313/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/</guid>
       <description>Cues Cues Notes 创建css文件 在hugo配置中设置 在markdown文档中引用 Summary 标签/提示 ：静态网页，康奈尔笔记，hugo，自定义页面输出格式。&#xA;Notes 创建css文件 康奈尔笔记的布局，其中左侧是 “Cues”，右侧是 “Notes”，底部是 “Summary”，您可以使用 Flexbox 的 row 和 column 布局来实现。这里是一个 CSS 示例，它将创建一个两列的布局，左侧为 “Cues”，右侧为 “Notes”，然后在这两列下方是 “Summary”。</description>
     </item>
     <item>
       <title>3.github和atomgit的混合使用，哪些是值得注意的？</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/3.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E5%93%AA%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/</link>
+      <link>http://localhost:1313/log/3.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E5%93%AA%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/</link>
       <pubDate>Sun, 06 Apr 2025 09:04:29 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/3.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E5%93%AA%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/</guid>
+      <guid>http://localhost:1313/log/3.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E5%93%AA%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/</guid>
       <description>一台电脑如何使用多个远程仓库？ 下载好git，并做好相关的配置 关联github仓库 创建github仓库 克隆仓库到本地 git clone &lt;你的远程仓库URL&gt;&#xD;创建多个 SSH 密钥对涉及到在本地生成多个公钥和私钥文件，并将公钥添加到你想要访问的远程服务器上。以下是详细步骤：</description>
     </item>
     <item>
       <title>2.git与github的使用</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <link>http://localhost:1313/log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Sun, 06 Apr 2025 09:01:29 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <guid>http://localhost:1313/log/2.git%E4%B8%8Egithub%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>网页链接 原文章链接&#xA;1、使用git commi -m “……“时报错： Your branch is up to date with ‘origin/master‘ 今天在提交项目的时候报了这个错误，在网上查了解决办法，有的说创建新的分支可以解决，但我的不行。</description>
     </item>
     <item>
       <title>1.博客优化笔记</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/</link>
+      <link>http://localhost:1313/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sun, 06 Apr 2025 08:45:26 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://localhost:1313/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/</guid>
       <description>代码分制表 以&lt; tabs title=&#34;file name&#34; &gt;，&lt; /tabs &gt;结尾； 然后里面写以% tab title=&#34;code name&#34; style=&#34;info&#34; color=&#34;blue &#34; %，% /tab %结尾 他们都需要用{{}}括起来 ​&#xD;代码&#xD;{{&lt; tabs title=&#34;hello.&#34; &gt;}} //代码块一 {{% tab title=&#34;py&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} //代码块二 {{% tab title=&#34;sh&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} {{&lt; /tabs &gt;}}</description>
     </item>
     <item>
       <title>7.初次安装AD需要做哪些设置？</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/7.%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85ad%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E8%AE%BE%E7%BD%AE/</link>
+      <link>http://localhost:1313/log/7.%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85ad%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Fri, 28 Jun 2024 15:35:13 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/7.%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85ad%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E8%AE%BE%E7%BD%AE/</guid>
+      <guid>http://localhost:1313/log/7.%E5%88%9D%E6%AC%A1%E5%AE%89%E8%A3%85ad%E9%9C%80%E8%A6%81%E5%81%9A%E5%93%AA%E4%BA%9B%E8%AE%BE%E7%BD%AE/</guid>
       <description>设置自动保存 打开程序点击系统设置，如下图：&#xA;按照下图步骤设置自动保存，每10分钟保存一次（你也可以设置成其他的，但不建议设置太小或太大比如1分钟或者30分钟）</description>
     </item>
     <item>
       <title>6.云端一体化的环境变量问题</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</link>
+      <link>http://localhost:1313/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sat, 23 Mar 2024 15:46:15 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://localhost:1313/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</guid>
       <description>参数context 与环境变量有关，不管是系统还是用户自定义的都用这个来获取，获取方式：context.env&#xA;先部署云函数到远端，然后在去远端添加环境变量，然后在本地运行虚拟机查看。 负载均衡的四种方式</description>
     </item>
     <item>
       <title>5.云端一体化如何查看云函数日志？</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/</link>
+      <link>http://localhost:1313/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/</link>
       <pubDate>Sat, 23 Mar 2024 14:53:36 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/</guid>
+      <guid>http://localhost:1313/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/</guid>
       <description>调用云函数的时候我们总有输入输出结果不符合自己预期的时候，这个时候查看日志很重要！！在云端一体化开发过程中，我们可以通过下面的方式解决这一问题：</description>
     </item>
     <item>
       <title>8.如何用旧电脑搭建自己的服务器？</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/8.%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <link>http://localhost:1313/log/8.%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Wed, 31 Jan 2024 03:13:33 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/8.%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>http://localhost:1313/log/8.%E5%A6%82%E4%BD%95%E7%94%A8%E6%97%A7%E7%94%B5%E8%84%91%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>拥有一个属于自己的服务器个人感觉就很赞，我最初是在不买公网IP情况下，用一台电脑做服务器，然后另外一台电脑可以远程访问，部署网站，然后别人可以访问这个网站，这样一个功能。如果你也有这样的想法还请阅读下去，希望自己的经验对你有所帮助。</description>
     </item>
     <item>
       <title>10.如何自定义hugo主题页面输出格式？</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/10.%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89hugo%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F/</link>
+      <link>http://localhost:1313/log/10.%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89hugo%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/10.%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89hugo%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F/</guid>
+      <guid>http://localhost:1313/log/10.%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89hugo%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F/</guid>
       <description>有时候需要自定义或在别人的基础上修改页面输出格式，有时候我们缺少的是一种思路，本篇文章就是提供一个清晰的思路，让你可以快速编写出自己的页面。</description>
     </item>
   </channel>

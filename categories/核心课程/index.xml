@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>核心课程 :: 类别 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/</link>
+    <link>http://localhost:1313/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 28 May 2024 08:54:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/%E6%A0%B8%E5%BF%83%E8%AF%BE%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>嵌入式系统设计知识点</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
+      <link>http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Tue, 28 May 2024 08:54:27 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>http://localhost:1313/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</guid>
       <description>基于Cortex-A9微处理器的硬件平台 RISC和CISC RISC是精简指令集计算机，CISC是复杂指令集计算机&#xA;RISC（精简指令集计算机，Reduced Instruction Set Computer）和CISC（复杂指令集计算机，Complex Instruction Set Computer）是两种不同的计算机架构设计理念，它们在指令集的复杂性、指令执行方式、硬件实现等方面有所区别。以下是RISC和CISC的主要特点及其区别：</description>
     </item>
     <item>
       <title>电子电路</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</link>
+      <link>http://localhost:1313/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</link>
       <pubDate>Sun, 18 Feb 2024 17:25:35 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</guid>
+      <guid>http://localhost:1313/class/14.%E7%94%B5%E5%AD%90%E7%94%B5%E8%B7%AF/</guid>
       <description>模拟电子技术知识。 模拟电子技术基础笔记常用半导体器件 本征半导体 半导体：介于导体与绝缘体之间的&#xA;本征半导体： 载流子 3.1 本征激发 3.2 自由电子，带负电 3.3 空穴，带正电 自由电子和空穴都能到点。 3.4 复合：与本真激发相反的过程</description>
     </item>
     <item>
       <title>操作系统</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <link>http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Sun, 14 Jan 2024 18:36:31 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
       <description>Linux期末复习认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般压缩解压文件： ​&#xD;命令&#xD;gzip [文件名]&#xD;gunzip [解压文件名]&#xD;例子：</description>
     </item>
     <item>
       <title>AndroidStudio</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/</link>
+      <link>http://localhost:1313/class/2.androidstudio/</link>
       <pubDate>Thu, 11 Jan 2024 20:17:38 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/2.androidstudio/</guid>
+      <guid>http://localhost:1313/class/2.androidstudio/</guid>
       <description>AndroidStudio接下来将将介绍AndroidStudio的复习资料，包括AndroidStudio简介、AndroidStudio中 Make Project 、Clean Project 、Rebuild Project 的作用、Run窗口、manifests文件夹（清单文件夹）、java文件夹、res文件夹、Android系统体系结构四层等。</description>
     </item>
     <item>
       <title>计算机组成原理</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
+      <link>http://localhost:1313/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
       <pubDate>Wed, 10 Jan 2024 10:45:58 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
+      <guid>http://localhost:1313/class/13.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
       <description>过年&#xD;计算机组成原理-复习1 计算机系统概论 计算机的分类 计算机总体上分为：电子模拟计算机1和电子数字计算机。二者区别如下表&#xA;比较内容 电子数字计算机 电子模拟计算机 数据表示方法 0或1 电压 计算方式 数字计算 电压组合和测量值 控制方式 程序控制 盘上连线 精度 高 低 数据存储量 大 小 逻辑计算能力 强 无 计算机的五代变化 第一代1946~1957年， 数据处理 得到应用； 第二代1958~1964年， 工业控制 开始得到应用； 第三代1965~1971年， 小型计算机开始出现； 第四代1972~1990年， 微型计算机 开始出现； 第五代1991年开始， 单片机 开始出现 计算机的性能指标 处理机字长 指处理机运算其中一次能工处理的二进制数运算的位数，例如32位，64位。 存储器带宽 单位时间内从存储器独处的二进制数信息量，一般用 字节数/秒表示。</description>
     </item>
     <item>
       <title>51单片机</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/</link>
+      <link>http://localhost:1313/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/</link>
       <pubDate>Tue, 09 Jan 2024 15:04:24 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/</guid>
+      <guid>http://localhost:1313/class/8.51%E5%8D%95%E7%89%87%E6%9C%BA/</guid>
       <description>pretues+kiel5仿真软件配合使用时需要注意的地方不知道keil5从哪个版本开始就不支持了晶振的设置操作，我在网上搜也得到不同的答案，所以从哪个版本开始限制这就不提了， 好在这样的改变并不会形象我们使用keil5。最近在刚进阶学习stm32，用到了pretues_8.11 仿真软 件和keil5代码编辑器，自己把心中所得分享一下。</description>
     </item>
   </channel>

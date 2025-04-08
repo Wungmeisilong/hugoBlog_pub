@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>应用开发 :: 类别 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
+    <link>http://localhost:1313/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 23 Mar 2024 15:46:15 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>6.云端一体化的环境变量问题</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</link>
+      <link>http://localhost:1313/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sat, 23 Mar 2024 15:46:15 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://localhost:1313/log/6.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</guid>
       <description>参数context 与环境变量有关，不管是系统还是用户自定义的都用这个来获取，获取方式：context.env&#xA;先部署云函数到远端，然后在去远端添加环境变量，然后在本地运行虚拟机查看。 负载均衡的四种方式</description>
     </item>
     <item>
       <title>5.云端一体化如何查看云函数日志？</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/</link>
+      <link>http://localhost:1313/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/</link>
       <pubDate>Sat, 23 Mar 2024 14:53:36 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/</guid>
+      <guid>http://localhost:1313/log/5.%E4%BA%91%E7%AB%AF%E4%B8%80%E4%BD%93%E5%8C%96%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E4%BA%91%E5%87%BD%E6%95%B0%E6%97%A5%E5%BF%97/</guid>
       <description>调用云函数的时候我们总有输入输出结果不符合自己预期的时候，这个时候查看日志很重要！！在云端一体化开发过程中，我们可以通过下面的方式解决这一问题：</description>
     </item>
   </channel>

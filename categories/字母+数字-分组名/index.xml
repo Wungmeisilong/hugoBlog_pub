@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>字母&#43;数字-分组名 :: 类别 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%AD%97%E6%AF%8D&#43;%E6%95%B0%E5%AD%97-%E5%88%86%E7%BB%84%E5%90%8D/</link>
+    <link>http://localhost:1313/categories/%E5%AD%97%E6%AF%8D&#43;%E6%95%B0%E5%AD%97-%E5%88%86%E7%BB%84%E5%90%8D/</link>
     <description></description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 08 Apr 2025 00:46:39 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/categories/%E5%AD%97%E6%AF%8D&#43;%E6%95%B0%E5%AD%97-%E5%88%86%E7%BB%84%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/%E5%AD%97%E6%AF%8D&#43;%E6%95%B0%E5%AD%97-%E5%88%86%E7%BB%84%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cornell Notes Test</title>
-      <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/cornell-notes-test/</link>
+      <link>http://localhost:1313/log/cornell-notes-test/</link>
       <pubDate>Tue, 08 Apr 2025 00:46:39 +0800</pubDate>
-      <guid>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/cornell-notes-test/</guid>
+      <guid>http://localhost:1313/log/cornell-notes-test/</guid>
       <description></description>
     </item>
   </channel>

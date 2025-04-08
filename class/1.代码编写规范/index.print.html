@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
-  <head><script src="/Wungmeisilong/hugoBlog_pub.git/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Wungmeisilong/hugoBlog_pub.git/livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
@@ -14,7 +14,7 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
     <meta name="twitter:description" content="如何写一个标准的.h文件 以下内容来自B站。
 接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：
 class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator &#43;= (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };构造函数的特性 这一点需要关注下面的代码：">
-    <meta property="og:url" content="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/">
+    <meta property="og:url" content="http://localhost:1313/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/">
     <meta property="og:site_name" content="Maloudown">
     <meta property="og:title" content="1.代码编写规范 :: Maloudown">
     <meta property="og:description" content="如何写一个标准的.h文件 以下内容来自B站。
@@ -31,31 +31,31 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
     <meta itemprop="wordCount" content="3242">
     <meta itemprop="keywords" content="C&#43;&#43;">
     <title>1.代码编写规范 :: Maloudown</title>
-    <link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/" rel="canonical" type="text/html" title="1.代码编写规范 :: Maloudown">
-    <link href="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.xml" rel="alternate" type="application/rss+xml" title="1.代码编写规范 :: Maloudown">
-    <link href="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.md" rel="alternate" type="text/markdown" title="1.代码编写规范 :: Maloudown">
-    <link href="/Wungmeisilong/hugoBlog_pub.git/images/favicon.svg?1744078837" rel="icon" type="image/svg+xml">
-    <link href="/Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1744078837" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/Wungmeisilong/hugoBlog_pub.git/fonts/fontawesome/css/fontawesome-all.min.css?1744078837" rel="stylesheet"></noscript>
-    <link href="/Wungmeisilong/hugoBlog_pub.git/css/perfect-scrollbar/perfect-scrollbar.min.css?1744078837" rel="stylesheet">
-    <link href="/Wungmeisilong/hugoBlog_pub.git/css/theme.css?1744078837" rel="stylesheet">
-    <link href="/Wungmeisilong/hugoBlog_pub.git/css/format-print.css?1744078837" rel="stylesheet" id="R-format-style">
-    <link href="/Wungmeisilong/hugoBlog_pub.git/css/auto-complete/auto-complete.min.css?1744078837" rel="stylesheet">
-    <script src="/Wungmeisilong/hugoBlog_pub.git/js/auto-complete/auto-complete.min.js?1744078837" defer></script>
-    <script src="/Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.min.js?1744078837" defer></script>
-    <script src="/Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.stemmer.support.min.js?1744078837" defer></script>
-    <script src="/Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.multi.min.js?1744078837" defer></script>
-    <script src="/Wungmeisilong/hugoBlog_pub.git/js/lunr/lunr.zh.min.js?1744078837" defer></script>
-    <script src="/Wungmeisilong/hugoBlog_pub.git/js/search.js?1744078837" defer></script>
+    <link href="http://localhost:1313/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/" rel="canonical" type="text/html" title="1.代码编写规范 :: Maloudown">
+    <link href="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.xml" rel="alternate" type="application/rss+xml" title="1.代码编写规范 :: Maloudown">
+    <link href="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.md" rel="alternate" type="text/markdown" title="1.代码编写规范 :: Maloudown">
+    <link href="/images/favicon.svg?1744084675" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744084675" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744084675" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1744084675" rel="stylesheet">
+    <link href="/css/theme.css?1744084675" rel="stylesheet">
+    <link href="/css/format-print.css?1744084675" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1744084675" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1744084675" defer></script>
+    <script src="/js/lunr/lunr.min.js?1744084675" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1744084675" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1744084675" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1744084675" defer></script>
+    <script src="/js/search.js?1744084675" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = ``;
       window.relearn.path='\/class\/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83\/';
       window.relearn.relBasePath='..\/..';
-      window.relearn.relBaseUri='..\/..\/..\/..';
-      window.relearn.absBaseUri='http:\/\/localhost:1313\/Wungmeisilong\/hugoBlog_pub.git';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/Wungmeisilong/hugoBlog_pub.git/searchindex.zh.js?1744078837";
+      window.relearn.index_js_url="/searchindex.zh.js?1744084675";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -155,7 +155,7 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
   </style>
 
   </head>
-  <body class="mobile-support print" data-url="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/">
+  <body class="mobile-support print" data-url="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -215,18 +215,18 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Wungmeisilong/hugoBlog_pub.git/"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/Wungmeisilong/hugoBlog_pub.git/class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/"><span itemprop="name">技术博客 | 智能物联时代</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/class/"><span itemprop="name">课程</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">1.代码编写规范</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-markdown" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.md" title="显示 Markdown"><i class="fa-fw fab fa-markdown"></i></a>
+            <div class="topbar-button topbar-button-markdown" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.md" title="显示 Markdown"><i class="fa-fw fab fa-markdown"></i></a>
             </div>
-            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
+            <div class="topbar-button topbar-button-print" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.print.html" title="打印整章 (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/Wungmeisilong/hugoBlog_pub.git/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/1.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="1.网络编程 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/20.c%E5%8A%A0%E5%8A%A0%E9%9D%A2%E8%AF%95/1.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" title="1.网络编程 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/Wungmeisilong/hugoBlog_pub.git/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="嵌入式系统设计知识点 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/class/12.%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="嵌入式系统设计知识点 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="更多"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -246,7 +246,7 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
   <header class="headline">
 <div class="R-taxonomy taxonomy-tags cstyle tags" title="标签" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
-    <li><a class="term-link" href="/Wungmeisilong/hugoBlog_pub.git/tags/c&amp;#43;&amp;#43;/">C&#43;&#43;</a></li>
+    <li><a class="term-link" href="/tags/c&amp;#43;&amp;#43;/">C&#43;&#43;</a></li>
   </ul>
 </div>
   </header>
@@ -277,20 +277,20 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {};</span></span></code></pre></div>
 <h2 id="关于const修饰符">关于const修饰符</h2>
 <p>如上面说到的，函数返回最好是加const，这样可以应付下面情况的发生。</p>
-<div class="tab-panel" data-tab-group="be92ccc70dda19e0584539dcdc5695dc">
+<div class="tab-panel" data-tab-group="75686a292feccc9770238ec59918b68e">
   <div class="tab-nav">
     <div class="tab-nav-title">const的使用</div>
     <button
       data-tab-item="加constfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;" tabindex="-1"
-      onclick="switchTab('be92ccc70dda19e0584539dcdc5695dc','加constfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('75686a292feccc9770238ec59918b68e','加constfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 加const</span>
     </button>
     <button
       data-tab-item="不加constfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: red;"
-      onclick="switchTab('be92ccc70dda19e0584539dcdc5695dc','不加constfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('75686a292feccc9770238ec59918b68e','不加constfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 不加const</span>
     </button>
@@ -342,8 +342,8 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 </span></span><span style="display:flex;"><span>        }</span></span></code></pre></div>
 <p>向上面的函数就是使用了引用返回。</p>
 <h2 id="操作符重载-1成员函数">操作符重载-1：成员函数</h2>
-<p><a href="#R-image-dbfb09fecf8f551db90638e02cc053f2" class="lightbox-link"><img alt="操作符重载" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dbfb09fecf8f551db90638e02cc053f2"><img alt="操作符重载" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image.png"></a></p>
+<p><a href="#R-image-05657f52471cba442e6602f8f8ba7944" class="lightbox-link"><img alt="操作符重载" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-05657f52471cba442e6602f8f8ba7944"><img alt="操作符重载" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image.png"></a></p>
 <h2 id="操作符重载-2非成员函数">操作符重载-2：非成员函数</h2>
 <p>假设现在要计算复数的加减，如下：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    complex <span style="color:#a6e22e">com1</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>);
@@ -359,8 +359,8 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 <p>接下来在考虑一个问题，就是如果我们只是做<code>cout&lt;&lt;com1;</code>那么对于&laquo;函数返回值可以是void类,但是如果我们做的是<code>cout&lt;&lt;com1&lt;&lt;com2&lt;&lt;endl;</code>
 这样的操作返回类型为void类型，那么当运行<code>cout&lt;&lt;com1</code>后就无法运行<code>&lt;&lt;com2&lt;&lt;endl</code>的代码.</p>
 <p>很显然要让代码继续运行，我们还需要返回iostream类型，而且使用<code>return by reference</code>返回方法，也就是返回引用。如下图：
-<a href="#R-image-c008ee14df308dc8454a0881332c246e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c008ee14df308dc8454a0881332c246e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-1.png"></a></p>
+<a href="#R-image-92d0f2b36655720a7bc0885ff70747a9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-92d0f2b36655720a7bc0885ff70747a9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-1.png"></a></p>
 <h2 id="小结">小结</h2>
 <p>通过以上的简单讲解，我们可以总结一下，再写一个类的时候，我们需要注意以下几点：</p>
 <ul>
@@ -372,14 +372,14 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 <p>是否返回引用最最好的判断标准就是，值在经过函数运算后存储在函数外，或说是一个以存在的存储地址，否则不返回引用</p>
 <h2 id="接下来通过学习stringh库进一步了解指针的使用">接下来通过学习string.h库，进一步了解指针的使用</h2>
 <p>一般有指针的类需要写三个特殊函数拷贝构造、拷贝析构、拷贝赋值，</p>
-<p><a href="#R-image-a57b7c3bc3bddd1a2b49944f7ad2dcc4" class="lightbox-link"><img alt="String" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a57b7c3bc3bddd1a2b49944f7ad2dcc4"><img alt="String" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-2.png"></a>
-<a href="#R-image-3e881d7fee5a26b8a1f8813240deb3ee" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3e881d7fee5a26b8a1f8813240deb3ee"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-3.png"></a>
-<a href="#R-image-a108229324b669be1382561981a97545" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-4.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a108229324b669be1382561981a97545"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-4.png"></a>
-<a href="#R-image-77b70c0ea787ea62aa3316e869359745" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-5.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-77b70c0ea787ea62aa3316e869359745"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-5.png"></a></p>
+<p><a href="#R-image-b7a36b8d5d4933e5158b2442c9db4cc0" class="lightbox-link"><img alt="String" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b7a36b8d5d4933e5158b2442c9db4cc0"><img alt="String" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-2.png"></a>
+<a href="#R-image-396336d02d35c3fab085d09bcb4fbe30" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-396336d02d35c3fab085d09bcb4fbe30"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-3.png"></a>
+<a href="#R-image-9d1684ee8c1f148d673c5de165e1d9ee" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9d1684ee8c1f148d673c5de165e1d9ee"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-4.png"></a>
+<a href="#R-image-c89945c08f01f6e901c786272dd98431" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c89945c08f01f6e901c786272dd98431"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-5.png"></a></p>
 <p>有时候还需要用到new 和 delete。</p>
 <h2 id="stack栈和heap堆">stack（栈）和heap（堆）</h2>
 <p>如下代码：</p>
@@ -420,25 +420,25 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 <h3 id="调用new和delete的过程">调用new和delete的过程</h3>
 <p>在使用new的地方需要使用delete清理内存，防止内存泄露。</p>
 <p>调用new过程：</p>
-<p><a href="#R-image-596180bab688ccf5cff2d86cd29a2ca3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-6.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-596180bab688ccf5cff2d86cd29a2ca3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-6.png"></a></p>
+<p><a href="#R-image-2f38963ed2316c5f3ad2ea79520766b7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2f38963ed2316c5f3ad2ea79520766b7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-6.png"></a></p>
 <p>调用delete的过程：</p>
-<p><a href="#R-image-844d64a9dddc8987fef398886f023c5a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-7.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-844d64a9dddc8987fef398886f023c5a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-7.png"></a>
-<a href="#R-image-7941feccd50e5b72eef11aad37cf210e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-8.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7941feccd50e5b72eef11aad37cf210e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-8.png"></a></p>
+<p><a href="#R-image-fceb0969f93e1b428eb829c0afe5e2ff" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fceb0969f93e1b428eb829c0afe5e2ff"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-7.png"></a>
+<a href="#R-image-7e2f571baba36b5b2be6dd208e95b9ea" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e2f571baba36b5b2be6dd208e95b9ea"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-8.png"></a></p>
 <p>代码 分配内存大小左图是调试模式下的内存分配，右图是非调试模式下分配的内存</p>
-<p><a href="#R-image-2b2b4f06f45dc14feeb9406159996c37" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-9.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2b2b4f06f45dc14feeb9406159996c37"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-9.png"></a></p>
+<p><a href="#R-image-c6f8819ff19810388512f0fb274613e7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c6f8819ff19810388512f0fb274613e7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-9.png"></a></p>
 <p>new与delete的搭配，在删除数组时需要加上[]否则编译器不知道你要删的是数组：</p>
-<p><a href="#R-image-bbec796b3ffc57f9cdec30d0b977d206" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-10.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bbec796b3ffc57f9cdec30d0b977d206"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-10.png"></a></p>
+<p><a href="#R-image-7e92dbce74537c7778f9214d7a53aa37" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e92dbce74537c7778f9214d7a53aa37"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-10.png"></a></p>
 <h2 id="new和delete的补充">new和delete的补充</h2>
 <p>对new和delete的重载，用于设计内存管理，如内存池等操作。</p>
 <h3 id="重载newdelete">重载::new,::delete</h3>
 <p>重载的函数中，new操作会接收一个大小，该大小由编译器传入，而delete传入的是一个指针，如下图；
-<a href="#R-image-ecd908fbfdf693c5ae3d372520d4c27b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-16.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ecd908fbfdf693c5ae3d372520d4c27b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-16.png"></a></p>
+<a href="#R-image-84d0ef51a97aecba40b57169f742660c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-16.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-84d0ef51a97aecba40b57169f742660c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-16.png"></a></p>
 <p>如果不想使用类中的new和delete，可以在二者之前加上:,如::new,::delete，这样在调用函数时就不会调用类设计中的new和delete重载，而是全局的。</p>
 <h3 id="类中重载的new和delete">类中重载的new和delete</h3>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//类
@@ -548,49 +548,49 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 </span></span><span style="display:flex;"><span>delete[] size <span style="color:#f92672">=</span> <span style="color:#ae81ff">104</span></span></span></code></pre></div>
 <h3 id="为什么new操作会多出8个字节呢">为什么new[]操作会多出8个字节呢？</h3>
 <p>我看课程视频，老师说new[]分配的内存块会在最前面存储计数量，占用4个字节，表示数组大小，但是我在电脑上运行会多出8个字节，查阅资料可能与系统、对齐方式、编译器等有关。</p>
-<p><a href="#R-image-bf56efbe9ca98c0df09ff5a34697b332" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-17.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bf56efbe9ca98c0df09ff5a34697b332"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-17.png"></a></p>
+<p><a href="#R-image-3c71211758028e02b84a07cfb28c8db4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-17.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3c71211758028e02b84a07cfb28c8db4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-17.png"></a></p>
 <h2 id="对new的分配额外内存">对new的分配额外内存</h2>
 <p>假设分配内存的同时需要额外分配一定的内存，可以参考下面的代码：
-<a href="#R-image-634737c4a28a14e9b3337cd9f2a80587" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-18.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-634737c4a28a14e9b3337cd9f2a80587"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-18.png"></a></p>
+<a href="#R-image-d8ccd254e1b7a48e42a1b44e8ecae481" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-18.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d8ccd254e1b7a48e42a1b44e8ecae481"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-18.png"></a></p>
 <h2 id="小结-1">小结</h2>
 <p>对于包含有指针的类，在必要时写上拷贝构造、拷贝赋值、析构函数，如下代码</p>
-<div class="tab-panel" data-tab-group="17ab9ca7d0dfd672461606ada0842f39">
+<div class="tab-panel" data-tab-group="b78d2dd2c7eb8bae89b1f2aa35afd6bb">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="class-stringfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;" tabindex="-1"
-      onclick="switchTab('17ab9ca7d0dfd672461606ada0842f39','class-stringfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('b78d2dd2c7eb8bae89b1f2aa35afd6bb','class-stringfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> class String</span>
     </button>
     <button
       data-tab-item="destructorfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('17ab9ca7d0dfd672461606ada0842f39','destructorfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('b78d2dd2c7eb8bae89b1f2aa35afd6bb','destructorfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Destructor</span>
     </button>
     <button
       data-tab-item="constructorfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: red;"
-      onclick="switchTab('17ab9ca7d0dfd672461606ada0842f39','constructorfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('b78d2dd2c7eb8bae89b1f2aa35afd6bb','constructorfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Constructor</span>
     </button>
     <button
       data-tab-item="copy-constructorfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: origin;"
-      onclick="switchTab('17ab9ca7d0dfd672461606ada0842f39','copy-constructorfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('b78d2dd2c7eb8bae89b1f2aa35afd6bb','copy-constructorfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Copy Constructor</span>
     </button>
     <button
       data-tab-item="copy-assignment-operatorfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: green;"
-      onclick="switchTab('17ab9ca7d0dfd672461606ada0842f39','copy-assignment-operatorfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('b78d2dd2c7eb8bae89b1f2aa35afd6bb','copy-assignment-operatorfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Copy Assignment Operator</span>
     </button>
@@ -671,24 +671,24 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
   </div>
 </div>
 <h2 id="补充内容static">补充内容static</h2>
-<p><a href="#R-image-45ed18814844737ef3f3001f9bc710aa" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/053bb0f3f18235ed9a9ba76e717a1673.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-45ed18814844737ef3f3001f9bc710aa"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/053bb0f3f18235ed9a9ba76e717a1673.png"></a></p>
+<p><a href="#R-image-f706bd400877ba7007f7571e66d5f92f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/053bb0f3f18235ed9a9ba76e717a1673.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f706bd400877ba7007f7571e66d5f92f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/053bb0f3f18235ed9a9ba76e717a1673.png"></a></p>
 <h3 id="static在private中的使用例子">static在private中的使用例子</h3>
-<p><a href="#R-image-3a36005753d54d2cfd5c77b37d761ade" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-11.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a36005753d54d2cfd5c77b37d761ade"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-11.png"></a>
-<a href="#R-image-a6d44ce70b72d290ad70fdd42b7f4b9b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-12.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a6d44ce70b72d290ad70fdd42b7f4b9b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-12.png"></a></p>
+<p><a href="#R-image-646dc9c2bdf3fb3e9006ffc65c0d4301" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-646dc9c2bdf3fb3e9006ffc65c0d4301"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-11.png"></a>
+<a href="#R-image-5956dad7a941ecc94ffdfccd9b4c7890" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5956dad7a941ecc94ffdfccd9b4c7890"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-12.png"></a></p>
 <h3 id="class-template">class template</h3>
-<p><a href="#R-image-0297b52f5c20c6fcbc5b8cc895ed5fa2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-13.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0297b52f5c20c6fcbc5b8cc895ed5fa2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-13.png"></a></p>
+<p><a href="#R-image-dbc60a38b16550fd23502fca983897f5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dbc60a38b16550fd23502fca983897f5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-13.png"></a></p>
 <h3 id="function-template">function template</h3>
 <h3 id="member-template-成员模板">member template 成员模板</h3>
 <p>类模板中，还有类模板，通常是对构造函数的操作，如下图：
-<a href="#R-image-0a372028eed8aa2f5cea0b6f148cfda5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-14.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a372028eed8aa2f5cea0b6f148cfda5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-14.png"></a></p>
+<a href="#R-image-8040162db0f0a257921d520b559a1364" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8040162db0f0a257921d520b559a1364"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-14.png"></a></p>
 <p>如下图代码
-<a href="#R-image-4e0c8cb7b586800863fbb0026190a167" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-15.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e0c8cb7b586800863fbb0026190a167"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/Wungmeisilong/hugoBlog_pub.git/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-15.png"></a></p>
+<a href="#R-image-57b8e24b9201371d2b17ee8fff6112a6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-15.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-57b8e24b9201371d2b17ee8fff6112a6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-15.png"></a></p>
 <p>用意就是当一个指针指向父类时，初始化让他指向子类，那么此时需要实现上图类中的代码。</p>
 <h3 id="namespace命令空间">namespace（命令空间）</h3>
 <p>使用示例：</p>
@@ -697,20 +697,20 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 </span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">……</span>
 </span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
 <p>使用方法：</p>
-<div class="tab-panel" data-tab-group="70414e0433f87ffbd28603490c1491b4">
+<div class="tab-panel" data-tab-group="553ece3fc86270e7a18c936717e3d60d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="using-directionfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;" tabindex="-1"
-      onclick="switchTab('70414e0433f87ffbd28603490c1491b4','using-directionfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('553ece3fc86270e7a18c936717e3d60d','using-directionfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> using direction</span>
     </button>
     <button
       data-tab-item="using-declarationfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('70414e0433f87ffbd28603490c1491b4','using-declarationfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('553ece3fc86270e7a18c936717e3d60d','using-declarationfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> using declaration</span>
     </button>
@@ -759,9 +759,9 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 <div class="box attachments cstyle default" style="--VARIABLE-BOX-color: fuchsia;">
   <div class="box-label"><i class="fab fa-hackerrank"></i> 附件</div>
   <ul class="box-content attachments-files">
-      <li><a href="/Wungmeisilong/hugoBlog_pub.git/Class/1.%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99%e8%a7%84%e8%8c%83/_index.files/complex.h">complex.h</a> (546 B)</li>
-      <li><a href="/Wungmeisilong/hugoBlog_pub.git/Class/1.%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99%e8%a7%84%e8%8c%83/_index.files/Foo.hpp">Foo.hpp</a> (1 KB)</li>
-      <li><a href="/Wungmeisilong/hugoBlog_pub.git/Class/1.%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99%e8%a7%84%e8%8c%83/_index.files/String.h">String.h</a> (1 KB)</li>
+      <li><a href="/Class/1.%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99%e8%a7%84%e8%8c%83/_index.files/complex.h">complex.h</a> (546 B)</li>
+      <li><a href="/Class/1.%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99%e8%a7%84%e8%8c%83/_index.files/Foo.hpp">Foo.hpp</a> (1 KB)</li>
+      <li><a href="/Class/1.%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99%e8%a7%84%e8%8c%83/_index.files/String.h">String.h</a> (1 KB)</li>
   </ul>
 </div>
   <footer class="footline">
@@ -769,7 +769,7 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 <div class="R-taxonomy taxonomy-categories cstyle" title="类别" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
-    <li><a class="term-link" href="/Wungmeisilong/hugoBlog_pub.git/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">R1-编程语言</a></li>
+    <li><a class="term-link" href="/categories/r1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">R1-编程语言</a></li>
   </ul>
 </div>
   </footer>
@@ -777,8 +777,8 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
         </div>
       </main>
     </div>
-    <script src="/Wungmeisilong/hugoBlog_pub.git/js/clipboard/clipboard.min.js?1744078837" defer></script>
-    <script src="/Wungmeisilong/hugoBlog_pub.git/js/perfect-scrollbar/perfect-scrollbar.min.js?1744078837" defer></script>
-    <script src="/Wungmeisilong/hugoBlog_pub.git/js/theme.js?1744078837" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1744084675" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1744084675" defer></script>
+    <script src="/js/theme.js?1744084675" defer></script>
   </body>
 </html>

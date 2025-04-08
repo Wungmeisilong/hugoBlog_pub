@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1.博客优化笔记 :: Maloudown</title>
-    <link>http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/</link>
+    <link>http://localhost:1313/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/</link>
     <description>代码分制表 以&lt; tabs title=&#34;file name&#34; &gt;，&lt; /tabs &gt;结尾； 然后里面写以% tab title=&#34;code name&#34; style=&#34;info&#34; color=&#34;blue &#34; %，% /tab %结尾 他们都需要用{{}}括起来 ​&#xD;代码&#xD;{{&lt; tabs title=&#34;hello.&#34; &gt;}} //代码块一 {{% tab title=&#34;py&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} //代码块二 {{% tab title=&#34;sh&#34; %}} ```markdown **这里写代码** ``` {{% /tab %}} {{&lt; /tabs &gt;}}</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/Wungmeisilong/hugoBlog_pub.git/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/log/1.%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
