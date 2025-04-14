@@ -401,6 +401,301 @@ namespace test_class
 - protected修饰的成员，只能在类内和子类中访问
 - private修饰的成员，只能在类内访问
 
+三、struct 与 Class 的区别
+
+- 默认访问权限不同
+- struct 默认权限为 public
+- class 默认权限为 private
+
+四、设置访问权限
+
+一般对于变量设置为private，当要访问private的变量时，通过public的函数来访问。
+
+```cpp
+namespace test_class
+{
+	class Person
+	{
+	private:
+		//姓名
+		string m_Name;
+		//年龄
+		int m_Age;
+    public:
+		void setAge(int age)
+		{
+			m_Age = age;
+        }
+    };
+    int main(){
+        Person p;
+        p.setAge(18);
+        return 0;
+    }
+}
+```
+
+### 对象特性
+
+一、初始化和清零
+如果我们不提供构造函数，编译器会自动提供默认构造函数，但两个函数是空实现。
+
+1.作用
+
+- 构造函数：主要作用在于粗昂见对象那个时为对象成员属性赋值，
+- 析构函数：主要作用在于对象销毁前系统自动调用析构函数，执行一些清理工作。
+
+2.语法
+![alt text](image-15.png)
+
+二、构造函数的分类及调用
+
+1. 按参数分类：有参构造和无参构造(默认构造函数)
+2. 按类型分类：普通构造和拷贝构造
+
+3.调用规则
+
+- 如果定义了有参构造，最好显示定义无参构造
+- 如果定义了拷贝构造，最好显示定义赋值构造
+
+```cpp
+namespace test
+{
+	//构造函数的分类及调用
+
+	//分类 按照参数分：有参构造函数和无参构造函数（默认构造函数）
+	//		按照类型分：普通构造和拷贝构造
+	class Person
+	{
+		public:
+			Person() {
+				cout << "调用无参构造函数" << endl;
+			}
+			Person(int Age)
+			{
+				age = Age;
+				cout << "调用有参构造函数" << endl;
+			}
+			Person(const Person &p)
+			{
+				age = p.age;
+				cout << "调用拷贝构造函数" << endl;
+			}
+			~Person() {
+				cout << "调用析构函数" << endl;
+			}
+
+		private:
+			int age;
+	};
+	//调用
+	void test() {
+		//1.括号法
+		Person p1;
+		Person p2(18);
+		Person p3(p2);
+		//注意事项
+		// 如果写的是 Person p1();那么编译器会认为是函数声明，而不会调用默认构造函数
+
+		//2.显示法
+		Person p1;
+		Person p2 = Person(10);
+		Person p3 = Person(p2);
+
+		//匿名对象：只写Person (10)的形式，特点是当前行执行结束后，系统会立即回收
+		// 注意2：
+		// 不要使用拷贝构造函数初始化匿名对象、编译器会认为Person (p3) === Person p3;即对象声明
+		//3.隐式调用
+		Person p4 = 10;//隐式转换为Person p4 = Person(10);
+	}
+}
+```
+三、拷贝构造函数调用时机
+
+1.使用一个已经创建完毕的对象来初始化一个新对象
+2.值传递的方式给函数参数传值
+3.值方式返回局部对象
+```cpp
+namespace test_copy
+{
+	//拷贝构造函数调用时机
+	class Person
+	{
+	public:
+		Person() {
+			cout << "调用无参构造函数" << endl;
+		}
+		Person(int Age)
+		{
+			age = Age;
+			cout << "调用有参构造函数" << endl;
+		}
+		Person(const Person& p)
+		{
+			age = p.age;
+			cout << "调用拷贝构造函数" << endl;
+		}
+		int getAge() {
+			return age;
+		}
+		~Person() {
+			cout << "调用析构函数" << endl;
+		}
+
+	private:
+		int age;
+	};
+	//1.使用一个创建好的对象初始化一个新的对象
+	void test01() {
+		Person p(19);
+		Person p2(p);
+	}
+	//2.值传递方式传给函数参数传值
+	void doWork01(Person p){
+		cout << "值传递方式调用拷贝构造函数" << endl;
+	}
+	//3.以返回值的方式返回
+	Person doWork02() {
+		Person p1;
+		cout << (int*)&p1 << endl;
+		return p1;//返回时不直接返回p而是通过拷贝构造函数，拷贝一份返回给外面。当然，也有存在被编译器优化的情况
+					//这个时候就不会调用拷贝构造函数
+	}
+	void test02() {
+		Person p = doWork02();
+		cout << (int*)&p << endl;
+		//cout << p.getAge() << endl;
+	}
+}
+```
+
+四、构造函数调用规则
+
+1.默认情况下，c++编译器至少给一个类添加3个函数
+- 默认构造函数(无参，函数体为空)
+- 默认析构函数(无参，函数体为空)
+- 默认拷贝构造函数，对属性值进行拷贝
+
+2.如果我们提供了有参构造函数，编译器就不会提供默认构造函数，但会提供默认拷贝构造函数
+
+3.如果我们提供了拷贝构造函数，编译器就不会提供其他构造函数
+
+五、深拷贝与浅拷贝
+
+1.浅拷贝：简单的赋值拷贝操作
+2.深拷贝：在堆区重新申请空间，进行拷贝操作
+
+```cpp
+namespace test_deepcopy
+{
+	class Person
+	{
+	public:
+		Person(int age,int height);
+		Person(const Person& p);
+		~Person();
+
+		int m_Age;
+		int* m_Height;
+	};
+
+	Person::Person(int age,int height)
+	{
+		m_Age = age;
+		m_Height = new int(height);//在堆区申请一块内存空间用于存储身高
+		cout << "调用构有参造函数" << endl;
+	}
+	Person::Person(const Person& p)
+	{
+		m_Age = p.m_Age;
+		//m_Height = p.m_Height;//这段代码就是浅拷贝操作
+		m_Height = new int(*p.m_Height);//这段代码就是在堆区另申请内存空间，存储赋值过来的身高值
+	}
+	Person::~Person()
+	{
+		if (m_Height != NULL)
+		{
+			delete m_Height;
+			m_Height = NULL;//避免野指针出现置空
+		}
+		cout << "调用析构函数" << endl;
+	}
+	void test()
+	{
+		Person p(18, 180);
+		cout << "person年龄：" << p.m_Age << "身高：" << *p.m_Height << endl;
+
+		// 为测试浅拷贝与深拷贝写如下代码
+		Person p1(p);//在没有写拷贝构造函数中的申请内存空间情况下，程序会报错，原因是程序是浅拷贝，导致第二次调用析构函数的时候报错
+		cout << "person年龄：" << p1.m_Age << "身高：" << *p1.m_Height << endl;
+	}
+}
+```
+
+结果如下：
+
+![alt text](image-16.png)
+
+六、初始化列表
+
+1.作用
+
+用于初始化属性
+
+2.语法
+![alt text](QQ_1744622930354.png)
+
+```cpp
+namespace test_init
+{
+	class Person
+	{
+	public:
+		//初始化列表
+		//Person() :m_A(10), m_B(20), m_C(30) { }
+		Person(int a,int b,int c) :m_A(a), m_B(b), m_C(c) { }
+
+		~Person() {}
+
+		int m_A;
+		int m_B;
+		int m_C;
+		
+	};
+	void test() {
+		Person p(10, 20, 30);
+		cout << "m_A:" << p.m_A << endl;
+		cout << "m_B:" << p.m_B << endl;
+		cout << "m_C:" << p.m_C << endl;
+	}
+}
+```
+
+七、类对象作为类成员
+
+1.类中的成员可以是另一个类的对象，我们称该成员为对象成员
+
+2.类对象作为类成员时，其构造顺序和声明顺序一致，析构顺序和构造相反
+
+八、静态成员
+
+1.静态成员变量
+
+- 所有对象共享同一份数据
+- 在编译阶段分配内存
+- 类内声明，类外初始化
+
+2.静态成员函数
+
+- 所有对象共享同一个函数
+- 静态成员函数只能访问静态成员变量
+
+```cpp
+namespace test_static
+{
+	class Person
+	{
+	public:
 ### 继承
 
 ### 多态
