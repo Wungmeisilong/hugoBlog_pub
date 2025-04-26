@@ -1321,9 +1321,389 @@ namespace test_assig
 }
 ```
 
+#### 关系运算符重载
+
+作用：重载关系运算符。可以让两个自定义类型对象进行对比操作。
+
+```cpp
+namespace test_relation
+{
+	class Person
+	{
+	public:
+		Person(string name, int age)
+		{
+			m_Name = name;
+			m_Age = age;
+		}
+		bool operator==(Person& p)
+		{
+			if (m_Age == p.m_Age && m_Name == p.m_Name)
+			{
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		int m_Age;
+		string m_Name;
+
+	};
+	void test()
+	{
+		Person p1("JUN", 18);
+		Person p2("JUN", 18);
+
+		if (p1 == p2)
+		{
+			cout << "p1与p2相等" << endl;
+		}
+		else
+		{
+			cout << "p1与p2不相等" << endl;
+		}
+	}
+}
+```
+
+#### 函数调用运算符重载
+
+- 函数调用运算符()也可以重载
+- 由于重载后使用的方式非常像函数的调用，因此称之为**仿函数**
+- 仿函数没有固定写法，非常灵活
+
+```cpp
+namespace test_call
+{
+	class MyPrint
+	{
+	public:
+		void operator()(string text)
+		{
+			cout << text << endl;
+		}
+		void operator()(int a, int b)
+		{
+			cout << a + b << endl;
+		}
+	};
+	void test()
+	{
+		MyPrint myprint;
+		myprint("hello world");
+		myprint(1, 2);
+		cout<<MyPritn()("hello world")<<endl;//MyPritn()是匿名对象，作用域在当前行，所以输出后立即销毁
+	}
+}
+```
+
 ### 继承
 
+#### 继承的基本语法
+
+```cpp
+class 子类 : 继承方式 父类
+{
+	//类体
+};
+```
+
+继承方式一共有三种：public、protected、private
+
+继承后的访问权限：
+
+- 父类的私有成员，哪种方式继承都无法访问；
+- public继承,原来是什么还是什么：public-->public，protected-->protected；
+- protected继承，都变保护：public-->protected，protected-->protected；
+- private继承，都变私有：public-->private，protected-->private；
+
+protected与public的区别：
+
+-
+
+#### 继承中的对象模型
+
+```cpp
+namespace test_model
+{
+	class Base {
+	public:
+		int m_A;
+	protected:
+		int m_B;
+	private:
+		int m_C;
+	};
+	class Son :public Base {
+	public:
+		int m_D;
+	};
+	void test(){
+		cout<<"sizeof(Base) = "<<sizeof(Base)<<endl;
+	}
+}
+
+```
+
+结果为16，因此可知父类中的所有非静态成员属性都被子类继承了，并且子类对象中包含了父类对象，父类对象在子类对象中是隐藏的。
+
+另一种方式查看类的大小：
+![alt text](image-27.png)
+
+#### 继承构造和析构函数
+
+问题：父类和子类的构造和析构函数的调用顺序是什么？
+
+```cpp
+namespace test_construct_destruct{
+	class Base{
+		public:
+			Base(){
+				cout<<"Base构造函数"<<endl;
+			}
+			~Base(){
+				cout<<"Base析构函数"<<endl;
+			}
+	};
+	class Son:public Base{
+		public:
+			Son(){
+				cout<<"Son构造函数"<<endl;
+			}
+			~Son(){
+				cout<<"Son析构函数"<<endl;
+			}
+	}
+}
+```
+
+结果为：
+
+```
+Base构造函数
+Son构造函数
+Son析构函数
+Base析构函数
+```
+
+#### 继承同名成员处理方式
+
+问题：当子类和父类出现同名的成员，如何通过子类对象，访问到父类和子类的同名成员？
+
+- 访问子类同名成员直接访问即可；
+- 访问父类同名成员需要加作用域；
+
+```cpp
+namespace test_same_name{
+	class Base{
+		public:
+			Base()
+			{
+				m_A = 100;
+			}
+			void func(){
+				cout<<"Base func()"<<endl;
+			}
+			void func(int a){
+				cout<<"Base func(int a)"<<endl;
+			}
+			int m_A;
+	};
+	class Son:public Base{
+		public:
+			Son()
+			{
+				m_A = 200;
+			}
+			void func(){
+				cout<<"Son func()"<<endl;
+			}
+			int m_A;
+	};
+	//同名的成员属性
+	void test01(){
+		Son s;
+		cout<<s.m_A<<endl;
+		cout<<s.Base::m_A<<endl;
+	}
+	//同名的函数
+	void test02(){
+		Son s;
+		s.func():
+		s.Base::func();//通过作用域解决
+
+		//下面的代码不通过，因为当子类和父类存在相同函数名时，子类的同名函数会屏蔽父类的同名函数，要想访问父类的同名函数，需要加作用域
+		//s.func(10);
+	}
+}
+```
+
+#### 继承同名静态成员处理方式
+
+问题：继承中同名的静态成员在子类对象上如何进行访问？
+
+- 访问子类同名静态成员，直接通过子类对象访问即可；
+- 访问父类同名静态成员，需要加作用域；
+
+```cpp
+namespace test_same_static{
+	class Base{
+		public:
+			static int m_A;
+			static void func(){
+				cout<<"Base func()"<<endl;
+			}
+	};
+	class Son:public Base{
+		public:
+			static int m_A;
+			static void func(){
+				cout<<"Son func()"<<endl;
+			}
+	};
+
+
+	int Base::m_A = 100;
+	int Son::m_A = 200;
+	//同名的静态成员属性
+	void test01(){
+		Son s;
+
+		//通过对象访问
+		cout<<s.m_A<<endl;
+		cout<<s.Base::m_A<<endl;
+
+		//通过类名访问
+		cout<<Son::m_A<<endl;
+		cout<<Son::Base::m_A<<endl;
+	}
+	//同名的静态成员函数
+	void test02(){
+		Son s;
+		s.func();
+		s.Base::func();
+
+		//通过对象访问
+		Son::func();
+		Son::Base::func();
+	}
+}
+```
+
+#### 多继承
+
+C++允许一个类继承多个类：
+
+语法：`class 子类:继承方式 父类1, 继承方式 父类2...`
+
+多继承可能会引发父类中有同名成员出现的情况，需要加作用域区分。
+
+C++实际开发中不建议使用多继承，因为会引发很多二义性问题。
+
+```cpp
+namespace test_multi_inherit{
+	class Base1{
+		public:
+			Base1(){
+				m_A = 100;
+				cout<<"Base1构造函数"<<endl;
+			}
+			int m_A;
+	}；
+	class Base2{
+		public:
+			Base2(){
+				m_A = 200;
+				cout<<"Base2构造函数"<<endl;
+			}
+			int m_A;
+	};
+	class Son:public Base1,public Base2{
+		public:
+			Son(){
+				m_A = 300;
+				m_B = 400;
+				cout<<"Son构造函数"<<endl;
+			}
+			int m_A;
+			int m_B;
+	};
+	void test(){
+		Son s;//调用Base1构造函数，再调用Base2构造函数，最后调用Son构造函数
+	}
+}
+```
+
+#### 菱形继承
+
+菱形继承的概念：
+
+- 两个派生类继承同一个基类；
+- 又有一个类同时继承这两个派生类；
+- 这个类就叫做菱形继承；
+- 菱形继承会导致**二义性问题**；
+
+经典菱形继承案例：
+
+![alt text](image-28.png)
+
+出现的问题：
+![alt text](image-29.png)
+
+如何解决：
+```cpp
+namespace test_diamond_inherit {
+	//动物类
+	class Animal {
+	public:
+		int m_Age;
+	};
+	//利用虚继承可以解决菱形继承的问题
+	//在继承之前加virtual
+	//羊类
+	class Sheep :virtual public Animal {
+	};
+	//驼类
+	class Tuo :virtual public Animal {
+	};
+	//羊驼类
+	class SheepTuo :public Sheep, public Tuo {
+	};
+	void test() {
+		SheepTuo st;
+		//当菱形继承，连个父类拥有相同的数据时，需要加作用域加以区分
+		st.Sheep::m_Age = 10;
+		st.Tuo::m_Age = 20;
+
+		
+		cout << "st.Sheep::m_Age = " << st.Sheep::m_Age << endl;
+		cout << "st.Tuo::m_Age = " << st.Tuo::m_Age << endl;
+		//当添加virtual关键字后，就可以使用下面的语句，而且不会出现二义性
+		cout << "st.m_Age = " << st.m_Age << endl;
+	}
+}
+```
+
+在没有使用virtual前，输入`cl /d1 repoterSingleClassLayoutSheepTuo 类与对象.cpp`后的结果如下图
+![alt text](image-30.png)
+
+加入virtual后，输入`cl /d1 repoterSingleClassLayoutSheepTuo 类与对象.cpp`后的结果如下图，下图就解释了为什么使用virtual能解决菱形继承问题。
+![alt text](image-31.png)
+
+## 多态
+
+### 多态的基本概念
+
+多态分为两类：
+	class Donkey:public Sheep,public Horse{
+	};
+	void test(){
+		Donkey d;
+
 ### 多态
+
+——————————————————————————————————————————————————————————————————————————————————————————————-
 
 ### 类
 
