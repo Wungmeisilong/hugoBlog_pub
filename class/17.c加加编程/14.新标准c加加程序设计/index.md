@@ -682,7 +682,7 @@ namespace test_init
 1.静态成员变量
 
 - 所有对象共享同一份数据
-- 在编译阶段分配内存
+- 在编译阶段分配内存（代码运行前分配内存，在全局区）
 - 类内声明，类外初始化
 
 2.静态成员函数
@@ -690,12 +690,637 @@ namespace test_init
 - 所有对象共享同一个函数
 - 静态成员函数只能访问静态成员变量
 
+3.访问静态成员变量
+![alt text](image-17.png)
+
+4.静态成员变量也有访问权限
+
+- 公有静态成员变量类外可以访问
+- 私有静态成员变量类外不可以访问
+
 ```cpp
 namespace test_static
 {
 	class Person
 	{
 	public:
+		static int m_A;
+		int m_B;
+	private:
+		static int m_C;
+	};
+	int Person::m_A = 10;
+	void test01() {
+		//1.通过对象访问
+		Person p;
+		p.m_A = 100;
+		cout << "p.m_A = " << p.m_A << endl;
+		cout << "p.m_B = " << p.m_B << endl;
+		//2.通过类名访问
+		cout << "Person::m_A = " << Person::m_A << endl;
+		//cout << "Person::m_B = " << Person::m_B << endl;//报错，私有成员变量类外不可以访问
+	}
+}
+```
+
+5.静态成员函数
+
+- 所有对象共享一个函数
+- 静态成员函数只能访问静态成员变量
+
+```cpp
+namespace test_static_func
+{
+	class Person
+	{
+	public:
+		static void func() {
+			m_A = 100;//静态成员函数可以访问静态成员变量
+			//m_B = 100;//静态成员函数不可以访问非静态成员变量
+			cout << "static_func调用" << endl;
+		
+		_}
+		static int m_A;
+		int m_B;
+	}
+	int Person::m_A = 10;
+	void test01() {
+		//1.通过对象访问
+		Person p;
+		p.func();
+		//2.通过类名访问
+		Person::func();
+	}
+}
+```
+
+注意：静态成员函数也有访问权限
+
+九、C++对象模型和this指针
+
+1.成员变量和成员函数分开存储
+
+在C++中，类内的成员变量和成员函数分开存储，只有非静态成员变量才属于类的对象上，静态成员函数不属于类的对象上。
+
+```cpp
+namespace test_this{
+	class Person
+	{
+	};
+	class Person2
+	{
+		int m_A;
+		static m_B;//静态成员，不在类对象上
+		void func(){}//非静态成员函数，不在类对象上【原因需要看下一节】
+		static void func2(){}//静态成员函数，不在类对象上
+	};
+	int Person::m_B = 10;
+	void test01() {
+		Person p;
+		//空对象占用内存为1
+		//原因：C++编译器给每个空对象也分配一个字节空间，是为了区分空对象占用的内存区域，否则，空对象和字符数组无法区分
+		cout << sizeof(p) << endl;//1
+	}
+	void test02() {
+	    Preson2 p2;
+		cout <<sizeof(p2)<<endl;
+		//空对象占用内存为4
+		//原因：此时不是5而是4，当不是空的时候，为int类型，占用4个字节
+		//同时也验证了静态成员变量不属于类的对象上。
+	}
+}
+```
+
+2.this指针
+
+this是指针，谁调用，this指针就指向谁，
+
+用途：
+
+- 通过this指针访问类的成员
+- this指针的本质是指针常量，即指针的值不能修改
+- 在类的非静态成员函数中，this指针默认作为隐含参数存在，不需要定义
+
+（1）名称冲突：
+```cpp
+namespace test_this{
+	class Person
+	{
+	public:
+		Person(int age) {
+			age = age;
+		}
+		int age;
+	}
+	void test01() {
+		Person p(19);
+	     cout<<"age:"<<p.age<<endl;
+	}
+}
+```
+此时，得到的数据不是18,原因在于“age = age;”与"int age;"名字相同但不是同一个东西，解决的办法有而，第一种是如之前一样定义一个"int m_Age;"，然后在代码中使用"m_Age = age;"。
+
+第二种就是使用this指针，代码如下：
+```cpp
+namespace test_this{
+	class Person
+	{
+	public:
+		Person(int age) {
+			this->age = age;
+		}
+		int age;
+	}
+	void test01() {
+		Person p(19);
+	     cout<<"age:"<<p.age<<endl;
+	}
+}
+```
+这种办法也可以实现正常输出，这里就解释了this指针的用途。对象p调用Person(int age)函数，此时this指针指向p，this指针指向p，this->age就相当于p.age。
+
+(2)以返回值方式返回对象本身
+
+```cpp
+namespace test_this {
+    class Person {
+    public:
+        // 修改1：添加类定义结尾的分号
+        void addAge(int age) {
+            this->m_Age += age;
+        }
+        int m_Age = 10;
+    };  // 修正：补充分号
+
+    void test01() {
+        Person p;
+        p.addAge(10);
+        // 修改2：void 返回值无法输出，需直接访问成员变量
+        cout << "age:" << p.m_Age << endl;  // 输出 20
+    }
+}
+```
+
+此时得到的结果是20，如果想实现p.addAge(10).addAge(10).addAge(10)这样的操作，那么需要修改为如下代码：
+
+```cpp
+namespace test_this {
+    class Person {
+    public:
+        // 返回引用以实现链式调用
+        Person& addAge(int age) {
+            this->m_Age += age;
+            return *this; // 返回对象本身的引用
+        }
+        int m_Age = 10;
+    };
+
+    // 修改3：重载 operator<< 以支持输出 Person 对象
+    ostream& operator<<(ostream& os, const Person& p) {
+        os << p.m_Age;
+        return os;
+    }
+
+    void test01() {
+        Person p;
+        // 链式调用操作的是同一个对象（p）
+        p.addAge(10).addAge(10).addAge(10);
+        cout << "p.m_Age: " << p.m_Age << endl; // 输出 40
+    }
+}
+```
+
+这时候输出的结果就是40,实现了**链式调用**,类似与`cout<<a<<b<<c<<endl;`这样的操作。
+
+当返回类型是 Person（而非引用）时，p.addAge(10) 会返回一个​​临时副本​​，后续的 .addAge(10) 操作修改的是临时副本的 m_Age，而非原始对象 p。
+
+```cpp
+Person addAge(int age) { /* ... */ } // 返回副本
+
+Person p;
+p.addAge(10).addAge(10);  // 第二个 addAge 操作的是临时副本
+cout << p.m_Age;          // 输出 20（仅第一次修改生效）
+```
+
+十、空指针的访问函数
+
+C++中空指针也是可以调用成员函数的，但是也要注意有没有访问成员变量。
+
+```cpp
+namespace test_nullptr {
+    class Person {
+    public:
+        void showClassName() {
+            cout << "this is Person class" << endl;
+        }
+        void showPersonAge() {
+			//报错的原因是因为传入的指针是空指针，空指针访问成员变量会报错，解决办法如下:
+			// if(this == NULL){
+			// 	return;
+			// }
+            cout << "age = " << m_Age << endl;//这条代码的本质：cout << "age = " << this->m_Age << endl;
+        }
+		int m_Age;
+	};
+	void test01() {
+	    Person *P = NULL;
+		p->showClassName();//不报错
+		p->showPersonAge();//报错，空指针访问成员变量
+	}
+}
+```
+
+十一、const修饰成员函数
+
+1.常函数
+
+- 成员函数后加const，称为常函数
+- 常函数内不可以修改成员变量，除了 mutable修饰的成员变量
+
+2.常对象
+
+- 声明对象前加const，称为常对象
+- 常对象只能调用常函数
+
+```cpp
+namespace test_const{
+//常函数
+class Person{
+	public:
+	//this指针的本质是指针常量，指针指向的内容不可以修改
+	//Person * const this
+	//如果在成员函数后写了const，那么上面的语句就变成：
+	//const Person * const this
+	//在成员函数的后面加const，本质上是修饰了this指针，让this指针指向的值不可修改
+		void showPerson() const
+		{
+			//this->m_A = 100;//常函数不可以修改成员变量
+			m_B = 100;//在变量前加mutable，让这个变量永远可变
+		}
+		void func(){
+			cout<<"func调用"<<endl;
+		}
+		int m_A;
+		mutable int m_B;//在变量前加mutable，让这个变量永远可变
+}
+void test01() {
+    Person p;
+	p.showPerson();
+}
+//常对象
+void test02() {
+    const Person p;
+	//p.m_A = 100;//常对象不可以修改成员变量
+	p.m_B = 100;//可以调用
+	p.showPerson();//可以调用
+	p.func();//可以调用
+}
+}
+```
+
+![alt text](image-18.png)
+
+### 友元
+
+友元关键字：friend
+
+一、全局函数做友元
+
+作用：全局函数做友元，全局函数就可以访问类中的私有内容
+
+```cpp
+namespace test_friend{
+	class Building{
+		//告诉编译器GoodGay全局函数是Building类的好朋友，可以访问类中的私有内容
+		friend void GoodGay(Building &building);
+		public:
+			Building(){
+				this->m_SittingRoom = "客厅";
+				this->m_BedRoom = "卧室";
+			}
+		public:
+			string m_SittingRoom;
+		private:
+			string m_BedRoom;
+	};
+	void GoodGay(Building &buiding){
+		cout<<"好基友正在访问"<<buiding.m_SittingRoom<<endl;
+		cout<<"好基友正在访问"<<buiding.m_BedRoom<<endl;
+	}
+	void test01(){
+	    Building buiding;
+		GoodGay(buiding);
+	}
+}
+```
+
+二、友元类
+
+目的：让一个类可以访问另一个类的私有成员
+
+友元类的所有成员函数都可以访问对方类的私有保护成员。
+
+```cpp
+namespace test_friend{
+	class Building;//先写出来防止报错
+	class GoodGay{
+		public:
+			GoodGay();
+			void visit();//参观函数访问Building中的成员
+			Building *m_Building;//让该类有访问Building的权限
+	};
+	class Building{
+		friend class GoodGay;//告诉编译器GoodGay类是Building的好朋友，可以访问Building的私有内容
+		public:
+			Building();//构造函数
+		public:
+			string m_SittingRoom;
+		private:
+		    string m_BedRoom;
+	};
+	GoodGay::GoodGay(){
+		this->m_Building = new Building();//在对象被初始化时，就创建一个Building对象，方便后续访问Building中的成员
+	}
+	Building::Building(){//当building对象被创建的时候，给变量初始化
+		this->m_SittingRoom = "客厅";
+		this->m_BedRoom = "卧室";
+	}
+	void GoodGay::visit(){
+		cout<<"好基友正在访问："<<this->m_Building.m_SittingRoom<<endl;
+		cout<<"好基友正在访问："<<this->m_Building.m_BedRoom<<endl;//在没有声明GoodGay为Building的友元类时，这句代码不通过。
+	}
+	void test01(){
+		GoodGay gg;
+		gg.visit(); 
+	}
+}
+
+三、成员函数做友元
+
+作用：
+
+```cpp
+namespace test_friend{
+	class Building;
+	class GoodGay{
+		public:
+			GoodGay();
+			void visit();//参观函数访问Building中的成员
+			void visit2();//让参观函数不可以访问访问Building中的成员
+			Building *building;//让该类有访问Building的权限
+	};
+	class Building{
+		//告诉编译器GoodGay类中的visit成员函数是Building好朋友，可以访问Building的私有内容
+		friend void GoodGay::visit();
+		public:
+			Building();//构造函数
+		public:
+			string m_SittingRoom;
+		private:
+		    string m_BedRoom;
+	};
+	Building::Building(){
+		m_SittingRoom = "客厅";
+		m_BedRoom ="卧室";
+
+	}
+	GoodGay::GoodGay(){
+		building = new Building();//在对象被初始化时，就创建一个Building对象
+	}
+	void GoodGay::visit(){
+		cout<<"好基友正在访问："<<building->m_SittingRoom<<endl;
+		cout<<"好基友正在访问："<<building->m_BedRoom<<endl;
+	}
+	void GoodGay::visit2(){
+		cout<<"好基友正在访问："<<building->m_SittingRoom<<endl;
+	}
+	void test01(){
+		GoodGay gg;
+		gg.visit();
+		gg.visit2();
+	}
+}
+```
+未加入关键字friend时：
+![alt text](image-19.png)
+
+加入后：
+![alt text](image-20.png)
+
+结果：
+![alt text](image-21.png)
+
+### 运算符重载
+
+作用：让自定义的类，对象，也能够进行加减乘除等操作。
+
+#### 加号运算符重载
+
+实现两个自定义数据结构的相加
+
+需求：
+![alt text](image-22.png)
+![alt text](image-23.png)
+```cpp
+namespace test_add
+{
+	class Person
+	{
+	public:
+		//1、成员函数重载
+		/*Person operator+ (Person &p)
+		{
+			Person temp;
+			temp.m_A = this->m_A + p.m_A;
+			temp.m_B = this->m_B + p.m_B;
+			return temp;
+		}*/
+		int m_A;
+		int m_B;
+
+	};
+	Person operator+(Person& p1, Person& p2)
+	{
+		Person temp;
+		temp.m_A = p1.m_A + p2.m_A;
+		temp.m_B = p1.m_B + p2.m_B;
+		return temp;
+	}
+	void test() {
+		Person p1;
+		p1.m_A = 20;
+		p1.m_B = 10;
+		Person p2;
+		p2.m_A = 20;
+		p2.m_B = 10;
+		//本质:Person ret = p2.operator+(p1)或者Person ret = operator+(p2,p1);简化为如下写法：
+		Person p3 = p1 + p2;
+
+		cout << "结果：" << p3.m_A << endl;
+		cout << "结果：" << p3.m_B << endl;
+	}
+}
+```
+
+除了以上的写法我们还可以使用函数重载的知识，将operator+重载实现Person p4 = p1+10;
+
+#### 左移运算符重载
+
+作用：可以输出自定义数据类型
+
+通过上面的学习我们可以使用两种办法实现输出自定义数据类型，但是此处如果使用成员函数重载，那么会出现对象在左侧，而cout在右侧的情况，详细如下图解释：
+![alt text](image-24.png)
+
+所以一般的作揖运算符重载使用全局函数重载，代码如下：
+
+```cpp
+namespace test_LeftMove
+{
+	class Person
+	{
+		//使用友元思想实现类外函数访问类内私有成员
+		friend ostream& operator<<(ostream& cout, Person& p);
+	public:
+		Person(int a,int b):m_A(a),m_B(b){}
+		private://数据一般为私有
+			int m_A;
+			int m_B;
+	};
+	//此处传入的值与返回的值都是用引用，对于ostream& cout是唯一的，
+	// 所以使用引用，ostream&作为返回值类型是为了实现链式输出
+	//即：cout << p << endl;
+	ostream& operator<<(ostream& cout, Person &p)
+	{
+		cout << "m_A = " << p.m_A << "  m_B = " << p.m_B;
+		return cout;
+	}
+	void test() {
+		Person p(10,20);
+		cout << p << endl;
+	}
+}
+```
+
+#### 递增运算符重载
+
+作用：实现对自定义数据类型的递增
+
+```cpp
+namespace test_MyInteger {
+	class MyInteger
+	{
+		friend ostream& operator<<(ostream& cout, const MyInteger& myint);
+	public:
+		MyInteger(){
+			Integer = 0;
+		}
+		//前置运算符
+		MyInteger& operator++() {
+			Integer++;
+			return *this;
+		}
+		//后置运算符
+		MyInteger operator++(int)//int是占位符，用于区分是前置还是后置运算符
+		{
+			MyInteger myint = *this;//记录当前值
+			Integer++;//对象属性自增
+			return myint;//返回记录值而不是自增后的值
+		}
+	private:
+		int Integer;
+	};
+	ostream& operator<<(ostream& cout, const MyInteger& myint)
+	{
+		cout << myint.Integer;
+		return cout;
+	}
+	
+	void test1() {
+		MyInteger myint;
+		cout << ++(++myint) << endl;//如果返回的不是引用，那么这里的++(++myint)也能通过，但是并不是在原来的对象上进行操作，而是一个新的对象上操作。
+		cout << myint << endl;
+	}
+	void test2() {
+		MyInteger myint;
+		cout << (myint++)++ << endl;//这样的操作精良避免发生，这不符合C++语法，因为第二次自增是在临时对象上自增而不是原始对象。
+		cout << myint << endl;
+	}
+
+}
+```
+
+**关键点总结**
+
+- ​​右值与左值引用​​：非 const 左值引用 (MyInteger&) 无法绑定到右值（如 myint++ 返回的临时对象）。
+- ​const 引用的灵活性​​：const 左值引用 (const MyInteger&) 可以绑定到右值和左值，解决了参数匹配问题。
+
+所以上面的代码中，<<的重载第二个参数是const的引用类型，如果是非const的引用类型，那么在`test2()`函数中，`cout << myint++<<endl;`就会报错，因为 myint++的返回值是右值引用。
+
+#### 赋值运算符重载
+
+**C++编译器至少给一个类添加4个函数**
+
+- 默认构造函数(无参，函数体为空)
+- 默认析构函数(无参，函数体为空)
+- 默认拷贝构造函数，对属性值进行拷贝
+- 赋值运算符重载函数operator=(对属性值进行拷贝)
+
+
+![alt text](image-25.png)
+
+解决办法：
+![alt text](image-26.png)
+
+```cpp
+namespace test_assig
+{
+	class Person
+	{
+	public:
+		Person(int age) {
+			m_Age = new int(age);
+		}
+
+		~Person() {
+			if (m_Age != NULL)
+			{
+				delete m_Age;
+				m_Age = NULL;
+			}
+		}
+		Person& operator=(Person &p) {
+			//默认赋值语句
+			//m_Age= p.age;
+
+			//先判断是否有属性在堆区，如果有先删除干净，再深拷贝
+			if (m_Age != NULL)
+			{
+				delete m_Age;
+				m_Age = NULL;
+			}
+			//深拷贝
+			m_Age = new int(*p.m_Age);
+
+			return *this;
+		}
+		int* m_Age;
+
+	};
+	void test() {
+		Person p1(18);
+		Person p2(20);
+		Person p3(90);
+
+		p3=p1 = p2;
+
+		cout << *p1.m_Age << endl;
+		cout << *p2.m_Age << endl;
+		cout << *p3.m_Age << endl;
+
+	}
+}
+```
+
 ### 继承
 
 ### 多态

@@ -21,7 +21,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/about/</loc>
-    <lastmod>2024-02-07T16:24:40+08:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/</loc>
@@ -348,22 +347,6 @@
     <lastmod>2024-02-18T17:25:35+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/categories/version/</loc>
-    <lastmod>2024-02-07T16:24:40+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/about/%E7%89%88%E6%9C%AC/</loc>
-    <lastmod>2024-02-07T16:24:40+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E7%89%88%E6%9C%AC/</loc>
-    <lastmod>2024-02-07T16:24:40+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2024-02-07T16:24:40+08:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/tags/%E5%90%8E%E7%AB%AF/</loc>
     <lastmod>2024-02-05T10:44:08+08:00</lastmod>
   </url>
@@ -513,6 +496,9 @@
   </url>
   <url>
     <loc>http://localhost:1313/log/10.%E5%A6%82%E4%BD%95%E8%87%AA%E5%AE%9A%E4%B9%89hugo%E4%B8%BB%E9%A2%98%E9%A1%B5%E9%9D%A2%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/log/11.%E4%BA%94%E7%AC%94%E5%AD%A6%E4%B9%A0/</loc>
   </url>
   <url>
     <loc>http://localhost:1313/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</loc>

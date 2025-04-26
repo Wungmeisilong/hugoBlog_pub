@@ -3,7 +3,7 @@
   <channel>
     <title>小说下载橱窗 :: Maloudown</title>
     <link>http://localhost:1313/story/%E5%B0%8F%E8%AF%B4%E4%B8%8B%E8%BD%BD%E6%A9%B1%E7%AA%97/</link>
-    <description>国学经典描述文章内容&#xA;轻小说描述文章内容&#xA;文学描述文章内容</description>
+    <description>下载书籍吧</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <atom:link href="http://localhost:1313/story/%E5%B0%8F%E8%AF%B4%E4%B8%8B%E8%BD%BD%E6%A9%B1%E7%AA%97/index.xml" rel="self" type="application/rss+xml" />

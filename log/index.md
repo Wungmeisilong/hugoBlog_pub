@@ -1,6 +1,6 @@
 #   博客文章
 
-{{% children  depth="999" showhidden="true" %}}
+{{% children description="true" containerstyle="div" style="h3" depth="3"%}}
 
 [常用的数学表达](https://blog.csdn.net/m0_52062236/article/details/124314161)
 

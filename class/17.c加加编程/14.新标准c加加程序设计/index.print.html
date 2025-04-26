@@ -28,24 +28,24 @@
 1.代码区 存放二进制指令，就是代码，特点：">
     <meta itemprop="datePublished" content="2024-11-03T09:12:17+08:00">
     <meta itemprop="dateModified" content="2024-11-03T09:12:17+08:00">
-    <meta itemprop="wordCount" content="9170">
+    <meta itemprop="wordCount" content="14168">
     <meta itemprop="keywords" content="C&#43;&#43;,C,基础知识,基本概念">
     <title>14.新标准C加加程序设计 :: Maloudown</title>
     <link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" rel="canonical" type="text/html" title="14.新标准C加加程序设计 :: Maloudown">
     <link href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/index.xml" rel="alternate" type="application/rss+xml" title="14.新标准C加加程序设计 :: Maloudown">
     <link href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/index.md" rel="alternate" type="text/markdown" title="14.新标准C加加程序设计 :: Maloudown">
-    <link href="/images/favicon.svg?1744652398" rel="icon" type="image/svg+xml">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744652398" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1744652398" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1744652398" rel="stylesheet">
-    <link href="/css/theme.css?1744652398" rel="stylesheet">
-    <link href="/css/format-print.css?1744652398" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1744652398" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1744652398" defer></script>
-    <script src="/js/lunr/lunr.min.js?1744652398" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1744652398" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1744652398" defer></script>
-    <script src="/js/lunr/lunr.zh.min.js?1744652398" defer></script>
-    <script src="/js/search.js?1744652398" defer></script>
+    <link href="/images/favicon.svg?1745660556" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745660556" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745660556" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745660556" rel="stylesheet">
+    <link href="/css/theme.css?1745660556" rel="stylesheet">
+    <link href="/css/format-print.css?1745660556" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745660556" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745660556" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745660556" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745660556" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745660556" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1745660556" defer></script>
+    <script src="/js/search.js?1745660556" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -55,7 +55,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/searchindex.zh.js?1744652398";
+      window.relearn.index_js_url="/searchindex.zh.js?1745660556";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -176,6 +176,18 @@
       <ul>
         <li><a href="#封装">封装</a></li>
         <li><a href="#对象特性">对象特性</a></li>
+        <li><a href="#友元">友元</a></li>
+        <li><a href="#运算符重载">运算符重载</a></li>
+        <li><a href="#继承">继承</a></li>
+        <li><a href="#多态">多态</a></li>
+        <li><a href="#类">类</a></li>
+        <li><a href="#在类中使用缺省函数">在类中使用缺省函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#构造函数">构造函数</a>
+      <ul>
+        <li><a href="#类中为什么需要构造函数">类中为什么需要构造函数</a></li>
+        <li><a href="#构造函数在数组中的使用">构造函数在数组中的使用</a></li>
       </ul>
     </li>
     <li><a href="#复制构造函数-copy-constructor">复制构造函数-copy constructor</a></li>
@@ -184,7 +196,7 @@
     <li><a href="#this指针">this指针</a></li>
     <li><a href="#静态成员变量和函数">静态成员变量和函数</a></li>
     <li><a href="#成员对象和封闭类">成员对象和封闭类</a></li>
-    <li><a href="#友元">友元</a></li>
+    <li><a href="#友元-1">友元</a></li>
     <li><a href="#常量成员">常量成员</a></li>
     <li><a href="#运算符重载函数">运算符重载函数</a>
       <ul>
@@ -360,8 +372,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>图解：
-<a href="#R-image-2656033b0fd533cf4838f37829bf57f6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-13.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2656033b0fd533cf4838f37829bf57f6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-13.png"></a></p>
+<a href="#R-image-e5c3eef417a93f48322883caaae02915" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e5c3eef417a93f48322883caaae02915"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-13.png"></a></p>
 <p>例子2-堆区上的数据开辟与释放</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
@@ -444,8 +456,8 @@
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>测试代码结果
-<a href="#R-image-23f73e8e771f587e74b3aaf736ac2998" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-14.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-23f73e8e771f587e74b3aaf736ac2998"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-14.png"></a></p>
+<a href="#R-image-1619b22caef1743b6d7222fb53649347" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1619b22caef1743b6d7222fb53649347"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-14.png"></a></p>
 <p>三、引用的本质</p>
 <p>引用的本质在C++内部实现是一个指针常量，引用类型必须和引用实体是同类型。</p>
 <p>四、常量引用</p>
@@ -629,8 +641,8 @@
 <li>析构函数：主要作用在于对象销毁前系统自动调用析构函数，执行一些清理工作。</li>
 </ul>
 <p>2.语法
-<a href="#R-image-07fd1d41791a8f68be4449cfd1c9f754" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-15.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-07fd1d41791a8f68be4449cfd1c9f754"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-15.png"></a></p>
+<a href="#R-image-a3ef6cd6fbec265f759bb03e41e45740" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-15.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a3ef6cd6fbec265f759bb03e41e45740"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-15.png"></a></p>
 <p>二、构造函数的分类及调用</p>
 <ol>
 <li>按参数分类：有参构造和无参构造(默认构造函数)</li>
@@ -803,14 +815,14 @@
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>结果如下：</p>
-<p><a href="#R-image-5c097255f514797701783af45ad4c707" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-16.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5c097255f514797701783af45ad4c707"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-16.png"></a></p>
+<p><a href="#R-image-fd9712594ce7b5ec6d6614230313bf2b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-16.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fd9712594ce7b5ec6d6614230313bf2b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-16.png"></a></p>
 <p>六、初始化列表</p>
 <p>1.作用</p>
 <p>用于初始化属性</p>
 <p>2.语法
-<a href="#R-image-4b5fd5c9ce5e189cdf125af629f65afc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/QQ_1744622930354.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4b5fd5c9ce5e189cdf125af629f65afc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/QQ_1744622930354.png"></a></p>
+<a href="#R-image-1987efe78b90f4e9a030127daa5c9856" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/QQ_1744622930354.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1987efe78b90f4e9a030127daa5c9856"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/QQ_1744622930354.png"></a></p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_init
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
@@ -841,7 +853,7 @@
 <p>1.静态成员变量</p>
 <ul>
 <li>所有对象共享同一份数据</li>
-<li>在编译阶段分配内存</li>
+<li>在编译阶段分配内存（代码运行前分配内存，在全局区）</li>
 <li>类内声明，类外初始化</li>
 </ul>
 <p>2.静态成员函数</p>
@@ -849,34 +861,574 @@
 <li>所有对象共享同一个函数</li>
 <li>静态成员函数只能访问静态成员变量</li>
 </ul>
+<p>3.访问静态成员变量
+<a href="#R-image-00d1c15007d6d1c52fe6220e96a6146c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-17.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-00d1c15007d6d1c52fe6220e96a6146c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-17.png"></a></p>
+<p>4.静态成员变量也有访问权限</p>
+<ul>
+<li>公有静态成员变量类外可以访问</li>
+<li>私有静态成员变量类外不可以访问</li>
+</ul>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_static
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
 </span></span><span style="display:flex;"><span>	{
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### 继承
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> m_A;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> m_B;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> m_C;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> Person<span style="color:#f92672">::</span>m_A <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//1.通过对象访问
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Person p;
+</span></span><span style="display:flex;"><span>		p.m_A <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;p.m_A = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.m_A <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;p.m_B = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.m_B <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//2.通过类名访问
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Person::m_A = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> Person<span style="color:#f92672">::</span>m_A <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//cout &lt;&lt; &#34;Person::m_B = &#34; &lt;&lt; Person::m_B &lt;&lt; endl;//报错，私有成员变量类外不可以访问
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>5.静态成员函数</p>
+<ul>
+<li>所有对象共享一个函数</li>
+<li>静态成员函数只能访问静态成员变量</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_static_func
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> func() {
+</span></span><span style="display:flex;"><span>			m_A <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;<span style="color:#75715e">//静态成员函数可以访问静态成员变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">//m_B = 100;//静态成员函数不可以访问非静态成员变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;static_func调用&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		
+</span></span><span style="display:flex;"><span>		_}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> m_A;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> m_B;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> Person<span style="color:#f92672">::</span>m_A <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//1.通过对象访问
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Person p;
+</span></span><span style="display:flex;"><span>		p.func();
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//2.通过类名访问
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Person<span style="color:#f92672">::</span>func();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>注意：静态成员函数也有访问权限</p>
+<p>九、C++对象模型和this指针</p>
+<p>1.成员变量和成员函数分开存储</p>
+<p>在C++中，类内的成员变量和成员函数分开存储，只有非静态成员变量才属于类的对象上，静态成员函数不属于类的对象上。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_this{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person2</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> m_A;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">static</span> m_B;<span style="color:#75715e">//静态成员，不在类对象上
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(){}<span style="color:#75715e">//非静态成员函数，不在类对象上【原因需要看下一节】
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func2</span>(){}<span style="color:#75715e">//静态成员函数，不在类对象上
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> Person<span style="color:#f92672">::</span>m_B <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>		Person p;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//空对象占用内存为1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//原因：C++编译器给每个空对象也分配一个字节空间，是为了区分空对象占用的内存区域，否则，空对象和字符数组无法区分
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#66d9ef">sizeof</span>(p) <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">//1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test02</span>() {
+</span></span><span style="display:flex;"><span>	    Preson2 p2;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span><span style="color:#66d9ef">sizeof</span>(p2)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//空对象占用内存为4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//原因：此时不是5而是4，当不是空的时候，为int类型，占用4个字节
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//同时也验证了静态成员变量不属于类的对象上。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>2.this指针</p>
+<p>this是指针，谁调用，this指针就指向谁，</p>
+<p>用途：</p>
+<ul>
+<li>通过this指针访问类的成员</li>
+<li>this指针的本质是指针常量，即指针的值不能修改</li>
+<li>在类的非静态成员函数中，this指针默认作为隐含参数存在，不需要定义</li>
+</ul>
+<p>（1）名称冲突：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_this{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		Person(<span style="color:#66d9ef">int</span> age) {
+</span></span><span style="display:flex;"><span>			age <span style="color:#f92672">=</span> age;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> age;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>		Person p(<span style="color:#ae81ff">19</span>);
+</span></span><span style="display:flex;"><span>	     cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;age:&#34;</span><span style="color:#f92672">&lt;&lt;</span>p.age<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>此时，得到的数据不是18,原因在于“age = age;”与&quot;int age;&ldquo;名字相同但不是同一个东西，解决的办法有而，第一种是如之前一样定义一个&quot;int m_Age;&quot;，然后在代码中使用&quot;m_Age = age;&quot;。</p>
+<p>第二种就是使用this指针，代码如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_this{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		Person(<span style="color:#66d9ef">int</span> age) {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>age <span style="color:#f92672">=</span> age;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> age;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>		Person p(<span style="color:#ae81ff">19</span>);
+</span></span><span style="display:flex;"><span>	     cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;age:&#34;</span><span style="color:#f92672">&lt;&lt;</span>p.age<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>这种办法也可以实现正常输出，这里就解释了this指针的用途。对象p调用Person(int age)函数，此时this指针指向p，this指针指向p，this-&gt;age就相当于p.age。</p>
+<p>(2)以返回值方式返回对象本身</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_this {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 修改1：添加类定义结尾的分号
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">void</span> addAge(<span style="color:#66d9ef">int</span> age) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_Age <span style="color:#f92672">+=</span> age;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> m_Age <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    };  <span style="color:#75715e">// 修正：补充分号
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### 多态
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### 类
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">将数据结构和操作该数据结构的函数捆绑在一起形成一个类。</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>        Person p;
+</span></span><span style="display:flex;"><span>        p.addAge(<span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 修改2：void 返回值无法输出，需直接访问成员变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;age:&#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.m_Age <span style="color:#f92672">&lt;&lt;</span> endl;  <span style="color:#75715e">// 输出 20
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>此时得到的结果是20，如果想实现p.addAge(10).addAge(10).addAge(10)这样的操作，那么需要修改为如下代码：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_this {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 返回引用以实现链式调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Person<span style="color:#f92672">&amp;</span> addAge(<span style="color:#66d9ef">int</span> age) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_Age <span style="color:#f92672">+=</span> age;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">this</span>; <span style="color:#75715e">// 返回对象本身的引用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> m_Age <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    };
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### 在类中使用缺省函数
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">需要注意避免二义性：</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">!</span>[alt text](image<span style="color:#f92672">-</span><span style="color:#ae81ff">5.</span>png)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 修改3：重载 operator&lt;&lt; 以支持输出 Person 对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    ostream<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&lt;&lt;</span>(ostream<span style="color:#f92672">&amp;</span> os, <span style="color:#66d9ef">const</span> Person<span style="color:#f92672">&amp;</span> p) {
+</span></span><span style="display:flex;"><span>        os <span style="color:#f92672">&lt;&lt;</span> p.m_Age;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> os;
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## 构造函数
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>        Person p;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 链式调用操作的是同一个对象（p）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        p.addAge(<span style="color:#ae81ff">10</span>).addAge(<span style="color:#ae81ff">10</span>).addAge(<span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;p.m_Age: &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.m_Age <span style="color:#f92672">&lt;&lt;</span> endl; <span style="color:#75715e">// 输出 40
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>这时候输出的结果就是40,实现了<strong>链式调用</strong>,类似与<code>cout&lt;&lt;a&lt;&lt;b&lt;&lt;c&lt;&lt;endl;</code>这样的操作。</p>
+<p>当返回类型是 Person（而非引用）时，p.addAge(10) 会返回一个​​临时副本​​，后续的 .addAge(10) 操作修改的是临时副本的 m_Age，而非原始对象 p。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Person <span style="color:#a6e22e">addAge</span>(<span style="color:#66d9ef">int</span> age) { <span style="color:#75715e">/* ... */</span> } <span style="color:#75715e">// 返回副本
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### 类中为什么需要构造函数
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">!</span>[alt text](image<span style="color:#f92672">-</span><span style="color:#ae81ff">6.</span>png)
+</span></span><span style="display:flex;"><span>Person p;
+</span></span><span style="display:flex;"><span>p.addAge(<span style="color:#ae81ff">10</span>).addAge(<span style="color:#ae81ff">10</span>);  <span style="color:#75715e">// 第二个 addAge 操作的是临时副本
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>cout <span style="color:#f92672">&lt;&lt;</span> p.m_Age;          <span style="color:#75715e">// 输出 20（仅第一次修改生效）
+</span></span></span></code></pre></div>
+<p>十、空指针的访问函数</p>
+<p>C++中空指针也是可以调用成员函数的，但是也要注意有没有访问成员变量。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_nullptr {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> showClassName() {
+</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;this is Person class&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">showPersonAge</span>() {
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//报错的原因是因为传入的指针是空指针，空指针访问成员变量会报错，解决办法如下:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">// if(this == NULL){
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">// 	return;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">// }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;age = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> m_Age <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">//这条代码的本质：cout &lt;&lt; &#34;age = &#34; &lt;&lt; this-&gt;m_Age &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> m_Age;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>	    Person <span style="color:#f92672">*</span>P <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>		p<span style="color:#f92672">-&gt;</span>showClassName();<span style="color:#75715e">//不报错
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		p<span style="color:#f92672">-&gt;</span>showPersonAge();<span style="color:#75715e">//报错，空指针访问成员变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>十一、const修饰成员函数</p>
+<p>1.常函数</p>
+<ul>
+<li>成员函数后加const，称为常函数</li>
+<li>常函数内不可以修改成员变量，除了 mutable修饰的成员变量</li>
+</ul>
+<p>2.常对象</p>
+<ul>
+<li>声明对象前加const，称为常对象</li>
+<li>常对象只能调用常函数</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_const{
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//常函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//this指针的本质是指针常量，指针指向的内容不可以修改
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//Person * const this
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//如果在成员函数后写了const，那么上面的语句就变成：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//const Person * const this
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//在成员函数的后面加const，本质上是修饰了this指针，让this指针指向的值不可修改
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">void</span> showPerson() <span style="color:#66d9ef">const</span>
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//this-&gt;m_A = 100;//常函数不可以修改成员变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			m_B <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;<span style="color:#75715e">//在变量前加mutable，让这个变量永远可变
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(){
+</span></span><span style="display:flex;"><span>			cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;func调用&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> m_A;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">mutable</span> <span style="color:#66d9ef">int</span> m_B;<span style="color:#75715e">//在变量前加mutable，让这个变量永远可变
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>    Person p;
+</span></span><span style="display:flex;"><span>	p.showPerson();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//常对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test02</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> Person p;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//p.m_A = 100;//常对象不可以修改成员变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	p.m_B <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;<span style="color:#75715e">//可以调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	p.showPerson();<span style="color:#75715e">//可以调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	p.func();<span style="color:#75715e">//可以调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p><a href="#R-image-2490f6745cd496a94a582e62f4bbeeb2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-18.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2490f6745cd496a94a582e62f4bbeeb2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-18.png"></a></p>
+<h3 id="友元">友元</h3>
+<p>友元关键字：friend</p>
+<p>一、全局函数做友元</p>
+<p>作用：全局函数做友元，全局函数就可以访问类中的私有内容</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_friend{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Building</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//告诉编译器GoodGay全局函数是Building类的好朋友，可以访问类中的私有内容
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">friend</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">GoodGay</span>(Building <span style="color:#f92672">&amp;</span>building);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			Building(){
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_SittingRoom <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;客厅&#34;</span>;
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_BedRoom <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;卧室&#34;</span>;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			string m_SittingRoom;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			string m_BedRoom;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">GoodGay</span>(Building <span style="color:#f92672">&amp;</span>buiding){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;好基友正在访问&#34;</span><span style="color:#f92672">&lt;&lt;</span>buiding.m_SittingRoom<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;好基友正在访问&#34;</span><span style="color:#f92672">&lt;&lt;</span>buiding.m_BedRoom<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>(){
+</span></span><span style="display:flex;"><span>	    Building buiding;
+</span></span><span style="display:flex;"><span>		GoodGay(buiding);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>二、友元类</p>
+<p>目的：让一个类可以访问另一个类的私有成员</p>
+<p>友元类的所有成员函数都可以访问对方类的私有保护成员。</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_friend{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Building</span>;<span style="color:#75715e">//先写出来防止报错
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GoodGay</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			GoodGay();
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">visit</span>();<span style="color:#75715e">//参观函数访问Building中的成员
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			Building <span style="color:#f92672">*</span>m_Building;<span style="color:#75715e">//让该类有访问Building的权限
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Building</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">friend</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GoodGay</span>;<span style="color:#75715e">//告诉编译器GoodGay类是Building的好朋友，可以访问Building的私有内容
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			Building();<span style="color:#75715e">//构造函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			string m_SittingRoom;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		    string m_BedRoom;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	GoodGay<span style="color:#f92672">::</span>GoodGay(){
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_Building <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Building();<span style="color:#75715e">//在对象被初始化时，就创建一个Building对象，方便后续访问Building中的成员
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	}
+</span></span><span style="display:flex;"><span>	Building<span style="color:#f92672">::</span>Building(){<span style="color:#75715e">//当building对象被创建的时候，给变量初始化
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_SittingRoom <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;客厅&#34;</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_BedRoom <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;卧室&#34;</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> GoodGay<span style="color:#f92672">::</span>visit(){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;好基友正在访问：&#34;</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_Building.m_SittingRoom<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;好基友正在访问：&#34;</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_Building.m_BedRoom<span style="color:#f92672">&lt;&lt;</span>endl;<span style="color:#75715e">//在没有声明GoodGay为Building的友元类时，这句代码不通过。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>(){
+</span></span><span style="display:flex;"><span>		GoodGay gg;
+</span></span><span style="display:flex;"><span>		gg.visit(); 
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### 构造函数在数组中的使用
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">三、成员函数做友元</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">作用：</span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>cpp
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_friend{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Building</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GoodGay</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			GoodGay();
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">visit</span>();<span style="color:#75715e">//参观函数访问Building中的成员
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">visit2</span>();<span style="color:#75715e">//让参观函数不可以访问访问Building中的成员
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			Building <span style="color:#f92672">*</span>building;<span style="color:#75715e">//让该类有访问Building的权限
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Building</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//告诉编译器GoodGay类中的visit成员函数是Building好朋友，可以访问Building的私有内容
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">friend</span> <span style="color:#66d9ef">void</span> GoodGay<span style="color:#f92672">::</span>visit();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			Building();<span style="color:#75715e">//构造函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			string m_SittingRoom;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		    string m_BedRoom;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	Building<span style="color:#f92672">::</span>Building(){
+</span></span><span style="display:flex;"><span>		m_SittingRoom <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;客厅&#34;</span>;
+</span></span><span style="display:flex;"><span>		m_BedRoom <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;卧室&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	GoodGay<span style="color:#f92672">::</span>GoodGay(){
+</span></span><span style="display:flex;"><span>		building <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Building();<span style="color:#75715e">//在对象被初始化时，就创建一个Building对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> GoodGay<span style="color:#f92672">::</span>visit(){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;好基友正在访问：&#34;</span><span style="color:#f92672">&lt;&lt;</span>building<span style="color:#f92672">-&gt;</span>m_SittingRoom<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;好基友正在访问：&#34;</span><span style="color:#f92672">&lt;&lt;</span>building<span style="color:#f92672">-&gt;</span>m_BedRoom<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> GoodGay<span style="color:#f92672">::</span>visit2(){
+</span></span><span style="display:flex;"><span>		cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;好基友正在访问：&#34;</span><span style="color:#f92672">&lt;&lt;</span>building<span style="color:#f92672">-&gt;</span>m_SittingRoom<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>(){
+</span></span><span style="display:flex;"><span>		GoodGay gg;
+</span></span><span style="display:flex;"><span>		gg.visit();
+</span></span><span style="display:flex;"><span>		gg.visit2();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>未加入关键字friend时：
+<a href="#R-image-983947801579714e7f62f8d3f073e265" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-19.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-983947801579714e7f62f8d3f073e265"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-19.png"></a></p>
+<p>加入后：
+<a href="#R-image-e5499894dc611439d3246cdfb8e2ce04" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-20.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e5499894dc611439d3246cdfb8e2ce04"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-20.png"></a></p>
+<p>结果：
+<a href="#R-image-133fcdeb76667cb65a73b9bd886ea2a5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-21.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-133fcdeb76667cb65a73b9bd886ea2a5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-21.png"></a></p>
+<h3 id="运算符重载">运算符重载</h3>
+<p>作用：让自定义的类，对象，也能够进行加减乘除等操作。</p>
+<h4 id="加号运算符重载">加号运算符重载</h4>
+<p>实现两个自定义数据结构的相加</p>
+<p>需求：
+<a href="#R-image-cae3959d3b2e394bca41febe5c418c2f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-22.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cae3959d3b2e394bca41febe5c418c2f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-22.png"></a>
+<a href="#R-image-1a9323158204b9fd4b4a9a7fb01d0b9f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-23.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1a9323158204b9fd4b4a9a7fb01d0b9f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-23.png"></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_add
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//1、成员函数重载
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">/*Person operator+ (Person &amp;p)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">		{
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			Person temp;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			temp.m_A = this-&gt;m_A + p.m_A;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			temp.m_B = this-&gt;m_B + p.m_B;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			return temp;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">		}*/</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> m_A;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> m_B;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	Person <span style="color:#66d9ef">operator</span><span style="color:#f92672">+</span>(Person<span style="color:#f92672">&amp;</span> p1, Person<span style="color:#f92672">&amp;</span> p2)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		Person temp;
+</span></span><span style="display:flex;"><span>		temp.m_A <span style="color:#f92672">=</span> p1.m_A <span style="color:#f92672">+</span> p2.m_A;
+</span></span><span style="display:flex;"><span>		temp.m_B <span style="color:#f92672">=</span> p1.m_B <span style="color:#f92672">+</span> p2.m_B;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> temp;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>() {
+</span></span><span style="display:flex;"><span>		Person p1;
+</span></span><span style="display:flex;"><span>		p1.m_A <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>		p1.m_B <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>		Person p2;
+</span></span><span style="display:flex;"><span>		p2.m_A <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>		p2.m_B <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//本质:Person ret = p2.operator+(p1)或者Person ret = operator+(p2,p1);简化为如下写法：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Person p3 <span style="color:#f92672">=</span> p1 <span style="color:#f92672">+</span> p2;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;结果：&#34;</span> <span style="color:#f92672">&lt;&lt;</span> p3.m_A <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;结果：&#34;</span> <span style="color:#f92672">&lt;&lt;</span> p3.m_B <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>除了以上的写法我们还可以使用函数重载的知识，将operator+重载实现Person p4 = p1+10;</p>
+<h4 id="左移运算符重载">左移运算符重载</h4>
+<p>作用：可以输出自定义数据类型</p>
+<p>通过上面的学习我们可以使用两种办法实现输出自定义数据类型，但是此处如果使用成员函数重载，那么会出现对象在左侧，而cout在右侧的情况，详细如下图解释：
+<a href="#R-image-e9c287d5d73dc1caf430fd190bd805b2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-24.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e9c287d5d73dc1caf430fd190bd805b2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-24.png"></a></p>
+<p>所以一般的作揖运算符重载使用全局函数重载，代码如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_LeftMove
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//使用友元思想实现类外函数访问类内私有成员
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">friend</span> ostream<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&lt;&lt;</span>(ostream<span style="color:#f92672">&amp;</span> cout, Person<span style="color:#f92672">&amp;</span> p);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		Person(<span style="color:#66d9ef">int</span> a,<span style="color:#66d9ef">int</span> b)<span style="color:#f92672">:</span>m_A(a),m_B(b){}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span><span style="color:#75715e">//数据一般为私有
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">int</span> m_A;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">int</span> m_B;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//此处传入的值与返回的值都是用引用，对于ostream&amp; cout是唯一的，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// 所以使用引用，ostream&amp;作为返回值类型是为了实现链式输出
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//即：cout &lt;&lt; p &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	ostream<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&lt;&lt;</span>(ostream<span style="color:#f92672">&amp;</span> cout, Person <span style="color:#f92672">&amp;</span>p)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;m_A = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.m_A <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;  m_B = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.m_B;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> cout;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>() {
+</span></span><span style="display:flex;"><span>		Person p(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> p <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h4 id="递增运算符重载">递增运算符重载</h4>
+<p>作用：实现对自定义数据类型的递增</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_MyInteger {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyInteger</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">friend</span> ostream<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&lt;&lt;</span>(ostream<span style="color:#f92672">&amp;</span> cout, <span style="color:#66d9ef">const</span> MyInteger<span style="color:#f92672">&amp;</span> myint);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		MyInteger(){
+</span></span><span style="display:flex;"><span>			Integer <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//前置运算符
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		MyInteger<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">++</span>() {
+</span></span><span style="display:flex;"><span>			Integer<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">this</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//后置运算符
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		MyInteger <span style="color:#66d9ef">operator</span><span style="color:#f92672">++</span>(<span style="color:#66d9ef">int</span>)<span style="color:#75715e">//int是占位符，用于区分是前置还是后置运算符
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		{
+</span></span><span style="display:flex;"><span>			MyInteger myint <span style="color:#f92672">=</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">this</span>;<span style="color:#75715e">//记录当前值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			Integer<span style="color:#f92672">++</span>;<span style="color:#75715e">//对象属性自增
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">return</span> myint;<span style="color:#75715e">//返回记录值而不是自增后的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> Integer;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	ostream<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&lt;&lt;</span>(ostream<span style="color:#f92672">&amp;</span> cout, <span style="color:#66d9ef">const</span> MyInteger<span style="color:#f92672">&amp;</span> myint)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> myint.Integer;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> cout;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test1</span>() {
+</span></span><span style="display:flex;"><span>		MyInteger myint;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">++</span>(<span style="color:#f92672">++</span>myint) <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">//如果返回的不是引用，那么这里的++(++myint)也能通过，但是并不是在原来的对象上进行操作，而是一个新的对象上操作。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		cout <span style="color:#f92672">&lt;&lt;</span> myint <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test2</span>() {
+</span></span><span style="display:flex;"><span>		MyInteger myint;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> (myint<span style="color:#f92672">++</span>)<span style="color:#f92672">++</span> <span style="color:#f92672">&lt;&lt;</span> endl;<span style="color:#75715e">//这样的操作精良避免发生，这不符合C++语法，因为第二次自增是在临时对象上自增而不是原始对象。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		cout <span style="color:#f92672">&lt;&lt;</span> myint <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p><strong>关键点总结</strong></p>
+<ul>
+<li>​​右值与左值引用​​：非 const 左值引用 (MyInteger&amp;) 无法绑定到右值（如 myint++ 返回的临时对象）。</li>
+<li>​const 引用的灵活性​​：const 左值引用 (const MyInteger&amp;) 可以绑定到右值和左值，解决了参数匹配问题。</li>
+</ul>
+<p>所以上面的代码中，&laquo;的重载第二个参数是const的引用类型，如果是非const的引用类型，那么在<code>test2()</code>函数中，<code>cout &lt;&lt; myint++&lt;&lt;endl;</code>就会报错，因为 myint++的返回值是右值引用。</p>
+<h4 id="赋值运算符重载">赋值运算符重载</h4>
+<p><strong>C++编译器至少给一个类添加4个函数</strong></p>
+<ul>
+<li>默认构造函数(无参，函数体为空)</li>
+<li>默认析构函数(无参，函数体为空)</li>
+<li>默认拷贝构造函数，对属性值进行拷贝</li>
+<li>赋值运算符重载函数operator=(对属性值进行拷贝)</li>
+</ul>
+<p><a href="#R-image-42099ddc591954e1ef80609f568e6d4a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-25.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-42099ddc591954e1ef80609f568e6d4a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-25.png"></a></p>
+<p>解决办法：
+<a href="#R-image-418e51de50179b577f819d8cacbb67b7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-26.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-418e51de50179b577f819d8cacbb67b7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-26.png"></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_assig
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		Person(<span style="color:#66d9ef">int</span> age) {
+</span></span><span style="display:flex;"><span>			m_Age <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>(age);
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">~</span>Person() {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> (m_Age <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">delete</span> m_Age;
+</span></span><span style="display:flex;"><span>				m_Age <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		Person<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">=</span>(Person <span style="color:#f92672">&amp;</span>p) {
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//默认赋值语句
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">//m_Age= p.age;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//先判断是否有属性在堆区，如果有先删除干净，再深拷贝
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> (m_Age <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">delete</span> m_Age;
+</span></span><span style="display:flex;"><span>				m_Age <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//深拷贝
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			m_Age <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>(<span style="color:#f92672">*</span>p.m_Age);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">this</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> m_Age;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>() {
+</span></span><span style="display:flex;"><span>		Person p1(<span style="color:#ae81ff">18</span>);
+</span></span><span style="display:flex;"><span>		Person p2(<span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>		Person p3(<span style="color:#ae81ff">90</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		p3<span style="color:#f92672">=</span>p1 <span style="color:#f92672">=</span> p2;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>p1.m_Age <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>p2.m_Age <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>p3.m_Age <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="继承">继承</h3>
+<h3 id="多态">多态</h3>
+<h3 id="类">类</h3>
+<p>将数据结构和操作该数据结构的函数捆绑在一起形成一个类。</p>
+<h3 id="在类中使用缺省函数">在类中使用缺省函数</h3>
+<p>需要注意避免二义性：
+<a href="#R-image-b65199c22bc9ab12dcdd4e08dc32a059" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b65199c22bc9ab12dcdd4e08dc32a059"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-5.png"></a></p>
+<h2 id="构造函数">构造函数</h2>
+<h3 id="类中为什么需要构造函数">类中为什么需要构造函数</h3>
+<p><a href="#R-image-a8848534feed33215dbc22f0d812948c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a8848534feed33215dbc22f0d812948c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-6.png"></a></p>
+<h3 id="构造函数在数组中的使用">构造函数在数组中的使用</h3>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>        A(){std<span style="color:#f92672">::</span>cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;hello</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;}<span style="color:#75715e">//1
@@ -901,11 +1453,11 @@
 <p>注意：对象之间的复制是不会导致复制构造函数的</p>
 <h2 id="转换构造函数">转换构造函数</h2>
 <p>什么是转换构造函数
-<a href="#R-image-8cb157141dd8b7ea60d0f285849ca5e1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8cb157141dd8b7ea60d0f285849ca5e1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png"></a></p>
+<a href="#R-image-7fb81c6d651b538af87ff3f05c19e73a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7fb81c6d651b538af87ff3f05c19e73a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png"></a></p>
 <p>示例代码：
-<a href="#R-image-deb3d4762cd38907e1d2770d1ca32348" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-deb3d4762cd38907e1d2770d1ca32348"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png"></a>
+<a href="#R-image-f7f1edfa8fc35f6c78e7727ff64f6f26" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f7f1edfa8fc35f6c78e7727ff64f6f26"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png"></a>
 在上面的例子当中，<code>c1 = 9;</code>会被自动转换为调用转换构造函数，如果不想让这样的事情发生，可以在转换构造函数前面加上修饰字段 <code>explicit</code>，这样再次使用<code>c1 = 9;</code>时程序会报错。</p>
 <h2 id="析构函数-destructors">析构函数-destructors</h2>
 <p>这里补充几点，一个类只能有一个析构函数；</p>
@@ -926,11 +1478,11 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//用过后，该临时对象析构函数被调用
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }</span></span></code></pre></div>
 <p>上面结果输出三个destructor，在<code>fun(CMyclass sobj)</code>参数对象消亡调用析构函数（具体可以联想复制构造函数），会调用一次析构函数；当函数返回赋值给obj后，再次调用析构函数；整个程序结束再次调用析构函数。
-<a href="#R-image-66b0cfe2748ba839f12b929c82b1af43" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-66b0cfe2748ba839f12b929c82b1af43"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png"></a></p>
+<a href="#R-image-eaf3d52dc7835d26cc4bd5ec52435b18" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-eaf3d52dc7835d26cc4bd5ec52435b18"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png"></a></p>
 <h2 id="this指针">this指针</h2>
-<p><a href="#R-image-4854cbc92623fe6042d4b3ccccef9ee0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4854cbc92623fe6042d4b3ccccef9ee0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png"></a></p>
+<p><a href="#R-image-d55a038002bcafd70e9086a5b2d9985d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d55a038002bcafd70e9086a5b2d9985d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png"></a></p>
 <p>静态成员函数中可以直接使用this指针来代表指向该函数作用的对象的指针</p>
 <p>示例1：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Complex</span> {
@@ -1032,7 +1584,7 @@ CRectangle &amp; ref = r; int n = ref.nTotalNumber;</p>
 </span></span><span style="display:flex;"><span>    B b1,b2(b1);<span style="color:#75715e">//b2调用自生默认复制构造函数，而内部的A a也会调用默认的复制构造函数
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
-<h2 id="友元">友元</h2>
+<h2 id="友元-1">友元</h2>
 <ol>
 <li>友元函数: 一个类的友元函数可以访问该类的私有成员。</li>
 <li>可以将一个类的成员函数(包括构造、析构函数)说明为另一个类的友元。</li>
@@ -1058,8 +1610,8 @@ mutable成员变量
 </span></span><span style="display:flex;"><span>    };</span></span></code></pre></div>
 <h2 id="运算符重载函数">运算符重载函数</h2>
 <p><strong>浅拷贝与深拷贝：</strong>
-<a href="#R-image-89ccb95e9308b3ed80485adb16025f47" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-89ccb95e9308b3ed80485adb16025f47"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png"></a></p>
+<a href="#R-image-f980851d3ff1764497a7a550ed36e2e7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f980851d3ff1764497a7a550ed36e2e7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png"></a></p>
 <p>为解决这个问题，我们需要修改赋值运算符重载：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    String <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">const</span> String <span style="color:#f92672">&amp;</span> s){
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>( <span style="color:#66d9ef">this</span> <span style="color:#f92672">==</span> <span style="color:#f92672">&amp;</span> s)
@@ -1090,8 +1642,8 @@ mutable成员变量
 <h2 id="继承和派生">继承和派生</h2>
 <p>**注意：**在派生类的各个成员函数中，不能访问基类中的private成员。</p>
 <h3 id="派生类的内存空间">派生类的内存空间</h3>
-<p><a href="#R-image-f373bdaaeaac1ca43f990e7627c08b3e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f373bdaaeaac1ca43f990e7627c08b3e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png"></a></p>
+<p><a href="#R-image-59ccc31c0b0f328c1897300f31107cc1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-59ccc31c0b0f328c1897300f31107cc1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png"></a></p>
 <h3 id="类之间的关系">类之间的关系</h3>
 <p><strong>继承：“是”关系。</strong></p>
 <ul>
@@ -1106,8 +1658,8 @@ mutable成员变量
 分”</li>
 </ul>
 <p>复合关系的示例：
-<a href="#R-image-4aa83fefd27319aeebe0845a9a6c9a50" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4aa83fefd27319aeebe0845a9a6c9a50"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png"></a></p>
+<a href="#R-image-ea64ea587032943d189ab427a7990329" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ea64ea587032943d189ab427a7990329"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png"></a></p>
 <h3 id="基类与派生类名字重名的情况">基类与派生类名字重名的情况</h3>
 <p>一般来说，基类和派生类不定义同名成员变量。但如果要方位可以使用<code>基类::基类成员</code>来访问。</p>
 <h3 id="访问权限">访问权限</h3>
@@ -1201,28 +1753,28 @@ mutable成员变量
 <li>当指针指向基类时调用，基类的函数，当指针指向派生类时，调用调用派生类的函数，这叫做多态。</li>
 <li>另外，在非虚函数和非构造、析构函数中调用虚函数，也叫做多态。
 例子：
-<a href="#R-image-b431f8f758bdd328dbda52ac05058006" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b431f8f758bdd328dbda52ac05058006"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png"></a></li>
+<a href="#R-image-37cc4a5abf317d33a2dee486d2b7792b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-37cc4a5abf317d33a2dee486d2b7792b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png"></a></li>
 </ul>
 <p>如果在构造、析构函数中调用虚函数，那么会怎么样呢？</p>
 <p>如果这么做，那么编译器只会调用当前的虚函数，如果当前没有重写虚函数，则会从基类中找进行调用，为什么要这么做呢？其实这是为了防止未初始化就调用派生类的虚函数的情况。</p>
 <p>你想想啊，一类的初始化先从基类的构造函数开始，如果这个时候构造函数具有多态性，那么此时将调用派生类的对应虚函数，但是派生类这个时候都还没有初始化。</p>
 <p>例子：
-<a href="#R-image-e75973e2aaf348632bc7fdf3553c2da3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e75973e2aaf348632bc7fdf3553c2da3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png"></a>`</p>
+<a href="#R-image-76dad124ab26b1d4143bbc08187c01f7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-76dad124ab26b1d4143bbc08187c01f7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png"></a>`</p>
 <ul>
 <li>补充：在上面的图例子中，派生类写了与基类虚函数相同的名字，但是没有在前面加修饰符virtual，这种情况编译器认为是虚函数。</li>
 </ul>
 <h3 id="多态的作用">多态的作用</h3>
 <p>在面向对象的程序设计中使用多态，能够增强程序的可扩充性，即程序需要修改或增加功能的时候，需要改动和增加的代码较少。</p>
 <h3 id="虚函数的访问权限">虚函数的访问权限</h3>
-<p><a href="#R-image-fc0888d4b1bc88fbcbfa5f0c91909618" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fc0888d4b1bc88fbcbfa5f0c91909618"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png"></a></p>
+<p><a href="#R-image-3f26f343373982c558a41deb183af1fc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f26f343373982c558a41deb183af1fc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png"></a></p>
 <h3 id="动态联编的实现机制">动态联编的实现机制</h3>
 <p>“多态”的关键在于通过基类指针或引用调用一个虚函数时，编译时不确定到底调用的是基类还是派生类的函数，运行时才确定 &mdash;- 这叫“动态联编”。</p>
 <p>每一个有虚函数的类（或有虚函数的类的派生类）都有一个虚函数表，该类的任何对象中都放着虚函数表的指针。虚函数表中列出了该类的虚函数地址。多出来的4个字节就是用来放虚函数表的地址的。
-<a href="#R-image-cba96f5b4c2654941869a9c3f4597be8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cba96f5b4c2654941869a9c3f4597be8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png"></a></p>
+<a href="#R-image-dafd1f5745781f7ea2063a8878ad7a19" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dafd1f5745781f7ea2063a8878ad7a19"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png"></a></p>
 <p>下面一段代码将验证，对象的首地址是存了虚函数表的地址的：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
@@ -1284,8 +1836,8 @@ mutable成员变量
         </div>
       </main>
     </div>
-    <script src="/js/clipboard/clipboard.min.js?1744652398" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1744652398" defer></script>
-    <script src="/js/theme.js?1744652398" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745660556" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745660556" defer></script>
+    <script src="/js/theme.js?1745660556" defer></script>
   </body>
 </html>

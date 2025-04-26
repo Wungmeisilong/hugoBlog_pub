@@ -4,7 +4,6 @@
 
 [原文章链接](https://www.cnblogs.com/tntblog/p/13715084.html)
 
-
 ## 1、使用git commi -m "……"时报错： Your branch is up to date with ‘origin/master‘
 
 今天在提交项目的时候报了这个错误，在网上查了解决办法，有的说创建新的分支可以解决，但我的不行。
