@@ -3,7 +3,7 @@
   <channel>
     <title>  项目 :: Maloudown</title>
     <link>http://localhost:1313/projects/</link>
-    <description>毕业设计&#xD;电赛&#xD;唛盟杯比赛详记</description>
+    <description>毕业设计简单记录制作毕业设计的过程&#xA;电赛简单记录参加电赛的过程。&#xA;唛盟杯比赛详记这个项目是一个知识产权流程管理系统，主要功能包括客户下单、付款、订单查询、订单进度消息推送、文档查阅下载等。还介绍了安装git和nodejs，安装前需要先安装nvm，这是一个管理node的工具，然后安装node和vue，最后安装mvn。&#xA;基于C++的职工管理系统描述文章内容</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 07 Jul 2024 18:10:42 +0800</lastBuildDate>
@@ -13,21 +13,28 @@
       <link>http://localhost:1313/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Sun, 07 Jul 2024 18:10:42 +0800</pubDate>
       <guid>http://localhost:1313/projects/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</guid>
-      <description>目录&#xA;运行环境 【ESP32学习】联网模块 ESP8266-01S上传数据到OneNet 收藏的一些资料 最终的操作结果 ESP32&amp;&amp;ESP8266-12E连接ONeNet参考资料 ONeNet云平台报错： {“protocol”:“MQTT”,“offline_time”:“2024-07-15 16:01:49.977”,“offline_reason”:“CloseDueToProtoError”}怎么解决？ APP连接ONeNet json数据解析步骤 STM32+电脑(模拟ESP32)+ESP8266通信 设备热点配网技术——WIFIManager 报错：error: ‘wifi_country_t’ does not name a type const wifi_country_t WM_COUNTRY_US{“US”,1,11,WIFI_COUNTRY_POLICY_AUTO}; 通信过程中遇到的问题 这一部分所用到的资料下载地址 【实验】SPIFFS文件系统的使用 【实验】TCP/UDP通信实验 【STM32F4学习】摄像头 参考资料 STM32F4工程代码 【服务器】NGINX 在Linux中搭建NGINX服务器 TCP/IP协议 [知识储备] NGINX架构 NGINX中master的工作原理 nginx处理HTTP请求的过程 安装NGINX 【服务器】Tomcat 【服务器】ZLMedaikit流媒体服务器 【第三方库】FFmpeg媒体流转码工具 【深度学习】飞桨paddlepaddle实战 X-CUDE—AI在线课程 相关论文参考 【机器学习】HMM模型（隐马尔科夫列） 相关论文参考 导入库 【音视频学习】 H.264编码 安卓音视频实战编程 YUV RTMP协议所在所在的网络层结构 【第三方库】LIBRTMP 【工具】类似安卓虚拟机：Total Control 采集音频数据工具 视频采集工具—MediaProjection 【安卓APP制作】 安卓的两种登录方式 安卓中集成第三方库进行登录 安卓显示ONENet提供的可视化链接 硬件系统 运行环境 【ESP32学习】联网模块 ESP8266-01S上传数据到OneNet 参考视频</description>
+      <description>简单记录制作毕业设计的过程</description>
     </item>
     <item>
       <title>电赛</title>
       <link>http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/</link>
       <pubDate>Tue, 14 May 2024 22:22:09 +0800</pubDate>
       <guid>http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/</guid>
-      <description>以下笔记皆基于HAL库。&#xA;新建STM32CubeMX工程步骤 创建工程中如果勾选MCO表示向外部输出时钟， 输出的是哪一个引脚可以查看，如下图。</description>
+      <description>简单记录参加电赛的过程。</description>
     </item>
     <item>
       <title>唛盟杯比赛详记</title>
       <link>http://localhost:1313/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Mon, 05 Feb 2024 10:44:08 +0800</pubDate>
       <guid>http://localhost:1313/projects/%E5%94%9B%E7%9B%9F%E6%9D%AF%E9%A1%B9%E7%9B%AE%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95/</guid>
-      <description>比赛题目 一、项目主题 知识产权流程管理系统&#xA;二、项目描述&#xA;该系统用于知识产权项目申报的全过程跟踪管理，其功能包括：&#xA;客户下单、 提交申请、 申请反馈、 订单查询、 订单详情、 文档查阅下载等六大部分。 该系统分为客户端和管理端两个子系统。客户端对客户开放，主要功能包括：</description>
+      <description>这个项目是一个知识产权流程管理系统，主要功能包括客户下单、付款、订单查询、订单进度消息推送、文档查阅下载等。还介绍了安装git和nodejs，安装前需要先安装nvm，这是一个管理node的工具，然后安装node和vue，最后安装mvn。</description>
+    </item>
+    <item>
+      <title>基于C&#43;&#43;的职工管理系统</title>
+      <link>http://localhost:1313/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</guid>
+      <description>描述文章内容</description>
     </item>
   </channel>
 </rss>

@@ -1,3 +1,3 @@
 #   项目
 
-{{% children  depth="999" showhidden="true" %}}
+{{% children  description="true" depth="999" showhidden="true" %}}

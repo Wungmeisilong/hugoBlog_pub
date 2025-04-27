@@ -28,24 +28,24 @@
 1.代码区 存放二进制指令，就是代码，特点：">
     <meta itemprop="datePublished" content="2024-11-03T09:12:17+08:00">
     <meta itemprop="dateModified" content="2024-11-03T09:12:17+08:00">
-    <meta itemprop="wordCount" content="16415">
+    <meta itemprop="wordCount" content="20359">
     <meta itemprop="keywords" content="C&#43;&#43;,C,基础知识,基本概念">
     <title>14.新标准C加加程序设计 :: Maloudown</title>
     <link href="http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" rel="canonical" type="text/html" title="14.新标准C加加程序设计 :: Maloudown">
     <link href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/index.xml" rel="alternate" type="application/rss+xml" title="14.新标准C加加程序设计 :: Maloudown">
     <link href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/index.md" rel="alternate" type="text/markdown" title="14.新标准C加加程序设计 :: Maloudown">
-    <link href="/images/favicon.svg?1745682427" rel="icon" type="image/svg+xml">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745682427" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745682427" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745682427" rel="stylesheet">
-    <link href="/css/theme.css?1745682427" rel="stylesheet">
-    <link href="/css/format-print.css?1745682427" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745682427" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745682427" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745682427" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745682427" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745682427" defer></script>
-    <script src="/js/lunr/lunr.zh.min.js?1745682427" defer></script>
-    <script src="/js/search.js?1745682427" defer></script>
+    <link href="/images/favicon.svg?1745767174" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745767174" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745767174" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745767174" rel="stylesheet">
+    <link href="/css/theme.css?1745767174" rel="stylesheet">
+    <link href="/css/format-print.css?1745767174" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745767174" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745767174" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745767174" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745767174" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745767174" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1745767174" defer></script>
+    <script src="/js/search.js?1745767174" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -55,7 +55,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/searchindex.zh.js?1745682427";
+      window.relearn.index_js_url="/searchindex.zh.js?1745767174";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -179,12 +179,8 @@
         <li><a href="#友元">友元</a></li>
         <li><a href="#运算符重载">运算符重载</a></li>
         <li><a href="#继承">继承</a></li>
-      </ul>
-    </li>
-    <li><a href="#多态">多态</a>
-      <ul>
-        <li><a href="#多态的基本概念">多态的基本概念</a></li>
-        <li><a href="#多态-1">多态</a></li>
+        <li><a href="#多态">多态</a></li>
+        <li><a href="#文件操作">文件操作</a></li>
         <li><a href="#类">类</a></li>
         <li><a href="#在类中使用缺省函数">在类中使用缺省函数</a></li>
       </ul>
@@ -224,7 +220,7 @@
         <li><a href="#多态的作用">多态的作用</a></li>
         <li><a href="#虚函数的访问权限">虚函数的访问权限</a></li>
         <li><a href="#动态联编的实现机制">动态联编的实现机制</a></li>
-        <li><a href="#纯虚函数和抽象类">纯虚函数和抽象类</a></li>
+        <li><a href="#纯虚函数和抽象类-1">纯虚函数和抽象类</a></li>
       </ul>
     </li>
   </ul>
@@ -377,8 +373,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>图解：
-<a href="#R-image-2b9b69e9b13f1d065409d53f3e97fbd2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-13.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2b9b69e9b13f1d065409d53f3e97fbd2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-13.png"></a></p>
+<a href="#R-image-9b9b387411d18c3db0fef56631fa7fcb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9b9b387411d18c3db0fef56631fa7fcb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-13.png"></a></p>
 <p>例子2-堆区上的数据开辟与释放</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
@@ -461,8 +457,8 @@
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>测试代码结果
-<a href="#R-image-b79bc1c491c4e923f846ae8c4ff868a5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-14.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b79bc1c491c4e923f846ae8c4ff868a5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-14.png"></a></p>
+<a href="#R-image-772acbf46ca9044eb54fc806107a5d0b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-772acbf46ca9044eb54fc806107a5d0b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-14.png"></a></p>
 <p>三、引用的本质</p>
 <p>引用的本质在C++内部实现是一个指针常量，引用类型必须和引用实体是同类型。</p>
 <p>四、常量引用</p>
@@ -646,8 +642,8 @@
 <li>析构函数：主要作用在于对象销毁前系统自动调用析构函数，执行一些清理工作。</li>
 </ul>
 <p>2.语法
-<a href="#R-image-399ac738522f58266e9b7d12d9bde22a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-15.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-399ac738522f58266e9b7d12d9bde22a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-15.png"></a></p>
+<a href="#R-image-bd4ba4dc9300edf037dfcb1bc90bb6ff" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-15.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bd4ba4dc9300edf037dfcb1bc90bb6ff"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-15.png"></a></p>
 <p>二、构造函数的分类及调用</p>
 <ol>
 <li>按参数分类：有参构造和无参构造(默认构造函数)</li>
@@ -820,14 +816,14 @@
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>结果如下：</p>
-<p><a href="#R-image-7cfa2ba26777ff666ae35172d5691f3e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-16.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7cfa2ba26777ff666ae35172d5691f3e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-16.png"></a></p>
+<p><a href="#R-image-909f2f254e16df6f9a03054ac3fe3e99" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-16.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-909f2f254e16df6f9a03054ac3fe3e99"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-16.png"></a></p>
 <p>六、初始化列表</p>
 <p>1.作用</p>
 <p>用于初始化属性</p>
 <p>2.语法
-<a href="#R-image-afd471fc9f0e4a06f40b94f5be361fcb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/QQ_1744622930354.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-afd471fc9f0e4a06f40b94f5be361fcb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/QQ_1744622930354.png"></a></p>
+<a href="#R-image-5c042e45809fabe852be7a9849980c2f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/QQ_1744622930354.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5c042e45809fabe852be7a9849980c2f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/QQ_1744622930354.png"></a></p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_init
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
@@ -867,8 +863,8 @@
 <li>静态成员函数只能访问静态成员变量</li>
 </ul>
 <p>3.访问静态成员变量
-<a href="#R-image-6df55e08ab2b767e13fb06747a0fa955" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-17.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6df55e08ab2b767e13fb06747a0fa955"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-17.png"></a></p>
+<a href="#R-image-4f5d9ea93963fd29e1d3972d0b64cb6b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-17.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4f5d9ea93963fd29e1d3972d0b64cb6b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-17.png"></a></p>
 <p>4.静态成员变量也有访问权限</p>
 <ul>
 <li>公有静态成员变量类外可以访问</li>
@@ -1112,8 +1108,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	p.func();<span style="color:#75715e">//可以调用
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-<p><a href="#R-image-78873a1d1b35cb91a2a3aa5eb318b1ed" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-18.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-78873a1d1b35cb91a2a3aa5eb318b1ed"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-18.png"></a></p>
+<p><a href="#R-image-cd8f7b27b05c9eb44d56cf2fe04e5f38" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-18.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cd8f7b27b05c9eb44d56cf2fe04e5f38"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-18.png"></a></p>
 <h3 id="友元">友元</h3>
 <p>友元关键字：friend</p>
 <p>一、全局函数做友元</p>
@@ -1224,23 +1220,23 @@
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>未加入关键字friend时：
-<a href="#R-image-8b7f7387ef3acdcd44c5c7d6497fa55e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-19.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8b7f7387ef3acdcd44c5c7d6497fa55e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-19.png"></a></p>
+<a href="#R-image-b8523d7ba4904aa5aed7024ab9561adf" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-19.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b8523d7ba4904aa5aed7024ab9561adf"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-19.png"></a></p>
 <p>加入后：
-<a href="#R-image-abb626b6bbdd992ed90889e9fb7a84c1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-20.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-abb626b6bbdd992ed90889e9fb7a84c1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-20.png"></a></p>
+<a href="#R-image-4e6c7b5403a6a3561532181f4c6c03b1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-20.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e6c7b5403a6a3561532181f4c6c03b1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-20.png"></a></p>
 <p>结果：
-<a href="#R-image-32f0f97b3713bf0608e7ff4f4198e193" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-21.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-32f0f97b3713bf0608e7ff4f4198e193"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-21.png"></a></p>
+<a href="#R-image-74aa1f053f0101366169c9817a29e50a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-21.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-74aa1f053f0101366169c9817a29e50a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-21.png"></a></p>
 <h3 id="运算符重载">运算符重载</h3>
 <p>作用：让自定义的类，对象，也能够进行加减乘除等操作。</p>
 <h4 id="加号运算符重载">加号运算符重载</h4>
 <p>实现两个自定义数据结构的相加</p>
 <p>需求：
-<a href="#R-image-b05b19d10ce924d8785f3fae905d437f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-22.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b05b19d10ce924d8785f3fae905d437f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-22.png"></a>
-<a href="#R-image-1682cb363456d07183472c4c58a02558" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-23.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1682cb363456d07183472c4c58a02558"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-23.png"></a></p>
+<a href="#R-image-433ab1b5bffe2667e2d1f48ff4fa8622" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-22.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-433ab1b5bffe2667e2d1f48ff4fa8622"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-22.png"></a>
+<a href="#R-image-e09a5bed78655dcb6fdead4e8dbc49cc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-23.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e09a5bed78655dcb6fdead4e8dbc49cc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-23.png"></a></p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_add
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
@@ -1283,8 +1279,8 @@
 <h4 id="左移运算符重载">左移运算符重载</h4>
 <p>作用：可以输出自定义数据类型</p>
 <p>通过上面的学习我们可以使用两种办法实现输出自定义数据类型，但是此处如果使用成员函数重载，那么会出现对象在左侧，而cout在右侧的情况，详细如下图解释：
-<a href="#R-image-315cccf583aadc8a080dca1ae506a7d6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-24.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-315cccf583aadc8a080dca1ae506a7d6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-24.png"></a></p>
+<a href="#R-image-6fe56853a5b9542c2a80f7b00fff2f67" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-24.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6fe56853a5b9542c2a80f7b00fff2f67"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-24.png"></a></p>
 <p>所以一般的作揖运算符重载使用全局函数重载，代码如下：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_LeftMove
 </span></span><span style="display:flex;"><span>{
@@ -1368,11 +1364,11 @@
 <li>默认拷贝构造函数，对属性值进行拷贝</li>
 <li>赋值运算符重载函数operator=(对属性值进行拷贝)</li>
 </ul>
-<p><a href="#R-image-1cca60d1e9cedbb253f546ab56381832" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-25.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1cca60d1e9cedbb253f546ab56381832"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-25.png"></a></p>
+<p><a href="#R-image-4a06a976fa1e81c53fb6adc8f4e5f2ca" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-25.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4a06a976fa1e81c53fb6adc8f4e5f2ca"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-25.png"></a></p>
 <p>解决办法：
-<a href="#R-image-7eb93f061c2e7217307fa5edd69abcbb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-26.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7eb93f061c2e7217307fa5edd69abcbb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-26.png"></a></p>
+<a href="#R-image-bc4ed9332a6ab66f49164875fc404dc3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-26.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bc4ed9332a6ab66f49164875fc404dc3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-26.png"></a></p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_assig
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
@@ -1496,6 +1492,75 @@
 </span></span><span style="display:flex;"><span>	<span style="color:#75715e">//类体
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};</span></span></code></pre></div>
 <p>继承方式一共有三种：public、protected、private</p>
+<p>以下是 <code>public</code>、<code>protected</code> 和 <code>private</code> 访问权限的总结对比表（Markdown 格式）：</p>
+<p>访问权限对比表</p>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th><code>public</code></th>
+          <th><code>protected</code></th>
+          <th><code>private</code></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>类内部访问</td>
+          <td>✅ 直接访问</td>
+          <td>✅ 直接访问</td>
+          <td>✅ 直接访问</td>
+      </tr>
+      <tr>
+          <td>派生类内部访问</td>
+          <td>✅ 直接访问</td>
+          <td>✅ 直接访问</td>
+          <td>❌ 不可直接访问</td>
+      </tr>
+      <tr>
+          <td>外部代码访问</td>
+          <td>✅ 直接访问</td>
+          <td>❌ 不可直接访问</td>
+          <td>❌ 不可直接访问</td>
+      </tr>
+      <tr>
+          <td>默认继承方式</td>
+          <td>类默认 <code>private</code> 继承</td>
+          <td>结构体默认 <code>public</code> 继承</td>
+          <td>-</td>
+      </tr>
+  </tbody>
+</table>
+<p>继承方式对基类成员权限的影响</p>
+<table>
+  <thead>
+      <tr>
+          <th>基类成员权限</th>
+          <th><code>public</code> 继承后</th>
+          <th><code>protected</code> 继承后</th>
+          <th><code>private</code> 继承后</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>public</code> 成员</td>
+          <td><code>public</code>（保留）</td>
+          <td><code>protected</code>（降级）</td>
+          <td><code>private</code>（降级）</td>
+      </tr>
+      <tr>
+          <td><code>protected</code> 成员</td>
+          <td><code>protected</code>（保留）</td>
+          <td><code>protected</code>（保留）</td>
+          <td><code>private</code>（降级）</td>
+      </tr>
+      <tr>
+          <td><code>private</code> 成员</td>
+          <td>❌ 不可见</td>
+          <td>❌ 不可见</td>
+          <td>❌ 不可见</td>
+      </tr>
+  </tbody>
+</table>
 <p>继承后的访问权限：</p>
 <ul>
 <li>父类的私有成员，哪种方式继承都无法访问；</li>
@@ -1503,8 +1568,6 @@
 <li>protected继承，都变保护：public&ndash;&gt;protected，protected&ndash;&gt;protected；</li>
 <li>private继承，都变私有：public&ndash;&gt;private，protected&ndash;&gt;private；</li>
 </ul>
-<p>protected与public的区别：</p>
-<p>-</p>
 <h4 id="继承中的对象模型">继承中的对象模型</h4>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_model
 </span></span><span style="display:flex;"><span>{
@@ -1526,8 +1589,8 @@
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>结果为16，因此可知父类中的所有非静态成员属性都被子类继承了，并且子类对象中包含了父类对象，父类对象在子类对象中是隐藏的。</p>
 <p>另一种方式查看类的大小：
-<a href="#R-image-5e2b726f6b6510589d0d0542d65bc82b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-27.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5e2b726f6b6510589d0d0542d65bc82b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-27.png"></a></p>
+<a href="#R-image-ccaff27bd10689017dc6d45548dfbe28" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-27.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ccaff27bd10689017dc6d45548dfbe28"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-27.png"></a></p>
 <h4 id="继承构造和析构函数">继承构造和析构函数</h4>
 <p>问题：父类和子类的构造和析构函数的调用顺序是什么？</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_construct_destruct{
@@ -1696,11 +1759,11 @@ Base析构函数</code></pre></div>
 <li>菱形继承会导致<strong>二义性问题</strong>；</li>
 </ul>
 <p>经典菱形继承案例：</p>
-<p><a href="#R-image-2a11a4f8d834580d19f12b61a7fe3175" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-28.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2a11a4f8d834580d19f12b61a7fe3175"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-28.png"></a></p>
+<p><a href="#R-image-1d0e4a0e8c422aaba364cf2f84b716e6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-28.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d0e4a0e8c422aaba364cf2f84b716e6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-28.png"></a></p>
 <p>出现的问题：
-<a href="#R-image-1fd2762c8a0d45daac47395aa04f9a68" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-29.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1fd2762c8a0d45daac47395aa04f9a68"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-29.png"></a></p>
+<a href="#R-image-f2b10daeb630347c3a2832e80074b2c4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-29.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f2b10daeb630347c3a2832e80074b2c4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-29.png"></a></p>
 <p>如何解决：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_diamond_inherit {
 </span></span><span style="display:flex;"><span>	<span style="color:#75715e">//动物类
@@ -1733,30 +1796,620 @@ Base析构函数</code></pre></div>
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>在没有使用virtual前，输入<code>cl /d1 repoterSingleClassLayoutSheepTuo 类与对象.cpp</code>后的结果如下图
-<a href="#R-image-c11c43ca4e1c1d21df9a8889d9a45bbf" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-30.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c11c43ca4e1c1d21df9a8889d9a45bbf"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-30.png"></a></p>
+<a href="#R-image-f453cbab16b446ae5f41a8bce3b32115" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-30.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f453cbab16b446ae5f41a8bce3b32115"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-30.png"></a></p>
 <p>加入virtual后，输入<code>cl /d1 repoterSingleClassLayoutSheepTuo 类与对象.cpp</code>后的结果如下图，下图就解释了为什么使用virtual能解决菱形继承问题。
-<a href="#R-image-f677ff9b19a73148a706a90df35756a1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-31.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f677ff9b19a73148a706a90df35756a1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-31.png"></a></p>
-<h2 id="多态">多态</h2>
-<h3 id="多态的基本概念">多态的基本概念</h3>
-<p>多态分为两类：
-class Donkey:public Sheep,public Horse{
-};
-void test(){
-Donkey d;</p>
-<h3 id="多态-1">多态</h3>
+<a href="#R-image-1ad64b41d8f408055183ef0c29afdd5e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-31.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1ad64b41d8f408055183ef0c29afdd5e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-31.png"></a></p>
+<h3 id="多态">多态</h3>
+<h4 id="多态的基本概念">多态的基本概念</h4>
+<p>多态的含义：</p>
+<p>**​​多态是允许不同对象通过统一的接口执行特定行为的能力，其意义在于提升代码的灵活性和可维护性，实现“接口复用，逻辑分离”。**​​（示例：基类Animal定义虚函数speak()，子类Dog和Cat分别实现自己的speak()，通过基类指针调用时自动执行对应子类逻辑。）</p>
+<p>多态时C++三大特性之一，它分为编译时多态和运行时多态。</p>
+<ul>
+<li>编译时多态：函数重载与运算符重载属于静态多态，复用函数名</li>
+<li>运行时多态：派生类与虚函数实现运行时多态</li>
+</ul>
+<p>二者的区别</p>
+<ul>
+<li>静态多态函数的地址早绑定，在编译阶段确定函数地址；</li>
+<li>动态多态函数的地址晚绑定，在运行阶段确定函数地址；</li>
+</ul>
+<p>动态多态的满足条件：</p>
+<ul>
+<li>1.有继承关系；</li>
+<li>2.子类要重写父类的虚函数；（<strong>注意不是重载，是重写,父类中的函数要加virtual，至于子类可写可不写</strong>）</li>
+</ul>
+<p>动态多态的使用方式：</p>
+<ul>
+<li>父类的指针或者引用 指向子类对象；</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_polymorphism
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> speak()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;动物在说话&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span> <span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> Animal
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">void</span> speak()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cou<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;喵喵喵&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doSpeak</span>(Animal <span style="color:#f92672">&amp;</span> animal)<span style="color:#75715e">//父类的指针可以指向子类的对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	{
+</span></span><span style="display:flex;"><span>		animal.speak();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span>(){
+</span></span><span style="display:flex;"><span>		Cat cat;
+</span></span><span style="display:flex;"><span>		doSpeak(cat);<span style="color:#75715e">//在未添加virtual关键字时，输出的是:动物在说话，添加后输出的是:喵喵喵,原因是未添加前，在编译阶段确定了speak()函数地址，而添加后，程序运行阶段才确定speak()函数地址
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h4 id="动态的底层原理">动态的底层原理</h4>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_polymorphism
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> speak()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;动物在说话&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span> <span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> Animal
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">void</span> speak()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cou<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;喵喵喵&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doSpeak</span>(Animal <span style="color:#f92672">&amp;</span> animal)<span style="color:#75715e">//父类的指针可以指向子类的对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	{
+</span></span><span style="display:flex;"><span>		animal.speak();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>(){
+</span></span><span style="display:flex;"><span>		Cat cat;
+</span></span><span style="display:flex;"><span>		doSpeak(cat);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test02</span>(){
+</span></span><span style="display:flex;"><span>	    cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#66d9ef">sizeof</span>(Animal)<span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>如果未添加virtual关键字，那么输出的size大小是1，也就是空类，但是加了virtual后，输出的结果是4，也就是指针。</p>
+<p>1.解释方式1</p>
+<p><a href="#R-image-324d6766ccfb43076a3953a3da0e99e6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-32.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-324d6766ccfb43076a3953a3da0e99e6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-32.png"></a></p>
+<p>在上图中，当在子类重写父类方法后，子类的重写的方法会在虚函数表中覆盖从父类继承的方法。当用父类指针（或者引用）指向子类，代码运行时程序就会通过虚函数表找到子类重写的方法，从而实现多态。</p>
+<p>2.解释方法2</p>
+<p>子类没有重写前，子类的结构：
+<a href="#R-image-c56751b413758d0b1447bab4b86720a0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-34.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c56751b413758d0b1447bab4b86720a0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-34.png"></a></p>
+<p>子类重写后，子类的结构：
+<a href="#R-image-310b3eaa0061a299cba05d30e8ceb50d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-33.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-310b3eaa0061a299cba05d30e8ceb50d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-33.png"></a></p>
+<h4 id="经典案例-计算器类">经典案例-计算器类</h4>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//计算器抽象类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AbstractCalculator</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">int</span> getResult()
+</span></span><span style="display:flex;"><span>	{	
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;		
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">virtual</span> string <span style="color:#a6e22e">reOperator</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> m_Num1;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> m_Num2;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ostream<span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&lt;&lt;</span>(ostream <span style="color:#f92672">&amp;</span>cout, AbstractCalculator <span style="color:#f92672">&amp;</span>abc)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> abc.m_Num1 <span style="color:#f92672">&lt;&lt;</span> abc.reOperator() <span style="color:#f92672">&lt;&lt;</span> abc.m_Num2 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> abc.getResult();
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> cout;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//加法类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AddCalculator</span> <span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> AbstractCalculator
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	AddCalculator(<span style="color:#66d9ef">int</span> a,<span style="color:#66d9ef">int</span> b){
+</span></span><span style="display:flex;"><span>		m_Num1 <span style="color:#f92672">=</span> a;
+</span></span><span style="display:flex;"><span>		m_Num2 <span style="color:#f92672">=</span> b;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getResult</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> m_Num1 <span style="color:#f92672">+</span> m_Num2;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	string <span style="color:#a6e22e">reOperator</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;+&#34;</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	AbstractCalculator <span style="color:#f92672">*</span>abc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> AddCalculator(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">*</span>abc <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">delete</span> abc;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h4 id="纯虚函数和抽象类">纯虚函数和抽象类</h4>
+<p>在多态中，通常父类中虚函数的实现是毫无意义的，主要都是调用子类重写的内容。因此可以将虚函数改为<strong>纯虚函数</strong>。</p>
+<p>纯虚函数语法：<code>virtual 返回值类型 函数名(参数列表) = 0;</code></p>
+<p>当类中有了纯虚函数，这个类就变成了<strong>抽象类</strong>。</p>
+<p>抽象类特点：</p>
+<ul>
+<li>1.无法实例化对象；</li>
+<li>2.子类必须重写抽象类中的纯虚函数，否则也变成抽象类；</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//多态-纯虚函数和抽象类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> test_pvfAndAbc
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Base</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//纯虚函数，该类为抽象类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//1.无法实例化对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//2.子类必须重写父类的纯虚函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> func() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Son</span> <span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> Base
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">void</span> func()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;func()&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//Base b;抽象类无法实例化对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//new Base; 抽象类无法实例化对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//Son s;在没有重写抽象类时，无法实例化对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Base <span style="color:#f92672">*</span>base <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Son;
+</span></span><span style="display:flex;"><span>		base<span style="color:#f92672">-&gt;</span>func();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h4 id="纯虚函数案例">纯虚函数案例</h4>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//纯虚函数案例
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AbstractDrinking</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//煮水
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> Boil() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//冲泡
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">Brew</span>() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//倒入
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PourInCup</span>() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//加入辅料
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PutSomething</span>() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//制作饮品
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">makeDrink</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		Boil();
+</span></span><span style="display:flex;"><span>		Brew();
+</span></span><span style="display:flex;"><span>		PourInCup();
+</span></span><span style="display:flex;"><span>		PutSomething();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Coffer</span> <span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> AbstractDrinking
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//煮水
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> Boil()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;煮矿泉水&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//冲泡
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">Brew</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;热水冲泡咖啡&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//倒入
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PourInCup</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;倒入杯子&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//加入辅料
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PutSomething</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;加入冰块与牛奶&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Tea</span> <span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> AbstractDrinking
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//煮水
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> Boil()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;煮泉水&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//冲泡
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">Brew</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;冲泡茶叶&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//倒入
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PourInCup</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;倒入杯子&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//加入辅料
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PutSomething</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;加入红枣&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doWork</span>(AbstractDrinking<span style="color:#f92672">*</span> abd)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	abd<span style="color:#f92672">-&gt;</span>makeDrink();
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">delete</span> abd;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//制作咖啡
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	doWork(<span style="color:#66d9ef">new</span> Coffer);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;---------------&#34;</span><span style="color:#f92672">&lt;&lt;</span>endl;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//制作茶
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	doWork(<span style="color:#66d9ef">new</span> Tea);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h4 id="虚析构和纯虚析构">虚析构和纯虚析构</h4>
+<p>多态使用时，如果子类有属性开辟到堆区，则父类指针在释放时无法调用子类的析构函数，从而造成内存泄漏。</p>
+<p>解决方式：将父类中的析构函数改为<strong>虚析构</strong>或者<strong>纯虚析构</strong>。</p>
+<p>虚析构和纯虚析构共性：</p>
+<ul>
+<li>1.可以解决父类指针释放子类对象；</li>
+<li>2.都需要有具体的函数实现；</li>
+</ul>
+<p>虚析构和纯虚析构区别：</p>
+<ul>
+<li>1.如果是纯虚析构，该类属于抽象类，无法实例化对象；</li>
+</ul>
+<p>语法：</p>
+<ul>
+<li>1.虚析构：<code>virtual ~类名(){}</code></li>
+<li>2.纯虚析构：<code>virtual ~类名() = 0;</code></li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_pureVirtualDestructor
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		Animal()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Animal构造函数调用&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">speak</span>() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//下面的写法是虚析构函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">/*~Animal()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">		{
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			cout &lt;&lt; &#34;Animal析构函数调用&#34; &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">		}*/</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//下面的写法是纯虚析构函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//这种写法需要类内声明类外实现
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">virtual</span> <span style="color:#f92672">~</span>Animal() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	Animal<span style="color:#f92672">::~</span>Animal()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Animal析构函数调用&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span> <span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> Animal
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		Cat(string name)
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Cat构造函数调用&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>			m_Name <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> string(name);
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">speak</span>() {
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;*</span>m_Name<span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;在喵喵喵&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">~</span>Cat()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Cat析构函数调用&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> (m_Name <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">delete</span> m_Name;
+</span></span><span style="display:flex;"><span>				m_Name <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//假设现在使用一个指针来管理猫的名字
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		string <span style="color:#f92672">*</span> m_Name;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//父类执政在析构时候不会调用子类中的析构函数，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 导致子类如果子类有堆区的数据，将无法释放。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Animal<span style="color:#f92672">*</span> anm <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cat(<span style="color:#e6db74">&#34;Tom&#34;</span>);
+</span></span><span style="display:flex;"><span>		anm<span style="color:#f92672">-&gt;</span>speak();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">delete</span> anm;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>上面的代码如果父类的析构函数不加virtual，那么结果如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>Animal构造函数调用
+</span></span><span style="display:flex;"><span>Cat构造函数调用
+</span></span><span style="display:flex;"><span>Tom在喵喵喵
+</span></span><span style="display:flex;"><span>Animal析构函数调用</span></span></code></pre></div>
+<p>子类对象没有被释放掉，是因为<strong>父类执政在析构时候不会调用子类中的析构函数，导致子类如果子类有堆区的数据，将无法释放。</strong></p>
+<p>利用虚析构函数（或者纯虚析构函数）解决父类指针释放子类对象，如果父类的析构函数加了virtual，那么结果如下：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>Animal构造函数调用
+</span></span><span style="display:flex;"><span>Cat构造函数调用
+</span></span><span style="display:flex;"><span>Tom在喵喵喵
+</span></span><span style="display:flex;"><span>Cat析构函数调用
+</span></span><span style="display:flex;"><span>Animal析构函数调用</span></span></code></pre></div>
+<h4 id="多态案例-电脑组装">多态案例-电脑组装</h4>
+<p>需求：</p>
+<ul>
+<li></li>
+</ul>
+<p><a href="#R-image-accc4d82b758900daff608eb8b6a11bc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-35.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-accc4d82b758900daff608eb8b6a11bc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-35.png"></a></p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> test_computer
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//抽象不同零件类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CPU</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> calculate() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">VideoCard</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> display() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Memory</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> storage() <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//组装电脑的类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Computer</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		Computer(CPU<span style="color:#f92672">*</span> cpu, VideoCard<span style="color:#f92672">*</span> vc, Memory<span style="color:#f92672">*</span> mem)<span style="color:#75715e">//父类的指针，在此处已经涉及多态了
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		{
+</span></span><span style="display:flex;"><span>			m_cpu <span style="color:#f92672">=</span> cpu;
+</span></span><span style="display:flex;"><span>			m_vc <span style="color:#f92672">=</span> vc;
+</span></span><span style="display:flex;"><span>			m_mem <span style="color:#f92672">=</span> mem;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//工作的函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//调用接口
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">work</span>()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			m_cpu<span style="color:#f92672">-&gt;</span>calculate();
+</span></span><span style="display:flex;"><span>			m_vc<span style="color:#f92672">-&gt;</span>display();
+</span></span><span style="display:flex;"><span>			m_mem<span style="color:#f92672">-&gt;</span>storage();
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">~</span>Computer()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> (m_cpu <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">delete</span> m_cpu;
+</span></span><span style="display:flex;"><span>				m_cpu <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> (m_vc <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">delete</span> m_vc;
+</span></span><span style="display:flex;"><span>				m_vc <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> (m_mem <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">delete</span> m_mem;
+</span></span><span style="display:flex;"><span>				m_mem <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		CPU<span style="color:#f92672">*</span> m_cpu;
+</span></span><span style="display:flex;"><span>		VideoCard<span style="color:#f92672">*</span> m_vc;
+</span></span><span style="display:flex;"><span>		Memory<span style="color:#f92672">*</span> m_mem;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IntelCPU</span> <span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> CPU
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">void</span> calculate()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;IntelCPU开始计算&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IntelVideoCard</span> <span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> VideoCard
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">void</span> display()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;IntelVideoCard开始显示&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LenoMemory</span> <span style="color:#f92672">:</span><span style="color:#66d9ef">public</span> Memory
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">void</span> storage()
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;LenoMemory开始存储&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//创建具体品牌的对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		CPU<span style="color:#f92672">*</span> intelCpu <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> IntelCPU;
+</span></span><span style="display:flex;"><span>		VideoCard<span style="color:#f92672">*</span> intelVc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> IntelVideoCard;
+</span></span><span style="display:flex;"><span>		Memory<span style="color:#f92672">*</span> lenoMem <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LenoMemory;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//创建电脑对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Computer<span style="color:#f92672">*</span> computer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Computer(intelCpu, intelVc, lenoMem);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//电脑开始工作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		computer<span style="color:#f92672">-&gt;</span>work();
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//释放资源
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">delete</span> computer;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="文件操作">文件操作</h3>
+<p>程序运行时产生的数据都属于临时数据，程序一旦结束都会被释放。
+通过文件可以将数据持久化。</p>
+<p>文件类型：</p>
+<ul>
+<li>文本文件：文件以文本的ASCLL码形式存储在计算机中。</li>
+<li>二进制文件： 文本以文本的二进制形式存储在计算机中 。</li>
+</ul>
+<p>操作文件的三大类：</p>
+<ul>
+<li>ofstream:写操作</li>
+<li>ifstream:读操作</li>
+<li>fstream:读写操作</li>
+</ul>
+<h5 id="文本文件">文本文件</h5>
+<p>写文件步骤：</p>
+<ul>
+<li>包含头文件：#include <fstream></li>
+<li>创建流对象：ofstream ofs;</li>
+<li>打开文件：ofs.open(&ldquo;文件路径&rdquo;，打开方式);</li>
+<li>写数据：ofs &laquo; &ldquo;写入的数据&rdquo;;</li>
+<li>关闭文件：ofs.close();</li>
+</ul>
+<p>文件打开方式：</p>
+<ul>
+<li>ios::in 读</li>
+<li>ios::out 写</li>
+<li>ios::ate 从文件末尾开始写数据</li>
+<li>ios::app 追加方式写文件</li>
+<li>ios::trunc 如果文件存在先删除，再创建</li>
+<li>ios::binary 二进制方式</li>
+</ul>
+<p>示例代码：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//写文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> test_write
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//写文本
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//1.包含头文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//2.创建流对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ofstream ofs;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//3.制定一个打开的方式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ofs.open(<span style="color:#e6db74">&#34;text.txt&#34;</span>, ios<span style="color:#f92672">::</span>out);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//4.写内容
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ofs <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;姓名：张三&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		ofs <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;性别：男&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		ofs <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;年龄：18&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//5.关闭文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ofs.close();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//写二进制文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">char</span> m_Name[<span style="color:#ae81ff">64</span>];
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> m_Age;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test02</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//1.包含头文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//2.创建流对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ofstream ofs(<span style="color:#e6db74">&#34;person.txt&#34;</span>, ios<span style="color:#f92672">::</span>out <span style="color:#f92672">|</span> ios<span style="color:#f92672">::</span>binary);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//3.打开文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//ofs.open(&#34;person.txt&#34;, ios::out | ios::binary);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//4.写文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Person p <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;zhangsan&#34;</span>,<span style="color:#ae81ff">18</span> };
+</span></span><span style="display:flex;"><span>		ofs.write((<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>)<span style="color:#f92672">&amp;</span>p, <span style="color:#66d9ef">sizeof</span>(Person));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//5.关闭文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ofs.close();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//读文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> test_read
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//读文本
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test01</span>()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//1.包含头文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//2.创建流对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ifstream ifs;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//3.制定一个打开的方式，判断打开是否成功
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ifs.open(<span style="color:#e6db74">&#34;text.txt&#34;</span>, ios<span style="color:#f92672">::</span>in);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> ( <span style="color:#f92672">!</span>ifs.is_open() )
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;文件打开失败&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//4.读内容
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">//（1）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">/*char buf[1024] = { 0 };
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			while (ifs &gt;&gt; buf)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			{
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">				cout &lt;&lt; buf &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			}*/</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//(2)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">/*char buf[1024] = { 0 };
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			while (ifs.getline(buf, 1024))
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			{
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">				cout &lt;&lt; buf &lt;&lt; endl;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			}*/</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//(3)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			string buf;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">while</span> (getline(ifs, buf)) {
+</span></span><span style="display:flex;"><span>				cout <span style="color:#f92672">&lt;&lt;</span> buf <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//(4)不推荐这种方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">/*char c;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			while ((c = ifs.get()) != EOF)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			{
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">				cout &lt;&lt; c ;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">			}*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//5.关闭文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ifs.close();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//读二进制文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">char</span> m_Name[<span style="color:#ae81ff">64</span>];
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> m_Age;
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test02</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//1.包含头文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//2.创建流对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ifstream ifs;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//3.制定一个打开的方式，判断打开是否成功
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ifs.open(<span style="color:#e6db74">&#34;person.txt&#34;</span>, ios<span style="color:#f92672">::</span>in<span style="color:#f92672">|</span>ios<span style="color:#f92672">::</span>binary);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>ifs.is_open())
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;文件打开失败&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//4.读内容
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		Person p;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		ifs.read((<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>)<span style="color:#f92672">&amp;</span>p, <span style="color:#66d9ef">sizeof</span>(Person));
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;姓名：&#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.m_Name <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; 年龄：&#34;</span> <span style="color:#f92672">&lt;&lt;</span> p.m_Age <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//5.关闭文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ifs.close();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>&mdash;&mdash;&mdash;&mdash;&ndash;C++的内容就先告一段落，对于以上只是将用一个项目总结前面学过的知识&mdash;&mdash;</p>
 <p>——————————————————————————————————————————————————————————————————————————————————————————————-</p>
 <h3 id="类">类</h3>
 <p>将数据结构和操作该数据结构的函数捆绑在一起形成一个类。</p>
 <h3 id="在类中使用缺省函数">在类中使用缺省函数</h3>
 <p>需要注意避免二义性：
-<a href="#R-image-ed1ee642170346d8029a3a6cdfebf176" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-5.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ed1ee642170346d8029a3a6cdfebf176"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-5.png"></a></p>
+<a href="#R-image-510fd33d1382156c87b381c77ae83293" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-510fd33d1382156c87b381c77ae83293"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-5.png"></a></p>
 <h2 id="构造函数">构造函数</h2>
 <h3 id="类中为什么需要构造函数">类中为什么需要构造函数</h3>
-<p><a href="#R-image-a2b67cdedb91f851d48797e80147114d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-6.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a2b67cdedb91f851d48797e80147114d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-6.png"></a></p>
+<p><a href="#R-image-f3fecdbf1aac0b45add313d53f2d88ba" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f3fecdbf1aac0b45add313d53f2d88ba"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-6.png"></a></p>
 <h3 id="构造函数在数组中的使用">构造函数在数组中的使用</h3>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a;
@@ -1783,11 +2436,11 @@ Donkey d;</p>
 <p>注意：对象之间的复制是不会导致复制构造函数的</p>
 <h2 id="转换构造函数">转换构造函数</h2>
 <p>什么是转换构造函数
-<a href="#R-image-4fc309d488e46976162f6a7db75290ca" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4fc309d488e46976162f6a7db75290ca"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png"></a></p>
+<a href="#R-image-7fcf4ecce601fb56cd3dce945b030dec" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7fcf4ecce601fb56cd3dce945b030dec"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-7.png"></a></p>
 <p>示例代码：
-<a href="#R-image-7e2d2b3073a7b90b35988bd7c925e2c3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e2d2b3073a7b90b35988bd7c925e2c3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png"></a>
+<a href="#R-image-ec82c3809a5ea242e3450620ff8cc31c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ec82c3809a5ea242e3450620ff8cc31c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-8.png"></a>
 在上面的例子当中，<code>c1 = 9;</code>会被自动转换为调用转换构造函数，如果不想让这样的事情发生，可以在转换构造函数前面加上修饰字段 <code>explicit</code>，这样再次使用<code>c1 = 9;</code>时程序会报错。</p>
 <h2 id="析构函数-destructors">析构函数-destructors</h2>
 <p>这里补充几点，一个类只能有一个析构函数；</p>
@@ -1808,11 +2461,11 @@ Donkey d;</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//用过后，该临时对象析构函数被调用
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }</span></span></code></pre></div>
 <p>上面结果输出三个destructor，在<code>fun(CMyclass sobj)</code>参数对象消亡调用析构函数（具体可以联想复制构造函数），会调用一次析构函数；当函数返回赋值给obj后，再次调用析构函数；整个程序结束再次调用析构函数。
-<a href="#R-image-264021730dd66d13da853c14efa292fe" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-264021730dd66d13da853c14efa292fe"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png"></a></p>
+<a href="#R-image-165853a956da0b949672c9c46c05e958" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-165853a956da0b949672c9c46c05e958"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-9.png"></a></p>
 <h2 id="this指针">this指针</h2>
-<p><a href="#R-image-2617eee58522540f92d844b175673203" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2617eee58522540f92d844b175673203"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png"></a></p>
+<p><a href="#R-image-d9510c8ed9b485133467bbbf696af699" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d9510c8ed9b485133467bbbf696af699"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-10.png"></a></p>
 <p>静态成员函数中可以直接使用this指针来代表指向该函数作用的对象的指针</p>
 <p>示例1：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Complex</span> {
@@ -1940,8 +2593,8 @@ mutable成员变量
 </span></span><span style="display:flex;"><span>    };</span></span></code></pre></div>
 <h2 id="运算符重载函数">运算符重载函数</h2>
 <p><strong>浅拷贝与深拷贝：</strong>
-<a href="#R-image-ea43742d08c33b87a2545ee0ba33b18e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ea43742d08c33b87a2545ee0ba33b18e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png"></a></p>
+<a href="#R-image-e0f8bf69b855cdde97a6aa84f8a97161" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e0f8bf69b855cdde97a6aa84f8a97161"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image.png"></a></p>
 <p>为解决这个问题，我们需要修改赋值运算符重载：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    String <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">operator</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">const</span> String <span style="color:#f92672">&amp;</span> s){
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>( <span style="color:#66d9ef">this</span> <span style="color:#f92672">==</span> <span style="color:#f92672">&amp;</span> s)
@@ -1972,8 +2625,8 @@ mutable成员变量
 <h2 id="继承和派生">继承和派生</h2>
 <p>**注意：**在派生类的各个成员函数中，不能访问基类中的private成员。</p>
 <h3 id="派生类的内存空间">派生类的内存空间</h3>
-<p><a href="#R-image-fd599cb1bec98094ea0ad6402c5a7bc6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fd599cb1bec98094ea0ad6402c5a7bc6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png"></a></p>
+<p><a href="#R-image-7a0a44f461e1916a1a8727b6ac87e18e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7a0a44f461e1916a1a8727b6ac87e18e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-1.png"></a></p>
 <h3 id="类之间的关系">类之间的关系</h3>
 <p><strong>继承：“是”关系。</strong></p>
 <ul>
@@ -1988,8 +2641,8 @@ mutable成员变量
 分”</li>
 </ul>
 <p>复合关系的示例：
-<a href="#R-image-053485ecdba1ef04ec3771ecb68b4049" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-053485ecdba1ef04ec3771ecb68b4049"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png"></a></p>
+<a href="#R-image-d0a4b208cb904d35e06cf2bb4b5e4682" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d0a4b208cb904d35e06cf2bb4b5e4682"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-2.png"></a></p>
 <h3 id="基类与派生类名字重名的情况">基类与派生类名字重名的情况</h3>
 <p>一般来说，基类和派生类不定义同名成员变量。但如果要方位可以使用<code>基类::基类成员</code>来访问。</p>
 <h3 id="访问权限">访问权限</h3>
@@ -2083,28 +2736,28 @@ mutable成员变量
 <li>当指针指向基类时调用，基类的函数，当指针指向派生类时，调用调用派生类的函数，这叫做多态。</li>
 <li>另外，在非虚函数和非构造、析构函数中调用虚函数，也叫做多态。
 例子：
-<a href="#R-image-82033dc27ae07f31f5690fc49fe14fe7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-82033dc27ae07f31f5690fc49fe14fe7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png"></a></li>
+<a href="#R-image-f2516582763e21874b720b3bc59991cc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f2516582763e21874b720b3bc59991cc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-4.png"></a></li>
 </ul>
 <p>如果在构造、析构函数中调用虚函数，那么会怎么样呢？</p>
 <p>如果这么做，那么编译器只会调用当前的虚函数，如果当前没有重写虚函数，则会从基类中找进行调用，为什么要这么做呢？其实这是为了防止未初始化就调用派生类的虚函数的情况。</p>
 <p>你想想啊，一类的初始化先从基类的构造函数开始，如果这个时候构造函数具有多态性，那么此时将调用派生类的对应虚函数，但是派生类这个时候都还没有初始化。</p>
 <p>例子：
-<a href="#R-image-3f27df471fd38e778cf92be232f77e09" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f27df471fd38e778cf92be232f77e09"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png"></a>`</p>
+<a href="#R-image-f44385832801dace79959829dc09a847" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f44385832801dace79959829dc09a847"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-3.png"></a>`</p>
 <ul>
 <li>补充：在上面的图例子中，派生类写了与基类虚函数相同的名字，但是没有在前面加修饰符virtual，这种情况编译器认为是虚函数。</li>
 </ul>
 <h3 id="多态的作用">多态的作用</h3>
 <p>在面向对象的程序设计中使用多态，能够增强程序的可扩充性，即程序需要修改或增加功能的时候，需要改动和增加的代码较少。</p>
 <h3 id="虚函数的访问权限">虚函数的访问权限</h3>
-<p><a href="#R-image-049ce279d45cdd7cb3e23b29830adffc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-049ce279d45cdd7cb3e23b29830adffc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png"></a></p>
+<p><a href="#R-image-13ab40c272ae4e23546a299bd95ad8ed" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-13ab40c272ae4e23546a299bd95ad8ed"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-11.png"></a></p>
 <h3 id="动态联编的实现机制">动态联编的实现机制</h3>
 <p>“多态”的关键在于通过基类指针或引用调用一个虚函数时，编译时不确定到底调用的是基类还是派生类的函数，运行时才确定 &mdash;- 这叫“动态联编”。</p>
 <p>每一个有虚函数的类（或有虚函数的类的派生类）都有一个虚函数表，该类的任何对象中都放着虚函数表的指针。虚函数表中列出了该类的虚函数地址。多出来的4个字节就是用来放虚函数表的地址的。
-<a href="#R-image-4bb10103fa06488065ce8a26ebe2b1ba" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4bb10103fa06488065ce8a26ebe2b1ba"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png"></a></p>
+<a href="#R-image-57a99a7ff91a8042e6b9cf6063ffdc9d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-57a99a7ff91a8042e6b9cf6063ffdc9d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/14.%E6%96%B0%E6%A0%87%E5%87%86c%E5%8A%A0%E5%8A%A0%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/image-12.png"></a></p>
 <p>下面一段代码将验证，对象的首地址是存了虚函数表的地址的：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
@@ -2125,7 +2778,7 @@ mutable成员变量
 </span></span><span style="display:flex;"><span>    pa<span style="color:#f92672">-&gt;</span>Func();
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
-<h3 id="纯虚函数和抽象类">纯虚函数和抽象类</h3>
+<h3 id="纯虚函数和抽象类-1">纯虚函数和抽象类</h3>
 <ul>
 <li>纯虚函数：没有函数体的虚函数</li>
 <li>抽象类：有纯虚函数的类</li>
@@ -2166,8 +2819,8 @@ mutable成员变量
         </div>
       </main>
     </div>
-    <script src="/js/clipboard/clipboard.min.js?1745682427" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745682427" defer></script>
-    <script src="/js/theme.js?1745682427" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745767174" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745767174" defer></script>
+    <script src="/js/theme.js?1745767174" defer></script>
   </body>
 </html>

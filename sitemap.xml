@@ -504,6 +504,9 @@
     <loc>http://localhost:1313/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/categories/c&#43;&#43;%E9%A1%B9%E7%9B%AE/</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/tags/hugo/</loc>
   </url>
   <url>
@@ -514,6 +517,12 @@
   </url>
   <url>
     <loc>http://localhost:1313/story/%E5%B0%8F%E8%AF%B4%E4%B8%8B%E8%BD%BD%E6%A9%B1%E7%AA%97/%E5%9B%BD%E5%AD%A6%E7%BB%8F%E5%85%B8/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/%E5%9F%BA%E7%A1%80%E9%A1%B9%E7%9B%AE/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</loc>
   </url>
   <url>
     <loc>http://localhost:1313/tags/%E9%9D%92%E6%98%A5/</loc>

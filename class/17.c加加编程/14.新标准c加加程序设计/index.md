@@ -1411,16 +1411,33 @@ class 子类 : 继承方式 父类
 
 继承方式一共有三种：public、protected、private
 
+以下是 `public`、`protected` 和 `private` 访问权限的总结对比表（Markdown 格式）：
+
+访问权限对比表
+
+| 场景| `public`| `protected`| `private`|
+|---|-------|------|-------|
+| 类内部访问          | ✅ 直接访问                   | ✅ 直接访问                   | ✅ 直接访问                   |
+| 派生类内部访问      | ✅ 直接访问                   | ✅ 直接访问                   | ❌ 不可直接访问               |
+| 外部代码访问        | ✅ 直接访问                   | ❌ 不可直接访问               | ❌ 不可直接访问               |
+| 默认继承方式        | 类默认 `private` 继承         | 结构体默认 `public` 继承      | -                             |
+
+
+继承方式对基类成员权限的影响
+
+| 基类成员权限        | `public` 继承后               | `protected` 继承后            | `private` 继承后              |
+|-------------------------|-------------------------------|-------------------------------|-------------------------------|
+| `public` 成员           | `public`（保留）              | `protected`（降级）           | `private`（降级）             |
+| `protected` 成员        | `protected`（保留）           | `protected`（保留）            | `private`（降级）             |
+| `private` 成员         | ❌ 不可见                     | ❌ 不可见                     | ❌ 不可见                     |
+
+
 继承后的访问权限：
 
 - 父类的私有成员，哪种方式继承都无法访问；
 - public继承,原来是什么还是什么：public-->public，protected-->protected；
 - protected继承，都变保护：public-->protected，protected-->protected；
 - private继承，都变私有：public-->private，protected-->private；
-
-protected与public的区别：
-
--
 
 #### 继承中的对象模型
 
@@ -1691,17 +1708,655 @@ namespace test_diamond_inherit {
 加入virtual后，输入`cl /d1 repoterSingleClassLayoutSheepTuo 类与对象.cpp`后的结果如下图，下图就解释了为什么使用virtual能解决菱形继承问题。
 ![alt text](image-31.png)
 
-## 多态
-
-### 多态的基本概念
-
-多态分为两类：
-	class Donkey:public Sheep,public Horse{
-	};
-	void test(){
-		Donkey d;
-
 ### 多态
+
+#### 多态的基本概念
+
+多态的含义：
+
+**​​多态是允许不同对象通过统一的接口执行特定行为的能力，其意义在于提升代码的灵活性和可维护性，实现“接口复用，逻辑分离”。**​​（示例：基类Animal定义虚函数speak()，子类Dog和Cat分别实现自己的speak()，通过基类指针调用时自动执行对应子类逻辑。）
+
+多态时C++三大特性之一，它分为编译时多态和运行时多态。
+
+- 编译时多态：函数重载与运算符重载属于静态多态，复用函数名
+- 运行时多态：派生类与虚函数实现运行时多态
+
+二者的区别
+
+- 静态多态函数的地址早绑定，在编译阶段确定函数地址；
+- 动态多态函数的地址晚绑定，在运行阶段确定函数地址；
+
+动态多态的满足条件：
+
+- 1.有继承关系；
+- 2.子类要重写父类的虚函数；（**注意不是重载，是重写,父类中的函数要加virtual，至于子类可写可不写**）
+
+动态多态的使用方式：
+
+- 父类的指针或者引用 指向子类对象；
+
+```cpp
+namespace test_polymorphism
+{
+	class Animal
+	{
+		public:
+		virtual void speak()
+		{
+			cout << "动物在说话" << endl;
+		}
+	};
+	class Cat :public Animal
+	{
+		public:
+		void speak()
+		{
+			cou<<"喵喵喵"<<endl;
+		}
+	};
+	void doSpeak(Animal & animal)//父类的指针可以指向子类的对象
+	{
+		animal.speak();
+	}
+	void test(){
+		Cat cat;
+		doSpeak(cat);//在未添加virtual关键字时，输出的是:动物在说话，添加后输出的是:喵喵喵,原因是未添加前，在编译阶段确定了speak()函数地址，而添加后，程序运行阶段才确定speak()函数地址
+	}
+}
+```
+
+#### 动态的底层原理
+
+```cpp
+namespace test_polymorphism
+{
+	class Animal
+	{
+		public:
+		virtual void speak()
+		{
+			cout << "动物在说话" << endl;
+		}
+	};
+	class Cat :public Animal
+	{
+		public:
+		void speak()
+		{
+			cou<<"喵喵喵"<<endl;
+		}
+	};
+	void doSpeak(Animal & animal)//父类的指针可以指向子类的对象
+	{
+		animal.speak();
+	}
+	void test01(){
+		Cat cat;
+		doSpeak(cat);
+	}
+	void test02(){
+	    cout<<sizeof(Animal)<<endl;
+	}
+}
+```
+
+如果未添加virtual关键字，那么输出的size大小是1，也就是空类，但是加了virtual后，输出的结果是4，也就是指针。
+
+1.解释方式1
+
+![alt text](image-32.png)
+
+在上图中，当在子类重写父类方法后，子类的重写的方法会在虚函数表中覆盖从父类继承的方法。当用父类指针（或者引用）指向子类，代码运行时程序就会通过虚函数表找到子类重写的方法，从而实现多态。
+
+2.解释方法2
+
+子类没有重写前，子类的结构：
+![alt text](image-34.png)
+
+子类重写后，子类的结构：
+![alt text](image-33.png)
+
+#### 经典案例-计算器类
+
+```cpp
+//计算器抽象类
+class AbstractCalculator
+{
+public:
+	virtual int getResult()
+	{	
+		return 0;		
+	}
+	virtual string reOperator()
+	{
+		return " ";
+	}
+	int m_Num1;
+	int m_Num2;
+};
+
+ostream& operator<<(ostream &cout, AbstractCalculator &abc)
+{
+	cout << abc.m_Num1 << abc.reOperator() << abc.m_Num2 << "=" << abc.getResult();
+	return cout;
+}
+//加法类
+class AddCalculator :public AbstractCalculator
+{
+public:
+	AddCalculator(int a,int b){
+		m_Num1 = a;
+		m_Num2 = b;
+	}
+	int getResult()
+	{
+		return m_Num1 + m_Num2;
+	}
+	string reOperator()
+	{
+		return "+";
+	}
+};
+void test01()
+{
+	AbstractCalculator *abc = new AddCalculator(1,2);
+	cout << *abc << endl;
+	delete abc;
+}
+```
+
+#### 纯虚函数和抽象类
+
+在多态中，通常父类中虚函数的实现是毫无意义的，主要都是调用子类重写的内容。因此可以将虚函数改为**纯虚函数**。
+
+纯虚函数语法：`virtual 返回值类型 函数名(参数列表) = 0;`
+
+当类中有了纯虚函数，这个类就变成了**抽象类**。
+
+抽象类特点：
+
+- 1.无法实例化对象；
+- 2.子类必须重写抽象类中的纯虚函数，否则也变成抽象类；
+
+```cpp
+//多态-纯虚函数和抽象类
+namespace test_pvfAndAbc
+{
+	class Base
+	{
+		//纯虚函数，该类为抽象类
+		//1.无法实例化对象
+		//2.子类必须重写父类的纯虚函数
+	public:
+		virtual void func() = 0;
+	};
+	class Son :public Base
+	{
+	public:
+		void func()
+		{
+			cout << "func()" << endl;
+		}
+	};
+	void test01() {
+		//Base b;抽象类无法实例化对象
+		//new Base; 抽象类无法实例化对象
+		//Son s;在没有重写抽象类时，无法实例化对象
+		Base *base = new Son;
+		base->func();
+	}
+}
+```
+#### 纯虚函数案例
+
+```cpp
+//纯虚函数案例
+class AbstractDrinking
+{
+public:
+	//煮水
+	virtual void Boil() = 0;
+	//冲泡
+	virtual void Brew() = 0;
+	//倒入
+	virtual void PourInCup() = 0;
+	//加入辅料
+	virtual void PutSomething() = 0;
+	//制作饮品
+	void makeDrink()
+	{
+		Boil();
+		Brew();
+		PourInCup();
+		PutSomething();
+	}
+};
+class Coffer :public AbstractDrinking
+{
+public:
+	//煮水
+	virtual void Boil()
+	{
+		cout << "煮矿泉水" << endl;
+	}
+	//冲泡
+	virtual void Brew()
+	{
+		cout << "热水冲泡咖啡" << endl;
+	}
+	//倒入
+	virtual void PourInCup()
+	{
+		cout << "倒入杯子" << endl;
+	}
+	//加入辅料
+	virtual void PutSomething()
+	{
+		cout << "加入冰块与牛奶" << endl;
+	}
+};
+
+class Tea :public AbstractDrinking
+{
+public:
+	//煮水
+	virtual void Boil()
+	{
+		cout << "煮泉水" << endl;
+	}
+	//冲泡
+	virtual void Brew()
+	{
+		cout << "冲泡茶叶" << endl;
+	}
+	//倒入
+	virtual void PourInCup()
+	{
+		cout << "倒入杯子" << endl;
+	}
+	//加入辅料
+	virtual void PutSomething()
+	{
+		cout << "加入红枣" << endl;
+	}
+};
+void doWork(AbstractDrinking* abd)
+{
+	abd->makeDrink();
+	delete abd;
+}
+void test01() {
+	//制作咖啡
+	doWork(new Coffer);
+
+	cout << "---------------"<<endl;
+	//制作茶
+	doWork(new Tea);
+}
+```
+
+#### 虚析构和纯虚析构
+
+多态使用时，如果子类有属性开辟到堆区，则父类指针在释放时无法调用子类的析构函数，从而造成内存泄漏。
+
+解决方式：将父类中的析构函数改为**虚析构**或者**纯虚析构**。
+
+虚析构和纯虚析构共性：
+
+- 1.可以解决父类指针释放子类对象；
+- 2.都需要有具体的函数实现；
+
+虚析构和纯虚析构区别：
+
+- 1.如果是纯虚析构，该类属于抽象类，无法实例化对象；
+
+语法：
+- 1.虚析构：`virtual ~类名(){}`
+- 2.纯虚析构：`virtual ~类名() = 0;`
+
+```cpp
+namespace test_pureVirtualDestructor
+{
+	class Animal
+	{
+	public:
+		Animal()
+		{
+			cout << "Animal构造函数调用" << endl;
+		}
+		virtual void speak() = 0;
+		//下面的写法是虚析构函数
+		/*~Animal()
+		{
+			cout << "Animal析构函数调用" << endl;
+		}*/
+		//下面的写法是纯虚析构函数
+		//这种写法需要类内声明类外实现
+		virtual ~Animal() = 0;
+	};
+	Animal::~Animal()
+	{
+		cout << "Animal析构函数调用" << endl;
+	}
+	class Cat :public Animal
+	{
+	public:
+		Cat(string name)
+		{
+			cout << "Cat构造函数调用" << endl;
+			m_Name = new string(name);
+		}
+		void speak() {
+			cout <<*m_Name<< "在喵喵喵" << endl;
+		}
+		~Cat()
+		{
+			cout << "Cat析构函数调用" << endl;
+			if (m_Name != NULL)
+			{
+				delete m_Name;
+				m_Name = NULL;
+			}
+		}
+		//假设现在使用一个指针来管理猫的名字
+		string * m_Name;
+	};
+	void test01() {
+		//父类执政在析构时候不会调用子类中的析构函数，
+		// 导致子类如果子类有堆区的数据，将无法释放。
+		Animal* anm = new Cat("Tom");
+		anm->speak();
+		delete anm;
+	}
+}
+```
+上面的代码如果父类的析构函数不加virtual，那么结果如下：
+
+```t
+Animal构造函数调用
+Cat构造函数调用
+Tom在喵喵喵
+Animal析构函数调用
+```
+
+子类对象没有被释放掉，是因为**父类执政在析构时候不会调用子类中的析构函数，导致子类如果子类有堆区的数据，将无法释放。**
+
+利用虚析构函数（或者纯虚析构函数）解决父类指针释放子类对象，如果父类的析构函数加了virtual，那么结果如下：
+
+```t
+Animal构造函数调用
+Cat构造函数调用
+Tom在喵喵喵
+Cat析构函数调用
+Animal析构函数调用
+```
+
+#### 多态案例-电脑组装
+
+需求：
+
+- 
+![alt text](image-35.png)
+
+```cpp
+namespace test_computer
+{
+	//抽象不同零件类
+	class CPU
+	{
+	public:
+		virtual void calculate() = 0;
+	};
+	class VideoCard
+	{
+	public:
+		virtual void display() = 0;
+	};
+	class Memory
+	{
+	public:
+		virtual void storage() = 0;
+	};
+	//组装电脑的类
+	class Computer
+	{
+	public:
+		Computer(CPU* cpu, VideoCard* vc, Memory* mem)//父类的指针，在此处已经涉及多态了
+		{
+			m_cpu = cpu;
+			m_vc = vc;
+			m_mem = mem;
+		}
+		//工作的函数
+		//调用接口
+		void work()
+		{
+			m_cpu->calculate();
+			m_vc->display();
+			m_mem->storage();
+		}
+		~Computer()
+		{
+			if (m_cpu != NULL)
+			{
+				delete m_cpu;
+				m_cpu = NULL;
+			}
+			if (m_vc != NULL)
+			{
+				delete m_vc;
+				m_vc = NULL;
+			}
+			if (m_mem != NULL)
+			{
+				delete m_mem;
+				m_mem = NULL;
+			}
+		}
+	private:
+		CPU* m_cpu;
+		VideoCard* m_vc;
+		Memory* m_mem;
+	};
+	class IntelCPU :public CPU
+	{
+	public:
+		void calculate()
+		{
+			cout << "IntelCPU开始计算" << endl;
+		}
+
+	};
+	class IntelVideoCard :public VideoCard
+	{
+	public:
+		void display()
+		{
+			cout << "IntelVideoCard开始显示" << endl;
+		}
+	};
+	class LenoMemory :public Memory
+	{
+	public:
+		void storage()
+		{
+			cout << "LenoMemory开始存储" << endl;
+		}
+	};
+	void test01() {
+		//创建具体品牌的对象
+		CPU* intelCpu = new IntelCPU;
+		VideoCard* intelVc = new IntelVideoCard;
+		Memory* lenoMem = new LenoMemory;
+		//创建电脑对象
+		Computer* computer = new Computer(intelCpu, intelVc, lenoMem);
+		//电脑开始工作
+		computer->work();
+		//释放资源
+		delete computer;
+	}
+}
+```
+
+### 文件操作
+
+程序运行时产生的数据都属于临时数据，程序一旦结束都会被释放。
+通过文件可以将数据持久化。
+
+文件类型：
+- 文本文件：文件以文本的ASCLL码形式存储在计算机中。
+- 二进制文件： 文本以文本的二进制形式存储在计算机中 。
+
+操作文件的三大类：
+
+- ofstream:写操作
+- ifstream:读操作
+- fstream:读写操作
+
+##### 文本文件
+
+写文件步骤：
+
+- 包含头文件：#include <fstream>
+- 创建流对象：ofstream ofs;
+- 打开文件：ofs.open("文件路径"，打开方式);
+- 写数据：ofs << "写入的数据";
+- 关闭文件：ofs.close();
+
+文件打开方式：
+
+- ios::in 读
+- ios::out 写
+- ios::ate 从文件末尾开始写数据
+- ios::app 追加方式写文件
+- ios::trunc 如果文件存在先删除，再创建
+- ios::binary 二进制方式
+
+示例代码：
+```cpp
+//写文件
+namespace test_write
+{
+	//写文本
+	void test01()
+	{
+		//1.包含头文件
+
+		//2.创建流对象
+		ofstream ofs;
+
+		//3.制定一个打开的方式
+		ofs.open("text.txt", ios::out);
+		//4.写内容
+		ofs << "姓名：张三" << endl;
+		ofs << "性别：男" << endl;
+		ofs << "年龄：18" << endl;
+
+		//5.关闭文件
+		ofs.close();
+	}
+	//写二进制文件
+	class Person
+	{
+	public:
+		char m_Name[64];
+		int m_Age;
+	};
+	void test02() {
+		//1.包含头文件
+		//2.创建流对象
+		ofstream ofs("person.txt", ios::out | ios::binary);
+		//3.打开文件
+		//ofs.open("person.txt", ios::out | ios::binary);
+		//4.写文件
+		Person p = { "zhangsan",18 };
+		ofs.write((const char*)&p, sizeof(Person));
+
+		//5.关闭文件
+		ofs.close();
+	}
+}
+//读文件
+namespace test_read
+{
+	//读文本
+	void test01()
+	{
+		//1.包含头文件
+
+		//2.创建流对象
+		ifstream ifs;
+
+		//3.制定一个打开的方式，判断打开是否成功
+		ifs.open("text.txt", ios::in);
+		if ( !ifs.is_open() )
+		{
+			cout << "文件打开失败" << endl;
+			return;
+		}
+		//4.读内容
+		//（1）
+			/*char buf[1024] = { 0 };
+			while (ifs >> buf)
+			{
+				cout << buf << endl;
+			}*/
+		//(2)
+			/*char buf[1024] = { 0 };
+			while (ifs.getline(buf, 1024))
+			{
+				cout << buf << endl;
+			}*/
+		//(3)
+			string buf;
+			while (getline(ifs, buf)) {
+				cout << buf << endl;
+			}
+		//(4)不推荐这种方法
+			/*char c;
+			while ((c = ifs.get()) != EOF)
+			{
+				cout << c ;
+			}*/
+
+		//5.关闭文件
+		ifs.close();
+	}
+
+	//读二进制文件
+	class Person
+	{
+	public:
+		char m_Name[64];
+		int m_Age;
+	};
+	void test02() {
+		//1.包含头文件
+
+		//2.创建流对象
+		ifstream ifs;
+
+		//3.制定一个打开的方式，判断打开是否成功
+		ifs.open("person.txt", ios::in|ios::binary);
+		if (!ifs.is_open())
+		{
+			cout << "文件打开失败" << endl;
+			return;
+		}
+		//4.读内容
+		Person p;
+
+		ifs.read((char*)&p, sizeof(Person));
+		cout << "姓名：" << p.m_Name << " 年龄：" << p.m_Age << endl;
+
+		//5.关闭文件
+		ifs.close();
+	}
+}
+```
+
+--------------C++的内容就先告一段落，对于以上只是将用一个项目总结前面学过的知识------
+
 
 ——————————————————————————————————————————————————————————————————————————————————————————————-
 
