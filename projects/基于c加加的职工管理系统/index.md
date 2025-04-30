@@ -269,10 +269,21 @@ delete worker;
 class WorkerManager
 {
 public:
+	//构造函数
 	WorkerManager();
-  void Show_Menu();
-  void ExitSystem();
-  void Add_Emp();
+	//展示菜单
+	void Show_Menu();
+	//退出系统
+	void ExitSystem();
+
+	//添加职工函数
+	void Add_Emp();
+
+	//记录数组中有多少个职工人数
+	int m_EmpNum;
+
+	//职工数组指针，使用双重指针管理worker数组指针，数组类型是*Worker
+	Worker** m_EmpArray;
 	~WorkerManager();
 };
 ```
@@ -282,43 +293,354 @@ public:
 ```cpp
 void WorkerManager::Add_Emp()
 {
-	cout << "添加职工" << endl;
-	int id;
-	string name;
-	int dId;
-	cout << "请输入职工编号" << endl;
-	cin >> id;
-	cout << "请输入职工姓名" << endl;
-	cin >> name;
-	cout << "请输入职工部门编号" << endl;
-	cin >> dId;
-	Worker* worker = nullptr;
-	switch (dId)
+	//提示
+	cout << "请输入要添加的人数" << endl;
+
+	//保存输入的人数
+	int addNum = 0;
+	cin >> addNum;
+	if (addNum > 0)
 	{
-	case 1:
-		worker = new Boss(id, name, dId);
-		break;
-	case 2:
-		worker = new Manager(id, name, dId);
-		break;
-	case 3:
-		worker = new Employee(id, name, dId);
-		break;
-	default: //输入错误 
-		cout << "输入错误" << endl;
+		//添加
+		//计算添加空间大小
+		int newSize = this->m_EmpNum + addNum;
+
+		//开辟空间,使用二级指针指向一个指针数组，这个指针数组会因为多态而指向不同职工
+		Worker **newSpace = new Worker *[newSize];
+
+		//如果原来有数据要复制到新空间下
+		if (this->m_EmpArray != NULL)
+		{
+			for (int i = 0; i < this->m_EmpNum; i++)
+			{
+				newSpace[i] = this->m_EmpArray[i];
+			}
+		}
+
+		//添加新成员
+		for (int i = 0; i < addNum; i++)
+		{
+			int id;
+			string name;
+			int dSelect;
+
+			cout << "输入第"<<i+1<<"个职工的编号" << endl;
+			cin >> id;
+
+			cout << "输入第" << i + 1 << "个职工的姓名" << endl;
+			cin >> name;
+
+			cout << "选择岗位职称" << endl;
+			cout << "1：表示普通员工" << endl;
+			cout << "2：表示经理" << endl;
+			cout << "3：表示老板" << endl;
+			cin >> dSelect;
+
+			Worker* worker = NULL;
+			switch (dSelect)
+			{
+			case 1:
+				worker = new Employee(id, name, 1);
+				break;
+			case 2:
+				worker = new Manager(id, name, 2);
+				break;
+			case 3:
+				worker = new Boss(id, name, 3);
+				break;
+			default:
+				break;
+			}
+
+			//将职工信息添加到数组中
+			newSpace[this->m_EmpNum + i] = worker;
+		}
+
+		//释放堆区数据
+		delete[] m_EmpArray;
+
+		//更新双重指针的指向
+		this->m_EmpArray = newSpace;
+
+		//更新人数
+		this->m_EmpNum = newSize;
+
+		//文件不为空
+		this——>m_FileIsEmpty = false;
+
+		//成功添加后保存到文件中
+		Save();
+
+		//提示添加成功
+		cout << "添加成功，添加了"<<addNum<<"人" << endl;
 		system("pause");
 		system("cls");
-		return;
 	}
-	//将创建的职工放到vector中
-	m_Vec.push_back(worker);
-	cout << "添加职工成功" << endl;
-	system("pause");
-	system("cls");
+	else
+	{
+		cout << "输入错误" << endl;
+	}
+
 }
 ```
 
 #### 测试添加职工
 
+```cpp
+int main()
+{
+	WorkerManager wm;
+	int choice = 0;//用于存储用户选择
+	
+	while (true)
+	{
+		wm.Show_Menu(); //显示菜单
+		cout << "请输入您的选择： " << endl;
+		cin >> choice;
+		switch (choice)
+		{
+		case 0: //退出系统
+			wm.ExitSystem();
+			break;
+		case 1: //增加职工
+			wm.Add_Emp();
+			break;
+		case 2: //显示职工
+			break;
+		case 3: //删除职工
+			break;
+		case 4: //修改职工
+			break;
+		case 5: //查找职工
+			break;
+		case 6: //按照编号排序
+			break;
+		case 7: //清空文件
+			break;
+		default:
+			cout << "输入有误，请重新输入" << endl;
+			system("pause");
+			system("cls"); //清屏操作
+			break;
+		}
+	}
+	system("pause");
+	return 0;
+}
+```
 
-{{% attachments color="fuchsia" icon="fab fa-hackerrank" /%}}
+### 6.职工数据保存
+
+因程序运行结束后添加的数据会被清除，再次打开创建的数据就没有了，所以需要将数据保存到文件中，下次打开时可以读取文件中的数据。
+
+#### 创建保存数据函数
+
+在WorkerManager.h中添加保存数据函数Save()；并在WorkerManager.cpp中实现，实现代码如下：
+
+```cpp
+void WorkerManager::Save()
+{
+	//创建写入文件对象
+	ofstream ofs;
+	//打开文件
+	ofs.open(FILENAME, ios::out);
+	//开始写入
+	for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		ofs << this->m_EmpArray[i]->m_Id << " "
+			<< this->m_EmpArray[i]->m_Name << " "
+			<< this->m_EmpArray[i]->m_DeptId << endl;
+	}
+	//关闭文件
+	ofs.close();
+}
+```
+接着在WorkerManager.cpp中Add_Emp()函数中添加保存数据函数，详细查看[代码](#实现添加职工)。
+
+#### 读取文件中的数据
+
+在读取文件的过程中，文件可能有一下三种情况：
+
+- 文件不存在
+- 文件存在，但是文件中无数据
+- 文件存在，并且文件中有已写入的数据
+
+#### 文件为空的情况
+
+在worrkerManager.h中添加一个bool类型的m_FileIsEmpty成员变量用于记录文件是否为空。
+
+在WorkerManager.cpp中构造函数中添加代码，当文件为空时如何操作：
+
+```cpp
+WorkerManager::WorkerManager()
+{
+	//1，判断文件是否存在
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+	if (!ifs.is_open())
+	{
+		cout << "文件不存在" << endl;
+		//初始化属性
+		this->m_EmpArray = NULL;
+		this->m_EmpNum = 0;
+		this->m_FileIsEmpty = true;
+
+		ifs.close();
+		return;
+	}
+	//文件存在，但是没有记录
+	char ch;
+	ifs >> ch;
+	if (ifs.eof())
+	{
+		//文件为空
+		cout << "文件为空" << endl;
+		//初始化属性
+		this->m_EmpArray = NULL;
+		this->m_EmpNum = 0;
+		this->m_FileIsEmpty = true;
+
+		ifs.close();
+		return;
+	}
+}
+```
+
+因为每次添加人数后文件就不是空的，所以需要在函数Add_Emp()中添加代码，当文件不为空时，将m_FileIsEmpty = false，详细查看[代码](#实现添加职工)。
+
+#### 文件不为空的情况
+
+在为文件中WorkerManager.h类添加如下成员函数：
+
+```cpp
+//统计文件中的人数
+int Get_EmpNUm();
+
+//如果文件存在且有记录，读出数据并存储在数组中，初始化员工人数
+void initEmp();
+```
+
+在WorkerManager.cpp中实现Get_EmpNUm()、initEmp()函数，实现代码如下：
+
+```cpp
+int WorkerManager::Get_EmpNUm()//用于记录人数个数
+{
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+
+	int id;
+	string name;
+	int did;
+
+	int empNum = 0;
+
+	while (ifs >> id && ifs >> name && ifs >> did)
+	{
+		empNum++;
+	}
+	return empNum;
+}
+void WorkerManager::initEmp()
+{
+	//打开文件
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+
+	int id;
+	string name;
+	int dId;
+
+	int index = 0;
+
+	while (ifs >> id && ifs >> name && ifs >> dId)
+	{
+		Worker* worker = NULL;
+		if (dId == 1)
+		{
+			worker = new Employee(id, name, dId);
+		}
+		else if (dId == 2)
+		{
+			worker = new Manager(id, name, dId);
+		}
+		else
+		{
+			worker = new Boss(id, name, dId);
+		}
+		this->m_EmpArray[index] = worker;//将数据存储在指针数组中
+		index++;//记录人数
+	}
+	//关闭文件
+	ifs.clear();
+}
+```
+
+此时回到构造函数中添加如下代码
+
+```cpp
+//文件存在,并有记录
+int num = this->Get_EmpNUm();
+cout << "职工人数为：" << num<<endl;
+this->m_EmpNum = num;
+//开辟空间
+this->m_EmpArray = new Worker * [this->m_EmpNum];
+//将数据存到数组中
+this->initEmp();
+
+//测试代码，可以删除
+for (int i = 0; i < this->m_EmpNum; i++)
+{
+	cout << "职工编号" << this->m_EmpArray[i]->m_Id << " "
+		<< "职工姓名：" << this->m_EmpArray[i]->m_Name << " "
+		<< "职工职称：" << this->m_EmpArray[i]->GetDeptName() << endl;
+
+}
+
+
+```
+
+### 7.显示职工
+
+在WorkerManager.h中添加如下成员函数：
+
+```cpp
+//显示职工
+void Show_Emp();
+```
+
+在WorkerManager.cpp中实现Show_Emp()函数，实现代码如下：
+
+```cpp
+//判断文件是否为空
+if (this->m_FileIsEmpty)
+{
+	cout << "文件不存在或为空" << endl;
+
+}
+else
+{
+	for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		this->m_EmpArray[i]->showInfo();
+	}
+	system("pause");
+	system("cls");
+}
+```
+
+#### 测试显示职工
+
+在main()函数中添加如下代码：
+
+```cpp
+case 2: //显示职工
+	wm.Show_Emp();
+	break;
+```
+
+### 8.删除职工
+
+#### 实现思路
+
+- 先判断文件是否存在
+- 如果文件不存在，则提示文件不存在，删除失败
