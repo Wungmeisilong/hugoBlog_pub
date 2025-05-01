@@ -8,6 +8,22 @@
 
 ![alt text](image-1.png)
 
+## 效果图
+
+### 界面
+
+![alt text](image-3.png)
+
+### 增加
+
+![alt text](image-4.png)
+
+### 显示
+
+![alt text](image-5.png)
+
+……
+
 ## 开始项目开发
 
 ### 1.创建管理类
@@ -805,3 +821,195 @@ void WorkerManager::Mod_Emp()
 	system("cls");
 }
 ```
+
+### 10.查找职工
+
+详细请查看代码：
+
+```cpp
+int WorkerManager::IsNameExist(string name) {
+	bool flag = -1;
+	for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		if (this->m_EmpArray[i]->m_Name == name)
+		{
+			flag = i;
+			break;
+		}
+	}
+	return flag;
+}
+void WorkerManager::Find_Emp()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在" << endl;
+	}
+	else
+	{
+		cout << "请输入查找方式" << endl;
+		cout << "1：按照编号查询" << endl;
+		cout << "2：按照姓名查询" << endl;
+		int select = 0;
+		cin >> select;
+
+		switch (select)
+		{
+		case 1:
+		{
+			//按照编号查询
+			int id;
+			cout << "请输入查找的编号：" << endl;
+			cin >> id;
+			int index = 0;
+			index = this->IsExist(id);
+
+			if(index != -1)
+			{
+				cout << "查询到编号为"<<id<<"的职工，信息如下：" << endl;
+				this->m_EmpArray[index]->showInfo();
+			}
+			else
+			{
+				cout << "查无此人！" << endl;
+			}
+		}
+			break;
+		case 2:
+		{
+			//按照姓名查找
+			string name;
+			cout << "请输出要查找的职工姓名：" << endl;
+			cin >> name;
+
+			int index = this->IsNameExist(name);
+			if (index != -1)
+			{
+				cout << "查找成功," << name << "职工的信息如下:" << endl;
+				this->m_EmpArray[index]->showInfo();
+			}
+			else
+			{
+				cout << "查无此人" << endl;
+			}
+		}
+			break;
+		default:
+			cout << "输入错误请重新输入！！" << endl;
+			break;
+		}
+	}
+	this->Cls_coutContents();
+}
+```
+
+### 11.按照编号排序
+
+详细查看代码：
+
+```cpp
+void WorkerManager::Sort_Emp()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或为空" << endl;
+		this->Cls_coutContents();
+	}
+	else
+	{
+		//文件存在输入编号，设置升序，降序
+		cout << "输入数字设置排序" << endl;
+		cout << "1:升序" << endl;
+		cout << "2:降序" << endl;
+
+		int select = 0;
+		cin >> select;
+		for (int i = 0; i < this->m_EmpNum; i++)
+		{
+			//假设i下标对象中的编号就是最大的
+			int minOrMan = i;
+			for (int j = 0; j < this->m_EmpNum; j++)
+			{
+				if (select == 1)//升序
+				{
+					if (this->m_EmpArray[minOrMan]->m_Id > this->m_EmpArray[j]->m_Id)//如果是大于，把下标赋值给minOrman
+					{
+						minOrMan = j;
+					}
+				}
+				else 
+				{
+					if (this->m_EmpArray[minOrMan]->m_Id < this->m_EmpArray[j]->m_Id)//如果是小于，把下标赋值给minOrman
+					{
+						minOrMan = j;
+					}
+				}
+			}
+
+			//以升序为例，当假设的值最大值minOrMan与j中对象比较完后，
+			// 就能得到第一轮真正最大的下标，这个是时候交换数据即可
+			if (minOrMan != i)
+			{
+				Worker* temp = this->m_EmpArray[i];
+				this->m_EmpArray[i] = this->m_EmpArray[minOrMan];
+				this->m_EmpArray[minOrMan] = temp;
+			}
+		}
+		cout << "排序成功" << endl;
+		//同步数据到文件
+		this->Save();
+		this->Show_Emp();
+	}
+}
+```
+
+### 12.清空文件
+
+详细查看代码：
+
+```cpp
+void WorkerManager::Clean_File()
+{
+	cout << "确定清空文件" << endl;
+	cout << "1:确定" << endl;
+	cout << "2:取消" << endl;
+
+	int select = 0;
+	cin >> select;
+
+	if(select == 1)
+	{
+		//清空文件
+		ofstream ofs(FILENAME,ios::trunc);
+		ofs.close();
+
+		//判断存储指针对象的数组是否为空，为空则需要一一清楚堆区的每个职工
+		if (this->m_EmpArray != NULL)
+		{
+			for (int i = 0; i < this->m_EmpNum; i++)
+			{
+				delete this->m_EmpArray[i];
+				this->m_EmpArray[i] = NULL;//避免野指针
+			}
+
+			//释放指针数组
+			delete[] this->m_EmpArray;
+			this->m_EmpArray = NULL;
+			this->m_EmpNum = 0;
+			this->m_FileIsEmpty = true;
+
+			cout << "文件清除成功。" << endl;
+		}
+	}
+	this->Cls_coutContents();
+}
+void WorkerManager::Cls_coutContents() 
+{
+	system("pause");
+	system("cls");
+}
+```
+
+## 结束语
+
+以上就是一个基于C++的职工管理系统，希望对大家有所帮助。

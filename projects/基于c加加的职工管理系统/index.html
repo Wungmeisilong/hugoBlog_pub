@@ -18,24 +18,24 @@
     <meta property="og:type" content="website">
     <meta itemprop="name" content="基于C&#43;&#43;的职工管理系统 :: Maloudown">
     <meta itemprop="description" content="描述文章内容">
-    <meta itemprop="wordCount" content="4121">
+    <meta itemprop="wordCount" content="5224">
     <meta itemprop="keywords" content="C&#43;&#43;,基础项目">
     <title>基于C&#43;&#43;的职工管理系统 :: Maloudown</title>
     <link href="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/index.xml" rel="alternate" type="application/rss+xml" title="基于C++的职工管理系统 :: Maloudown">
     <link href="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/index.print.html" rel="alternate" type="text/html" title="基于C++的职工管理系统 :: Maloudown">
     <link href="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/index.md" rel="alternate" type="text/markdown" title="基于C++的职工管理系统 :: Maloudown">
-    <link href="/images/favicon.svg?1746110422" rel="icon" type="image/svg+xml">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746110422" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746110422" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1746110422" rel="stylesheet">
-    <link href="/css/theme.css?1746110422" rel="stylesheet">
-    <link href="/css/format-html.css?1746110422" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1746110422" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1746110422" defer></script>
-    <script src="/js/lunr/lunr.min.js?1746110422" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1746110422" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1746110422" defer></script>
-    <script src="/js/lunr/lunr.zh.min.js?1746110422" defer></script>
-    <script src="/js/search.js?1746110422" defer></script>
+    <link href="/images/favicon.svg?1746121751" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746121751" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746121751" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1746121751" rel="stylesheet">
+    <link href="/css/theme.css?1746121751" rel="stylesheet">
+    <link href="/css/format-html.css?1746121751" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1746121751" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1746121751" defer></script>
+    <script src="/js/lunr/lunr.min.js?1746121751" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1746121751" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1746121751" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1746121751" defer></script>
+    <script src="/js/search.js?1746121751" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,7 +45,7 @@
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/searchindex.zh.js?1746110422";
+      window.relearn.index_js_url="/searchindex.zh.js?1746121751";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -161,6 +161,13 @@
   <ul>
     <li><a href="#项目需求">项目需求</a></li>
     <li><a href="#项目功能">项目功能</a></li>
+    <li><a href="#效果图">效果图</a>
+      <ul>
+        <li><a href="#界面">界面</a></li>
+        <li><a href="#增加">增加</a></li>
+        <li><a href="#显示">显示</a></li>
+      </ul>
+    </li>
     <li><a href="#开始项目开发">开始项目开发</a>
       <ul>
         <li><a href="#1创建管理类">1.创建管理类</a></li>
@@ -172,8 +179,12 @@
         <li><a href="#7显示职工">7.显示职工</a></li>
         <li><a href="#8删除职工">8.删除职工</a></li>
         <li><a href="#9修改职工">9.修改职工</a></li>
+        <li><a href="#10查找职工">10.查找职工</a></li>
+        <li><a href="#11按照编号排序">11.按照编号排序</a></li>
+        <li><a href="#12清空文件">12.清空文件</a></li>
       </ul>
     </li>
+    <li><a href="#结束语">结束语</a></li>
   </ul>
 </nav>
                 </div>
@@ -221,17 +232,28 @@
 <h1 id="基于c的职工管理系统">基于C&#43;&#43;的职工管理系统</h1>
 
 <h2 id="项目需求">项目需求</h2>
-<p><a href="#R-image-a2198ee46b4efe75d6db6142391e0af5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a2198ee46b4efe75d6db6142391e0af5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image.png"></a></p>
+<p><a href="#R-image-70b3bf2c225db68992c51dd5c79a9a59" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-70b3bf2c225db68992c51dd5c79a9a59"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image.png"></a></p>
 <h2 id="项目功能">项目功能</h2>
-<p><a href="#R-image-58286d9e34acc7d66b1dfee98e470ad0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-58286d9e34acc7d66b1dfee98e470ad0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-1.png"></a></p>
+<p><a href="#R-image-accd208544a14943e34526b8df53ebc1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-accd208544a14943e34526b8df53ebc1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-1.png"></a></p>
+<h2 id="效果图">效果图</h2>
+<h3 id="界面">界面</h3>
+<p><a href="#R-image-04b2130e51a3f4321fb9b1c31f157594" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-04b2130e51a3f4321fb9b1c31f157594"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-3.png"></a></p>
+<h3 id="增加">增加</h3>
+<p><a href="#R-image-2d9b9de53af7158ddf6dd82ba49725c4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2d9b9de53af7158ddf6dd82ba49725c4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-4.png"></a></p>
+<h3 id="显示">显示</h3>
+<p><a href="#R-image-00c48edd5c3907e118dff12b0e72e9fe" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-00c48edd5c3907e118dff12b0e72e9fe"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-5.png"></a></p>
+<p>……</p>
 <h2 id="开始项目开发">开始项目开发</h2>
 <h3 id="1创建管理类">1.创建管理类</h3>
 <h4 id="管理类功能">管理类功能</h4>
 <p>管理类负责内容
-<a href="#R-image-a2278735a2d721212115e596ccb4e966" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a2278735a2d721212115e596ccb4e966"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-2.png"></a></p>
+<a href="#R-image-47964ca9e69b1bead0e5eaf88bfbc1e5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-47964ca9e69b1bead0e5eaf88bfbc1e5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/image-2.png"></a></p>
 <h4 id="实现代码">实现代码</h4>
 <p>添加头文件：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#pragma once </span><span style="color:#75715e">//防止头文件重复包含
@@ -891,6 +913,181 @@
 </span></span><span style="display:flex;"><span>	system(<span style="color:#e6db74">&#34;pause&#34;</span>);
 </span></span><span style="display:flex;"><span>	system(<span style="color:#e6db74">&#34;cls&#34;</span>);
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="10查找职工">10.查找职工</h3>
+<p>详细请查看代码：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> WorkerManager<span style="color:#f92672">::</span>IsNameExist(string name) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">bool</span> flag <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpNum; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[i]<span style="color:#f92672">-&gt;</span>m_Name <span style="color:#f92672">==</span> name)
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			flag <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> flag;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> WorkerManager<span style="color:#f92672">::</span>Find_Emp()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_FileIsEmpty)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;文件不存在&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;请输入查找方式&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;1：按照编号查询&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;2：按照姓名查询&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> select <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>		cin <span style="color:#f92672">&gt;&gt;</span> select;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">switch</span> (select)
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//按照编号查询
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">int</span> id;
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;请输入查找的编号：&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>			cin <span style="color:#f92672">&gt;&gt;</span> id;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">int</span> index <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>			index <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>IsExist(id);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span>(index <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;查询到编号为&#34;</span><span style="color:#f92672">&lt;&lt;</span>id<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34;的职工，信息如下：&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[index]<span style="color:#f92672">-&gt;</span>showInfo();
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;查无此人！&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//按照姓名查找
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			string name;
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;请输出要查找的职工姓名：&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>			cin <span style="color:#f92672">&gt;&gt;</span> name;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">int</span> index <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>IsNameExist(name);
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> (index <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;查找成功,&#34;</span> <span style="color:#f92672">&lt;&lt;</span> name <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;职工的信息如下:&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[index]<span style="color:#f92672">-&gt;</span>showInfo();
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;查无此人&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;输入错误请重新输入！！&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>Cls_coutContents();
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="11按照编号排序">11.按照编号排序</h3>
+<p>详细查看代码：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> WorkerManager<span style="color:#f92672">::</span>Sort_Emp()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_FileIsEmpty)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;文件不存在或为空&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>Cls_coutContents();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//文件存在输入编号，设置升序，降序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;输入数字设置排序&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;1:升序&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;2:降序&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> select <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>		cin <span style="color:#f92672">&gt;&gt;</span> select;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpNum; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//假设i下标对象中的编号就是最大的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">int</span> minOrMan <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpNum; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">if</span> (select <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)<span style="color:#75715e">//升序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>				{
+</span></span><span style="display:flex;"><span>					<span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[minOrMan]<span style="color:#f92672">-&gt;</span>m_Id <span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[j]<span style="color:#f92672">-&gt;</span>m_Id)<span style="color:#75715e">//如果是大于，把下标赋值给minOrman
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>					{
+</span></span><span style="display:flex;"><span>						minOrMan <span style="color:#f92672">=</span> j;
+</span></span><span style="display:flex;"><span>					}
+</span></span><span style="display:flex;"><span>				}
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">else</span> 
+</span></span><span style="display:flex;"><span>				{
+</span></span><span style="display:flex;"><span>					<span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[minOrMan]<span style="color:#f92672">-&gt;</span>m_Id <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[j]<span style="color:#f92672">-&gt;</span>m_Id)<span style="color:#75715e">//如果是小于，把下标赋值给minOrman
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>					{
+</span></span><span style="display:flex;"><span>						minOrMan <span style="color:#f92672">=</span> j;
+</span></span><span style="display:flex;"><span>					}
+</span></span><span style="display:flex;"><span>				}
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//以升序为例，当假设的值最大值minOrMan与j中对象比较完后，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#75715e">// 就能得到第一轮真正最大的下标，这个是时候交换数据即可
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> (minOrMan <span style="color:#f92672">!=</span> i)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				Worker<span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[i];
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[i] <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[minOrMan];
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[minOrMan] <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;排序成功&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//同步数据到文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>Save();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>Show_Emp();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="12清空文件">12.清空文件</h3>
+<p>详细查看代码：</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> WorkerManager<span style="color:#f92672">::</span>Clean_File()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;确定清空文件&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;1:确定&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;2:取消&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> select <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	cin <span style="color:#f92672">&gt;&gt;</span> select;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(select <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//清空文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ofstream <span style="color:#a6e22e">ofs</span>(FILENAME,ios<span style="color:#f92672">::</span>trunc);
+</span></span><span style="display:flex;"><span>		ofs.close();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//判断存储指针对象的数组是否为空，为空则需要一一清楚堆区的每个职工
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpNum; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>			{
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[i];
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray[i] <span style="color:#f92672">=</span> NULL;<span style="color:#75715e">//避免野指针
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">//释放指针数组
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">delete</span>[] <span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpArray <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_EmpNum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>m_FileIsEmpty <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;文件清除成功。&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">this</span><span style="color:#f92672">-&gt;</span>Cls_coutContents();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> WorkerManager<span style="color:#f92672">::</span>Cls_coutContents() 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	system(<span style="color:#e6db74">&#34;pause&#34;</span>);
+</span></span><span style="display:flex;"><span>	system(<span style="color:#e6db74">&#34;cls&#34;</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h2 id="结束语">结束语</h2>
+<p>以上就是一个基于C++的职工管理系统，希望对大家有所帮助。</p>
 
   <footer class="footline">
               <i class='fa-fw fas fa-user'></i> <a href="mailto:1642626049@qq.com">@王四季（maloudowm）</a>
@@ -1151,8 +1348,8 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1746110422" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1746110422" defer></script>
-    <script src="/js/theme.js?1746110422" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1746121751" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1746121751" defer></script>
+    <script src="/js/theme.js?1746121751" defer></script>
   </body>
 </html>
