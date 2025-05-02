@@ -2357,6 +2357,218 @@ namespace test_read
 
 --------------C++的内容就先告一段落，对于以上只是将用一个项目总结前面学过的知识------
 
+## 模板（泛型编程）
+
+### 模板概念
+
+模板就是将类型参数化，将类型参数化后，可以创建出针对不同类型的函数或类。
+
+特点：
+  
+### 函数模板
+
+#### 作用
+
+建立一个通用的函数，其他函数返回值类型和形参类型可以不一样，但是逻辑是一样的。
+
+函数模板语法：
+```cpp
+template <typename T>
+函数声明或定义
+```
+示例代码：
+```cpp
+namespace test01
+{
+	template<typename T>
+	void swap(T& a, T& b)
+	{
+		T temp = a;
+		a = b;
+		b = temp;
+	}
+}
+```
+
+#### 函数注意事项
+
+- 自动类型推导，必须推导出一致的类型T，才可以使用
+- 模板需要确定出T的类型才可以使用
+
+代码说明：
+```cpp
+namespace test_ClassTemplate
+{
+	template <typename T>
+	void mySwap(T &a, T &b)
+	{
+		T temp = a;
+		a = b;
+		b = temp;
+	}
+	//1.自动类型推到，需要自动推到出一致数据类型T才可以使用
+	void test01()
+	{
+		int a = 10;
+		int b = 20;
+		//char c = 'c';
+		//mySwap(a, c);//此处会报错，原因就是类型不一致
+		mySwap(a,b);
+	}
+	//2.模板必须确定出T的数据类型，才可以使用
+	template <typename T>
+	void fun()
+	{
+		cout << "你好！" << endl;
+	}
+	void test02()
+	{
+		//fun();//T类型没有被确定，报错；想直接使用也可以
+		fun<int>();//这样可以使用，但这样就没必要写函数模板了
+	}
+}
+```
+
+#### 函数模板案例
+
+![alt text](image-36.png)
+
+#### 普通函数与函数模板的区别
+
+- 普通函数调用可以发生隐式转换
+- 函数模板自动类型推导，不可以发生隐式转换；
+- 函数模板 显示指定类型，可以发生隐式转换。
+
+示例代码：
+```cpp
+namespace test03
+{
+	int myPrint1(int a, int b)
+	{
+		return a+b;
+	}
+	template<typename T>
+	T myPrint2(T a, T b)
+	{
+		return a + b;
+	}
+	void test01()
+	{
+		int a = 10;
+		int b = 20;
+		char c = 'c';
+		//1.普通函数可以发生隐式类型转换
+		myPrint1(a, c);
+		//2.函数模板如果发生隐式类型转换，编译器会报错
+		myPrint2(a, c);
+		//3.函数模板如果是显示指定类型，则可以发生隐式转换
+		myPrint2<int>(a, c);
+	}
+    
+}
+```
+
+建议：建议使用显示指定类型的方式，因为可以避免隐式转换可能带来的问题。
+
+#### 普通函数与函数模板的调用规则
+
+- 如果函数模板和普通函数都可以实现，优先调用普通函数；
+- 可以通过**空模板参数列表**来强制调用函数模板；
+- 函数模板也可以发生函数重载；
+- 如果函数模板可以产生更好的匹配，优先调用函数模板。
+
+示例代码：
+```cpp
+namespace test_usingFun
+{
+	void myPrint(int a, int b)
+	{
+		cout << "调用的普通函数" << endl;
+	}
+	template<typename T>
+	void myPrint(T a, T b)
+	{
+		cout << "调用的函数模板" << endl;
+	}
+	template<typename T>
+	void myPrint(T a, T b, T c)
+	{
+		cout << "调用的函数模板2" << endl;
+	}
+	void test01()
+	{
+		int a = 10;
+		int b = 20;
+		int d = 30;
+		char c = 'c';
+		myPrint(a, b);//调用的普通函数
+		myPrint<>(a, b);//强制调用函数模板
+
+		myPrint(a, b, d);//函数重载
+
+		char c1 = 'c';
+		char c2 = 'b';
+		//理论上，myPrint(int a, int b)（隐式转换）和myPrint(T a, T b)都可以调用
+		//但实际上是调用myPrint(T a, T b)，这就是"更好的匹配机制，优先调用"
+		myPrint(c1, c2);
+	}
+}
+```
+
+建议： 实际开发中不建议使用这种方式写，因为这样容易让代码阅读者产生困扰。
+
+#### 模板的局限性
+
+```cpp
+
+	template<typename T>
+	T add(T a, T b)
+	{
+		return a + b;
+	}
+
+```
+
+如上代码，若传入数组，无法实现想要的效果。为了解决类似的问题，提供了模板重载，可以为这些特定类型提供具体化模板。
+
+```cpp
+class Person{
+    public:
+		int a;
+		int b;
+}
+template<typename T>
+	T add(T a, T b)
+	{
+		return a + b;
+	}
+template<> Person add(Person a,Person b){
+	Person c;
+	c.a = a.a + b.a;
+	c.b = a.b + b.b;
+	return c;
+}
+void test01(){
+	Person p1,p2;
+	p1.a = 10;
+	p1.b = 20;
+	p2.a = 10;
+	p2.b = 20;
+	Person p3 = add(p1,p2);
+	cout << p3.a << " " << p3.b << endl;
+}
+```
+
+### 类模板
+
+类模板定义格式：
+```cpp
+template <typename T>
+类
+```
+示例代码：
+```cpp
+namespace test02
 
 ——————————————————————————————————————————————————————————————————————————————————————————————-
 
