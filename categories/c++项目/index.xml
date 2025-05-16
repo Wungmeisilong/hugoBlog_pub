@@ -14,5 +14,12 @@
       <guid>http://localhost:1313/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</guid>
       <description>描述文章内容</description>
     </item>
+    <item>
+      <title>基于C的超轻量级HTTP服务器</title>
+      <link>http://localhost:1313/projects/%E5%9F%BA%E4%BA%8Ec%E7%9A%84%E8%B6%85%E8%BD%BB%E9%87%8F%E7%BA%A7http%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/%E5%9F%BA%E4%BA%8Ec%E7%9A%84%E8%B6%85%E8%BD%BB%E9%87%8F%E7%BA%A7http%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>描述文章内容</description>
+    </item>
   </channel>
 </rss>

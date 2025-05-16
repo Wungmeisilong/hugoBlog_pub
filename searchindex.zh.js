@@ -25,8 +25,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代",
-    "content": "毕业设计简单记录制作毕业设计的过程\n电赛简单记录参加电赛的过程。\n唛盟杯比赛详记这个项目是一个知识产权流程管理系统，主要功能包括客户下单、付款、订单查询、订单进度消息推送、文档查阅下载等。还介绍了安装git和nodejs，安装前需要先安装nvm，这是一个管理node的工具，然后安装node和vue，最后安装mvn。\n基于C++的职工管理系统描述文章内容",
-    "description": "毕业设计简单记录制作毕业设计的过程\n电赛简单记录参加电赛的过程。\n唛盟杯比赛详记这个项目是一个知识产权流程管理系统，主要功能包括客户下单、付款、订单查询、订单进度消息推送、文档查阅下载等。还介绍了安装git和nodejs，安装前需要先安装nvm，这是一个管理node的工具，然后安装node和vue，最后安装mvn。\n基于C++的职工管理系统描述文章内容",
+    "content": "毕业设计简单记录制作毕业设计的过程\n电赛简单记录参加电赛的过程。\n唛盟杯比赛详记这个项目是一个知识产权流程管理系统，主要功能包括客户下单、付款、订单查询、订单进度消息推送、文档查阅下载等。还介绍了安装git和nodejs，安装前需要先安装nvm，这是一个管理node的工具，然后安装node和vue，最后安装mvn。\n基于C++的职工管理系统描述文章内容\n基于C的超轻量级HTTP服务器描述文章内容",
+    "description": "毕业设计简单记录制作毕业设计的过程\n电赛简单记录参加电赛的过程。\n唛盟杯比赛详记这个项目是一个知识产权流程管理系统，主要功能包括客户下单、付款、订单查询、订单进度消息推送、文档查阅下载等。还介绍了安装git和nodejs，安装前需要先安装nvm，这是一个管理node的工具，然后安装node和vue，最后安装mvn。\n基于C++的职工管理系统描述文章内容\n基于C的超轻量级HTTP服务器描述文章内容",
     "tags": [],
     "title": "  项目",
     "uri": "/projects/"
@@ -1174,6 +1174,22 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "标签 :: C语言",
+    "uri": "/tags/c%E8%AF%AD%E8%A8%80/"
+  },
+  {
+    "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "标签 :: HTTP服务器",
+    "uri": "/tags/http%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+  },
+  {
+    "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "标签 :: Hugo",
     "uri": "/tags/hugo/"
   },
@@ -1223,6 +1239,17 @@ var relearn_searchindex = [
     ],
     "title": "基于C++的职工管理系统",
     "uri": "/projects/%E5%9F%BA%E4%BA%8Ec%E5%8A%A0%E5%8A%A0%E7%9A%84%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"
+  },
+  {
+    "breadcrumb": "技术博客 | 智能物联时代 \u003e \r项目",
+    "content": "本仓库对应博客文章（博客内有代码注释）：https://blog.csdn.net/qq_65795785/article/details/147954232?spm=1001.2014.3001.5501\n简介 最近通过Tinyhttpd，简单理解​​HTTP服务器的工作原理​​，复习了Socket、多进程、​​管道、重定向等知识​。使用此仓库，建议配合博客文章使用。相较于原来的代码，本仓库没有过多优化，只是做了中文注释，主要也是为了方便大家理解。\n在Linux中快速开始 2.1 下载源码并运行 $ cd ~ $ git clone https://github.com/EZLippi/Tinyhttpd.git $ cd ./Tinyhttpd $ make $ ./httpd 程序若正常运行则出现如下提示：\nhttpd running on port 4000\r如果端口创建失败，可以进入httpd.c的main函数内更改端口。\n2.2 基于CGI脚本的动态网页 在浏览器中输入地址http://localhost:4000, 在上图输入框输入red、green等单词，即可得到对应的颜色。如下图： 颜色未响应是为什么？\n（1）原因1：可能是cgi的脚本文件有问题。\n使用cat ./htdocs/color.cgi得到如下结果：\n#!/usr/local/bin/perl -Tw use strict; use CGI; my($cgi) = new CGI; #……\r此处将#!/usr/local/bin/perl改为#!/usr/bin/perl，然后重新运行项目即可。\n（2）原因2：perl、CGI模块未安装。\n检验的办法是否是perl的问题，可以运行./color.cgi，如果正常输出内容，则说明perl没有问题。否则就需要安装，安装如下：\n# 检查 Perl 是否安装。 perl -v # 接着安装 CGI 模块 sudo apt install libcgi-pm-perl\r2.3 运行本地自定义网页 （1）创建htdocs/test.html文件，内容请自定义。\n（2）在htdocs/index.html的body标签添加\u003ca href=\"test.html\"\u003e访问自定义页面\u003c/a\u003e,即上面网页的链接路径：\n\u003cHTML\u003e \u003cTITLE\u003eIndex\u003c/TITLE\u003e \u003cBODY\u003e #…… \u003cp\u003e这是一个简单的自定义网页示例。\u003c/p\u003e \u003ca href=\"test.html\"\u003e访问自定义页面\u003c/a\u003e #…… \u003c/BODY\u003e \u003c/HTML\u003e\r（3）最终效果类似下图： 点击后跳转页面，此时就不是在执行CGI脚本了。 数据传输验证 1.在Windows上，IP地址不能使用127.0.0.1，需要使用虚拟机的IP地址。\nmake后，运行./httpd，然后使用postman工具进行测试。如下为测试示例：\n（1）GIT请求。\n请求方法：GET 请求URL：http://192.168.40.128:4000/test.html 请求头（Header）：无 请求体(boyd)：无\r返回结果： 可以看到返回的，返回体中是test.html这个网页的代码（test.html的数据），这就是为什么在浏览器时输入http://192.168.40.128:4000/test.html路径时，出现的是test.html网页。\n（2）POST请求。\n请求方法：POST 请求URL：http://192.168.40.128:4000 请求头（Header）： Content-Type: application/x-www-form-urlencoded #对于本次测试可以不写 Content-Length: 10 #对于本次测试可以不写 请求体(boyd)： color=blue #需求：返回的页面是蓝色\r返回结果： 仔细看途中的返回信息，可以发现返回的数据color=bule，也就是说明我们需求得到了服务器正确响应。这样一来我们拿到的网页就是蓝色的。\n2.在Ubuntu上，IP地址使用127.0.0.1。\ncurl -X POST -d \"color=blue\" http://127.0.0.1:4000/color.cgi\r返回结果：\n#这部分就是我们自己添加的输出代码 \u003ch1\u003eReceived: \u003c/h1\u003eHTTP/1.0 200 OK HTTP/1.0 200 OK Content-Type: text/html; charset=ISO-8859-1 # 这部分是源代码CGI脚本输出的内容 # …… \u003chtml xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-US\" xml:lang=\"en-US\"\u003e \u003chead\u003e \u003ctitle\u003eBLUE\u003c/title\u003e \u003cmeta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" /\u003e \u003c/head\u003e \u003cbody bgcolor=\"blue\"\u003e #此处为输入的blue \u003ch1\u003eThis is blue\u003c/h1\u003e \u003c/body\u003e \u003c/html\u003e\rcurl -X GET http://127.0.0.1:4000/test.html\r其返回结果就是test.html的内容。此处就不展示了。更多内容看博客吧！\nhttps://blog.csdn.net/qq_65795785/article/details/147954232?spm=1001.2014.3001.5501",
+    "description": "描述文章内容",
+    "tags": [
+      "C语言",
+      "HTTP服务器"
+    ],
+    "title": "基于C的超轻量级HTTP服务器",
+    "uri": "/projects/%E5%9F%BA%E4%BA%8Ec%E7%9A%84%E8%B6%85%E8%BD%BB%E9%87%8F%E7%BA%A7http%E6%9C%8D%E5%8A%A1%E5%99%A8/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
