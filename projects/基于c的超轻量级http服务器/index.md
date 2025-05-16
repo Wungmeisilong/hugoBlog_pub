@@ -152,5 +152,3 @@ curl -X GET  http://127.0.0.1:4000/test.html
 ```
 
 其返回结果就是test.html的内容。此处就不展示了。更多内容看博客吧！
-
-[https://blog.csdn.net/qq_65795785/article/details/147954232?spm=1001.2014.3001.5501](https://blog.csdn.net/qq_65795785/article/details/147954232?spm=1001.2014.3001.5501)
