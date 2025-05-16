@@ -151,4 +151,4 @@ curl -X POST -d "color=blue" http://127.0.0.1:4000/color.cgi
 curl -X GET  http://127.0.0.1:4000/test.html
 ```
 
-其返回结果就是test.html的内容。此处就不展示了。更多内容看博客吧！
+其返回结果就是test.html的内容。此处就不展示了。小木更多资讯请看CSDN上的博客文章。
