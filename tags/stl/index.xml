@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>STL :: 标签 :: Maloudown</title>
+    <link>http://localhost:1313/tags/stl/</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <atom:link href="http://localhost:1313/tags/stl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>手撕MyTinySTL项目</title>
+      <link>http://localhost:1313/projects/%E6%89%8B%E6%92%95mytinystl%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/%E6%89%8B%E6%92%95mytinystl%E9%A1%B9%E7%9B%AE/</guid>
+      <description>描述文章内容</description>
+    </item>
+  </channel>
+</rss>

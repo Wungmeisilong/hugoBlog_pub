@@ -3,7 +3,7 @@
   <channel>
     <title>  项目 :: Maloudown</title>
     <link>http://localhost:1313/projects/</link>
-    <description>毕业设计简单记录制作毕业设计的过程&#xA;电赛简单记录参加电赛的过程。&#xA;唛盟杯比赛详记这个项目是一个知识产权流程管理系统，主要功能包括客户下单、付款、订单查询、订单进度消息推送、文档查阅下载等。还介绍了安装git和nodejs，安装前需要先安装nvm，这是一个管理node的工具，然后安装node和vue，最后安装mvn。&#xA;基于C++的职工管理系统描述文章内容&#xA;基于C的超轻量级HTTP服务器描述文章内容</description>
+    <description>毕业设计简单记录制作毕业设计的过程&#xA;电赛简单记录参加电赛的过程。&#xA;唛盟杯比赛详记这个项目是一个知识产权流程管理系统，主要功能包括客户下单、付款、订单查询、订单进度消息推送、文档查阅下载等。还介绍了安装git和nodejs，安装前需要先安装nvm，这是一个管理node的工具，然后安装node和vue，最后安装mvn。&#xA;基于C++的职工管理系统描述文章内容&#xA;基于C的超轻量级HTTP服务器描述文章内容&#xA;手撕MyTinySTL项目描述文章内容</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 07 Jul 2024 18:10:42 +0800</lastBuildDate>
@@ -41,6 +41,13 @@
       <link>http://localhost:1313/projects/%E5%9F%BA%E4%BA%8Ec%E7%9A%84%E8%B6%85%E8%BD%BB%E9%87%8F%E7%BA%A7http%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/%E5%9F%BA%E4%BA%8Ec%E7%9A%84%E8%B6%85%E8%BD%BB%E9%87%8F%E7%BA%A7http%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>描述文章内容</description>
+    </item>
+    <item>
+      <title>手撕MyTinySTL项目</title>
+      <link>http://localhost:1313/projects/%E6%89%8B%E6%92%95mytinystl%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/%E6%89%8B%E6%92%95mytinystl%E9%A1%B9%E7%9B%AE/</guid>
       <description>描述文章内容</description>
     </item>
   </channel>
