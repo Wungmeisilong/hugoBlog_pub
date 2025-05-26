@@ -9,13 +9,24 @@
 namespace mystl
 {
 
-// helper struct
+  // helper struct
 
-template <class T, T v>
-struct m_integral_constant // 用于提取类型信息
-{
-  static constexpr T value = v; //static constexpr的意思是编译期常量，即编译期就确定值
-};
+  /**
+ * @brief 编译期常量包装器模板
+ * @tparam T 常量值的类型（如bool、int等）
+ * @tparam v 具体的编译期常量值
+ * 
+ * 这个模板将值和类型信息包装成一个类型，主要用于：
+ * 1. 作为类型特征的基础类
+ * 2. 在编译期表示和操作常量值
+ * 3. 支持模板元编程中的值到类型的映射
+ */
+  template <class T, T v>
+  struct m_integral_constant // 用于提取类型信息
+  {
+    // 静态常量成员，存储编译期确定的值
+    static constexpr T value = v; // static constexpr的意思是编译期常量，即编译期就确定值
+  };
 
 template <bool b>
 using m_bool_constant = m_integral_constant<bool, b>;

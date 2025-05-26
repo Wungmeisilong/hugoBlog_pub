@@ -4,6 +4,49 @@
 
 ## 复刻基本思路
 
+### 前期准备
+
+#### 5.construct.h
+
+destroy析构方法的执行流程：
+
+```mermaid
+sequenceDiagram
+    participant UserCode as 用户代码
+    participant destroy_single as destroy(Ty* pointer)
+    participant destroy_range as destroy(ForwardIter first, last)
+    participant destroy_one as destroy_one(Ty*, ...)
+    participant destroy_cat as destroy_cat(ForwardIter, ...)
+    participant is_trivial as std::is_trivially_destructible
+    
+    Note over UserCode: 析构单个对象
+    UserCode ->> destroy_single: 调用destroy(pointer)
+    destroy_single ->> is_trivial: 检查Ty是否平凡析构
+    alt Ty是平凡类型
+        is_trivial -->> destroy_one: std::true_type
+        destroy_one ->> destroy_one: 空操作（模板特化）
+    else Ty是非平凡类型
+        is_trivial -->> destroy_one: std::false_type
+        destroy_one ->> destroy_one: 显式调用pointer->~Ty()
+    end
+
+    Note over UserCode: 析构范围对象
+    UserCode ->> destroy_range: 调用destroy(first, last)
+    destroy_range ->> is_trivial: 检查元素类型是否平凡析构
+    alt 元素是平凡类型
+        is_trivial -->> destroy_cat: std::true_type
+        destroy_cat ->> destroy_cat: 空操作（模板特化）
+    else 元素是非平凡类型
+        is_trivial -->> destroy_cat: std::false_type
+        loop 遍历每个元素
+            destroy_cat ->> destroy_single: 调用destroy(&*first)
+            Note right of destroy_cat: 解引用迭代器并取地址
+            destroy_single -->> destroy_cat: 完成单个析构
+            destroy_cat ->> destroy_cat: ++first
+        end
+    end
+```
+
 ### 阶段一：基础容器与数据结构​​
 
 - ​目标​​：掌握基础容器的实现原理和内存管理。
@@ -126,3 +169,35 @@ except.h：学习 MyTinySTL 的异常传播机制（如 try/catch 在容器中�
 ## 结论
 
 ## 参考资料
+
+## 附录1：个人喜好记录
+
+记录自己觉得写得很好得代码，他们就像你读到一段很美得名言警句一样。
+
+（1）从后往前复制数据到新数组中
+
+```c++
+while (first != last)
+    *--result = *--last;
+```
+
+（1）移动语义
+
+```c++
+template <class T>
+typename std::remove_reference<T>::type&& move(T&& arg) noexcept
+{
+  return static_cast<typename std::remove_reference<T>::type&&>(arg);
+}
+```
+
+（2）完美转发
+
+```c++
+template <class T>
+T&& forward(typename std::remove_reference<T>::type& arg) noexcept
+{
+  return static_cast<T&&>(arg);
+}
+```
+

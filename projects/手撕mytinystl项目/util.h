@@ -3,7 +3,7 @@
 
 // 这个文件包含一些通用工具，包括 move, forward, swap 等函数，以及 pair 等 
 
-#include <cstddef>
+#include <cstddef> //该库包含 size_t, ptrdiff_t 等类型
 
 #include "type_traits.h"
 
@@ -111,8 +111,22 @@ struct pair
   second_type second;  // 保存第二个数据
 
   // default constructiable
+  /*
+  * 作用：这段代码是一个模板元编程的典型应用，用于创建一个 pair 对象。
+          只有当Other1和Other2都是可默认构造的类型时，这个构造函数才会启用，
+          如果任一类型不可默认构造，这个构造函数会被SFINAE排除掉。
+          确保了在编译期就能发现类型错误，而不是在运行时才发现问题。
+  * 模板参数：
+  *  typename = typename std::enable_if<...>::type
+  *         1. typename = typename 第一个typename表示这是一个默认模板参数,第二个typename表示后面的表达式是一个依赖类型名
+  *         2. std::enable_if 
+  *                           如果条件为true，enable_if会定义一个type成员，类型是它的第二个模板参数（这里是void）；
+  *                           如果条件为false，则不会定义type成员，导致SFINAE，使得这个函数模板不会参与重载解析。
+  *         3. <...>::type 表示两个条件必须满足，检查Other1和Other2类型是否都可以默认构造
+  *         
+  */
   template <class Other1 = Ty1, class Other2 = Ty2,
-    typename = typename std::enable_if<
+    typename = typename std::enable_if< 
     std::is_default_constructible<Other1>::value &&
     std::is_default_constructible<Other2>::value, void>::type>
     constexpr pair()
@@ -120,19 +134,28 @@ struct pair
   {
   }
 
-  // implicit constructiable for this type
+  // implicit constructiable for this type 
+  // 模板构造函数：允许隐式转换的构造函数
   template <class U1 = Ty1, class U2 = Ty2,
-    typename std::enable_if<
-    std::is_copy_constructible<U1>::value &&
-    std::is_copy_constructible<U2>::value &&
-    std::is_convertible<const U1&, Ty1>::value &&
-    std::is_convertible<const U2&, Ty2>::value, int>::type = 0>
-    constexpr pair(const Ty1& a, const Ty2& b)
-    : first(a), second(b)
+    typename std::enable_if<                // SFINAE条件检查
+    std::is_copy_constructible<U1>::value &&  // U1类型可以拷贝构造
+    std::is_copy_constructible<U2>::value &&  // U2类型可以拷贝构造
+    std::is_convertible<const U1&, Ty1>::value &&  // const U1& 可以隐式转换为 Ty1
+    std::is_convertible<const U2&, Ty2>::value,   // const U2& 可以隐式转换为 Ty2
+    int>::type = 0>                               // enable_if成功时类型为int，默认值为0
+    constexpr pair(const Ty1& a, const Ty2& b)    // 构造函数参数
+    : first(a), second(b)                         //初始化列表
   {
   }
 
   // explicit constructible for this type
+  /*
+  作用：当参数Ty1和Ty2类型都可以拷贝构造，且至少有一个参数 
+  const U1& 不能隐式转换为 Ty1，或者 const U2& 不能隐式转换为 Ty2 时。
+  调用这个构造函数。
+  */
+// 1. explicit：防止隐式类型转换，必须显式调用构造函数
+// 2. constexpr：表示这个构造函数可以在编译时求值（C++11 及以上）
   template <class U1 = Ty1, class U2 = Ty2,
     typename std::enable_if<
     std::is_copy_constructible<U1>::value &&
@@ -144,53 +167,74 @@ struct pair
   {
   }
 
-  pair(const pair& rhs) = default;
+  pair(const pair& rhs) = default; //
   pair(pair&& rhs) = default;
 
   // implicit constructiable for other type
-  template <class Other1, class Other2,
-    typename std::enable_if<
-    std::is_constructible<Ty1, Other1>::value &&
-    std::is_constructible<Ty2, Other2>::value &&
-    std::is_convertible<Other1&&, Ty1>::value &&
-    std::is_convertible<Other2&&, Ty2>::value, int>::type = 0>
-    constexpr pair(Other1&& a, Other2&& b)
-    : first(mystl::forward<Other1>(a)),
-    second(mystl::forward<Other2>(b))
-  {
-  }
+  /*
+  *作用：这个构造函数允许使用任意类型的参数来构造pair对象，只要这些参数可以转换为pair的成员类型。
+        它支持移动语义，能够高效处理临时对象，避免不必要的拷贝。
+    参数说明：
+            1.Other1&& a和Other2&& b是通用引用(universal reference)，可以接受左值或右值，这与普通右值引用不同，通用引用可以绑定到任何值类别。
+            2.完美转发：mystl::forward<Other1>(a)保留了参数a的值类别（左值保持左值，右值保持右值），确保如果传入临时对象，可以触发移动构造而非拷贝构造；
+            3.SFINAE：只有当所有类型转换条件都满足时，这个构造函数才会被启用，否则排除。
+            4.与explicit构造函数相对，这个构造函数允许隐式转换。
+  */
+  // 隐式构造函数：接受其他类型参数的构造函数（支持移动语义）
+template <class Other1, class Other2,  // 定义两个不同于pair原始类型的模板参数
+    typename std::enable_if<           // SFINAE条件开始
+    std::is_constructible<Ty1, Other1>::value &&  // 检查Ty1是否可以由Other1构造
+    std::is_constructible<Ty2, Other2>::value &&  // 检查Ty2是否可以由Other2构造
+    std::is_convertible<Other1&&, Ty1>::value &&  // 检查Other1的右值引用是否可转换为Ty1
+    std::is_convertible<Other2&&, Ty2>::value,    // 检查Other2的右值引用是否可转换为Ty2
+    int>::type = 0>                     // enable_if成功时类型为int，默认值为0
+    constexpr pair(Other1&& a, Other2&& b)  // 构造函数参数为通用引用，可接受左值或右值
+    : first(mystl::forward<Other1>(a)),     // 使用完美转发初始化first成员
+    second(mystl::forward<Other2>(b))       // 使用完美转发初始化second成员
+{
+}
 
-  // explicit constructiable for other type
-  template <class Other1, class Other2,
-    typename std::enable_if<
-    std::is_constructible<Ty1, Other1>::value &&
-    std::is_constructible<Ty2, Other2>::value &&
-    (!std::is_convertible<Other1, Ty1>::value ||
-     !std::is_convertible<Other2, Ty2>::value), int>::type = 0>
-    explicit constexpr pair(Other1&& a, Other2&& b)
-    : first(mystl::forward<Other1>(a)),
-    second(mystl::forward<Other2>(b))
-  {
-  }
+  // explicit构造函数：用于需要显式类型转换的情况
+template <class Other1, class Other2,  // 定义两个模板参数，用于接收不同于pair原始类型的参数
+    typename std::enable_if<           // SFINAE条件开始
+        // 检查Other1是否可以构造Ty1，Other2是否可以构造Ty2
+        std::is_constructible<Ty1, Other1>::value &&  
+        std::is_constructible<Ty2, Other2>::value &&
+        // 检查是否至少有一个类型不能隐式转换,就是不能隐式转换的类型，需要显示转换
+        (!std::is_convertible<Other1, Ty1>::value ||  
+         !std::is_convertible<Other2, Ty2>::value),
+        int>::type = 0>               // enable_if成功时类型为int，默认值为0
+    explicit constexpr pair(Other1&& a, Other2&& b)  // 构造函数参数为通用引用
+    : first(mystl::forward<Other1>(a)),    // 使用完美转发初始化first
+      second(mystl::forward<Other2>(b))    // 使用完美转发初始化second
+{
+}
 
-  // implicit constructiable for other pair
+  // 这个构造函数是一个从其他pair类型构造当前pair类型的隐式转换构造函数
+  /*
+  使用const pair<Other1, Other2>& other作为参数的原因：
+      1.支持不同类型pair之间的转换
+      2. 使用const引用的原因，安全性好、兼容性高、效率高
+  */
+template <class Other1, class Other2,
+  typename std::enable_if<
+  std::is_constructible<Ty1, const Other1&>::value &&  // 确保可以从Other1构造Ty1
+  std::is_constructible<Ty2, const Other2&>::value &&  // 确保可以从Other2构造Ty2
+  std::is_convertible<const Other1&, Ty1>::value &&    // 确保可以隐式转换
+  std::is_convertible<const Other2&, Ty2>::value, int>::type = 0>
+  constexpr pair(const pair<Other1, Other2>& other)    // 接受其他pair类型的常量引用
+  : first(other.first),    // 使用other的first初始化当前pair的first
+    second(other.second)   // 使用other的second初始化当前pair的second
+{
+}
+
+  // 允许从pair<Other1, Other2>类型构造pair<Ty1, Ty2>类型，这个构造函数是一个从其他pair类型构造当前pair类型的显式转换构造函数
   template <class Other1, class Other2,
     typename std::enable_if<
+    // 确保可以从const Other构造Ty
     std::is_constructible<Ty1, const Other1&>::value &&
     std::is_constructible<Ty2, const Other2&>::value &&
-    std::is_convertible<const Other1&, Ty1>::value &&
-    std::is_convertible<const Other2&, Ty2>::value, int>::type = 0>
-    constexpr pair(const pair<Other1, Other2>& other)
-    : first(other.first),
-    second(other.second)
-  {
-  }
-
-  // explicit constructiable for other pair
-  template <class Other1, class Other2,
-    typename std::enable_if<
-    std::is_constructible<Ty1, const Other1&>::value &&
-    std::is_constructible<Ty2, const Other2&>::value &&
+    // 检查是否至少有一个类型不能隐式转换,
     (!std::is_convertible<const Other1&, Ty1>::value ||
      !std::is_convertible<const Other2&, Ty2>::value), int>::type = 0>
     explicit constexpr pair(const pair<Other1, Other2>& other)
@@ -207,7 +251,7 @@ struct pair
     std::is_convertible<Other1, Ty1>::value &&
     std::is_convertible<Other2, Ty2>::value, int>::type = 0>
     constexpr pair(pair<Other1, Other2>&& other)
-    : first(mystl::forward<Other1>(other.first)),
+    : first(mystl::forward<Other1>(other.first)),//使用完美转发从一个pair隐式构造另一个pair对象。
     second(mystl::forward<Other2>(other.second))
   {
   }
@@ -220,7 +264,7 @@ struct pair
     (!std::is_convertible<Other1, Ty1>::value ||
      !std::is_convertible<Other2, Ty2>::value), int>::type = 0>
     explicit constexpr pair(pair<Other1, Other2>&& other)
-    : first(mystl::forward<Other1>(other.first)),
+    : first(mystl::forward<Other1>(other.first)),//使用完美转发从一个pair显示构造另一个pair对象。
     second(mystl::forward<Other2>(other.second))
   {
   }
@@ -265,9 +309,17 @@ struct pair
     return *this;
   }
 
+  /**
+   * @brief 默认析构函数
+   */
   ~pair() = default;
 
-  void swap(pair& other)
+  /**
+   * @brief 交换当前pair对象与另一个pair对象的内容
+   * @param other 要交换的另一个pair对象
+   * @note 如果传入的是同一个对象，则不执行任何操作
+   */
+  void swap(pair &other)
   {
     if (this != &other)
     {
@@ -275,7 +327,6 @@ struct pair
       mystl::swap(second, other.second);
     }
   }
-
 };
 
 // 重载比较操作符 
