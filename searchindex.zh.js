@@ -1,8 +1,8 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "技术博客 | 智能物联时代",
-    "content": "4.自定义页面以康奈尔笔记格式输出康奈尔笔记制作\n3.github和atomgit的混合使用，哪些是值得注意的？简单介绍github和atomgit的混合使用，以及遇到的一些问题\n2.git与github的使用简单介绍git与github的使用\n1.博客优化笔记在这里你可以找到如何优化这个网站\n7.初次安装AD需要做哪些设置？……\n6.云端一体化的环境变量问题……\n5.云端一体化如何查看云函数日志？简单记录开发过程中遇到的问题\n8.如何用旧电脑搭建自己的服务器？拥有一个属于自己的服务器个人感觉就很赞，或许这篇文章可以帮到你。\n10.如何自定义hugo主题页面输出格式？有时候需要自定义或在别人的基础上修改页面输出格式，有时候我们缺少的是一种思路，本篇文章就是提供一个清晰的思路，让你可以快速编写出自己的页面。\n11.五笔学习学习五笔\n12.使用望言OCR与Aegisub，实现字幕识别、提取和自定义望言OCR可以帮助你识别视频中的字幕，并导出为.ass字幕文件，然后你可以使用Aegisub进行字幕编辑和自定义。\n13.win11安装WSL详细步骤描述文章内容\n常用的数学表达\n常用箭头\n常用函数图像公式",
-    "description": "4.自定义页面以康奈尔笔记格式输出康奈尔笔记制作\n3.github和atomgit的混合使用，哪些是值得注意的？简单介绍github和atomgit的混合使用，以及遇到的一些问题\n2.git与github的使用简单介绍git与github的使用\n1.博客优化笔记在这里你可以找到如何优化这个网站\n7.初次安装AD需要做哪些设置？……\n6.云端一体化的环境变量问题……\n5.云端一体化如何查看云函数日志？简单记录开发过程中遇到的问题\n8.如何用旧电脑搭建自己的服务器？拥有一个属于自己的服务器个人感觉就很赞，或许这篇文章可以帮到你。\n10.如何自定义hugo主题页面输出格式？有时候需要自定义或在别人的基础上修改页面输出格式，有时候我们缺少的是一种思路，本篇文章就是提供一个清晰的思路，让你可以快速编写出自己的页面。\n11.五笔学习学习五笔\n12.使用望言OCR与Aegisub，实现字幕识别、提取和自定义望言OCR可以帮助你识别视频中的字幕，并导出为.ass字幕文件，然后你可以使用Aegisub进行字幕编辑和自定义。\n13.win11安装WSL详细步骤描述文章内容\n常用的数学表达\n常用箭头\n常用函数图像公式",
+    "content": "4.自定义页面以康奈尔笔记格式输出康奈尔笔记制作\n3.github和atomgit的混合使用，哪些是值得注意的？简单介绍github和atomgit的混合使用，以及遇到的一些问题\n2.git与github的使用简单介绍git与github的使用\n1.博客优化笔记在这里你可以找到如何优化这个网站\n7.初次安装AD需要做哪些设置？……\n6.云端一体化的环境变量问题……\n5.云端一体化如何查看云函数日志？简单记录开发过程中遇到的问题\n8.如何用旧电脑搭建自己的服务器？拥有一个属于自己的服务器个人感觉就很赞，或许这篇文章可以帮到你。\n10.如何自定义hugo主题页面输出格式？有时候需要自定义或在别人的基础上修改页面输出格式，有时候我们缺少的是一种思路，本篇文章就是提供一个清晰的思路，让你可以快速编写出自己的页面。\n11.五笔学习学习五笔\n12.使用望言OCR与Aegisub，实现字幕识别、提取和自定义望言OCR可以帮助你识别视频中的字幕，并导出为.ass字幕文件，然后你可以使用Aegisub进行字幕编辑和自定义。\n13.win11安装WSL详细步骤记录如何使用WSL在win11上安装Linux子系统系统。启动方便快捷，而且可以切换多个Linux发行版本，以及随时删除，占用内存也不大。\n14.Win11安装Docker详细教程描述文章内容\n常用的数学表达\n常用箭头\n常用函数图像公式",
+    "description": "4.自定义页面以康奈尔笔记格式输出康奈尔笔记制作\n3.github和atomgit的混合使用，哪些是值得注意的？简单介绍github和atomgit的混合使用，以及遇到的一些问题\n2.git与github的使用简单介绍git与github的使用\n1.博客优化笔记在这里你可以找到如何优化这个网站\n7.初次安装AD需要做哪些设置？……\n6.云端一体化的环境变量问题……\n5.云端一体化如何查看云函数日志？简单记录开发过程中遇到的问题\n8.如何用旧电脑搭建自己的服务器？拥有一个属于自己的服务器个人感觉就很赞，或许这篇文章可以帮到你。\n10.如何自定义hugo主题页面输出格式？有时候需要自定义或在别人的基础上修改页面输出格式，有时候我们缺少的是一种思路，本篇文章就是提供一个清晰的思路，让你可以快速编写出自己的页面。\n11.五笔学习学习五笔\n12.使用望言OCR与Aegisub，实现字幕识别、提取和自定义望言OCR可以帮助你识别视频中的字幕，并导出为.ass字幕文件，然后你可以使用Aegisub进行字幕编辑和自定义。\n13.win11安装WSL详细步骤记录如何使用WSL在win11上安装Linux子系统系统。启动方便快捷，而且可以切换多个Linux发行版本，以及随时删除，占用内存也不大。\n14.Win11安装Docker详细教程描述文章内容\n常用的数学表达\n常用箭头\n常用函数图像公式",
     "tags": [],
     "title": "  博客文章",
     "uri": "/log/"
@@ -1145,14 +1145,25 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
-    "content": "记录如何使用WSL在win11上安装Linux子系统系统。启动方便快捷，而且可以切换多个Linux发行版本，以及随时删除，占用内存也不大。\n先决条件 检查CPU虚拟化是否开启 打开启用或关闭Windows功能 开启虚拟机平台（如果有） 开启适用于Linux的Windows子系统 使用WSL安装Linux子系统 （1）打开powershell，安装子系统\nwsl --install --web-download\r如果有提示重启，重启即可。\n（2）查看下载内容：\nwsl --list 适用于 Linux 的 Windows 子系统分发: Ubuntu (默认)\r（3）第一次启动Linux子系统,创建用户并设置密码。\nwsl -d Ubuntu #启动Ubuntu exit #退出Ubuntu\r（4）安装其他Linux发行版\nwsl --list --online #查看可安装版本 wsl --install -d Debian #安装Debian\r（5）设置默认启动的Linux发行版\n默认启动的版本使用wsl --list -v查看当前安装的版本，前面有*号的就是默认版本，更改的方法是：\nwsl --set-default [Linux发行版名称]\r简单的启动与关闭方式 关闭powershell，再次打开，展开命令提示符，可以快速启动Linux子系统。\n关闭也很简单，点击启动页面的X号即可。 wsl.config与.wslconfig的配置 （1）wsl.config\n作用：用于配置 WSL 内部（即 Linux 子系统内）的行为，比如挂载方式、自动挂载的驱动器、网络等。 位置：位于每个 WSL 发行版的 Linux 根目录下的 /etc/wsl.conf 文件（注意不是 Windows 下的 wsl.config）。 生效范围：只影响当前 Linux 发行版。 此次配置内容（有其他配置，详细看官网文档）： [boot] systemd=true #启动时自动挂载驱动器\r（2）.wslconfig\n作用：用于配置 WSL2 虚拟机的全局行为，比如分配给 WSL2 的内存、CPU 数量、交换空间等。 位置：位于 Windows 用户主目录下（如 C:\\Users\\你的用户名.wslconfig）。 生效范围：影响所有 WSL2 发行版（全局设置）。 此次配置（有其他配置，详细看官网文档）： [wsl2] networkingMode=mirrored #网络模式为桥接模式,使电脑IP地址与Linux子系统IP地址一致\r这样你的 Windows 和 WSL2 子系统会使用相同的网络（IP 地址段），WSL2 的网络行为会更像物理机或虚拟机桥接，方便与局域网其他设备通信。\n卸载Linux子系统 wsl --list -v #查看当前安装的版本 wsl --unregister [Linux发行版名称]\r更改Ubuntu存储路径（通过 wsl –import 手动指定路径） #查看当前安装的版本 wsl --list -v # 导出发行版（如Ubuntu）到tar文件 wsl --export Ubuntu D:\\wsl-images\\ubuntu.tar # 注销原始发行版（释放默认路径） wsl --unregister Ubuntu # 重新导入到自定义路径（例如 D:\\wsl\\ubuntu） wsl --import Ubuntu D:\\wsl\\ubuntu D:\\wsl-images\\ubuntu.tar --version 2\r可能出现的问题，Ubuntu图标不显示，启动windows时报错找到一个带有无效\"icon\" 的配置文件。将该配置文件默认为无图标。确保设置\"icon\" 时，该值是图像的有效文件路径。 解决办法：\n（1）打开powershell，点击设置： （2）按照如下图选择图标路径（一般情况下，启动过一次导出的Ubuntu，导出的目录下会有该图标，如果没有请自己添加一个） 参考资料 【1】WSL 文档 【2】超详细的WSL教程：Windows上的Linux子系统.mp4",
-    "description": "描述文章内容",
+    "content": "记录如何使用WSL在win11上安装Linux子系统。启动方便快捷，而且可以切换多个Linux发行版本，以及随时删除，占用内存也不大。\n先决条件 检查CPU虚拟化是否开启 打开启用或关闭Windows功能 开启虚拟机平台（如果有） 开启适用于Linux的Windows子系统 使用WSL安装Linux子系统 （1）打开powershell，安装子系统\nwsl --install --web-download\r如果有提示重启，重启即可。\n（2）查看下载内容：\nwsl --list 适用于 Linux 的 Windows 子系统分发: Ubuntu (默认)\r（3）第一次启动Linux子系统,创建用户并设置密码。\nwsl -d Ubuntu #启动Ubuntu exit #退出Ubuntu\r（4）安装其他Linux发行版\nwsl --list --online #查看可安装版本 wsl --install -d Debian #安装Debian\r（5）设置默认启动的Linux发行版\n默认启动的版本使用wsl --list -v查看当前安装的版本，前面有*号的就是默认版本，更改的方法是：\nwsl --set-default [Linux发行版名称]\r简单的启动与关闭方式 关闭powershell，再次打开，展开命令提示符，可以快速启动Linux子系统。\n关闭也很简单，点击启动页面的X号即可。 wsl.config与.wslconfig的配置 （1）wsl.config\n作用：用于配置 WSL 内部（即 Linux 子系统内）的行为，比如挂载方式、自动挂载的驱动器、网络等。 位置：位于每个 WSL 发行版的 Linux 根目录下的 /etc/wsl.conf 文件（注意不是 Windows 下的 wsl.config）。 生效范围：只影响当前 Linux 发行版。 此次配置内容（有其他配置，详细看官网文档）： [boot] systemd=true #启动时自动挂载驱动器\r（2）.wslconfig\n作用：用于配置 WSL2 虚拟机的全局行为，比如分配给 WSL2 的内存、CPU 数量、交换空间等。 位置：位于 Windows 用户主目录下（如 C:\\Users\\你的用户名.wslconfig）。 生效范围：影响所有 WSL2 发行版（全局设置）。 此次配置（有其他配置，详细看官网文档）： [wsl2] networkingMode=mirrored #网络模式为桥接模式,使电脑IP地址与Linux子系统IP地址一致\r这样你的 Windows 和 WSL2 子系统会使用相同的网络（IP 地址段），WSL2 的网络行为会更像物理机或虚拟机桥接，方便与局域网其他设备通信。\n卸载Linux子系统 wsl --list -v #查看当前安装的版本 wsl --unregister [Linux发行版名称]\r更改Ubuntu存储路径（通过 wsl –import 手动指定路径） #查看当前安装的版本 wsl --list -v # 导出发行版（如Ubuntu）到tar文件 wsl --export Ubuntu D:\\wsl-images\\ubuntu.tar # 注销原始发行版（释放默认路径） wsl --unregister Ubuntu # 重新导入到自定义路径（例如 D:\\wsl\\ubuntu） wsl --import Ubuntu D:\\wsl\\ubuntu D:\\wsl-images\\ubuntu.tar --version 2\r可能出现的问题，Ubuntu图标不显示，启动windows时报错找到一个带有无效\"icon\" 的配置文件。将该配置文件默认为无图标。确保设置\"icon\" 时，该值是图像的有效文件路径。 解决办法：\n（1）打开powershell，点击设置： （2）按照如下图选择图标路径（一般情况下，启动过一次导出的Ubuntu，导出的目录下会有该图标，如果没有请自己添加一个） 参考资料 【1】WSL 文档 【2】超详细的WSL教程：Windows上的Linux子系统.mp4",
+    "description": "记录如何使用WSL在win11上安装Linux子系统系统。启动方便快捷，而且可以切换多个Linux发行版本，以及随时删除，占用内存也不大。",
     "tags": [
       "WSL",
       "Win11"
     ],
     "title": "13.win11安装WSL详细步骤",
     "uri": "/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/"
+  },
+  {
+    "breadcrumb": "技术博客 | 智能物联时代 \u003e \r博客文章",
+    "content": "写在前 本篇文章参考了B站UP的视频，视频链接：【B站】\n什么是 Docker？ Docker 是一个开源的容器化平台，用于打包、分发和运行应用程序。它可以把应用及其所有依赖（如代码、运行环境、库等）打包到一个“容器”中，使应用能够在任何支持 Docker 的环境中快速、一致地运行。\nDocker 的主要用途：\n环境隔离：每个容器都是独立的，互不影响，避免“在我电脑上能跑”的问题。 快速部署：应用和环境一次打包，到处运行，极大简化部署流程。 持续集成/持续交付（CI/CD）：方便自动化测试、构建和部署。 资源高效：容器比虚拟机更轻量，启动速度快，占用资源少。 微服务架构：每个服务可以单独打包成容器，方便扩展和维护。 简单来说，Docker 让开发、测试、部署应用变得更简单、更高效、更可靠。\n下载 Docker desktop 下载链接：【GitHub仓库】\n安装 Docker desktop 方法1：下载后点击exe直接安装，默认安装在C盘。\n方法2：自定义安装路径\n下载的安装包名字为docker_desktop_installer_windows_x86_64.exe，则使用下面的命令安装：\nstart /w \"\" \"docker_desktop_installer_windows_x86_64.exe\" install --installation-dir=D:\\Docker\r然后等待安装完成即可。\n配置 Docker desktop 添加如下代码：\n{ \"registry-mirrors\": [ \"https://docker.m.daocloud.io\", \"https://docker.1panel.live\", \"https://hub.rat.dev\" ] }\r测试案例1：hello-world 打开cmd/powershell，输入如下命令：\ndocker run hello-world\r显示Hello from Docker!，说明安装成功：\nHello from Docker! This message shows that your installation appears to be working correctly. To generate this message, Docker took the following steps: 1. The Docker client contacted the Docker daemon. 2. The Docker daemon pulled the \"hello-world\" image from the Docker Hub. (amd64) 3. The Docker daemon created a new container from that image which runs the executable that produces the output you are currently reading. 4. The Docker daemon streamed that output to the Docker client, which sent it to your terminal. To try something more ambitious, you can run an Ubuntu container with: $ docker run -it ubuntu bash Share images, automate workflows, and more with a free Docker ID: https://hub.docker.com/ For more examples and ideas, visit: https://docs.docker.com/get-started/\r测试案例2：安装nginx:alpine 打开cmd/powershell，输入如下命令：\ndocker run -d -p 8080:80 --name my-nginx nginx:alpine\r注意：为了防止端口冲突，可以先检擦下8080端口是否被占用：\nnetstat -ano | findstr :8080\r如果显示LISTENING，则说明被占用，你可以关掉该端口：\n#强制终止 PID,下面的 11432 是监听的进程号 taskkill /PID 11432 /F # 验证端口是否释放 netstat -ano | findstr :8080\r或者改用别的端口，如果你已经先执行了docker run -d -p 8080:80 --name my-nginx nginx:alpine,那么建议你先关闭容器，接着删除容器，然后重新指定别的端口。\n然后打开浏览器，输入http://localhost:8080 ，页面会显示nginx的欢迎页面。\n一些基本操作命令 docker pull 镜像名 # 下载镜像 docker run -it 镜像名 # 运行镜像 docker ps -a # 查看所有容器 docker start 容器id # 启动容器 docker stop 容器id # 停止容器 docker rm 容器id # 删除容器 docker rmi 镜像id # 删除镜像,停止和删除容器后才能删除镜像\r对于启动的容器，可以使用dockerUI界面进行管理，如运行，停止，删除等操作。如下图：",
+    "description": "描述文章内容",
+    "tags": [
+      "Docker",
+      "Win11"
+    ],
+    "title": "14.Win11安装Docker详细教程",
+    "uri": "/log/14.win11%E5%AE%89%E8%A3%85docker%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r课程",
@@ -1187,6 +1198,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "标签 :: C语言",
     "uri": "/tags/c%E8%AF%AD%E8%A8%80/"
+  },
+  {
+    "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "标签 :: Docker",
+    "uri": "/tags/docker/"
   },
   {
     "breadcrumb": "技术博客 | 智能物联时代 \u003e \r标签",

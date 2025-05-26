@@ -507,6 +507,9 @@
     <loc>http://localhost:1313/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/log/14.win11%E5%AE%89%E8%A3%85docker%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/class/19.%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8Fc%E5%8A%A0%E5%8A%A0/</loc>
   </url>
   <url>
@@ -517,6 +520,9 @@
   </url>
   <url>
     <loc>http://localhost:1313/tags/c%E8%AF%AD%E8%A8%80/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/docker/</loc>
   </url>
   <url>
     <loc>http://localhost:1313/tags/http%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>

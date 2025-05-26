@@ -12,6 +12,13 @@
       <link>http://localhost:1313/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/</guid>
+      <description>记录如何使用WSL在win11上安装Linux子系统系统。启动方便快捷，而且可以切换多个Linux发行版本，以及随时删除，占用内存也不大。</description>
+    </item>
+    <item>
+      <title>14.Win11安装Docker详细教程</title>
+      <link>http://localhost:1313/log/14.win11%E5%AE%89%E8%A3%85docker%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/log/14.win11%E5%AE%89%E8%A3%85docker%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</guid>
       <description>描述文章内容</description>
     </item>
   </channel>
