@@ -128,6 +128,63 @@ wsl --import Ubuntu D:\wsl\ubuntu D:\wsl-images\ubuntu.tar --version 2
 （2）按照如下图选择图标路径（一般情况下，启动过一次导出的Ubuntu，导出的目录下会有该图标，如果没有请自己添加一个）
 ![alt text](image-6.png)
 
+## 卸载Linux子系统、WSL和相关组件
+
+卸载Linux相关子系统的方法参考上文提到的[卸载linux子系统](#卸载linux子系统)。
+
+卸载好后进入Microsoft Store商店————>库，搜索**Linux**删除应用残留。如下图：
+![alt text](image-7.png)
+
+或者使用命令删除：
+```powershell
+Get-AppxPackage *Ubuntu* | Remove-AppxPackage  # 以 Ubuntu 为例
+```
+
+### 卸载WSL功能模块
+
+1.关闭 WSL 和虚拟机平台​
+
+```powershell
+# 关闭 WSL 功能（需重启）
+dism.exe /online /disable-feature /featurename:Microsoft-Windows-Subsystem-Linux
+
+# 关闭虚拟机平台（影响 Hyper-V/安卓子系统）
+dism.exe /online /disable-feature /featurename:VirtualMachinePlatform
+```
+
+2.​​移除 Windows 可选功能​
+
+按 Win+R 输入 optionalfeatures → 取消勾选：
+- ​适用于 Linux 的 Windows 子系统​​;
+- ​虚拟机平台​。
+
+### 清理残留文件
+
+1.​​删除用户级数据​
+
+```powershell
+# 删除 WSL 虚拟机文件（占用最大）
+rm -Recurse -Force "$env:USERPROFILE\AppData\Local\Packages\*Linux*"
+
+# 清理系统级数据
+rm -Recurse -Force "$env:ProgramData\Microsoft\Windows\WindowsApps\*Linux*"
+```
+
+2.​​清理磁盘镜像文件​​,手动删除 WSL 虚拟硬盘文件（默认位置）：
+
+```powershell
+%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited*\LocalState\ext4.vhdx
+```
+### 验证是否卸载干净
+
+```powershell
+# 检查 WSL 状态
+wsl --status  # 应提示“未安装 WSL”
+
+# 检查残留进程
+Get-Process *wsl*  # 无结果即为成功
+```
+
 ## 参考资料
 
 【1】[WSL 文档](https://learn.microsoft.com/zh-cn/windows/wsl/about)
