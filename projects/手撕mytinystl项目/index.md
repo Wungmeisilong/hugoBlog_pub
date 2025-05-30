@@ -279,6 +279,48 @@ sequenceDiagram
     end
 ```
 
+#### 6.allocator.h
+
+这份代码主要是用于说明和实现 STL 容器底层的内存分配器 allocator。它负责对象的内存分配、释放，以及对象的构造与析构。allocator 是 STL 容器泛型内存管理的基础，所有容器都可以通过 allocator 实现类型无关的内存操作和对象生命周期管理。
+
+```mermaid
+classDiagram
+    class allocator~T~ {
+        +value_type
+        +pointer
+        +const_pointer
+        +reference
+        +const_reference
+        +size_type
+        +difference_type
+        +allocate()
+        +allocate(n)
+        +deallocate(ptr)
+        +deallocate(ptr, n)
+        +construct(ptr)
+        +construct(ptr, const T&)
+        +construct(ptr, T&&)
+        +construct(ptr, Args&&...)
+        +destroy(ptr)
+        +destroy(first, last)
+    }
+
+    %% 依赖关系
+    class ConstructDestroyTools {
+        <<工具函数>>
+        +construct(...)
+        +destroy(...)
+    }
+
+    allocator~T~ ..> ConstructDestroyTools : 构造/析构依赖
+```
+
+说明：
+
+- allocator<T> 是模板类，负责内存分配、释放、对象构造与析构，所有成员均为静态方法，便于泛型调用。
+- ConstructDestroyTools 代表 mystl 命名空间下的 construct/destroy 工具函数（实际为 mystl::construct 和 mystl::destroy），allocator 的构造和析构方法都依赖这些工具函数实现对象的生命周期管理。
+- 箭头表示 allocator 的 construct/destroy 方法依赖于 mystl 的工具函数。
+
 ### 阶段一：基础容器与数据结构​​
 
 - ​目标​​：掌握基础容器的实现原理和内存管理。

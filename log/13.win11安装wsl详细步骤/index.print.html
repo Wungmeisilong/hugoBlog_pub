@@ -24,18 +24,18 @@
     <link href="http://localhost:1313/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/" rel="canonical" type="text/html" title="13.win11安装WSL详细步骤 :: Maloudown">
     <link href="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/index.xml" rel="alternate" type="application/rss+xml" title="13.win11安装WSL详细步骤 :: Maloudown">
     <link href="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/index.md" rel="alternate" type="text/markdown" title="13.win11安装WSL详细步骤 :: Maloudown">
-    <link href="/images/favicon.svg?1748618312" rel="icon" type="image/svg+xml">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1748618312" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1748618312" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1748618312" rel="stylesheet">
-    <link href="/css/theme.css?1748618312" rel="stylesheet">
-    <link href="/css/format-print.css?1748618312" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1748618312" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1748618312" defer></script>
-    <script src="/js/lunr/lunr.min.js?1748618312" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1748618312" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1748618312" defer></script>
-    <script src="/js/lunr/lunr.zh.min.js?1748618312" defer></script>
-    <script src="/js/search.js?1748618312" defer></script>
+    <link href="/images/favicon.svg?1748622762" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1748622762" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1748622762" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1748622762" rel="stylesheet">
+    <link href="/css/theme.css?1748622762" rel="stylesheet">
+    <link href="/css/format-print.css?1748622762" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1748622762" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1748622762" defer></script>
+    <script src="/js/lunr/lunr.min.js?1748622762" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1748622762" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1748622762" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1748622762" defer></script>
+    <script src="/js/search.js?1748622762" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,7 +45,7 @@
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/searchindex.zh.js?1748618312";
+      window.relearn.index_js_url="/searchindex.zh.js?1748622762";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -227,15 +227,15 @@
 <p>记录如何使用WSL在win11上安装Linux子系统。启动方便快捷，而且可以切换多个Linux发行版本，以及随时删除，占用内存也不大。</p>
 <h2 id="先决条件">先决条件</h2>
 <h3 id="检查cpu虚拟化是否开启">检查CPU虚拟化是否开启</h3>
-<p><a href="#R-image-8b657c51c0d89b063b9ee7317b6ede41" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8b657c51c0d89b063b9ee7317b6ede41"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image.png"></a></p>
+<p><a href="#R-image-b3727ea538abba36511f44c97231c1c5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b3727ea538abba36511f44c97231c1c5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image.png"></a></p>
 <h3 id="打开启用或关闭windows功能">打开启用或关闭Windows功能</h3>
 <ul>
 <li>开启虚拟机平台（如果有）</li>
 <li>开启适用于Linux的Windows子系统</li>
 </ul>
-<p><a href="#R-image-8669e2da420809aeee628b37ccddc45a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8669e2da420809aeee628b37ccddc45a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-1.png"></a></p>
+<p><a href="#R-image-58c8d28196369ce6aa665b37f84d7071" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-58c8d28196369ce6aa665b37f84d7071"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-1.png"></a></p>
 <h3 id="使用wsl安装linux子系统">使用WSL安装Linux子系统</h3>
 <p>（1）打开powershell，安装子系统</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wsl --install --web-download</span></span></code></pre></div>
@@ -257,11 +257,11 @@
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wsl --set-default <span style="color:#f92672">[</span>Linux发行版名称<span style="color:#f92672">]</span></span></span></code></pre></div>
 <h2 id="简单的启动与关闭方式">简单的启动与关闭方式</h2>
 <p>关闭powershell，再次打开，展开命令提示符，可以快速启动Linux子系统。</p>
-<p><a href="#R-image-88ac16050486c0f83254d634ff37fd34" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-88ac16050486c0f83254d634ff37fd34"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-2.png"></a></p>
+<p><a href="#R-image-7820d034dea84127951b685ba96a94c9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7820d034dea84127951b685ba96a94c9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-2.png"></a></p>
 <p>关闭也很简单，点击启动页面的X号即可。
-<a href="#R-image-84197b3b22d6e0528cb54aa82b4236d4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-84197b3b22d6e0528cb54aa82b4236d4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-3.png"></a></p>
+<a href="#R-image-3382c5d4f05534ac94cd47c61eaa4109" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3382c5d4f05534ac94cd47c61eaa4109"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-3.png"></a></p>
 <h2 id="wslconfig与wslconfig的配置">wsl.config与.wslconfig的配置</h2>
 <p>（1）wsl.config</p>
 <ul>
@@ -298,20 +298,20 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 重新导入到自定义路径（例如 D:\wsl\ubuntu）</span>
 </span></span><span style="display:flex;"><span>wsl --import Ubuntu D:<span style="color:#ae81ff">\w</span>sl<span style="color:#ae81ff">\u</span>buntu D:<span style="color:#ae81ff">\w</span>sl-images<span style="color:#ae81ff">\u</span>buntu.tar --version <span style="color:#ae81ff">2</span></span></span></code></pre></div>
 <p>可能出现的问题，Ubuntu图标不显示，启动windows时报错<strong>找到一个带有无效&quot;icon&quot; 的配置文件。将该配置文件默认为无图标。确保设置&quot;icon&quot; 时，该值是图像的有效文件路径。</strong>
-<a href="#R-image-005d5852ba4216e82a7b8c1139bc73dc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-4.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-005d5852ba4216e82a7b8c1139bc73dc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-4.png"></a></p>
+<a href="#R-image-593a300c869880846f85b310d1e0d539" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-593a300c869880846f85b310d1e0d539"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-4.png"></a></p>
 <p>解决办法：</p>
 <p>（1）打开powershell，点击设置：
-<a href="#R-image-5a3e3142e9a9a6a54558c26ab732f522" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-5.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5a3e3142e9a9a6a54558c26ab732f522"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-5.png"></a></p>
+<a href="#R-image-68abd59979414b6d02488d54fafa98c7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-68abd59979414b6d02488d54fafa98c7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-5.png"></a></p>
 <p>（2）按照如下图选择图标路径（一般情况下，启动过一次导出的Ubuntu，导出的目录下会有该图标，如果没有请自己添加一个）
-<a href="#R-image-b771519bf17750e1d8b3b0c75c78195a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-6.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b771519bf17750e1d8b3b0c75c78195a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-6.png"></a></p>
+<a href="#R-image-e81de10864dd191bcd6cb5171839f4a8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e81de10864dd191bcd6cb5171839f4a8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-6.png"></a></p>
 <h2 id="卸载linux子系统wsl和相关组件">卸载Linux子系统、WSL和相关组件</h2>
 <p>卸载Linux相关子系统的方法参考上文提到的<a href="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/#卸载linux子系统">卸载linux子系统</a>。</p>
 <p>卸载好后进入Microsoft Store商店————&gt;库，搜索<strong>Linux</strong>删除应用残留。如下图：
-<a href="#R-image-8cede4bcd4a8ebf4f004fa55451656bd" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-7.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8cede4bcd4a8ebf4f004fa55451656bd"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-7.png"></a></p>
+<a href="#R-image-b70e868cc51d67dd739025dcce152667" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b70e868cc51d67dd739025dcce152667"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/image-7.png"></a></p>
 <p>或者使用命令删除：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-AppxPackage *Ubuntu* | Remove-AppxPackage  <span style="color:#75715e"># 以 Ubuntu 为例</span></span></span></code></pre></div>
 <h3 id="卸载wsl功能模块">卸载WSL功能模块</h3>
@@ -359,8 +359,8 @@
         </div>
       </main>
     </div>
-    <script src="/js/clipboard/clipboard.min.js?1748618312" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1748618312" defer></script>
-    <script src="/js/theme.js?1748618312" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1748622762" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1748622762" defer></script>
+    <script src="/js/theme.js?1748622762" defer></script>
   </body>
 </html>
