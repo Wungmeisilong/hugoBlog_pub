@@ -18,24 +18,24 @@
     <meta property="og:type" content="website">
     <meta itemprop="name" content="手撕MyTinySTL项目 :: Maloudown">
     <meta itemprop="description" content="描述文章内容">
-    <meta itemprop="wordCount" content="2390">
+    <meta itemprop="wordCount" content="3983">
     <meta itemprop="keywords" content="C&#43;&#43;,STL">
     <title>手撕MyTinySTL项目 :: Maloudown</title>
     <link href="http://localhost:1313/projects/%E6%89%8B%E6%92%95mytinystl%E9%A1%B9%E7%9B%AE/" rel="canonical" type="text/html" title="手撕MyTinySTL项目 :: Maloudown">
     <link href="/projects/%E6%89%8B%E6%92%95mytinystl%E9%A1%B9%E7%9B%AE/index.xml" rel="alternate" type="application/rss+xml" title="手撕MyTinySTL项目 :: Maloudown">
     <link href="/projects/%E6%89%8B%E6%92%95mytinystl%E9%A1%B9%E7%9B%AE/index.md" rel="alternate" type="text/markdown" title="手撕MyTinySTL项目 :: Maloudown">
-    <link href="/images/favicon.svg?1748592443" rel="icon" type="image/svg+xml">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1748592443" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1748592443" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1748592443" rel="stylesheet">
-    <link href="/css/theme.css?1748592443" rel="stylesheet">
-    <link href="/css/format-print.css?1748592443" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1748592443" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1748592443" defer></script>
-    <script src="/js/lunr/lunr.min.js?1748592443" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1748592443" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1748592443" defer></script>
-    <script src="/js/lunr/lunr.zh.min.js?1748592443" defer></script>
-    <script src="/js/search.js?1748592443" defer></script>
+    <link href="/images/favicon.svg?1748618312" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1748618312" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1748618312" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1748618312" rel="stylesheet">
+    <link href="/css/theme.css?1748618312" rel="stylesheet">
+    <link href="/css/format-print.css?1748618312" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1748618312" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1748618312" defer></script>
+    <script src="/js/lunr/lunr.min.js?1748618312" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1748618312" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1748618312" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1748618312" defer></script>
+    <script src="/js/search.js?1748618312" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,7 +45,7 @@
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/searchindex.zh.js?1748592443";
+      window.relearn.index_js_url="/searchindex.zh.js?1748618312";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -220,7 +220,215 @@
 <h2 id="项目简介">项目简介</h2>
 <h2 id="复刻基本思路">复刻基本思路</h2>
 <h3 id="前期准备">前期准备</h3>
+<h4 id="1type_traitsh">1.type_traits.h</h4>
+<pre class="mermaid align-center ">classDiagram
+    %% 编译期常量包装器
+    class m_integral_constant~T, v~ {
+        &lt;&lt;template&gt;&gt;
+        +value: T
+    }
+
+    %% 布尔常量类型
+    class m_bool_constant~b~ {
+        &lt;&lt;type alias&gt;&gt;
+    }
+    m_bool_constant~b~ --|&gt; m_integral_constant~bool, b~
+
+    %% true/false 类型
+    class m_true_type {
+        &lt;&lt;type alias&gt;&gt;
+    }
+    class m_false_type {
+        &lt;&lt;type alias&gt;&gt;
+    }
+    m_true_type --|&gt; m_bool_constant~true~
+    m_false_type --|&gt; m_bool_constant~false~
+
+    %% is_pair 类型萃取
+    class is_pair~T~ {
+        &lt;&lt;template&gt;&gt;
+        +继承: m_false_type
+    }
+    class is_pair~pair~ {
+        &lt;&lt;template特化&gt;&gt;
+        +继承: m_true_type
+    }
+
+    %% pair 前向声明
+    class pair~T1, T2~ {
+        &lt;&lt;forward declaration&gt;&gt;
+    }
+
+    %% 关系
+    is_pair~pair~ --|&gt; is_pair~T~
+    is_pair~T~ --|&gt; m_false_type
+    is_pair~pair~ --|&gt; m_true_type</pre>
+<p>说明：</p>
+<ul>
+<li>m_integral_constant 是基础的编译期常量包装器模板。</li>
+<li>m_bool_constant、m_true_type、m_false_type 都是类型别名，分别继承自 m_integral_constant 或 m_bool_constant。</li>
+<li>is_pair<T> 默认继承自 m_false_type，特化版本 is_pair&lt;pair&lt;T1, T2&raquo; 继承自 m_true_type，用于类型萃取判断。</li>
+<li>pair&lt;T1, T2&gt; 是前向声明，表示 mystl 命名空间下的 pair 模板。</li>
+</ul>
+<h4 id="2utilh">2.util.h</h4>
+<pre class="mermaid align-center ">classDiagram
+    %% mystl命名空间下的工具函数
+    class mystl {
+        &lt;&lt;namespace&gt;&gt;
+        +move(T)
+        +forward(T)
+        +swap(lhs, rhs)
+        +swap_range(first1, last1, first2)
+        +make_pair(first, second)
+    }
+
+    %% pair模板结构体
+    class pair~Ty1, Ty2~ {
+        +first: Ty1
+        +second: Ty2
+        +pair()
+        +pair(const Ty1&amp;, const Ty2&amp;)
+        +pair(const pair&amp;)
+        +pair(pair&amp;&amp;)
+        +swap(pair&amp; other)
+        +operator=()
+        +~pair()
+        ...
+    }
+
+    %% 关联关系
+    mystl ..&gt; pair : 使用/生成
+    mystl &lt;|.. pair : 工具函数支持</pre>
+<p>说明:</p>
+<ul>
+<li>mystl 表示命名空间，包含所有工具函数（move、forward、swap、swap_range、make_pair）。</li>
+<li>pair 是模板结构体，拥有 first、second 两个成员和多种构造、赋值、交换等方法。</li>
+<li>箭头表示 mystl 工具函数与 pair 的关系（如 make_pair 生成 pair，swap 支持 pair）。</li>
+<li>省略号 &hellip; 表示 pair 还有其他重载构造和赋值函数，具体可查源码。</li>
+</ul>
+<h4 id="3iteratorh">3.iterator.h</h4>
+<p>这份代码主要是用于说明和实现 C++ STL 迭代器体系结构，包括迭代器类型标签、traits 萃取、辅助工具函数、反向迭代器模板等。它为自定义容器和算法提供了统一的迭代器接口和类型信息，是泛型编程的基础。</p>
+<pre class="mermaid align-center ">classDiagram
+    %% 迭代器类型标签继承体系
+    class input_iterator_tag
+    class output_iterator_tag
+    class forward_iterator_tag
+    class bidirectional_iterator_tag
+    class random_access_iterator_tag
+
+    forward_iterator_tag --|&gt; input_iterator_tag
+    bidirectional_iterator_tag --|&gt; forward_iterator_tag
+    random_access_iterator_tag --|&gt; bidirectional_iterator_tag
+
+    %% 迭代器模板
+    class iterator~Category, T, Distance, Pointer, Reference~ {
+        +iterator_category
+        +value_type
+        +pointer
+        +reference
+        +difference_type
+    }
+
+    %% 迭代器traits
+    class iterator_traits~Iterator~ {
+        +iterator_category
+        +value_type
+        +pointer
+        +reference
+        +difference_type
+    }
+
+    %% 反向迭代器
+    class reverse_iterator~Iterator~ {
+        -current: Iterator
+        +base()
+        +operator*()
+        +operator-&gt;()
+        +operator++()
+        +operator--()
+        +operator+=()
+        +operator-=()
+        +operator[]()
+    }
+
+    %% 关系
+    reverse_iterator~Iterator~ o-- iterator_traits~Iterator~ : 使用
+    iterator_traits~Iterator~ ..&gt; iterator~Category, T, Distance, Pointer, Reference~ : 依赖</pre>
+<p>说明:</p>
+<ul>
+<li>左侧为五种迭代器类型标签，展示了它们的继承体系（如 random_access_iterator_tag 继承自 bidirectional_iterator_tag）。</li>
+<li>iterator 模板类定义了标准迭代器的五种型别（类型别名）。</li>
+<li>iterator_traits 模板类用于萃取任意迭代器的型别信息，是泛型算法的基础。</li>
+<li>reverse_iterator 模板类实现了反向迭代器，支持常用的运算符重载。</li>
+<li>箭头和关联展示了继承、依赖和使用关系。</li>
+</ul>
+<h4 id="4algobaseh">4.algobase.h</h4>
+<p>这份代码主要是用于说明和实现 STL 常用基础算法，如 max、min、copy、move、fill、lexicographical_compare、mismatch 等。它为自定义容器和泛型算法提供了高效、类型安全的基础操作，是 MyTinySTL 算法层的核心组成部分。</p>
+<pre class="mermaid align-center ">classDiagram
+    %% mystl 命名空间下的算法函数
+    class mystl {
+        &lt;&lt;namespace&gt;&gt;
+        +max(lhs, rhs)
+        +min(lhs, rhs)
+        +iter_swap(lhs, rhs)
+        +copy(first, last, result)
+        +copy_backward(first, last, result)
+        +copy_if(first, last, result, unary_pred)
+        +copy_n(first, n, result)
+        +move(first, last, result)
+        +move_backward(first, last, result)
+        +equal(first1, last1, first2)
+        +fill(first, last, value)
+        +fill_n(first, n, value)
+        +lexicographical_compare(first1, last1, first2, last2)
+        +mismatch(first1, last1, first2)
+    }
+
+    %% 依赖的类型
+    class pair~T1, T2~ {
+        +first: T1
+        +second: T2
+    }
+
+    %% 算法与类型的关系
+    mystl ..&gt; pair~T1, T2~ : 返回/使用</pre>
+<p>说明:</p>
+<ul>
+<li>mystl 表示命名空间，包含所有基础算法函数（max、min、copy、move、fill、equal、lexicographical_compare、mismatch 等）。</li>
+<li>pair 是 mystl 算法常用的返回类型（如 copy_n、mismatch 返回 pair）。</li>
+<li>箭头表示 mystl 算法与 pair 类型的依赖关系。</li>
+</ul>
 <h4 id="5constructh">5.construct.h</h4>
+<p>这份代码主要是用于说明和实现对象的构造与析构机制，即 STL 容器底层常用的 construct/destroy 工具。它通过 placement new 实现原地构造对象，通过类型萃取和标签分发机制实现高效、安全的对象析构。这样设计可以让容器灵活管理对象生命周期，提升效率并避免资源泄漏。</p>
+<pre class="mermaid align-center ">classDiagram
+    %% mystl 命名空间下的构造与析构工具
+    class mystl {
+        &lt;&lt;namespace&gt;&gt;
+        +construct(ptr)
+        +construct(ptr, value)
+        +construct(ptr, Args&amp;&amp;...)
+        +destroy_one(ptr, std::true_type)
+        +destroy_one(ptr, std::false_type)
+        +destroy_cat(first, last, std::true_type)
+        +destroy_cat(first, last, std::false_type)
+        +destroy(ptr)
+        +destroy(first, last)
+    }
+
+    %% 类型特征依赖
+    class is_trivially_destructible~T~ {
+        &lt;&lt;type trait&gt;&gt;
+        +value: bool
+    }
+
+    %% 关系
+    mystl ..&gt; is_trivially_destructible~T~ : 类型分发</pre>
+<p>说明：</p>
+<ul>
+<li>mystl 表示命名空间，包含所有对象构造与析构相关的函数模板（construct、destroy_one、destroy_cat、destroy）。</li>
+<li>std::is_trivially_destructible 是类型特征（type trait），用于在 destroy 分发时判断类型是否需要显式析构。</li>
+<li>箭头表示 mystl 的 destroy 系列函数依赖类型特征进行标签分发（即根据类型是否平凡析构选择不同的析构策略）。</li>
+</ul>
 <p>destroy析构方法的执行流程：</p>
 <pre class="mermaid align-center ">sequenceDiagram
     participant UserCode as 用户代码
@@ -395,22 +603,22 @@ except.h：学习 MyTinySTL 的异常传播机制（如 try/catch 在容器中�
         </div>
       </main>
     </div>
-    <script src="/js/clipboard/clipboard.min.js?1748592443" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1748592443" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1748592443" defer></script>
-    <script src="/js/d3/d3-color.min.js?1748592443" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1748592443" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1748592443" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1748592443" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1748592443" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1748592443" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1748592443" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1748592443" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1748592443" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1748592443" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1748618312" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1748618312" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1748618312" defer></script>
+    <script src="/js/d3/d3-color.min.js?1748618312" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1748618312" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1748618312" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1748618312" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1748618312" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1748618312" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1748618312" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1748618312" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1748618312" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1748618312" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.js?1748592443" defer></script>
+    <script src="/js/theme.js?1748618312" defer></script>
   </body>
 </html>

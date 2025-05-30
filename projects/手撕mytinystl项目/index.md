@@ -6,7 +6,239 @@
 
 ### 前期准备
 
+#### 1.type_traits.h
+
+```mermaid
+classDiagram
+    %% 编译期常量包装器
+    class m_integral_constant~T, v~ {
+        <<template>>
+        +value: T
+    }
+
+    %% 布尔常量类型
+    class m_bool_constant~b~ {
+        <<type alias>>
+    }
+    m_bool_constant~b~ --|> m_integral_constant~bool, b~
+
+    %% true/false 类型
+    class m_true_type {
+        <<type alias>>
+    }
+    class m_false_type {
+        <<type alias>>
+    }
+    m_true_type --|> m_bool_constant~true~
+    m_false_type --|> m_bool_constant~false~
+
+    %% is_pair 类型萃取
+    class is_pair~T~ {
+        <<template>>
+        +继承: m_false_type
+    }
+    class is_pair~pair~ {
+        <<template特化>>
+        +继承: m_true_type
+    }
+
+    %% pair 前向声明
+    class pair~T1, T2~ {
+        <<forward declaration>>
+    }
+
+    %% 关系
+    is_pair~pair~ --|> is_pair~T~
+    is_pair~T~ --|> m_false_type
+    is_pair~pair~ --|> m_true_type
+
+
+```
+
+说明：
+
+- m_integral_constant 是基础的编译期常量包装器模板。
+- m_bool_constant、m_true_type、m_false_type 都是类型别名，分别继承自 m_integral_constant 或 m_bool_constant。
+- is_pair<T> 默认继承自 m_false_type，特化版本 is_pair<pair<T1, T2>> 继承自 m_true_type，用于类型萃取判断。
+- pair<T1, T2> 是前向声明，表示 mystl 命名空间下的 pair 模板。
+
+#### 2.util.h
+
+```mermaid
+classDiagram
+    %% mystl命名空间下的工具函数
+    class mystl {
+        <<namespace>>
+        +move(T)
+        +forward(T)
+        +swap(lhs, rhs)
+        +swap_range(first1, last1, first2)
+        +make_pair(first, second)
+    }
+
+    %% pair模板结构体
+    class pair~Ty1, Ty2~ {
+        +first: Ty1
+        +second: Ty2
+        +pair()
+        +pair(const Ty1&, const Ty2&)
+        +pair(const pair&)
+        +pair(pair&&)
+        +swap(pair& other)
+        +operator=()
+        +~pair()
+        ...
+    }
+
+    %% 关联关系
+    mystl ..> pair : 使用/生成
+    mystl <|.. pair : 工具函数支持
+```
+
+说明:
+
+- mystl 表示命名空间，包含所有工具函数（move、forward、swap、swap_range、make_pair）。
+- pair 是模板结构体，拥有 first、second 两个成员和多种构造、赋值、交换等方法。
+- 箭头表示 mystl 工具函数与 pair 的关系（如 make_pair 生成 pair，swap 支持 pair）。
+- 省略号 ... 表示 pair 还有其他重载构造和赋值函数，具体可查源码。
+
+#### 3.iterator.h
+
+这份代码主要是用于说明和实现 C++ STL 迭代器体系结构，包括迭代器类型标签、traits 萃取、辅助工具函数、反向迭代器模板等。它为自定义容器和算法提供了统一的迭代器接口和类型信息，是泛型编程的基础。
+
+```mermaid
+classDiagram
+    %% 迭代器类型标签继承体系
+    class input_iterator_tag
+    class output_iterator_tag
+    class forward_iterator_tag
+    class bidirectional_iterator_tag
+    class random_access_iterator_tag
+
+    forward_iterator_tag --|> input_iterator_tag
+    bidirectional_iterator_tag --|> forward_iterator_tag
+    random_access_iterator_tag --|> bidirectional_iterator_tag
+
+    %% 迭代器模板
+    class iterator~Category, T, Distance, Pointer, Reference~ {
+        +iterator_category
+        +value_type
+        +pointer
+        +reference
+        +difference_type
+    }
+
+    %% 迭代器traits
+    class iterator_traits~Iterator~ {
+        +iterator_category
+        +value_type
+        +pointer
+        +reference
+        +difference_type
+    }
+
+    %% 反向迭代器
+    class reverse_iterator~Iterator~ {
+        -current: Iterator
+        +base()
+        +operator*()
+        +operator->()
+        +operator++()
+        +operator--()
+        +operator+=()
+        +operator-=()
+        +operator[]()
+    }
+
+    %% 关系
+    reverse_iterator~Iterator~ o-- iterator_traits~Iterator~ : 使用
+    iterator_traits~Iterator~ ..> iterator~Category, T, Distance, Pointer, Reference~ : 依赖
+```
+
+说明:
+
+- 左侧为五种迭代器类型标签，展示了它们的继承体系（如 random_access_iterator_tag 继承自 bidirectional_iterator_tag）。
+- iterator 模板类定义了标准迭代器的五种型别（类型别名）。
+- iterator_traits 模板类用于萃取任意迭代器的型别信息，是泛型算法的基础。
+- reverse_iterator 模板类实现了反向迭代器，支持常用的运算符重载。
+- 箭头和关联展示了继承、依赖和使用关系。
+
+#### 4.algobase.h
+
+这份代码主要是用于说明和实现 STL 常用基础算法，如 max、min、copy、move、fill、lexicographical_compare、mismatch 等。它为自定义容器和泛型算法提供了高效、类型安全的基础操作，是 MyTinySTL 算法层的核心组成部分。
+
+```mermaid
+classDiagram
+    %% mystl 命名空间下的算法函数
+    class mystl {
+        <<namespace>>
+        +max(lhs, rhs)
+        +min(lhs, rhs)
+        +iter_swap(lhs, rhs)
+        +copy(first, last, result)
+        +copy_backward(first, last, result)
+        +copy_if(first, last, result, unary_pred)
+        +copy_n(first, n, result)
+        +move(first, last, result)
+        +move_backward(first, last, result)
+        +equal(first1, last1, first2)
+        +fill(first, last, value)
+        +fill_n(first, n, value)
+        +lexicographical_compare(first1, last1, first2, last2)
+        +mismatch(first1, last1, first2)
+    }
+
+    %% 依赖的类型
+    class pair~T1, T2~ {
+        +first: T1
+        +second: T2
+    }
+
+    %% 算法与类型的关系
+    mystl ..> pair~T1, T2~ : 返回/使用
+```
+
+说明:
+
+- mystl 表示命名空间，包含所有基础算法函数（max、min、copy、move、fill、equal、lexicographical_compare、mismatch 等）。
+- pair 是 mystl 算法常用的返回类型（如 copy_n、mismatch 返回 pair）。
+- 箭头表示 mystl 算法与 pair 类型的依赖关系。
+
 #### 5.construct.h
+
+这份代码主要是用于说明和实现对象的构造与析构机制，即 STL 容器底层常用的 construct/destroy 工具。它通过 placement new 实现原地构造对象，通过类型萃取和标签分发机制实现高效、安全的对象析构。这样设计可以让容器灵活管理对象生命周期，提升效率并避免资源泄漏。
+
+```mermaid
+classDiagram
+    %% mystl 命名空间下的构造与析构工具
+    class mystl {
+        <<namespace>>
+        +construct(ptr)
+        +construct(ptr, value)
+        +construct(ptr, Args&&...)
+        +destroy_one(ptr, std::true_type)
+        +destroy_one(ptr, std::false_type)
+        +destroy_cat(first, last, std::true_type)
+        +destroy_cat(first, last, std::false_type)
+        +destroy(ptr)
+        +destroy(first, last)
+    }
+
+    %% 类型特征依赖
+    class is_trivially_destructible~T~ {
+        <<type trait>>
+        +value: bool
+    }
+
+    %% 关系
+    mystl ..> is_trivially_destructible~T~ : 类型分发
+```
+
+说明：
+
+- mystl 表示命名空间，包含所有对象构造与析构相关的函数模板（construct、destroy_one、destroy_cat、destroy）。
+- std::is_trivially_destructible 是类型特征（type trait），用于在 destroy 分发时判断类型是否需要显式析构。
+- 箭头表示 mystl 的 destroy 系列函数依赖类型特征进行标签分发（即根据类型是否平凡析构选择不同的析构策略）。
 
 destroy析构方法的执行流程：
 
