@@ -13,7 +13,7 @@
       <link>http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Sun, 14 Jan 2024 18:36:31 +0800</pubDate>
       <guid>http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
-      <description>认识Linux 安装Linux 图形界面与命令行 文件管理与常用命令 文件/目录的打包和压缩 gzip压缩文件和gunzip、zcat压缩文件命令 一般压缩解压文件： ​&#xD;命令&#xD;gzip [文件名]&#xD;gunzip [解压文件名]&#xD;例子：</description>
+      <description>简介：&#xA;Linux操作系统主要用于服务器环境，比如企业服务器，云服务器等。学习Linux的主要目的就是学会使用Linux提供的各种命令操作，而学习这些命令最有效的方法，就是自己学会动手使用Linux命令进行操作。另外，学会使用shell脚本能有效的提高效率以及提升工作技巧。</description>
     </item>
   </channel>
 </rss>
