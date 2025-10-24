@@ -2193,3 +2193,419 @@ int main()
   return 0;
 }
 ```
+
+## c06-function
+
+### 00-hw.c
+
+```c
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+
+    int a = 0;//统计个数，记数器
+
+    int b = 1;
+
+    while (b <= 999999999)
+    {
+        int temp = b;
+        int c = 0;//总和
+        int n = 0;//位数
+        //计算b的位数
+        while (temp != 0)
+        {
+	    n++;
+            temp /= 10;
+        }
+        //计算b的各位数的n次方之和
+        temp = b;
+        while (temp != 0)
+        {
+            c += pow(temp % 10, n);
+            temp /= 10;
+        }
+        //判断是否为自幂数
+        if (c == b)
+        {
+            printf("%d\n", b);
+            a++;
+        }
+        b++;
+    }
+    //打印总个数
+    printf("\n从1~%d之间共有%d个自幂数.\n", b,a);
+    return 0;
+}
+```
+
+### 01functionDefineCall.c
+
+```c
+//01-函数定义和调用
+#include <stdio.h>
+#include <math.h>
+#include <ctype.h>
+
+//函数定义
+//定义一个打印n行星号的函数
+void printNLinesStar(int n)//打印n行星号,n为参数,形式参数
+{ // 定义了有参无返回值的函数 
+    for (int i = 1; i <= n; i++)
+    {
+        printf("printNLinesStar:**************\n");
+    }
+}
+
+//定义一个求两个整数和的函数
+int getSum(int a,int b)//形参
+{ // 定义了有两个参数并有返回值的函数
+    int sum = a + b;
+    return sum;//返回值。意味着sum值作为返回值返回给调用者。放到调用函数的栈中，放到调用的地方。
+}
+
+//当函数定义在main后面，或者定义在其它文件中时，需要先声明，再调用
+void printStar();
+
+
+//int是main()的返回值类型，与return 0;相对应。
+int main()//主函数是程序入口函数
+{   
+    //调用函数
+    printStar();
+    printf("111111\n");
+    printStar();
+    printf("222222\n");
+    
+    printNLinesStar(3);//3是实参，实际参数，调用函数传参给形式参数n
+    printf("33333333\n");
+    printNLinesStar(10);//10是实参，实际参数
+    printf("\n");
+    //调用函数
+    int sum1 = getSum(1, 2);//实参1,2
+    int num1 = 10;
+    int num2 = 20;
+    int sum2 = getSum(num1, num2);
+    int sum3 = getSum(100, 200) + 400;
+    printf("%d,%d,%d\n", sum1, sum2, sum3);
+    printf("%d\n", getSum(1000, 2000));
+    printf("%d\n", getSum(1.7, 3.4));//有警告
+
+    return 0;
+}
+
+
+
+//定义一个打印三行星号的函数
+void printStar()//没有形式参数，无形参，无参，
+//void无类型，没有类型
+{ // 定义了无参无返回值的函数，无返回值是指函数不会计算出来一个结果。
+
+    printf("***********\n");
+    printf("********\n");
+    printf("**************\n");
+    //return ;//可省略
+}
+
+
+
+
+
+```
+
+### 02getDaysFunction.c
+
+```c
+//02-封装年月获取天数的函数
+#include <stdio.h>
+//根据给定的年和月返回天数,如果输入的月份有误则返回-1,否则返回天数.编写此函数
+int getDays(int year,int month){
+    switch (month)
+    {
+    case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+        return 31;
+        //break;
+    case 4:case 6:case 9:case 11:
+        return 30;
+    case 2:  
+        if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+            return 29;
+        } 
+        else{
+            return 28;
+        }
+    default:
+        return -1;
+    } 
+
+}
+int main(){
+    int year = 2000;
+    int month = 20;
+    
+    int days = getDays(year,month);
+    if( days == -1){
+        printf("输入月份有误~~~\n");
+    }
+    else{
+        printf("%d年%d月有%d天！\n",year,month,days);
+    }
+    
+    printf("请输入年和月：");
+    scanf("%d%d",&year,&month);
+    days = getDays(year,month);
+    if( days == -1){
+        printf("输入月份有误~~~\n");
+    }
+    else{
+        printf("%d年%d月有%d天！\n",year,month,days);
+    }
+    return 0;
+}
+```
+
+### 03-ATM.c
+
+```c
+
+#include <stdio.h>
+#include <string.h> //字符串处理函数对应的头文件
+#include <stdlib.h>//能使用exit(0)退出程序功能
+
+// 全局变量money，在函数外定义，表示余额。
+// 在定义时，赋初值。在此之后定义的所有函数中，可以直接使用。
+int money = 1000;
+
+// 查询功能
+void search_Money()
+{
+    printf("您现在的余额是：%d\n", money);
+}
+
+
+// 存款功能
+void save_Money(int save_money)
+{
+    // 存钱
+    money += save_money;
+    // 调用查询功能
+    search_Money();
+}
+
+// 取钱
+int get_Money(int get_money)
+{
+
+    if (get_money > money)
+    {
+        printf("您的余额不足\n");
+        return 0; // 返回0，表示失败
+    }
+    else
+    {
+        money -= get_money;
+        search_Money();
+        return 1; // 返回1，表示成功
+    }
+}
+
+void ATMSystem()
+{
+    // 为了保证系统一直运行，采用while死循环
+    int flag = 1; // 局部变量
+    int choose = 0;
+    while (flag)
+    {
+        printf("----------------主菜单----------\n");
+        printf("您好，欢迎来到职坐标银行ATM系统，请选择您的操作：\n");
+        printf("1、查询余额\n");
+        printf("2、存款\n");
+        printf("3、取款\n");
+        printf("4、退出系统\n");
+        printf("请输入您的选项【1-4】：");
+        // 键盘录入
+        scanf("%d", &choose);
+
+        // switch
+        switch (choose)
+        {
+        case 1:
+            // 查询功能
+            printf("查询功能\n");
+            search_Money();
+            break;
+        case 2:
+            // 存款功能
+            printf("存款功能\n");
+            int save_money = 0;
+            printf("请输入您要存的金额：\n");
+            scanf("%d", &save_money);
+            save_Money(save_money);
+            break;
+        case 3:
+            // 取款功能
+            printf("取款功能\n");
+            int get_money = 0;
+            printf("请输入您的取款金额：\n");
+            scanf("%d", &get_money);
+           
+            int num = get_Money(get_money);
+            if (num == 1)
+            {
+                printf("取款成功\n");
+            }
+            else
+            {
+                printf("取款失败\n");
+            }
+            break;
+        case 4:
+            // 退出功能
+            // printf("退出功能\n");
+            flag = 0;
+            printf("欢迎您的再次使用\n");
+            //exit(0);
+            break;
+        default:
+            printf("您输入的指令有误，请重新输入\n");
+            break;
+        }
+    }
+}
+
+int main()
+{
+
+    // int count = 3;
+    // int flag = 1;
+    // while (flag)
+    // {
+
+    //     printf("欢迎来到职坐标ATM，请输入您的用户名和密码\n");
+    //     char username[20];
+    //     char password[20];
+
+    //     // 输入用户名
+    //     printf("请输入用户名：");
+    //     scanf("%s", username);
+
+    //     // 输入密码
+    //     printf("请输入密码：");
+    //     scanf("%s", password);
+
+    //     // 验证用户名和密码
+    //     if (strcmp(username, "zhangsan") == 0 && strcmp(password, "123456") == 0)
+    //     {
+    //         printf("登录成功！\n");
+            ATMSystem();
+            
+    //     }
+    //     else
+    //     {
+    //         printf("用户名或密码错误！\n");
+    //         count--;
+    //         printf("您还有%d次机会", count);
+    //         if (count == 0)
+    //         {
+    //             flag = 0;
+    //             printf("卡被冻结，请联系大仁老师\n");
+    //         }
+    //     }
+    // }
+    return 0;
+}
+```
+
+### 04recursiveFunctionFactorial.c
+
+```c
+//04-递归函数计算阶乘
+#include <stdio.h>
+//使用递归函数计算n阶乘
+int fac(int n){
+    if(n == 0 || n == 1){
+        return 1;
+    }
+    return n * fac(n-1);
+}
+
+//使用递归函数计算1~n的和
+int sum(int n){
+    
+    if(n == 1){
+        return 1;
+    }
+    return n + sum(n-1);
+    
+}
+
+int main(){
+    printf("%d\n",fac(0));
+    printf("%d\n",fac(5));
+
+    printf("%d\n",sum(5));
+    printf("%d\n",sum(100));
+}
+
+//使用循环和递归都可以解决，但递归的效率更高
+
+//感兴趣的话：汉诺塔问题 经典的递归问题
+
+
+```
+
+### 05printMultiplicationTable.c
+
+```c
+//05-打印九九乘法表
+#include <stdio.h>
+void printf99(){
+    int i, j;
+    for(i=1; i<=9; i++){//外层循环控制行数,从1到9,总共9行
+        for(j=1; j<=i; j++){//内层循环控制每行打印的式子个数,从1到i
+            printf("%dx%d=%-4d", j, i, i*j);
+        }
+        printf("\n");
+    }
+}
+
+int main(){
+    printf99();
+}
+
+//API简写：应用程序编程接口（Application Programming Interface）
+//API是计算机程序设计领域中的一个概念，它定义了程序设计人员与计算机硬件、软件、操作系统等交互时，程序员与计算机硬件、软件、操作系统之间的通信协议，即定义了程序员与计算机硬件、软件、操作系统之间的接口。
+```
+
+### 06globalLocal.c
+
+```c
+//06-全局变量与局部变量共存
+#include <stdio.h>
+int a = 10;
+int main()
+{
+    printf("~~~a = %d\n", a);
+    int a = 20;
+    printf("---a = %d\n", a);
+    {
+       int a = 30;
+       printf("******a = %d\n", a);
+    }
+    printf(".......a = %d\n", a);
+    {
+        extern int a;//告诉编译器，a是外部变量，全局变量
+        printf("******a = %d\n", a);
+        a = 100;
+        printf("******a = %d\n", a);
+    }
+    printf(".......a = %d\n", a);
+    {
+        extern int a;//告诉编译器，a是外部变量，全局变
+        printf("XXXX******a = %d\n", a);
+    }
+    return 0;
+}
+```
+
