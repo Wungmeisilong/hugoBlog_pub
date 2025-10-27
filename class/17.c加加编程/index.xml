@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>17.C加加编程 :: Maloudown</title>
+    <title>17.C加加编程 :: CV-Lob</title>
     <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/</link>
-    <description>15.计算机图形学OpenGL与C++理解GLFW和GLAD GLFW（） GLFW是一个开源的、跨平台的库，用于创建窗口、处理输入和渲染图形。它提供了一种简单的方式来与OpenGL进行交互，使得开发图形应用程序变得更加容易。</description>
+    <description>15.计算机图形学OpenGL与C++GLFW是一个开源的、跨平台的库，用于创建窗口、处理输入和渲染图形。它提供了一种简单的方式来与OpenGL进行交互，使得开发图形应用程序变得更加容易&#xA;14.新标准C加加程序设计内存分区模型 内存代码区的意义：程序代码放在不同的区域，有程序自动管理的代码，也有程序员管理的代码，灵活管理；&#xA;一、程序执行前&#xA;1.代码区 存放二进制指令，就是代码，特点：</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 01 Apr 2025 13:27:41 +0800</lastBuildDate>
@@ -13,7 +13,7 @@
       <link>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/</link>
       <pubDate>Tue, 01 Apr 2025 13:27:41 +0800</pubDate>
       <guid>http://localhost:1313/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/</guid>
-      <description>理解GLFW和GLAD GLFW（） GLFW是一个开源的、跨平台的库，用于创建窗口、处理输入和渲染图形。它提供了一种简单的方式来与OpenGL进行交互，使得开发图形应用程序变得更加容易。</description>
+      <description>GLFW是一个开源的、跨平台的库，用于创建窗口、处理输入和渲染图形。它提供了一种简单的方式来与OpenGL进行交互，使得开发图形应用程序变得更加容易</description>
     </item>
     <item>
       <title>14.新标准C加加程序设计</title>

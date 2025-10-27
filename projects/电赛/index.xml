@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>电赛 :: Maloudown</title>
+    <title>电赛 :: CV-Lob</title>
     <link>http://localhost:1313/projects/%E7%94%B5%E8%B5%9B/</link>
     <description>简单记录参加电赛的过程。</description>
     <generator>Hugo</generator>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>  关于 :: Maloudown</title>
+    <title>  关于 :: CV-Lob</title>
     <link>http://localhost:1313/about/</link>
-    <description>2024-04-07 V0.1.0 修改content目录结构 删除多余，以及未完成的文章 自定义首页页面输出 更新小说内容</description>
+    <description>关于这个静态网站的更新动态。</description>
     <generator>Hugo</generator>
     <language>zh</language>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

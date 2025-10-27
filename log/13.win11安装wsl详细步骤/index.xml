@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>13.win11安装WSL详细步骤 :: Maloudown</title>
+    <title>13.win11安装WSL详细步骤 :: CV-Lob</title>
     <link>http://localhost:1313/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/</link>
     <description>记录如何使用WSL在win11上安装Linux子系统系统。启动方便快捷，而且可以切换多个Linux发行版本，以及随时删除，占用内存也不大。</description>
     <generator>Hugo</generator>

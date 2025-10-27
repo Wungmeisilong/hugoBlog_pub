@@ -1,6 +1,6 @@
 # C语言基础知识
 
-{{% attachments color="fuchsia" icon="fab fa-hackerrank" /%}}
+{{% resources color="fuchsia" icon="fab fa-hackerrank" /%}}
 
 ## c01-cFirstLearning
 

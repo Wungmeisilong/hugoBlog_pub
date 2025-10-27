@@ -10,19 +10,19 @@
 class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator &#43;= (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };构造函数的特性 这一点需要关注下面的代码：">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="1.代码编写规范 :: Maloudown">
+    <meta name="twitter:title" content="1.代码编写规范 :: CV-Lob">
     <meta name="twitter:description" content="如何写一个标准的.h文件 以下内容来自B站。
 接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：
 class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator &#43;= (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };构造函数的特性 这一点需要关注下面的代码：">
     <meta property="og:url" content="http://localhost:1313/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/">
-    <meta property="og:site_name" content="Maloudown">
-    <meta property="og:title" content="1.代码编写规范 :: Maloudown">
+    <meta property="og:site_name" content="CV-Lob">
+    <meta property="og:title" content="1.代码编写规范 :: CV-Lob">
     <meta property="og:description" content="如何写一个标准的.h文件 以下内容来自B站。
 接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：
 class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator &#43;= (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };构造函数的特性 这一点需要关注下面的代码：">
     <meta property="og:locale" content="zh">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="1.代码编写规范 :: Maloudown">
+    <meta itemprop="name" content="1.代码编写规范 :: CV-Lob">
     <meta itemprop="description" content="如何写一个标准的.h文件 以下内容来自B站。
 接下来将以复数的库文件为例来回答这个问题，下面是一段参考复数库文件代码：
 class complex { private: /* data */ double re,im; friend complex&amp; __doapl (complex*,const complex&amp;); public: complex (double r,double i) :re(r),im(i) //这是一个构造函数，这种写法意思是初始化变量 {}; complex&amp; operator &#43;= (complex operator&amp;); double read () const {return re;} //这里需要加const 意思就是修饰函数的返回值，不允许改变返回值类型 double imag () const {return im;} };构造函数的特性 这一点需要关注下面的代码：">
@@ -30,22 +30,22 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
     <meta itemprop="dateModified" content="2024-10-15T19:54:02+08:00">
     <meta itemprop="wordCount" content="3242">
     <meta itemprop="keywords" content="C&#43;&#43;">
-    <title>1.代码编写规范 :: Maloudown</title>
-    <link href="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.xml" rel="alternate" type="application/rss+xml" title="1.代码编写规范 :: Maloudown">
-    <link href="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.print.html" rel="alternate" type="text/html" title="1.代码编写规范 :: Maloudown">
-    <link href="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.md" rel="alternate" type="text/markdown" title="1.代码编写规范 :: Maloudown">
-    <link href="/images/favicon.svg?1761286975" rel="icon" type="image/svg+xml">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1761286975" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1761286975" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1761286975" rel="stylesheet">
-    <link href="/css/theme.css?1761286975" rel="stylesheet">
-    <link href="/css/format-html.css?1761286975" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1761286975" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1761286975" defer></script>
-    <script src="/js/lunr/lunr.min.js?1761286975" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1761286975" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1761286975" defer></script>
-    <script src="/js/lunr/lunr.zh.min.js?1761286975" defer></script>
-    <script src="/js/search.js?1761286975" defer></script>
+    <title>1.代码编写规范 :: CV-Lob</title>
+    <link href="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.xml" rel="alternate" type="application/rss+xml" title="1.代码编写规范 :: CV-Lob">
+    <link href="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.print.html" rel="alternate" type="text/html" title="1.代码编写规范 :: CV-Lob">
+    <link href="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/index.md" rel="alternate" type="text/markdown" title="1.代码编写规范 :: CV-Lob">
+    <link href="/images/favicon.svg?1761575131" rel="icon" type="image/svg+xml">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1761575131" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1761575131" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1761575131" rel="stylesheet">
+    <link href="/css/theme.css?1761575131" rel="stylesheet">
+    <link href="/css/format-html.css?1761575131" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1761575131" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1761575131" defer></script>
+    <script src="/js/lunr/lunr.min.js?1761575131" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1761575131" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1761575131" defer></script>
+    <script src="/js/lunr/lunr.zh.min.js?1761575131" defer></script>
+    <script src="/js/search.js?1761575131" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -55,7 +55,7 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['zh'];
-      window.relearn.index_js_url="/searchindex.zh.js?1761286975";
+      window.relearn.index_js_url="/searchindex.zh.js?1761575131";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -277,20 +277,20 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {};</span></span></code></pre></div>
 <h2 id="关于const修饰符">关于const修饰符</h2>
 <p>如上面说到的，函数返回最好是加const，这样可以应付下面情况的发生。</p>
-<div class="tab-panel" data-tab-group="b08e55b2dcc249569e7cb005f43b6560">
+<div class="tab-panel" data-tab-group="7af34799890d1c96ac1ac21402970d99">
   <div class="tab-nav">
     <div class="tab-nav-title">const的使用</div>
     <button
       data-tab-item="加constfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;" tabindex="-1"
-      onclick="switchTab('b08e55b2dcc249569e7cb005f43b6560','加constfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('7af34799890d1c96ac1ac21402970d99','加constfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 加const</span>
     </button>
     <button
       data-tab-item="不加constfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: red;"
-      onclick="switchTab('b08e55b2dcc249569e7cb005f43b6560','不加constfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('7af34799890d1c96ac1ac21402970d99','不加constfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> 不加const</span>
     </button>
@@ -342,8 +342,8 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 </span></span><span style="display:flex;"><span>        }</span></span></code></pre></div>
 <p>向上面的函数就是使用了引用返回。</p>
 <h2 id="操作符重载-1成员函数">操作符重载-1：成员函数</h2>
-<p><a href="#R-image-b78f5244b6960f5f863fbfcbf1487621" class="lightbox-link"><img alt="操作符重载" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b78f5244b6960f5f863fbfcbf1487621"><img alt="操作符重载" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image.png"></a></p>
+<p><a href="#R-image-021e6db542855bb79aaff9a01fcd8c66" class="lightbox-link"><img alt="操作符重载" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-021e6db542855bb79aaff9a01fcd8c66"><img alt="操作符重载" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image.png"></a></p>
 <h2 id="操作符重载-2非成员函数">操作符重载-2：非成员函数</h2>
 <p>假设现在要计算复数的加减，如下：</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    complex <span style="color:#a6e22e">com1</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>);
@@ -359,8 +359,8 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 <p>接下来在考虑一个问题，就是如果我们只是做<code>cout&lt;&lt;com1;</code>那么对于&laquo;函数返回值可以是void类,但是如果我们做的是<code>cout&lt;&lt;com1&lt;&lt;com2&lt;&lt;endl;</code>
 这样的操作返回类型为void类型，那么当运行<code>cout&lt;&lt;com1</code>后就无法运行<code>&lt;&lt;com2&lt;&lt;endl</code>的代码.</p>
 <p>很显然要让代码继续运行，我们还需要返回iostream类型，而且使用<code>return by reference</code>返回方法，也就是返回引用。如下图：
-<a href="#R-image-09b39a9e228ca24f9f73675aed863d90" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-09b39a9e228ca24f9f73675aed863d90"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-1.png"></a></p>
+<a href="#R-image-419a91c53dd78af88730d4814c510478" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-419a91c53dd78af88730d4814c510478"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-1.png"></a></p>
 <h2 id="小结">小结</h2>
 <p>通过以上的简单讲解，我们可以总结一下，再写一个类的时候，我们需要注意以下几点：</p>
 <ul>
@@ -372,14 +372,14 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 <p>是否返回引用最最好的判断标准就是，值在经过函数运算后存储在函数外，或说是一个以存在的存储地址，否则不返回引用</p>
 <h2 id="接下来通过学习stringh库进一步了解指针的使用">接下来通过学习string.h库，进一步了解指针的使用</h2>
 <p>一般有指针的类需要写三个特殊函数拷贝构造、拷贝析构、拷贝赋值，</p>
-<p><a href="#R-image-c0c2794efcaec14c42bd24f9d51e1db9" class="lightbox-link"><img alt="String" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-2.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c0c2794efcaec14c42bd24f9d51e1db9"><img alt="String" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-2.png"></a>
-<a href="#R-image-b2b834ca112491380556be218f59a851" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-3.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b2b834ca112491380556be218f59a851"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-3.png"></a>
-<a href="#R-image-de37471f02d19c90b6d132b4f0031da4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-4.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-de37471f02d19c90b6d132b4f0031da4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-4.png"></a>
-<a href="#R-image-08f2fec3fd0ec0815e55f258356cb20a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-5.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-08f2fec3fd0ec0815e55f258356cb20a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-5.png"></a></p>
+<p><a href="#R-image-4482c7e3abbd9fbc41f0b2e4924b2e05" class="lightbox-link"><img alt="String" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4482c7e3abbd9fbc41f0b2e4924b2e05"><img alt="String" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-2.png"></a>
+<a href="#R-image-7177a2548741b55d0d561b890a7ec9c1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-3.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7177a2548741b55d0d561b890a7ec9c1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-3.png"></a>
+<a href="#R-image-d66733c069236c7c9e255688679bd268" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-4.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d66733c069236c7c9e255688679bd268"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-4.png"></a>
+<a href="#R-image-26010f43c8857f503858c3f77932c41f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-5.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-26010f43c8857f503858c3f77932c41f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-5.png"></a></p>
 <p>有时候还需要用到new 和 delete。</p>
 <h2 id="stack栈和heap堆">stack（栈）和heap（堆）</h2>
 <p>如下代码：</p>
@@ -420,25 +420,25 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 <h3 id="调用new和delete的过程">调用new和delete的过程</h3>
 <p>在使用new的地方需要使用delete清理内存，防止内存泄露。</p>
 <p>调用new过程：</p>
-<p><a href="#R-image-a867cf8bfc33feaa374b87b1a48247de" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-6.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a867cf8bfc33feaa374b87b1a48247de"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-6.png"></a></p>
+<p><a href="#R-image-e997e786516c1a1bfec8be12369379b6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-6.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e997e786516c1a1bfec8be12369379b6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-6.png"></a></p>
 <p>调用delete的过程：</p>
-<p><a href="#R-image-c1574cc13c6b20d0d8278de07b4507e0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-7.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c1574cc13c6b20d0d8278de07b4507e0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-7.png"></a>
-<a href="#R-image-d3c4528e604d0f6b6645e8660254f14a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-8.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d3c4528e604d0f6b6645e8660254f14a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-8.png"></a></p>
+<p><a href="#R-image-a700cdf80dab357c42f8978d2d30d10e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-7.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a700cdf80dab357c42f8978d2d30d10e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-7.png"></a>
+<a href="#R-image-2a13f0d094953a7247163b306585d13b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-8.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2a13f0d094953a7247163b306585d13b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-8.png"></a></p>
 <p>代码 分配内存大小左图是调试模式下的内存分配，右图是非调试模式下分配的内存</p>
-<p><a href="#R-image-98ef9044a34a38b8a9cf6516d8effdb3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-9.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-98ef9044a34a38b8a9cf6516d8effdb3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-9.png"></a></p>
+<p><a href="#R-image-3191e44f3cc788a03a16315f4995fbe3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-9.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3191e44f3cc788a03a16315f4995fbe3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-9.png"></a></p>
 <p>new与delete的搭配，在删除数组时需要加上[]否则编译器不知道你要删的是数组：</p>
-<p><a href="#R-image-362755bc4ddcbfeb38a2d48fb0a46e8e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-10.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-362755bc4ddcbfeb38a2d48fb0a46e8e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-10.png"></a></p>
+<p><a href="#R-image-22aae9a820e8bc50b1300bcc32ee27c3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-10.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-22aae9a820e8bc50b1300bcc32ee27c3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-10.png"></a></p>
 <h2 id="new和delete的补充">new和delete的补充</h2>
 <p>对new和delete的重载，用于设计内存管理，如内存池等操作。</p>
 <h3 id="重载newdelete">重载::new,::delete</h3>
 <p>重载的函数中，new操作会接收一个大小，该大小由编译器传入，而delete传入的是一个指针，如下图；
-<a href="#R-image-789c122ca761b80ddf5d6e5490bdf9a4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-16.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-789c122ca761b80ddf5d6e5490bdf9a4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-16.png"></a></p>
+<a href="#R-image-b210435a18899291093aaecf4668a019" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-16.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b210435a18899291093aaecf4668a019"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-16.png"></a></p>
 <p>如果不想使用类中的new和delete，可以在二者之前加上:,如::new,::delete，这样在调用函数时就不会调用类设计中的new和delete重载，而是全局的。</p>
 <h3 id="类中重载的new和delete">类中重载的new和delete</h3>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">//类
@@ -548,49 +548,49 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 </span></span><span style="display:flex;"><span>delete[] size <span style="color:#f92672">=</span> <span style="color:#ae81ff">104</span></span></span></code></pre></div>
 <h3 id="为什么new操作会多出8个字节呢">为什么new[]操作会多出8个字节呢？</h3>
 <p>我看课程视频，老师说new[]分配的内存块会在最前面存储计数量，占用4个字节，表示数组大小，但是我在电脑上运行会多出8个字节，查阅资料可能与系统、对齐方式、编译器等有关。</p>
-<p><a href="#R-image-c37bf6e1c02816c2d60ae125df71e149" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-17.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c37bf6e1c02816c2d60ae125df71e149"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-17.png"></a></p>
+<p><a href="#R-image-f3159745fa9a3b10dd685be1862865e6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-17.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f3159745fa9a3b10dd685be1862865e6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-17.png"></a></p>
 <h2 id="对new的分配额外内存">对new的分配额外内存</h2>
 <p>假设分配内存的同时需要额外分配一定的内存，可以参考下面的代码：
-<a href="#R-image-e599fdd1e8ae65ddb32181169e942cf1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-18.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e599fdd1e8ae65ddb32181169e942cf1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-18.png"></a></p>
+<a href="#R-image-8fd44dc2f5e46f8eefafd508167b38ec" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-18.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8fd44dc2f5e46f8eefafd508167b38ec"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-18.png"></a></p>
 <h2 id="小结-1">小结</h2>
 <p>对于包含有指针的类，在必要时写上拷贝构造、拷贝赋值、析构函数，如下代码</p>
-<div class="tab-panel" data-tab-group="ccd8f9d8445028b02ce102e7265a83d8">
+<div class="tab-panel" data-tab-group="f9cfb661d77308fd7978d0058e6f4a4e">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="class-stringfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;" tabindex="-1"
-      onclick="switchTab('ccd8f9d8445028b02ce102e7265a83d8','class-stringfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('f9cfb661d77308fd7978d0058e6f4a4e','class-stringfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> class String</span>
     </button>
     <button
       data-tab-item="destructorfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('ccd8f9d8445028b02ce102e7265a83d8','destructorfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('f9cfb661d77308fd7978d0058e6f4a4e','destructorfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Destructor</span>
     </button>
     <button
       data-tab-item="constructorfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: red;"
-      onclick="switchTab('ccd8f9d8445028b02ce102e7265a83d8','constructorfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('f9cfb661d77308fd7978d0058e6f4a4e','constructorfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Constructor</span>
     </button>
     <button
       data-tab-item="copy-constructorfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: origin;"
-      onclick="switchTab('ccd8f9d8445028b02ce102e7265a83d8','copy-constructorfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('f9cfb661d77308fd7978d0058e6f4a4e','copy-constructorfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Copy Constructor</span>
     </button>
     <button
       data-tab-item="copy-assignment-operatorfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: green;"
-      onclick="switchTab('ccd8f9d8445028b02ce102e7265a83d8','copy-assignment-operatorfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('f9cfb661d77308fd7978d0058e6f4a4e','copy-assignment-operatorfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> Copy Assignment Operator</span>
     </button>
@@ -671,24 +671,24 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
   </div>
 </div>
 <h2 id="补充内容static">补充内容static</h2>
-<p><a href="#R-image-32a533bff78301bee7cfaad17b043a85" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/053bb0f3f18235ed9a9ba76e717a1673.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-32a533bff78301bee7cfaad17b043a85"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/053bb0f3f18235ed9a9ba76e717a1673.png"></a></p>
+<p><a href="#R-image-30201f04c425a96e16be328dd3932698" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/053bb0f3f18235ed9a9ba76e717a1673.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-30201f04c425a96e16be328dd3932698"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/053bb0f3f18235ed9a9ba76e717a1673.png"></a></p>
 <h3 id="static在private中的使用例子">static在private中的使用例子</h3>
-<p><a href="#R-image-7e5d5f9d922884dcf4a99fd2966dff31" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-11.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e5d5f9d922884dcf4a99fd2966dff31"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-11.png"></a>
-<a href="#R-image-b867488e95d95841921d7c3e6d6f17bf" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-12.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b867488e95d95841921d7c3e6d6f17bf"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-12.png"></a></p>
+<p><a href="#R-image-010fd06b13f061396c94f4b695addd77" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-11.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-010fd06b13f061396c94f4b695addd77"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-11.png"></a>
+<a href="#R-image-ecb93eff7f48b70b2a46b84ad3b6a589" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-12.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ecb93eff7f48b70b2a46b84ad3b6a589"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-12.png"></a></p>
 <h3 id="class-template">class template</h3>
-<p><a href="#R-image-12d005870331762e56cbc26245a51919" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-13.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-12d005870331762e56cbc26245a51919"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-13.png"></a></p>
+<p><a href="#R-image-72cf0aad5c9ac574a48ad63f4b10f5be" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-13.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-72cf0aad5c9ac574a48ad63f4b10f5be"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-13.png"></a></p>
 <h3 id="function-template">function template</h3>
 <h3 id="member-template-成员模板">member template 成员模板</h3>
 <p>类模板中，还有类模板，通常是对构造函数的操作，如下图：
-<a href="#R-image-67ef68c291ffc5d3202a2b76040038c3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-14.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-67ef68c291ffc5d3202a2b76040038c3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-14.png"></a></p>
+<a href="#R-image-7d09b9178f5d4472a4d53980ab609fac" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-14.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7d09b9178f5d4472a4d53980ab609fac"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-14.png"></a></p>
 <p>如下图代码
-<a href="#R-image-4dca40c56f164ee8b20f80f7a44ccd68" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-15.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4dca40c56f164ee8b20f80f7a44ccd68"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-15.png"></a></p>
+<a href="#R-image-cf48ad4557e94ac2d759d5b6a0a8ebd5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-15.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cf48ad4557e94ac2d759d5b6a0a8ebd5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/class/1.%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83/image-15.png"></a></p>
 <p>用意就是当一个指针指向父类时，初始化让他指向子类，那么此时需要实现上图类中的代码。</p>
 <h3 id="namespace命令空间">namespace（命令空间）</h3>
 <p>使用示例：</p>
@@ -697,20 +697,20 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 </span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">……</span>
 </span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
 <p>使用方法：</p>
-<div class="tab-panel" data-tab-group="587586ddde7ec99648b347a20d7a4e02">
+<div class="tab-panel" data-tab-group="924157da64b9240cefc1f806d4ec75de">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="using-directionfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info active" style="--VARIABLE-BOX-color: green;" tabindex="-1"
-      onclick="switchTab('587586ddde7ec99648b347a20d7a4e02','using-directionfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('924157da64b9240cefc1f806d4ec75de','using-directionfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> using direction</span>
     </button>
     <button
       data-tab-item="using-declarationfa-fw-fas-fa-info-circle"
       class="tab-nav-button tab-panel-style cstyle info" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('587586ddde7ec99648b347a20d7a4e02','using-declarationfa-fw-fas-fa-info-circle')"
+      onclick="switchTab('924157da64b9240cefc1f806d4ec75de','using-declarationfa-fw-fas-fa-info-circle')"
     >
       <span class="tab-nav-text"><i class="fa-fw fas fa-info-circle"></i> using declaration</span>
     </button>
@@ -867,7 +867,7 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
                     text-overflow: ellipsis;
                     max-width: 100%;
                     flex-shrink: 2;"> 
-                Maloudown
+                CV-Lob
             </p>
             <h3 style="margin: 0; 
                     font-size: clamp(0.9rem, 0.8vw + 0.6rem, 1.9rem); 
@@ -931,7 +931,8 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
             <li class="" data-nav-id="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/"><a class="padding" href="/log/13.win11%E5%AE%89%E8%A3%85wsl%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4/">13.win11安装WSL详细步骤</a></li>
             <li class="" data-nav-id="/log/14.win11%E5%AE%89%E8%A3%85docker%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"><a class="padding" href="/log/14.win11%E5%AE%89%E8%A3%85docker%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/">14.Win11安装Docker详细教程</a></li>
             <li class="" data-nav-id="/log/15.win10%E7%94%B5%E8%84%91%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95%E6%80%8E%E4%B9%88%E5%8A%9E/"><a class="padding" href="/log/15.win10%E7%94%B5%E8%84%91%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95%E6%80%8E%E4%B9%88%E5%8A%9E/">15.win10电脑忘记密码无法登录怎么办</a></li>
-            <li class="" data-nav-id="/log/16.%E5%A6%82%E4%BD%95%E7%BB%99%E7%94%B5%E8%84%91%E8%A3%85win10%E7%B3%BB%E7%BB%9F/"><a class="padding" href="/log/16.%E5%A6%82%E4%BD%95%E7%BB%99%E7%94%B5%E8%84%91%E8%A3%85win10%E7%B3%BB%E7%BB%9F/">16.如何给电脑装win10系统</a></li></ul></li>
+            <li class="" data-nav-id="/log/16.%E5%A6%82%E4%BD%95%E7%BB%99%E7%94%B5%E8%84%91%E8%A3%85win10%E7%B3%BB%E7%BB%9F/"><a class="padding" href="/log/16.%E5%A6%82%E4%BD%95%E7%BB%99%E7%94%B5%E8%84%91%E8%A3%85win10%E7%B3%BB%E7%BB%9F/">16.如何给电脑装win10系统</a></li>
+            <li class="" data-nav-id="/log/17.%E5%A6%82%E4%BD%95%E7%BB%99%E7%94%B5%E8%84%91%E8%A3%85win10%E7%B3%BB%E7%BB%9F/"><a class="padding" href="/log/17.%E5%A6%82%E4%BD%95%E7%BB%99%E7%94%B5%E8%84%91%E8%A3%85win10%E7%B3%BB%E7%BB%9F/">17.如何给电脑装win10系统</a></li></ul></li>
             <li class="parent " data-nav-id="/class/"><a class="padding" href="/class/">课程</a><ul id="R-subsections-a4f562a2d91e674baada5f826a503d45" class="collapsible-menu">
             <li class="" data-nav-id="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/"><input type="checkbox" id="R-section-9ea1e71d788a2e6756404c78cfdfccaa" aria-controls="R-subsections-9ea1e71d788a2e6756404c78cfdfccaa"><label for="R-section-9ea1e71d788a2e6756404c78cfdfccaa"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">子菜单17.C加加编程</span></label><a class="padding" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/">17.C加加编程</a><ul id="R-subsections-9ea1e71d788a2e6756404c78cfdfccaa" class="collapsible-menu">
             <li class="" data-nav-id="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/"><a class="padding" href="/class/17.c%E5%8A%A0%E5%8A%A0%E7%BC%96%E7%A8%8B/15.%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6opengl%E4%B8%8Ec%E5%8A%A0%E5%8A%A0/">15.计算机图形学OpenGL与C&#43;&#43;</a></li>
@@ -1018,7 +1019,7 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
                 <div class="control-style">
                   <label class="a11y-only" for="R-select-variant">主题</label>
                   <select id="R-select-variant">
-                    <option id="R-select-variant-auto" value="auto" selected>浅绿</option>
+                    <option id="R-select-variant-auto" value="auto" selected>浅蓝</option>
                     <option id="R-select-variant-relearn-light" value="relearn-light">深绿</option>
                     <option id="R-select-variant-red" value="red">红色</option>
                   </select>
@@ -1032,8 +1033,8 @@ class complex { private: /* data */ double re,im; friend complex&amp; __doapl (c
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1761286975" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1761286975" defer></script>
-    <script src="/js/theme.js?1761286975" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1761575131" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1761575131" defer></script>
+    <script src="/js/theme.js?1761575131" defer></script>
   </body>
 </html>

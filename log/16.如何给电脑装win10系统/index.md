@@ -108,7 +108,7 @@
 ![alt text](5a9c2b47d683664a979ba4c80d8d84a.jpg)
 
 ​点击“**现在安装**”​​！
-![alt text](28199fce923eef3bc919bb535e94187.jpg)
+![alt text](28199fce923eef3bc919bb535e941817.jpg)
 
 （3）选择仅安装Windows，并创建分区
 

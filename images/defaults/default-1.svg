@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#e8f5e9"/>
+  <g transform="translate(80,80)">
+    <rect width="1040" height="515" rx="8" fill="#ffffff" opacity="0.2"/>
+    <text x="40" y="120" font-family="Noto Sans SC, Arial, sans-serif" font-size="48" fill="#5a8f4b">默认缩略图 · 绿色</text>
+    <text x="40" y="180" font-family="Noto Sans SC, Arial, sans-serif" font-size="18" fill="#6f8f66">当文章没有图片时随机使用</text>
+  </g>
+</svg>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>4.自定义页面以康奈尔笔记格式输出 :: Maloudown</title>
+    <title>4.自定义页面以康奈尔笔记格式输出 :: CV-Lob</title>
     <link>http://localhost:1313/log/4.%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E4%BB%A5%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA/</link>
     <description>康奈尔笔记制作</description>
     <generator>Hugo</generator>

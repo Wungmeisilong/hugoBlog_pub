@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>3.github和atomgit的混合使用，哪些是值得注意的？ :: Maloudown</title>
+    <title>3.github和atomgit的混合使用，哪些是值得注意的？ :: CV-Lob</title>
     <link>http://localhost:1313/log/3.github%E5%92%8Catomgit%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E5%93%AA%E4%BA%9B%E6%98%AF%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84/</link>
     <description>简单介绍github和atomgit的混合使用，以及遇到的一些问题</description>
     <generator>Hugo</generator>

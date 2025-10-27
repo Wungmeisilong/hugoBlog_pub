@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>FreeRTOS :: Maloudown</title>
+    <title>FreeRTOS :: CV-Lob</title>
     <link>http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/freertos/</link>
     <description>FreeRTOS是一个开源RTOS系统。它使用FreeRTOS内核来支持多线程环境，提供了一套完整的任务、信号量、消息、队列、互斥量等基础功能支持，还支持多线程同步与交互机制、时间管理和动态优先级管理机制</description>
     <generator>Hugo</generator>

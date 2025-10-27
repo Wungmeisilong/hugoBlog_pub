@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>操作系统 :: Maloudown</title>
+    <title>操作系统 :: CV-Lob</title>
     <link>http://localhost:1313/class/9.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
     <description>Linux期末复习简介：&#xA;Linux操作系统主要用于服务器环境，比如企业服务器，云服务器等。学习Linux的主要目的就是学会使用Linux提供的各种命令操作，而学习这些命令最有效的方法，就是自己学会动手使用Linux命令进行操作。另外，学会使用shell脚本能有效的提高效率以及提升工作技巧。</description>
     <generator>Hugo</generator>
