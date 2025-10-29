@@ -2609,3 +2609,752 @@ int main()
 }
 ```
 
+## c07-array
+
+### 00monkeyEatPeaches.c
+
+```c
+//00-猴子吃桃
+#include <stdio.h>
+int cp(int days){
+    if(days == 1) {
+        return 1;
+    }
+    return (cp(days-1)+1)*2;
+}
+
+int cp2(int days){
+    if(days == 10) {
+        return 1;
+    }
+    return (cp2(days+1)+1)*2;
+}
+int main() {
+    printf("桃子数是：%d\n", cp(10));
+    printf("桃子数是：%d\n", cp2(1));
+}
+```
+
+### 01defineArray.c
+
+```c
+//01-数组定义
+#include <stdio.h>
+int main(){
+    int arr1[4] = {25,26,27,28};
+    //定义一个int型数组，有四个元素，每个元素都是int型
+
+    double arr2[5] = {1.82,1.85,1.92,1.95,2.14};
+    //定义一个double型数组，有5个元素，每个元素都是double型
+
+    printf("arr1[0],arr1[3]：%d,%d\n",arr1[0],arr1[3]);
+    //输出数组元素,下标从0开始，第0个元素为25，第3个元素为28
+
+    printf("arr2[1],arr2[4]：%lf,%lf\n",arr2[1],arr2[4]);
+    //输出数组元素,下标从0开始，第0个元素为1.82，第4个元素为2.14
+
+    printf("%e,%e\n",arr2[1],arr2[4]);
+    printf("%g,%g\n",arr2[1],arr2[4]);
+    //用%g输出，会根据数值大小自动选择一种比较合适的短的格式输出
+    
+    //下标越界情况，输出不确定的值。
+    printf("%f,%f\n",arr2[5],arr2[14]);//超出数组范围，输出不确定的值。下标从0开始，第5个元素不存在，第14个元素不存在。
+    return 0;
+}
+```
+
+### 02accessArrayElements.c
+
+```c
+//02-遍历数组所有元素
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void printfArray(int a[],int n) {
+    for(int i = 0; i < n; ++i) {
+        printf("%d ", a[i]); // 遍历数组a中的所有元素:打印
+    }
+    printf("\n");
+}
+
+int main() {
+    int a[10]; // 定义一个长度为10的数组a
+    printf("a[0]:%d\n", a[0]); // 访问数组a中的第一个元素，未初始化，不确定a[0]的值
+    printf("%lu\n", sizeof(a)); // 输出数组a的空间大小,即数组a所占的内存空间大小，占用多少字节
+    printf("%lu\n", sizeof(a[0])); // 输出数组a中a[0]元素的空间大小,占用多少字节
+    printf("%lu\n", sizeof(a)/sizeof(a[0])); // 输出数组a中元素的个数。数组长度
+    printf("~~~~~~\n");
+    
+    int b[] = {23,45,56,7,4,3,4,5,6,55,34,5,56,88,44,234,1,2,2,3,4,5,6,7,8,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    
+    // for(int i = 0; i < sizeof(b)/sizeof(b[0]); ++i) {
+    //     printf("%d ", b[i]); // 遍历数组b中的所有元素:打印
+    // }
+    int n = sizeof(b)/sizeof(b[0]);
+    printfArray(b,n);
+
+    printf("=======\n");
+
+    for(int i = 0; i < n; i++) {
+        b[i] = 100; // 遍历数组b中的所有元素：修改
+    }
+    b[5] = 800;
+
+    printfArray(b,n);
+    // for(int i = 0; i < sizeof(b)/sizeof(b[0]); ++i) {
+    //     printf("%d ", b[i]); // 遍历数组b中的所有元素
+    // }
+    printf("~~~~~~\n");
+
+    int total = 0;
+    for(int i = 0; i < n; ++i) {
+        total += b[i]; // 遍历数组b中的所有元素：求和
+    }
+    printf("total = %d\n", total);
+
+    srand(time(NULL)); // 初始化随机数种子 
+    for(int i = 0; i < n; ++i) {
+        //b[i] = rand() % 101; // 遍历数组b中的所有元素：随机赋值0~100
+        b[i] = rand() % 41 + 60; // 遍历数组b中的所有元素：模拟及格分数赋值60~100
+    }
+    
+    // for(int i = 0; i < sizeof(b)/sizeof(b[0]); ++i) {
+    //     printf("%d ", b[i]); // 遍历数组b中的所有元素
+    // }
+    printfArray(b,n);
+
+    printf("\n");
+
+    //统计b数组中有多少个元素能被3整除
+    int count = 0;
+    for(int i = 0; i < n; ++i) {
+        if(b[i] % 3 == 0) {// 遍历数组b中的所有元素：判断
+            count++;
+            printf("%d ", b[i]);
+        }
+    }
+    printf("\n");
+    
+    printf("count = %d\n", count);
+
+    //统计每个分数有几个人
+    int c[101] = {0};// 定义一个长度为101的数组c，并初始化为0,用来保存每个分数段的人数。即c[60]保存分数是60分的人数，c[61]保存分数为61分的人数......
+    for(int i = 0; i < n; ++i) {
+        /*
+        if(b[i]==60){
+            c[60]++;//c[60]++等同于c[b[i]]++;
+        }
+        else if(b[i]==61){
+            c[61]++;//c[61]++等同于c[b[i]]++;
+        }
+        else if(b[i]==62){
+            c[62]++;//c[62]++等同于c[b[i]]++;
+        }
+        //...................共计41*3行代码，太繁琐了
+        */ 
+        c[b[i]]++;//遍历的b数组得到分数，把分数当做c数组元素下标，通过这个c元素加1，就统计出每个分数有几个人
+        
+    }
+    for(int i = 60; i < sizeof(c)/sizeof(c[0]); ++i) {
+        if(c[i]>0){
+            printf("%d分出现%d次\n",i,c[i]);
+        } 
+    }
+    return 0;
+}
+```
+
+### 03changeArrayElements.c
+
+```c
+//03-改变数组元素
+/*
+练习四：变化数据
+
+定义一个数组，存储1,2,3,4,5,6,7,8,9,10
+遍历数组得到每一个元素。
+要求：
+1，元素如果是奇数，则将当前数字扩大一倍
+2，元素如果是偶数，则将当前数字变成二分之一
+*/
+#include <stdio.h>
+int main() {
+
+    //初始化数组
+    int arr[10] = { 10,20,30,4,5,6,7,8,9,10 };
+    //打印数组元素
+    for (int i=0;i<10;i++) {
+        printf("%-5d ",arr[i]);
+    }
+    printf("\n");
+    //遍历数组，对元素进行操作
+    for (int i=0;i<10;i++) {
+        if (arr[i] % 2 == 0) {//判断元素是否为偶数
+            arr[i] /= 2;//偶数元素变为二分之一
+        }
+        else {
+            arr[i] *= 2;//奇数元素扩大一倍
+        }
+    }
+    //打印数组元素
+    for (int i=0;i<10;i++) {
+        printf("%-5d ",arr[i]);
+    }
+    printf("\n");
+
+    //把下标是偶数的元素变为0 
+    //方法一
+    // for (int i = 0;i < 10;i++) {//遍历数组元素
+    //     if (i % 2 == 0) {//判断下标是否为偶数
+    //         arr[i] = 0;//如果是偶数下标，则对应数组元素变为0
+    //     }
+    // }
+    //方法二
+
+     for (int k = 0;k < 10;k += 2) {//只遍历偶数下标元素,下标是偶数的元素
+            arr[k] = 0;
+    }
+    
+    for (int i=0;i<10;i++) {
+        printf("%-5d ",arr[i]);
+    }
+    printf("\n");
+    return 0;
+}
+```
+
+### 04reverseArrayElements.c
+
+```c
+//04-数组元素逆序
+/*数组元素逆序*/
+#include <stdio.h>
+int main(void) {
+    int a[] = {8, 9, 10,100,23,54,65 };
+    int n = sizeof(a) / sizeof(a[0]);//数组长度
+    for (int i = 0; i < n; ++i) {
+        printf("%-5d ", a[i]);
+    }
+    printf("\n");
+    // 数组元素逆序
+    //方法一
+    // for (int i = 0; i < n/2; ++i) {
+    //     int t = a[i];
+    //     a[i] = a[n - 1 - i];
+    //     a[n - i - 1] = t;
+    // }
+    //方法二
+    // for (int i = 0,k = n-1; i < n/2; ++i,k--) {
+    //     int t = a[i];
+    //     a[i] = a[k];
+    //     a[k] = t;
+    // }
+    //方法三
+    for (int i = 0,k = n-1; i < k; ++i,k--) {
+        int t = a[i];
+        a[i] = a[k];
+        a[k] = t;
+    }
+    for (int i = 0; i < n; ++i) {
+        printf("%-5d ", a[i]);
+    }
+    printf("\n");
+}
+```
+
+### 05bubbleSort.c
+
+```c
+
+//05-冒泡排序
+// 冒泡排序:按升序排序
+#include <stdio.h>
+int main()
+{
+    int count = 0,count2 = 0;// 总比较次数和本轮比较次数
+    int a[10] = {21, 42, 31,15,16,37,18,39,9,10};
+    // 冒泡排序 a[0] a[1] a[2] a[3]  a[4]  a[5]  a[6]  a[7] a[8]  a[9]
+    for (int i = 0; i < 9; i++)
+    { // 外层循环控制排序的轮数/趟数
+        // i = 0时 i=1时
+        printf("第%d趟排序开始：", i + 1);
+        count2 = 0;
+        for (int j = 0; j < 9; j++)
+        { // 内层循环控制每一轮比较的次数
+
+            // j=0:比较a[0]和a[1],不交换a[0]=21,a[1]=42
+            // j=1:比较a[1]和a[2],42>31,要交换，a[1]=31,a[2]=42
+            // j=2:比较a[2]和a[3],42>15,交换，a[2]=15,a[3]=42
+            // j=3:比较a[3]和a[4],42>16,交换，a[3]=16,a[4]=42
+            // j=4:比较a[4]和a[5],42>37,交换，a[4]=37,a[5]=42
+            // j=5:比较a[5]和a[6],42>18,交换，a[5]=18,a【6】=42
+            // j=6,7,8
+            count++;
+            count2++;
+            if (a[j] > a[j + 1])
+            { // 如果前一个数比后一个大，则交换
+                int temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+        printf("第%d趟排序后的结果：", i + 1);
+        for (int j = 0; j < 10; j++)
+        {
+            printf("%d ", a[j]);
+        }
+        printf("本轮共比较了%d次\n", count2);
+        printf("\n");
+    }
+
+    for (int j = 0; j < 10; j++)
+    {
+        printf("%d ", a[j]);
+    }
+    printf("\n");
+    printf("一共比较了%d次\n", count);
+
+
+    // for(int i = 0; i < 9; i++)// 外层循环控制排序的轮数/趟数
+    // {
+    //     for (int j = 0; j < 9; j++)// 内层循环控制每一轮比较的次数
+    //     {
+    //         if (a[j] > a[j + 1])
+    //         { // 如果前一个数比后一个大，则交换
+    //             int t = a[j];
+    //             a[j] = a[j + 1];
+    //             a[j + 1] = t;
+    //         }
+    //     }
+    // }
+
+    // for (int j = 0; j < 10; j++)
+    // {
+    //     printf("%d ", a[j]);
+    // }
+    // printf("\n");
+
+
+    return 0;
+}
+```
+
+### 06optimizedBubbleSort1.c
+
+```c
+//06-冒泡排序优化1
+//冒泡排序
+#include <stdio.h>
+int main(){
+    int count = 0,count2 = 0;
+    int a[10] = {21, 4,  31, 15,   16,    37,   18,    39,  9,   10}
+    ;
+    //冒泡排序   a[0] a[1] a[2] a[3]  a[4]  a[5]  a[6]  a[7] a[8]  a[9]
+    for(int i = 0;i < 9;i++){//外层循环控制排序的轮数/趟数
+        printf("第%d趟排序开始:",i+1);
+        count2 = 0;
+        for(int j = 0;j < 9 - i;j++){//优化了内层循环控制每一轮比较的次数
+            count++;
+            count2++;
+            if(a[j] > a[j+1]){//如果前一个数比后一个大，则交换
+                int temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+        printf("第%d趟排序后的结果:",i+1);
+        for(int j = 0;j < 10;j++){
+            printf("%d ",a[j]);
+        }
+
+        printf("第%d趟共比较了%d次\n",i+1,count2);
+
+    }
+    printf("一共比较了%d次\n",count);
+
+
+    //不添加其它打印代码。
+    //for(int i = 0; i < 9; i++)// 外层循环控制排序的轮数/趟数
+    // {
+    //     for (int j = 0; j < 9-i; j++)// 内层循环控制每一轮比较的次数
+    //     {
+    //         if (a[j] > a[j + 1])
+    //         { // 如果前一个数比后一个大，则交换
+    //             int t = a[j];
+    //             a[j] = a[j + 1];
+    //             a[j + 1] = t;
+    //         }
+    //     }
+    // }
+    return 0;
+}
+```
+
+### 07optimizedBubbleSort2.c
+
+```c
+//07-冒泡排序优化2
+//冒泡排序
+#include <stdio.h>
+int main(){
+    int count = 0;
+    // int a[10] = {21, 4,  31, 15,   16,    37,   18,    39,  9,   10};
+    int a[10] = {1,2,3,4,5,6,7,8,9,10};
+
+    for(int i = 0;i < 9;i++){//外层循环控制排序的轮数/趟数
+        printf("第%d趟排序开始：",i+1);
+        int flag = 0;//标志变量。flag表示是否交换过，如果交换过则flag=1。优化比较总轮数/总趟数
+        for(int j = 0;j < 9-i;j++){//内层循环控制每一轮比较的次数
+            count++;
+            if(a[j] > a[j+1]){//如果前一个数比后一个大，则交换
+                flag = 1;
+                int temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+        printf("第%d趟排序后的结果：",i+1);
+        for(int j = 0;j < 10;j++){
+            printf("%d ",a[j]);
+        }
+        printf("\n");
+        if(flag == 0){//如果成立，说明已经有序，则跳出循环。(某一轮没有交换过则说明此时已经有序，此时flag肯定还是0)
+            break;//跳出外层循环
+        }
+    }
+    printf("一共比较了%d次\n",count);
+    return 0;
+}
+```
+
+### 08Two-DimensionalArray.c
+
+```c
+//08-二维数组
+#include <stdio.h>
+int main(){
+    int a[3][4] = {{100,200,300,400},{500},{900,1000,1100,1200}};//{100,200};//
+    for(int i = 0;i < 3;i++){
+        for(int k = 0;k < 4;k++){
+            printf("%6d ",a[i][k]);
+        }
+        printf("\n");
+    }
+
+    printf("请输入12个整数：");
+    for(int i = 0;i < 3;i++){
+        for(int k = 0;k < 4;k++){
+            scanf("%d",&a[i][k]);
+        }
+    }
+    for(int i = 0;i < 3;i++){
+        for(int k = 0;k < 4;k++){
+            printf("%d ",a[i][k]);
+        }
+        printf("\n");
+    }
+
+    
+    return 0;   
+}
+```
+
+### 09One-DimensionalCharArray.c
+
+```c
+//09-一维字符数组
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char d[5] = "12345";
+    char a[] = {'a','b','c'};//单引号表示字符型，没有\0结束标志，必须有一个字符，不能是空字符，否则编译出错。
+    char b[] = {"abcd"};//双引号表示字符串,有\0结束标志，可以是空字符，"\0"是在保存时自动添加的。
+    char c[] = "abcde";
+    printf("sizeof(a):%lu\n",sizeof(a));//3
+    printf("sizeof(b):%lu\n",sizeof(b));//5
+    printf("sizeof(c):%lu\n",sizeof(c));//6
+
+    printf("strlen(b):%lu\n",strlen(b));//4,strlen只计算字符串的字符长度、即实际字符的个数，以\0为结尾标志，不计算\0  (string length)
+    printf("strlen(c):%lu\n",strlen(c));//5,strlen只计算字符串的长度，以\0为结尾标志
+    printf("strlen(a):%lu\n",strlen(a));//不一定是3。strlen只计算字符串的长度，以\0为结尾标志
+    
+
+    printf("%s,%s,%s\n",a,b,c);//%s用来打印字符串，遇到\0结束
+    printf("c[4]:|%c|\n",c[4]);
+    printf("c[5]：|%c|\n",c[5]);//\0是什么都没有
+    printf("|%c|\n",32);
+
+    printf("%lu\n",sizeof("中国人"));//汉字在不同的编码系统下占的字节数是不一样的，gbk编码是一个汉字是2个字节，utf-8是3个字节
+    return 0;
+}
+```
+
+### 10Two-DimensionalCharArray.c
+
+```c
+//10-二维字符数组
+#include <stdio.h>
+int main(){
+    char name[5][20] = {"Tom","Jack","xiaoming","xiaohua","Chinese"};//二维字符数组保存多个字符串
+    //二维字符数组，也是一维字符串数组，5个字符串name[0],name[1],....name[4]
+    printf("%s,%s\n",name[2],name[4]);
+    
+    
+    for(int i = 0;i < 5;i++){
+        printf("%s\n",name[i]);
+    }
+
+    printf("%c\n",name[0][0]);
+    printf("|%c|,|%c|\n",name[0][3],name[0][19]);
+    printf("%c\n",name[1][3]);
+    return 0;
+}
+```
+
+### 11arrayAsFunctionArgument.c
+
+```c
+//11-数组当做函数参数
+#include <stdio.h>
+void printArr(int arr[],int n){
+    for (int i = 0; i < n; ++i) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main(){
+
+    int a[10] = {1,2,3,4,5,6,7,8,9,10};
+    int b[5] = {2,4,6,8,10};
+    printArr(a,10);
+    printArr(b,5);
+    
+    char c[10]={0};
+    scanf("%s",c);//输入字符串，存入c数组中
+    printf("%s\n",c);
+    return 0;
+}
+```
+
+## c08-pointerBase
+
+### 01pointerVariableAndAddressNumber.c
+
+```c
+//01-指针变量与地址编号
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int a = 10;
+    printf("a:%d\n",a);//打印a的值，a的内容
+    printf("&a: %p\n",&a);//打印a的地址编号、打印a的地址，&是取地址运算符,用%p打印即是用十六进制打印地址编号
+    //0~17,179,869,183:   16GB内存空间，
+    //0x7ff7b4fe56a8,140701870216872
+    //0x7ff7b11956b8----140701804877496
+    //0x7ff7b390d6b8----140701846263480
+    //0x7ff7ba6ef6b8
+
+    int * ptr = &a;//*表示声明的是一个指针类型的变量ptr，
+    //*此时是一个标志符，表示ptr是一个指针变量
+    //int表示这个指针变量ptr中只能保存int类型变量的地址
+    //int在这里表示ptr指向的数据只能是int类型。
+    
+    printf("ptr:%p\n",ptr);//打印ptr的值,是一个地址，a的地址
+    //用%p打印即是用十六进制打印地址编号
+    
+    printf("&ptr:%p\n",&ptr);//打印ptr的地址编号、打印ptr的地址
+    int **pptr = &ptr;//pptr是一个二级指针变量，保存的是一级指针变量ptr的地址
+    printf("sizeof(a):%lu\n",sizeof(a));
+    printf("sizeof(ptr):%lu\n",sizeof(ptr));//8字节
+    printf("sizeof(pptr):%lu\n",sizeof(pptr));//8字节
+
+    printf("*ptr:%d\n",*ptr);//<=====>printf("*ptr:%d\n",a);
+    //*ptr是根据ptr中保存的地址，去访问对应的地址空间<=====>printf("*ptr:%d\n",a);
+    //*单目运算符，表示指针间接访问运算符、解引用运算符。
+    
+    printf("*&a:%d\n",*&a);
+    //*&是互逆操作，操作抵消了<=====>*&a <======> a
+
+    *ptr = 100;//a = 100;
+    printf("*ptr:%d\n",*ptr);
+    printf("a=%d\n",a);
+
+    printf("*ptr*200:%d\n",*ptr * 200);
+    //两个*运算。一个是指针运算，一个是乘法运算
+    
+    printf("**pptr:%d\n",**pptr);//*(*pptr)<=====>*ptr<==>a
+    **pptr = 200;
+    printf("a:%d\n",a);
+    printf("*ptr:%d\n",*ptr);
+    printf("**pptr:%d\n",**pptr);
+    return 0;
+}
+//a、&a、ptr、*ptr、&ptr、pptr、*pptr、**pptr、sizeof(a)、sizeof(ptr)、sizeof(pptr)
+```
+
+### 02usePointerInputData.c
+
+```c
+///02-使用指针输入数据
+
+#include <stdio.h>
+int main(){
+    int a = 0;
+    printf("请输入一个整数：");
+    scanf("%d",&a);
+    printf("%d\n",a);
+
+    int * p = &a;//p指向a
+    printf("请再输入一个整数：");
+    scanf("%d",p);
+    printf("a:%d\n",a);
+    printf("*p:%d\n",*p);
+
+
+    int b = 2000;
+    p = &b;//改变了p的指向，让p指向了b
+    printf("%d\n",*p);//2000
+
+    int *q = (int *)0x7ff7b11956000;//不能直接使用一个数值当做地址。
+    printf("~~~~~~\n");
+    //printf("%d\n",*q);//error:运行时出错，因为q指向的地址是无效的。
+    printf("-------\n");
+    
+    //*q = 1000;//error:运行时出错，因为q指向的地址是无效的。
+    printf("========\n");
+    return 0;
+}
+```
+
+### 03pointerAndInteger.c
+
+```c
+//03-指针加减一个整数
+#include <stdio.h>
+#define N 10
+int main(){
+    int arr[] = {10,20,30,40};
+    //数组名就是首元素的地址，是常量，不能修改
+    //有四个元素：arr[0],arr[1],arr[2],arr[3]
+
+    int arr3[4] = {0};
+    int arr2[4] = {100,200,300,400};
+    
+    //arr3 = arr2;//错误，不能将一个数组赋值给另一个数组
+    //N = 20;//错误，不能修改符号常量
+    
+    *arr = *arr2;//《==》*&arr[0] = *&arr2[0]《==》arr[0] = arr2[0];
+    printf("arr[0]：%d\n",arr[0]);
+    
+    *arr *= *arr2;
+    //《========》arr[0] *= arr2[0];
+    //《========》arr[0] = arr[0] * arr2[0];
+    printf("arr[0]：%d\n",arr[0]);
+    printf("*arr：%d\n",*arr);
+
+    int *ptr = arr;//等价于<=======> int *ptr = &arr[0];
+    printf("%p\n",ptr);
+    printf("%d\n",*ptr);
+
+    ptr +=2;
+    printf("%p\n",ptr);
+    printf("%d\n",*ptr);
+    
+
+    ptr -=1;//ptr--
+    printf("%p\n",ptr);
+    printf("%d\n",*ptr);
+    
+    printf("通过指针访问所有的数组元素：\n");
+    ptr = arr;//等价于<=======> ptr = &arr[0];
+    for(int i = 0;i < 4;i++){
+        printf("%d\n",*ptr);//arr[i]
+        ptr++;
+    }
+    printf("%p\n",ptr);
+    //上面循环的最后一次打印，打印的是指针指向的arr[3]，
+    //再++，就指向了arr[4]，越界
+    
+    printf("%d\n",*ptr);//越界访问，程序可能崩溃。打印出了不确定值
+    printf("%p\n",&arr[3]);//数组中最后一个元素的地址
+
+    ptr = &arr[3];
+    printf("%p\n",ptr);
+    printf("%d\n",*ptr);
+
+    *ptr += 2;//<======>arr[3] += 2;
+    printf("%p\n",ptr);
+    printf("%d\n",*ptr);
+    printf("arr[3]:%d\n",arr[3]);
+
+
+    ptr = arr;
+    printf("%p\n",ptr);
+    *(ptr += 2);//<======>*(ptr = ptr + 2);<=====>arr[2];
+    printf("%p\n",ptr);
+    printf("%d\n",*ptr);
+
+    ptr = arr;
+    printf("%d\n",*(ptr++));//printf("%d\n",*(ptr));ptr = ptr + 1;
+    printf("%d\n",*ptr);
+
+    ptr = arr;
+    printf("%d\n",*(++ptr));//ptr = ptr + 1;printf("%d\n",*(ptr));
+    printf("%d\n",*ptr);
+
+    ptr = arr;
+    printf("%d\n",(*ptr)++);//printf("%d\n",arr[0]);arr[0]++;
+    printf("%d\n",*ptr);//arr[0]
+
+    ptr = arr;
+    printf("%d\n",++(*ptr));//arr[0]++;printf("%d\n",arr[0]);
+    printf("%d\n",*ptr);//arr[0]
+
+    return 0;
+}
+```
+
+### 04arrayAsFunctionArgument.c
+
+```c
+//04-数组当做参数
+#include <stdio.h>
+int sumOfArr(int *a,int n){//形式参数传递数组名
+    ////<========>int sumOfArr(int a[],int n)//a[]===>int *a
+    printf("sizeof(a):%lu\n",sizeof(a));
+    int s = 0;
+    //方法一/
+    // for(int i = 0;i < n;i++){
+    //     //s += a[i];//a指针名可以当作数组名使用
+    //     s += *(a+i);//指针加一
+    // }
+    // return s;
+    // //方法二
+    // s = 0;
+    // for(int i = 0;i < n;i++){
+    //     s += *a;
+    //     a++;//指针加一，或者++a;
+    // }
+    // return s;
+
+    //方法三
+    s = 0;
+    for(int i = 0;i < n;i++){
+        s += *a++;//不能写成 s+= *(++a);也不能写成 s+= ++*a;也不能写成 s+= (*a)++;
+    }
+    return s;
+}
+int main(){
+    int b[] = {10,20,30,40,50};
+    printf("%p\n",b);
+    printf("%p\n",&b[0]);
+    printf("sizeof(b):%lu\n",sizeof(b));//sizeof(b) = 5*4 = 20,整个数组占用的内存空间
+    printf("sizeof(b[0]):%lu\n",sizeof(b[0]));
+    printf("sizeof(&b[0]):%lu\n",sizeof(&b[0]));
+    printf("%d\n",sumOfArr(b,sizeof(b)/sizeof(int)));
+}
+```
+
