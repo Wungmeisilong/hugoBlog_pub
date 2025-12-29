@@ -380,6 +380,20 @@
       <description></description>
     </item>
     <item>
+      <title>标签 :: 都市</title>
+      <link>http://localhost:1313/tags/%E9%83%BD%E5%B8%82/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E9%83%BD%E5%B8%82/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>标签 :: 回忆</title>
+      <link>http://localhost:1313/tags/%E5%9B%9E%E5%BF%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E5%9B%9E%E5%BF%86/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>标签 :: 基础项目</title>
       <link>http://localhost:1313/tags/%E5%9F%BA%E7%A1%80%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -408,10 +422,24 @@
       <description></description>
     </item>
     <item>
+      <title>标签 :: 乡村</title>
+      <link>http://localhost:1313/tags/%E4%B9%A1%E6%9D%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E4%B9%A1%E6%9D%91/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>标签 :: 页面输出格式</title>
       <link>http://localhost:1313/tags/%E9%A1%B5%E9%9D%A2%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E9%A1%B5%E9%9D%A2%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>标签 :: 遗憾</title>
+      <link>http://localhost:1313/tags/%E9%81%97%E6%86%BE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E9%81%97%E6%86%BE/</guid>
       <description></description>
     </item>
     <item>

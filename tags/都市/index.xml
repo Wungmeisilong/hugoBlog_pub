@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>都市 :: 标签 :: CV-Lob</title>
+    <link>http://localhost:1313/tags/%E9%83%BD%E5%B8%82/</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <atom:link href="http://localhost:1313/tags/%E9%83%BD%E5%B8%82/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>未命名的牵挂</title>
+      <link>http://localhost:1313/story/11.%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E7%89%B5%E6%8C%82/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/story/11.%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E7%89%B5%E6%8C%82/</guid>
+      <description>故事讲述主人公刘明在寻找失散多年的恋人香兰时，经历了从未想过的一系列事件。</description>
+    </item>
+  </channel>
+</rss>
